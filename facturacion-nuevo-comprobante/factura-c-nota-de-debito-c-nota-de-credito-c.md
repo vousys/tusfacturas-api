@@ -51,9 +51,12 @@ description: Ejemplo de JSON para generar comprobantes tipo C
 
 ```
 
+
+
 ### Ejemplo de llamada en PHP
 
 ```text
+// ENVIO REQUEST
 $url ="https://www.tusfacturas.com.ar/api/v2/facturacion/nuevo" ;
 $ch = curl_init( $url );
 curl_setopt( $ch, CURLOPT_POSTFIELDS,  json_encode($facturacion_json) );
@@ -62,6 +65,7 @@ curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 $json_rta_curl =  json_decode(  curl_exec($ch) ) ;  
 curl_close($ch);
 
+// MUESTRO RESPUESTA
 echo "<p>MENSAJE:". $json_rta_curl->rta."</p>"; 
 echo "<p>Vencimiento del pago:".$json_rta_curl->vencimiento_pago."</p>"; 
 echo "<p>CAE:".$json_rta_curl->cae."</p>"; 
