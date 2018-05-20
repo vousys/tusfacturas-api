@@ -46,7 +46,7 @@ Tus credenciales de acceso
 **idioma**    Campo numérico. Longitud 1 caracter. Indica el idioma en que se imprimira el PDF del comprobante. Valores Permitidos: 1 = Español, 2= Ingles    
 **punto\_venta**    Campo numérico entero. Longitud máxima 4 digitos.   
 **moneda**    Campo alfanumérico de 3 Digitos según tabla de referencia de Monedas .  
-**cotizacion**    Campo numérico con 2 decimales. Puede obtener la cotización del día según AFIP desde nuestro método de consulta de cotización Ejemplo: 15.20 **numero    **Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. Ejemplo: 4567 **periodo\_facturado\_desde**     Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.   
+**cotizacion**    Campo numérico con 2 decimales. Puede obtener la cotización del día según AFIP desde nuestro método de consulta de cotización Ejemplo: 15.20 **numero**    Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. Ejemplo: 4567 **periodo\_facturado\_desde**     Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.   
 periodo\_facturado\_hasta    Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.  
 **rubro**    Campo alfanumérico. Longitud máxima 255 caracteres. Indica el rubro al cual pertenecerá el comprobante. Ésta información no saldrá impresa en el comprobante.   
 **rubro\_grupo\_contable**    Campo alfanumérico. Longitud máxima 255 caracteres. Indica el grupo contable al que pertenece el rubro. Ésta información no saldrá impresa en el comprobante.   
@@ -58,7 +58,7 @@ periodo\_facturado\_hasta    Campo fecha. Contenido opcional. Formato esperado: 
 **percepciones\_iva**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la percepción de IVA realizada Ejemplo: 42.67   
 **exentos**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de exentos. Solo para comprobantes A y M Ejemplo: 72.67   
 **nogravados**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de no gravados. Solo para comprobantes A y M Ejemplo: 62.67 **impuestos\_internos**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de impuestos internos Ejemplo: 2.67   
-**total**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos Ejemplo: 12452.67
+**total**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos incluyendo IVA e impuestos. Ejemplo: 12452.67
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="cliente" type="object" required=true %}
@@ -218,8 +218,8 @@ Información de los campos a enviar:
 | `domicilio` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: Av. Santa Fe 123** |
 | `provincia` | Campo numérico según [tabla de referencia\(\*\)](../tablas-de-referencia.md#provincias). **Ejemplo: 2** |
 | `envia_por_mail` | Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: **S , N** **Ejemplo: S** |
-| `condicion_pago` | Campo numérico que indica la cantidad de dias en los cuales vence el plazo de pago. Valores Permitidos: **0,30,60,90 ** **Ejemplo: 30** |
-| `condicion_iva` | Campo numérico que indica la condicion de iva, según [tabla de referencia Condiciones ante el IVA\(\*\*\)](../tablas-de-referencia.md#condiciones-ante-el-iva). Valores Permitidos: **CF, RI, M, E ** **Ejemplo: RI** |
+| `condicion_pago` | Campo numérico que indica la cantidad de dias en los cuales vence el plazo de pago. Valores Permitidos: **0,30,60,90**  **Ejemplo: 30** |
+| `condicion_iva` | Campo numérico que indica la condicion de iva, según [tabla de referencia Condiciones ante el IVA\(\*\*\)](../tablas-de-referencia.md#condiciones-ante-el-iva). Valores Permitidos: **CF, RI, M, E**  **Ejemplo: RI** |
 
 ### Estructura de "Detalle de conceptos"
 
