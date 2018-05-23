@@ -174,7 +174,8 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 
                             ],
                 "bonificacion":             "120",
-                "leyenda_gral":             "bla bla bla",
+                "leyenda_gral":             "Segun Orden de compra III1333",
+                "comentario":               "Factura correspondiente al servicio XX"
                 "percepciones_iibb":        "0",
                 "percepciones_iva":         "0",
                 "exentos":                  "0",
