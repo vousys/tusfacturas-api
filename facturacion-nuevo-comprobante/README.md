@@ -8,7 +8,11 @@ description: >-
 # Nuevo comprobante de Venta
 
 {% hint style="info" %}
-Si estás probando la API, no enlaces tu CUIT con AFIP en ésta instancia, ya que no existe un entorno "sandbox", los comprobantes se generan de la misma manera cuando son para gestión interna asi como cuando son válidos para AFIP.  La única diferencia entre ambos, es la respuesta devuelta por éste método para comprobantes de gestión interna  ya que retornan  los campos  "cae" y "vencimiento del cae" vacios.
+Poder utilizar la API debes [estar registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). Utiliza una cuenta de prueba, y envía para facturar el CUIT de prueba que te dejamos cargado. Una vez que hayas probado todos los métodos, crea el nuevo CUIT y enlazalo con AFIP.
+
+Ten en cuenta que al registrarte, te asignamos un plan gratuito que te permite emitir 5 comprobantes por mes y una vez vencido tu período de prueba, debes contratar algún plan API de los que tenemos disponibles aquí .
+
+En caso que requieras 10 días más para el desarrollo, contáctanos a tusfacturas@vousys.com
 {% endhint %}
 
 {% api-method method="post" host="https://www.tusfacturas.com.ar/app/api/" path="v2/facturacion/nuevo" %}
