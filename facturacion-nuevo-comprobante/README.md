@@ -8,7 +8,9 @@ description: >-
 # Nuevo comprobante de Venta
 
 {% hint style="info" %}
-Poder utilizar la API debes [estar registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). Utiliza una cuenta de prueba, y envía para facturar el CUIT de prueba que te dejamos cargado. Una vez que hayas probado todos los métodos, crea el nuevo CUIT y enlazalo con AFIP.
+Poder utilizar la API debes [estar registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
+
+Mientras estés en etapa de testing, configurá tu CUIT con un punto de venta irreal \(Ej: 679\), y usa ese CUIT de prueba para facturar, la respuesta que recibirás es la misma que si facturas  contra AFIP, solo que los campos CAE y Vencimiento del CAE te retornaran vacios.  Una vez que hayas probado todos los métodos, crea el nuevo CUIT+punto de venta y lo enlazas con AFIP.
 
 Ten en cuenta que al registrarte, te asignamos un plan gratuito que te permite emitir 5 comprobantes por mes y una vez vencido tu período de prueba, debes contratar algún plan API de los que tenemos disponibles aquí .
 
