@@ -4,6 +4,10 @@ description: Ejemplo de comprobantes tipo B
 
 # Factura B / Nota de débito B / Nota de crédito B
 
+{% hint style="info" %}
+Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, pero no aparecerá desglozado en la factura.
+{% endhint %}
+
 ```text
 {
 	"apitoken": "kkakak208a17cdfc4e4741437baddaa6",
