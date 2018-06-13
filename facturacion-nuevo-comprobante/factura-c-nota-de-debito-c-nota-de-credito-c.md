@@ -1,8 +1,12 @@
 ---
-description: Ejemplo de JSON para generar comprobantes tipo C
+description: Ejemplo de JSON para generar comprobantes tipo C.
 ---
 
 # Factura C / Nota de débito C / Nota de crédito C
+
+{% hint style="info" %}
+Ten en cuenta que los comprobantes C,  NO llevan IVA.
+{% endhint %}
 
 ```text
 {
@@ -41,7 +45,7 @@ description: Ejemplo de JSON para generar comprobantes tipo C
 		}],
 		"fecha": "28/03/2018",
 		"rubro_grupo_contable": "Sevicios",
-		"total": 139.0,
+		"total": 114.88,
 		"cotizacion": 1,
 		"moneda": "PES",
 		"punto_venta": 3,
