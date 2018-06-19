@@ -105,7 +105,7 @@ También puede consultar ésta información con el método [Consultar unidades d
 | Unidad de medida |     | Valor a enviar |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1000 kWh |     | 6 |
-| anulaciÃ³n/devoluciÃ³n |     | 95 |
+| anulación/devolución |     | 95 |
 | centímetros |     | 20 |
 | cm cúbicos |     | 27 |
 | curie |     | 48 |
