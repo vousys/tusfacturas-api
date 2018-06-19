@@ -52,8 +52,8 @@ Tus credenciales de acceso
 **idioma**    Campo numérico. Longitud 1 caracter. Indica el idioma en que se imprimira el PDF del comprobante. Valores Permitidos: 1 = Español, 2= Ingles    
 **punto\_venta**    Campo numérico entero. Longitud máxima 4 digitos.   
 **moneda**    Campo alfanumérico de 3 Digitos según tabla de referencia de Monedas .  
-**cotizacion**    Campo numérico con 2 decimales. Puede obtener la cotización del día según AFIP desde nuestro método de consulta de cotización Ejemplo: 15.20 **numero**    Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. Ejemplo: 4567 **periodo\_facturado\_desde**     Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.   
-periodo\_facturado\_hasta    Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.  
+**cotizacion**    Campo numérico con 2 decimales. Puede obtener la cotización del día según AFIP desde nuestro método de consulta de cotización Ejemplo: 15.20 **numero**    El numero del comprobante a generar. Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante contra AFIP. Ejemplo: 4567 **periodo\_facturado\_desde**     Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.   
+**periodo\_facturado\_hasta**    Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.  
 **rubro**    Campo alfanumérico. Longitud máxima 255 caracteres. Indica el rubro al cual pertenecerá el comprobante. Ésta información no saldrá impresa en el comprobante.   
 **rubro\_grupo\_contable**    Campo alfanumérico. Longitud máxima 255 caracteres. Indica el grupo contable al que pertenece el rubro. Ésta información no saldrá impresa en el comprobante.   
 **detalle**  Lista de conceptos a facturar. Objeto JSON Según estructura que se detalla a continuación  
