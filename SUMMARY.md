@@ -2,7 +2,7 @@
 
 * [Documentación de la API para Factura Electrónica AFIP](README.md)
 * [Autenticación](autenticacion.md)
-* [Tablas de referencia](tablas-de-referencia.md)
+* [Plugins y SDKs](plugins-y-sdks.md)
 * [Estado de los servicios AFIP](estado-de-los-servicios-afip.md)
 * [Nuevo comprobante de Venta](facturacion-nuevo-comprobante/README.md)
   * [Factura electrónica AFIP de exportación](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)
@@ -17,5 +17,5 @@
 * [Consulta de Paises - AFIP](consulta-de-paises-afip.md)
 * [Consulta de CUIT Pais - AFIP](consulta-de-cuit-pais-afip.md)
 * [Consulta de Incoterms](consulta-de-incoterms.md)
-* [Plugins y SDKs](plugins-y-sdks.md)
+* [Tablas de referencia](tablas-de-referencia.md)
 
