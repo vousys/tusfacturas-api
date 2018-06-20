@@ -17,4 +17,5 @@
 * [Consulta de Paises - AFIP](consulta-de-paises-afip.md)
 * [Consulta de CUIT Pais - AFIP](consulta-de-cuit-pais-afip.md)
 * [Consulta de Incoterms](consulta-de-incoterms.md)
+* [Plugins y SDKs](plugins-y-sdks.md)
 
