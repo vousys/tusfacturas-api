@@ -40,3 +40,7 @@ Probá la API : **https://www.tusfacturas.com.ar/proba-la-api-factura-electronic
 
 También podés probar las respuestas de la API, en nuestro API TESTER: [https://www.tusfacturas.com.ar/proba-la-api-factura-electronica-afip.html](https://www.tusfacturas.com.ar/proba-la-api-factura-electronica-afip.html)
 
+{% hint style="info" %}
+Podes descargarte nuestros [SDK](https://github.com/vousys/tusfacturas/) desde [GitHub](https://github.com/vousys/tusfacturas/)
+{% endhint %}
+
