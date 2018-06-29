@@ -97,6 +97,10 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="info" %}
+Ten en cuenta a la hora de calcular el total, que las bonificaciones están gravadas con IVA 
+{% endhint %}
+
 ### Ejemplo de JSON que debes enviar
 
 ```text
