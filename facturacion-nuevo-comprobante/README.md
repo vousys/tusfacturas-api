@@ -279,7 +279,7 @@ Los campos que debes enviar son los siguientes:
 | `lista_precios` | Campo alfanumérico. Longitud máxima 255 caracteres. Nombre de la lista de precios a la cual pertenece.  **Ejemplo: Verdura Orgánica** |
 | `codigo` | Campo alfanumérico. Longitud máxima 10 caracteres. campo Opcional **Ejemplo: ABX780** |
 | `precio_unitario_sin_iva` | Campo numérico con 2 decimales. separador de decimales: punto **Ejemplo: 645.67** |
-| `alicuota` | Indica la alicuota de IVA con la que grava ese producto. Valores Permitidos: **21 , 10.5** **Ejemplo: 10.5** |
+| `alicuota` | Indica la alicuota de IVA con la que grava ese producto. Valores Permitidos: **27, 21 , 10.5 ,  0  y -1 \( para exento\)** **Ejemplo: 10.5** |
 | `unidad_medida` | Campo numérico que indica la unidad de medida, según[ tabla de referencia Unidades de Medida\(\*\*\). ](../tablas-de-referencia.md#productos-unidades-de-medida-afip) **Ejemplo: 7** |
 
 
