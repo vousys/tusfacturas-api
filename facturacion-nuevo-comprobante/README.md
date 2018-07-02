@@ -89,8 +89,14 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 ```javascript
 {
     "error":     "N",
-     "errores":
-            [                ""            ],    "rta":      "El comprobante NOTA DE DEBITO B 0002-00000006 (MI CUIT) se ha guardado correctamente",    "cae":      "65301278726386",    "vencimiento_cae":"07\/08\/2015",    "vencimiento_pago":"27\/08\/2015",    "comprobante_pdf_url": "https://www.tusfacturas.com.ar/app/comprobantes/30111111111-1292963535-0002-00000006.pdf"}  
+     "errores": [ ""],    
+     "rta":      "El comprobante NOTA DE DEBITO B 0002-00000006 (MI CUIT) se ha guardado correctamente",    
+     "cae":      "65301278726386",    
+     "vencimiento_cae":"07\/08\/2015",    
+     "vencimiento_pago":"27\/08\/2015",    
+     "comprobante_pdf_url": "https://www.tusfacturas.com.ar/app/comprobantes/30111111111-1292963535-0002-00000006.pdf"
+  }  
+  
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
