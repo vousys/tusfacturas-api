@@ -40,7 +40,15 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 
 ```
 {
-    "error":     "N"    "errores":                [                    ""                ],    "items":        [            {"id":"51600003015","descripcion":"AFGANISTAN - Otro tipo de Entidad"},            {"id":"50000003015","descripcion":"AFGANISTAN - Persona Fisica"}        ]}
+    "error":     "N",
+    "errores":   
+                 [  ""   ],    
+     "items":       
+              [ 
+                  {"id":"51600003015","descripcion":"AFGANISTAN - Otro tipo de Entidad"},
+                  {"id":"50000003015","descripcion":"AFGANISTAN - Persona Fisica"} 
+              ]
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -51,6 +59,9 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 
 ```text
 {
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85","apikey"    :  "9991","apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6"}
+"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
+"apikey"    :  "9991",
+"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6"
+}
 ```
 
