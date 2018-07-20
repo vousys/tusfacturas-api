@@ -40,13 +40,28 @@ Tus credenciales de acceso
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-En caso de detectar algún error, el campo error, se devuelve con una "S" y dentro de "errores" se devolverá una lista con cada uno de los mensajes.
+En caso de detectar algún error, el campo error, se devuelve con una "S" y dentro de "errores" se devolverá una lista con cada uno de los mensajes.  
+  
+Importante: Los campos número y punto de venta, se retornan como numéricos  
 {% endapi-method-response-example-description %}
 
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
 ```
 {
-"error":     "N""errores":        [            ""        ],"rta":      "OK","comprobante":  {    "tipo":                     "NOTA DE DEBITO B",    "operacion":                "V",    "punto_venta":              "2",    "numero":                   "6"    }}
+	"error": "N",
+	"errores": [""],
+	"rta": "OK",
+	"comprobante": {
+		"tipo": "NOTA DE DEBITO B",
+		"operacion": "V",
+		"punto_venta": 2,
+		"numero": 6
+	}
+}
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -54,10 +69,22 @@ En caso de detectar algún error, el campo error, se devuelve con una "S" y dent
 
 ### Ejemplo del JSON a enviar para consultar la numeración del próximo comprobante.
 
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
 ```text
 {
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85","apikey"    :  "9991","apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6","comprobante":  {                "tipo":                     "NOTA DE DEBITO B",                "operacion":                "V",                "punto_venta":              "2"        }}
+	"usertoken": "jajajja8c8bf67c884e1405e26c03c85",
+	"apikey": "9991",
+	"apitoken": "kkakak208a17cdfc4e4741437baddaa6",
+	"comprobante": {
+		"tipo": "NOTA DE DEBITO B",
+		"operacion": "V",
+		"punto_venta": "2"
+	}
+}
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 ### Estructura de datos 
 
