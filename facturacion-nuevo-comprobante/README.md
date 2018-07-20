@@ -83,9 +83,14 @@ Tus credenciales de acceso
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 Si el comprobante se ha podido generar sin problemas  se devolverá la variable "error" = "N".  
-En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados 
+En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados   
+  
+Importante: Contemplar el número de CAE como un string.  
+  
 {% endapi-method-response-example-description %}
 
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
 ```javascript
 {
     "error":     "N",
@@ -98,6 +103,8 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
   }  
   
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
