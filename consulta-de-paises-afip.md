@@ -35,13 +35,27 @@ Tus credenciales de acceso.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación.
+En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación.  
+  
 {% endapi-method-response-example-description %}
 
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
 ```
  {
-    "error":     "N"    "errores":                [                    ""                ],    "items":        [            {"id":"250","descripcion":"AAE Tierra del Fuego - ARGENTINA"},            {"id":"301","descripcion":"AFGANISTAN"}        ]}
+	"error": "N",
+	"errores": [""],
+	"items": [{
+		"id": "250",
+		"descripcion": "AAE Tierra del Fuego - ARGENTINA"
+	}, {
+		"id": "301",
+		"descripcion": "AFGANISTAN"
+	}]
+}
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -49,8 +63,16 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 
 ### Estructura del JSON a enviar
 
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
 ```text
 {
-    "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",    "apikey"    :  "9991",    "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6"}
+	"usertoken": "jajajja8c8bf67c884e1405e26c03c85",
+	"apikey": "9991",
+	"apitoken": "kkakak208a17cdfc4e4741437baddaa6"
+}
+
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
