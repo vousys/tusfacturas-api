@@ -252,9 +252,26 @@ El detalle de conceptos se compone de una lista de cada uno de los productos que
 
 La estructura de cada concepto a enviar es la siguiente:
 
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
 ```text
-{"cantidad":"1.5","afecta_stock": "N","producto":       {"descripcion":     "HUEVOS",        "unidad_bulto":    "30",        "lista_precios":   "MAPPLETS",        "codigo":          "MPH",        "precio_unitario_sin_iva":"50",        "alicuota":      "10.5",        "unidad_medida": "7"        },"leyenda":""}
+{
+	"cantidad": "1.5",
+	"afecta_stock": "N",
+	"producto": {
+		"descripcion": "HUEVOS",
+		"unidad_bulto": "30",
+		"lista_precios": "MAPPLETS",
+		"codigo": "MPH",
+		"precio_unitario_sin_iva": "50",
+		"alicuota": "10.5",
+		"unidad_medida": "7"
+	},
+	"leyenda": ""
+}
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 Los campos que debes enviar son los siguientes:
 
@@ -288,8 +305,8 @@ Los campos que debes enviar son los siguientes:
 
 | `descripcion` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: Papa blanca** |
 | --- | --- | --- | --- | --- | --- | --- |
-| `unidad_bulto` | Campo numérico entero. Indica la cantidad de unidades que componen un bulto. **Ejemplo: 12** |
-| `lista_precios` | Campo alfanumérico. Longitud máxima 255 caracteres. Nombre de la lista de precios a la cual pertenece.  **Ejemplo: Verdura Orgánica** |
+| `unidad_bulto` | Campo numérico entero requerido. Indica la cantidad de unidades que componen un bulto. Valor minimo esperado: 1 **Ejemplo: 12** |
+| `lista_precios` | Campo alfanumérico. Longitud máxima 255 caracteres. Nombre de la lista de precios a la cual pertenece. No saldrá impreso en la factura pero es requerido. **Ejemplo: Verdura Orgánica** |
 | `codigo` | Campo alfanumérico. Longitud máxima 10 caracteres. campo Opcional **Ejemplo: ABX780** |
 | `precio_unitario_sin_iva` | Campo numérico con 2 decimales. separador de decimales: punto **Ejemplo: 645.67** |
 | `alicuota` | Indica la alicuota de IVA con la que grava ese producto. Valores Permitidos: **27, 21 , 10.5 ,  0  y -1 \( para exento\)** **Ejemplo: 10.5** |
