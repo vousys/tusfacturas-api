@@ -42,8 +42,27 @@ En caso de existir algún error, se retornará el campo "error" = "S" y dentro d
 {% endapi-method-response-example-description %}
 
 ```
-
-{    "error":     "N"    "errores":                [                    ""                ],    "rta":      "OK",    "resultados":[                    {   "fecha":"11\/05\/2017",                        "concepto":"FACTURA A 0002-00000001 (CUIT DE PRUEBA)",                        "debe":112.1,                        "haber":0,                        "resta_abonar_de_este_comprobante":112.1,                        "saldo":112.1                    },                    {                        "fecha":"11\/05\/2017",                        "concepto":"FACTURA A 0002-00000002 (CUIT DE PRUEBA)",                        "debe":112.1,                        "haber":0,                        "resta_abonar_de_este_comprobante":112.1,                        "saldo":224.2                    }                ]        }}
+{
+	"error": "N",
+	"errores": [""],
+	"rta": "OK",
+	"resultados": [{
+		"fecha": "11\/05\/2017",
+		"concepto": "FACTURA A 0002-00000001 (CUIT DE PRUEBA)",
+		"debe": 112.1,
+		"haber": 0,
+		"resta_abonar_de_este_comprobante": 112.1,
+		"saldo": 112.1
+	}, {
+		"fecha": "11\/05\/2017",
+		"concepto": "FACTURA A 0002-00000002 (CUIT DE PRUEBA)",
+		"debe": 112.1,
+		"haber": 0,
+		"resta_abonar_de_este_comprobante": 112.1,
+		"saldo": 224.2
+	}]
+ 
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -55,7 +74,13 @@ En caso de existir algún error, se retornará el campo "error" = "S" y dentro d
 ```text
 {
     "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
-    "apikey"    :  "9991",    "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",    "cliente":  {        "documento_nro":    "30712293841",        "documento_tipo":   "CUIT"        }}
+    "apikey"    :  "9991",    
+    "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",    
+    "cliente":  {       
+      "documento_nro":    "30712293841",
+      "documento_tipo":   "CUIT"
+      }
+  }
 ```
 
 ### Estructura de "Cliente"
