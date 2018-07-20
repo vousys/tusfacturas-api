@@ -85,7 +85,14 @@ Tus credenciales de acceso
 Si el comprobante se ha podido generar sin problemas  se devolverá la variable "error" = "N".  
 En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados   
   
-Importante: Contemplar el número de CAE como un string.  
+Importante:  
+  
+- El CAE es el Código de Autorización Electrónico que otorga AFIP como confirmación de la creación del comprobante. Es un dato importante para almacenar como respuesta.  
+  
+- Los CAE tienen fecha de vencimiento.  
+  
+- Contemplar en la respuesta que el número de CAE es un texto.  
+  
   
 {% endapi-method-response-example-description %}
 
