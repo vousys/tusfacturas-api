@@ -29,12 +29,21 @@ Tus credenciales de acceso
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación.
+En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación.  
 {% endapi-method-response-example-description %}
 
 ```
 {
-    "error":     "N"    "errores":                [                    ""                ]    "rta":      "OK",    "items":        [            {"id":"6","descripcion":"1000 kWh"},            {"id":"20","descripcion":"cent\u00edmetros"},            {"id":"27","descripcion":"cm c\u00fabicos"},            {"id":"48","descripcion":"curie"},            {"id":"30","descripcion":"dam c\u00fabicos"},            {"id":"9","descripcion":"docenas"}        ]}
+    "error":     "N",
+    "errores":  [ ""  ],
+    "rta":      "OK",
+    "items": 
+                [  
+                    {"id":"6","descripcion":"1000 kWh"},
+                    {"id":"20","descripcion":"cent\u00edmetros"},
+                    {"id":"27","descripcion":"cm c\u00fabicos"},
+                ]
+    }
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
@@ -45,6 +54,9 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 
 ```text
 {
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85","apikey"    :  "9991","apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6"}
+"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
+"apikey"    :  "9991",
+"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6"
+}
 ```
 
