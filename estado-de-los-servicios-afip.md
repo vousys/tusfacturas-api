@@ -41,10 +41,20 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 Facturación devolverá "OK" si los servicios de la AFIP funcionan bien o devolverá un mensaje de alerta con el detalle de la incidencia  
 {% endapi-method-response-example-description %}
 
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
 ```
 {
-"error":     "N""errores":        [            ""        ],"rta":          "OK","facturacion":  "OK","novedades":  "24\/03\/2016 | App M\u00f3vil - Actualizaci\u00f3nYa se encuentra disponible para Iphone\/Ipad , la version 2.1 de nuestra app m\u00f3vil.  Descargala! 17\/03\/2016 | Reclamo de deudas autom\u00e1tico: Ahora podes indicar la cantidad de dias desde cuando el sistema empieza a reclamarle a tu cliente la deuda. Ingres\u00e1 a cliente y configuralo ",     }}
+	"error": "N",
+	"errores": [""],
+	"rta": "OK",
+	"facturacion": "OK",
+	"novedades": "24\/03\/2016 | App M\u00f3vil - Actualizaci\u00f3nYa se encuentra disponible para Iphone\/Ipad , la version 2.1 de nuestra app m\u00f3vil.  Descargala! 17\/03\/2016 | Reclamo de deudas autom\u00e1tico: Ahora podes indicar la cantidad de dias desde cuando el sistema empieza a reclamarle a tu cliente la deuda. Ingres\u00e1 a cliente y configuralo ",
+}
+
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -52,8 +62,15 @@ Facturación devolverá "OK" si los servicios de la AFIP funcionan bien o devolv
 
 ### Ejemplo del JSON a enviar para consultar el estado de los servicios
 
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
 ```text
 {
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85","apikey"    :  "9991","apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",}
+	"usertoken": "jajajja8c8bf67c884e1405e26c03c85",
+	"apikey": "9991",
+	"apitoken": "kkakak208a17cdfc4e4741437baddaa6"
+}
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
