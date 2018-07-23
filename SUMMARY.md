@@ -18,4 +18,5 @@
 * [Consulta de CUIT Pais - AFIP](consulta-de-cuit-pais-afip.md)
 * [Consulta de Incoterms](consulta-de-incoterms.md)
 * [Tablas de referencia](tablas-de-referencia.md)
+* [Cotización Dólar AFIP](cotizacion-dolar-afip.md)
 
