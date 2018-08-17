@@ -49,7 +49,7 @@ Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del
 ### Información de cada uno de los campos :
 
 | `tipo_exportacion` | Campo numérico. Longitud 1 caracter. Valores esperados:  1= Exportación definitiva de bienes  2= Servicios  4= Otros.  **Ejemplo: 2** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | `permisos_tiene` | Campo alfabético. Longitud 1 caracter. Indica si se posee documento aduanero de exportación \(permiso de embarque\). Valores esperados:  S= Si posee N= No posee  \(vacio\)= No especifica  **Ejemplo: S** |
 | `permisos` | Solo deberán ser enviados los permisos cuando el campo permisos\_tiene sea igual a "S".    Valores a enviar según estructura de datos definida en  ["Permisos de exportacion".](factura-electronica-afip-exportacion.md#estructura-de-permisos) |
 | `pais_comprobante_id` | Campo numérico. Según tabla de referencia [Paises AFIP \(\*\*\)](../consulta-de-paises-afip.md)  **Ejemplo: 123** |
@@ -73,7 +73,7 @@ Cada uno de los permisos de exportación que disponga, deberán ser enviados aco
 Información de los campos a enviar:Información de los campos a enviar:
 
 | `codigo_despacho` | Campo alfanumérico. Longitud 16 caracteres. Deberá ser un permiso válido, formato 99999AAXX999999A \(donde XX podrán ser números o letras\). |
-| --- | --- |
+| :--- | :--- |
 | `pais_destino_id` | Campo numérico. Según tabla de referencia [Paises AFIP \(\*\*\)](../consulta-de-paises-afip.md)  **Ejemplo: 123** |
 
 ### Estructura de "Comprobantes Asociados"
@@ -98,7 +98,7 @@ Solo deberán ser enviados los comprobantes asociados, cuando el campo exportaci
 Información de los campos a enviar:
 
 | `tipo_comprobante` | Campo alfabético. Valores esperados: "FACTURA E", "NOTA DE DEBITO E", "NOTA DE CREDITO E" |
-| --- | --- | --- | --- |
+| :--- | :--- |
 | `punto_venta` | Campo numérico entero. Longitud máxima 4 digitos. **Ejemplo: 3** |
 | `numero` | Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. **Ejemplo: 4567** |
 | `CUIT` | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |

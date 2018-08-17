@@ -17,7 +17,7 @@ En caso que requieras 10 días más para el desarrollo, contáctanos a tusfactur
 Una vez registrado, desde el menú "Mi Cuenta" -&gt; "Mis Cuits" podrás obtener los datos requeridos para poder consultar cada uno de los métodos que tenemos disponibles.
 
 | `apitoken` | Token de tu cuenta **Ejemplo:d26b8fe8c8bf67c884e1405e26c03c85**  Obtenelo ingresando al menú "Mi Cuenta - Mis CUITS". Es un valor único generado automáticamente por nuestro sistema. |
-| --- | --- | --- |
+| :--- | :--- |
 | `apikey` | Código de empresa **Ejemplo:1134** Podes obtenerlo ingresando al menú "Mi Cuenta - Mis CUITS". |
 | `usertoken` | Token del CUIT que va a facturar **Ejemplo:aa6b8fe8c8bf67c884e1405e26c03c85** Obtenelo ingresando al menú "Mi Cuenta - Mis CUITS" y entrando a consultar al registro en cuestión. Es un valor único generado automáticamente por nuestro sistema. |
 

@@ -86,7 +86,7 @@ En caso de existir algún error, se retornará el campo "error" = "S" y dentro d
 ### Estructura de "Cliente"
 
 | `documento_tipo` | Valores Permitidos: **CUIT** **Ejemplo: CUIT** |
-| --- | --- |
+| :--- | :--- |
 | `documento_nro` | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
 
 ### Estructura de los datos devueltos

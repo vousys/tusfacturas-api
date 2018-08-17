@@ -9,7 +9,7 @@ description: >-
 ### Provincias
 
 | Provincia |     | Valor a enviar |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | - |     | 26 |
 | BUENOS AIRES |     | 2 |
 | CATAMARCA |     | 3 |
@@ -40,7 +40,7 @@ description: >-
 ### Condiciones de venta
 
 | Condición de Venta |     | Valor a enviar |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | 10 dias |     | 10 |
 | 15 dias |     | 15 |
 | 20 dias |     | 20 |
@@ -55,7 +55,7 @@ description: >-
 ### Condiciones ante el IVA
 
 | Condición ante el IVA |     | Valor a enviar |
-| --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | Consumidor Final |     | CF |
 | Responsable Inscripto |     | RI |
 | Monotributo |     | M |
@@ -64,7 +64,7 @@ description: >-
 ### Tipos de comprobantes
 
 | FACTURA A |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- |
 | FACTURA B |
 | NOTA DE DEBITO A |
 | NOTA DE DEBITO B |
@@ -85,14 +85,14 @@ description: >-
 ### Monedas
 
 | Moneda |     | Valor a enviar |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Pesos Argentinos |     | PES |
 | Dolares estadounidenses |     | DOL |
 
 ### Idiomas
 
 | Idioma |     | Valor a enviar |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Español |     | 1 |
 | Ingles |     | 2 |
 
@@ -103,7 +103,7 @@ También puede consultar ésta información con el método [Consultar unidades d
 {% endhint %}
 
 | Unidad de medida |     | Valor a enviar |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | 1000 kWh |     | 6 |
 | anulación/devolución |     | 95 |
 | centímetros |     | 20 |

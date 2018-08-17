@@ -56,6 +56,10 @@ Tus credenciales de acceso
 **periodo\_facturado\_hasta**    Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.  
 **rubro**    Campo alfanumérico. Longitud máxima 255 caracteres. Indica el rubro al cual pertenecerá el comprobante. Ésta información no saldrá impresa en el comprobante.   
 **rubro\_grupo\_contable**    Campo alfanumérico. Longitud máxima 255 caracteres. Indica el grupo contable al que pertenece el rubro. Ésta información no saldrá impresa en el comprobante.   
+**abono**: Campo alfabético, longitud máxima 1 caracter. Valores permitidos S \(si\) o N \(no\). Indica si el comprobante a generar es un abono recurrente.  
+**abono\_frecuencia**: Campo numerico sin decimales. Indica la frecuencia en meses con la que debe generarse la recurrencia del abono.  
+**abono\_hasta**: Campo fecha \(mm/yyyy\). Longitud maxima 7. Indica el mes y año hasta el cual debe generarse el abono recurrente.  
+**abono\_actualiza\_precios**: Campo alfabético, longitud máxima 1 caracter. Valores permitidos S \(si\) o N \(no\). Indica si cada vez que se genera el abono, se actualiza los precios de los productos contra el precio actual de la lista de precios.  
 **detalle**  Lista de conceptos a facturar. Objeto JSON Según estructura que se detalla a continuación  
 **fex**    Solo para comprobantes de tipo E. Según estructura detallada en: Factura electronica de exportacion".   
 **bonificacion**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor aplicado en concepto de bonificación sin IVA Ejemplo: 12.67. Tener en cuenta para el cálculo que la bonificación se aplica sobre el primer subtotal SIN IVA y se lo gravará con el importe de IVA que le corresponda.   
@@ -154,6 +158,10 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                 "periodo_facturado_hasta":  "30\/07\/2015",
                 "rubro":                    "Servicios web",
                 "rubro_grupo_contable":     "servicios",
+                "abono": "S",
+                "abono_frecuencia": "2",
+                "abono_hasta":"10/2019",
+                "abono_actualiza_precios": "N",
                 "detalle":
                             [
                                 {
@@ -166,7 +174,8 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                                              "codigo":          "",
                                              "precio_unitario_sin_iva":"100.45",
                                              "alicuota":      "21",
-                                             "unidad_medida": "7"
+                                             "unidad_medida": "7",
+                                             "actualiza_precio": "S"
                                              },
                                     "leyenda":"blanca, cepillada"
                                 },
@@ -182,7 +191,8 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                                              "codigo":          "MPH",
                                              "precio_unitario_sin_iva":"50",
                                              "alicuota":      "10.5",
-                                             "unidad_medida": "7"
+                                             "unidad_medida": "7",
+                                             "actualiza_precio": "N"
                                              },
                                     "leyenda":""
                                 },
@@ -243,7 +253,7 @@ Si el cliente ya existia en la base de datos de www.tusfacturas.com.ar será act
 Información de los campos a enviar:
 
 | `documento_tipo` | Valores Permitidos: **CUIT , DNI** **Ejemplo: DNI** |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | `documento_nro` | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
 | `razon_social` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: Pirulo S.A** |
 | `email` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: tusfacturas@vousys.com** |
@@ -272,7 +282,8 @@ La estructura de cada concepto a enviar es la siguiente:
 		"codigo": "MPH",
 		"precio_unitario_sin_iva": "50",
 		"alicuota": "10.5",
-		"unidad_medida": "7"
+		"unidad_medida": "7",
+		"actualiza_precio":"S"
 	},
 	"leyenda": ""
 }
@@ -283,7 +294,7 @@ La estructura de cada concepto a enviar es la siguiente:
 Los campos que debes enviar son los siguientes:
 
 | `cantidad` | Campo numérico con 2 decimales. Separador de decimales: punto. **Ejemplo: 1.50** |
-| --- | --- | --- | --- |
+| :--- | :--- |
 | `afecta_stock` | Campo alfanumérico de 1 posición. Valores posibles: "S" \(si\), "N" \(no\)  **Ejemplo: S** |
 | `producto` | Según estructura de producto |
 | `leyenda` | Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.  **Ejemplo: Blanca, cepillada** |
@@ -304,20 +315,23 @@ Si el producto ya existia en la base de datos de nuestra plataforma, para la lis
 "codigo":          "MPH",
 "precio_unitario_sin_iva":"50",
 "alicuota":      "10.5",
-"unidad_medida": "7"
+"unidad_medida": "7",
+"actualiza_precio": "N"
 }
 ```
 
 Los campos que debes enviar son los siguientes:
 
 | `descripcion` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: Papa blanca** |
-| --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- |
 | `unidad_bulto` | Campo numérico entero requerido. Indica la cantidad de unidades que componen un bulto. Valor minimo esperado: 1 **Ejemplo: 12** |
 | `lista_precios` | Campo alfanumérico. Longitud máxima 255 caracteres. Nombre de la lista de precios a la cual pertenece. No saldrá impreso en la factura pero es requerido. **Ejemplo: Verdura Orgánica** |
 | `codigo` | Campo alfanumérico. Longitud máxima 10 caracteres. campo Opcional **Ejemplo: ABX780** |
 | `precio_unitario_sin_iva` | Campo numérico con 2 decimales. separador de decimales: punto **Ejemplo: 645.67** |
 | `alicuota` | Indica la alicuota de IVA con la que grava ese producto. Valores Permitidos: **27, 21 , 10.5 ,  0  y -1 \( para exento\)** **Ejemplo: 10.5** |
 | `unidad_medida` | Campo numérico que indica la unidad de medida, según[ tabla de referencia Unidades de Medida\(\*\*\). ](../tablas-de-referencia.md#productos-unidades-de-medida-afip) **Ejemplo: 7** |
+| `actualiza_precio` | Indica si se actualiza el precio del producto, en la base productos, tomando como valor de referencia el enviado en el comprobante. Campo Alfabético, de 1 caracter. Valores permitidos: S \(si\) N \(no\).          **Ejemplo: S** |
+|  |  |
 
 
 

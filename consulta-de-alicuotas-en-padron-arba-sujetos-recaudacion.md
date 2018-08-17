@@ -80,6 +80,6 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 ### Estructura de "Cliente"
 
 | `documento_tipo` | Valores Permitidos: **CUIT , DNI** **Ejemplo: DNI** |
-| --- | --- |
+| :--- | :--- |
 | `documento_nro` | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
 

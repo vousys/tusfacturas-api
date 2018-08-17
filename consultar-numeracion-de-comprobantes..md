@@ -89,7 +89,7 @@ Importante: Los campos número y punto de venta, se retornan como numéricos
 ### Estructura de datos 
 
 | `tipo` | Campo numérico según tabla de referencia de [Tipos de comprobantes\(\*\*\*\)](https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes). **Ejemplo: FACTURA B** |
-| --- | --- | --- |
+| :--- | :--- |
 | `operacion` | Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\).  Valores Permitidos: **V, C** **Ejemplo: V** |
 | `punto_venta` | Campo numérico entero. Longitud máxima 4 digitos. **Ejemplo: 3** |
 

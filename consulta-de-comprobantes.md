@@ -169,7 +169,7 @@ Los datos devueltos por éste método mantienen la misma estructura que los envi
 ### Estructura de los datos enviados:
 
 | `tipo` | Campo numérico según tabla de referencia de [Tipos de comprobantes\(\*\*\*\)](https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes). **Ejemplo: FACTURA B** |
-| --- | --- | --- | --- |
+| :--- | :--- |
 | `operacion` | Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\).  Valores Permitidos: **V, C** **Ejemplo: V** |
 | `punto_venta` | Campo numérico entero. Longitud máxima 4 digitos. **Ejemplo: 3** |
 | `numero` | Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. **Ejemplo: 4567** |
