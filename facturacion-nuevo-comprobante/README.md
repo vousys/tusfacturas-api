@@ -215,7 +215,7 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                             ],
                 "bonificacion":             "120",
                 "leyenda_gral":             "Segun Orden de compra III1333",
-                "comentario":               "Factura correspondiente al servicio XX"
+                "comentario":               "Factura correspondiente al servicio XX",
                 "percepciones_iibb":        "0",
                 "percepciones_iva":         "0",
                 "exentos":                  "0",
