@@ -10,7 +10,7 @@ description: >-
 Ésta información es actualizada a cada hora desde AFIP.
 {% endhint %}
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/api" path="/v2/tablas\_referencia/cotizacion" %}
+{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/tablas\_referencia/cotizacion" %}
 {% api-method-summary %}
 Obtener cotización del dólar
 {% endapi-method-summary %}
