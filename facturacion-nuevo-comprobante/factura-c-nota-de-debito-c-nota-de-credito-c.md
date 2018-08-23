@@ -52,7 +52,7 @@ Ten en cuenta que los comprobantes C,  NO llevan IVA.
 		"impuestos_internos": 0
 	},
 	"usertoken": "a7ahdt5s7725d7fa4f4e63646bc169b"
-
+}
 ```
 
 
