@@ -260,7 +260,8 @@ Información de los campos a enviar:
 | `domicilio` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: Av. Santa Fe 123** |
 | `provincia` | Campo numérico según [tabla de referencia\(\*\)](../tablas-de-referencia.md#provincias). **Ejemplo: 2** |
 | `envia_por_mail` | Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: **S , N** **Ejemplo: S** |
-| `condicion_pago` | Campo numérico que indica la cantidad de dias en los cuales vence el plazo de pago. Valores Permitidos: **0,30,60,90**  **Ejemplo: 30** |
+| `condicion_pago` | Campo numérico que indica la cantidad de dias en los cuales vence el plazo de pago y en base a éste valor se calcula la fecha de vencimiento del comprobante emitido. Valores Permitidos: **0,1,2,3,10,15,20,30,45,60,90.**0 = Contado15,30,60,90 = xx dias1 = Transferencia bancaria2 = Tarjeta Crédito3= Tarjeta Débito **Ejemplo: 30**  |
+|  |  |
 | `condicion_iva` | Campo numérico que indica la condicion de iva, según [tabla de referencia Condiciones ante el IVA\(\*\*\)](../tablas-de-referencia.md#condiciones-ante-el-iva). Valores Permitidos: **CF, RI, M, E**  **Ejemplo: RI** |
 
 ### Estructura de "Detalle de conceptos"
