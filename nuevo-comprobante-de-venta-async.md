@@ -85,9 +85,11 @@ En caso de exito, retorna la cantidad que proceso y la info de los registros que
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### ¿Como funciona el modo asincrónico de facturación por lote?
+## ¿Como funciona el modo asincrónico de facturación por lote?
 
 ![](.gitbook/assets/image.png)
+
+## ¿Qué es un WebHook?
 
 Un `webhook` es una notificación que se envía de un servidor a otro mediante una llamada `HTTP POST` al ocurrir un determinado evento.
 
