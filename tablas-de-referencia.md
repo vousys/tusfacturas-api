@@ -51,6 +51,8 @@ description: >-
 | Contado |     | 0 |
 | Cuenta corriente |     | 9999 |
 | Transferencia Bancaria |     | 1 |
+| Tarjeta de crédito |  | 2 |
+| Tarjeta de Débito |  | 3 |
 
 ### Condiciones ante el IVA
 
