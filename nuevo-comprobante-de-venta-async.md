@@ -89,6 +89,10 @@ En caso de exito, retorna la cantidad que proceso y la info de los registros que
 
 ![](.gitbook/assets/image.png)
 
+{% hint style="success" %}
+El modo asincrónico puede ser usado para enviar tanto  un comprobante, como un lote de hasta 500 comprobantes; ya que fue pensado para optimizar los procesos de generación de los mismos.
+{% endhint %}
+
 ## ¿Qué es un WebHook?
 
 Un `webhook` es una notificación que se envía de un servidor a otro mediante una llamada `HTTP POST` al ocurrir un determinado evento.
