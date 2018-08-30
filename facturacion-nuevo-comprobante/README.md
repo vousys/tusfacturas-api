@@ -1,11 +1,11 @@
 ---
 description: >-
-  Mediante éste método podrás generar comprobantes de venta o de compra. Los
-  mismos quedarán almacenados de manera automática en nuestra plataforma, para
-  que puedas consultarlos en cualquier momento.
+  Mediante éste método podrás generar comprobantes de venta. Los mismos quedarán
+  almacenados de manera automática en nuestra plataforma, para que puedas
+  consultarlos en cualquier momento.
 ---
 
-# Nuevo comprobante de Venta \(Online\)
+# Nuevo comprobante de Venta \(Instantaneo\)
 
 {% hint style="info" %}
 Poder utilizar la API debes [estar registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
@@ -14,7 +14,7 @@ Mientras estés en etapa de testing, configurá tu CUIT con un punto de venta ir
 
 Ten en cuenta que al registrarte, te asignamos un plan gratuito que te permite emitir 5 comprobantes por mes y una vez vencido tu período de prueba, debes contratar algún plan API de los que tenemos disponibles aquí .
 
-En caso que requieras 10 días más para el desarrollo, contáctanos a tusfacturas@vousys.com
+En caso que requieras 20 días con un plan free para el desarrollo, contáctanos a tusfacturas@vousys.com
 {% endhint %}
 
 {% api-method method="post" host="https://www.tusfacturas.com.ar/app/api/" path="v2/facturacion/nuevo" %}
@@ -52,7 +52,8 @@ Tus credenciales de acceso
 **idioma**    Campo numérico. Longitud 1 caracter. Indica el idioma en que se imprimira el PDF del comprobante. Valores Permitidos: 1 = Español, 2= Ingles    
 **punto\_venta**    Campo numérico entero. Longitud máxima 4 digitos.   
 **moneda**    Campo alfanumérico de 3 Digitos según tabla de referencia de Monedas .  
-**cotizacion**    Campo numérico con 2 decimales. Puede obtener la cotización del día según AFIP desde nuestro método de consulta de cotización Ejemplo: 15.20 **numero**    El numero del comprobante a generar. Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante contra AFIP. Ejemplo: 4567 **periodo\_facturado\_desde**     Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.   
+**cotizacion**    Campo numérico con 2 decimales. Puede obtener la cotización del día según AFIP desde nuestro método de consulta de cotización Ejemplo: 15.20 **numero \(OPCIONAL\)**   El numero del comprobante a generar. Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante contra AFIP. Si el nro de comprobante NO es enviado, traeremos la próxima numeración . Ejemplo: 4567   
+**periodo\_facturado\_desde**     Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.   
 **periodo\_facturado\_hasta**    Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.  
 **rubro**    Campo alfanumérico. Longitud máxima 255 caracteres. Indica el rubro al cual pertenecerá el comprobante. Ésta información no saldrá impresa en el comprobante.   
 **rubro\_grupo\_contable**    Campo alfanumérico. Longitud máxima 255 caracteres. Indica el grupo contable al que pertenece el rubro. Ésta información no saldrá impresa en el comprobante.   
