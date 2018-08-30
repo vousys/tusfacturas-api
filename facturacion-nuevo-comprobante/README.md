@@ -5,7 +5,7 @@ description: >-
   que puedas consultarlos en cualquier momento.
 ---
 
-# Nuevo comprobante de Venta
+# Nuevo comprobante de Venta \(Online\)
 
 {% hint style="info" %}
 Poder utilizar la API debes [estar registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
