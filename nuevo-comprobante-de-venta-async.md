@@ -352,5 +352,43 @@ Si ya venias haciendo comprobantes instantáneos y queres migrar a la facturaci�
 
 5- Modificá la llamada a nuestra API para que [tenga la estructura definida previamente](nuevo-comprobante-de-venta-async.md#facturacion-por-lotes)
 
+## FAQs
+
+#### Si falla una emisión del comprobante de un lote, ¿se realiza un rollback de las emitidas hasta el momento en ese lote? ¿Se emite hasta dicha factura? ¿Saltea el comprobante y continúa con el siguiente?
+
+Saltea el comprobante y continúa con el siguiente dado que los comprobantes que envíes NO tienen numeración asignada. Un comprobante que no pudo ser procesado porque hubo error , se intenta re-procesar hasta 15 veces.
+
+#### ¿Que problemas puedo encontrar?
+
+Por ej si enviaste un lote de 5 facturas , con diferente fecha, y se fueron procesando en el orden enviado, con el siguiente estado:  
+
+*   Factura 1  \(10/01/2018\) - PROCESADA Y FACTURADA
+*   Factura 2  \(10/01/2018\) - PROCESADA Y FACTURADA
+*   Factura 3  \(15/01/2018\) - PROCESADA CON ERROR
+*   Factura 4  \(16/01/2018\) - PROCESADA Y FACTURADA
+*   Factura 5  \(18/01/2018\) - PENDIENTE
+
+Cuando se reintente procesar la FACTURA 3, la AFIP va a retornar error, ya que se HA emitido una factura con fecha posterior.
+
+#### ¿Hay una reducción de tiempo considerable al emitir los comprobantes de esta forma?
+
+Optimizas porque lo podes dejar programado con anterioridad, podes mandar el lote el dia 5 e indicar que esos comprobantes se emitan el dia 29; ademas tu proceso no se trabaria esperando la respuesta de la factura como si la mandaras instantánea. Sigue con las siguientes y a medida q va procesando te va notificando.
+
+#### En caso de que falle el request del webhook, ¿se realizan reintentos hasta completar la notificación?
+
+La plataforma intentará notificarte a tu webhook hasta 15 veces.
+
+#### ¿Queda registrado en su plataforma para que eventualmente solicitemos un retry?
+
+Queda registrado en la plataforma y podrás solicitar el retry tanto de la generación del comprobante nuevamente, como del envio del webhook.
+
+####  ¿Puedo enviar la información sin algún criterio de ordenamiento?
+
+Debes enviar los comprobantes a facturar en orden, por fecha, ya que se procesa en el orden en que se fue recibiendo.
+
+#### ¿Los comprobantes que envío a facturar, son validados \(en cuanto al formato esperado\) antes de guardarlos?
+
+Actualmente no, pero estamos trabajando para integrar esa funcionalidad sin incrementar el tiempo de procesamiento, cada vez que envíes un lote.
+
 
 
