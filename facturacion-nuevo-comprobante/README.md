@@ -50,7 +50,7 @@ Tus credenciales de acceso
 **tipo**    Campo alfabético según tabla de referencia de Tipos de comprobantes\(\*\*\*\).    
 **operacion**    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\). Valores Permitidos: V, C Ejemplo: V   
 **idioma**    Campo numérico. Longitud 1 caracter. Indica el idioma en que se imprimira el PDF del comprobante. Valores Permitidos: 1 = Español, 2= Ingles    
-**punto\_venta**    Campo numérico entero. Longitud máxima 4 digitos.   
+**punto\_venta**    Campo numérico entero. Longitud máxima 5 digitos.   
 **moneda**    Campo alfanumérico de 3 Digitos según tabla de referencia de Monedas .  
 **cotizacion**    Campo numérico con 2 decimales. Puede obtener la cotización del día según AFIP desde nuestro método de consulta de cotización Ejemplo: 15.20 **numero \(OPCIONAL\)**   El numero del comprobante a generar. Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante contra AFIP. Si el nro de comprobante NO es enviado, traeremos la próxima numeración . Ejemplo: 4567   
 **periodo\_facturado\_desde**     Campo fecha. Contenido opcional. Formato esperado: dd/mm/aaaa.   
