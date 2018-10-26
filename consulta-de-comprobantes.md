@@ -126,6 +126,7 @@ Importante:
 		"impuestos_internos": 0,
 		"total": 543.21,
 		"cae": "65301278726386 ",
+		"afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
 		"vencimiento_cae": "07\/08\/2015",
 		"vencimiento_pago": "27\/08\/2015",
 		"comprobante_pdf_url": "https://www.tusfacturas.com.ar/app/comprobantes/30111111111-1292963535-0002-00000006.pdf",
