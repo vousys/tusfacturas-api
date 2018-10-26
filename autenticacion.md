@@ -21,7 +21,7 @@ Una vez registrado, desde el menú "Mi Cuenta" -&gt; "Mis Cuits" podrás obtener
 | `apikey` | Código de empresa **Ejemplo:1134** Podes obtenerlo ingresando al menú "Mi Cuenta - Mis CUITS". |
 | `usertoken` | Token del CUIT que va a facturar **Ejemplo:aa6b8fe8c8bf67c884e1405e26c03c85** Obtenelo ingresando al menú "Mi Cuenta - Mis CUITS" y entrando a consultar al registro en cuestión. Es un valor único generado automáticamente por nuestro sistema. |
 
-## Errores HTTP {#errores-http}
+## Errores HTTP <a id="errores-http"></a>
 
 Errores de HTTP comunes que puede devolver :   
 401, 403: El acceso ha sido denegado  

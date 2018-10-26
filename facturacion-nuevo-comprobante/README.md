@@ -94,11 +94,12 @@ Importante:
   
 - El CAE es el Código de Autorización Electrónico que otorga AFIP como confirmación de la creación del comprobante. Es un dato importante para almacenar como respuesta.  
   
-- Los CAE tienen fecha de vencimiento.  
+- Los CAE tienen fecha de vencimiento y se devuelve en formato dd/mm/aaaa  
   
-- Contemplar en la respuesta que el número de CAE es un texto.  
+- El número de CAE es un texto y se envia con un espacio al final.  
   
-  
+- El texto que se retorna en el campo afip\_codigo\_barras se envía con un espacio al final.  
+   
 {% endapi-method-response-example-description %}
 
 {% code-tabs %}
@@ -108,10 +109,11 @@ Importante:
     "error":     "N",
      "errores": [ ""],    
      "rta":      "El comprobante NOTA DE DEBITO B 0002-00000006 (MI CUIT) se ha guardado correctamente",    
-     "cae":      "65301278726386",    
+     "cae":      "65301278726386 ",    
      "vencimiento_cae":"07\/08\/2015",    
      "vencimiento_pago":"27\/08\/2015",    
-     "comprobante_pdf_url": "https://www.tusfacturas.com.ar/app/comprobantes/30111111111-1292963535-0002-00000006.pdf"
+     "comprobante_pdf_url": "https://www.tusfacturas.com.ar/app/comprobantes/30111111111-1292963535-0002-00000006.pdf",
+     "afip_codigo_barras" : "12121212121006000300000000000000201811052 "
   }  
   
 ```
@@ -253,19 +255,94 @@ Si el cliente ya existia en la base de datos de www.tusfacturas.com.ar será act
 
 Información de los campos a enviar:
 
-| `documento_tipo` | Valores Permitidos: **CUIT , DNI** **Ejemplo: DNI** |
-| :--- | :--- |
-| `documento_nro` | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
-| `razon_social` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: Pirulo S.A** |
-| `email` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: tusfacturas@vousys.com** |
-| `domicilio` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: Av. Santa Fe 123** |
-| `provincia` | Campo numérico según [tabla de referencia\(\*\)](../tablas-de-referencia.md#provincias). **Ejemplo: 2** |
-| `envia_por_mail` | Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: **S , N** **Ejemplo: S** |
-| `condicion_pago` | Campo numérico que indica la cantidad de dias en los cuales vence el plazo de pago y en base a éste valor se calcula la fecha de vencimiento del comprobante emitido. Valores Permitidos: **0,1,2,3,10,15,20,30,45,60,90.**0 = Contado15,30,60,90 = xx dias1 = Transferencia bancaria2 = Tarjeta Crédito3= Tarjeta Débito **Ejemplo: 30**  |
-|  |  |
-| `condicion_iva` | Campo numérico que indica la condicion de iva, según [tabla de referencia Condiciones ante el IVA\(\*\*\)](../tablas-de-referencia.md#condiciones-ante-el-iva). Valores Permitidos: **CF, RI, M, E**  **Ejemplo: RI** |
-
-### Estructura de "Detalle de conceptos"
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><code>documento_tipo</code>
+      </th>
+      <th style="text-align:left">Valores Permitidos: <b>CUIT , DNI</b>
+        <br /><b>Ejemplo: DNI</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>documento_nro</code>
+      </td>
+      <td style="text-align:left">Campo numérico, sin puntos ni guiones.
+        <br /><b>Ejemplo: 30111222334</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>razon_social</code>
+      </td>
+      <td style="text-align:left">Campo alfanumérico. Longitud máxima 255 caracteres.
+        <br /><b>Ejemplo: Pirulo S.A</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>email</code>
+      </td>
+      <td style="text-align:left">Campo alfanumérico. Longitud máxima 255 caracteres.
+        <br /><b>Ejemplo: tusfacturas@vousys.com</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>domicilio</code>
+      </td>
+      <td style="text-align:left">Campo alfanumérico. Longitud máxima 255 caracteres.
+        <br /><b>Ejemplo: Av. Santa Fe 123</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>provincia</code>
+      </td>
+      <td style="text-align:left">Campo numérico según <a href="../tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.
+        <br
+        /><b>Ejemplo: 2</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>envia_por_mail</code>
+      </td>
+      <td style="text-align:left">Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: <b>S , N</b>
+        <br
+        /><b>Ejemplo: S</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>condicion_pago</code>
+      </td>
+      <td style="text-align:left">
+        <p>Campo numérico que indica la cantidad de dias en los cuales vence el plazo
+          de pago y en base a éste valor se calcula la fecha de vencimiento del comprobante
+          emitido.</p>
+        <p>Valores Permitidos: <b>0,1,2,3,10,15,20,30,45,60,90.</b>
+        </p>
+        <p>0 = Contado</p>
+        <p>15,30,60,90 = xx dias</p>
+        <p>1 = Transferencia bancaria</p>
+        <p>2 = Tarjeta Crédito</p>
+        <p>3= Tarjeta Débito</p>
+        <p>
+          <br /><b>Ejemplo: 30 </b>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>condicion_iva</code>
+      </td>
+      <td style="text-align:left">Campo numérico que indica la condicion de iva, según <a href="../tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>.
+        Valores Permitidos: <b>CF, RI, M, E </b>
+        <br /><b>Ejemplo: RI</b>
+      </td>
+    </tr>
+  </tbody>
+</table>### Estructura de "Detalle de conceptos"
 
 El detalle de conceptos se compone de una lista de cada uno de los productos que vas a facturar.
 
