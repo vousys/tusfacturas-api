@@ -83,7 +83,7 @@ description: >-
 | FACTURA E |
 | NOTA DE DEBITO E |
 | NOTA DE CREDITO E |
-| FACTURA-RECIBO C |
+| RECIBO C |
 |  |
 
 ### Monedas
