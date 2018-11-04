@@ -35,7 +35,7 @@ Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del
                                  "pais_destino_id"  :    "145"
                             }
                         ],
-       "comprobantes_asociados: [
+       "comprobantes_asociados": [
                             {
                                 "tipo_comprobante"   :    "NOTA DE CREDITO E",
                                  "punto_venta"  :    "145",
@@ -121,9 +121,7 @@ Información de los campos a enviar:
                     "condicion_pago":       "30",
                     "condicion_iva":        "CF"
                 },
-
 "comprobante":  {
-
                 "fecha":                    "28\/07\/2015",
                 "tipo":                     "NOTA DE DEBITO E",
                 "moneda":                   "DOL",
@@ -160,7 +158,7 @@ Información de los campos a enviar:
                                                      "pais_destino_id"  :    "145"
                                                 }
                                             ],
-                           "comprobantes_asociados: [
+                           "comprobantes_asociados": [
                                                 {
                                                     "tipo_comprobante"   :    "NOTA DE CREDITO E",
                                                      "punto_venta"  :    "145",
@@ -185,8 +183,6 @@ Información de los campos a enviar:
                                              },
                                     "leyenda":"blanca, cepillada"
                                 },
-
-
                                 {
                                     "cantidad":"1.5",
                                     "afecta_stock": "N",
@@ -201,7 +197,6 @@ Información de los campos a enviar:
                                              },
                                     "leyenda":""
                                 },
-
                                 {
                                     "cantidad":"2",
                                     "afecta_stock": "S",
@@ -216,7 +211,6 @@ Información de los campos a enviar:
                                              },
                                     "leyenda":""
                                 }
-
                             ],
                 "bonificacion":             "120",
                 "leyenda_gral":             "bla bla bla",
