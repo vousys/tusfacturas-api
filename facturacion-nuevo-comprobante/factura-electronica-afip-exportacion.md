@@ -212,14 +212,14 @@ Información de los campos a enviar:
                                     "leyenda":""
                                 }
                             ],
-                "bonificacion":             "120",
+                "bonificacion":             "0",
                 "leyenda_gral":             "bla bla bla",
                 "percepciones_iibb":        "0",
                 "percepciones_iva":         "0",
                 "exentos":                  "0",
                 "nogravados":               "0",
                 "impuestos_internos":       "0",
-                "total":                    "543.22"
+                "total":                    "575.45"
         }
 }
 
