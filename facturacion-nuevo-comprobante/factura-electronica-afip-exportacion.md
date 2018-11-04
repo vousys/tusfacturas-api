@@ -105,6 +105,10 @@ Información de los campos a enviar:
 
 ## Ejemplo de JSON completo a enviar 
 
+{% hint style="info" %}
+Para comprobantes de tipo E, los siguientes campos deberá enviarlos en cero:  bonificacion, exentos, percepciones \(IIBB e IVA\), no gravados, impuestos internos.
+{% endhint %}
+
 ```text
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
