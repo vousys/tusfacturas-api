@@ -78,10 +78,10 @@ Información de los campos a enviar:Información de los campos a enviar:
 
 ### Estructura de "Comprobantes Asociados"
 
-Cada uno de los comprobantes asociados de exportación que disponga, deberán ser enviados acordes a la estructura que se detalla a continuación
+Cada uno de los comprobantes asociados de exportación que disponga, deberán ser enviados acordes a la estructura que se detalla a continuación.
 
 {% hint style="info" %}
-Solo deberán ser enviados los comprobantes asociados, cuando el campo exportacion\_tipo sea igual a "1"
+Solo deberán ser enviados los comprobantes asociados, cuando el campo exportacion\_tipo sea igual a "1" .
 {% endhint %}
 
 ```text
