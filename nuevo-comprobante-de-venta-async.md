@@ -7,6 +7,8 @@ description: >-
 
 # Facturación por lotes \(Async + programado + webhook\)
 
+
+
 {% hint style="info" %}
 Poder utilizar la API debes [estar registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
 
@@ -23,6 +25,10 @@ Facturación por Lotes
 {% endapi-method-summary %}
 
 {% api-method-description %}
+  
+Ten en cuenta que no podras enviar comprobantes de tipo E con ésta modalidad.  
+  
+  
 Charset: UTF-8  
 Formato esperado: JSON  
 {% endapi-method-description %}
@@ -115,6 +121,7 @@ Vas a recibir por POST un JSON con la siguiente estructura, para que puedas rela
 "vencimiento_pago":"28\/03\/2018",
 "comprobante_nro":"0003-00000007",
 "comprobante_tipo":"FACTURA B",
+"observaciones": "",
 "envio_x_mail":"N",
 "comprobante_pdf_url":"https:\/\/www.tusfacturas.app\/app\/comprobantes\/XXXXXX.pdf",
 "facturacion_lote_id_referencia":"ASD123AW",
@@ -138,6 +145,8 @@ Ten en cuenta que dentro de la captura del webhook, deberás realizar las valida
 Requests es un array, que contiene cada uno de los comprobantes a emitir. 
 
 El limite máx de request por llamada que esperamos recibir es 500.
+
+**No podrás enviar comprobantes de tipo E en ésta modalidad.**
 
 La estructura de cada "request" debe ser acorde al tipo de comprobante a generar \([comprobantes de tipo A](facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](facturacion-nuevo-comprobante/factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md), [comprobantes de tipo E ](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)\) con la salvedad de que debe agregarse el campo `facturacion_lote_id_referencia`, dentro de la [estructura JSON de "comprobante" ](facturacion-nuevo-comprobante/#ejemplo-de-json-que-debes-enviar) y el campo `numero` debe ser enviado en cero, de modo que se genere la numeración correlativa a medida que se procesa.
 
