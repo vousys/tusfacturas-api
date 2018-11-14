@@ -4,7 +4,8 @@
 * [Autenticación](autenticacion.md)
 * [Plugins y SDKs](plugins-y-sdks.md)
 * [Estado de los servicios AFIP](estado-de-los-servicios-afip.md)
-* [Nuevo comprobante de Venta \(Instantaneo\)](facturacion-nuevo-comprobante/README.md)
+* [Facturación por Lotes](api-facturacion-por-lotes.md)
+* [Facturación individual: Nuevo comprobante de Venta](facturacion-nuevo-comprobante/README.md)
   * [Factura electrónica AFIP de exportación](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)
   * [Factura A / Nota de débito A / Nota de crédito A](facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md)
   * [Factura B / Nota de débito B / Nota de crédito B](facturacion-nuevo-comprobante/factura-nota-de-debito-b-nota-de-credito-bb.md)
@@ -19,7 +20,6 @@
 * [Consulta de Incoterms](consulta-de-incoterms.md)
 * [Tablas de referencia](tablas-de-referencia.md)
 * [Cotización Dólar AFIP](cotizacion-dolar-afip.md)
-* [Facturación por Lotes](api-facturacion-por-lotes.md)
 
 ## API v1 \(OLD\)
 

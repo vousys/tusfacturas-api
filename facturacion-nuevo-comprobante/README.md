@@ -1,4 +1,10 @@
-# Nuevo comprobante de Venta \(Instantaneo\)
+---
+description: >-
+  Mediante éste método podrás generar comprobantes de venta de tipo A, B, C, M y
+  E.
+---
+
+# Facturación individual: Nuevo comprobante de Venta
 
 {% hint style="info" %}
 Poder utilizar la API debes [estar registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
