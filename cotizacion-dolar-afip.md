@@ -1,9 +1,3 @@
----
-description: >-
-  A continuación se muestran un ejemplo de la información en JSON que debe
-  recibir la API para poder  consultar con la cotización del dia según AFIP.
----
-
 # Cotización Dólar AFIP
 
 {% hint style="info" %}

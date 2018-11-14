@@ -1,9 +1,3 @@
----
-description: >-
-  A continuación se detallan las tablas de referencia que se requieren para
-  alguno de los métodos.
----
-
 # Tablas de referencia
 
 ### Provincias

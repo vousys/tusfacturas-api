@@ -1,10 +1,3 @@
----
-description: >-
-  Mediante éste método podrás generar comprobantes de venta. Los mismos quedarán
-  almacenados de manera automática en nuestra plataforma, para que puedas
-  consultarlos en cualquier momento.
----
-
 # Nuevo comprobante de Venta \(Instantaneo\)
 
 {% hint style="info" %}

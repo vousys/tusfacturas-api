@@ -7,7 +7,9 @@ description: >-
 
 # Facturación por lotes \(Async + programado + webhook\)
 
-
+{% hint style="info" %}
+Atencion! éste método está deshabilitado por el momento.
+{% endhint %}
 
 {% hint style="info" %}
 Poder utilizar la API debes [estar registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
@@ -93,7 +95,7 @@ En caso de exito, retorna la cantidad que proceso y la info de los registros que
 
 ## ¿Como funciona el modo asincrónico de facturación por lote?
 
-![](.gitbook/assets/image.png)
+![](../.gitbook/assets/image.png)
 
 {% hint style="success" %}
 El modo asincrónico puede ser usado para enviar tanto  un comprobante, como un lote de hasta 500 comprobantes; ya que fue pensado para optimizar los procesos de generación de los mismos.
@@ -146,7 +148,7 @@ Requests es un array, que contiene cada uno de los comprobantes a emitir.
 
 El limite máx de request por llamada que esperamos recibir es 500.
 
-La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar \([comprobantes de tipo A](facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](facturacion-nuevo-comprobante/factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)\) con la salvedad de que debe agregarse el campo `facturacion_lote_id_referencia`, dentro de la [estructura JSON de "comprobante" ](facturacion-nuevo-comprobante/#ejemplo-de-json-que-debes-enviar) y el campo `numero` debe ser enviado en cero, de modo que se genere la numeración correlativa a medida que se procesa. **No podrás enviar comprobantes de tipo E en ésta modalidad.**
+La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar \([comprobantes de tipo A](../facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](../facturacion-nuevo-comprobante/factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](../facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](../facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)\) con la salvedad de que debe agregarse el campo `facturacion_lote_id_referencia`, dentro de la [estructura JSON de "comprobante" ](../facturacion-nuevo-comprobante/#ejemplo-de-json-que-debes-enviar) y el campo `numero` debe ser enviado en cero, de modo que se genere la numeración correlativa a medida que se procesa. **No podrás enviar comprobantes de tipo E en ésta modalidad.**
 
 #### Validaciones que realizamos en ésta etapa:
 

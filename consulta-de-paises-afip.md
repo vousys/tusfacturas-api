@@ -1,9 +1,3 @@
----
-description: >-
-  Éste método es útil para aquellos que deban generar comprobantes de tipo E
-  (Exportación). Te permite consultar la lista de paises disponibles.
----
-
 # Consulta de Paises - AFIP
 
 {% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="v2/tablas\_referencia/paises" %}

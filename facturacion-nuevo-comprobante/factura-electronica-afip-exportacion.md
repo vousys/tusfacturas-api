@@ -1,9 +1,3 @@
----
-description: >-
-  Apartado exclusivo para la generación de FACTURAS E, NOTAS DE DEBITO E, NOTAS
-  DE CREDITO E
----
-
 # Factura electrónica AFIP de exportación
 
 ## Estructura de datos campo "fex"

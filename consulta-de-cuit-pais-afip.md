@@ -1,9 +1,3 @@
----
-description: >-
-  Mediante éste método podrás consultar los CUIT País requeridos para la
-  generación de comprobantes de tipo "E" (Exportación)
----
-
 # Consulta de CUIT Pais - AFIP
 
 {% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="v2/tablas\_referencia/cuit\_pais" %}

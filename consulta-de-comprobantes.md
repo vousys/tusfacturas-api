@@ -1,7 +1,3 @@
----
-description: Por medio de éste método podrás consultar comprobantes generados.
----
-
 # Consulta de comprobantes
 
 Tipo de datos: **JSON**  

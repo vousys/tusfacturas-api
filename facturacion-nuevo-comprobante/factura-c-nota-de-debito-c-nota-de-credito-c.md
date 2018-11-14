@@ -1,7 +1,3 @@
----
-description: Ejemplo de JSON para generar comprobantes tipo C.
----
-
 # Factura C / Nota de débito C / Nota de crédito C
 
 {% hint style="info" %}

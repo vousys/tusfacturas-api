@@ -1,7 +1,3 @@
----
-description: Ejemplo de comprobantes tipo B
----
-
 # Factura B / Nota de débito B / Nota de crédito B
 
 {% hint style="info" %}

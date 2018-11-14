@@ -1,9 +1,3 @@
----
-description: >-
-  Mediante éste método podrás consultar la próxima numeración de un tipo de
-  comprobante.
----
-
 # Consultar numeración de comprobantes.
 
 {% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/facturacion/numeracion" %}

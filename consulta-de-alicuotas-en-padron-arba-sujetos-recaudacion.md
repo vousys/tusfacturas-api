@@ -1,10 +1,3 @@
----
-description: >-
-  Mediante éste método podrás consultar la existencia de tu cliente en el padrón
-  ARBA. Ésta información es obtenida mensualmente desde ARBA e importada en el
-  perfil de cada cliente.
----
-
 # Consulta de alícuotas en padrón ARBA sujetos Recaudación
 
 {% hint style="info" %}

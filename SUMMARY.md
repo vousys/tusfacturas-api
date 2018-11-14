@@ -4,7 +4,7 @@
 * [Autenticación](autenticacion.md)
 * [Plugins y SDKs](plugins-y-sdks.md)
 * [Estado de los servicios AFIP](estado-de-los-servicios-afip.md)
-* [Facturación por lotes \(Async + programado + webhook\)](nuevo-comprobante-de-venta-async.md)
+* [Facturación por lotes \(Async + programado + webhook\)](v1/nuevo-comprobante-de-venta-async.md)
 * [Nuevo comprobante de Venta \(Instantaneo\)](facturacion-nuevo-comprobante/README.md)
   * [Factura electrónica AFIP de exportación](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)
   * [Factura A / Nota de débito A / Nota de crédito A](facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md)
@@ -20,4 +20,8 @@
 * [Consulta de Incoterms](consulta-de-incoterms.md)
 * [Tablas de referencia](tablas-de-referencia.md)
 * [Cotización Dólar AFIP](cotizacion-dolar-afip.md)
+
+## API v1 \(OLD\)
+
+* [Facturación por lotes \(Async + programado + webhook\)](v1/nuevo-comprobante-de-venta-async.md)
 

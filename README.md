@@ -1,10 +1,3 @@
----
-description: >-
-  Mediante nuestra API podrás conectar tu sistema de gestión actual, con nuestra
-  plataforma y emitir facturas electrónicas AFIP válidas. Estamos homologados
-  por AFIP
----
-
 # Documentación de la API para Factura Electrónica AFIP
 
 Ademas, podrás generar y consultar de manera segura, comprobantes de venta y de compra , como así también utilizar todas las funcionalidades que te brinda nuestra plataforma web. 

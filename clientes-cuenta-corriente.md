@@ -1,7 +1,3 @@
----
-description: Mediante éste método podrás consultar la cuenta corriente de tu cliente.
----
-
 # Clientes - Cuenta Corriente
 
 {% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="v2/clientes/cuenta-corriente" %}

@@ -1,7 +1,3 @@
----
-description: Ejemplo JSON de para comprobantes tipo A
----
-
 # Factura A / Nota de débito A / Nota de crédito A
 
 ```text

@@ -1,7 +1,3 @@
----
-description: Datos requeridos para poder conectarte con nuestra API.
----
-
 # Autenticación
 
 {% hint style="info" %}
