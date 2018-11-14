@@ -19,6 +19,7 @@
 * [Consulta de Incoterms](consulta-de-incoterms.md)
 * [Tablas de referencia](tablas-de-referencia.md)
 * [Cotización Dólar AFIP](cotizacion-dolar-afip.md)
+* [Facturación por Lotes](api-facturacion-por-lotes.md)
 
 ## API v1 \(OLD\)
 
