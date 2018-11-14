@@ -5,7 +5,7 @@ description: >-
   notificamos vía un webhook.
 ---
 
-# Facturación por lotes \(Async + programado + webhook\)
+# Facturación por lotes Instantáneo
 
 
 
