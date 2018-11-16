@@ -248,12 +248,12 @@ Para poder generar el comprobante, debes enviar un detalle de todos los datos de
 Si el cliente ya existia en la base de datos de www.tusfacturas.com.ar será actualizado con los nuevos datos, salvo Tipo y Nro de documento y condicion ante el IVA
 {% endhint %}
 
-Información de los campos a enviar:
+#### Información de los campos a enviar:
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"><code>documento_tipo</code>
+      <th style="text-align:left"><b><code>documento_tipo</code></b>
       </th>
       <th style="text-align:left">Valores Permitidos: <b>CUIT , DNI, OTRO</b>
         <br /><b>Ejemplo: DNI</b>
