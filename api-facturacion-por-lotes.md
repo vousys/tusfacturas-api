@@ -105,6 +105,26 @@ Tus credenciales de acceso
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Estructura de  "requests"
+
+Requests es un array, que contiene cada uno de los comprobantes a emitir.
+
+{% hint style="info" %}
+La **cantidad máxima de requests** \(por cada llamada que realices\) debe ser de 200. 
+
+Todos los requests de llamada, deben ser del **mismo tipo de comprobant**e. 
+
+Los request deben venir **ordenados por número ascendente y por fecha**. 
+{% endhint %}
+
+La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar \([comprobantes de tipo A](facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](facturacion-nuevo-comprobante/factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)\) . **No podrás enviar comprobantes de tipo E en ésta modalidad.**
+
+#### Validaciones que realizamos antes de enviarlos a procesar:
+
+* Que no se envien más de 200 requests por llamada.
+* Las credenciales de acceso enviadas en cada request deben corresponder con las suyas.
+* Dentro de cada request, el campo "numero" del comprobante, debe contener el numero del comprobante en cuestion, ya que con él deberás luego relacionarlo en tu sistema y manejar las respuestas.
+
 ### **¿Que te retornaremos en caso de error ?**
 
 ####  Error de validación de datos / formato:
@@ -174,25 +194,7 @@ En el caso que se envie a AFIP el lote a procesar y un comprobante venga rechaza
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### Estructura de  "requests"
 
-Requests es un array, que contiene cada uno de los comprobantes a emitir.
-
-{% hint style="info" %}
-La **cantidad máxima de requests** \(por cada llamada que realices\) debe ser de 200. 
-
-Todos los requests de llamada, deben ser del **mismo tipo de comprobant**e. 
-
-Los request deben venir **ordenados por número ascendente y por fecha**. 
-{% endhint %}
-
-La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar \([comprobantes de tipo A](facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](facturacion-nuevo-comprobante/factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)\) . **No podrás enviar comprobantes de tipo E en ésta modalidad.**
-
-#### Validaciones que realizamos antes de enviarlos a procesar:
-
-* Que no se envien más de 200 requests por llamada.
-* Las credenciales de acceso enviadas en cada request deben corresponder con las suyas.
-* Dentro de cada request, el campo "numero" del comprobante, debe contener el numero del comprobante en cuestion, ya que con él deberás luego relacionarlo en tu sistema y manejar las respuestas.
 
 ### Ejemplo de JSON a enviar
 
