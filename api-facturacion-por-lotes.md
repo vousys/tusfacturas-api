@@ -26,7 +26,10 @@ Facturación por Lotes
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Ten en cuenta que no podras enviar comprobantes de tipo E con ésta modalidad.Charset: UTF-8  
+Ten en cuenta que no podras enviar comprobantes de tipo E con ésta modalidad.   
+  
+Charset: UTF-8  
+  
 Formato esperado: JSON
 {% endapi-method-description %}
 
@@ -55,7 +58,7 @@ Tus credenciales de acceso
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
- 
+
 {% endapi-method-response-example-description %}
 
 {% code-tabs %}
@@ -95,8 +98,7 @@ Tus credenciales de acceso
         "afip_codigo_barras": "111111111110010000368466696512866201811266 ",
         "comprobante_pdf_url": "https:\/\/www.tusfacturas.com.ar\/app\/comprobantes\/0000-11111111111-22222222222-1-00003-00000075.pdf"
     }]
-} 
-
+}
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
@@ -105,16 +107,16 @@ Tus credenciales de acceso
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Estructura de  "requests"
+## Estructura de  "requests"
 
 Requests es un array, que contiene cada uno de los comprobantes a emitir.
 
 {% hint style="info" %}
-La **cantidad máxima de requests** \(por cada llamada que realices\) debe ser de 200. 
+La **cantidad máxima de requests** \(por cada llamada que realices\) debe ser de 200.
 
-Todos los requests de llamada, deben ser del **mismo tipo de comprobant**e. 
+Todos los requests de llamada, deben ser del **mismo tipo de comprobant**e.
 
-Los request deben venir **ordenados por número ascendente y por fecha**. 
+Los request deben venir **ordenados por número ascendente y por fecha**.
 {% endhint %}
 
 La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar \([comprobantes de tipo A](facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](facturacion-nuevo-comprobante/factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)\) . **No podrás enviar comprobantes de tipo E en ésta modalidad.**
@@ -125,9 +127,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 * Las credenciales de acceso enviadas en cada request deben corresponder con las suyas.
 * Dentro de cada request, el campo "numero" del comprobante, debe contener el numero del comprobante en cuestion, ya que con él deberás luego relacionarlo en tu sistema y manejar las respuestas.
 
-
-
-### Ejemplo de JSON a enviar
+## Ejemplo de JSON a enviar
 
 {% code-tabs %}
 {% code-tabs-item title="JSON" %}
@@ -299,10 +299,9 @@ curl_close($ch);
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+## **¿Que te retornaremos en caso de error ?**
 
-### **¿Que te retornaremos en caso de error ?**
-
-####  Error de validación de datos / formato:
+#### Error de validación de datos / formato:
 
 Ej: una llamada con 3 requests, donde el comprobante enviado en segunda posición tiene un tipo de comprobante diferente.
 
@@ -310,8 +309,8 @@ Ej: una llamada con 3 requests, donde el comprobante enviado en segunda posició
 {% code-tabs-item title="JSON" %}
 ```text
 {
-	"error": "S",
-	"errores": ["El comprobante enviado en la fila 1 (comenzando en 0) tiene un tipo de comprobante diferente."]
+    "error": "S",
+    "errores": ["El comprobante enviado en la fila 1 (comenzando en 0) tiene un tipo de comprobante diferente."]
 }
 ```
 {% endcode-tabs-item %}
@@ -320,7 +319,7 @@ Ej: una llamada con 3 requests, donde el comprobante enviado en segunda posició
 #### Error de Procesamiento.
 
 {% hint style="warning" %}
-En el caso que se envie a AFIP el lote a procesar y un comprobante venga rechazado, todos los comprobantes siguientes que se envien a facturar, vendrán rechazados.
+En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechazado, todos los comprobantes siguientes que se envíen a facturar, vendrán rechazados.
 {% endhint %}
 
 {% code-tabs %}
@@ -364,12 +363,9 @@ En el caso que se envie a AFIP el lote a procesar y un comprobante venga rechaza
         "envio_x_mail_direcciones": ""
     }]
 }
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-
-
 
 ## FAQs
 
@@ -383,11 +379,11 @@ Tenes un promedio de entre 3 y 6 minutos dependiendo de si ademas de generar el 
 
 #### ¿Hay una reducción de tiempo considerable al emitir los comprobantes de esta forma?
 
-Si, muchisima. 
+Si, muchisima.
 
 #### ¿Puedo enviar la información sin algún criterio de ordenamiento?
 
-No, los comprobantes deben ser enviados bajo el criterio de: 
+No, los comprobantes deben ser enviados bajo el criterio de:
 
 1. Mismo tipo de comprobante
 2. Número de comprobante \(ascendente\)
