@@ -125,75 +125,6 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 * Las credenciales de acceso enviadas en cada request deben corresponder con las suyas.
 * Dentro de cada request, el campo "numero" del comprobante, debe contener el numero del comprobante en cuestion, ya que con él deberás luego relacionarlo en tu sistema y manejar las respuestas.
 
-### **¿Que te retornaremos en caso de error ?**
-
-####  Error de validación de datos / formato:
-
-Ej: una llamada con 3 requests, donde el comprobante enviado en segunda posición tiene un tipo de comprobante diferente.
-
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
-```text
-{
-	"error": "S",
-	"errores": ["El comprobante enviado en la fila 1 (comenzando en 0) tiene un tipo de comprobante diferente."]
-}
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
-#### Error de Procesamiento.
-
-{% hint style="warning" %}
-En el caso que se envie a AFIP el lote a procesar y un comprobante venga rechazado, todos los comprobantes siguientes que se envien a facturar, vendrán rechazados.
-{% endhint %}
-
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
-```text
- {
-    "error": "S",
-    "errores": [],
-    "response": [{
-        "error": "N",
-        "errores": [],
-        "cae": "68466696512853 ",
-        "comprobante_nro": "00003-00000074",
-        "cae_vencimiento": "26\/11\/2018",
-        "observaciones": "AFIP genero el comprobante pero lo ha marcado como observado por los siguientes motivos: Observacion: Factura individual, DocTipo: 80, DocNro 22222222222 no se encuentra inscripto en condicion ACTIVA en el impuesto (IVA). [ codigo: 10063 ]. Dichas observaciones no requieren accion de su parte.",
-        "envio_x_mail": "N",
-        "envio_x_mail_direcciones": "",
-        "rta": "El comprobante FACTURA A 00003-00000074 (XXXXXX) se ha guardado correctamente ",
-        "vencimiento_cae": "26\/11\/2018",
-        "vencimiento_pago": "16\/11\/2018",
-        "comprobante_tipo": "FACTURA A",
-        "afip_codigo_barras": "111111111110010000368466696512853201811262 ",
-        "comprobante_pdf_url": "https:\/\/www.tusfacturas.com.ar\/app\/comprobantes\/0000-11111111111-22222222222-1-00003-00000074.pdf"
-    }, {
-        "error": "S",
-        "errores": [" AFIP Factura electronica, rechazo el comprobante - ERROR: AFIP rechazo la generacion del comprobante Cod: 0", " AFIP Factura electronica, rechazo el comprobante - ERROR: El campo FchServDesde no puede ser posterior al campo FchServHasta. Cod: 10032"],
-        "cae": "",
-        "comprobante_nro": "00003-00000082",
-        "cae_vencimiento": "",
-        "observaciones": "",
-        "envio_x_mail": "",
-        "envio_x_mail_direcciones": ""
-    }, {
-        "error": "S",
-        "errores": [" AFIP Factura electronica, rechazo el comprobante - ERROR: AFIP rechazo la generacion del comprobante Cod: 0"],
-        "cae": "",
-        "comprobante_nro": "00003-00000083",
-        "cae_vencimiento": "",
-        "observaciones": "",
-        "envio_x_mail": "",
-        "envio_x_mail_direcciones": ""
-    }]
-}
-
-```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
-
 
 
 ### Ejemplo de JSON a enviar
@@ -367,6 +298,78 @@ curl_close($ch);
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+
+### **¿Que te retornaremos en caso de error ?**
+
+####  Error de validación de datos / formato:
+
+Ej: una llamada con 3 requests, donde el comprobante enviado en segunda posición tiene un tipo de comprobante diferente.
+
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
+```text
+{
+	"error": "S",
+	"errores": ["El comprobante enviado en la fila 1 (comenzando en 0) tiene un tipo de comprobante diferente."]
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+#### Error de Procesamiento.
+
+{% hint style="warning" %}
+En el caso que se envie a AFIP el lote a procesar y un comprobante venga rechazado, todos los comprobantes siguientes que se envien a facturar, vendrán rechazados.
+{% endhint %}
+
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
+```text
+ {
+    "error": "S",
+    "errores": [],
+    "response": [{
+        "error": "N",
+        "errores": [],
+        "cae": "68466696512853 ",
+        "comprobante_nro": "00003-00000074",
+        "cae_vencimiento": "26\/11\/2018",
+        "observaciones": "AFIP genero el comprobante pero lo ha marcado como observado por los siguientes motivos: Observacion: Factura individual, DocTipo: 80, DocNro 22222222222 no se encuentra inscripto en condicion ACTIVA en el impuesto (IVA). [ codigo: 10063 ]. Dichas observaciones no requieren accion de su parte.",
+        "envio_x_mail": "N",
+        "envio_x_mail_direcciones": "",
+        "rta": "El comprobante FACTURA A 00003-00000074 (XXXXXX) se ha guardado correctamente ",
+        "vencimiento_cae": "26\/11\/2018",
+        "vencimiento_pago": "16\/11\/2018",
+        "comprobante_tipo": "FACTURA A",
+        "afip_codigo_barras": "111111111110010000368466696512853201811262 ",
+        "comprobante_pdf_url": "https:\/\/www.tusfacturas.com.ar\/app\/comprobantes\/0000-11111111111-22222222222-1-00003-00000074.pdf"
+    }, {
+        "error": "S",
+        "errores": [" AFIP Factura electronica, rechazo el comprobante - ERROR: AFIP rechazo la generacion del comprobante Cod: 0", " AFIP Factura electronica, rechazo el comprobante - ERROR: El campo FchServDesde no puede ser posterior al campo FchServHasta. Cod: 10032"],
+        "cae": "",
+        "comprobante_nro": "00003-00000082",
+        "cae_vencimiento": "",
+        "observaciones": "",
+        "envio_x_mail": "",
+        "envio_x_mail_direcciones": ""
+    }, {
+        "error": "S",
+        "errores": [" AFIP Factura electronica, rechazo el comprobante - ERROR: AFIP rechazo la generacion del comprobante Cod: 0"],
+        "cae": "",
+        "comprobante_nro": "00003-00000083",
+        "cae_vencimiento": "",
+        "observaciones": "",
+        "envio_x_mail": "",
+        "envio_x_mail_direcciones": ""
+    }]
+}
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+
 
 ## FAQs
 
