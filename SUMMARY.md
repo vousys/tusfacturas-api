@@ -14,6 +14,7 @@
 * [Consultar numeración de comprobantes.](consultar-numeracion-de-comprobantes..md)
 * [Clientes - Cuenta Corriente](clientes-cuenta-corriente.md)
 * [Consulta de alícuotas en padrón ARBA sujetos Recaudación](consulta-de-alicuotas-en-padron-arba-sujetos-recaudacion.md)
+* [Consulta de alícuotas en padrón AGIP.](consulta-de-alicuotas-en-padron-agip..md)
 * [Consulta de unidades de medida para productos - AFIP](consulta-de-unidades-de-medida-para-productos-afip.md)
 * [Consulta de Paises - AFIP](consulta-de-paises-afip.md)
 * [Consulta de CUIT Pais - AFIP](consulta-de-cuit-pais-afip.md)
