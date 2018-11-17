@@ -1,6 +1,6 @@
 ---
 description: >-
-  Mediante éste método podrás enviar lotes de hasta 200 comprobantes en cada
+  Mediante éste método podrás enviar lotes de hasta 100 comprobantes en cada
   llamada que realices.
 ---
 
@@ -112,7 +112,7 @@ Tus credenciales de acceso
 Requests es un array, que contiene cada uno de los comprobantes a emitir.
 
 {% hint style="info" %}
-La **cantidad máxima de requests** \(por cada llamada que realices\) debe ser de 200.
+La **cantidad máxima de requests** \(por cada llamada que realices\) debe ser de 100.
 
 Todos los requests de llamada, deben ser del **mismo tipo de comprobant**e.
 
@@ -123,7 +123,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 
 #### Validaciones que realizamos antes de enviarlos a procesar:
 
-* Que no se envien más de 200 requests por llamada.
+* Que no se envien más de 100 requests por llamada.
 * Las credenciales de acceso enviadas en cada request deben corresponder con las suyas.
 * Dentro de cada request, el campo "numero" del comprobante, debe contener el numero del comprobante en cuestion, ya que con él deberás luego relacionarlo en tu sistema y manejar las respuestas.
 
@@ -303,7 +303,7 @@ curl_close($ch);
 
 #### Error de validación de datos / formato:
 
-Ej: una llamada con 3 requests, donde el comprobante enviado en segunda posición tiene un tipo de comprobante diferente.
+Ej: una llamada con 3 requests, donde segundo el comprobante enviado tiene un tipo de comprobante diferente.
 
 {% code-tabs %}
 {% code-tabs-item title="JSON" %}
@@ -319,7 +319,7 @@ Ej: una llamada con 3 requests, donde el comprobante enviado en segunda posició
 #### Error de Procesamiento.
 
 {% hint style="warning" %}
-En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechazado, todos los comprobantes siguientes que se envíen a facturar, vendrán rechazados.
+En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechazado, todos los comprobantes subsiguientes del lote, vendrán rechazados.
 {% endhint %}
 
 {% code-tabs %}
@@ -371,11 +371,11 @@ En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechaz
 
 #### Si falla una emisión del comprobante de un lote, ¿se realiza un rollback de las emitidas hasta el momento en ese lote? ¿Se emite hasta dicha factura? ¿Saltea el comprobante y continúa con el siguiente?
 
-Si un comprobante tiene error, ese comprobante y los siguientes vendrán rechazados.
+Si un comprobante tiene error, ese comprobante y los siguientes vendrán rechazados. No existe rollback porque se va procesando contra AFIP y generando en nuestra plataforma en el orden en que se reciben.
 
-#### ¿Cuanto es el tiempo promedio que demora enviar 200 comprobantes?
+#### ¿Cuanto es el tiempo promedio que demora enviar 100 comprobantes?
 
-Tenes un promedio de entre 3 y 6 minutos dependiendo de si ademas de generar el comprobante, el mismo debe ser enviado por email de manera automática
+Tenes un promedio de  3  minutos dependiendo de si ademas de generar el comprobante, el mismo debe ser enviado por email de manera automática
 
 #### ¿Hay una reducción de tiempo considerable al emitir los comprobantes de esta forma?
 
