@@ -1,11 +1,14 @@
-# Consulta de alícuotas en padrón AGIP.
+---
+description: API para consultar al padrón AGIP las alícuotas de percepción y retención.
+---
 
+# Consulta de alícuotas en padrón AGIP.
 
 {% hint style="info" %}
 El CUIT a consultar debe existir previamente en tu base de clientes.
 {% endhint %}
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api/" path="v2/clientes/arba-padron" %}
+{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api/" path="v2/clientes/agip-padron" %}
 {% api-method-summary %}
 Consulta en padrón ARBA
 {% endapi-method-summary %}
@@ -18,8 +21,8 @@ El método te devolverá las alícuotas \(en porcentajes\) que le corresponden s
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="cliente" required=true type="object" %}
-**documento\_tipo**    Valores Permitidos: CUIT , DNI Ejemplo: DNI   
-**documento\_nro**    Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334
+**documento\_tipo** Valores Permitidos: CUIT , DNI Ejemplo: DNI  
+**documento\_nro** Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334  
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="usertoken" type="string" required=true %}
@@ -42,8 +45,7 @@ Tus credenciales de acceso
 En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación.
 {% endapi-method-response-example-description %}
 
-```
-
+```text
 {
    "error":     "N",
    "errores":  [  "" ],
@@ -57,7 +59,7 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Estructura del JSON a enviar 
+## Estructura del JSON a enviar
 
 ```text
 {
@@ -71,9 +73,9 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
  }
 ```
 
-### Estructura de "Cliente"
+## Estructura de "Cliente"
 
-| `documento_tipo` | Valores Permitidos: **CUIT , DNI** **Ejemplo: DNI** |
+| `documento_tipo` | Valores Permitidos: **CUIT**  |
 | :--- | :--- |
 | `documento_nro` | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
 

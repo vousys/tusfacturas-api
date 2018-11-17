@@ -1,6 +1,6 @@
 ---
 description: >-
-  Mediante éste método podrás enviar lotes de hasta 100 comprobantes en cada
+  Mediante éste método podrás enviar lotes de hasta 200 comprobantes en cada
   llamada que realices.
 ---
 
