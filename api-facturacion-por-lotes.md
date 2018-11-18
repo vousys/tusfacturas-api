@@ -1,14 +1,10 @@
 ---
 description: >-
-  Mediante éste método podrás enviar lotes de hasta 200 comprobantes en cada
-  llamada que realices.
+  Mediante éste método podrás enviar a procesar lotes de hasta 100 comprobantes
+  por llamada, acelerando tus tiempos de procesamiento.
 ---
 
 # Facturación por Lotes
-
-{% hint style="warning" %}
-Éste método estará disponible a partir del 20/11/2018
-{% endhint %}
 
 {% hint style="info" %}
 Poder utilizar la API debes [estar registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html).
@@ -26,7 +22,6 @@ Facturación por Lotes
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Ten en cuenta que no podras enviar comprobantes de tipo E con ésta modalidad.   
   
 Charset: UTF-8  
   
@@ -114,9 +109,9 @@ Requests es un array, que contiene cada uno de los comprobantes a emitir.
 {% hint style="info" %}
 La **cantidad máxima de requests** \(por cada llamada que realices\) debe ser de 100.
 
-Todos los requests de llamada, deben ser del **mismo tipo de comprobant**e.
+Todos los requests de llamada, deben ser del **mismo tipo de comprobante**.
 
-Los request deben venir **ordenados por número ascendente y por fecha**.
+Los request deben venir **ordenados por número ascendente y por fecha**, de la misma manera que si los enviarás a procesar uno por uno.
 {% endhint %}
 
 La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar \([comprobantes de tipo A](facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](facturacion-nuevo-comprobante/factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)\) . **No podrás enviar comprobantes de tipo E en ésta modalidad.**
@@ -125,7 +120,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 
 * Que no se envien más de 100 requests por llamada.
 * Las credenciales de acceso enviadas en cada request deben corresponder con las suyas.
-* Dentro de cada request, el campo "numero" del comprobante, debe contener el numero del comprobante en cuestion, ya que con él deberás luego relacionarlo en tu sistema y manejar las respuestas.
+* Dentro de cada request, el campo "numero" del comprobante, debe contener el numero del comprobante en cuestión, ya que con él deberás luego relacionarlo en tu sistema y manejar las respuestas.
 
 ## Ejemplo de JSON a enviar
 
@@ -316,7 +311,7 @@ Ej: una llamada con 3 requests, donde segundo el comprobante enviado tiene un ti
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### Error de Procesamiento.
+#### Error de Procesamiento:
 
 {% hint style="warning" %}
 En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechazado, todos los comprobantes subsiguientes del lote, vendrán rechazados.
