@@ -1,5 +1,14 @@
 # Tablas de referencia
 
+### Tipos de documento
+
+| Tipo de documento | Valor a enviar |
+| :--- | :--- |
+| DNI | DNI |
+| CUIT | CUIT |
+| PASAPORTE | PASAPORTE |
+| OTRO \(no requiere enviar el numero\) | OTRO |
+
 ### Provincias
 
 | Provincia |     | Valor a enviar |
