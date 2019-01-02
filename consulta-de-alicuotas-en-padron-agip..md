@@ -10,11 +10,12 @@ El CUIT a consultar debe existir previamente en tu base de clientes.
 
 {% api-method method="post" host="https://www.tusfacturas.com.ar/app/api/" path="v2/clientes/agip-padron" %}
 {% api-method-summary %}
-Consulta en padrón ARBA
+Consulta en padrón AGIP
 {% endapi-method-summary %}
 
 {% api-method-description %}
-El método te devolverá las alícuotas \(en porcentajes\) que le corresponden según ARBA.
+El método te devolverá las alícuotas \(en porcentaj\) que le corresponden según AGIP.  
+   
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -58,6 +59,14 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% hint style="info" %}
+CUITS con alícuota cero:
+
+En el supuesto caso que la consulta te retorne alícuota cero, deberás evaluar si corresponde o no, aplicar el porcentaje máximo a retener/percibir.
+
+Previo al 01/01/2019, éste padrón podía ser descargado públicamente desde la web de AGIP, pero ahora se realiza únicamente una consulta individual accediendo con clave ciudad; motivo por el cual, nuestra plataforma no puede retornarte la información exacta.
+{% endhint %}
 
 ## Estructura del JSON a enviar
 
