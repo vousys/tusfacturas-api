@@ -255,7 +255,7 @@ Si el cliente ya existia en la base de datos de www.tusfacturas.com.ar será act
     <tr>
       <th style="text-align:left"><b><code>documento_tipo</code></b>
       </th>
-      <th style="text-align:left">Valores Permitidos: <b>CUIT , DNI, OTRO</b>
+      <th style="text-align:left">Valores Permitidos: <b>CUIT , DNI, PASAPORTE, OTRO</b>
         <br /><b>Ejemplo: DNI</b>
       </th>
     </tr>
