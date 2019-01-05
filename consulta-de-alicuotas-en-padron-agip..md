@@ -47,13 +47,48 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 {% endapi-method-response-example-description %}
 
 ```text
+
+Ejemplo de cuando existe en padron AGIP
+
 {
    "error":     "N",
+   "existe_padron":     "S",
    "errores":  [  "" ],
    "rta":      "OK",
    "alicuota_percepcion": 3,
    "alicuota_retencion":  5,
 }
+
+
+
+Ejemplo de cuando NO existe en padron AGIP
+
+{
+   "error":     "N",
+   "existe_padron":     "N",
+   "errores":  [  "" ],
+   "rta":      "OK",
+   "alicuota_percepcion": 0,
+   "alicuota_retencion":  0,
+}
+
+
+
+Ejemplo de cuando NO existe en tu base de clientes
+
+{
+   "error":     "S",
+   "existe_padron":     "-",
+   "errores":  [  "El cliente no existe en tu cartera" ],
+   "rta":      "OK",
+   "alicuota_percepcion": 0,
+   "alicuota_retencion":  0,
+}
+
+
+
+
+
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
