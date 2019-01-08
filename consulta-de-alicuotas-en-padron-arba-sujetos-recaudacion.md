@@ -38,19 +38,54 @@ Tus credenciales de acceso
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación.
+En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación.  
+  
 {% endapi-method-response-example-description %}
 
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
 ```
 
+Ejemplo de cuando existe en padron 
+​
 {
    "error":     "N",
+   "existe_padron":     "S",
    "errores":  [  "" ],
    "rta":      "OK",
    "alicuota_percepcion": 3,
    "alicuota_retencion":  5,
 }
+​
+​
+​
+Ejemplo de cuando NO existe en padron 
+​
+{
+   "error":     "N",
+   "existe_padron":     "N",
+   "errores":  [  "" ],
+   "rta":      "OK",
+   "alicuota_percepcion": 0,
+   "alicuota_retencion":  0,
+}
+​
+​
+​
+Ejemplo de cuando NO existe en tu base de clientes
+​
+{
+   "error":     "S",
+   "existe_padron":     "-",
+   "errores":  [  "El cliente no existe en tu cartera" ],
+   "rta":      "OK",
+   "alicuota_percepcion": 0,
+   "alicuota_retencion":  0,
+}
+
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
