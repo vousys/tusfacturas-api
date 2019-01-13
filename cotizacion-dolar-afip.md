@@ -1,7 +1,7 @@
 # Cotización Dólar AFIP
 
 {% hint style="info" %}
-Ésta información es actualizada a cada hora desde AFIP.
+Ésta información es actualizada a cada hora desde AFIP.  El límite de request que dispones para realizar las consultas, es el  limite que tenés habilitado en tu plan  para la emisión de comprobantes, multiplicado por 12 \(ya que puedes consultar la cotización del dólar una vez por hora\) . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 12,000 request a éste método en el período en curso.
 {% endhint %}
 
 {% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/tablas\_referencia/cotizacion" %}
