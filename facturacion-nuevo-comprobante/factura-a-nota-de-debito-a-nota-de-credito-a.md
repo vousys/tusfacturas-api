@@ -76,9 +76,9 @@
 
 ```text
 // ENVIO REQUEST
-$url ="https://www.tusfacturas.com.ar/api/v2/facturacion/nuevo" ;
+$url ="https://www.tusfacturas.com.ar/app/api/v2/facturacion/nuevo" ;
 $ch = curl_init( $url );
-curl_setopt( $ch, CURLOPT_POSTFIELDS,  json_encode($facturacion_json) );
+curl_setopt( $ch, CURLOPT_POSTFIELDS,   ($facturacion_json) );
 curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 $json_rta_curl =  json_decode(  curl_exec($ch) ) ;  
