@@ -39,40 +39,11 @@ Tus credenciales de acceso
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="comprobante" type="object" required=true %}
-**fecha**    Campo fecha. Para facturación afip deberá ser la fecha del día. Formato esperado: dd/mm/aaaa. Ejemplo: 13/05/2018   
-**tipo**    Campo alfabético según tabla de referencia de Tipos de comprobantes\(\*\*\*\).    
-**operacion**    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\). Valores Permitidos: V, C Ejemplo: V   
-**idioma**    Campo numérico. Longitud 1 caracter. Indica el idioma en que se imprimira el PDF del comprobante. Valores Permitidos: 1 = Español, 2= Ingles    
-**punto\_venta**    Campo numérico entero. Longitud máxima 5 digitos.   
-**moneda**    Campo alfanumérico de 3 Digitos según tabla de referencia de Monedas .  
-**cotizacion**    Campo numérico con 2 decimales. Puede obtener la cotización del día según AFIP desde nuestro método de consulta de cotización Ejemplo: 15.20 **numero \(OPCIONAL\)**   El numero del comprobante a generar. Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante contra AFIP. Si el nro de comprobante NO es enviado, traeremos la próxima numeración . Ejemplo: 4567   
-**periodo\_facturado\_desde**     Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen _productos_ y asi lo indiquen en la configuración de su CUIT+punto de venta. Obligatorio para quienes facturen _Servicios_ o _Productos y Servicios._  
-**periodo\_facturado\_hasta**    Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen _productos_ y así lo indiquen en la configuración de su CUIT+punto de venta.Obligatorio para quienes facturen _Servicios_ o _Productos y Servicios._  
-**rubro**    Campo alfanumérico. Longitud máxima 255 caracteres. Indica el rubro al cual pertenecerá el comprobante. Ésta información no saldrá impresa en el comprobante.   
-**rubro\_grupo\_contable**    Campo alfanumérico. Longitud máxima 255 caracteres. Indica el grupo contable al que pertenece el rubro. Ésta información no saldrá impresa en el comprobante.   
-**abono**: Campo alfabético, longitud máxima 1 caracter. Valores permitidos S \(si\) o N \(no\). Indica si el comprobante a generar es un abono recurrente.  
-**abono\_frecuencia**: Campo numerico sin decimales. Indica la frecuencia en meses con la que debe generarse la recurrencia del abono.  
-**abono\_hasta**: Campo fecha \(mm/yyyy\). Longitud maxima 7. Indica el mes y año hasta el cual debe generarse el abono recurrente.  
-**abono\_actualiza\_precios**: Campo alfabético, longitud máxima 1 caracter. Valores permitidos S \(si\) o N \(no\). Indica si cada vez que se genera el abono, se actualiza los precios de los productos contra el precio actual de la lista de precios.  
-**detalle**  Lista de conceptos a facturar. Objeto JSON Según estructura que se detalla a continuación  
-**fex**    Solo para comprobantes de tipo E. Según estructura detallada en: Factura electronica de exportacion".   
-**bonificacion**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor aplicado en concepto de bonificación sin IVA Ejemplo: 12.67. Tener en cuenta para el cálculo que la bonificación se aplica sobre el primer subtotal SIN IVA y se lo gravará con el importe de IVA que le corresponda.    
-**leyenda\_gral**    Campo alfanumérico. Longitud máxima 255 caracteres. Contenido opcional. Es una leyenda general que saldrá impresa en el bloque central de productos del comprobante Ejemplo: Aplica plan 12 cuotas sin interes.   
-**comentario**: Campo alfanumerico, opcional. Longitud máxima: 255 caracteres. Éste campo no saldrá impreso en la factura.  
-**percepciones\_iibb**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la percepción de ingresos brutos realizada Ejemplo: 142.67   
-**percepciones\_iva**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la percepción de IVA realizada Ejemplo: 42.67   
-**exentos**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de exentos. Solo para comprobantes A y M Ejemplo: 72.67   
-**nogravados**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de no gravados. Solo para comprobantes A y M Ejemplo: 62.67 **impuestos\_internos**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de impuestos internos Ejemplo: 2.67   
-**total**    Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos incluyendo IVA e impuestos. Ejemplo: 12452.67
+Estructura de "comprobante" según se informa a continuación
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="cliente" type="object" required=true %}
-**documento\_tipo**:   Valores Permitidos: CUIT , DNI **documento\_nro**:    Campo numérico, sin puntos ni guiones.    
-**razon\_social** :   Campo alfanumérico. Longitud máxima 255 caracteres.    
-**email**:    Campo alfanumérico. Longitud máxima 255 caracteres.   domicilio:    Campo alfanumérico. Longitud máxima 255 caracteres.   
-**provincia**:    Campo numérico según tabla de referencia\(\*\).    
-**envia\_por\_mail**:    Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: S , N **condicion\_pago**:    Campo numérico que indica la cantidad de dias en los cuales vence el plazo de pago. Valores Permitidos: 0,30,60,90    
-**condicion\_iva**:    Campo numérico que indica la condicion de iva, según tabla de referencia Condiciones ante el IVA\(\*\*\).  
+Estructura de "Cliente", según se informa a continuación 
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -123,7 +94,7 @@ Importante:
 Ten en cuenta a la hora de calcular el total, que las bonificaciones están gravadas con IVA 
 {% endhint %}
 
-### Ejemplo de JSON que debes enviar
+### Ejemplo de JSON para generar un comprobante.
 
 ```text
 {
@@ -154,6 +125,7 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                 "numero":                   "6",
                 "periodo_facturado_desde":  "27\/07\/2015",
                 "periodo_facturado_hasta":  "30\/07\/2015",
+                "vencimiento":              "30\/08\/2015",
                 "rubro":                    "Servicios web",
                 "rubro_grupo_contable":     "servicios",
                 "abono": "S",
@@ -225,6 +197,130 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
 
 
 ```
+
+### Estructura de "Comprobante"
+
+Para poder generar el comprobante, debes enviar de todos los datos según se informa a continuación.
+
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
+```text
+   
+"comprobante":  {
+
+                "fecha":                    "28\/07\/2015",
+                "tipo":                     "NOTA DE DEBITO B",
+                "moneda":                   "DOL",
+               "idioma":                   "1",
+                "cotizacion":               "15.20",
+                "operacion":                "V",
+                "punto_venta":              "2",
+                "numero":                   "6",
+                "periodo_facturado_desde":  "27\/07\/2015",
+                "periodo_facturado_hasta":  "30\/07\/2015",
+                "vencimiento":              "30\/08\/2015",
+                "rubro":                    "Servicios web",
+                "rubro_grupo_contable":     "servicios",
+                "abono": "S",
+                "abono_frecuencia": "2",
+                "abono_hasta":"10/2019",
+                "abono_actualiza_precios": "N",
+                "detalle":
+                            [
+                                {
+                                    "cantidad":"1",
+                                    "afecta_stock": "N",
+                                    "producto":
+                                            {"descripcion":     "PAPAS",
+                                             "unidad_bulto":    "10",
+                                             "lista_precios":   "MI LISTA DE PRECIOS",
+                                             "codigo":          "",
+                                             "precio_unitario_sin_iva":"100.45",
+                                             "alicuota":      "21",
+                                             "unidad_medida": "7",
+                                             "actualiza_precio": "S"
+                                             },
+                                    "leyenda":"blanca, cepillada"
+                                },
+
+
+                                {
+                                    "cantidad":"1.5",
+                                    "afecta_stock": "N",
+                                    "producto":
+                                            {"descripcion":     "HUEVOS",
+                                             "unidad_bulto":    "30",
+                                             "lista_precios":   "MAPPLETS",
+                                             "codigo":          "MPH",
+                                             "precio_unitario_sin_iva":"50",
+                                             "alicuota":      "10.5",
+                                             "unidad_medida": "7",
+                                             "actualiza_precio": "N"
+                                             },
+                                    "leyenda":""
+                                },
+
+                                {
+                                    "cantidad":"2",
+                                    "afecta_stock": "S",
+                                    "producto":
+                                            {"descripcion":     "ZANAHORIA",
+                                             "unidad_bulto":    "50",
+                                             "lista_precios":   "MI LISTA DE PRECIOS",
+                                             "codigo":          "ZNH1",
+                                             "precio_unitario_sin_iva":"200",
+                                             "alicuota":      "21",
+                                             "unidad_medida": "7"
+                                             },
+                                    "leyenda":""
+                                }
+
+                            ],
+                "bonificacion":             "120",
+                "leyenda_gral":             "Segun Orden de compra III1333",
+                "comentario":               "Factura correspondiente al servicio XX",
+                "percepciones_iibb":        "0",
+                "percepciones_iva":         "0",
+                "exentos":                  "0",
+                "nogravados":               "0",
+                "impuestos_internos":       "0",
+                "total":                    "543.22"
+        }
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+#### Información de los campos a enviar:
+
+| Nombre del campo | Requerido | Comentarios |
+| :--- | :--- | :--- |
+| fecha  | SI | Campo fecha. Para facturación afip deberá ser la fecha del día. Formato esperado: dd/mm/aaaa. Ejemplo: 13/05/2018 |
+| tipo | SI | Campo alfabético según [tabla de referencia de Tipos de comprobantes](../tablas-de-referencia.md#tipos-de-comprobantes). |
+| operacion | SI | Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\). Valores Permitidos: V, C Ejemplo: V |
+| idioma | SI | Campo numérico. Longitud 1 caracter. Indica el idioma en que se imprimira el PDF del comprobante. Valores Permitidos: 1 = Español, 2= Ingles |
+| punto\_venta | SI | Campo numérico entero. Longitud máxima 5 digitos. |
+| moneda | SI | Campo alfanumérico de 3 Digitos según [tabla de referencia de Monedas](../tablas-de-referencia.md#monedas) . |
+| cotizacion | SI | Campo numérico con 2 decimales. Puede obtener la cotización del día según AFIP desde nuestro método de consulta de cotización Ejemplo: 15.20 |
+| numero | OPCIONAL | El numero del comprobante a generar. Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante contra AFIP. Si el nro de comprobante NO es enviado, traeremos la próxima numeración . Ejemplo: 4567 |
+| vencimiento | OPCIONAL | Campo fecha, formato esperado: dd/mm/aaaa. Si no se envía la fecha de vencimiento del pago, se calculará en base a la condición de pago del cliente, contra la fecha del comprobante. |
+| periodo\_facturado\_desde | SI | Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen productos y asi lo indiquen en la configuración de su CUIT+punto de venta. Obligatorio para quienes facturen Servicios o Productos y Servicios. |
+| periodo\_facturado\_hasta | SI | Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen productos y así lo indiquen en la configuración de su CUIT+punto de venta.Obligatorio para quienes facturen Servicios o Productos y Servicios. |
+| rubro | SI |  Campo alfanumérico. Longitud máxima 255 caracteres. Indica el rubro al cual pertenecerá el comprobante. Ésta información no saldrá impresa en el comprobante. |
+| rubro\_grupo\_contable | SI |  Campo alfanumérico. Longitud máxima 255 caracteres. Indica el grupo contable al que pertenece el rubro. Ésta información no saldrá impresa en el comprobante. |
+| abono | OPCIONAL | Campo alfabético, longitud máxima 1 caracter. Valores permitidos S \(si\) o N \(no\). Indica si el comprobante a generar es un abono recurrente. |
+| abono\_frecuencia | REQUERIDO SOLO SI ENVIA ABONO | Campo numerico sin decimales. Indica la frecuencia en meses con la que debe generarse la recurrencia del abono. |
+| abono\_hasta | REQUERIDO SOLO SI ENVIA ABONO | Campo fecha \(mm/yyyy\). Longitud maxima 7. Indica el mes y año hasta el cual debe generarse el abono recurrente. |
+| abono\_actualiza\_precios | REQUERIDO SOLO SI ENVIA ABONO | Campo alfabético, longitud máxima 1 caracter. Valores permitidos S \(si\) o N \(no\). Indica si cada vez que se genera el abono, se actualiza los precios de los productos contra el precio actual de la lista de precios. |
+| detalle | SI |  Lista de conceptos a facturar. [Objeto JSON](./#estructura-de-detalle-de-conceptos) Según estructura que se detalla a continuación |
+| fex | REQUERIDO PARA COMPROBANTES E | Solo para comprobantes de tipo E. Según estructura detallada en: [Factura electronica de exportacion".](factura-electronica-afip-exportacion.md) |
+| bonificacion | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor aplicado en concepto de bonificación sin IVA Ejemplo: 12.67. Tener en cuenta para el cálculo que la bonificación se aplica sobre el primer subtotal SIN IVA y se lo gravará con el importe de IVA que le corresponda. |
+| leyenda\_gral | OPCIONAL |  Campo alfanumérico. Longitud máxima 255 caracteres. Contenido opcional. Es una leyenda general que saldrá impresa en el bloque central de productos del comprobante Ejemplo: Aplica plan 12 cuotas sin interes. |
+| comentario | OPCIONAL | Campo alfanumerico, opcional. Longitud máxima: 255 caracteres. Éste campo no saldrá impreso en la factura. |
+| percepciones\_iibb | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la percepción de ingresos brutos realizada Ejemplo: 142.67 |
+| percepciones\_iva | OPCIONAL | Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la percepción de IVA realizada Ejemplo: 42.67 |
+| exentos | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de exentos. Solo para comprobantes A y M Ejemplo: 72.67 |
+| nogravados | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de no gravados. Solo para comprobantes A y M Ejemplo: 62.67 impuestos\_internos Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de impuestos internos Ejemplo: 2.67 |
+| total | SI |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos incluyendo IVA e impuestos. Ejemplo: 12452.67 |
 
 ### Estructura de  "Cliente"
 
