@@ -91,6 +91,12 @@ Ejemplo de cuando NO existe en tu base de clientes
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="info" %}
+CUITS con alícuota cero:
+
+En el supuesto caso que la consulta te retorne alícuota cero, deberás evaluar con tu contador/a si corresponde o no, aplicar el porcentaje máximo a retener/percibir 
+{% endhint %}
+
 ### Estructura del JSON a enviar 
 
 ```text
