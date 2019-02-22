@@ -137,6 +137,7 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                                 {
                                     "cantidad":"1",
                                     "afecta_stock": "N",
+                                     "bonificacion_porcentaje": "0",
                                     "producto":
                                             {"descripcion":     "PAPAS",
                                              "unidad_bulto":    "10",
@@ -153,6 +154,7 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
 
                                 {
                                     "cantidad":"1.5",
+                                     "bonificacion_porcentaje": "0",
                                     "afecta_stock": "N",
                                     "producto":
                                             {"descripcion":     "HUEVOS",
@@ -169,6 +171,7 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
 
                                 {
                                     "cantidad":"2",
+                                     "bonificacion_porcentaje": "0",
                                     "afecta_stock": "S",
                                     "producto":
                                             {"descripcion":     "ZANAHORIA",
@@ -229,6 +232,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
                             [
                                 {
                                     "cantidad":"1",
+                                    "bonificacion_porcentaje": "0",
                                     "afecta_stock": "N",
                                     "producto":
                                             {"descripcion":     "PAPAS",
@@ -247,6 +251,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
                                 {
                                     "cantidad":"1.5",
                                     "afecta_stock": "N",
+                                     "bonificacion_porcentaje": "0",
                                     "producto":
                                             {"descripcion":     "HUEVOS",
                                              "unidad_bulto":    "30",
@@ -263,6 +268,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
                                 {
                                     "cantidad":"2",
                                     "afecta_stock": "S",
+                                     "bonificacion_porcentaje": "0",
                                     "producto":
                                             {"descripcion":     "ZANAHORIA",
                                              "unidad_bulto":    "50",
@@ -445,6 +451,7 @@ La estructura de cada concepto a enviar es la siguiente:
 {
 	"cantidad": "1.5",
 	"afecta_stock": "N",
+	"bonificacion_porcentaje": "0",
 	"producto": {
 		"descripcion": "HUEVOS",
 		"unidad_bulto": "30",
@@ -468,6 +475,8 @@ Los campos que debes enviar son los siguientes:
 | `afecta_stock` | Campo alfanumérico de 1 posición. Valores posibles: "S" \(si\), "N" \(no\)  **Ejemplo: S** |
 | `producto` | Según estructura de producto |
 | `leyenda` | Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.  **Ejemplo: Blanca, cepillada** |
+| bonificacion\_porcentaje | Si se ha aplicado un porcentaje de descuento sobre éste concepto, debe ser enviado. Es un campo númerico con 2 decimales. El separador de decimales esperado es el punto. Ej:  25 |
+|  |  |
 
 
 
