@@ -22,7 +22,7 @@ Tipo de datos entrada y respuesta: **JSON**
 Charset: **UTF-8**  
 Tipo de request : **POST**  
 URL : **https://www.tusfacturas.com.ar/app/api/v2/estado\_servicios/alertas**  
-Probá la API : **https://www.tusfacturas.com.ar/proba-la-api-factura-electronica-afip.html**
+Probá la API : **https://www.tusfacturas.com.ar/proba-con-el-tester-la-api-factura-electronica-afip.html**
 
 
 
@@ -31,7 +31,7 @@ Probá la API : **https://www.tusfacturas.com.ar/proba-la-api-factura-electronic
 2\) Cuando realices comprobantes AFIP Factura electrónica válida, tené en cuenta que cada request que hagas para generar comprobantes, debe tener una diferencia de tiempo de 1 minuto, ya que sino la misma AFIP te bloquea el CUIT  y no podrás emitir comprobantes por unos minutos.   
 3\) Nuestra API ya ha sido implementada contra sistemas que trabajan en PHP, Visual basic 6.0 y Ruby, como asi tambien entornos AMAZON WS, servidores dedicados y servidores compartidos. 
 
-También podés probar las respuestas de la API, en nuestro API TESTER: [https://www.tusfacturas.com.ar/proba-la-api-factura-electronica-afip.html](https://www.tusfacturas.com.ar/proba-la-api-factura-electronica-afip.html)
+También podés probar las respuestas de la API, en nuestro API TESTER: [https://www.tusfacturas.com.ar/proba-con-el-tester-la-api-factura-electronica-afip.html](https://www.tusfacturas.com.ar/proba-con-el-tester-la-api-factura-electronica-afip.html)
 
 {% page-ref page="plugins-y-sdks.md" %}
 
