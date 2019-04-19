@@ -366,35 +366,35 @@ Si el cliente ya existia en la base de datos de www.tusfacturas.com.ar será act
     <tr>
       <td style="text-align:left"><code>documento_nro</code>
       </td>
-      <td style="text-align:left">Campo numérico, sin puntos ni guiones.
+      <td style="text-align:left">Campo num&#xE9;rico, sin puntos ni guiones.
         <br /><b>Ejemplo: 30111222334</b>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>razon_social</code>
       </td>
-      <td style="text-align:left">Campo alfanumérico. Longitud máxima 255 caracteres.
+      <td style="text-align:left">Campo alfanum&#xE9;rico. Longitud m&#xE1;xima 255 caracteres.
         <br /><b>Ejemplo: Pirulo S.A</b>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>email</code>
       </td>
-      <td style="text-align:left">Campo alfanumérico. Longitud máxima 255 caracteres.
+      <td style="text-align:left">Campo alfanum&#xE9;rico. Longitud m&#xE1;xima 255 caracteres.
         <br /><b>Ejemplo: tusfacturas@vousys.com</b>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>domicilio</code>
       </td>
-      <td style="text-align:left">Campo alfanumérico. Longitud máxima 255 caracteres.
+      <td style="text-align:left">Campo alfanum&#xE9;rico. Longitud m&#xE1;xima 255 caracteres.
         <br /><b>Ejemplo: Av. Santa Fe 123</b>
       </td>
     </tr>
     <tr>
       <td style="text-align:left"><code>provincia</code>
       </td>
-      <td style="text-align:left">Campo numérico según <a href="../tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.
+      <td style="text-align:left">Campo num&#xE9;rico seg&#xFA;n <a href="../tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.
         <br
         /><b>Ejemplo: 2</b>
       </td>
@@ -411,16 +411,16 @@ Si el cliente ya existia en la base de datos de www.tusfacturas.com.ar será act
       <td style="text-align:left"><code>condicion_pago</code>
       </td>
       <td style="text-align:left">
-        <p>Campo numérico que indica la cantidad de dias en los cuales vence el plazo
-          de pago y en base a éste valor se calcula la fecha de vencimiento del comprobante
-          emitido.</p>
+        <p>Campo num&#xE9;rico que indica la cantidad de dias en los cuales vence
+          el plazo de pago y en base a &#xE9;ste valor se calcula la fecha de vencimiento
+          del comprobante emitido.</p>
         <p>Valores Permitidos: <b>0,1,2,3,10,15,20,30,45,60,90.</b>
         </p>
         <p>0 = Contado</p>
         <p>15,30,60,90 = xx dias</p>
         <p>1 = Transferencia bancaria</p>
-        <p>2 = Tarjeta Crédito</p>
-        <p>3= Tarjeta Débito</p>
+        <p>2 = Tarjeta Cr&#xE9;dito</p>
+        <p>3= Tarjeta D&#xE9;bito</p>
         <p>
           <br /><b>Ejemplo: 30 </b>
         </p>
@@ -433,7 +433,7 @@ Si el cliente ya existia en la base de datos de www.tusfacturas.com.ar será act
     <tr>
       <td style="text-align:left"><code>condicion_iva</code>
       </td>
-      <td style="text-align:left">Campo numérico que indica la condicion de iva, según <a href="../tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>.
+      <td style="text-align:left">Campo num&#xE9;rico que indica la condicion de iva, seg&#xFA;n <a href="../tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>.
         Valores Permitidos: <b>CF, RI, M, E </b>
         <br /><b>Ejemplo: RI</b>
       </td>

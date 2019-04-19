@@ -65,6 +65,7 @@
 | Responsable Inscripto |     | RI |
 | Monotributo |     | M |
 | Exento |     | E |
+| Cliente del exterior |  | CDEX |
 
 ### Tipos de comprobantes
 
