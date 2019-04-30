@@ -117,7 +117,7 @@ Vas a recibir por POST un JSON con la siguiente estructura, para que puedas rela
 "comprobante_tipo":"FACTURA B",
 "observaciones": "",
 "envio_x_mail":"N",
-"comprobante_pdf_url":"https:\/\/www.tusfacturas.app\/app\/comprobantes\/XXXXXX.pdf",
+"comprobante_pdf_url":"https:\/\/www.dominio.com/XXXXXX.pdf",
 "facturacion_lote_id_referencia":"ASD123AW",
 "apikey":"1234",
 "apitoken":"7adshadh716781b4e4741437baddaa6",

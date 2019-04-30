@@ -76,7 +76,7 @@ Tus credenciales de acceso
         "vencimiento_pago": "16\/11\/2018",
         "comprobante_tipo": "FACTURA A",
         "afip_codigo_barras": "111111111110010000368466696512853201811262 ",
-        "comprobante_pdf_url": "https:\/\/www.tusfacturas.com.ar\/app\/comprobantes\/0000-11111111111-22222222222-1-00003-00000074.pdf"
+        "comprobante_pdf_url": "https:\/\/www.dominio.com\/00000074.pdf"
     }, {
         "error": "N",
         "errores": [],
@@ -91,7 +91,7 @@ Tus credenciales de acceso
         "vencimiento_pago": "16\/11\/2018",
         "comprobante_tipo": "FACTURA A",
         "afip_codigo_barras": "111111111110010000368466696512866201811266 ",
-        "comprobante_pdf_url": "https:\/\/www.tusfacturas.com.ar\/app\/comprobantes\/0000-11111111111-22222222222-1-00003-00000075.pdf"
+        "comprobante_pdf_url": "https:\/\/www.dominio.com\/00000075.pdf"
     }]
 }
 ```
@@ -337,7 +337,7 @@ En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechaz
         "vencimiento_pago": "16\/11\/2018",
         "comprobante_tipo": "FACTURA A",
         "afip_codigo_barras": "111111111110010000368466696512853201811262 ",
-        "comprobante_pdf_url": "https:\/\/www.tusfacturas.com.ar\/app\/comprobantes\/0000-11111111111-22222222222-1-00003-00000074.pdf"
+        "comprobante_pdf_url": "https:\/\/www.dominio.com\/074.pdf"
     }, {
         "error": "S",
         "errores": [" AFIP Factura electronica, rechazo el comprobante - ERROR: AFIP rechazo la generacion del comprobante Cod: 0", " AFIP Factura electronica, rechazo el comprobante - ERROR: El campo FchServDesde no puede ser posterior al campo FchServHasta. Cod: 10032"],

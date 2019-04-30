@@ -76,7 +76,7 @@ Importante:
      "cae":      "65301278726386 ",    
      "vencimiento_cae":"07\/08\/2015",    
      "vencimiento_pago":"27\/08\/2015",    
-     "comprobante_pdf_url": "https://www.tusfacturas.com.ar/app/comprobantes/30111111111-1292963535-0002-00000006.pdf",
+     "comprobante_pdf_url": "https://www.dominio.com/url",
      "afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
      "envio_x_mail": "S",
      "envio_x_mail_direcciones":"direccion1@sudominio.com,direccion2@sudominio.com"
