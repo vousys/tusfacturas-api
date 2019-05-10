@@ -13,7 +13,7 @@ El límite de request que dispones para realizar las consultas, es el mismo limi
 IMPORTANTE: Para poder realizar ésta consulta,  deberás tener agregado en tu cuenta AFIP, el servicio de CONSULTA DE CONSTANCIA DE INSCRIPCIÓN. Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 5  ](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
 {% endhint %}
 
-{% api-method method="get" host="https://www.tusfacturas.com.ar/api" path="/v2/clientes/afip-info" %}
+{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/clientes/afip-info" %}
 {% api-method-summary %}
 Obtener datos de un CUIT
 {% endapi-method-summary %}
