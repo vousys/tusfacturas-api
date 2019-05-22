@@ -296,6 +296,12 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+{% hint style="info" %}
+Importante: TusFacturas.app no valida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es responsabilidad del cliente corroborar y validar éstos datos. 
+
+Recordá que AFIP recibe únicamente totales, no el detalle de los items que facturas ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" \( Factura electrónica sin detalle de productos \).
+{% endhint %}
+
 #### Información de los campos a enviar:
 
 | Nombre del campo | Requerido | Comentarios |
