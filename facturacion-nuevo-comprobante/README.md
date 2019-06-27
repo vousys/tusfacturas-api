@@ -79,6 +79,8 @@ Importante:
      "comprobante_pdf_url": "https://www.dominio.com/url",
      "afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
      "envio_x_mail": "S",
+     "comprobante_nro": "0000123",
+     "comprobante_tipo": "NOTA DE DEBITO B",
      "envio_x_mail_direcciones":"direccion1@sudominio.com,direccion2@sudominio.com"
   }  
   
