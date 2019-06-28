@@ -196,7 +196,8 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                 "exentos":                  "0",
                 "nogravados":               "0",
                 "impuestos_internos":       "0",
-                "total":                    "543.22"
+                "total":                    "543.22" 
+                
         }
 }
 
@@ -292,14 +293,15 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
                 "exentos":                  "0",
                 "nogravados":               "0",
                 "impuestos_internos":       "0",
-                "total":                    "543.22"
+                "total":                    "543.22",
+                "comprobantes_asociados":    []
         }
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
 {% hint style="info" %}
-Importante: TusFacturas.app no valida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es responsabilidad del cliente corroborar y validar éstos datos. 
+Importante: **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es responsabilidad del cliente corroborar y validar éstos datos.** 
 
 Recordá que AFIP recibe únicamente totales, no el detalle de los items que facturas ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" \( Factura electrónica sin detalle de productos \).
 {% endhint %}
@@ -335,6 +337,7 @@ Recordá que AFIP recibe únicamente totales, no el detalle de los items que fac
 | exentos | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de exentos. Solo para comprobantes A y M Ejemplo: 72.67 |
 | nogravados | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de no gravados. Solo para comprobantes A y M Ejemplo: 62.67 impuestos\_internos Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de impuestos internos Ejemplo: 2.67 |
 | total | SI |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos incluyendo IVA e impuestos. Ejemplo: 12452.67 |
+| comprobantes\_asociados | SI, SEGUN CORRESPONDA | Lista de comprobantes asociados. Requerido únicamente para NC o ND de tipo A,B,C,M. [Objeto JSON](./#estructura-de-comprobantes-asociados) Según estructura que se detalla a continuación |
 
 ### Estructura de  "Cliente"
 
@@ -520,5 +523,30 @@ Los campos que debes enviar son los siguientes:
 | `actualiza_precio` | Indica si se actualiza el precio del producto, en la base productos, tomando como valor de referencia el enviado en el comprobante. Campo Alfabético, de 1 caracter. Valores permitidos: S \(si\) N \(no\).          **Ejemplo: S** |
 |  |  |
 
+### Estructura de "Comprobantes Asociados"
 
+Cada uno de los comprobantes asociados que disponga, deberán ser enviados acordes a la estructura que se detalla a continuación.
+
+{% hint style="info" %}
+Solo se deberán enviar los comprobantes asociados, cuando se emitan Notas de Débito o Notas de Crédito de tipo A, B, C, M. **Éste campo es obligatorio en los campos mencionados.**
+{% endhint %}
+
+```text
+ {
+    "tipo_comprobante"   :    "FACTURA A",
+     "punto_venta"  :    "145",
+     "numero" : 12313,
+     "cuit": 111111111     
+} 
+```
+
+Información de los campos a enviar:
+
+| `tipo_comprobante` | Campo alfabético. Valores esperados según [tabla de tipos de comprobante.](../tablas-de-referencia.md#tipos-de-comprobantes) |
+| :--- | :--- |
+| `punto_venta` | Campo numérico entero. Longitud máxima 5 digitos. **Ejemplo: 3** |
+| `numero` | Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. **Ejemplo: 4567** |
+| `CUIT` | Campo numérico, sin puntos ni guiones. **Ejemplo: 1111111111** |
+
+## 
 

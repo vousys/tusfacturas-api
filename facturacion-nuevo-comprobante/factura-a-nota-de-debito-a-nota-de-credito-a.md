@@ -21,7 +21,7 @@
  
 "comprobante": 
     {    "fecha":                    "20/03/2018", 
-         "tipo":                     "FACTURA A", 
+         "tipo":                     "NOTA DE CREDITO A", 
          "operacion":                "V", 
          "punto_venta":              "0002", 
          "numero":                   "00000012", 
@@ -66,7 +66,16 @@
          "exentos":                  "0", 
          "nogravados":               "0", 
          "impuestos_internos":       "0", 
-         "total":                    "112.1" 
+         "total":                    "112.1" ,
+          "comprobantes_asociados": [
+                            {
+                                "tipo_comprobante"   :    "FACTURA A",
+                                 "punto_venta"  :    "145",
+                                 "numero" : 12313,
+                                 "cuit": 1111111111111     
+                            } 
+                       ]         
+         
     } 
 }
  
