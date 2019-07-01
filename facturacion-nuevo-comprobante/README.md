@@ -546,7 +546,7 @@ Información de los campos a enviar:
 | :--- | :--- |
 | `punto_venta` | Campo numérico entero. Longitud máxima 5 digitos. **Ejemplo: 3** |
 | `numero` | Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. **Ejemplo: 4567** |
-| `CUIT` | Campo numérico, sin puntos ni guiones. **Ejemplo: 1111111111** |
+| `CUIT` | Campo numérico, sin puntos ni guiones. Es el CUIT del emisor del comprobante asociado. **Ejemplo: 1111111111** |
 
 ## 
 
