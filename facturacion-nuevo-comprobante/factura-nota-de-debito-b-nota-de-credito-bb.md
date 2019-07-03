@@ -52,7 +52,7 @@ Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, 
 ```
 
 {% hint style="info" %}
-Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar el tipo de documento como OTRO, nro de documento: 0 , en domicilio un guión y en nombre, lo que tu contador/a te recomiende. Ten en cuenta que ésto solo está permitido hasta ciertos montos. Hasta Julio 2019 el tope es de $10,000, pero éste valor puede sufrir modificaciones. Envianos tu consulta a tusfacturas@vousys.com 
+Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar el tipo de documento como DNI, nro de documento: 0 , en domicilio un guión y en nombre, lo que tu contador/a te recomiende. Ten en cuenta que ésto solo está permitido hasta ciertos montos. Hasta Julio 2019 el tope es de $10,000, pero éste valor puede sufrir modificaciones. Envianos tu consulta a tusfacturas@vousys.com 
 {% endhint %}
 
 ### Ejemplo de llamada en PHP
