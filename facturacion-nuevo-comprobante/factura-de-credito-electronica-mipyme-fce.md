@@ -167,7 +167,7 @@ Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_espec
 	},
 	"comprobante": {
 		"fecha": "20/03/2018",
-		"tipo": "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
+		"tipo": "NOTA DE CREDITO ELECTRONICA MiPyME (FCE) A",
 		"operacion": "V",
 		"punto_venta": "0002",
 		"numero": "00000012",
@@ -216,7 +216,7 @@ Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_espec
                 ]
             }, 
 		"comprobantes_asociados": [{
-			"tipo_comprobante": "FACTURA A",
+			"tipo_comprobante": "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
 			"punto_venta": "3",
 			"numero": 1,
 			"comprobante_fecha": "07/07/2019",
