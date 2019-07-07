@@ -88,7 +88,15 @@
 | NOTA DE DEBITO E |
 | NOTA DE CREDITO E |
 | RECIBO C |
-|  |
+| FACTURA DE CREDITO ELECTRONICA MiPyME \(FCE\) A  |
+| NOTA DE DEBITO ELECTRONICA MiPyME \(FCE\) A  |
+| NOTA DE CREDITO ELECTRONICA MiPyME \(FCE\) A  |
+| FACTURA DE CREDITO ELECTRONICA MiPyME \(FCE\) B  |
+| NOTA DE DEBITO ELECTRONICA MiPyME \(FCE\) B  |
+| NOTA DE CREDITO ELECTRONICA MiPyME \(FCE\) B  |
+| FACTURA DE CREDITO ELECTRONICA MiPyME \(FCE\) C  |
+| NOTA DE DEBITO ELECTRONICA MiPyME \(FCE\) C  |
+| NOTA DE CREDITO ELECTRONICA MiPyME \(FCE\) C |
 
 ### Datos Opcionales para RG Especiales
 
@@ -109,7 +117,7 @@
 | RG 3.687 Locación temporaria de inmuebles con fines turísticos | 12 | Actividad Comprendida |
 | RG 2.863 Representantes de Modelos | 13 | RG 2.863 Representantes de Modelos |
 | RG 2.863 Agencias de publicidad | 14 | RG 2.863 Agencias de publicidad |
-| RG 2.863 Personas fósicas que desarrollen actividad de modelaje | 15 | RG 2.863 Personas fósicas que desarrollen actividad de modelaje |
+| RG 2.863 Personas físicas que desarrollen actividad de modelaje | 15 | RG 2.863 Personas físicas que desarrollen actividad de modelaje |
 | RG 4004-E  | 17 | Dato 2 \(dos\) = facturación directa / Dato 1 \(uno\) = facturación a travós de intermediario |
 | RG 4004-E  | 1801 | Clave ónica de Identificación Tributaria \(CUIT\) |
 | RG 4004-E  | 1802 | Apellido y nombres, denominación y/o razón social |
