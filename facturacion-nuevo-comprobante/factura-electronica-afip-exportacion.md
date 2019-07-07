@@ -33,7 +33,8 @@ Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del
                             {
                                 "tipo_comprobante"   :    "NOTA DE CREDITO E",
                                  "punto_venta"  :    "145",
-                                 "numero" : 12313,
+                                 "numero"         : 12313,
+                                 "comprobante_fecha": "07/07/2018",
                                  "cuit": 30111222334     
                             } 
                        ]

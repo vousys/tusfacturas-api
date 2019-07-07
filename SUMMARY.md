@@ -9,6 +9,7 @@
   * [Factura A / Nota de débito A / Nota de crédito A](facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md)
   * [Factura B / Nota de débito B / Nota de crédito B](facturacion-nuevo-comprobante/factura-nota-de-debito-b-nota-de-credito-bb.md)
   * [Factura C / Nota de débito C / Nota de crédito C](facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md)
+  * [Factura de Crédito Electrónica MiPyme \(FCE\)](facturacion-nuevo-comprobante/factura-de-credito-electronica-mipyme-fce.md)
 * [Facturación por Lotes](api-facturacion-por-lotes.md)
 * [Consulta de comprobantes](consulta-de-comprobantes.md)
 * [Consultar numeración de comprobantes.](consultar-numeracion-de-comprobantes..md)

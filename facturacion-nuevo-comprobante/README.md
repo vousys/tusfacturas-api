@@ -188,6 +188,23 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                                 }
 
                             ],
+            "rg_especiales":
+                 {   "regimen" : "RG 4004-E",
+                      "datos"  : 
+
+                           [{
+                               "id"      :    17,
+                               "valor"  :    "2"
+                            },
+                            {
+                              "id"      :    1801,
+                             "valor"  :    "111111111111"
+                             },
+                            {
+                              "id"      :    1802,
+                             "valor"  :    "PRUEBA"
+                             }]
+                },                          
                 "bonificacion":             "120",
                 "leyenda_gral":             "Segun Orden de compra III1333",
                 "comentario":               "Factura correspondiente al servicio XX",
@@ -350,7 +367,8 @@ Recordá que AFIP recibe únicamente totales, no el detalle de los items que fac
 | exentos | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de exentos. Solo para comprobantes A y M Ejemplo: 72.67 |
 | nogravados | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de no gravados. Solo para comprobantes A y M Ejemplo: 62.67 impuestos\_internos Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de impuestos internos Ejemplo: 2.67 |
 | total | SI |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos incluyendo IVA e impuestos. Ejemplo: 12452.67 |
-| comprobantes\_asociados | SI, SEGUN CORRESPONDA | Lista de comprobantes asociados. Requerido únicamente para NC o ND de tipo A,B,C,M. [Objeto JSON](./#estructura-de-comprobantes-asociados) Según estructura que se detalla a continuación |
+| comprobantes\_asociados | SEGUN CORRESPONDA | Lista de comprobantes asociados. Requerido únicamente para NC o ND de tipo A,B,C,M. [Objeto JSON](./#estructura-de-comprobantes-asociados) Según estructura que se detalla a continuación |
+| rg\_especiales | SEGUN CORRESPONDA | Lista de datos adicionales requeridos por AFIP, según la RG a la que aplique el comprobante.  [Objeto JSON](./#estructura-de-rg-especiales) Según estructura que se detalla a continuación |
 
 ### Estructura de  "Cliente"
 
@@ -570,9 +588,9 @@ Ten en cuenta que solo podrás aplicar a un [regimen](../tablas-de-referencia.md
 {% code-tabs %}
 {% code-tabs-item title="JSON" %}
 ```text
-{   "regimen" : "RG 4004-E",
-     "datos"  : 
-
+"rg_especiales":   
+  {   "regimen" : "RG 4004-E",
+      "datos"  : 
                [{
                    "id"      :    18,
                    "valor"  :    "PRUEBA "
