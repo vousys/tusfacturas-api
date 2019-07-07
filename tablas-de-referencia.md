@@ -113,10 +113,10 @@
 | RG 4004-E  | 17 | Dato 2 \(dos\) = facturación directa / Dato 1 \(uno\) = facturación a travós de intermediario |
 | RG 4004-E  | 1801 | Clave ónica de Identificación Tributaria \(CUIT\) |
 | RG 4004-E  | 1802 | Apellido y nombres, denominación y/o razón social |
-| Factura de Cródito Electrónica MiPyMEs \(FCE\) | 2101 | CBU del Emisor |
-| Factura de Cródito Electrónica MiPyMEs \(FCE\) | 2102 | Alias del Emisor |
-| Factura de Cródito Electrónica MiPyMEs \(FCE\) | 22 | Anulación |
-| Factura de Cródito Electrónica MiPyMEs \(FCE\) | 23 | Referencia Comercial |
+| Factura de Crédito Electrónica MiPyMEs \(FCE\) | 2101 | CBU del Emisor |
+| Factura de Crédito Electrónica MiPyMEs \(FCE\) | 2102 | Alias del Emisor |
+| Factura de Crédito Electrónica MiPyMEs \(FCE\) | 22 | Anulación |
+| Factura de Crédito Electrónica MiPyMEs \(FCE\) | 23 | Referencia Comercial |
 |  |  |  |
 
 ### Monedas
