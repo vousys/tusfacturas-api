@@ -90,6 +90,35 @@
 | RECIBO C |
 |  |
 
+### Datos Opcionales para RG Especiales
+
+| Regimen | id | Descripcion |
+| :--- | :--- | :--- |
+| RG Empresas Promovidas  | 2 | Indentificador de proyecto vinculado a Rógimen de Promoción Industrial |
+| RG Bienes Usados 3411 | 91 | Nombre y Apellido o Denominación del vendedor del bien usado |
+| RG Bienes Usados 3411 | 92 | Nacionalidad del vendedor del bien usado. |
+| RG Bienes Usados 3411 | 93 | Domicilio del vendedor del bien usado |
+| Excepcion computo IVA Credito Fiscal | 5 | Excepcion computo IVA Credito Fiscal |
+| RG 3668 Impuesto al Valor Agregado | 61 | Art.12 IVA Firmante Doc Tipo |
+| RG 3668 Impuesto al Valor Agregado | 62 | Art.12 IVA Firmante Doc Nro |
+| RG 3668 Impuesto al Valor Agregado | 63 | Art.12 IVA Carócter del Firmante |
+| RG 3.368 Establecimientos de educación pública de gestión privada | 10 | Actividad Comprendida |
+| RG 3.368 Establecimientos de educación pública de gestión privada | 1011 | Tipo de Documento |
+| RG 3.368 Establecimientos de educación pública de gestión privada | 1012 | Número de Documento |
+| RG 2.820 Operaciones económicas vinculadas con bienes inmuebles | 11 | Actividad Comprendida |
+| RG 3.687 Locación temporaria de inmuebles con fines turísticos | 12 | Actividad Comprendida |
+| RG 2.863 Representantes de Modelos | 13 | RG 2.863 Representantes de Modelos |
+| RG 2.863 Agencias de publicidad | 14 | RG 2.863 Agencias de publicidad |
+| RG 2.863 Personas fósicas que desarrollen actividad de modelaje | 15 | RG 2.863 Personas fósicas que desarrollen actividad de modelaje |
+| RG 4004-E  | 17 | Dato 2 \(dos\) = facturación directa / Dato 1 \(uno\) = facturación a travós de intermediario |
+| RG 4004-E  | 1801 | Clave ónica de Identificación Tributaria \(CUIT\) |
+| RG 4004-E  | 1802 | Apellido y nombres, denominación y/o razón social |
+| Factura de Cródito Electrónica MiPyMEs \(FCE\) | 2101 | CBU del Emisor |
+| Factura de Cródito Electrónica MiPyMEs \(FCE\) | 2102 | Alias del Emisor |
+| Factura de Cródito Electrónica MiPyMEs \(FCE\) | 22 | Anulación |
+| Factura de Cródito Electrónica MiPyMEs \(FCE\) | 23 | Referencia Comercial |
+|  |  |  |
+
 ### Monedas
 
 | Moneda |     | Valor a enviar |

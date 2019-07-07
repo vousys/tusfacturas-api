@@ -548,5 +548,42 @@ Información de los campos a enviar:
 | `numero` | Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. **Ejemplo: 4567** |
 | `CUIT` | Campo numérico, sin puntos ni guiones. Es el CUIT del emisor del comprobante asociado. **Ejemplo: 1111111111** |
 
+### Estructura de "RG Especiales"
+
+Según la RG a la que tu empresa aplique, se deberá enviar  un array con los datos adicionales, según se especifican en la [tabla de Datos adicionales para RG Especiales](../tablas-de-referencia.md#datos-opcionales-para-rg-especiales).
+
+Ten en cuenta que solo podrás aplicar a un [regimen](../tablas-de-referencia.md#datos-opcionales-para-rg-especiales) por cada comprobante que emitas.
+
+{% code-tabs %}
+{% code-tabs-item title="JSON" %}
+```text
+{   "regimen" : "RG 4004-E",
+     "datos"  : 
+
+               [{
+                   "id"      :    18,
+                   "valor"  :    "PRUEBA "
+                },
+                {
+                  "id"      :    19,
+                 "valor"  :    "PRUEBA (2) "
+                 }]
+ } 
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+Información de los campos a enviar en el array de "datos":
+
+| `id` | Campo númerico. Valores esperados según [ ](../tablas-de-referencia.md#tipos-de-comprobantes)[Tabla de Datos Opcionales para RG Especiales](../tablas-de-referencia.md#datos-opcionales-para-rg-especiales) |
+| :--- | :--- |
+| `valor` | Campo alfanumérico.  |
+
+{% hint style="info" %}
+Ten en cuenta que TusFacturas NO realiza validaciones sobre éstos campos. Los realiza la propia AFIP en caso que corresponda.
+
+Si uno de los items enviados posee el valor vacio, éste item no será procesado.
+{% endhint %}
+
 ## 
 
