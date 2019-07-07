@@ -54,7 +54,7 @@ Por el momento AFIP cuenta con éstos datos a enviar:
       <td style="text-align:left">22</td>
       <td style="text-align:left">REQUERIDO</td>
       <td style="text-align:left">Solo debe ser enviado para las Notas de cr&#xE9;dito/debito y el valor
-        esperado es : S o N</td>
+        esperado es : S o N. Indica si el comprobante fue rechazado por el receptor.</td>
     </tr>
     <tr>
       <td style="text-align:left"></td>
