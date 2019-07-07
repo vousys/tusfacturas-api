@@ -1,7 +1,7 @@
 # Factura B / Nota de débito B / Nota de crédito B
 
 {% hint style="info" %}
-Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar.
+Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
 {% endhint %}
 
 ```text
@@ -45,7 +45,17 @@ Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, 
 		"cotizacion": 1,
 		"moneda": "PES",
 		"punto_venta": 3,
-		"impuestos_internos": 0
+       "percepciones_iibb":        "0",
+       "percepciones_iibb_base":   "0",
+        "percepciones_iibb_alicuota": "0",
+        "percepciones_iva":         "0",
+        "percepciones_iva_base":    "0",
+        "percepciones_iva_alicuota": "0",
+        "exentos":                  "0",
+        "nogravados":               "0",
+        "impuestos_internos":       "0",
+        "impuestos_internos_base":   "0",
+        "impuestos_internos_alicuota": "0" 
 	},
 	"usertoken": "a7ahdt5s7725d7fa4f4e63646bc169b"
 }

@@ -192,10 +192,16 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                 "leyenda_gral":             "Segun Orden de compra III1333",
                 "comentario":               "Factura correspondiente al servicio XX",
                 "percepciones_iibb":        "0",
+                "percepciones_iibb_base":   "0",
+                "percepciones_iibb_alicuota": "0",
                 "percepciones_iva":         "0",
+                "percepciones_iva_base":    "0",
+                "percepciones_iva_alicuota": "0",
                 "exentos":                  "0",
                 "nogravados":               "0",
                 "impuestos_internos":       "0",
+                "impuestos_internos_base":   "0",
+                "impuestos_internos_alicuota": "0",
                 "total":                    "543.22" 
                 
         }

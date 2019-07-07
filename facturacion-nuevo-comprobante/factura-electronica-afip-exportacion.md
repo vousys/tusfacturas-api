@@ -213,10 +213,16 @@ Para comprobantes de tipo E, los siguientes campos deberá enviarlos en cero:  b
                 "bonificacion":             "0",
                 "leyenda_gral":             "bla bla bla",
                 "percepciones_iibb":        "0",
+                "percepciones_iibb_base":   "0",
+                "percepciones_iibb_alicuota": "0",
                 "percepciones_iva":         "0",
+                "percepciones_iva_base":    "0",
+                "percepciones_iva_alicuota": "0",
                 "exentos":                  "0",
                 "nogravados":               "0",
                 "impuestos_internos":       "0",
+                "impuestos_internos_base":   "0",
+                "impuestos_internos_alicuota": "0",
                 "total":                    "575.45"
         }
 }
