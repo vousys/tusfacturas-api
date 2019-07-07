@@ -556,10 +556,10 @@ Los campos que debes enviar son los siguientes:
 
 ### Estructura de "Comprobantes Asociados"
 
-Cada uno de los comprobantes asociados que disponga, deberán ser enviados acordes a la estructura que se detalla a continuación.
+Cada uno de los comprobantes asociados que disponga, deberán ser enviados dentro de un array, acorde a la estructura que se detalla a continuación para cada comprobante asociado.
 
 {% hint style="info" %}
-Solo se deberán enviar los comprobantes asociados, cuando se emitan Notas de Débito o Notas de Crédito de tipo A, B, C, M. **Éste campo es obligatorio en los campos mencionados.**
+Solo se deberán enviar los comprobantes asociados, cuando se emitan Notas de Débito o Notas de Crédito de tipo A, B, C, M y Comprobantes de tipo FCE. **Éste campo es obligatorio en los campos mencionados.**
 {% endhint %}
 
 ```text
@@ -567,6 +567,7 @@ Solo se deberán enviar los comprobantes asociados, cuando se emitan Notas de D�
     "tipo_comprobante"   :    "FACTURA A",
      "punto_venta"  :    "145",
      "numero" : 12313,
+     "comprobante_fecha": "07/07/2019",
      "cuit": 111111111     
 } 
 ```
@@ -577,7 +578,8 @@ Información de los campos a enviar:
 | :--- | :--- |
 | `punto_venta` | Campo numérico entero. Longitud máxima 5 digitos. **Ejemplo: 3** |
 | `numero` | Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. **Ejemplo: 4567** |
-| `CUIT` | Campo numérico, sin puntos ni guiones. Es el CUIT del emisor del comprobante asociado. **Ejemplo: 1111111111** |
+| `cuit` | Campo numérico, sin puntos ni guiones. Es el CUIT del emisor del comprobante asociado. **Ejemplo: 1111111111** |
+| `comprobante_fecha` | La fecha del comprobante en formato dd/mm/aaaa |
 
 ### Estructura de "RG Especiales"
 
