@@ -24,6 +24,7 @@
 * [Consulta de Incoterms](consulta-de-incoterms.md)
 * [Tablas de referencia](tablas-de-referencia.md)
 * [Cotización Dólar AFIP](cotizacion-dolar-afip.md)
+* [Changelog](changelog.md)
 
 ## API v1 \(OLD\)
 
