@@ -16,7 +16,7 @@ Ten en cuenta que al registrarte, te asignamos un plan gratuito que te permite e
 En caso que requieras 20 días con un plan free para el desarrollo, contáctanos a tusfacturas@vousys.com
 {% endhint %}
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/api" path="/v2/facturacion/lotes" %}
+{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/facturacion/lotes" %}
 {% api-method-summary %}
 Facturación por Lotes
 {% endapi-method-summary %}
