@@ -147,7 +147,7 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                                              "codigo":          "",
                                              "precio_unitario_sin_iva":"100.45",
                                              "alicuota":      "21",
-                                             "impuestos_internos_porc": 0,
+                                             "impuestos_internos_alicuota": 0,
                                              "unidad_medida": "7",
                                              "actualiza_precio": "S"
                                              },
@@ -166,7 +166,7 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                                              "codigo":          "MPH",
                                              "precio_unitario_sin_iva":"50",
                                              "alicuota":      "10.5",
-                                             "impuestos_internos_porc": 0,
+                                             "impuestos_internos_alicuota": 0,
                                              "unidad_medida": "7",
                                              "actualiza_precio": "N"
                                              },
@@ -184,7 +184,7 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                                              "codigo":          "ZNH1",
                                              "precio_unitario_sin_iva":"200",
                                              "alicuota":      "21",
-                                             "impuestos_internos_porc": 0,
+                                             "impuestos_internos_alicuota": 0,
                                              "unidad_medida": "7"
                                              },
                                     "leyenda":""
@@ -271,7 +271,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
                                              "precio_unitario_sin_iva":"100.45",
                                              "alicuota":      "21",
                                              "unidad_medida": "7",
-                                             "impuestos_internos_porc": 0,
+                                             "impuestos_internos_alicuota": 0,
                                              "actualiza_precio": "S"
                                              },
                                     "leyenda":"blanca, cepillada"
@@ -289,7 +289,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
                                              "codigo":          "MPH",
                                              "precio_unitario_sin_iva":"50",
                                              "alicuota":      "10.5",
-                                             "impuestos_internos_porc": 0,
+                                             "impuestos_internos_alicuota": 0,
                                              "unidad_medida": "7",
                                              "actualiza_precio": "N"
                                              },
@@ -307,7 +307,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
                                              "codigo":          "ZNH1",
                                              "precio_unitario_sin_iva":"200",
                                              "alicuota":      "21",
-                                             "impuestos_internos_porc": 0,
+                                             "impuestos_internos_alicuota": 0,
                                              "unidad_medida": "7"
                                              },
                                     "leyenda":""
@@ -506,7 +506,7 @@ La estructura de cada concepto a enviar es la siguiente:
 		"lista_precios": "MAPPLETS",
 		"codigo": "MPH",
 		"precio_unitario_sin_iva": "50",
-		"impuestos_internos_porc": 0,
+		"impuestos_internos_alicuota": 0,
 		"alicuota": "10.5",
 		"unidad_medida": "7",
 		"actualiza_precio":"S"
@@ -545,7 +545,7 @@ Si el producto ya existia en la base de datos de nuestra plataforma, para la lis
 "precio_unitario_sin_iva":"50",
 "alicuota":      "10.5",
 "unidad_medida": "7",
-"impuestos_internos_porc": 0,
+"impuestos_internos_alicuota": 0,
 "actualiza_precio": "N"
 }
 ```
@@ -561,7 +561,7 @@ Los campos que debes enviar son los siguientes:
 | `alicuota` | Indica la alicuota de IVA con la que grava ese producto. Valores Permitidos: **27, 21 , 10.5 ,  0  y -1 \( para exento\)** **Ejemplo: 10.5** |
 | `unidad_medida` | Campo numérico que indica la unidad de medida, según[ tabla de referencia Unidades de Medida\(\*\*\). ](../tablas-de-referencia.md#productos-unidades-de-medida-afip) **Ejemplo: 7** |
 | `actualiza_precio` | Indica si se actualiza el precio del producto, en la base productos, tomando como valor de referencia el enviado en el comprobante. Campo Alfabético, de 1 caracter. Valores permitidos: S \(si\) N \(no\).          **Ejemplo: S** |
-| `impuestos_internos_porc` | La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numerico, con  2 decimales. |
+| `impuestos_internos_alicuota` | La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numerico, con  2 decimales.  ej: 10.5 |
 |  |  |
 
 ### Estructura de "Comprobantes Asociados"
