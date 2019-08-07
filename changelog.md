@@ -1,5 +1,9 @@
 # Changelog
 
+## 05 de Agosto de 2019
+
+**Nuevo comprobante:** Se agrega el porcentaje de impuestos internos dentro del bloque de  cada "producto
+
 ## 10 de Julio de 2019
 
 **1\) Nuevos campos para Percepciones e Impuestos internos** Se agregaron campos dentro del bloque "comprobantes" para el envio de las percepciones e impuestos internos   
