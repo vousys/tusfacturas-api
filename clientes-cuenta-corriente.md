@@ -1,6 +1,6 @@
 # Clientes - Cuenta Corriente
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="v2/clientes/cuenta-corriente" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="v2/clientes/cuenta-corriente" %}
 {% api-method-summary %}
 Consulta de cuenta corriente
 {% endapi-method-summary %}

@@ -1,4 +1,10 @@
-# Factura B / Nota de débito B / Nota de crédito B
+---
+description: >-
+  FacturaB / Nota de débito B / Nota de crédito B / Factura de crédito MiPyme B
+  / Nota de crédito  MiPyme B / Nota de débito  MiPyme B
+---
+
+# Comprobantes de tipo B
 
 {% hint style="info" %}
 Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
@@ -77,9 +83,9 @@ Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos mon
 
 ```text
 // ENVIO REQUEST
-$url ="https://www.tusfacturas.com.ar/app/api/v2/facturacion/nuevo" ;
+$url ="https://www.tusfacturas.app/app/api/v2/facturacion/nuevo" ;
 $ch = curl_init( $url );
-curl_setopt( $ch, CURLOPT_POSTFIELDS,   ($facturacion_json) );
+curl_setopt( $ch, CURLOPT_POSTFIELDS, json_encode ($facturacion_json) );
 curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 $json_rta_curl =  json_decode(  curl_exec($ch) ) ;  

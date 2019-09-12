@@ -16,7 +16,7 @@ Ten en cuenta que al registrarte, te asignamos un plan gratuito que te permite e
 En caso que requieras 20 días con un plan free para el desarrollo, contáctanos a tusfacturas@vousys.com
 {% endhint %}
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/facturacion/lotes" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/facturacion/lotes" %}
 {% api-method-summary %}
 Facturación por Lotes
 {% endapi-method-summary %}
@@ -312,7 +312,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 {% code-tabs-item title="PHP" %}
 ```text
 // ENVIO REQUEST
-$url ="https://www.tusfacturas.com.ar/api/v2/facturacion/lotes" ;
+$url ="https://www.tusfacturas.app/api/v2/facturacion/lotes" ;
 
 $ch = curl_init( $url );
 curl_setopt( $ch, CURLOPT_POSTFIELDS,  json_encode($facturacion_json) );

@@ -3,7 +3,7 @@
 Tipo de datos: **JSON**  
 Charset: **UTF-8**
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api/" path="v2/facturacion/consulta" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/facturacion/consulta" %}
 {% api-method-summary %}
 Consulta de comprobantes 
 {% endapi-method-summary %}

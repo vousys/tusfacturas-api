@@ -1,4 +1,10 @@
-# Factura C / Nota de débito C / Nota de crédito C
+---
+description: >-
+  Factura C / Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C
+  / Nota de crédito  MiPyme C / Nota de débito  MiPyme C
+---
+
+# Comprobantes de tipo C
 
 {% hint style="info" %}
 Ten en cuenta que los comprobantes C,  NO llevan IVA.
@@ -67,9 +73,9 @@ Ten en cuenta que los comprobantes C,  NO llevan IVA.
 
 ```text
 // ENVIO REQUEST
-$url ="https://www.tusfacturas.com.ar/app/api/v2/facturacion/nuevo" ;
+$url ="https://www.tusfacturas.app/app/api/v2/facturacion/nuevo" ;
 $ch = curl_init( $url );
-curl_setopt( $ch, CURLOPT_POSTFIELDS,   ($facturacion_json) );
+curl_setopt( $ch, CURLOPT_POSTFIELDS,  json_encode ($facturacion_json) );
 curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
 curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 $json_rta_curl =  json_decode(  curl_exec($ch) ) ;  

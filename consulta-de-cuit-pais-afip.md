@@ -1,6 +1,6 @@
 # Consulta de CUIT Pais - AFIP
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="v2/tablas\_referencia/cuit\_pais" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="v2/tablas\_referencia/cuit\_pais" %}
 {% api-method-summary %}
 Consulta de cuit país
 {% endapi-method-summary %}

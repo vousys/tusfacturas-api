@@ -1,6 +1,6 @@
 # Consulta de Incoterms
 
-{% api-method method="post" host=" https://www.tusfacturas.com.ar/app/api/" path="v2/tablas\_referencia/incoterms" %}
+{% api-method method="post" host=" https://www.tusfacturas.app/app/api/" path="v2/tablas\_referencia/incoterms" %}
 {% api-method-summary %}
 Consulta de Incoterms
 {% endapi-method-summary %}
@@ -39,8 +39,9 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
                  [  ""   ],    
      "items":       
               [ 
-                  {"id":"51600003015","descripcion":"AFGANISTAN - Otro tipo de Entidad"},
-                  {"id":"50000003015","descripcion":"AFGANISTAN - Persona Fisica"} 
+                       {"id":"EXW","descripcion":"EXW - Vigente del 20100101 a hoy"},
+                       {"id":"FCA","descripcion":"FCA - Vigente del 20100101 a hoy"}
+
               ]
 }
 ```

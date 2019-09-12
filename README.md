@@ -21,7 +21,7 @@ Tipo de API: **API Rest**
 Tipo de datos entrada y respuesta: **JSON**  
 Charset: **UTF-8**  
 Tipo de request : **POST**  
-URL : **https://www.tusfacturas.com.ar/app/api/v2/estado\_servicios/alertas**  
+URL : **https://www.tusfacturas.app/app/api/v2/estado\_servicios/alertas**  
 
 
 

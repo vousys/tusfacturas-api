@@ -1,6 +1,6 @@
 # Consulta de unidades de medida para productos - AFIP
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api/" path="v2/tablas\_referencia/unidades\_medida" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/tablas\_referencia/unidades\_medida" %}
 {% api-method-summary %}
 Consulta de Unidades de medida
 {% endapi-method-summary %}

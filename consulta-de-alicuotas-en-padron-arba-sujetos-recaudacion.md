@@ -4,7 +4,7 @@
 El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso. 
 {% endhint %}
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api/" path="v2/clientes/arba-padron" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/clientes/arba-padron" %}
 {% api-method-summary %}
 Consulta en padrón ARBA
 {% endapi-method-summary %}

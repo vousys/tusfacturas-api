@@ -1,6 +1,6 @@
 # Consulta de Paises - AFIP
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="v2/tablas\_referencia/paises" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="v2/tablas\_referencia/paises" %}
 {% api-method-summary %}
 Consulta de paises 
 {% endapi-method-summary %}

@@ -1,6 +1,6 @@
 # Consultar numeración de comprobantes.
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/facturacion/numeracion" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/facturacion/numeracion" %}
 {% api-method-summary %}
 Consultar numeración
 {% endapi-method-summary %}

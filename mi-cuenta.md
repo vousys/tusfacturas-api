@@ -4,7 +4,7 @@ description: Consulta de información relacionada con tu cuenta
 
 # Mi Cuenta
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/micuenta/consumo" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/micuenta/consumo" %}
 {% api-method-summary %}
 Consultá el consumo de tu cuenta
 {% endapi-method-summary %}
@@ -70,7 +70,7 @@ Tus Credenciales de acceso
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/micuenta/iva\_compras\_ventas" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/micuenta/iva\_compras\_ventas" %}
 {% api-method-summary %}
 Solicitá el IVA Compras - Ventas
 {% endapi-method-summary %}
@@ -148,7 +148,7 @@ La respuesta es error = S o error = N
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/puntos\_venta/administrar" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/puntos\_venta/administrar" %}
 {% api-method-summary %}
 Administrar CUIT + Punto de venta
 {% endapi-method-summary %}
@@ -360,7 +360,7 @@ Ej:
 
 
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/puntos\_venta/predeterminar" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/puntos\_venta/predeterminar" %}
 {% api-method-summary %}
 Predeterminar CUIT + Punto de venta
 {% endapi-method-summary %}
@@ -418,7 +418,7 @@ Tus credenciales de acceso
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api" path="/v2/puntos\_venta/certificado" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/puntos\_venta/certificado" %}
 {% api-method-summary %}
 Solicitar certificado
 {% endapi-method-summary %}

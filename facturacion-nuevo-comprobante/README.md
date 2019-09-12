@@ -10,7 +10,7 @@ Ten en cuenta que al registrarte, te asignamos un plan gratuito que te permite e
 En caso que requieras 20 días con un plan free para el desarrollo, contáctanos a tusfacturas@vousys.com
 {% endhint %}
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api/" path="v2/facturacion/nuevo" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/facturacion/nuevo" %}
 {% api-method-summary %}
 Nuevo comprobante de Venta
 {% endapi-method-summary %}
@@ -20,7 +20,7 @@ Charset: UTF-8
 Tipo de dato esperado: JSON  
   
 Éste metodo te permite generar comprobantes de venta, ya sea Facturas electrónicas AFIP, como Notas de débito o de crédito.  
-Nuestra plataforma te permite emitir comprobantes de tipo A, B, C, E, M  
+Nuestra plataforma te permite emitir comprobantes de tipo A, B, C, E, M ya sean de factura electrónica AFIP como de Factura de crédito electrónica AFIP.  
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -332,7 +332,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
 {% hint style="info" %}
 Importante: **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es responsabilidad del cliente corroborar y validar éstos datos.** 
 
-Recordá que AFIP recibe únicamente totales, no el detalle de los items que facturas ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" \( Factura electrónica sin detalle de productos \).
+Recordá que AFIP recibe únicamente totales, no el detalle de los items que facturas ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" \( Factura electrónica sin detalle de productos \).
 {% endhint %}
 
 #### Información de los campos a enviar:

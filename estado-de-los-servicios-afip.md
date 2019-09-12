@@ -1,6 +1,6 @@
 # Estado de los servicios AFIP
 
-{% api-method method="post" host="https://www.tusfacturas.com.ar/app/api/" path="v2/estado\_servicios/alertas" %}
+{% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/estado\_servicios/alertas" %}
 {% api-method-summary %}
 Consulta de estados de los servicios
 {% endapi-method-summary %}
