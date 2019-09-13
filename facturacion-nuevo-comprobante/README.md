@@ -491,7 +491,11 @@ Si el cliente ya existia en la base de datos de www.tusfacturas.com.ar será act
 
 El detalle de conceptos se compone de una lista de cada uno de los productos que vas a facturar.
 
-La estructura de cada concepto a enviar es la siguiente:
+{% hint style="info" %}
+Recuerda que debes enviar una **lista \(array\)** de conceptos. El máximo de conceptos permitidos por comprobante es de 100. En caso que requieras más, por favor contactanos.
+{% endhint %}
+
+La estructura **de cada concepto** a enviar es la siguiente:
 
 {% code-tabs %}
 {% code-tabs-item title="JSON" %}
