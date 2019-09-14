@@ -44,18 +44,20 @@
 
 | Condición de Venta |     | Valor a enviar |
 | :--- | :--- | :--- |
-| 10 dias |     | 10 |
-| 15 dias |     | 15 |
-| 20 dias |     | 20 |
-| 30 dias |     | 30 |
-| 45 dias |     | 45 |
-| 60 dias |     | 60 |
-| 90 dias |     | 90 |
-| Contado |     | 0 |
-| Cuenta corriente |     | 9999 |
-| Transferencia Bancaria |     | 1 |
-| Tarjeta de crédito |  | 2 |
-| Tarjeta de Débito |  | 3 |
+| 5  días |  | 213 |
+| 10 dias |     | 206 |
+| 15 dias |     | 207 |
+| 20 dias |     | 209 |
+| 30 dias |     | 202 |
+| 45 dias |     | 208 |
+| 60 dias |     | 203 |
+| 90 dias |     | 204 |
+| Contado |     | 201 |
+| Cuenta corriente |     | 205 |
+| Transferencia Bancaria |     | 210 |
+| Tarjeta de crédito |  | 211 |
+| Tarjeta de Débito |  | 212 |
+| Otra |  | 214 |
 
 ### Condiciones ante el IVA
 

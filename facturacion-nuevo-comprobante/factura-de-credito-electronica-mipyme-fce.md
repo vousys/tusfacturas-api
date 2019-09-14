@@ -83,7 +83,7 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
 		"domicilio": "AV.LIBERTADOR 571",
 		"provincia": "2",
 		"envia_por_mail": "S",
-		"condicion_pago": "0",
+		"condicion_pago": "210",
 		"condicion_iva": "RI"
 	},
 	"comprobante": {

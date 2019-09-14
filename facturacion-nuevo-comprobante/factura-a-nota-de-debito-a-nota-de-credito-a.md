@@ -21,7 +21,7 @@ description: >-
          "domicilio":            "AV.LIBERTADOR 571", 
          "provincia":            "2", 
          "envia_por_mail":       "S", 
-         "condicion_pago":       "0", 
+         "condicion_pago":       "211", 
          "condicion_iva":        "RI" 
     },
  

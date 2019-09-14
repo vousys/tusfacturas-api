@@ -17,7 +17,7 @@ Ten en cuenta que los comprobantes C,  NO llevan IVA.
 		"documento_tipo": "CUIT",
 		"condicion_iva": "M",
 		"domicilio": "Av Sta Fe 23132",
-		"condicion_pago": "0",
+		"condicion_pago": "210",
 		"documento_nro": "3071229384",
 		"razon_social": "VOUSYS",
 		"provincia": "2",
