@@ -135,6 +135,18 @@
 | :--- | :--- | :--- |
 | Pesos Argentinos |     | PES |
 | Dolares estadounidenses |     | DOL |
+| LIRAS ITALIANAS |  | 004 |
+| FRANCOS FRANCESES |  | 003 |
+| PESOS URUGUAYOS |  | 011 |
+| REAL |  | 012 |
+| BOLIVAR \(VENEZOLANO\) |  | 023 |
+| PESO CHILENO |  | 033 |
+| PESO COLOMBIANO |  | 032 |
+| PESO BOLIVIANO |  | 031 |
+| EURO |  | 060 |
+| SUCRE \(ECUATORIANO\) |  | 036 |
+| NUEVO SOL PERUANO |  | 035 |
+|  |  |  |
 
 ### Idiomas
 

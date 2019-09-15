@@ -1,5 +1,15 @@
 # Changelog
 
+## 14 de septiembre de 2019
+
+Cambios para la emisión de un nuevo comprobante:
+
+* **Cambio de códigos:** En el bloque de "clientes", cambian los códigos a enviar en concepto de "condicion\_pago". [Consultar la tabla de referencia](tablas-de-referencia.md#condiciones-de-venta) 
+* **Nueva condición de pago:** Se agrega la condición de pago "otras", la cual le permite enviar cualquier texto para que salga impreso en el pdf. Ésta información deberá ser enviada, dentro del campo "condicion\_pago\_otra" en el bloque de "clientes". [Consultar ejemplo aquí](facturacion-nuevo-comprobante/#estructura-de-cliente). Éste campo es util cuando se lo junta con el campo de vencimiento \(donde se indica la fecha de vencimiento de manera manual\)
+* **Nuevas monedas de facturación:** Ahora podes emitir comprobantes en otras monedas extranjeras. [Consultá las monedas disponibles aquí ](tablas-de-referencia.md#monedas). Si necesitas alguna que no esté incluida, solicitála via email. 
+
+
+
 ## 05 de Agosto de 2019
 
 **Nuevo comprobante:** Se agrega el porcentaje de impuestos internos dentro del bloque de  cada "producto
