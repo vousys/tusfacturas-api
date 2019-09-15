@@ -146,6 +146,7 @@
 | EURO |  | 060 |
 | SUCRE \(ECUATORIANO\) |  | 036 |
 | NUEVO SOL PERUANO |  | 035 |
+| PESOS MEJICANOS |  | 010 |
 |  |  |  |
 
 ### Idiomas
