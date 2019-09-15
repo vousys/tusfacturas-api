@@ -377,6 +377,10 @@ Recordá que AFIP recibe únicamente totales, no el detalle de los items que fac
 | comprobantes\_asociados | SEGUN CORRESPONDA | Lista de comprobantes asociados. Requerido únicamente para NC o ND de tipo A,B,C,M. [Objeto JSON](./#estructura-de-comprobantes-asociados) Según estructura que se detalla a continuación |
 | rg\_especiales | SEGUN CORRESPONDA | Lista de datos adicionales requeridos por AFIP, según la RG a la que aplique el comprobante.  [Objeto JSON](./#estructura-de-rg-especiales) Según estructura que se detalla a continuación |
 
+{% hint style="info" %}
+Si querés que el comprobante tenga una fecha de vencimiento de pago particular, enviala en el campo  "**vencimiento"**.
+{% endhint %}
+
 ### Estructura de  "Cliente"
 
 Para poder generar el comprobante, debes enviar un detalle de todos los datos del cliente según se informa a continuación.
@@ -397,8 +401,12 @@ Para poder generar el comprobante, debes enviar un detalle de todos los datos de
 ```
 
 {% hint style="info" %}
-Si el cliente ya existia en la base de datos de www.tusfacturas.com.ar será actualizado con los nuevos datos, salvo Tipo y Nro de documento y condicion ante el IVA
+Si el cliente ya existia en la base de datos de www.tusfacturas.app será actualizado con los nuevos datos, salvo Tipo y Nro de documento y condicion ante el IVA.
+
+Ten en cuenta que al enviar la condición de pago "**otra**" \(codigo 214\) , se debe enviar obligatoriamente el campo **condicion\_pago\_otra** "con la descripción de la misma.
 {% endhint %}
+
+
 
 #### Información de los campos a enviar:
 

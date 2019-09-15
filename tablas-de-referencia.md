@@ -58,6 +58,7 @@
 | Tarjeta de crédito |  | 211 |
 | Tarjeta de Débito |  | 212 |
 | Otra |  | 214 |
+|  |  |  |
 
 ### Condiciones ante el IVA
 
