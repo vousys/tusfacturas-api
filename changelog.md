@@ -4,7 +4,7 @@
 
 Cambios para la emisión de un nuevo comprobante:
 
-**Nueva alícuota: IVA No gravado**. Ahora podes enviar a facturar conceptos con IVA no gravado. 
+**Nueva alícuota: IVA No gravado**. Ahora podes enviar a facturar conceptos con IVA no gravado. Para eso agregamos una nueva alícuota \(-2\) para que puedas enviarla dentro de cada concepto.
 
 En conjunto con este cambio, se dejó sin uso el campo de "nogravados" que se enviaba en el bloque de los totales del comprobante. A partir de hoy, serán rechazados todos los comprobantes que indiquen un valor mayor a cero en el campo: nogravados"
 
