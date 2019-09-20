@@ -122,7 +122,6 @@ Importante:
         "percepciones_iva_base":    "0",
         "percepciones_iva_alicuota": "0",
      	"exentos":                  "0",
-        "nogravados":               "0",
         "impuestos_internos":       "0",
         "impuestos_internos_base":   "0",
         "impuestos_internos_alicuota": "0" ,

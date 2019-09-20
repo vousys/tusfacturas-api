@@ -219,7 +219,6 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
                 "percepciones_iva_base":    "0",
                 "percepciones_iva_alicuota": "0",
                 "exentos":                  "0",
-                "nogravados":               "0",
                 "impuestos_internos":       "0",
                 "impuestos_internos_base":   "0",
                 "impuestos_internos_alicuota": "0",
@@ -320,8 +319,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
                 "comentario":               "Factura correspondiente al servicio XX",
                 "percepciones_iibb":        "0",
                 "percepciones_iva":         "0",
-                "exentos":                  "0",
-                "nogravados":               "0",
+                "exentos":                  "0", 
                 "impuestos_internos":       "0",
                 "total":                    "543.22",
                 "comprobantes_asociados":    []
@@ -372,7 +370,6 @@ Recordá que AFIP recibe únicamente totales, no el detalle de los items que fac
 | impuestos\_internos\_base | OPCIONAL | La base imponible  sobre la cual se calcularon los impuestos internos. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67 |
 | impuestos\_internos\_alicuota | OPCIONAL | La alícuota  sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67 |
 | exentos | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de exentos. Solo para comprobantes A y M Ejemplo: 72.67 |
-| nogravados | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de no gravados. Solo para comprobantes A y M Ejemplo: 62.67 impuestos\_internos Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de impuestos internos Ejemplo: 2.67 |
 | total | SI |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos incluyendo IVA e impuestos. Ejemplo: 12452.67 |
 | comprobantes\_asociados | SEGUN CORRESPONDA | Lista de comprobantes asociados. Requerido únicamente para NC o ND de tipo A,B,C,M. [Objeto JSON](./#estructura-de-comprobantes-asociados) Según estructura que se detalla a continuación |
 | rg\_especiales | SEGUN CORRESPONDA | Lista de datos adicionales requeridos por AFIP, según la RG a la que aplique el comprobante.  [Objeto JSON](./#estructura-de-rg-especiales) Según estructura que se detalla a continuación |
