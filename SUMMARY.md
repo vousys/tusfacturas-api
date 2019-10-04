@@ -11,7 +11,7 @@
   * [Comprobantes de tipo C](facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md)
   * [Factura de Crédito Electrónica MiPyme \(FCE\)](facturacion-nuevo-comprobante/factura-de-credito-electronica-mipyme-fce.md)
 * [Facturación por Lotes](api-facturacion-por-lotes.md)
-* [Consulta de comprobantes](consulta-de-comprobantes.md)
+* [Consulta de comprobantes y regeneración de PDF](consulta-de-comprobantes.md)
 * [Consultar numeración de comprobantes.](consultar-numeracion-de-comprobantes..md)
 * [Clientes - Cuenta Corriente](clientes-cuenta-corriente.md)
 * [Clientes - Consultar CUIT en constancia de inscripción](clientes-consultar-cuit-en-constancia-de-inscripcion.md)
