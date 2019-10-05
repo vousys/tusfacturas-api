@@ -12,6 +12,7 @@
   * [Factura de Crédito Electrónica MiPyme \(FCE\)](facturacion-nuevo-comprobante/factura-de-credito-electronica-mipyme-fce.md)
 * [Facturación por Lotes](api-facturacion-por-lotes.md)
 * [Consulta de comprobantes y regeneración de PDF](consulta-de-comprobantes.md)
+* [Eliminación de comprobantes de Compra](eliminacion-de-comprobantes-de-compra.md)
 * [Consultar numeración de comprobantes.](consultar-numeracion-de-comprobantes..md)
 * [Clientes - Cuenta Corriente](clientes-cuenta-corriente.md)
 * [Clientes - Consultar CUIT en constancia de inscripción](clientes-consultar-cuit-en-constancia-de-inscripcion.md)
