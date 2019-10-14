@@ -318,6 +318,7 @@ Ej:
 | reply\_to | El nombre de quien envía los comprobantes. |
 | mensaje | El mensaje predeterminado que saldrá en el envío de cada comprobante. |
 | copias | La cantidad de copias que se generan dentro del PDF. Valores esperados:  2= para recibir original y duplicado, 3= para recibir original, duplicado y triplicado |
+| cbu | Opcional: El número del CBU. Campo numérico, maximo 30 dígitos. |
 
 #### JSON De ejemplo a enviar
 

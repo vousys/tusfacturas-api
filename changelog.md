@@ -1,5 +1,9 @@
 # Changelog
 
+## 14 de octubre de 2019
+
+Se agrega el campo "cbu" al [bloque de la factura](mi-cuenta.md#objeto-factura), en Mi Cuenta -&gt; Mis Puntos de venta / administrar.
+
 ## 22 de septiembre de 2019
 
 Cambios para la emisión de un nuevo comprobante:
