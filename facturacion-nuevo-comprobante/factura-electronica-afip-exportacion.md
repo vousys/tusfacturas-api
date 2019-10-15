@@ -1,4 +1,4 @@
-# Factura electrónica AFIP de exportación
+# Comprobantes de tipo E - Factura electrónica AFIP de exportación
 
 ## Estructura de datos campo "fex"
 
@@ -7,7 +7,8 @@ Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del
 ```text
 {
         "permisos_tiene"      : "S" ,
-        "tipo_exportacion"    : "1",
+        "fecha_pago"          : "12/10/2019",
+        "tipo_exportacion"    : "2",
         "pais_comprobante_id" : "123",
         "forma_pago_leyenda"  : "Payment via paypal 30 days ",
         "cliente_pais_cuit"   : "50000000016",
@@ -53,6 +54,7 @@ Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del
 | `incoterms_tipo_id` | Campo alfabético Incoterms – Cláusula de Venta. Según tabla de referencia [Incoterms \(\*\*\) ](../consulta-de-incoterms.md) **Ejemplo: EXW** |
 | `incoterms_nro` | Campo alfanumérico - Información complementaria del incoterm  **Ejemplo: Texto dic.** |
 | `comprobantes_asociados` | Se deberá informar el/los comprobante/s asociados solamente si el comprobante que se está autorizando corresponde a una Nota de Débito o Nota de Crédito. Según estructura de "[Comprobantes asociados"](factura-electronica-afip-exportacion.md#estructura-de-comprobantes-asociados). |
+| fecha\_pago | Campo fecha - formato esperado: dd/mm/aaaa. Éste campo es obligatorio si se envia tipo\_exportacion = 2 o tipo\_exportacion=4 |
 
 ### Estructura de "Permisos "
 

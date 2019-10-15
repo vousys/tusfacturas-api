@@ -1,5 +1,9 @@
 # Changelog
 
+## 16 de octubre de 2019
+
+Se agrega el campo ["fecha\_pago" ](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)para las facturas de exportación.
+
 ## 14 de octubre de 2019
 
 Se agrega el campo "cbu" al [bloque de la factura](mi-cuenta.md#objeto-factura), en Mi Cuenta -&gt; Mis Puntos de venta / administrar.
