@@ -9,6 +9,17 @@
 | PASAPORTE | PASAPORTE |
 | OTRO \(no requiere enviar el numero\) | OTRO |
 
+### Alícuotas de IVA
+
+| Alicuota | Valor a enviar |
+| :--- | :--- |
+| 27% | 27 |
+| 21%  | 21 |
+| 10.5% | 10.5 |
+| 0% | 0 |
+| IVA Exento  | -1 |
+| IVA No gravado | -2 |
+
 ### Provincias
 
 | Provincia |     | Valor a enviar |

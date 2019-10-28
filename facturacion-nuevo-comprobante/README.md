@@ -488,19 +488,88 @@ Si el producto ya existia en la base de datos de nuestra plataforma, para la lis
 
 Los campos que debes enviar son los siguientes:
 
-| `descripcion` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: Papa blanca** |
-| :--- | :--- |
-| `unidad_bulto` | Campo numérico entero requerido. Indica la cantidad de unidades que componen un bulto. Valor minimo esperado: 1 **Ejemplo: 12** |
-| `lista_precios` | Campo alfanumérico. Longitud máxima 255 caracteres. Nombre de la lista de precios a la cual pertenece. No saldrá impreso en la factura pero es requerido. **Ejemplo: Verdura Orgánica** |
-| `codigo` | Campo alfanumérico. Longitud máxima 10 caracteres. campo Opcional **Ejemplo: ABX780** |
-| `precio_unitario_sin_iva` | Campo numérico con 2 decimales. separador de decimales: punto **Ejemplo: 645.67** |
-| `alicuota` | Indica la alicuota de IVA con la que grava ese producto. Valores Permitidos: **27, 21 , 10.5 ,  0  y -1 \( para exento\)** **Ejemplo: 10.5** |
-| `unidad_medida` | Campo numérico que indica la unidad de medida, según[ tabla de referencia Unidades de Medida\(\*\*\). ](../tablas-de-referencia.md#productos-unidades-de-medida-afip) **Ejemplo: 7** |
-| `actualiza_precio` | Indica si se actualiza el precio del producto, en la base productos, tomando como valor de referencia el enviado en el comprobante. Campo Alfabético, de 1 caracter. Valores permitidos: S \(si\) N \(no\).          **Ejemplo: S** |
-| `impuestos_internos_alicuota` | La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numerico, con  2 decimales.  ej: 10.5 |
-|  |  |
-
-### Estructura de "Comprobantes Asociados"
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><code>descripcion</code>
+      </th>
+      <th style="text-align:left">Campo alfanum&#xE9;rico. Longitud m&#xE1;xima 255 caracteres.
+        <br /><b>Ejemplo: Papa blanca</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>unidad_bulto</code>
+      </td>
+      <td style="text-align:left">Campo num&#xE9;rico entero requerido. Indica la cantidad de unidades que
+        componen un bulto. Valor minimo esperado: 1
+        <br /><b>Ejemplo: 12</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>lista_precios</code>
+      </td>
+      <td style="text-align:left">Campo alfanum&#xE9;rico. Longitud m&#xE1;xima 255 caracteres. Nombre de
+        la lista de precios a la cual pertenece. No saldr&#xE1; impreso en la factura
+        pero es requerido.
+        <br /><b>Ejemplo: Verdura Org&#xE1;nica</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>codigo</code>
+      </td>
+      <td style="text-align:left">Campo alfanum&#xE9;rico. Longitud m&#xE1;xima 10 caracteres. campo Opcional
+        <br
+        /><b>Ejemplo: ABX780</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>precio_unitario_sin_iva</code>
+      </td>
+      <td style="text-align:left">Campo num&#xE9;rico con 2 decimales. separador de decimales: punto
+        <br
+        /><b>Ejemplo: 645.67</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>alicuota</code>
+      </td>
+      <td style="text-align:left">
+        <p>Indica la alicuota de IVA con la que grava ese producto. Valores Permitidos:</p>
+        <p><b>27, 21 , 10.5 ,  0  ,  -1 ( para exento), -2 (no gravados)</b>
+          <br /><b>Ejemplo: 10.5</b>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>unidad_medida</code>
+      </td>
+      <td style="text-align:left">Campo num&#xE9;rico que indica la unidad de medida, seg&#xFA;n<a href="../tablas-de-referencia.md#productos-unidades-de-medida-afip"> tabla de referencia Unidades de Medida(**). </a>
+        <br
+        /><b>Ejemplo: 7</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>actualiza_precio</code>
+      </td>
+      <td style="text-align:left">Indica si se actualiza el precio del producto, en la base productos, tomando
+        como valor de referencia el enviado en el comprobante. Campo Alfab&#xE9;tico,
+        de 1 caracter. Valores permitidos: S (si) N (no). <b>Ejemplo: S</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>impuestos_internos_alicuota</code>
+      </td>
+      <td style="text-align:left">La al&#xED;cuota que se cobra en concepto de impuestos internos para &#xE9;ste
+        producto. Campo numerico, con 2 decimales. ej: 10.5</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>### Estructura de "Comprobantes Asociados"
 
 Cada uno de los comprobantes asociados que disponga, deberán ser enviados dentro de un array, acorde a la estructura que se detalla a continuación para cada comprobante asociado.
 
