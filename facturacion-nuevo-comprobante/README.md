@@ -53,6 +53,7 @@ Estructura de "Cliente", según se informa a continuación
 {% api-method-response-example-description %}
 Si el comprobante se ha podido generar sin problemas  se devolverá la variable "error" = "N".  
 En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados   
+En caso que el comprobante presente errores ya que debe emitir un comprobante de tipo Factura de crédito electronica MiPyme \(FEC\), el mismo aparecerá informado con una variable requiere\_fec = "SI"  
   
 Importante:  
   
@@ -73,7 +74,8 @@ Importante:
     "error":     "N",
      "errores": [ ""],    
      "rta":      "El comprobante NOTA DE DEBITO B 0002-00000006 (MI CUIT) se ha guardado correctamente",    
-     "cae":      "65301278726386 ",    
+     "cae":      "65301278726386 ",
+     "requiere_fec":   "NO ",    
      "vencimiento_cae":"07\/08\/2015",    
      "vencimiento_pago":"27\/08\/2015",    
      "comprobante_pdf_url": "https://www.dominio.com/url",
