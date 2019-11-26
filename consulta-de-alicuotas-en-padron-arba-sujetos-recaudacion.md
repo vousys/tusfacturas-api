@@ -42,8 +42,7 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
   
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```
 
 Ejemplo de cuando existe en padron 
@@ -84,8 +83,7 @@ Ejemplo de cuando NO existe en tu base de clientes
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}

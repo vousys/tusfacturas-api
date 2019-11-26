@@ -56,8 +56,7 @@ Tus credenciales de acceso
 
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
     "error": "N",
@@ -95,8 +94,7 @@ Tus credenciales de acceso
     }]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -124,8 +122,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 
 ## Ejemplo de JSON a enviar
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {   
 "apitoken": "kkakak208a17cdfc4e4741437baddaa6",
@@ -300,13 +297,11 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
         ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Ejemplo de como invocarlo desde PHP
 
-{% code-tabs %}
-{% code-tabs-item title="PHP" %}
+{% code title="PHP" %}
 ```text
 // ENVIO REQUEST
 $url ="https://www.tusfacturas.app/api/v2/facturacion/lotes" ;
@@ -320,8 +315,7 @@ $json_rta_curl =  json_decode(  curl_exec($ch) ) ;
 curl_close($ch);
 ​
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## **¿Que te retornaremos en caso de error ?**
 
@@ -329,16 +323,14 @@ curl_close($ch);
 
 Ej: una llamada con 3 requests, donde segundo el comprobante enviado tiene un tipo de comprobante diferente.
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
     "error": "S",
     "errores": ["El comprobante enviado en la fila 1 (comenzando en 0) tiene un tipo de comprobante diferente."]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Error de Procesamiento:
 
@@ -346,8 +338,7 @@ Ej: una llamada con 3 requests, donde segundo el comprobante enviado tiene un ti
 En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechazado, todos los comprobantes subsiguientes del lote, vendrán rechazados.
 {% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
  {
     "error": "S",
@@ -388,8 +379,7 @@ En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechaz
     }]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## FAQs
 

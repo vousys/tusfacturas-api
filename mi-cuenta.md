@@ -36,8 +36,7 @@ Tus Credenciales de acceso
 
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```
 {
 "error":"N",
@@ -48,8 +47,7 @@ Tus Credenciales de acceso
 "comprobantes_disponibles": 79
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -57,8 +55,7 @@ Tus Credenciales de acceso
 
 #### Ejemplo del JSON a enviar:
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
    "usertoken":"JHJKHJHJKHJK",
@@ -67,8 +64,7 @@ Tus Credenciales de acceso
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/micuenta/iva\_compras\_ventas" %}
 {% api-method-summary %}
@@ -114,16 +110,14 @@ Tus credenciales de acceso
 La respuesta es error = S o error = N
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```
 {
 "error":"N",
 "errores":[]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -131,8 +125,7 @@ La respuesta es error = S o error = N
 
 #### Ejemplo del JSON a enviar:
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
 "usertoken" :  "5ef7asdasdadsaa1b88fcabba3f",
@@ -145,8 +138,7 @@ La respuesta es error = S o error = N
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/puntos\_venta/administrar" %}
 {% api-method-summary %}
@@ -322,8 +314,7 @@ Ej:
 
 #### JSON De ejemplo a enviar
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
    "usertoken":"JHJKHJHJKHJK",
@@ -356,8 +347,7 @@ Ej:
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 
@@ -406,8 +396,7 @@ Tus credenciales de acceso
 
 #### Ejemplo del JSON a enviar:
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
    "usertoken":"JHJKHJHJKHJK",
@@ -416,8 +405,7 @@ Tus credenciales de acceso
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/puntos\_venta/certificado" %}
 {% api-method-summary %}
@@ -462,8 +450,7 @@ Tus credenciales de acceso.
 
 #### Ejemplo del JSON a enviar:
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
    "usertoken":"JHJKHJHJKHJK",
@@ -472,8 +459,7 @@ Tus credenciales de acceso.
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 

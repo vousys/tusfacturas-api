@@ -38,8 +38,7 @@ En caso de existir errores, se devolverá la variable `error` con un valor "S" y
 En caso de exito, se retornará la variable `error`  en "N" y la cotización del momento.  
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```
     {
         "error":     "N",
@@ -50,8 +49,7 @@ En caso de exito, se retornará la variable `error`  en "N" y la cotización del
         "cotizacion": "15.10"
     }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -59,8 +57,7 @@ En caso de exito, se retornará la variable `error`  en "N" y la cotización del
 
 ### Estructura del JSON a enviar
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
    "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
@@ -68,6 +65,5 @@ En caso de exito, se retornará la variable `error`  en "N" y la cotización del
    "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6"
  }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 

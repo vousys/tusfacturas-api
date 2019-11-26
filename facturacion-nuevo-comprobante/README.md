@@ -67,8 +67,7 @@ Importante:
    
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```javascript
 {
     "error":     "N",
@@ -87,8 +86,7 @@ Importante:
   }  
   
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -236,8 +234,7 @@ Ten en cuenta a la hora de calcular el total, que las bonificaciones están grav
 
 Para poder generar el comprobante, debes enviar de todos los datos según se informa a continuación.
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
    
 "comprobante":  {
@@ -327,8 +324,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
                 "comprobantes_asociados":    []
         }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 Importante: **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es responsabilidad del cliente corroborar y validar éstos datos.** 
@@ -431,8 +427,7 @@ Recuerda que debes enviar una **lista \(array\)** de conceptos. El máximo de co
 
 La estructura **de cada concepto** a enviar es la siguiente:
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
 	"cantidad": "1.5",
@@ -452,8 +447,7 @@ La estructura **de cada concepto** a enviar es la siguiente:
 	"leyenda": ""
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Los campos que debes enviar son los siguientes:
 
@@ -604,8 +598,7 @@ Según la RG a la que tu empresa aplique, se deberá enviar  un array con los da
 
 Ten en cuenta que solo podrás aplicar a un [regimen](../tablas-de-referencia.md#datos-opcionales-para-rg-especiales) por cada comprobante que emitas.
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 "rg_especiales":   
   {   "regimen" : "RG 4004-E",
@@ -620,8 +613,7 @@ Ten en cuenta que solo podrás aplicar a un [regimen](../tablas-de-referencia.md
                  }]
  } 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 Información de los campos a enviar en el array de "datos":
 

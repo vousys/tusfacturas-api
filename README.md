@@ -17,7 +17,9 @@ En la documentación encontrarás algunos ejemplos para que luego los adaptes al
 
   
 Versión actual: **API v2**   
-Tipo de API: **API Rest**  
+Tipo de API: **API Rest**
+
+SSL: **requiere TLS 1+**  
 Tipo de datos entrada y respuesta: **JSON**  
 Charset: **UTF-8**  
 Tipo de request : **POST**  
@@ -29,7 +31,7 @@ URL : **https://www.tusfacturas.app/app/api/v2/estado\_servicios/alertas**
 **Tené en cuenta éstas cosas:**  
 1\) Para procesar correctamente los campos, debes enviarlos siempre encodeados con **UTF-8**.   
 2\) Cuando realices comprobantes AFIP Factura electrónica válida, tené en cuenta que cada request que hagas para generar comprobantes, debe tener una diferencia de tiempo de 1 minuto, ya que sino la misma AFIP te bloquea el CUIT  y no podrás emitir comprobantes por unos minutos.   
-3\) Nuestra API ya ha sido implementada contra sistemas que trabajan en PHP, Visual basic 6.0 y Ruby, como asi tambien entornos AMAZON WS, servidores dedicados y servidores compartidos. 
+3\) Nuestra API ya ha sido implementada contra sistemas que trabajan en PHP, Visual basic 6.0 y Ruby, como asi tambien entornos AMAZON WS, Google Cloud, servidores dedicados y servidores compartidos. 
 
 
 

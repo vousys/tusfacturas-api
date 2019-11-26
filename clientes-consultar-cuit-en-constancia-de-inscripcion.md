@@ -49,8 +49,7 @@ Tus credenciales de acceso.
 
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```
 {
    "error":             "N",
@@ -66,8 +65,7 @@ Tus credenciales de acceso.
 ​
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -75,8 +73,7 @@ Tus credenciales de acceso.
 
 ## Ejemplo del JSON a enviar <a id="estructura-del-json-a-enviar"></a>
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
@@ -89,8 +86,7 @@ Tus credenciales de acceso.
  }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Estructura de "Cliente" <a id="estructura-de-cliente"></a>
 

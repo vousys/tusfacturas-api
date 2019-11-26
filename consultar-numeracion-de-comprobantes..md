@@ -39,8 +39,7 @@ En caso de detectar algún error, el campo error, se devuelve con una "S" y dent
 Importante: Los campos número y punto de venta, se retornan como numéricos  
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```
 {
 	"error": "N",
@@ -54,8 +53,7 @@ Importante: Los campos número y punto de venta, se retornan como numéricos
 	}
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -63,8 +61,7 @@ Importante: Los campos número y punto de venta, se retornan como numéricos
 
 ### Ejemplo del JSON a enviar para consultar la numeración del próximo comprobante.
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
 	"usertoken": "jajajja8c8bf67c884e1405e26c03c85",
@@ -77,8 +74,7 @@ Importante: Los campos número y punto de venta, se retornan como numéricos
 	}
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Estructura de datos 
 

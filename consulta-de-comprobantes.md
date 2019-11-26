@@ -50,8 +50,8 @@ Importante:
   
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% tabs %}
+{% tab title="JSON" %}
 ```
 {
 	"error": "N",
@@ -135,14 +135,14 @@ Importante:
 	}
 }
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title=undefined %}
+{% tab title="Plain Text" %}
 ```
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -226,8 +226,7 @@ Regenera el PDF y te devuelve la URL del archivo
 
 ### Ejemplo del JSON a enviar para regenerar el pdf
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
@@ -243,8 +242,7 @@ Regenera el PDF y te devuelve la URL del archivo
 
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## Estructura de "Comprobante":
 

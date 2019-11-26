@@ -146,8 +146,7 @@ Las notas de crédito requieren que se envíe el bloque de "[Comprobantes asocia
 
 Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_especiales](./#estructura-de-rg-especiales)", el dato id \#22  con el valor S o N.
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
 	"usertoken": "hagagay2y884e1405e26c03c85",
@@ -225,8 +224,7 @@ Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_espec
 
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 Ten en cuenta que TusFacturas.app no realiza validaciones con respecto a los datos enviados. Las validaciones se realizan exclusivamente del lado de AFIP, previa generación del comprobante.

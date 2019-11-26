@@ -103,8 +103,7 @@ TusFacturas usa `webhooks` para comunicarte los eventos que ocurren en relación
 
 Vas a recibir por POST un JSON con la siguiente estructura, para que puedas relacionar mediante el ID que nos enviaste como referencia, al comprobante en cuestión:
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
 "error":"N",
@@ -125,8 +124,7 @@ Vas a recibir por POST un JSON con la siguiente estructura, para que puedas rela
 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 {% hint style="info" %}
 Ten en cuenta que dentro de la captura del webhook, deberás realizar las validaciones correspondientes desde tu lado \(que apikey, apitoken, usertoken te correspondan, que el id de referencia se corresponda, etc\)
@@ -155,8 +153,7 @@ Intentaremos generar cada comprobante, máximo de 10 veces. En caso de superar e
 
 ### Ejemplo de JSON a enviar
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {   
 "apitoken": "kkakak208a17cdfc4e4741437baddaa6",
@@ -305,13 +302,11 @@ Intentaremos generar cada comprobante, máximo de 10 veces. En caso de superar e
         ]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### Ejemplo de como invocarlo desde PHP
 
-{% code-tabs %}
-{% code-tabs-item title="PHP" %}
+{% code title="PHP" %}
 ```text
 // ENVIO REQUEST
 $url ="https://www.tusfacturas.com.ar/api/v2/facturacion/lotes" ;
@@ -325,8 +320,7 @@ $json_rta_curl =  json_decode(  curl_exec($ch) ) ;
 curl_close($ch);
 ​
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ## ¿Que necesito hacer para migrar desde comprobantes instantáneos?
 

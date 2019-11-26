@@ -33,8 +33,7 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
   
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```
  {
 	"error": "N",
@@ -48,8 +47,7 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 	}]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -57,8 +55,7 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 
 ### Estructura del JSON a enviar
 
-{% code-tabs %}
-{% code-tabs-item title="JSON" %}
+{% code title="JSON" %}
 ```text
 {
 	"usertoken": "jajajja8c8bf67c884e1405e26c03c85",
@@ -67,6 +64,5 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
