@@ -112,7 +112,7 @@ Todos los requests de llamada, deben ser del **mismo tipo de comprobante**.
 Los request deben venir **ordenados por número ascendente y por fecha**, de la misma manera que si los enviarás a procesar uno por uno.
 {% endhint %}
 
-La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar \([comprobantes de tipo A](facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](facturacion-nuevo-comprobante/factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)\) . **No podrás enviar comprobantes de tipo E en ésta modalidad.**
+La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar \([comprobantes de tipo A](facturacion-nuevo-comprobante/factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](facturacion-nuevo-comprobante/factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)\) . **No podrás enviar comprobantes de tipo E ni de Factura de crédito electrónica \(FEC\) en ésta modalidad.**
 
 #### Validaciones que realizamos antes de enviarlos a procesar:
 
