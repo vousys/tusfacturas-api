@@ -1,5 +1,9 @@
 # Changelog
 
+## 03 de diciembre de 2019
+
+Se agrega la consulta de cotización multi-moneda .
+
 ## 06 de noviembre de 2019
 
 Se agrega una variable al response de la emisión de comprobantes, llamado "requiere\_fec" cuya respuesta puede ser "SI" o "NO", para indicar que el comprobante a emitir debe ser generado como Factura Electrónica de Crédito MiPyme \(FEC\) y no como un comprobante común de tipo A, B o C.
