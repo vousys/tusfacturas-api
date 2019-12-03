@@ -17,7 +17,7 @@ Obtener cotización del dólar
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="moneda" type="string" required=false %}
-La moneda a consultar según nuestra tabla de referencia. Si éste campo no se envía, o se envía vacio, se obtendrá la cotización del dólar.
+La moneda a consultar según nuestras tablas de referencia de monedas. Si éste campo no se envía, o se envía vacio, se obtendrá la cotización del dólar.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="apikey" type="string" required=true %}
