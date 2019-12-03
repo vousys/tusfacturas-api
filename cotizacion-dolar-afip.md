@@ -16,15 +16,19 @@ Obtener cotización del dólar
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="apikey" type="string" required=false %}
+{% api-method-parameter name="moneda" type="string" required=false %}
+La moneda a consultar según nuestra tabla de referencia. Si éste campo no se envía, o se envía vacio, se obtendrá la cotización del dólar.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="apikey" type="string" required=true %}
 Tus credenciales de acceso
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=false %}
+{% api-method-parameter name="apitoken" type="string" required=true %}
 Tus credenciales de acceso
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="usertoken" type="string" required=false %}
+{% api-method-parameter name="usertoken" type="string" required=true %}
 Tus credenciales de acceso  
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -62,7 +66,8 @@ En caso de exito, se retornará la variable `error`  en "N" y la cotización del
 {
    "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
    "apikey"    :  "9991",
-   "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6"
+   "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
+   "moneda"    :  "DOL
  }
 ```
 {% endcode %}
