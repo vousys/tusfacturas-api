@@ -7,7 +7,9 @@ description: >-
 # Consulta de obligado a recibir Factura de Crédito electrónica MiPyme
 
 {% hint style="info" %}
-Ten en cuenta que para utilizar éste servicio deberás agregar en tu cuenta de AFIP, el webservice de AFIP "**Webservice Registro de Facturas de Crédito Electrónica MiPyMEs "** . Para obtener la info de como agregarlo, consultá el paso 6 de nuestro instructivo en https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html
+El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.
+
+IMPORTANTE: Para poder realizar ésta consulta,  deberás tener agregado en tu cuenta AFIP, el servicio de "**Webservice Registro de Facturas de Crédito Electrónica MiPyMEs "** . Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 6 ](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
 {% endhint %}
 
 {% api-method method="post" host="https://www.tusfacturas.app/app" path="/api/v2/facturacion/requiere\_fec" %}
@@ -95,4 +97,6 @@ como la siguiente:
 	"fecha": "08/12/2019"
 }
 ```
+
+
 
