@@ -1,4 +1,4 @@
-# Cotización Dólar AFIP
+# Cotizaciones AFIP
 
 {% hint style="info" %}
 Ésta información es actualizada a cada hora desde AFIP.  El límite de request que dispones para realizar las consultas, es el  limite que tenés habilitado en tu plan  para la emisión de comprobantes, multiplicado por 12 \(ya que puedes consultar la cotización del dólar una vez por hora\) . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 12,000 request a éste método en el período en curso.
@@ -6,11 +6,11 @@
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/tablas\_referencia/cotizacion" %}
 {% api-method-summary %}
-Obtener cotización del dólar
+Obtener cotización desde AFIP
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Puedes obtener la cotización de las diferentes monedas que tenemos publicadas en nuestra **tabla de referencia de monedas**. La cotización es obtenida desde AFIP.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -67,7 +67,7 @@ En caso de exito, se retornará la variable `error`  en "N" y la cotización del
    "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
    "apikey"    :  "9991",
    "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
-   "moneda"    :  "DOL
+   "moneda"    :  "012"
  }
 ```
 {% endcode %}
