@@ -10,7 +10,7 @@
   * [Comprobantes de tipo C](facturacion-nuevo-comprobante/factura-c-nota-de-debito-c-nota-de-credito-c.md)
   * [Comprobantes de tipo E - Factura electrónica AFIP de exportación](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)
   * [Factura de Crédito Electrónica MiPyme \(FCE\)](facturacion-nuevo-comprobante/factura-de-credito-electronica-mipyme-fce.md)
-  * [Consulta de obligado a recibir Factura de Crédito electrónica MiPyme](facturacion-nuevo-comprobante/consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md)
+* [Consulta de obligado a recibir Factura de Crédito electrónica MiPyme](consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md)
 * [Facturación por Lotes](api-facturacion-por-lotes.md)
 * [Consulta de comprobantes y regeneración de PDF](consulta-de-comprobantes.md)
 * [Eliminación de comprobantes de Compra](eliminacion-de-comprobantes-de-compra.md)
