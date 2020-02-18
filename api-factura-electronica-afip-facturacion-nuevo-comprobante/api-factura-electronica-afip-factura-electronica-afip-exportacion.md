@@ -47,13 +47,13 @@ Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del
 | `tipo_exportacion` | Campo numérico. Longitud 1 caracter. Valores esperados:  1= Exportación definitiva de bienes  2= Servicios  4= Otros.  **Ejemplo: 2** |
 | :--- | :--- |
 | `permisos_tiene` | Campo alfabético. Longitud 1 caracter. Indica si se posee documento aduanero de exportación \(permiso de embarque\). Valores esperados:  S= Si posee N= No posee  \(vacio\)= No especifica  **Ejemplo: S** |
-| `permisos` | Solo deberán ser enviados los permisos cuando el campo permisos\_tiene sea igual a "S".    Valores a enviar según estructura de datos definida en  ["Permisos de exportacion".](factura-electronica-afip-exportacion.md#estructura-de-permisos) |
+| `permisos` | Solo deberán ser enviados los permisos cuando el campo permisos\_tiene sea igual a "S".    Valores a enviar según estructura de datos definida en  ["Permisos de exportacion".](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#estructura-de-permisos) |
 | `pais_comprobante_id` | Campo numérico. Según tabla de referencia [Paises AFIP \(\*\*\)](../consulta-de-paises-afip.md)  **Ejemplo: 123** |
 | `forma_pago_leyenda` | Campo alfanumérico. Descripción adicional de la forma de pago  **Ejemplo: Favor depositar en cuenta XXXXX** |
 | `cliente_pais_cuit` | Campo numérico. Según tabla de referencia [CUIT Pais AFIP \(\*\*\) ](../consulta-de-cuit-pais-afip.md) **Ejemplo: 51600004380** |
 | `incoterms_tipo_id` | Campo alfabético Incoterms – Cláusula de Venta. Según tabla de referencia [Incoterms \(\*\*\) ](../consulta-de-incoterms.md) **Ejemplo: EXW** |
 | `incoterms_nro` | Campo alfanumérico - Información complementaria del incoterm  **Ejemplo: Texto dic.** |
-| `comprobantes_asociados` | Se deberá informar el/los comprobante/s asociados solamente si el comprobante que se está autorizando corresponde a una Nota de Débito o Nota de Crédito. Según estructura de "[Comprobantes asociados"](factura-electronica-afip-exportacion.md#estructura-de-comprobantes-asociados). |
+| `comprobantes_asociados` | Se deberá informar el/los comprobante/s asociados solamente si el comprobante que se está autorizando corresponde a una Nota de Débito o Nota de Crédito. Según estructura de "[Comprobantes asociados"](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#estructura-de-comprobantes-asociados). |
 | fecha\_pago | Campo fecha - formato esperado: dd/mm/aaaa. Éste campo es obligatorio únicamente para Facturas E, si se envia tipo\_exportacion = 2 o tipo\_exportacion=4 |
 
 ### Estructura de "Permisos "

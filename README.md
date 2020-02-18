@@ -35,7 +35,7 @@ URL : **https://www.tusfacturas.app/app/api/v2/estado\_servicios/alertas**
 
 
 
-{% page-ref page="plugins-y-sdks.md" %}
+{% page-ref page="api-factura-electronica-afip-plugins-y-sdks.md" %}
 
 
 

@@ -14,7 +14,7 @@ Se agrega una variable al response de la emisión de comprobantes, llamado "requ
 
 ## 16 de octubre de 2019
 
-Se agrega el campo ["fecha\_pago" ](facturacion-nuevo-comprobante/factura-electronica-afip-exportacion.md)para las facturas de exportación.
+Se agrega el campo ["fecha\_pago" ](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)para las facturas de exportación.
 
 ## 14 de octubre de 2019
 
@@ -34,7 +34,7 @@ Cambios para la emisión de un nuevo comprobante:
 
 * **Cambiamos la url a donde deberás enviar los request.** Ahora deberan ser enviados a https://www.tusfacturas.app
 * **Cambio de códigos:** En el bloque de "clientes", cambian los códigos a enviar en concepto de "condicion\_pago". [Consultar la tabla de referencia](tablas-de-referencia.md#condiciones-de-venta) 
-* **Nueva condición de pago:** Se agrega la condición de pago "otras", la cual le permite enviar cualquier texto para que salga impreso en el pdf. Ésta información deberá ser enviada, dentro del campo "condicion\_pago\_otra" en el bloque de "clientes". [Consultar ejemplo aquí](facturacion-nuevo-comprobante/#estructura-de-cliente). Éste campo es util cuando se lo junta con el campo de vencimiento \(donde se indica la fecha de vencimiento de manera manual\)
+* **Nueva condición de pago:** Se agrega la condición de pago "otras", la cual le permite enviar cualquier texto para que salga impreso en el pdf. Ésta información deberá ser enviada, dentro del campo "condicion\_pago\_otra" en el bloque de "clientes". [Consultar ejemplo aquí](api-factura-electronica-afip-facturacion-nuevo-comprobante/#estructura-de-cliente). Éste campo es util cuando se lo junta con el campo de vencimiento \(donde se indica la fecha de vencimiento de manera manual\)
 * **Nuevas monedas de facturación:** Ahora podes emitir comprobantes en otras monedas extranjeras. [Consultá las monedas disponibles aquí ](tablas-de-referencia.md#monedas). Si necesitas alguna que no esté incluida, solicitála via email. 
 
 
