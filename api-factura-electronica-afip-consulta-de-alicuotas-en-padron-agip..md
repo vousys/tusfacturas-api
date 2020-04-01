@@ -6,6 +6,8 @@ description: API para consultar al padrón AGIP las alícuotas de percepción y 
 
 {% hint style="info" %}
 El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.
+
+Siempre es importante que re-confirmes con tus asesores impositivos si la alícuota obtenida corresponde o no ser aplicada al comprobante que vas a emitir.
 {% endhint %}
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/clientes/agip-padron" %}
@@ -101,6 +103,8 @@ CUITS con alícuota cero:
 En el supuesto caso que la consulta te retorne alícuota cero, deberás evaluar si corresponde o no, aplicar el porcentaje máximo a retener/percibir.
 
 Previo al 01/01/2019, éste padrón podía ser descargado públicamente desde la web de AGIP, pero ahora se realiza únicamente una consulta individual accediendo con clave ciudad; motivo por el cual, nuestra plataforma no puede retornarte la información exacta.
+
+Ten en cuenta que solo almacenamos la información descargada desde AGIP para el mes actual. No podrás consultar meses anteriores.
 {% endhint %}
 
 ## Estructura del JSON a enviar
