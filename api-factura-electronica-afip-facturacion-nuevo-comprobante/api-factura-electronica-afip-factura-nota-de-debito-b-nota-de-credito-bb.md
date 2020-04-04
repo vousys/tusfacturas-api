@@ -21,7 +21,7 @@ Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, 
 		"documento_nro": "3071229384",
 		"razon_social": "VOUSYS",
 		"provincia": "2",
-		"email": "tusfacturas@vousys.com",
+		"email": "email@dominio.com",
 		"envia_por_mail": "N"
 	},
 	"apikey": "1235",
@@ -30,11 +30,13 @@ Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, 
 		"percepciones_iva": 0,
 		"tipo": "FACTURA B",
 		"numero": 2134,
-		"percepciones_iibb": 0,
 		"bonificacion": 0,
 		"operacion": "V",
 		"detalle": [{
 			"cantidad": 1,
+			"afecta_stock": "S",
+		  "actualiza_precio": "S",
+			"bonificacion_porcentaje": 0,			
 			"producto": {
 				"descripcion": "Hosting pagina web ",
 				"codigo": 37,
@@ -42,6 +44,7 @@ Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, 
 				"leyenda": "",
 				"unidad_bulto": 1,
 				"alicuota": 21,
+				"actualiza_precio": "S",
 				"precio_unitario_sin_iva": 114.88
 			}
 		}],
@@ -51,18 +54,18 @@ Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, 
 		"cotizacion": 1,
 		"moneda": "PES",
 		"punto_venta": 3,
-       "percepciones_iibb":        "0",
-       "percepciones_iibb_base":   "0",
-        "percepciones_iibb_alicuota": "0",
-        "percepciones_iva":         "0",
-        "percepciones_iva_base":    "0",
-        "percepciones_iva_alicuota": "0",
-        "exentos":                  "0", 
-        "impuestos_internos":       "0",
-        "impuestos_internos_base":   "0",
-        "impuestos_internos_alicuota": "0" 
+    "percepciones_iibb":        "0",
+    "percepciones_iibb_base":   "0",
+    "percepciones_iibb_alicuota": "0",
+    "percepciones_iva":         "0",
+    "percepciones_iva_base":    "0",
+    "percepciones_iva_alicuota": "0",
+    "exentos":                  "0", 
+    "impuestos_internos":       "0",
+    "impuestos_internos_base":   "0",
+    "impuestos_internos_alicuota": "0" 
 	},
-	"usertoken": "a7ahdt5s7725d7fa4f4e63646bc169b"
+	"usertoken": "a7ahdt5sdddddd7725d7fa4f4e63646bc169b"
 }
 ```
 
@@ -73,9 +76,9 @@ Si queres enviar un comprobante a un consumidor final, sin especificar su nombre
 * Tipo de documento = "OTRO"
 * En nombre, lo que tu contador/a te recomiende. 
 
-Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos \(En Julio 2019 el tope es de $10,000, pero éste valor puede sufrir modificaciones\).
+Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos \(En Marzo 2020 el tope es de $15,380.- , pero éste valor puede sufrir modificaciones\).
 
- Envianos tu consulta a tusfacturas@vousys.com 
+ Consultanos el valor actualizado a  tusfacturas@vousys.com 
 {% endhint %}
 
 ### Ejemplo de llamada en PHP
