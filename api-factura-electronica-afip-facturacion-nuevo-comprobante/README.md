@@ -399,6 +399,8 @@ Para poder generar el comprobante, debes enviar un detalle de todos los datos de
 Si el cliente ya existia en la base de datos de www.tusfacturas.app será actualizado con los nuevos datos, salvo Tipo y Nro de documento y condicion ante el IVA.
 
 Ten en cuenta que al enviar la condición de pago "**otra**" \(codigo 214\) , se debe enviar obligatoriamente el campo **condicion\_pago\_otra** "con la descripción de la misma.
+
+Para casos de clientes del exterior, que posean **pasaporte**, ten en cuenta que AFIP solo permite el envío de números en el campo de documento\_nro.
 {% endhint %}
 
 
