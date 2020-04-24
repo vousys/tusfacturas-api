@@ -144,7 +144,9 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
 
 Las notas de crédito requieren que se envíe el bloque de "[Comprobantes asociados](./#estructura-de-comprobantes-asociados)" , con la particularidad de que éstos comprobantes asociados deben estar en la misma moneda que el comprobante que se está enviando a generar y la fecha del comprobante asociado tiene que ser igual o menor a la fecha del comprobante que se está autorizando.
 
-Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_especiales](./#estructura-de-rg-especiales)", el dato id \#22  con el valor S o N.
+Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_especiales](./#estructura-de-rg-especiales)", el dato id \#22  con el valor S o N. 
+
+Es importante aclarar que **AFIP no requiere el envio del CBU** para las NC y ND
 
 {% code title="JSON" %}
 ```text
@@ -230,7 +232,7 @@ Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_espec
 Ten en cuenta que TusFacturas.app no realiza validaciones con respecto a los datos enviados. Las validaciones se realizan exclusivamente del lado de AFIP, previa generación del comprobante.
 {% endhint %}
 
-### Algunas de las validaciones que realiza AFIP:
+### 
 
 [  
 ](https://app.gitbook.com/@tusfacturas/s/api-factura-electronica-afip/facturacion-nuevo-comprobante/factura-electronica-afip-exportacion)
