@@ -72,7 +72,7 @@ En caso de exito, se retornará la variable `error`  en "N" y la cotización del
    "apikey"    :  "9991",
    "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
    "moneda"    :  "012",
-   "fecha"     :  "02/03/2020
+   "fecha"     :  "02/03/2020"
  }
 ```
 {% endcode %}
