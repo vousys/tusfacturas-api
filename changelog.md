@@ -1,6 +1,10 @@
 # Changelog
 
-### 08 de diciembre de 2019
+## 07 de Mayo de 2020
+
+Cotizaciones: Se agrega la posibilidad de enviar la fecha para obtener la cotización AFIP de alguna moneda, con hasta 2 meses para atras.
+
+## 08 de diciembre de 2019
 
 Se agrega el método de consulta para las facturas de crédito electrónica MiPyme. Mediante éste método podrás consultar antes de enviar a facturar, si tu cliente se encuentra obligado a recibir una factura de tipo MiPyme y en caso afirmativo, a partir de que monto.
 

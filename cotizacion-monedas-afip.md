@@ -15,12 +15,8 @@ Puedes obtener la cotización de las diferentes monedas que tenemos publicadas e
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="moneda" type="string" required=false %}
-La moneda a consultar según nuestras tablas de referencia de monedas. Si éste campo no se envía, o se envía vacio, se obtendrá la cotización del dólar.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="apikey" type="string" required=true %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="usertoken" type="string" required=true %}
 Tus credenciales de acceso
 {% endapi-method-parameter %}
 
@@ -28,10 +24,18 @@ Tus credenciales de acceso
 Tus credenciales de acceso
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
-Tus credenciales de acceso  
+{% api-method-parameter name="apikey" type="string" required=true %}
+Tus credenciales de acceso
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+
+{% api-method-parameter name="moneda" type="string" required=false %}
+La moneda a consultar, según nuestra tabla de referencia de monedas. En caso que no envies éste dato, obtendrás la cotización del dolar.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="fecha" type="string" required=false %}
+Si indicas la fecha en formato dd/mm/aaaa, te mostraremos la ultima cotización encontrada en AFIP para ese día, según los datos que hemos almacenado. Ten en cuenta que no podrás consultar mas de 2 meses atras.  
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -67,7 +71,8 @@ En caso de exito, se retornará la variable `error`  en "N" y la cotización del
    "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
    "apikey"    :  "9991",
    "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
-   "moneda"    :  "012"
+   "moneda"    :  "012",
+   "fecha"     :  "02/03/2020
  }
 ```
 {% endcode %}
