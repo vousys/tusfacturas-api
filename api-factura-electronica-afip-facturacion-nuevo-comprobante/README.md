@@ -567,7 +567,11 @@ Los campos que debes enviar son los siguientes:
       <td style="text-align:left"></td>
     </tr>
   </tbody>
-</table>### Estructura de "Comprobantes Asociados"
+</table>{% hint style="info" %}
+En caso que quieras reflejar en los comprobantes generados, un signo de porcentaje \(%\), deberás enviarlo en la descripción del producto de ésta manera:  **\#&\#** , asi como si quisieras que parte de esa descripción del producto se imprima en otra linea, deberás enviar:  **\#@\#** 
+{% endhint %}
+
+### Estructura de "Comprobantes Asociados"
 
 Cada uno de los comprobantes asociados que disponga, deberán ser enviados dentro de un array, acorde a la estructura que se detalla a continuación para cada comprobante asociado.
 
