@@ -1,9 +1,5 @@
 # Changelog
 
-## 19 de mayo de 2020
-
-Se limita a 50 conceptos por comprobante.
-
 ## 07 de Mayo de 2020
 
 Cotizaciones: Se agrega la posibilidad de enviar la fecha para obtener la cotización AFIP de alguna moneda, con hasta 2 meses para atras.
