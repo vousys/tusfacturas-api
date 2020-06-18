@@ -1,4 +1,10 @@
-# Comprobantes de tipo E - Factura electrónica AFIP de exportación
+---
+description: >-
+  Emití con la API de TusFacturas.app los siguientes comprobantes: FACTURA E,
+  NOTA DE DÉBITO E, NOTA DE CRÉDITO E.
+---
+
+# API - Factura electrónica AFIP: Comprobantes de tipo E \(Factura de exportación\)
 
 ## Estructura de datos campo "fex"
 

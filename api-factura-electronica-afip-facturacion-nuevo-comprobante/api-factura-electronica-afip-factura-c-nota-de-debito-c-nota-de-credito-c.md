@@ -1,10 +1,11 @@
 ---
 description: >-
-  Factura C / Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C
-  / Nota de crédito  MiPyme C / Nota de débito  MiPyme C
+  Emití con la API de TusFacturas.app los siguientes comprobantes: Factura C /
+  Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C / Nota de
+  crédito  MiPyme C / Nota de débito  MiPyme C
 ---
 
-# Comprobantes de tipo C
+# API - Factura electrónica AFIP: Comprobantes de tipo C
 
 {% hint style="info" %}
 Ten en cuenta que los comprobantes C,  NO llevan IVA.

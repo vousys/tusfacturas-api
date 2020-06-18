@@ -1,4 +1,10 @@
-# Consultar numeración de comprobantes.
+---
+description: >-
+  Consulta desde la API de facturación electrónica de TusFacturas.app, la
+  numeración de tus comprobantes.
+---
+
+# API Factura electrónica AFIP - Consultar numeración de comprobantes.
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/facturacion/numeracion" %}
 {% api-method-summary %}

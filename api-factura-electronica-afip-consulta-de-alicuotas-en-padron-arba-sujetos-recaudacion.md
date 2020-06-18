@@ -1,4 +1,10 @@
-# Consulta de alícuotas en padrón ARBA sujetos Recaudación
+---
+description: >-
+  Consulta desde la API de facturación electrónica de TusFacturas.app, las
+  alícuotas existentes en el padrón ARBA sujetos recaudación
+---
+
+# API Factura electrónica AFIP  - Consulta de alícuotas en padrón ARBA sujetos recaudación
 
 {% hint style="info" %}
 El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso. 

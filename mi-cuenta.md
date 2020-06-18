@@ -1,8 +1,10 @@
 ---
-description: Consulta de información relacionada con tu cuenta
+description: >-
+  Consulta desde la API de TusFacturas.app, la información relacionada con tu
+  cuenta
 ---
 
-# Mi Cuenta
+# API TusFacturas.app - Mi Cuenta
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/micuenta/consumo" %}
 {% api-method-summary %}

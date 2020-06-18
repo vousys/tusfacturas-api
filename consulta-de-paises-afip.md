@@ -1,4 +1,10 @@
-# Consulta de Paises - AFIP
+---
+description: >-
+  Consulta desde la API de facturación electrónica de TusFacturas.app, la lista
+  de paises definidos por AFIP
+---
+
+# API Factura electrónica AFIP  - Consulta de Paises - AFIP
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api" path="v2/tablas\_referencia/paises" %}
 {% api-method-summary %}

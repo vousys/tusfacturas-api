@@ -1,11 +1,14 @@
 ---
 description: >-
-  Se recomienda leer los requerimientos y conceptos básicos en el Micrositio de
-  AFIP (http://www.afip.gob.ar/facturadecreditoelectronica/default.asp)  y
-  ademas, consultar con su contador/a.
+  Emití con la API de TusFacturas.app los comprobantes de tipo Factura de
+  crédito electrónica Mi Pyme.
 ---
 
-# Factura de Crédito Electrónica MiPyme \(FCE\)
+# API Factura electrónica AFIP: Factura de Crédito Electrónica MiPyme \(FCE\)
+
+{% hint style="info" %}
+Se recomienda leer los requerimientos y conceptos básicos en el Micrositio de AFIP \([http://www.afip.gob.ar/facturadecreditoelectronica/default.asp](http://www.afip.gob.ar/facturadecreditoelectronica/default.asp)\) y ademas, consultar con su contador/a.
+{% endhint %}
 
 La particularidad de éstos tipos de comprobante es que requiere de manera obligatoria que se envie información asociada,  dentro del bloque de " [rg\_especiales](./#estructura-de-rg-especiales) ", ademas de que solo aplica para ciertos receptores a partir de cierto monto.
 
@@ -63,7 +66,9 @@ Por el momento AFIP cuenta con éstos datos a enviar:
       <td style="text-align:left"></td>
     </tr>
   </tbody>
-</table>{% hint style="info" %}
+</table>
+
+{% hint style="info" %}
 Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento especial gestionado desde la web de AFIP para su autorización/aceptación/anulación. Consultá con tu contador/a el procedimiento indicado en la ley
 {% endhint %}
 

@@ -1,10 +1,11 @@
 ---
 description: >-
-  Factura A / Nota de débito A / Nota de crédito A / Factura de crédito MiPyme A
-  / Nota de crédito  MiPyme A / Nota de débito  MiPyme A
+  Emití con la API de TusFacturas.app los siguientes comprobantes:  Factura A /
+  Nota de débito A / Nota de crédito A / Factura de crédito MiPyme A / Nota de
+  crédito  MiPyme A / Nota de débito  MiPyme A
 ---
 
-# Comprobantes de tipo A
+# API - Factura electrónica AFIP: Comprobantes de tipo A
 
 ```text
 

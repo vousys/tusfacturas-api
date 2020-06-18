@@ -1,11 +1,11 @@
 ---
 description: >-
-  Mediante éste método podrás obtener toda la información básica relacionada con
-  un CUIT. Los datos obtenidos son los que observas en la constancia de
-  inscripción.
+  Consulta desde la API de facturación electrónica de TusFacturas.app,  toda la
+  información básica relacionada con un CUIT. Los datos obtenidos son los que
+  observas en la constancia de inscripción.
 ---
 
-# Clientes - Consultar CUIT en constancia de inscripción
+# API Factura electrónica AFIP - Clientes: Consultar CUIT en constancia de inscripción
 
 {% hint style="info" %}
 El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.

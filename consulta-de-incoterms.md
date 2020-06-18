@@ -1,4 +1,10 @@
-# Consulta de Incoterms
+---
+description: >-
+  Consulta desde la API de facturación electrónica de TusFacturas.app, la lista
+  de incoterms  .
+---
+
+# API Factura electrónica AFIP  - Consulta de Incoterms
 
 {% api-method method="post" host=" https://www.tusfacturas.app/app/api/" path="v2/tablas\_referencia/incoterms" %}
 {% api-method-summary %}

@@ -1,10 +1,11 @@
 ---
 description: >-
-  Mediante éste proceso podrás consultar si tu cliente está obligado a recibir
-  comprobantes de tipo Factura de Crédito electrónica MiPyme.
+  Utilizá la API de facturación electrónica de TusFacturas.app, para consultar
+  si tu cliente está obligado a recibir comprobantes de tipo Factura de Crédito
+  electrónica MiPyme.
 ---
 
-# Consulta de obligado a recibir Factura de Crédito electrónica MiPyme
+# API Factura ele - Comprobantes: Consulta de obligado a recibir Factura de Crédito electrónica MiPyme
 
 {% hint style="info" %}
 El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.

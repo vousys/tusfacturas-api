@@ -1,4 +1,10 @@
-# Consulta de unidades de medida para productos - AFIP
+---
+description: >-
+  Consulta desde la API de facturación electrónica de TusFacturas.app, las
+  unidades de medida definidas por AFIP
+---
+
+# API Factura electrónica AFIP  - Consulta de unidades de medida para productos - AFIP
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/tablas\_referencia/unidades\_medida" %}
 {% api-method-summary %}

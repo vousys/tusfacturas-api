@@ -1,4 +1,10 @@
-# Consulta de comprobantes y regeneración de PDF
+---
+description: >-
+  Utilizá la API de facturación electrónica de TusFacturas.app, para consultar y
+  generar nuevamente el PDF de tus comprobantes.
+---
+
+# API Factura electrónica AFIP  - Comprobantes: Consulta y re-armado de PDF
 
 Tipo de datos: **JSON**  
 Charset: **UTF-8**

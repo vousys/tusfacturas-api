@@ -1,4 +1,10 @@
-# Facturación individual: Nuevo comprobante de Venta
+---
+description: >-
+  Utilizá la API de facturación electrónica de TusFacturas.app, para emitir
+  comprobantes de venta desde tu sistema actual. Configuralo en 5 minutos.
+---
+
+# API Factura electrónica AFIP - Comprobantes: Facturación individual de nueva venta
 
 {% hint style="info" %}
 Poder utilizar la API debes [estar registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
@@ -567,7 +573,9 @@ Los campos que debes enviar son los siguientes:
       <td style="text-align:left"></td>
     </tr>
   </tbody>
-</table>{% hint style="info" %}
+</table>
+
+{% hint style="info" %}
 En caso que quieras reflejar en los comprobantes generados, un signo de porcentaje \(%\), deberás enviarlo en la descripción del producto de ésta manera:  **\#&\#** , asi como si quisieras que parte de esa descripción del producto se imprima en otra linea, deberás enviar:  **\#@\#** 
 {% endhint %}
 

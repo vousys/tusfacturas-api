@@ -1,10 +1,11 @@
 ---
 description: >-
-  FacturaB / Nota de débito B / Nota de crédito B / Factura de crédito MiPyme B
-  / Nota de crédito  MiPyme B / Nota de débito  MiPyme B
+  Emití con la API de TusFacturas.app los siguientes comprobantes: FacturaB /
+  Nota de débito B / Nota de crédito B / Factura de crédito MiPyme B / Nota de
+  crédito  MiPyme B / Nota de débito  MiPyme B
 ---
 
-# Comprobantes de tipo B
+# API - Factura electrónica AFIP: Comprobantes de tipo B
 
 {% hint style="info" %}
 Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.

@@ -1,4 +1,10 @@
-# Clientes - Cuenta Corriente
+---
+description: >-
+  Consulta desde la API de  TusFacturas.app, la cuenta corriente de tus
+  clientes.
+---
+
+# API TusFacturas.app  - Clientes: Cuenta Corriente
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api" path="v2/clientes/cuenta-corriente" %}
 {% api-method-summary %}

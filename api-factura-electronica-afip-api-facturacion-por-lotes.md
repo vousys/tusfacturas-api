@@ -1,10 +1,11 @@
 ---
 description: >-
-  Mediante éste método podrás enviar a procesar lotes de hasta 100 comprobantes
-  por llamada, acelerando tus tiempos de procesamiento.
+  Utilizá la API de facturación electrónica de TusFacturas.app, para enviar a
+  procesar lotes de hasta 100 comprobantes por llamada, acelerando tus tiempos
+  de procesamiento.
 ---
 
-# Facturación por Lotes
+# API Factura electrónica AFIP  - Facturación por Lotes
 
 {% hint style="info" %}
 Poder utilizar la API debes [estar registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html).

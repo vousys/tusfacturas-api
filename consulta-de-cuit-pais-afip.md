@@ -1,4 +1,10 @@
-# Consulta de CUIT Pais - AFIP
+---
+description: >-
+  Consulta desde la API de facturación electrónica de TusFacturas.app, la lista
+  de CUIT pais definidos por AFIP
+---
+
+# API Factura electrónica AFIP  - Consulta de CUIT Pais - AFIP
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api" path="v2/tablas\_referencia/cuit\_pais" %}
 {% api-method-summary %}

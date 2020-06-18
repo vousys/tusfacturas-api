@@ -1,4 +1,10 @@
-# Eliminación de comprobantes de Compra
+---
+description: >-
+  Utilizá la API de facturación electrónica de TusFacturas.app, para eliminar
+  tus comprobantes de compra.
+---
+
+# API Factura electrónica AFIP  - Compras: Eliminación de comprobantes
 
 {% api-method method="post" host="https://www.tusfacturas.app/app" path="/api/v2/facturacion/comprobante\_eliminar" %}
 {% api-method-summary %}
