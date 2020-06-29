@@ -10,7 +10,7 @@
   * [API - Factura electrónica AFIP: Comprobantes de tipo C](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)
   * [API - Factura electrónica AFIP: Comprobantes de tipo E \(Factura de exportación\)](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)
   * [API Factura electrónica AFIP: Factura de Crédito Electrónica MiPyme \(FCE\)](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)
-* [API Factura ele - Comprobantes: Consulta de obligado a recibir Factura de Crédito electrónica MiPyme](api-factura-electronica-afip-consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md)
+* [API Factura electrónica: Consulta de obligado a recibir Factura de Crédito electrónica MiPyme](api-factura-electronica-afip-consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md)
 * [API Factura electrónica AFIP  - Facturación por Lotes](api-factura-electronica-afip-api-facturacion-por-lotes.md)
 * [API Factura electrónica AFIP  - Comprobantes: Consulta y re-armado de PDF](api-factura-electronica-afip-consulta-de-comprobantes.md)
 * [API Factura electrónica AFIP  - Compras: Eliminación de comprobantes](api-factura-electronica-afip-eliminacion-de-comprobantes-de-compra.md)
