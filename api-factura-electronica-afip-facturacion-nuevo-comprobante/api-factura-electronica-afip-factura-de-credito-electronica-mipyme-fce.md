@@ -1,7 +1,8 @@
 ---
 description: >-
-  Emití con la API de TusFacturas.app los comprobantes de tipo Factura de
-  crédito electrónica Mi Pyme.
+  Emití con la API de TusFacturas.app, facturas, notas de débito y notas de
+  crédito A,B y C de los comprobantes tipo Factura de crédito electrónica Mi
+  Pyme.
 ---
 
 # API Factura electrónica AFIP: Factura de Crédito Electrónica MiPyme \(FCE\)
