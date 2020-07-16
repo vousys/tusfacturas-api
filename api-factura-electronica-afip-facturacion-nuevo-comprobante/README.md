@@ -394,6 +394,7 @@ Para poder generar el comprobante, debes enviar un detalle de todos los datos de
 "email":                "test@test.com",
 "domicilio":            "Av Sta Fe 123",
 "provincia":            "2",
+"codigo":               "CLO2",
 "envia_por_mail":       "S",
 "condicion_pago":       "214",
 "condicion_pago_otra":  "Cobrado en ventanilla",
@@ -424,6 +425,7 @@ Para casos de clientes del exterior, que posean **pasaporte**, ten en cuenta que
 | `condicion_pago` | Campo numérico según [tabla de referencia](../tablas-de-referencia.md#condiciones-de-venta) **Ejemplo: 211**  |
 | condicion\_pago\_otra | Campo alfanumerico. Longitud máxima 100 caracteres. **Ejemplo: Cobrado en ventanilla.** |
 | `condicion_iva` | Campo numérico que indica la condicion de iva, según [tabla de referencia Condiciones ante el IVA\(\*\*\)](../tablas-de-referencia.md#condiciones-ante-el-iva). Valores Permitidos: **CF, RI, M, E**  **Ejemplo: RI** |
+| codigo | Campo alfanumerico opcional. Longitud máxima 50 caracteres. **Ejemplo: Cobrado en ventanilla.** |
 
 ### Estructura de "Detalle de conceptos"
 

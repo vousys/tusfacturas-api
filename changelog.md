@@ -1,5 +1,9 @@
 # Changelog
 
+## 16 de Julio de 2020
+
+Nueva venta &gt; bloque clientes. Se agrega el campo opcional: codigo para que puedan enviar el codigo interno del cliente.
+
 ## 07 de Mayo de 2020
 
 Cotizaciones: Se agrega la posibilidad de enviar la fecha para obtener la cotización AFIP de alguna moneda, con hasta 2 meses para atras.
