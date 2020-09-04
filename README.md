@@ -3,7 +3,7 @@
 Ademas, podrás generar y consultar de manera segura, comprobantes de venta y de compra , como así también utilizar todas las funcionalidades que te brinda nuestra plataforma web. 
 
 {% hint style="info" %}
-Importante: Para utilizar la API debes estar [registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
+Importante: Para utilizar la API debes estar [registradx](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
 
 Mientras estés en etapa de testing, configurá tu CUIT con un punto de venta irreal \(Ej: 679\), y usa ese CUIT de prueba para facturar; la respuesta que recibirás es la misma que si facturas contra AFIP, solo que los campos CAE y Vencimiento del CAE te retornaran vacios. Una vez que hayas probado todos los métodos, crea el nuevo CUIT+punto de venta y lo enlazas con AFIP. 
 
