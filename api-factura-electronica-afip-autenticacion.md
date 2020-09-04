@@ -1,13 +1,19 @@
 # Autenticación
 
 {% hint style="info" %}
-Poder utilizar la API debes estar [registrado](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
+Poder utilizar la API debes estar [registradx](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
 
 Mientras estés en etapa de testing, configurá tu CUIT con un punto de venta irreal \(Ej: 679\), y usa ese CUIT de prueba para facturar, la respuesta que recibirás es la misma que si facturas  contra AFIP, solo que los campos CAE y Vencimiento del CAE te retornaran vacios.  Una vez que hayas probado todos los métodos, crea el nuevo CUIT+punto de venta y lo enlazas con AFIP.
 
-Ten en cuenta que al registrarte, te asignamos un plan gratuito que te permite emitir 5 comprobantes por mes y una vez vencido tu período de prueba, debes contratar algún [plan API](https://www.tusfacturas.com.ar/tarifas-factura-electronica.html) de los que tenemos disponibles [aquí](https://www.tusfacturas.com.ar/tarifas-factura-electronica.html) .
+Ten en cuenta que al registrarte, te asignamos un plan gratuito que te permite emitir 5 comprobantes por mes y una vez vencido tu período de prueba, debes contratar algún [plan API](https://www.tusfacturas.com.ar/tarifas-factura-electronica.html) de los que tenemos disponibles [aquí](https://www.tusfacturas.com.ar/tarifas-factura-electronica.html) .En caso que requieras 10 días más para el desarrollo, contáctanos a tusfacturas@vousys.com 
 
-En caso que requieras 10 días más para el desarrollo, contáctanos a tusfacturas@vousys.com
+Resúmen de pasos para comenzar a trabajar:
+
+1\)  Crear tu cuenta [aquí](https://www.tusfacturas.app)
+
+2\) Configurar tu CUIT + PDV
+
+3\) Ir al menú  Mi espacio de trabajo &gt; Configurar éste espacio de trabajo y habilitar tu IP  
 {% endhint %}
 
 Una vez registrado, desde el menú "Mi Cuenta" -&gt; "Mis Cuits" podrás obtener los datos requeridos para poder consultar cada uno de los métodos que tenemos disponibles.
