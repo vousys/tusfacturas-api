@@ -506,6 +506,10 @@ Si el producto ya existia en la base de datos de nuestra plataforma, para la lis
 }
 ```
 
+{% hint style="info" %}
+Recuerda que las facturas C, no llevan IVA y debes enviar cada concepto con su precio final; sin embargo las facturas A y B deben enviarse siempre SIN IVA. Las facturas B llevan IVA siempre, solo que tu cliente no lo puede discriminar.
+{% endhint %}
+
 Los campos que debes enviar son los siguientes:
 
 <table>
