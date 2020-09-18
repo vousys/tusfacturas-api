@@ -333,6 +333,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
                 "percepciones_iibb":        "0",
                 "percepciones_iibb_base":   "0",
                 "percepciones_iibb_alicuota": "0",
+                "percepciones_iibb_juridiccion": "10",
                 "percepciones_iva":         "0",
                 "percepciones_iva_base":    "0",
                 "percepciones_iva_alicuota": "0",
@@ -381,6 +382,7 @@ Recordá que AFIP recibe únicamente totales, no el detalle de los items que fac
 | percepciones\_iibb | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la percepción de ingresos brutos realizada Ejemplo: 142.67 |
 | percepciones\_iibb\_base | OPCIONAL | La base imponible  sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67 |
 | percepciones\_iibb\_alicuota | OPCIONAL | La alícuota  sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67 |
+| percepciones\_iibb\_juridiccion | OPCIONAL | La juridicción a la que pertenece la percepción aplicada. El valor a enviar corresponde al ID de la [provincia, según nuestra tabla de referencias.](../tablas-de-referencia.md#provincias) |
 | percepciones\_iva | OPCIONAL | Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la percepción de IVA realizada Ejemplo: 42.67 |
 | percepciones\_iva\_base | OPCIONAL | La base imponible sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67 |
 | percepciones\_iva\_alicuota | OPCIONAL | La alícuota  sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67 |
