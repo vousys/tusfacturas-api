@@ -107,7 +107,7 @@ Importante:
 {% endapi-method %}
 
 {% hint style="info" %}
-Ten en cuenta a la hora de calcular el total, que las bonificaciones están gravadas con IVA 
+Es importante que controles los errores, dado que los servicios de AFIP se caen seguido.
 {% endhint %}
 
 ### Ejemplo de JSON para generar un comprobante.
