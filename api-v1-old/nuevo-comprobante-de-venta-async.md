@@ -8,7 +8,7 @@ description: >-
 # Facturación por lotes \(Async + programado + webhook\)
 
 {% hint style="info" %}
-Atencion! éste método está deshabilitado por el momento.
+Atencion! éste método está deshabilitado 
 {% endhint %}
 
 {% api-method method="post" host="https://www.tusfacturas.com.ar/api" path="/v2/facturacion/lotes" %}
