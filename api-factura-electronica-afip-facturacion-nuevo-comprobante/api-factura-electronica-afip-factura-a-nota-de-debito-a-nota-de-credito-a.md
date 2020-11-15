@@ -7,6 +7,8 @@ description: >-
 
 # API - Factura electrónica AFIP: Comprobantes de tipo A
 
+
+
 ```text
 
 { "usertoken" :  "hagagay2y884e1405e26c03c85", 
