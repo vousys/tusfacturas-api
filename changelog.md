@@ -1,5 +1,9 @@
 # Changelog
 
+## 16 de noviembre de 2020
+
+Nueva venta. Implementamos el QR que lanzó AFIP \( [https://www.afip.gob.ar/fe/qr/especificaciones.asp](https://www.afip.gob.ar/fe/qr/especificaciones.asp) \) en reemplazo del código de barras. Si bien, por el momento la url te lleva a la misma página de la documentación del QR, estimamos que en breve estarán implementando una especie de constatación de comprobantes. El texto que debe incluir ese QR, te será devuelvo dentro de la variable "afip\_qr", para que puedas generar vos el QR de tu lado en caso que lo desees.
+
 ## 16 de Julio de 2020
 
 Nueva venta &gt; bloque clientes. Se agrega el campo opcional: codigo para que puedan enviar el codigo interno del cliente.
