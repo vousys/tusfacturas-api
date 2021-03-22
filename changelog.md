@@ -2,13 +2,23 @@
 
 ## 22 de marzo de 2021
 
-Nueva venta. Facturas de crédito electronica MiPyme 
+**Nueva venta. Facturas de crédito electronica MiPyme** 
 
-A partir del 01/04/2021 se pondrá en funcionamiento un campo obligatorio en éstos tipos de comprobante donde se debe indicar si el comprobante se transfiere al sistema de circulación abierta o al agente de depósito colectivo. Deberán enviar un nuevo dato en el bloque de "opcionales"
+A partir del 01/04/2021 se pondrá en funcionamiento un campo obligatorio en éstos tipos de comprobante donde se debe indicar si el comprobante se transfiere al sistema de circulación abierta o al agente de depósito colectivo. Deberán enviar un nuevo dato en el bloque de "opcionales":
 
 SCA = "TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA" 
 
 ADC = "AGENTE DE DEPOSITO COLECTIVO"
+
+[Ver documentación](https://app.gitbook.com/@tusfacturas/s/api-factura-electronica-afip/~/drafts/-MWPMCQ7vpqggUSevMSa/api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce)
+
+
+
+**Notas de débito y crédito por período - Mod. RG 4.540/2019**
+
+A partir del 01/04/2021 entrará también en vigencia una nueva manera de emitir notas de crédito y débito, donde en lugar de indicar uno o mas comprobantes asociados, se podrá indicar un periodo desde/hasta, el cual contempla los comprobantes emitidos dentro del período en cuestión.  [Ver documentación](api-factura-electronica-afip-facturacion-nuevo-comprobante/#estructura-de-comprobantes-asociados-detallados)
+
+\*\*\*\*
 
 ## 16 de noviembre de 2020
 
@@ -16,7 +26,7 @@ Nueva venta. Implementamos el QR que lanzó AFIP \( [https://www.afip.gob.ar/fe/
 
 ## 16 de Julio de 2020
 
-Nueva venta &gt; bloque clientes. Se agrega el campo opcional: codigo para que puedan enviar el codigo interno del cliente.
+Nueva venta &gt; bloque clientes. Se agrega el campo opcional: código para que puedan enviar el código interno del cliente.
 
 ## 07 de Mayo de 2020
 
