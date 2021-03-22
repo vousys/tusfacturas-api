@@ -150,7 +150,11 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
                             {
                               "id"      :    23,
                              "valor"  :    "Prueba"
-                             } 
+                             },
+                             {
+                              "id"      :    27,
+                             "valor"  :    "SCA"
+                             }
                 ]
             }, 
 	}

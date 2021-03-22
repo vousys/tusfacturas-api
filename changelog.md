@@ -1,5 +1,15 @@
 # Changelog
 
+## 22 de marzo de 2021
+
+Nueva venta. Facturas de crédito electronica MiPyme 
+
+A partir del 01/04/2021 se pondrá en funcionamiento un campo obligatorio en éstos tipos de comprobante donde se debe indicar si el comprobante se transfiere al sistema de circulación abierta o al agente de depósito colectivo. Deberán enviar un nuevo dato en el bloque de "opcionales"
+
+SCA = "TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA" 
+
+ADC = "AGENTE DE DEPOSITO COLECTIVO"
+
 ## 16 de noviembre de 2020
 
 Nueva venta. Implementamos el QR que lanzó AFIP \( [https://www.afip.gob.ar/fe/qr/especificaciones.asp](https://www.afip.gob.ar/fe/qr/especificaciones.asp) \) en reemplazo del código de barras. Si bien, por el momento la url te lleva a la misma página de la documentación del QR, estimamos que en breve estarán implementando una especie de constatación de comprobantes. El texto que debe incluir ese QR, te será devuelvo dentro de la variable "afip\_qr", para que puedas generar vos el QR de tu lado en caso que lo desees.
