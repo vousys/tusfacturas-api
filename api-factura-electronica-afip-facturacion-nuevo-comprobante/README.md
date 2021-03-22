@@ -6,6 +6,10 @@ description: >-
 
 # API Factura electrónica AFIP - Comprobantes: Facturación individual de nueva venta
 
+{% hint style="info" %}
+Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y nuestra plataforma no mantiene una cola de procesamiento.
+{% endhint %}
+
 {% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/facturacion/nuevo" %}
 {% api-method-summary %}
 Nuevo comprobante de Venta
@@ -15,8 +19,8 @@ Nuevo comprobante de Venta
 Charset: UTF-8   
 Tipo de dato esperado: JSON  
   
-Éste metodo te permite generar comprobantes de venta, ya sea Facturas electrónicas AFIP, como Notas de débito o de crédito.  
-Nuestra plataforma te permite emitir comprobantes de tipo A, B, C, E, M ya sean de factura electrónica AFIP como de Factura de crédito electrónica AFIP.  
+Éste método te permite generar comprobantes de venta, ya sea Facturas electrónicas AFIP, como Notas de débito o de crédito.  
+Nuestra plataforma te permite emitir comprobantes de tipo A, B, C, E, M ya sean de factura electrónica AFIP como de Factura de crédito electrónica MiPyme AFIP.  
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -90,7 +94,7 @@ Importante:
 {% endapi-method %}
 
 {% hint style="info" %}
-Es importante que controles los errores, dado que los servicios de AFIP se caen seguido.
+Debes tener en cuenta, que según el monto a emitir y/o el receptor de los comprobantes que emitas, AFIP puede exigirte que en lugar de emitir los comprobantes tradicionales de tipo A, B, o C, emitas comprobantes de tipo Factura de crédito electrónica MiPyme. Te sugerimos consultar siempre con tu cliente y con su estudio impositivo al respecto.
 {% endhint %}
 
 ### Ejemplo de JSON para generar un comprobante.
