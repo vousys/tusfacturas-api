@@ -31,7 +31,8 @@ Por el momento AFIP cuenta con éstos datos a enviar:
         <p>CBU emisor</p>
       </td>
       <td style="text-align:left">2101</td>
-      <td style="text-align:left">REQUERIDO</td>
+      <td style="text-align:left">REQUERIDO <em>(EXCEPTO NC Y ND)</em>
+      </td>
       <td style="text-align:left">CBU nume&#x301;rico de 22 caracteres</td>
     </tr>
     <tr>
@@ -54,11 +55,20 @@ Por el momento AFIP cuenta con éstos datos a enviar:
         )</td>
     </tr>
     <tr>
-      <td style="text-align:left">Anulacion</td>
+      <td style="text-align:left">Anulaci&#xF3;n</td>
       <td style="text-align:left">22</td>
-      <td style="text-align:left">REQUERIDO</td>
+      <td style="text-align:left">REQUERIDO <em>(SOLO NC Y ND)</em>
+      </td>
       <td style="text-align:left">Solo debe ser enviado para las Notas de cr&#xE9;dito/debito y el valor
         esperado es : S o N. Indica si el comprobante fue rechazado por el receptor.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Referencia de transferencia</td>
+      <td style="text-align:left">27</td>
+      <td style="text-align:left">REQUERIDO</td>
+      <td style="text-align:left">Opciones a enviar: &quot;SCA&quot; o &quot;ADC&quot; . &quot;SCA se usa
+        para indicar: &quot;TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA&quot;
+        y &quot;ADC&quot; para enviar &quot;AGENTE DE DEPOSITO COLECTIVO&quot;</td>
     </tr>
     <tr>
       <td style="text-align:left"></td>
@@ -68,6 +78,8 @@ Por el momento AFIP cuenta con éstos datos a enviar:
     </tr>
   </tbody>
 </table>
+
+
 
 {% hint style="info" %}
 Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento especial gestionado desde la web de AFIP para su autorización/aceptación/anulación. Consultá con tu contador/a el procedimiento indicado en la ley
