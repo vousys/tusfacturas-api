@@ -633,7 +633,9 @@ A partir del 01/04/2021, AFIP habilitará la posibilidad de emitir notas de déb
 } 
 ```
 
-
+{% hint style="info" %}
+Solo se podrá informar un periodo desde/hasta para aquellos comprobantes que **NO** sean de tipo: MiPyme ni comprobantes de exportación.
+{% endhint %}
 
 ### Estructura de "RG Especiales"
 
