@@ -590,11 +590,13 @@ En caso que quieras reflejar en los comprobantes generados, un signo de porcenta
 
 ### Estructura de "Comprobantes Asociados" 
 
-Solo para las notas de débito y las notas de crédito, AFIP requiere que se envie un bloque de información adicional con "comprobantes asociados".  A partir del 01/04/2021 AFIP habilitará la opción para enviar un periodo desde/hasta en lugar del detalle de cada comprobante asociado, solo para comprobantes tradicionales. Se excluyen de ésta modalidad los comprobantes de tipo export
+Solo para las notas de débito y las notas de crédito, AFIP requiere que se envíe un bloque de información adicional con "comprobantes asociados".  
 
-#### Comprobantes asociados detallados:
+Solo para comprobantes de tipo tradicional, y a partir del 01/04/2021, AFIP habilitará la opción para enviar un periodo desde/hasta en lugar del detalle de cada comprobante asociado.Debes tener en cuenta que se excluyen de ésta modalidad de información,  los comprobantes de tipo exportación y MiPyme.
 
-En caso de enviar el detalle de los comprobantes que se asocian, éstos deberán ser enviados dentro de un array en el bloque "comprobantes\_asociados", acorde a la estructura que se detalla a continuación para cada comprobante asociado.
+#### Envío de comprobantes asociados detallados:
+
+En caso de enviar el detalle de los comprobantes que se asocian, éstos deberán ser enviados dentro de un array, en el bloque  llamado "comprobantes\_asociados", acorde a la estructura que se detalla a continuación para cada comprobante asociado.
 
 {% hint style="info" %}
 Solo deberán enviar los comprobantes asociados, cuando se emitan Notas de Débito o Notas de Crédito de tipo A, B, C, M y Comprobantes de tipo FCE. **Éste campo es obligatorio en los campos mencionados.**
@@ -633,7 +635,9 @@ Información de los campos a enviar:
 
 #### Comprobantes asociados por período
 
-A partir del 01/04/2021, AFIP habilitará la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados. Para utilizar ésta herramienta,  **no** se debe enviar el bloque de "_comprobantes asociados"_ y en su lugar debe enviarse un bloque llamado _"comprobantes\_asociados\_periodo",_ el cual debe tener la siguiente estructura:
+Solo para comprobantes de tipo tradicional, y a partir del 01/04/2021, AFIP habilitará la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados. 
+
+Para utilizar ésta herramienta,  **no se debe enviar el bloque** de "_comprobantes asociados"_  y en su lugar debe enviarse un bloque llamado _"comprobantes\_asociados\_periodo",_ el cual debe tener la siguiente estructura:
 
 ```text
  comprobante: {
