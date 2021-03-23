@@ -71,13 +71,13 @@ Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, 
 ```
 
 {% hint style="info" %}
-Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
+Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
 
 * Nro de documento = "0" 
 * Tipo de documento = "OTRO"
 * En nombre, lo que tu contador/a te recomiende. 
 
-Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos \(En Marzo 2020 el tope es de $15,380.- , pero éste valor puede sufrir modificaciones\).
+Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos \(En Marzo 2021 el tope es de $20,932.- , pero éste valor puede sufrir modificaciones\).
 
  Consultanos el valor actualizado a  tusfacturas@vousys.com 
 {% endhint %}
