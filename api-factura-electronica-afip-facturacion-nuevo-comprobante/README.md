@@ -686,6 +686,8 @@ Solo para las notas de débito y las notas de crédito, AFIP requiere que se env
 
 Solo para comprobantes de tipo tradicional, y a partir del 01/04/2021, AFIP habilitará la opción para enviar un periodo desde/hasta en lugar del detalle de cada comprobante asociado.Debes tener en cuenta que se excluyen de ésta modalidad de información,  los comprobantes de tipo exportación y MiPyme.
 
+Podes ver un [ejemplo de comprobante aquí](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a)
+
 #### Envío de comprobantes asociados detallados:
 
 En caso de enviar el detalle de los comprobantes que se asocian, éstos deberán ser enviados dentro de un array, en el bloque  llamado "comprobantes\_asociados", acorde a la estructura que se detalla a continuación para cada comprobante asociado.
