@@ -588,33 +588,38 @@ Los campos que debes enviar son los siguientes:
 En caso que quieras reflejar en los comprobantes generados, un signo de porcentaje \(%\), deberás enviarlo en la descripción del producto de ésta manera:  **\#&\#** , asi como si quisieras que parte de esa descripción del producto se imprima en otra linea, deberás enviar:  **\#@\#** 
 {% endhint %}
 
-### Estructura de "Comprobantes Asociados" detallados.
+### Estructura de "Comprobantes Asociados" 
 
-Solo para las notas de débito y las notas de crédito, AFIP requiere que se envie un bloque de información adicional con "comprobantes asociados".  A partir del 01/04/2021 AFIP habilitará la opción para enviar un periodo desde/hasta en lugar del detalle de cada comprobante asociado. En caso que se desee utilizar ésta herramienta, el bloque de "comprobantes asociados" no deberá contener información ya que es una opción o la otra.
+Solo para las notas de débito y las notas de crédito, AFIP requiere que se envie un bloque de información adicional con "comprobantes asociados".  A partir del 01/04/2021 AFIP habilitará la opción para enviar un periodo desde/hasta en lugar del detalle de cada comprobante asociado, solo para comprobantes tradicionales. Se excluyen de ésta modalidad los comprobantes de tipo export
 
-Cada uno de los comprobantes asociados que disponga, deberán ser enviados dentro de un array, acorde a la estructura que se detalla a continuación para cada comprobante asociado.
+#### Comprobantes asociados detallados:
+
+En caso de enviar el detalle de los comprobantes que se asocian, éstos deberán ser enviados dentro de un array en el bloque "comprobantes\_asociados", acorde a la estructura que se detalla a continuación para cada comprobante asociado.
 
 {% hint style="info" %}
 Solo deberán enviar los comprobantes asociados, cuando se emitan Notas de Débito o Notas de Crédito de tipo A, B, C, M y Comprobantes de tipo FCE. **Éste campo es obligatorio en los campos mencionados.**
 {% endhint %}
 
 ```text
-comprobantes_asociados:[
-  {
-    "tipo_comprobante"   :    "FACTURA A",
-     "punto_venta"  :    "145",
-     "numero" : 12313,
-     "comprobante_fecha": "07/07/2019",
-     "cuit": 111111111     
-   } ,
-  {
-    "tipo_comprobante"   :    "FACTURA A",
-     "punto_venta"  :    "146",
-     "numero" : 12314,
-     "comprobante_fecha": "08/07/2019",
-     "cuit": 111111111     
-   } ,   
-] 
+comprobante: {
+   .... 
+   ,comprobantes_asociados:[
+           {
+             "tipo_comprobante"   :    "FACTURA A",
+              "punto_venta"  :    "145",
+              "numero" : 12313,
+              "comprobante_fecha": "07/07/2019",
+              "cuit": 111111111     
+            } ,
+           {
+             "tipo_comprobante"   :    "FACTURA A",
+              "punto_venta"  :    "146",
+              "numero" : 12314,
+              "comprobante_fecha": "08/07/2019",
+              "cuit": 111111111     
+            } ,   
+      ] 
+  }
 ```
 
 Información de los campos a enviar:
@@ -626,15 +631,18 @@ Información de los campos a enviar:
 | `cuit` | Campo numérico, sin puntos ni guiones. Es el CUIT del emisor del comprobante asociado. **Ejemplo: 1111111111** |
 | `comprobante_fecha` | La fecha del comprobante en formato dd/mm/aaaa |
 
-### Estructura "Comprobantes asociados" por período
+#### Comprobantes asociados por período
 
-A partir del 01/04/2021, AFIP habilitará la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados. Para utilizar ésta herramiento,  se requiere NO enviar información dentro del bloque de "comprobantes asociados" detallado y enviar el siguiente bloque de información:
+A partir del 01/04/2021, AFIP habilitará la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados. Para utilizar ésta herramienta,  **no** se debe enviar el bloque de "_comprobantes asociados"_ y en su lugar debe enviarse un bloque llamado _"comprobantes\_asociados\_periodo",_ el cual debe tener la siguiente estructura:
 
 ```text
- comprobantes_asociados_periodo: {
-    "fecha_desde"   :    "20/11/2020",
-    "fecha_hasta"  :    "25/11/2020"  
-} 
+ comprobante: {
+   .... 
+   ,comprobantes_asociados_periodo: {
+        "fecha_desde"   :    "20/11/2020",
+        "fecha_hasta"  :    "25/11/2020"  
+    }
+ } 
 ```
 
 {% hint style="info" %}
