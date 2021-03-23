@@ -406,29 +406,121 @@ Para poder generar el comprobante, debes enviar un detalle de todos los datos de
 ```
 
 {% hint style="info" %}
-Si el cliente ya existia en la base de datos de www.tusfacturas.app será actualizado con los nuevos datos, salvo Tipo y Nro de documento y condicion ante el IVA.
+Cuestiones a tener en cuenta:
 
-Ten en cuenta que al enviar la condición de pago "**otra**" \(codigo 214\) , se debe enviar obligatoriamente el campo **condicion\_pago\_otra** "con la descripción de la misma.
+* Si el cliente ya existia en tu base de clientes, será actualizado con los nuevos datos, salvo los campos de Tipo y Nro de documento y condicion ante el IVA.
+* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
 
-Para casos de clientes del exterior, que posean **pasaporte**, ten en cuenta que AFIP solo permite el envío de números en el campo de documento\_nro.
+                    Nro de documento = "0" 
+
+                    Tipo de documento = "OTRO" 
+
+                     En nombre, lo que tu contador/a te recomiende.  
+
+Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos          montos. En Marzo 2021 el tope es de $20,932.- , pero éste valor puede sufrir modificaciones. Consultanos el valor actualizado a  hola@tusfacturas.app 
 {% endhint %}
 
 
 
 #### Información de los campos a enviar:
 
-| **`documento_tipo`** | Valores Permitidos: **CUIT , DNI, PASAPORTE, OTRO** **Ejemplo: DNI** |
-| :--- | :--- |
-| `documento_nro` | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
-| `razon_social` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: Pirulo S.A** |
-| `email` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: tusfacturas@vousys.com** |
-| `domicilio` | Campo alfanumérico. Longitud máxima 255 caracteres. **Ejemplo: Av. Santa Fe 123** |
-| `provincia` | Campo numérico según [tabla de referencia\(\*\)](../tablas-de-referencia.md#provincias). **Ejemplo: 2** |
-| `envia_por_mail` | Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: **S , N** **Ejemplo: S** |
-| `condicion_pago` | Campo numérico según [tabla de referencia](../tablas-de-referencia.md#condiciones-de-venta) **Ejemplo: 211**  |
-| condicion\_pago\_otra | Campo alfanumerico. Longitud máxima 100 caracteres. **Ejemplo: Cobrado en ventanilla.** |
-| `condicion_iva` | Campo numérico que indica la condicion de iva, según [tabla de referencia Condiciones ante el IVA\(\*\*\)](../tablas-de-referencia.md#condiciones-ante-el-iva). Valores Permitidos: **CF, RI, M, E**  **Ejemplo: RI** |
-| codigo | Campo alfanumerico opcional. Longitud máxima 50 caracteres. **Ejemplo: Cobrado en ventanilla.** |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><b><code>documento_tipo</code></b>
+      </th>
+      <th style="text-align:left">Valores Permitidos: <b>CUIT , DNI, PASAPORTE, OTRO</b>
+        <br /><b>Ejemplo: DNI</b>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>documento_nro</code>
+      </td>
+      <td style="text-align:left">
+        <p>Campo num&#xE9;rico, sin puntos ni guiones.</p>
+        <p>Para casos de clientes del exterior, que posean <b>pasaporte</b>, ten en
+          cuenta que AFIP solo permite el env&#xED;o de n&#xFA;meros.
+          <br /><b>Ejemplo: 30111222334</b>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>razon_social</code>
+      </td>
+      <td style="text-align:left">Campo alfanum&#xE9;rico. Longitud m&#xE1;xima 255 caracteres.
+        <br /><b>Ejemplo: Pirulo S.A</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>email</code>
+      </td>
+      <td style="text-align:left">Campo alfanum&#xE9;rico. Longitud m&#xE1;xima 255 caracteres.
+        <br /><b>Ejemplo: tusfacturas@vousys.com</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>domicilio</code>
+      </td>
+      <td style="text-align:left">Campo alfanum&#xE9;rico. Longitud m&#xE1;xima 255 caracteres.
+        <br /><b>Ejemplo: Av. Santa Fe 123</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>provincia</code>
+      </td>
+      <td style="text-align:left">Campo num&#xE9;rico seg&#xFA;n <a href="../tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.
+        <br
+        /><b>Ejemplo: 2</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>envia_por_mail</code>
+      </td>
+      <td style="text-align:left">Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: <b>S , N</b>
+        <br
+        /><b>Ejemplo: S</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>condicion_pago</code>
+      </td>
+      <td style="text-align:left">
+        <p>Campo num&#xE9;rico seg&#xFA;n <a href="../tablas-de-referencia.md#condiciones-de-venta">tabla de referencia</a>.</p>
+        <ul>
+          <li>se debe enviar obligatoriamente el campo <b>condicion_pago_otra</b> &quot;con
+            la descripci&#xF3;n de la misma.</li>
+        </ul>
+        <p>
+          <br /><b>Ejemplo: 211 .</b>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">condicion_pago_otra</td>
+      <td style="text-align:left">Campo alfanumerico. Longitud m&#xE1;xima 100 caracteres. <b>Ejemplo: Cobrado en ventanilla.</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>condicion_iva</code>
+      </td>
+      <td style="text-align:left">Campo num&#xE9;rico que indica la condicion de iva, seg&#xFA;n <a href="../tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>.
+        Valores Permitidos: <b>CF, RI, M, E </b>
+        <br /><b>Ejemplo: RI</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">codigo</td>
+      <td style="text-align:left">Campo alfanumerico opcional. Longitud m&#xE1;xima 50 caracteres. <b>Ejemplo: Cobrado en ventanilla.</b>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### Estructura de "Detalle de conceptos"
 
