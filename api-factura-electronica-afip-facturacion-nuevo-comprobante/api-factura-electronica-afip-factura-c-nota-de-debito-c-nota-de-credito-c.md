@@ -9,6 +9,16 @@ description: >-
 
 {% hint style="info" %}
 Ten en cuenta que los comprobantes C,  NO llevan IVA.
+
+Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
+
+* Nro de documento = "0" 
+* Tipo de documento = "OTRO"
+* En nombre, lo que tu contador/a te recomiende. 
+
+Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos \(En Marzo 2021 el tope es de $20,932.- , pero éste valor puede sufrir modificaciones\).
+
+ Consultanos el valor actualizado a  tusfacturas@vousys.com 
 {% endhint %}
 
 ```text
