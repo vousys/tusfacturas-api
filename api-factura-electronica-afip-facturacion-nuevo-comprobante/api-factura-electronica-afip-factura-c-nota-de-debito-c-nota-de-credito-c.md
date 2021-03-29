@@ -7,6 +7,8 @@ description: >-
 
 # API - Factura electrónica AFIP: Comprobantes de tipo C
 
+A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
+
 {% hint style="info" %}
 Ten en cuenta que los comprobantes C,  NO llevan IVA.
 
