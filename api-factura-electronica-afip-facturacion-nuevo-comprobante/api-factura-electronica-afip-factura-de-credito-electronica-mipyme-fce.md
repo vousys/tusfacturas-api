@@ -85,7 +85,7 @@ Por el momento AFIP cuenta con éstos datos a enviar:
 Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento especial gestionado desde la web de AFIP para su autorización/aceptación/anulación. Consultá con tu contador/a el procedimiento indicado en la ley
 {% endhint %}
 
-## Factura A 
+## Factura de crédito electrónica A MiPyme \(FCE\) 
 
 ```text
 
@@ -162,7 +162,7 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
 
 ```
 
-### Nota de crédito A
+### Nota de crédito electrónica A MiPyme \(FCE\)
 
 Las notas de crédito requieren que se envíe el bloque de "[Comprobantes asociados](./#estructura-de-comprobantes-asociados)" , con la particularidad de que éstos comprobantes asociados deben estar en la misma moneda que el comprobante que se está enviando a generar y la fecha del comprobante asociado tiene que ser igual o menor a la fecha del comprobante que se está autorizando.
 
