@@ -7,9 +7,7 @@ description: >-
 
 # API - Factura electrónica AFIP: Comprobantes de tipo B
 
-A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B, que detalla los comprobantes asociados.
-
-Podes consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
+A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
 
 {% hint style="info" %}
 Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
