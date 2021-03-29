@@ -30,7 +30,7 @@ Nuestra plataforma te permite emitir comprobantes de tipo A, B, C, E, M ya sean 
 Tus credenciales de acceso
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="apisecret" type="string" required=true %}
+{% api-method-parameter name="apitoken" type="string" required=true %}
 Tus credenciales de acceso
 {% endapi-method-parameter %}
 
