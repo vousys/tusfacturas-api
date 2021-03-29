@@ -7,7 +7,9 @@ description: >-
 
 # API - Factura electrónica AFIP: Comprobantes de tipo A
 
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que detalla los comprobantes asociados.
 
+Podés consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
 
 ```text
 
