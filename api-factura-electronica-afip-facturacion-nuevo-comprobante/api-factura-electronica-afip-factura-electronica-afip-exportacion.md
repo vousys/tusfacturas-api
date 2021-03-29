@@ -6,6 +6,10 @@ description: >-
 
 # API - Factura electrónica AFIP: Comprobantes de tipo E \(Factura de exportación\)
 
+A continuación te mostramos la estructura de los datos que se requieren para generar un comprobante de tipo exportación, ya sea NC, ND o FACTURA.
+
+ Al final del documento encontrarás un ejemplo completo de comprobante de exportación.
+
 ## Estructura de datos campo "fex"
 
 Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del campo "**comprobante**", un campo adicional llamado: "**fex**", con la siguiente estructura :
@@ -109,7 +113,7 @@ Información de los campos a enviar:
 ## Ejemplo de JSON completo a enviar 
 
 {% hint style="info" %}
-Para comprobantes de tipo E, los siguientes campos deberá enviarlos en cero:  bonificacion, exentos, percepciones \(IIBB e IVA\), no gravados, impuestos internos.
+Para comprobantes de tipo E, los siguientes campos deberá enviarlos en cero:  bonificación, exentos, percepciones \(IIBB e IVA\), no gravados, impuestos internos.
 {% endhint %}
 
 ```text
