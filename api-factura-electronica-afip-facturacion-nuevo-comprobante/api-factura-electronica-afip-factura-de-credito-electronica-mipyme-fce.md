@@ -65,10 +65,11 @@ Por el momento AFIP cuenta con éstos datos a enviar:
     <tr>
       <td style="text-align:left">Referencia de transferencia</td>
       <td style="text-align:left">27</td>
-      <td style="text-align:left">REQUERIDO</td>
-      <td style="text-align:left">Opciones a enviar: &quot;SCA&quot; o &quot;ADC&quot; . &quot;SCA se usa
-        para indicar: &quot;TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA&quot;
-        y &quot;ADC&quot; para enviar &quot;AGENTE DE DEPOSITO COLECTIVO&quot;</td>
+      <td style="text-align:left">REQUERIDO (solo para FACTURAS)</td>
+      <td style="text-align:left">A partir del 1/4/2021 se deber&#xE1; enviar &#xE9;ste campo con las siguiente
+        siglas posibles: &quot;SCA&quot; o &quot;ADC&quot; . &quot;SCA se usa para
+        indicar: &quot;TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA&quot; y
+        &quot;ADC&quot; para enviar &quot;AGENTE DE DEPOSITO COLECTIVO&quot;</td>
     </tr>
     <tr>
       <td style="text-align:left"></td>
