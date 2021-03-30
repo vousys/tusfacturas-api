@@ -139,7 +139,7 @@
 | Factura de Crédito Electrónica MiPyMEs \(FCE\) | 2102 | Alias del Emisor |
 | Factura de Crédito Electrónica MiPyMEs \(FCE\) | 22 | Anulación |
 | Factura de Crédito Electrónica MiPyMEs \(FCE\) | 23 | Referencia Comercial |
-|  |  |  |
+| Factura de Crédito Electrónica MiPyMEs \(FCE\) | 27 | Referencia de transferencia |
 
 ### Monedas
 
