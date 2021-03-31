@@ -1,5 +1,13 @@
 # Changelog
 
+## 31 de marzo de 2021
+
+#### Envío de pagos asociados al comprobante
+
+Opcionalmente se puede informar el pago asociado al comprobante, de modo que la cuenta corriente de tu cliente, quede completa.
+
+Consultar la documentación [desde aquí ](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante#estructura-de-pagos-opcional)
+
 ## 22 de marzo de 2021
 
 **Nueva venta. Facturas de crédito electronica MiPyme** 
