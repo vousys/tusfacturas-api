@@ -10,7 +10,7 @@ SCA = "TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA"
 
 ADC = "AGENTE DE DEPOSITO COLECTIVO"
 
-[Ver documentación](https://app.gitbook.com/@tusfacturas/s/api-factura-electronica-afip/~/drafts/-MWPMCQ7vpqggUSevMSa/api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce)
+[Ver documentación](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce)
 
 
 
