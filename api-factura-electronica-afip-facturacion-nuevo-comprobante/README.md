@@ -803,6 +803,8 @@ Si uno de los items enviados posee el valor vacio, éste item no será procesado
 
 Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "pagos" con la estructura como se detalla a continuación.
 
+Los pagos que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
+
 {% hint style="info" %}
 Cosas a tener en cuenta: 
 
