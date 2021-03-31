@@ -209,7 +209,13 @@ Debes tener en cuenta, que según el monto a emitir y/o el receptor de los compr
                               "id"      :    1802,
                              "valor"  :    "PRUEBA"
                              }]
-                },                          
+                },  
+			         "pagos" : {
+						          "formas_pago" : [ 
+										                      {"descripcion" : "VISA DEBITO", "importe" : 0.6}
+							                        ], 
+							        "total": 0.6
+				             },                                                              
                 "bonificacion":             "120",
                 "leyenda_gral":             "Segun Orden de compra III1333",
                 "comentario":               "Factura correspondiente al servicio XX",
@@ -682,7 +688,7 @@ En caso que quieras reflejar en los comprobantes generados, un signo de porcenta
 
 ### Estructura de "Comprobantes Asociados" 
 
-Solo para las notas de débito y las notas de crédito, AFIP requiere que se envíe un bloque de información adicional con "comprobantes asociados".  A partir del 01/04/2021 existen 2 maneras de informar los comprobantes asociados:
+**Solo para las notas de débito y las notas de crédito**, AFIP requiere que se envíe un bloque de información adicional con "comprobantes asociados".  A partir del 01/04/2021 existen 2 maneras de informar los comprobantes asociados:
 
 a\) Detallando comprobantes asociados
 
@@ -755,7 +761,7 @@ Para utilizar ésta herramienta,  **no se debe enviar el bloque** de "_comproban
 Solo se podrá informar un periodo desde/hasta para aquellos comprobantes que **NO** sean de tipo: MiPyme ni comprobantes de exportación.
 {% endhint %}
 
-### Estructura de "RG Especiales"
+### Estructura de "RG Especiales" \(solo según corresponda\)
 
 Según la RG a la que tu empresa aplique, se deberá enviar  un array con los datos adicionales, según se especifican en la [tabla de Datos adicionales para RG Especiales](../tablas-de-referencia.md#datos-opcionales-para-rg-especiales).
 
@@ -763,7 +769,9 @@ Ten en cuenta que solo podrás aplicar a un [regimen](../tablas-de-referencia.md
 
 {% code title="JSON" %}
 ```text
-"rg_especiales":   
+comprobante: {
+   .... 
+   "rg_especiales":   
   {   "regimen" : "RG 4004-E",
       "datos"  : 
                [{
@@ -774,7 +782,8 @@ Ten en cuenta que solo podrás aplicar a un [regimen](../tablas-de-referencia.md
                   "id"      :    19,
                  "valor"  :    "PRUEBA (2) "
                  }]
- } 
+   } 
+ }
 ```
 {% endcode %}
 
@@ -789,6 +798,50 @@ Ten en cuenta que TusFacturas NO realiza validaciones sobre éstos campos. Los r
 
 Si uno de los items enviados posee el valor vacio, éste item no será procesado.
 {% endhint %}
+
+### Estructura de "pagos"  \(opcional\)
+
+Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "pagos" con la estructura como se detalla a continuación.
+
+{% hint style="info" %}
+Cosas a tener en cuenta: 
+
+* **NO** podrás enviar los siguientes medios de pago: cheques y detalle de retenciones.
+* Se realizara una validación del total que se indique, contra la sumatoria de los medios de pago detallados
+* El total de los pagos **NO** debe superar el importe total del comprobante, pero si puede ser inferior, para indicar que el comprobante recibió un pago parcial.
+{% endhint %}
+
+ Información de los campos que componen el **bloque "pagos"**
+
+| nombre del campo | Requerido | Detalle |
+| :--- | :--- | :--- |
+| formas\_pago | SI | array con multiples items, según estructura que se detalla a continuación |
+| total | SI | Campo numérico con 2 decimales. separador de decimales: punto **Ejemplo: 645.67** |
+
+Información de los campos que componen el **array de pagos &gt; formas\_pago** 
+
+| nombre del campo | Requerido | Detalle |
+| :--- | :--- | :--- |
+| descripcion | SI | El nombre del medio de pago elegido para cancelar el comprobante. 255 caracteres max. En caso que el medio de pago, no exista en nuestra plataforma, será dado de alta automáticamente. |
+| importe | SI | Campo numérico con 2 decimales. separador de decimales: punto **Ejemplo: 645.67** |
+
+Ejemplo del JSON a enviar.
+
+{% code title="JSON" %}
+```text
+comprobante: {
+   .... 
+  			  "pagos" : {
+						"formas_pago" : [ 
+										{"descripcion" : "VISA DB", "importe" : 0.6},
+										{"descripcion" : "MercadoPago", "importe" : 50}
+						
+							], 
+							"total": 50.6
+				}, 
+ }
+```
+{% endcode %}
 
 ## 
 
