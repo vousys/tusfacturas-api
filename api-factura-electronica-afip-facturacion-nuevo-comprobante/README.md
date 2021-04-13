@@ -739,7 +739,7 @@ Información de los campos a enviar:
 | `punto_venta` | Campo numérico entero. Longitud máxima 5 digitos. **Ejemplo: 3** |
 | `numero` | Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. **Ejemplo: 4567** |
 | `cuit` | Campo numérico, sin puntos ni guiones. Es el CUIT del emisor del comprobante asociado. **Ejemplo: 1111111111** |
-| `comprobante_fecha` | La fecha del comprobante en formato dd/mm/aaaa |
+| `comprobante_fecha` | La fecha del comprobante en formato dd/mm/aaaa. El día y el mes deben tener 2 dígitos. |
 
 #### b\) Comprobantes asociados por período
 
@@ -756,6 +756,8 @@ Para utilizar ésta herramienta,  **no se debe enviar el bloque** de "_comproban
     }
  } 
 ```
+
+Se deberá respetar el formato para las fechas que debe ser dd/mm/aaaa \(el día y el mes deben tener 2 dígitos\).
 
 {% hint style="info" %}
 Solo se podrá informar un periodo desde/hasta para aquellos comprobantes que **NO** sean de tipo: MiPyme ni comprobantes de exportación.
