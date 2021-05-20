@@ -7,7 +7,7 @@ description: >-
 # API Factura electrónica AFIP - Comprobantes: Facturación individual de nueva venta
 
 {% hint style="info" %}
-Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido. 
+Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y ten en cuenta que según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos.
 {% endhint %}
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/facturacion/nuevo" %}
@@ -21,7 +21,7 @@ Tipo de dato esperado: JSON
   
 Éste método te permite generar comprobantes de venta, ya sea Facturas electrónicas AFIP, como Notas de débito o de crédito.  
 Nuestra plataforma te permite emitir comprobantes de tipo A, B, C, E, M ya sean de factura electrónica AFIP como de Factura de crédito electrónica MiPyme AFIP.  
-Ten en cuenta que el promedio para emitir cada comprobante, puede ascender hasta 1 minuto, según como se comporten los servicios de AFIP. Sugerimos siempre enviar los requests con hasta 2 minutos de diferencia.  
+Ten en cuenta que el tiempo promedio para emitir cada comprobante, puede ascender hasta 1,30 minutos, según como se comporten los servicios de AFIP. **Sugerimos siempre enviar los requests con hasta 2 minutos de diferencia.**  
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -95,7 +95,7 @@ Importante:
 {% endapi-method %}
 
 {% hint style="info" %}
-Debes tener en cuenta, que según el monto a emitir y/o el receptor de los comprobantes que emitas, AFIP puede exigirte que en lugar de emitir los comprobantes tradicionales de tipo A, B, o C, emitas comprobantes de tipo Factura de crédito electrónica MiPyme. Te sugerimos consultar siempre con tu cliente y con su estudio impositivo al respecto.
+Debes tener en cuenta, que según el monto a emitir y/o el receptor de los comprobantes que emitas, AFIP puede exigirte que en lugar de emitir los comprobantes tradicionales de tipo A, B, o C, emitas comprobantes de tipo Factura de crédito electrónica MiPyme. Puedes usar antes de emitir una venta, el [servicio de consulta de Factura de crédito electrónica](../api-factura-electronica-afip-consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md#consulta-de-obligado-a-recibir-mipyme). Te sugerimos comentarlo con tu cliente y asesorarte con su estudio impositivo al respecto.
 {% endhint %}
 
 ### Ejemplo de JSON para generar un comprobante.
@@ -344,7 +344,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
 {% hint style="info" %}
 Importante: **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es responsabilidad del cliente corroborar y validar éstos datos.** 
 
-Recordá que AFIP recibe únicamente totales, no el detalle de los items que facturas ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" \( Factura electrónica sin detalle de productos \).
+Recordá que **AFIP recibe únicamente totales**, no el detalle de los items que facturas ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" \( Factura electrónica sin detalle de productos \).
 {% endhint %}
 
 #### Información de los campos a enviar:
