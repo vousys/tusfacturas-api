@@ -53,20 +53,7 @@ Estructura de "Cliente", según se informa a continuación
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Si el comprobante se ha podido generar sin problemas  se devolverá la variable "error" = "N".  
-En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados   
-En caso que el comprobante presente errores ya que debe emitir un comprobante de tipo Factura de crédito electronica MiPyme \(FEC\), el mismo aparecerá informado con una variable requiere\_fec = "SI"  
-  
-Importante:  
-  
-- El CAE es el Código de Autorización Electrónico que otorga AFIP como confirmación de la creación del comprobante. Es un dato importante para almacenar como respuesta.  
-  
-- Los CAE tienen fecha de vencimiento y se devuelve en formato dd/mm/aaaa  
-  
-- El número de CAE es un texto y se envia con un espacio al final.  
-  
-- El texto que se retorna en el campo afip\_codigo\_barras y afip\_qr, se envía con un espacio al final.  
-   
+
 {% endapi-method-response-example-description %}
 
 {% code title="JSON" %}
