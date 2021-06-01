@@ -7,7 +7,7 @@ description: >-
 # API Factura electrónica AFIP - Comprobantes: Facturación individual de nueva venta
 
 {% hint style="info" %}
-Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y ten en cuenta que según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos.
+Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y ten en cuenta que según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰.
 {% endhint %}
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/facturacion/nuevo" %}
@@ -18,10 +18,11 @@ Nuevo comprobante de Venta
 {% api-method-description %}
 Charset: UTF-8   
 Tipo de dato esperado: JSON  
+Tipo de envio: POST  
   
 Éste método te permite generar comprobantes de venta, ya sea Facturas electrónicas AFIP, como Notas de débito o de crédito.  
 Nuestra plataforma te permite emitir comprobantes de tipo A, B, C, E, M ya sean de factura electrónica AFIP como de Factura de crédito electrónica MiPyme AFIP.  
-Ten en cuenta que el tiempo promedio para emitir cada comprobante, puede ascender hasta 1,30 minutos, según como se comporten los servicios de AFIP. **Sugerimos siempre enviar los requests con hasta 2 minutos de diferencia.**  
+Ten en cuenta que el tiempo promedio para emitir cada comprobante, puede ascender hasta 1,30 minutos 😰, según como se comporten los servicios de AFIP. **Sugerimos siempre enviar los requests con hasta 2 minutos de diferencia.**  
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -93,6 +94,62 @@ Importante:
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+### Que te retorna la llamada a la API?
+
+#### Éxito
+
+En caso de éxito, obtendrás la siguiente respuesta, con todos los datos que necesitas para almacenar la info en tu sistema. La respuesta incluye el texto que se necesita para armar el  código QR \(en caso que generes el PDF desde tu lado\) y/o el viejo código de barras \(para comprobantes anteriores\).
+
+```text
+{
+    "error":     "N",
+     "errores": [ ""],    
+     "rta":      "El comprobante NOTA DE DEBITO B 0002-00000006 (MI CUIT) se ha guardado correctamente",    
+     "cae":      "65301278726386 ",
+     "requiere_fec":   "NO ",    
+     "vencimiento_cae":"07\/08\/2015",    
+     "vencimiento_pago":"27\/08\/2015",    
+     "comprobante_pdf_url": "https://www.dominio.com/url",
+     "afip_qr" : "https://www.afip.gob.ar/fe/qr/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMC0xMS0xNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjAwMDAzIiwidGlwb0NtcCI6MTEsIm5yb0NtcCI6IjAwMDAwMjQ5IiwiaW1wb3J0ZSI6IjAwMDAwMDAwMDAwMDEwMCIsIm1vbmVkYSI6IlBFUyIsImN0eiI6IjAwMDAwMDAwMDAwMDEwMDAwMDAiLCJ0aXBvRG9jUmVjIjo5OSwibnJvRG9jUmVjIjoiMCIsInRpcG9Db2RBdXQiOiJFIiwiY29kQXV0IjoiNzA0NjY4OTk1OTcwOTEifQ== "
+     "afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
+     "envio_x_mail": "S",
+     "comprobante_nro": "0000123",
+     "comprobante_tipo": "NOTA DE DEBITO B",
+     "envio_x_mail_direcciones":"direccion1@sudominio.com,direccion2@sudominio.com"
+  }  
+```
+
+####  Response con error
+
+En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados 
+
+```text
+{
+  "error": "S",
+  "errores": [
+    "Para la condicion de IVA seleccionada no se permite realizar comprobantes de tipo B."
+  ],
+  "error_cod": [],
+  "error_details": [
+    {
+      "code": "TFC-8004",
+      "text": "Para la condicion de IVA seleccionada no se permite realizar comprobantes de tipo B."
+    }
+  ]
+}
+```
+
+En caso que el comprobante presente errores ya que debe emitir un comprobante de tipo Factura de crédito electronica MiPyme \(FEC\), el mismo aparecerá informado con una variable requiere\_fec = "SI"
+
+Ten en cuenta:
+
+* El CAE es el Código de Autorización Electrónico que otorga AFIP como confirmación de la creación del comprobante. Es un dato importante para almacenar como respuesta.
+* Los CAE tienen fecha de vencimiento y se devuelve en formato dd/mm/aaaa
+* El número de CAE es un texto y se envia con un espacio al final.
+* El texto que se retorna en el campo afip\_codigo\_barras y afip\_qr, se envía con un espacio al final.
+
+
 
 {% hint style="info" %}
 Debes tener en cuenta, que según el monto a emitir y/o el receptor de los comprobantes que emitas, AFIP puede exigirte que en lugar de emitir los comprobantes tradicionales de tipo A, B, o C, emitas comprobantes de tipo Factura de crédito electrónica MiPyme. Puedes usar antes de emitir una venta, el [servicio de consulta de Factura de crédito electrónica](../api-factura-electronica-afip-consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md#consulta-de-obligado-a-recibir-mipyme). Te sugerimos comentarlo con tu cliente y asesorarte con su estudio impositivo al respecto.
@@ -371,7 +428,7 @@ Recordá que **AFIP recibe únicamente totales**, no el detalle de los items que
 | detalle | SI |  Lista de conceptos a facturar. [Objeto JSON](./#estructura-de-detalle-de-conceptos) Según estructura que se detalla a continuación |
 | fex | REQUERIDO PARA COMPROBANTES E | Solo para comprobantes de tipo E. Según estructura detallada en: [Factura electronica de exportacion".](api-factura-electronica-afip-factura-electronica-afip-exportacion.md) |
 | bonificacion | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor aplicado en concepto de bonificación sin IVA Ejemplo: 12.67. Tener en cuenta para el cálculo que la bonificación se aplica sobre el primer subtotal SIN IVA y se lo gravará con el importe de IVA que le corresponda. |
-| leyenda\_gral | OPCIONAL |  Campo alfanumérico. Longitud máxima 255 caracteres. Contenido opcional. Es una leyenda general que saldrá impresa en el bloque central de productos del comprobante Ejemplo: Aplica plan 12 cuotas sin interes. |
+| leyenda\_gral | OPCIONAL |  Campo alfanumérico. Longitud máxima 255 caracteres. Contenido opcional. Es una leyenda general que saldrá impresa en el bloque central de productos del comprobante Ejemplo: Aplica plan 12 cuotas sin interes. Ten en cuenta que a partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._  Éste valor no debe ser enviado en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma. |
 | comentario | OPCIONAL | Campo alfanumerico, opcional. Longitud máxima: 255 caracteres. Éste campo no saldrá impreso en la factura. |
 | percepciones\_iibb | OPCIONAL |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la percepción de ingresos brutos realizada Ejemplo: 142.67 |
 | percepciones\_iibb\_base | OPCIONAL | La base imponible  sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67 |
