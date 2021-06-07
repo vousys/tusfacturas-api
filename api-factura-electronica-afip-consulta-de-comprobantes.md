@@ -184,7 +184,7 @@ Consulta de comprobantes por fecha
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Mediante ésta consulta podrás obtener todos los comprobantes emitidos en una determinada fecha. La consulta está limitada a retornar como máximo 3,000 registros.
+Mediante ésta consulta podrás obtener todos los comprobantes emitidos en una determinada fecha. La consulta está limitada a retornar como máximo 3,000 registros y la información obtenida será la relacionada al punto de venta desde el cual estás realizando la consulta.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -414,7 +414,7 @@ Consulta de comprobantes por rango de números
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Mediante ésta consulta podrás obtener hasta 3,000 comprobantes  por consulta.
+Mediante ésta consulta podrás obtener hasta 3,000 comprobantes  por consulta y la información obtenida será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso.
 {% endapi-method-description %}
 
 {% api-method-spec %}
