@@ -1,5 +1,9 @@
 # Changelog
 
+### 07 de junio de 2021
+
+Se agregan 2 nuevos métodos de consulta de comprobantes:  por [fecha](https://developers.tusfacturas.app/api-factura-electronica-afip-consulta-de-comprobantes#consulta-de-comprobantes-por-fecha) y por [rango numérico](https://developers.tusfacturas.app/api-factura-electronica-afip-consulta-de-comprobantes#consulta-de-comprobantes-por-rango-de-numeros).
+
 ## 01 de junio de 2021
 
 A partir del 01-07-2021, todo comprobante que se emita desde un responsable inscripto a un monotributista, deberá ser de un comprobante de tipo A, en lugar de comprobante B y deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._  Éste dato **NO** **debe ser enviado** en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.
