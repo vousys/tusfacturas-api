@@ -426,7 +426,9 @@ Se deberá enviar el valor "TN"
 
 {% api-method-parameter name="comprobante" type="string" required=true %}
 Se debera enviar un objeto con los siguientes atributos:  
-**tipo**: Campo numérico según tabla de referencia de Tipos de comprobantes\(_\*_\). Ejemplo: FACTURA B operacion: Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\). Valores Permitidos: V, C Ejemplo: V **punto\_venta**: Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3 **numero\_desde**: Campo numérico entero. Longitud máxima 8 digitos. Ejemplo: 4567 **numero\_hasta**: Campo numérico entero. Longitud máxima 8 dígitos. Ejemplo: 4567
+**tipo**: Campo numérico según tabla de referencia de Tipos de comprobantes\(_\*_\). Ejemplo: FACTURA B   
+**operacion**: Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\). Valores Permitidos: V, C Ejemplo: V   
+**punto\_venta**: Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3 **numero\_desde**: Campo numérico entero. Longitud máxima 8 digitos. Ejemplo: 4567 **numero\_hasta**: Campo numérico entero. Longitud máxima 8 dígitos. Ejemplo: 4567
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="usertoken" type="string" required=true %}
@@ -640,13 +642,13 @@ Devuelve un array con cada "comprobante". Misma estructura de datos devuelta en 
 }
 ```
 
-## Regenear PDF
+## Regeneración del archivo PDF
 
-Mediante éste método podrás regenerar los archivos pdf
+Mediante éste método podrás regenerar el archivos pdf.
 
 {% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/facturacion/regenerar\_pdf " %}
 {% api-method-summary %}
-Regenerar PDFs
+Regeneración de PDFs
 {% endapi-method-summary %}
 
 {% api-method-description %}
