@@ -1,5 +1,9 @@
 # Changelog
 
+### 05 de julio de 2021
+
+Se amplía a 130 conceptos por comprobante.
+
 ### 07 de junio de 2021
 
 Se agregan 2 nuevos métodos de consulta de comprobantes:  por [fecha](https://developers.tusfacturas.app/api-factura-electronica-afip-consulta-de-comprobantes#consulta-de-comprobantes-por-fecha) y por [rango numérico](https://developers.tusfacturas.app/api-factura-electronica-afip-consulta-de-comprobantes#consulta-de-comprobantes-por-rango-de-numeros).

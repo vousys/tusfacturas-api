@@ -578,7 +578,7 @@ Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos    
 El detalle de conceptos se compone de una lista de cada uno de los productos que vas a facturar.
 
 {% hint style="info" %}
-Recuerda que debes enviar una **lista \(array\)** de conceptos. **El máximo de conceptos permitidos por comprobante es de 100**. 
+Recuerda que debes enviar una **lista \(array\)** de conceptos. **El máximo de conceptos permitidos por comprobante es de 130**. 
 {% endhint %}
 
 La estructura **de cada concepto** a enviar es la siguiente:
