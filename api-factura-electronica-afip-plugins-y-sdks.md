@@ -1,6 +1,6 @@
 # Plugins y SDKs
 
-Descargalos desde [https://github.com/vousys/tusfacturas](https://github.com/vousys/tusfacturas)
+Descargalos desde nuestro repositorio GIT [https://github.com/vousys/tusfacturas](https://github.com/vousys/tusfacturas)
 
 ![https://github.com/vousys/tusfacturas](.gitbook/assets/github.png)
 

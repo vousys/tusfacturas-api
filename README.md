@@ -1,27 +1,13 @@
 # Documentación de la API para Factura Electrónica AFIP
 
-Ademas, podrás generar y consultar de manera segura, comprobantes de venta y de compra , como así también utilizar todas las funcionalidades que te brinda nuestra plataforma web. 
+Al utilizar la API de facturación electrónica de TusFacturasAPP,  podrás generar de manera segura y rápida, facturas electrónicas AFIP.
 
-{% hint style="info" %}
-Importante: Para utilizar la API debes estar [registradx](https://www.tusfacturas.com.ar/registrarme-factura-electronica.html). 
+Contamos con el respaldo de un estudio impositivo que nos mantiene asesorados ante las nuevas normativas que surgen día a día en nuestro país/
 
-Mientras estés en etapa de testing, configurá tu CUIT, con un punto de venta irreal \(Ej: 679\), y usa ese CUIT de prueba para facturar, dado que no contamos con un entorno de prueba. La respuesta que recibirás es la misma que si facturas contra AFIP, solo que los campos CAE y Vencimiento del CAE te retornaran vacios. Una vez que hayas probado todos los métodos, eliminá todos los comprobantes asociados a ese PDV, elimina el PDV y crea el nuevo CUIT+punto de venta para poder enlazarlo con AFIP. 
-
-Tené en cuenta que al registrarte, cualquier usuario goza de un plan gratuito que le permite emitir 5 comprobantes por mes, pero **no posee acceso API para pruebas**. Para probar la integración con la API, contáctanos a tusfacturas@vousys.com, **desde la casilla con la cual te registraste** \(**debe ser una dirección de e-mail válida, la cual podamos validar y corroborar su existencia** \) y te brindamos un plan API DEV \(no es entorno de prueba\) por 1 mes sin costo \(solo para nuevas cuentas y por única vez\). Una vez vencido tu período de prueba, debes contratar algún [plan API](https://www.tusfacturas.com.ar/tarifas-factura-electronica.html) de los que tenemos disponibles [aquí](https://www.tusfacturas.com.ar/tarifas-factura-electronica.html) .
-
-Resumen de pasos para comenzar a trabajar:
-
-1\)  Crea tu cuenta [aquí](https://www.tusfacturas.app)
-
-2\) Configura tu CUIT + PDV. 
-
-3\) Contactanos en tusfacturas@vousys.com / hola@tusfacturas.app para solicitar el plan API DEV según requerimientos mencionados.
-
-4\) Una vez activado el plan API DEV, accedé al menú  "Mi espacio de trabajo &gt; Configurar éste espacio de trabajo y habilitá tu IP  dentro del bloque "ACCESO API".
-{% endhint %}
+ Ademas de usar la API, podrás utilizar nuestra plataforma web, con todas las funcionalidades que ésta brinda. 
 
   
-En la documentación encontrarás algunos ejemplos para que luego los adaptes al lenguaje de tu sistema actual; Si bien no te podemos brindar soporte para los diferentes lenguajes de programación que existen en el mercado, al ser los input y los output en formato JSON, podes conectarlo el lenguaje que mas te guste, teniendo a mano stackoverflow por si tenes dudas ;\) 
+En la documentación encontrarás algunos ejemplos en JSON, para que luego los adaptes al lenguaje de tu sistema actual; Si bien no te podemos brindar soporte para los diferentes lenguajes de programación que existen en el mercado, al ser los input y los output en formato JSON, podes conectarlo el lenguaje que mas te guste, teniendo a mano stackoverflow, por si tenes dudas ;\) 
 
   
 Versión actual: **API v2**   
@@ -38,12 +24,6 @@ URL : **https://www.tusfacturas.app/app/api/v2/estado\_servicios/alertas**
 
 **Tené en cuenta éstas cosas:**  
 1\) Para procesar correctamente los campos, debes enviarlos siempre encodeados con **UTF-8**.   
-2\) Cuando realices comprobantes AFIP Factura electrónica válida, ten en cuenta que cada request que hagas para generar comprobantes, debe tener una diferencia de tiempo de 2 minutos, ya que sino la misma AFIP te bloquea el CUIT  y no podrás emitir comprobantes por unos minutos.   
-3\) Nuestra API ya ha sido implementada contra sistemas que trabajan en PHP, Visual basic 6.0 y Ruby, como asi tambien entornos AMAZON WS, Google Cloud, servidores dedicados y servidores compartidos. 
-
-
-
-{% page-ref page="api-factura-electronica-afip-plugins-y-sdks.md" %}
-
-
+2\) Cuando realices comprobantes AFIP Factura electrónica válida, ten en cuenta que cada request que hagas para generar comprobantes, debe tener una diferencia de tiempo de 1 a 2 minutos, ya que dependiendo de como funcionen los servicios de AFIP,  pueden existir bloqueos y no podrás emitir comprobantes por unos minutos.   
+3\) Nuestra API ya ha sido implementada contra diferentes sistemas, desarrollados con múltiples lenguajes \(PHP, Visual basic 6.0, Ruby, node\), como asi tambien en entornos AMAZON WS, Google Cloud, servidores dedicados y servidores compartidos. 
 

@@ -1,5 +1,9 @@
 # Estado de los servicios AFIP
 
+{% hint style="info" %}
+Los servicios de AFIP se caen regularmente, es importante que siempre verifiques el estado de los servicios.
+{% endhint %}
+
 {% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/estado\_servicios/alertas" %}
 {% api-method-summary %}
 Consulta de estados de los servicios

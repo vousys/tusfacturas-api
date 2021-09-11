@@ -22,6 +22,7 @@ Tipo de envio: POST
   
 Éste método te permite generar comprobantes de venta, ya sea Facturas electrónicas AFIP, como Notas de débito o de crédito.  
 Nuestra plataforma te permite emitir comprobantes de tipo A, B, C, E, M ya sean de factura electrónica AFIP como de Factura de crédito electrónica MiPyme AFIP.  
+  
 Ten en cuenta que el tiempo promedio para emitir cada comprobante, puede ascender hasta 1,30 minutos 😰, según como se comporten los servicios de AFIP. **Sugerimos siempre enviar los requests con hasta 2 minutos de diferencia.**  
 {% endapi-method-description %}
 
@@ -135,8 +136,6 @@ Ten en cuenta:
 * Los CAE tienen fecha de vencimiento y se devuelve en formato dd/mm/aaaa
 * El número de CAE es un texto y se envia con un espacio al final.
 * El texto que se retorna en el campo afip\_codigo\_barras y afip\_qr, se envía con un espacio al final.
-
-
 
 {% hint style="info" %}
 Debes tener en cuenta, que según el monto a emitir y/o el receptor de los comprobantes que emitas, AFIP puede exigirte que en lugar de emitir los comprobantes tradicionales de tipo A, B, o C, emitas comprobantes de tipo Factura de crédito electrónica MiPyme. Puedes usar antes de emitir una venta, el [servicio de consulta de Factura de crédito electrónica](../api-factura-electronica-afip-consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md#consulta-de-obligado-a-recibir-mipyme). Te sugerimos comentarlo con tu cliente y asesorarte con su estudio impositivo al respecto.

@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Documentación de la API para Factura Electrónica AFIP](README.md)
+* [¿Cómo empiezo?](como-empiezo.md)
 * [Autenticación](api-factura-electronica-afip-autenticacion.md)
 * [Plugins y SDKs](api-factura-electronica-afip-plugins-y-sdks.md)
 * [Estado de los servicios AFIP](api-factura-electronica-afip-estado-de-los-servicios-afip.md)
@@ -31,4 +32,11 @@
 ## API v1 \(OLD\)
 
 * [Facturación por lotes \(Async + programado + webhook\)](api-v1-old/nuevo-comprobante-de-venta-async.md)
+
+---
+
+* [Términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html)
+* [Creá tu cuenta ahora](https://www.tusfacturas.app/registrarme-factura-electronica.html)
+* [Planes API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
+* [Contactános](https://www.tusfacturas.app/#contact)
 
