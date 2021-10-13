@@ -14,7 +14,7 @@ Ten en cuenta que los comprobantes que emitas, impactaran de inmediato en nuestr
 Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y ten en cuenta que según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰.
 {% endhint %}
 
-A continuación podrás observar el JSON
+A continuación te mostramos la estructura que debe tener el JSON que envíes:
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/nuevo" method="post" summary="Nuevo comprobante de Venta" %}
 {% swagger-description %}
