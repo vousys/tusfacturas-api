@@ -2,171 +2,171 @@
 
 ### Tipos de documento
 
-| Tipo de documento | Valor a enviar |
-| :--- | :--- |
-| DNI | DNI |
-| CUIT | CUIT |
-| PASAPORTE | PASAPORTE |
-| OTRO \(no requiere enviar el numero\) | OTRO |
+| Tipo de documento                   | Valor a enviar |
+| ----------------------------------- | -------------- |
+| DNI                                 | DNI            |
+| CUIT                                | CUIT           |
+| PASAPORTE                           | PASAPORTE      |
+| OTRO (no requiere enviar el numero) | OTRO           |
 
 ### Alícuotas de IVA
 
-| Alicuota | Valor a enviar |
-| :--- | :--- |
-| 27% | 27 |
-| 21%  | 21 |
-| 10.5% | 10.5 |
-| 0% | 0 |
-| IVA Exento  | -1 |
-| IVA No gravado | -2 |
+| Alicuota       | Valor a enviar |
+| -------------- | -------------- |
+| 27%            | 27             |
+| 21%            | 21             |
+| 10.5%          | 10.5           |
+| 0%             | 0              |
+| IVA Exento     | -1             |
+| IVA No gravado | -2             |
 
 ### Provincias
 
-| Provincia |     | Valor a enviar |
-| :--- | :--- | :--- |
-| - |     | 26 |
-| BUENOS AIRES |     | 2 |
-| CATAMARCA |     | 3 |
-| CHACO |     | 4 |
-| CHUBUT |     | 5 |
-| CIUDAD AUTONOMA DE BUENOS AIRES |     | 1 |
-| CORDOBA |     | 6 |
-| CORRIENTES |     | 7 |
-| ENTRE RIOS |     | 8 |
-| FORMOSA |     | 9 |
-| JUJUY |     | 10 |
-| LA PAMPA |     | 11 |
-| LA RIOJA |     | 12 |
-| MENDOZA |     | 13 |
-| MISIONES |     | 14 |
-| NEUQUEN |     | 15 |
-| Otro |     | 25 |
-| RIO NEGRO |     | 16 |
-| SALTA |     | 17 |
-| SAN JUAN |     | 18 |
-| SAN LUIS |     | 19 |
-| SANTA CRUZ |     | 20 |
-| SANTA FE |     | 21 |
-| SANTIAGO DEL ESTERO |     | 22 |
-| TIERRA DEL FUEGO |     | 23 |
-| TUCUMAN |     | 24 |
+| Provincia                       |     | Valor a enviar |
+| ------------------------------- | --- | -------------- |
+| -                               |     | 26             |
+| BUENOS AIRES                    |     | 2              |
+| CATAMARCA                       |     | 3              |
+| CHACO                           |     | 4              |
+| CHUBUT                          |     | 5              |
+| CIUDAD AUTONOMA DE BUENOS AIRES |     | 1              |
+| CORDOBA                         |     | 6              |
+| CORRIENTES                      |     | 7              |
+| ENTRE RIOS                      |     | 8              |
+| FORMOSA                         |     | 9              |
+| JUJUY                           |     | 10             |
+| LA PAMPA                        |     | 11             |
+| LA RIOJA                        |     | 12             |
+| MENDOZA                         |     | 13             |
+| MISIONES                        |     | 14             |
+| NEUQUEN                         |     | 15             |
+| Otro                            |     | 25             |
+| RIO NEGRO                       |     | 16             |
+| SALTA                           |     | 17             |
+| SAN JUAN                        |     | 18             |
+| SAN LUIS                        |     | 19             |
+| SANTA CRUZ                      |     | 20             |
+| SANTA FE                        |     | 21             |
+| SANTIAGO DEL ESTERO             |     | 22             |
+| TIERRA DEL FUEGO                |     | 23             |
+| TUCUMAN                         |     | 24             |
 
 ### Condiciones de venta
 
-| Condición de Venta |    Dias para vto comprobante \(fecha fc\) | Valor a enviar |
-| :--- | :--- | :--- |
-| 5  días |     5 | 213 |
-| 10 dias |    10 | 206 |
-| 15 dias |    15 | 207 |
-| 20 dias |    20 | 209 |
-| 30 dias |    30 | 202 |
-| 45 dias |    45 | 208 |
-| 60 dias |    60 | 203 |
-| 90 dias |    90 | 204 |
-| Contado |   0   | 201 |
-| Cuenta corriente |   0 | 205 |
-| Transferencia Bancaria |   0 | 210 |
-| Tarjeta de crédito |   0  | 211 |
-| Tarjeta de Débito |   0 | 212 |
-| Otra |   0 | 214 |
-|  |  |  |
+| Condición de Venta     |    Dias para vto comprobante (fecha fc) | Valor a enviar |
+| ---------------------- | --------------------------------------- | -------------- |
+| 5  días                |     5                                   | 213            |
+| 10 dias                |    10                                   | 206            |
+| 15 dias                |    15                                   | 207            |
+| 20 dias                |    20                                   | 209            |
+| 30 dias                |    30                                   | 202            |
+| 45 dias                |    45                                   | 208            |
+| 60 dias                |    60                                   | 203            |
+| 90 dias                |    90                                   | 204            |
+| Contado                |   0                                     | 201            |
+| Cuenta corriente       |   0                                     | 205            |
+| Transferencia Bancaria |   0                                     | 210            |
+| Tarjeta de crédito     |   0                                     | 211            |
+| Tarjeta de Débito      |   0                                     | 212            |
+| Otra                   |   0                                     | 214            |
+|                        |                                         |                |
 
 ### Condiciones ante el IVA
 
 | Condición ante el IVA |     | Valor a enviar |
-| :--- | :--- | :--- |
-| Consumidor Final |     | CF |
-| Responsable Inscripto |     | RI |
-| Monotributo |     | M |
-| Exento |     | E |
-| Cliente del exterior |  | CDEX |
+| --------------------- | --- | -------------- |
+| Consumidor Final      |     | CF             |
+| Responsable Inscripto |     | RI             |
+| Monotributo           |     | M              |
+| Exento                |     | E              |
+| Cliente del exterior  |     | CDEX           |
 
 ### Tipos de comprobantes
 
-| FACTURA A |
-| :--- |
-| FACTURA B |
-| NOTA DE DEBITO A |
-| NOTA DE DEBITO B |
-| NOTA DE CREDITO A |
-| NOTA DE CREDITO B |
-| FACTURA NO VALIDA EN AFIP |
-| NOTA DE CREDITO NO VALIDA EN AFIP |
-| FACTURA C |
-| NOTA DE DEBITO C |
-| NOTA DE CREDITO C |
-| FACTURA M |
-| NOTA DE DEBITO M |
-| NOTA DE CREDITO M |
-| FACTURA E |
-| NOTA DE DEBITO E |
-| NOTA DE CREDITO E |
-| RECIBO C |
-| FACTURA DE CREDITO ELECTRONICA MiPyME \(FCE\) A  |
-| NOTA DE DEBITO ELECTRONICA MiPyME \(FCE\) A  |
-| NOTA DE CREDITO ELECTRONICA MiPyME \(FCE\) A  |
-| FACTURA DE CREDITO ELECTRONICA MiPyME \(FCE\) B  |
-| NOTA DE DEBITO ELECTRONICA MiPyME \(FCE\) B  |
-| NOTA DE CREDITO ELECTRONICA MiPyME \(FCE\) B  |
-| FACTURA DE CREDITO ELECTRONICA MiPyME \(FCE\) C  |
-| NOTA DE DEBITO ELECTRONICA MiPyME \(FCE\) C  |
-| NOTA DE CREDITO ELECTRONICA MiPyME \(FCE\) C |
+| FACTURA A                                      |
+| ---------------------------------------------- |
+| FACTURA B                                      |
+| NOTA DE DEBITO A                               |
+| NOTA DE DEBITO B                               |
+| NOTA DE CREDITO A                              |
+| NOTA DE CREDITO B                              |
+| FACTURA NO VALIDA EN AFIP                      |
+| NOTA DE CREDITO NO VALIDA EN AFIP              |
+| FACTURA C                                      |
+| NOTA DE DEBITO C                               |
+| NOTA DE CREDITO C                              |
+| FACTURA M                                      |
+| NOTA DE DEBITO M                               |
+| NOTA DE CREDITO M                              |
+| FACTURA E                                      |
+| NOTA DE DEBITO E                               |
+| NOTA DE CREDITO E                              |
+| RECIBO C                                       |
+| FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A  |
+| NOTA DE DEBITO ELECTRONICA MiPyME (FCE) A      |
+| NOTA DE CREDITO ELECTRONICA MiPyME (FCE) A     |
+| FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) B  |
+| NOTA DE DEBITO ELECTRONICA MiPyME (FCE) B      |
+| NOTA DE CREDITO ELECTRONICA MiPyME (FCE) B     |
+| FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) C  |
+| NOTA DE DEBITO ELECTRONICA MiPyME (FCE) C      |
+| NOTA DE CREDITO ELECTRONICA MiPyME (FCE) C     |
 
 ### Datos Opcionales para RG Especiales
 
-| Regimen | id | Descripcion |
-| :--- | :--- | :--- |
-| RG Empresas Promovidas  | 2 | Indentificador de proyecto vinculado a Rógimen de Promoción Industrial |
-| RG Bienes Usados 3411 | 91 | Nombre y Apellido o Denominación del vendedor del bien usado |
-| RG Bienes Usados 3411 | 92 | Nacionalidad del vendedor del bien usado. |
-| RG Bienes Usados 3411 | 93 | Domicilio del vendedor del bien usado |
-| Excepcion computo IVA Credito Fiscal | 5 | Excepcion computo IVA Credito Fiscal |
-| RG 3668 Impuesto al Valor Agregado | 61 | Art.12 IVA Firmante Doc Tipo |
-| RG 3668 Impuesto al Valor Agregado | 62 | Art.12 IVA Firmante Doc Nro |
-| RG 3668 Impuesto al Valor Agregado | 63 | Art.12 IVA Carócter del Firmante |
-| RG 3.368 Establecimientos de educación pública de gestión privada | 10 | Actividad Comprendida |
-| RG 3.368 Establecimientos de educación pública de gestión privada | 1011 | Tipo de Documento |
-| RG 3.368 Establecimientos de educación pública de gestión privada | 1012 | Número de Documento |
-| RG 2.820 Operaciones económicas vinculadas con bienes inmuebles | 11 | Actividad Comprendida |
-| RG 3.687 Locación temporaria de inmuebles con fines turísticos | 12 | Actividad Comprendida |
-| RG 2.863 Representantes de Modelos | 13 | RG 2.863 Representantes de Modelos |
-| RG 2.863 Agencias de publicidad | 14 | RG 2.863 Agencias de publicidad |
-| RG 2.863 Personas físicas que desarrollen actividad de modelaje | 15 | RG 2.863 Personas físicas que desarrollen actividad de modelaje |
-| RG 4004-E  | 17 | Dato 2 \(dos\) = facturación directa / Dato 1 \(uno\) = facturación a travós de intermediario |
-| RG 4004-E  | 1801 | Clave ónica de Identificación Tributaria \(CUIT\) |
-| RG 4004-E  | 1802 | Apellido y nombres, denominación y/o razón social |
-| Factura de Crédito Electrónica MiPyMEs \(FCE\) | 2101 | CBU del Emisor |
-| Factura de Crédito Electrónica MiPyMEs \(FCE\) | 2102 | Alias del Emisor |
-| Factura de Crédito Electrónica MiPyMEs \(FCE\) | 22 | Anulación |
-| Factura de Crédito Electrónica MiPyMEs \(FCE\) | 23 | Referencia Comercial |
-| Factura de Crédito Electrónica MiPyMEs \(FCE\) | 27 | Referencia de transferencia |
+| Regimen                                                           | id   | Descripcion                                                                               |
+| ----------------------------------------------------------------- | ---- | ----------------------------------------------------------------------------------------- |
+| RG Empresas Promovidas                                            | 2    | Indentificador de proyecto vinculado a Rógimen de Promoción Industrial                    |
+| RG Bienes Usados 3411                                             | 91   | Nombre y Apellido o Denominación del vendedor del bien usado                              |
+| RG Bienes Usados 3411                                             | 92   | Nacionalidad del vendedor del bien usado.                                                 |
+| RG Bienes Usados 3411                                             | 93   | Domicilio del vendedor del bien usado                                                     |
+| Excepcion computo IVA Credito Fiscal                              | 5    | Excepcion computo IVA Credito Fiscal                                                      |
+| RG 3668 Impuesto al Valor Agregado                                | 61   | Art.12 IVA Firmante Doc Tipo                                                              |
+| RG 3668 Impuesto al Valor Agregado                                | 62   | Art.12 IVA Firmante Doc Nro                                                               |
+| RG 3668 Impuesto al Valor Agregado                                | 63   | Art.12 IVA Carócter del Firmante                                                          |
+| RG 3.368 Establecimientos de educación pública de gestión privada | 10   | Actividad Comprendida                                                                     |
+| RG 3.368 Establecimientos de educación pública de gestión privada | 1011 | Tipo de Documento                                                                         |
+| RG 3.368 Establecimientos de educación pública de gestión privada | 1012 | Número de Documento                                                                       |
+| RG 2.820 Operaciones económicas vinculadas con bienes inmuebles   | 11   | Actividad Comprendida                                                                     |
+| RG 3.687 Locación temporaria de inmuebles con fines turísticos    | 12   | Actividad Comprendida                                                                     |
+| RG 2.863 Representantes de Modelos                                | 13   | RG 2.863 Representantes de Modelos                                                        |
+| RG 2.863 Agencias de publicidad                                   | 14   | RG 2.863 Agencias de publicidad                                                           |
+| RG 2.863 Personas físicas que desarrollen actividad de modelaje   | 15   | RG 2.863 Personas físicas que desarrollen actividad de modelaje                           |
+| RG 4004-E                                                         | 17   | Dato 2 (dos) = facturación directa / Dato 1 (uno) = facturación a travós de intermediario |
+| RG 4004-E                                                         | 1801 | Clave ónica de Identificación Tributaria (CUIT)                                           |
+| RG 4004-E                                                         | 1802 | Apellido y nombres, denominación y/o razón social                                         |
+| Factura de Crédito Electrónica MiPyMEs (FCE)                      | 2101 | CBU del Emisor                                                                            |
+| Factura de Crédito Electrónica MiPyMEs (FCE)                      | 2102 | Alias del Emisor                                                                          |
+| Factura de Crédito Electrónica MiPyMEs (FCE)                      | 22   | Anulación                                                                                 |
+| Factura de Crédito Electrónica MiPyMEs (FCE)                      | 23   | Referencia Comercial                                                                      |
+| Factura de Crédito Electrónica MiPyMEs (FCE)                      | 27   | Referencia de transferencia                                                               |
 
 ### Monedas
 
-| Moneda |     | Valor a enviar |
-| :--- | :--- | :--- |
-| Pesos Argentinos |     | PES |
-| Dolares estadounidenses |     | DOL |
-| LIRAS ITALIANAS |  | 004 |
-| FRANCOS FRANCESES |  | 003 |
-| PESOS URUGUAYOS |  | 011 |
-| REAL |  | 012 |
-| BOLIVAR \(VENEZOLANO\) |  | 023 |
-| PESO CHILENO |  | 033 |
-| PESO COLOMBIANO |  | 032 |
-| PESO BOLIVIANO |  | 031 |
-| EURO |  | 060 |
-| SUCRE \(ECUATORIANO\) |  | 036 |
-| NUEVO SOL PERUANO |  | 035 |
-| PESOS MEJICANOS |  | 010 |
-|  |  |  |
+| Moneda                  |     | Valor a enviar |
+| ----------------------- | --- | -------------- |
+| Pesos Argentinos        |     | PES            |
+| Dolares estadounidenses |     | DOL            |
+| LIRAS ITALIANAS         |     | 004            |
+| FRANCOS FRANCESES       |     | 003            |
+| PESOS URUGUAYOS         |     | 011            |
+| REAL                    |     | 012            |
+| BOLIVAR (VENEZOLANO)    |     | 023            |
+| PESO CHILENO            |     | 033            |
+| PESO COLOMBIANO         |     | 032            |
+| PESO BOLIVIANO          |     | 031            |
+| EURO                    |     | 060            |
+| SUCRE (ECUATORIANO)     |     | 036            |
+| NUEVO SOL PERUANO       |     | 035            |
+| PESOS MEJICANOS         |     | 010            |
+|                         |     |                |
 
 ### Idiomas
 
-| Idioma |     | Valor a enviar |
-| :--- | :--- | :--- |
-| Español |     | 1 |
-| Ingles |     | 2 |
+| Idioma  |     | Valor a enviar |
+| ------- | --- | -------------- |
+| Español |     | 1              |
+| Ingles  |     | 2              |
 
 ### Productos - Unidades de Medida AFIP
 
@@ -174,53 +174,52 @@
 También puede consultar ésta información con el método [Consultar unidades de medida AFIP](https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#ejemplo-consultar-unidades-medida)
 {% endhint %}
 
-| Unidad de medida |     | Valor a enviar |
-| :--- | :--- | :--- |
-| 1000 kWh |     | 6 |
-| anulación/devolución |     | 95 |
-| centímetros |     | 20 |
-| cm cúbicos |     | 27 |
-| curie |     | 48 |
-| dam cúbicos |     | 30 |
-| docenas |     | 9 |
-| gramo activo |     | 67 |
-| gramo base |     | 68 |
-| gramos |     | 14 |
-| gruesa |     | 54 |
-| hectolitros |     | 18 |
-| hm cúbicos |     | 31 |
-| jgo. pqt. mazo naipes |     | 25 |
-| kg activo |     | 66 |
-| kg base |     | 53 |
-| kg bruto |     | 61 |
-| kilogramos |     | 1 |
-| kilómetros |     | 17 |
-| km cúbicos |     | 32 |
-| litros |     | 5 |
-| metros |     | 2 |
-| metros cuadrados |     | 3 |
-| metros cúbicos |     | 4 |
-| microcurie |     | 50 |
-| microgramos |     | 33 |
-| milicurie |     | 49 |
-| miligramos |     | 41 |
-| mililitros |     | 47 |
-| milimetros |     | 15 |
-| millares |     | 11 |
-| mm cúbicos |     | 16 |
-| muiactant |     | 63 |
-| muiacthor |     | 52 |
-| muiactig |     | 65 |
-| nanogramos |     | 34 |
-| otras unidades |     | 98 |
-| packs |     | 96 |
-| pares |     | 8 |
-| picogramos |     | 35 |
-| quilates |     | 10 |
-| seña/anticipo |     | 97 |
-| toneladas |     | 29 |
-| uiactant |     | 62 |
-| uiacthor |     | 51 |
-| uiactig |     | 64 |
-| unidades |     | 7 |
-
+| Unidad de medida      |     | Valor a enviar |
+| --------------------- | --- | -------------- |
+| 1000 kWh              |     | 6              |
+| anulación/devolución  |     | 95             |
+| centímetros           |     | 20             |
+| cm cúbicos            |     | 27             |
+| curie                 |     | 48             |
+| dam cúbicos           |     | 30             |
+| docenas               |     | 9              |
+| gramo activo          |     | 67             |
+| gramo base            |     | 68             |
+| gramos                |     | 14             |
+| gruesa                |     | 54             |
+| hectolitros           |     | 18             |
+| hm cúbicos            |     | 31             |
+| jgo. pqt. mazo naipes |     | 25             |
+| kg activo             |     | 66             |
+| kg base               |     | 53             |
+| kg bruto              |     | 61             |
+| kilogramos            |     | 1              |
+| kilómetros            |     | 17             |
+| km cúbicos            |     | 32             |
+| litros                |     | 5              |
+| metros                |     | 2              |
+| metros cuadrados      |     | 3              |
+| metros cúbicos        |     | 4              |
+| microcurie            |     | 50             |
+| microgramos           |     | 33             |
+| milicurie             |     | 49             |
+| miligramos            |     | 41             |
+| mililitros            |     | 47             |
+| milimetros            |     | 15             |
+| millares              |     | 11             |
+| mm cúbicos            |     | 16             |
+| muiactant             |     | 63             |
+| muiacthor             |     | 52             |
+| muiactig              |     | 65             |
+| nanogramos            |     | 34             |
+| otras unidades        |     | 98             |
+| packs                 |     | 96             |
+| pares                 |     | 8              |
+| picogramos            |     | 35             |
+| quilates              |     | 10             |
+| seña/anticipo         |     | 97             |
+| toneladas             |     | 29             |
+| uiactant              |     | 62             |
+| uiacthor              |     | 51             |
+| uiactig               |     | 64             |
+| unidades              |     | 7              |

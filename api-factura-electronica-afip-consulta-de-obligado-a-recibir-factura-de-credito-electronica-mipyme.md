@@ -13,46 +13,37 @@ El límite de request que dispones para realizar las consultas, es el mismo limi
 IMPORTANTE: Para poder realizar ésta consulta,  deberás tener agregado en tu cuenta AFIP, el servicio de "**Webservice Registro de Facturas de Crédito Electrónica MiPyMEs "** . Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 6 ](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
 {% endhint %}
 
-{% api-method method="post" host="https://www.tusfacturas.app/app" path="/api/v2/facturacion/requiere\_fec" %}
-{% api-method-summary %}
-Consulta de obligado a recibir MiPyme
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://www.tusfacturas.app/app" path="/api/v2/facturacion/requiere_fec" method="post" summary="Consulta de obligado a recibir MiPyme" %}
+{% swagger-description %}
 Éste método te devolverá si tu cliente se encuentra obligado a recibir facturas de tipo MiPyme y a partir de que monto se encuentra obligado.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="fecha" type="string" required=true %}
+{% swagger-parameter in="body" name="fecha" type="string" %}
 La fechad de emisión del comprobante en cuestión. Formato esperado: dd/mm/aaaa
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="cuit" type="number" required=true %}
+{% swagger-parameter in="body" name="cuit" type="number" %}
 El CUIT de tu cliente. Campo numérico de 11 digitos
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apikey" type="number" required=true %}
+{% swagger-parameter in="body" name="apikey" type="number" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
-Tus credenciales de acceso  
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
+Tus credenciales de acceso
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
+\
 
-{% endapi-method-response-example-description %}
 
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
 {% code title="JSON" %}
 ```
 En caso de no encontrar errores obtendrás una respuesta 
@@ -82,14 +73,12 @@ como la siguiente:
 
 ```
 {% endcode %}
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Ejemplo del JSON a enviar
 
-```text
+```
 {
 	"apitoken": "asdadasd123",
 	"apikey": 0001,
@@ -98,6 +87,4 @@ como la siguiente:
 	"fecha": "08/12/2019"
 }
 ```
-
-
 

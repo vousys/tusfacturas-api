@@ -13,7 +13,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
 Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
 {% endhint %}
 
-```text
+```
 {
 	"apitoken": "kkakak208a17cdfc4e4741437baddaa6",
 	"cliente": {
@@ -79,14 +79,14 @@ Si querés enviar un comprobante a un consumidor final, sin especificar su nombr
 * Tipo de documento = "OTRO"
 * En nombre, lo que tu contador/a te recomiende. 
 
-Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos \(En Marzo 2021 el tope es de $20,932.- , pero éste valor puede sufrir modificaciones\).
+Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos (En Marzo 2021 el tope es de $20,932.- , pero éste valor puede sufrir modificaciones).
 
  Consultanos el valor actualizado a  tusfacturas@vousys.com 
 {% endhint %}
 
 ### Ejemplo de llamada en PHP
 
-```text
+```
 // ENVIO REQUEST
 $url ="https://www.tusfacturas.app/app/api/v2/facturacion/nuevo" ;
 $ch = curl_init( $url );
@@ -107,4 +107,3 @@ echo "<p>errores:". implode("," , $json_rta_curl->errores) ."</p>";
 
 
 ```
-

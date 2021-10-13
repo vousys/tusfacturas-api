@@ -6,55 +6,39 @@ description: >-
 
 # API Factura electrónica AFIP  - Compras: Eliminación de comprobantes
 
-{% api-method method="post" host="https://www.tusfacturas.app/app" path="/api/v2/facturacion/comprobante\_eliminar" %}
-{% api-method-summary %}
-Eliminar comprobante
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://www.tusfacturas.app/app" path="/api/v2/facturacion/comprobante_eliminar" method="post" summary="Eliminar comprobante" %}
+{% swagger-description %}
 Ten en cuenta que solo podrás eliminar comprobantes de compra si no tienen pagos relacionados.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="comprobante" type="object" required=true %}
+{% swagger-parameter in="body" name="comprobante" type="object" %}
 Según estructura que se detalla abajo
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apikey" type="string" required=true %}
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus Credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus Credenciales de acceso
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 ```
 {"error":"N",
 "errores":[],
 "rta":"El comprobante se ha eliminado."}
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Ejemplo de JSON a enviar para eliminar un comprobante:
 
-```text
+```
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
 "apikey"    :  "9991",
@@ -70,9 +54,8 @@ Tus Credenciales de acceso
 
 ### Estructura de "comprobante"
 
-| `tipo` | Campo numérico según tabla de referencia de [Tipos de comprobantes\(\*\*\*\)](https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes). **Ejemplo: FACTURA B** |
-| :--- | :--- |
-| `operacion` | Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de de compra \(C\).  Valores Permitidos: **C** **Ejemplo: C** |
-| `punto_venta` | Campo numérico entero. Longitud máxima 4 digitos. **Ejemplo: 3** |
-| `numero` | Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. **Ejemplo: 4567** |
-
+| `tipo`        | <p>Campo numérico según tabla de referencia de <a href="https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes">Tipos de comprobantes(***)</a>.<br><strong>Ejemplo: FACTURA B</strong></p> |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `operacion`   | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de de compra (C). <br>Valores Permitidos: <strong>C</strong><br><strong>Ejemplo: C</strong></p>                                                 |
+| `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
+| `numero`      | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |

@@ -2,5 +2,4 @@
 
 Descargalos desde nuestro repositorio GIT [https://github.com/vousys/tusfacturas](https://github.com/vousys/tusfacturas)
 
-![https://github.com/vousys/tusfacturas](.gitbook/assets/github.png)
-
+![https://github.com/vousys/tusfacturas](.gitbook/assets/Github.png)

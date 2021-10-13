@@ -13,42 +13,28 @@ El límite de request que dispones para realizar las consultas, es el mismo limi
 IMPORTANTE: Para poder realizar ésta consulta,  deberás tener agregado en tu cuenta AFIP, el servicio de CONSULTA DE CONSTANCIA DE INSCRIPCIÓN. Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 5  ](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
 {% endhint %}
 
-{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/clientes/afip-info" %}
-{% api-method-summary %}
-Obtener datos de un CUIT
-{% endapi-method-summary %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/clientes/afip-info" method="post" summary="Obtener datos de un CUIT" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="cliente" type="string" required=true %}
+{% swagger-parameter in="body" name="cliente" type="string" %}
 Objeto de tipo cliente
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apikey" type="string" required=true %}
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus credenciales de acceso.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus credenciales de acceso.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 {% code title="JSON" %}
 ```
 {
@@ -66,15 +52,13 @@ Tus credenciales de acceso.
 
 ```
 {% endcode %}
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-## Ejemplo del JSON a enviar <a id="estructura-del-json-a-enviar"></a>
+## Ejemplo del JSON a enviar <a href="estructura-del-json-a-enviar" id="estructura-del-json-a-enviar"></a>
 
 {% code title="JSON" %}
-```text
+```
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
 "apikey"    :  "9991",
@@ -88,19 +72,18 @@ Tus credenciales de acceso.
 ```
 {% endcode %}
 
-### Estructura de "Cliente" <a id="estructura-de-cliente"></a>
+### Estructura de "Cliente" <a href="estructura-de-cliente" id="estructura-de-cliente"></a>
 
-| `documento_tipo` | Valores Permitidos: **CUIT**   |
-| :--- | :--- |
-| `documento_nro` | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
+| `documento_tipo` | Valores Permitidos: **CUIT  **                                  |
+| ---------------- | --------------------------------------------------------------- |
+| `documento_nro`  | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
 
 ### Valores posibles de la respuesta obtenida
 
-condicion\_impositiva puede retornar los siguientes valores:
+condicion_impositiva puede retornar los siguientes valores:
 
 * MONOTRIBUTO
 * EXENTO
 * RESPONSABLE INSCRIPTO
 
  
-

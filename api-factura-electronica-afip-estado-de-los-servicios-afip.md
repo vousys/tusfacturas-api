@@ -4,40 +4,27 @@
 Los servicios de AFIP se caen regularmente, es importante que siempre verifiques el estado de los servicios.
 {% endhint %}
 
-{% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/estado\_servicios/alertas" %}
-{% api-method-summary %}
-Consulta de estados de los servicios
-{% endapi-method-summary %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/estado_servicios/alertas" method="post" summary="Consulta de estados de los servicios" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="apikey" type="string" required=true %}
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación.   
-  
-Facturación devolverá "OK" si los servicios de la AFIP funcionan bien o devolverá un mensaje de alerta con el detalle de la incidencia  
-{% endapi-method-response-example-description %}
+{% swagger-response status="200" description="En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación. 
 
+Facturación devolverá "OK" si los servicios de la AFIP funcionan bien o devolverá un mensaje de alerta con el detalle de la incidencia
+" %}
 {% code title="JSON" %}
 ```
 {
@@ -50,15 +37,13 @@ Facturación devolverá "OK" si los servicios de la AFIP funcionan bien o devolv
 
 ```
 {% endcode %}
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Ejemplo del JSON a enviar para consultar el estado de los servicios
 
 {% code title="JSON" %}
-```text
+```
 {
 	"usertoken": "jajajja8c8bf67c884e1405e26c03c85",
 	"apikey": "9991",
@@ -66,4 +51,3 @@ Facturación devolverá "OK" si los servicios de la AFIP funcionan bien o devolv
 }
 ```
 {% endcode %}
-

@@ -7,48 +7,50 @@ description: >-
 
 # API Factura electrónica AFIP  - Facturación por Lotes
 
-{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/facturacion/lotes" %}
-{% api-method-summary %}
-Facturación por Lotes
-{% endapi-method-summary %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/facturacion/lotes" method="post" summary="Facturación por Lotes" %}
+{% swagger-description %}
 
-{% api-method-description %}
-  
-Charset: UTF-8  
-  
+
+\
+
+
+Charset: UTF-8
+
+\
+
+
+
+
+\
+
+
 Formato esperado: JSON
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="requests" type="array" required=true %}
-Según estructura de de cada item \(detallado abajo\).  
+{% swagger-parameter in="body" name="requests" type="array" %}
+Según estructura de de cada item (detallado abajo).
+
+\
+
+
 Máximo de request que se recibirán por cada llamada: 500
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apikey" type="string" required=true %}
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="" %}
 {% code title="JSON" %}
-```text
+```
 {
     "error": "N",
     "errores": [],
@@ -86,24 +88,22 @@ Tus credenciales de acceso
 }
 ```
 {% endcode %}
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ## Estructura de  "requests"
 
 Requests es un array, que contiene cada uno de los comprobantes a emitir.
 
 {% hint style="info" %}
-La **cantidad máxima de requests** \(por cada llamada que realices\) debe ser de 100.
+La **cantidad máxima de requests** (por cada llamada que realices) debe ser de 100.
 
 Todos los requests de llamada, deben ser del **mismo tipo de comprobante**.
 
 Los request deben venir **ordenados por número ascendente y por fecha**, de la misma manera que si los enviarás a procesar uno por uno.
 {% endhint %}
 
-La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar \([comprobantes de tipo A](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)\) . **No podrás enviar comprobantes de tipo E ni de Factura de crédito electrónica \(FEC\) en ésta modalidad.**
+La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar ([comprobantes de tipo A](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)) . **No podrás enviar comprobantes de tipo E ni de Factura de crédito electrónica (FEC) en ésta modalidad.**
 
 #### Validaciones que realizamos antes de enviarlos a procesar:
 
@@ -114,7 +114,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 ## Ejemplo de JSON a enviar
 
 {% code title="JSON" %}
-```text
+```
 {   
 "apitoken": "kkakak208a17cdfc4e4741437baddaa6",
 "apikey": "0000",
@@ -293,7 +293,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 ### Ejemplo de como invocarlo desde PHP
 
 {% code title="PHP" %}
-```text
+```
 // ENVIO REQUEST
 $url ="https://www.tusfacturas.app/api/v2/facturacion/lotes" ;
 
@@ -315,7 +315,7 @@ curl_close($ch);
 Ej: una llamada con 3 requests, donde segundo el comprobante enviado tiene un tipo de comprobante diferente.
 
 {% code title="JSON" %}
-```text
+```
 {
     "error": "S",
     "errores": ["El comprobante enviado en la fila 1 (comenzando en 0) tiene un tipo de comprobante diferente."]
@@ -330,7 +330,7 @@ En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechaz
 {% endhint %}
 
 {% code title="JSON" %}
-```text
+```
  {
     "error": "S",
     "errores": [],
@@ -391,6 +391,5 @@ Si, muchisima.
 No, los comprobantes deben ser enviados bajo el criterio de:
 
 1. Mismo tipo de comprobante
-2. Número de comprobante \(ascendente\)
+2. Número de comprobante (ascendente)
 3. Fecha
-

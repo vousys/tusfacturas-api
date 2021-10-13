@@ -6,45 +6,51 @@ description: >-
 
 # API Factura electrónica AFIP - Consultar numeración de comprobantes.
 
-{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="/v2/facturacion/numeracion" %}
-{% api-method-summary %}
-Consultar numeración
-{% endapi-method-summary %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/facturacion/numeracion" method="post" summary="Consultar numeración" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="body" name="comprobante" %}
+**tipo**
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter required=true name="comprobante" %}
-**tipo**    Campo numérico según tabla de referencia de Tipos de comprobantes\(\*\*\*\). Ejemplo: FACTURA B **operacion**    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\). Valores Permitidos: V, C Ejemplo: V   
-**punto\_venta**    Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3
-{% endapi-method-parameter %}
+    Campo numérico según tabla de referencia de Tipos de comprobantes(***). Ejemplo: FACTURA B 
 
-{% api-method-parameter name="apikey" type="string" required=true %}
+**operacion**
+
+    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V 
+
+\
+
+
+
+
+**punto_venta**
+
+    Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus credenciales de acceso.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
-Tus credenciales de acceso  
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="body" name="usertoken" type="string" %}
+Tus credenciales de acceso
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-En caso de detectar algún error, el campo error, se devuelve con una "S" y dentro de "errores" se devolverá una lista con cada uno de los mensajes.  
-  
-Importante: Los campos número y punto de venta, se retornan como numéricos  
-{% endapi-method-response-example-description %}
+\
 
+
+
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="En caso de detectar algún error, el campo error, se devuelve con una "S" y dentro de "errores" se devolverá una lista con cada uno de los mensajes.
+
+Importante: Los campos número y punto de venta, se retornan como numéricos
+" %}
 {% code title="JSON" %}
 ```
 {
@@ -60,15 +66,13 @@ Importante: Los campos número y punto de venta, se retornan como numéricos
 }
 ```
 {% endcode %}
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Ejemplo del JSON a enviar para consultar la numeración del próximo comprobante.
 
 {% code title="JSON" %}
-```text
+```
 {
 	"usertoken": "jajajja8c8bf67c884e1405e26c03c85",
 	"apikey": "9991",
@@ -84,8 +88,7 @@ Importante: Los campos número y punto de venta, se retornan como numéricos
 
 ### Estructura de datos 
 
-| `tipo` | Campo numérico según tabla de referencia de [Tipos de comprobantes\(\*\*\*\)](https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes). **Ejemplo: FACTURA B** |
-| :--- | :--- |
-| `operacion` | Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\).  Valores Permitidos: **V, C** **Ejemplo: V** |
-| `punto_venta` | Campo numérico entero. Longitud máxima 4 digitos. **Ejemplo: 3** |
-
+| `tipo`        | <p>Campo numérico según tabla de referencia de <a href="https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes">Tipos de comprobantes(***)</a>.<br><strong>Ejemplo: FACTURA B</strong></p> |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `operacion`   | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). <br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p>                                  |
+| `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |

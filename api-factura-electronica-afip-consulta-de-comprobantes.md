@@ -6,57 +6,75 @@ description: >-
 
 # API Factura electrónica AFIP  - Comprobantes: Consulta y re-armado de PDF
 
-Tipo de datos: **JSON**  
+Tipo de datos: **JSON**\
 Charset: **UTF-8**
 
-{% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/facturacion/consulta " %}
-{% api-method-summary %}
-Consulta individual de comprobante
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/consulta " method="post" summary="Consulta individual de comprobante" %}
+{% swagger-description %}
 Mediante éste método podrás consultar la información asociada a un determinado comprobante.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="comprobante" required=true %}
-**tipo:**    Campo numérico según tabla de referencia de Tipos de comprobantes\(\*\*\*\). Ejemplo: FACTURA B   
-**operacion:**    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\). Valores Permitidos: V, C Ejemplo: V   
-**punto\_venta:**    Campo numérico entero. Longitud máxima 4 dígitos. Ejemplo: 3   
-**numero:**    Campo numérico entero. Longitud máxima 8 digitos. Ejemplo: 4567   
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="comprobante" %}
+**tipo:**
 
-{% api-method-parameter name="apikey" type="string" required=true %}
+    Campo numérico según tabla de referencia de Tipos de comprobantes(***). Ejemplo: FACTURA B 
+
+\
+
+
+
+
+**operacion:**
+
+    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V 
+
+\
+
+
+
+
+**punto_venta:**
+
+    Campo numérico entero. Longitud máxima 4 dígitos. Ejemplo: 3 
+
+\
+
+
+
+
+**numero:**
+
+    Campo numérico entero. Longitud máxima 8 digitos. Ejemplo: 4567 
+
+\
+
+
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso.  
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus Credenciales de acceso.  
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus Credenciales de acceso.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-En caso de respuesta exitosa el campo "error" retornará una "S" y en caso de error una "N" y dentro de errores, una lista con cada uno de los errores encontrados.  
-La estructura de los datos devueltos es igual a la envidada para la generación de los comprobantes.  
-  
-A continuación se visualiza un ejemplo del JSON retornado para el comprobante consultado.  
-  
-Importante:   
-  
--  Los campos numéricos son retornados como número, salvo el CAE y el CUIT  
--  Para comprobantes tipo B, el precio ya incluye la alícuota de IVA calculada.  
-  
-{% endapi-method-response-example-description %}
+{% swagger-response status="200" description="En caso de respuesta exitosa el campo "error" retornará una "S" y en caso de error una "N" y dentro de errores, una lista con cada uno de los errores encontrados.
+La estructura de los datos devueltos es igual a la envidada para la generación de los comprobantes.
 
+A continuación se visualiza un ejemplo del JSON retornado para el comprobante consultado.
+
+Importante: 
+
+-  Los campos numéricos son retornados como número, salvo el CAE y el CUIT
+-  Para comprobantes tipo B, el precio ya incluye la alícuota de IVA calculada.
+
+" %}
 {% tabs %}
 {% tab title="JSON" %}
 ```
@@ -148,14 +166,11 @@ Importante:
 
 {% tab title="Plain Text" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="info" %}
 Los datos devueltos por éste método mantienen la misma estructura que los enviados para generar un comprobante.
@@ -163,7 +178,7 @@ Los datos devueltos por éste método mantienen la misma estructura que los envi
 
 ### Ejemplo de JSON a enviar para consultar un comprobante:
 
-```text
+```
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
 "apikey"    :  "9991",
@@ -178,48 +193,50 @@ Los datos devueltos por éste método mantienen la misma estructura que los envi
 
 ```
 
-{% api-method method="post" host="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta\_avanzada" %}
-{% api-method-summary %}
-Consulta de comprobantes por fecha
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta_avanzada" method="post" summary="Consulta de comprobantes por fecha" %}
+{% swagger-description %}
 Mediante ésta consulta podrás obtener todos los comprobantes emitidos en una determinada fecha. La consulta está limitada a retornar como máximo 3,000 registros y la información obtenida será la relacionada al punto de venta desde el cual estás realizando la consulta.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="busqueda\_tipo" type="string" required=true %}
+{% swagger-parameter in="body" name="busqueda_tipo" type="string" %}
 Se deberá enviar el valor "F"
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="comprobante" type="object" required=true %}
-Un objeto con los siguientes atributos:   
-**fecha**:  en formato dd/mm/aaaa  
-**operacion**: Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\). Valores Permitidos: V, C Ejemplo: V
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="comprobante" type="object" %}
+Un objeto con los siguientes atributos: 
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
+\
+
+
+
+
+**fecha**
+
+:  en formato dd/mm/aaaa
+
+\
+
+
+
+
+**operacion**
+
+: Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apikey" type="string" required=true %}
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Devuelve un array con cada "comprobante". Misma estructura de datos devuelta en el metodo de consulta individual.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Devuelve un array con cada "comprobante". Misma estructura de datos devuelta en el metodo de consulta individual." %}
 ```
 {
 	"error": "N",
@@ -388,14 +405,12 @@ Devuelve un array con cada "comprobante". Misma estructura de datos devuelta en 
 	]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Ejemplo de JSON a enviar para consultar por fecha un comprobante:
 
-```text
+```
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
 "apikey"    :  "9991",
@@ -408,49 +423,71 @@ Devuelve un array con cada "comprobante". Misma estructura de datos devuelta en 
 }
 ```
 
-{% api-method method="post" host="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta\_avanzada" %}
-{% api-method-summary %}
-Consulta de comprobantes por rango de números
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta_avanzada" method="post" summary="Consulta de comprobantes por rango de números" %}
+{% swagger-description %}
 Mediante ésta consulta podrás obtener hasta 3,000 comprobantes  por consulta y la información obtenida será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="busqueda\_tipo" type="string" required=true %}
+{% swagger-parameter in="body" name="busqueda_tipo" type="string" %}
 Se deberá enviar el valor "TN"
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="comprobante" type="string" required=true %}
-Se debera enviar un objeto con los siguientes atributos:  
-**tipo**: Campo numérico según tabla de referencia de Tipos de comprobantes\(_\*_\). Ejemplo: FACTURA B   
-**operacion**: Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\). Valores Permitidos: V, C Ejemplo: V   
-**punto\_venta**: Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3 **numero\_desde**: Campo numérico entero. Longitud máxima 8 digitos. Ejemplo: 4567 **numero\_hasta**: Campo numérico entero. Longitud máxima 8 dígitos. Ejemplo: 4567
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="comprobante" type="string" %}
+Se debera enviar un objeto con los siguientes atributos:
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
+\
+
+
+
+
+**tipo**
+
+: Campo numérico según tabla de referencia de Tipos de comprobantes(
+
+_*_
+
+). Ejemplo: FACTURA B 
+
+\
+
+
+
+
+**operacion**
+
+: Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V 
+
+\
+
+
+
+
+**punto_venta**
+
+: Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3 
+
+**numero_desde**
+
+: Campo numérico entero. Longitud máxima 8 digitos. Ejemplo: 4567 
+
+**numero_hasta**
+
+: Campo numérico entero. Longitud máxima 8 dígitos. Ejemplo: 4567
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apikey" type="string" required=true %}
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Devuelve un array con cada "comprobante". Misma estructura de datos devuelta en el metodo de consulta individual.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Devuelve un array con cada "comprobante". Misma estructura de datos devuelta en el metodo de consulta individual." %}
 ```
 {
 	"error": "N",
@@ -619,14 +656,12 @@ Devuelve un array con cada "comprobante". Misma estructura de datos devuelta en 
 	]
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Ejemplo del json a enviar para consultar comprobantes por rango de números:
 
-```text
+```
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
 "apikey"    :  "9991",
@@ -646,45 +681,57 @@ Devuelve un array con cada "comprobante". Misma estructura de datos devuelta en 
 
 Mediante éste método podrás regenerar el archivos pdf.
 
-{% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/facturacion/regenerar\_pdf " %}
-{% api-method-summary %}
-Regeneración de PDFs
-{% endapi-method-summary %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/regenerar_pdf " method="post" summary="Regeneración de PDFs" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="usertoken" type="string" required=false %}
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=false %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apikey" type="string" required=true %}
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="comprobante" required=true %}
-**tipo**    Campo numérico según tabla de referencia de Tipos de comprobantes\(\*\*\*\). Ejemplo: FACTURA B   
-**operacion**    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\). Valores Permitidos: V, C Ejemplo: V   
-**punto\_venta**    Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3   
-**numero**    Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. Ejemplo: 4567
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="body" name="comprobante" %}
+**tipo**
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Regenera el PDF y te devuelve la URL del archivo
-{% endapi-method-response-example-description %}
+    Campo numérico según tabla de referencia de Tipos de comprobantes(***). Ejemplo: FACTURA B 
 
+\
+
+
+
+
+**operacion**
+
+    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V 
+
+\
+
+
+
+
+**punto_venta**
+
+    Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3 
+
+\
+
+
+
+
+**numero**
+
+    Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. Ejemplo: 4567
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Regenera el PDF y te devuelve la URL del archivo" %}
 ```
 {
 "error" :  "N",
@@ -692,15 +739,13 @@ Regenera el PDF y te devuelve la URL del archivo
 }
 
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Ejemplo del JSON a enviar para regenerar el pdf
 
 {% code title="JSON" %}
-```text
+```
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
 "apikey"    :  "9991",
@@ -719,9 +764,8 @@ Regenera el PDF y te devuelve la URL del archivo
 
 ## Estructura de "Comprobante":
 
-| `tipo` | Campo numérico según tabla de referencia de [Tipos de comprobantes\(\*\*\*\)](https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes). **Ejemplo: FACTURA B** |
-| :--- | :--- |
-| `operacion` | Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta \(V\) o de compra \(C\).  Valores Permitidos: **V, C** **Ejemplo: V** |
-| `punto_venta` | Campo numérico entero. Longitud máxima 4 digitos. **Ejemplo: 3** |
-| `numero` | Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante. **Ejemplo: 4567** |
-
+| `tipo`        | <p>Campo numérico según tabla de referencia de <a href="https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes">Tipos de comprobantes(***)</a>.<br><strong>Ejemplo: FACTURA B</strong></p> |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `operacion`   | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). <br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p>                                  |
+| `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
+| `numero`      | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |

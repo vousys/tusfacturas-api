@@ -12,45 +12,55 @@ El límite de request que dispones para realizar las consultas, es el mismo limi
 Siempre es importante que re-confirmes con tus asesores impositivos si la alícuota obtenida corresponde o no ser aplicada al comprobante que vas a emitir.
 {% endhint %}
 
-{% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/clientes/agip-padron" %}
-{% api-method-summary %}
-Consulta en padrón AGIP
-{% endapi-method-summary %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/clientes/agip-padron" method="post" summary="Consulta en padrón AGIP" %}
+{% swagger-description %}
+El método te devolverá las alícuotas (en porcentaj) que le corresponden según AGIP.
 
-{% api-method-description %}
-El método te devolverá las alícuotas \(en porcentaj\) que le corresponden según AGIP.  
-   
-{% endapi-method-description %}
+\
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="cliente" required=true type="object" %}
-**documento\_tipo** Valores Permitidos: CUIT , DNI Ejemplo: DNI  
-**documento\_nro** Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334  
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
+ 
+
+\
+
+
+
+{% endswagger-description %}
+
+{% swagger-parameter in="body" name="cliente" type="object" %}
+**documento_tipo**
+
+ Valores Permitidos: CUIT , DNI Ejemplo: DNI
+
+\
+
+
+
+
+**documento_nro**
+
+ Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334
+
+\
+
+
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus credenciales de acceso.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus credenciales de acceso.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apikey" type="string" required=true %}
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación.
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación." %}
+```
 
 Ejemplo de cuando existe en padron AGIP
 
@@ -94,10 +104,8 @@ Ejemplo de cuando NO existe en tu base de clientes
 
 
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="info" %}
 CUITS con alícuota cero:
@@ -111,7 +119,7 @@ Ten en cuenta que solo almacenamos la información descargada desde AGIP para el
 
 ## Estructura del JSON a enviar
 
-```text
+```
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
 "apikey"    :  "9991",
@@ -125,7 +133,6 @@ Ten en cuenta que solo almacenamos la información descargada desde AGIP para el
 
 ## Estructura de "Cliente"
 
-| `documento_tipo` | Valores Permitidos: **CUIT**  |
-| :--- | :--- |
-| `documento_nro` | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
-
+| `documento_tipo` | Valores Permitidos: **CUIT **                                   |
+| ---------------- | --------------------------------------------------------------- |
+| `documento_nro`  | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |

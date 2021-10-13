@@ -6,38 +6,25 @@ description: >-
 
 # API Factura electrónica AFIP  - Consulta de unidades de medida para productos - AFIP
 
-{% api-method method="post" host="https://www.tusfacturas.app/app/api/" path="v2/tablas\_referencia/unidades\_medida" %}
-{% api-method-summary %}
-Consulta de Unidades de medida
-{% endapi-method-summary %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/tablas_referencia/unidades_medida" method="post" summary="Consulta de Unidades de medida" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="apikey" type="string" required=true %}
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="usertoken" type="string" required=true %}
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación.  
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación.
+" %}
 ```
 {
     "error":     "N",
@@ -51,18 +38,15 @@ En caso de no existir errores, se devolverá la variable error con un valor "N" 
                 ]
     }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Ejemplo del JSON a enviar
 
-```text
+```
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
 "apikey"    :  "9991",
 "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6"
 }
 ```
-

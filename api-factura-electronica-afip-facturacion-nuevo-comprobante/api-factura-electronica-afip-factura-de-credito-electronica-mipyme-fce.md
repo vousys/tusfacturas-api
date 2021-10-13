@@ -5,80 +5,24 @@ description: >-
   Pyme.
 ---
 
-# API Factura electrónica AFIP: Factura de Crédito Electrónica MiPyme \(FCE\)
+# API Factura electrónica AFIP: Factura de Crédito Electrónica MiPyme (FCE)
 
 {% hint style="info" %}
-Se recomienda leer los requerimientos y conceptos básicos en el Micrositio de AFIP \([http://www.afip.gob.ar/facturadecreditoelectronica/default.asp](http://www.afip.gob.ar/facturadecreditoelectronica/default.asp)\) y ademas, consultar con su contador/a.
+Se recomienda leer los requerimientos y conceptos básicos en el Micrositio de AFIP ([http://www.afip.gob.ar/facturadecreditoelectronica/default.asp](http://www.afip.gob.ar/facturadecreditoelectronica/default.asp)) y ademas, consultar con su contador/a.
 {% endhint %}
 
-La particularidad de éstos tipos de comprobante es que requiere de manera obligatoria que se envie información asociada,  dentro del bloque de " [rg\_especiales](./#estructura-de-rg-especiales) ", ademas de que solo aplica para ciertos receptores a partir de cierto monto.
+La particularidad de éstos tipos de comprobante es que requiere de manera obligatoria que se envie información asociada,  dentro del bloque de " [rg_especiales](./#estructura-de-rg-especiales) ", ademas de que solo aplica para ciertos receptores a partir de cierto monto.
 
 Por el momento AFIP cuenta con éstos datos a enviar:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Descripcion del campo</th>
-      <th style="text-align:left">Id a enviar</th>
-      <th style="text-align:left">&#xBF;Requerido?</th>
-      <th style="text-align:left">Detalle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
-        <p></p>
-        <p>CBU emisor</p>
-      </td>
-      <td style="text-align:left">2101</td>
-      <td style="text-align:left">REQUERIDO <em>(EXCEPTO NC Y ND)</em>
-      </td>
-      <td style="text-align:left">CBU nume&#x301;rico de 22 caracteres</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
-        <p></p>
-        <p>Referencia Comercial</p>
-      </td>
-      <td style="text-align:left">23</td>
-      <td style="text-align:left">OPCIONAL</td>
-      <td style="text-align:left">Texto. puede identificar una o varias Referencias Comerciales segu&#x301;n
-        corresponda - no repetir el valor.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Alias del emisor</td>
-      <td style="text-align:left">2102</td>
-      <td style="text-align:left">OPCIONAL</td>
-      <td style="text-align:left">El valor correcto es un ALIAS alfanumerico Longitud de 6 a 20 caracteres,
-        letras de la &apos;a&apos; a la &apos;Z&apos;, numeros del &apos;0&apos;
-        al &apos;9&apos;, caracteres especiales: punto ( . ) o guion medio ( -
-        )</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Anulaci&#xF3;n</td>
-      <td style="text-align:left">22</td>
-      <td style="text-align:left">REQUERIDO <em>(SOLO NC Y ND)</em>
-      </td>
-      <td style="text-align:left">Solo debe ser enviado para las Notas de cr&#xE9;dito/debito y el valor
-        esperado es : S o N. Indica si el comprobante fue rechazado por el receptor.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Referencia de transferencia</td>
-      <td style="text-align:left">27</td>
-      <td style="text-align:left">REQUERIDO (solo para FACTURAS)</td>
-      <td style="text-align:left">A partir del 1/4/2021 se deber&#xE1; enviar &#xE9;ste campo con las siguiente
-        siglas posibles: &quot;SCA&quot; o &quot;ADC&quot; . &quot;SCA se usa para
-        indicar: &quot;TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA&quot; y
-        &quot;ADC&quot; para enviar &quot;AGENTE DE DEPOSITO COLECTIVO&quot;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left"></td>
-    </tr>
-  </tbody>
-</table>
+| Descripcion del campo              | Id a enviar | ¿Requerido?                    | Detalle                                                                                                                                                                                                                               |
+| ---------------------------------- | ----------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p></p><p>CBU emisor</p>           | 2101        | REQUERIDO _(EXCEPTO NC Y ND)_  | CBU numérico de 22 caracteres                                                                                                                                                                                                        |
+| <p></p><p>Referencia Comercial</p> | 23          | OPCIONAL                       | Texto. puede identificar una o varias Referencias Comerciales según corresponda - no repetir el valor.                                                                                                                               |
+| Alias del emisor                   | 2102        | OPCIONAL                       | El valor correcto es un ALIAS alfanumerico Longitud de 6 a 20 caracteres, letras de la 'a' a la 'Z', numeros del '0' al '9', caracteres especiales: punto ( . ) o guion medio ( - )                                                   |
+| Anulación                          | 22          | REQUERIDO _(SOLO NC Y ND)_     | Solo debe ser enviado para las Notas de crédito/debito y el valor esperado es :  S o N. Indica si el comprobante fue rechazado por el receptor.                                                                                       |
+| Referencia de transferencia        | 27          | REQUERIDO (solo para FACTURAS) | A partir del 1/4/2021 se deberá enviar éste campo con las siguiente siglas posibles:  "SCA" o "ADC" .  "SCA se usa para indicar: "TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA" y "ADC" para enviar "AGENTE DE DEPOSITO COLECTIVO" |
+|                                    |             |                                |                                                                                                                                                                                                                                       |
 
 
 
@@ -86,9 +30,9 @@ Por el momento AFIP cuenta con éstos datos a enviar:
 Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento especial gestionado desde la web de AFIP para su autorización/aceptación/anulación. Consultá con tu contador/a el procedimiento indicado en la ley
 {% endhint %}
 
-## Factura de crédito electrónica A MiPyme \(FCE\) 
+## Factura de crédito electrónica A MiPyme (FCE) 
 
-```text
+```
 
 {
 	"usertoken": "hagagay2y884e1405e26c03c85",
@@ -163,16 +107,16 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
 
 ```
 
-### Nota de crédito electrónica A MiPyme \(FCE\)
+### Nota de crédito electrónica A MiPyme (FCE)
 
 Las notas de crédito requieren que se envíe el bloque de "[Comprobantes asociados](./#estructura-de-comprobantes-asociados)" , con la particularidad de que éstos comprobantes asociados deben estar en la misma moneda que el comprobante que se está enviando a generar y la fecha del comprobante asociado tiene que ser igual o menor a la fecha del comprobante que se está autorizando.
 
-Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_especiales](./#estructura-de-rg-especiales)", el dato id \#22  con el valor S o N. 
+Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg_especiales](./#estructura-de-rg-especiales)", el dato id #22  con el valor S o N. 
 
 Es importante aclarar que **AFIP no requiere el envio del CBU** para las NC y ND
 
 {% code title="JSON" %}
-```text
+```
 {
 	"usertoken": "hagagay2y884e1405e26c03c85",
 	"apikey": "1234",
@@ -255,8 +199,7 @@ Es importante aclarar que **AFIP no requiere el envio del CBU** para las NC y ND
 Ten en cuenta que TusFacturas.app no realiza validaciones con respecto a los datos enviados. Las validaciones se realizan exclusivamente del lado de AFIP, previa generación del comprobante.
 {% endhint %}
 
-### 
+###
 
-[  
+[\
 ](https://app.gitbook.com/@tusfacturas/s/api-factura-electronica-afip/facturacion-nuevo-comprobante/factura-electronica-afip-exportacion)
-

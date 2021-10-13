@@ -6,43 +6,40 @@ description: >-
 
 # API TusFacturas.app  - Clientes: Cuenta Corriente
 
-{% api-method method="post" host="https://www.tusfacturas.app/app/api" path="v2/clientes/cuenta-corriente" %}
-{% api-method-summary %}
-Consulta de cuenta corriente
-{% endapi-method-summary %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="v2/clientes/cuenta-corriente" method="post" summary="Consulta de cuenta corriente" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="body" name="cliente" type="object" %}
+**documento_tipo**
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="cliente" required=true type="object" %}
-**documento\_tipo**    Valores Permitidos: CUIT   
-**documento\_nro**    Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334
-{% endapi-method-parameter %}
+    Valores Permitidos: CUIT 
 
-{% api-method-parameter name="usertoken" type="string" required=false %}
+\
+
+
+
+
+**documento_nro**
+
+    Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apikey" type="string" required=true %}
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="apitoken" type="string" required=true %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus credenciales de acceso
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-En caso de existir algún error, se retornará el campo "error" = "S" y dentro de "errores" una lista con todos los errores encontrados.  
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="En caso de existir algún error, se retornará el campo "error" = "S" y dentro de "errores" una lista con todos los errores encontrados.
+" %}
 ```
 {
 	"error": "N",
@@ -66,14 +63,12 @@ En caso de existir algún error, se retornará el campo "error" = "S" y dentro d
  
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Ejemplo del JSON que debes enviar 
 
-```text
+```
 {
     "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
     "apikey"    :  "9991",    
@@ -87,15 +82,15 @@ En caso de existir algún error, se retornará el campo "error" = "S" y dentro d
 
 ### Estructura de "Cliente"
 
-| `documento_tipo` | Valores Permitidos: **CUIT** **Ejemplo: CUIT** |
-| :--- | :--- |
-| `documento_nro` | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
+| `documento_tipo` | <p>Valores Permitidos: <strong>CUIT</strong><br><strong>Ejemplo: CUIT</strong></p>     |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| `documento_nro`  | <p>Campo numérico, sin puntos ni guiones.<br><strong>Ejemplo: 30111222334</strong></p> |
 
 ### Estructura de los datos devueltos
 
 Se devolverá una lista, conteniendo la siguiente estructura,  con cada uno de los registros de la cuenta corriente de tu cliente.
 
-```text
+```
     {
         "fecha":"11\/05\/2017",
         "concepto":"FACTURA A 0002-00000002 (CUIT DE PRUEBA)",
@@ -105,6 +100,4 @@ Se devolverá una lista, conteniendo la siguiente estructura,  con cada uno de l
         "saldo":224.2
     }
 ```
-
-
 
