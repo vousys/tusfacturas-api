@@ -1,3 +1,9 @@
+---
+description: >-
+  Mediante éste servicio podrás consultar el estado de los servicios de
+  facturación AFIP, como así también el estado del servicio API.
+---
+
 # Estado de los servicios AFIP
 
 {% hint style="info" %}
