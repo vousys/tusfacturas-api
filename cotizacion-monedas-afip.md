@@ -76,3 +76,17 @@ En caso de exito, se retornará la variable error  en "N" y la cotización del m
  }
 ```
 {% endcode %}
+
+### Ejemplo de un JSON de respuesta exitosa
+
+```
+ {
+        "error":     "N",
+        "errores":
+                    [
+                        ""
+                    ],
+        "cotizacion": "15.10"
+    }
+```
+

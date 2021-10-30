@@ -1,16 +1,20 @@
 # Changelog
 
-### 05 de julio de 2021
+## 29 de octubre de 2021
+
+Se agrega el bloque de "actividad" a la información devuelta por el método de consulta de CUIT.
+
+## 05 de julio de 2021
 
 Se amplía a 130 conceptos por comprobante.
 
-### 07 de junio de 2021
+## 07 de junio de 2021
 
 Se agregan 2 nuevos métodos de consulta de comprobantes:  por [fecha](https://developers.tusfacturas.app/api-factura-electronica-afip-consulta-de-comprobantes#consulta-de-comprobantes-por-fecha) y por [rango numérico](https://developers.tusfacturas.app/api-factura-electronica-afip-consulta-de-comprobantes#consulta-de-comprobantes-por-rango-de-numeros).
 
 ## 01 de junio de 2021
 
-A partir del 01-07-2021, todo comprobante que se emita desde un responsable inscripto a un monotributista, deberá ser de un comprobante de tipo A, en lugar de comprobante B y deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618".  _Éste dato **NO** **debe ser enviado** en el campo "leyenda_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.
+A partir del 01-07-2021, todo comprobante que se emita desde un responsable inscripto a un monotributista, deberá ser de un comprobante de tipo A, en lugar de comprobante B y deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618".  _Éste dato **NO** **debe ser enviado** en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.
 
 ## 31 de marzo de 2021
 
@@ -26,7 +30,7 @@ Consultar la documentación [desde aquí ](https://developers.tusfacturas.app/ap
 
 A partir del 01/04/2021 se pondrá en funcionamiento un campo obligatorio en éstos tipos de comprobante donde se debe indicar si el comprobante se transfiere al sistema de circulación abierta o al agente de depósito colectivo. Deberán enviar un nuevo dato en el bloque de "opcionales":
 
-SCA = "TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA" 
+SCA = "TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA"&#x20;
 
 ADC = "AGENTE DE DEPOSITO COLECTIVO"
 
@@ -42,7 +46,7 @@ A partir del 01/04/2021 entrará también en vigencia una nueva manera de emitir
 
 ## 16 de noviembre de 2020
 
-Nueva venta. Implementamos el QR que lanzó AFIP ( [https://www.afip.gob.ar/fe/qr/especificaciones.asp](https://www.afip.gob.ar/fe/qr/especificaciones.asp) ) en reemplazo del código de barras. Si bien, por el momento la url te lleva a la misma página de la documentación del QR, estimamos que en breve estarán implementando una especie de constatación de comprobantes. El texto que debe incluir ese QR, te será devuelvo dentro de la variable "afip_qr", para que puedas generar vos el QR de tu lado en caso que lo desees.
+Nueva venta. Implementamos el QR que lanzó AFIP ( [https://www.afip.gob.ar/fe/qr/especificaciones.asp](https://www.afip.gob.ar/fe/qr/especificaciones.asp) ) en reemplazo del código de barras. Si bien, por el momento la url te lleva a la misma página de la documentación del QR, estimamos que en breve estarán implementando una especie de constatación de comprobantes. El texto que debe incluir ese QR, te será devuelvo dentro de la variable "afip\_qr", para que puedas generar vos el QR de tu lado en caso que lo desees.
 
 ## 16 de Julio de 2020
 
@@ -62,11 +66,11 @@ Se agrega la consulta de cotización multi-moneda .
 
 ## 06 de noviembre de 2019
 
-Se agrega una variable al response de la emisión de comprobantes, llamado "requiere_fec" cuya respuesta puede ser "SI" o "NO", para indicar que el comprobante a emitir debe ser generado como Factura Electrónica de Crédito MiPyme (FEC) y no como un comprobante común de tipo A, B o C.
+Se agrega una variable al response de la emisión de comprobantes, llamado "requiere\_fec" cuya respuesta puede ser "SI" o "NO", para indicar que el comprobante a emitir debe ser generado como Factura Electrónica de Crédito MiPyme (FEC) y no como un comprobante común de tipo A, B o C.
 
 ## 16 de octubre de 2019
 
-Se agrega el campo ["fecha_pago" ](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)para las facturas de exportación.
+Se agrega el campo ["fecha\_pago" ](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)para las facturas de exportación.
 
 ## 14 de octubre de 2019
 
@@ -85,9 +89,9 @@ En conjunto con este cambio, se dejó sin uso el campo de "nogravados" que se en
 Cambios para la emisión de un nuevo comprobante:
 
 * **Cambiamos la url a donde deberás enviar los request. **Ahora deberan ser enviados a https://www.tusfacturas.app
-* **Cambio de códigos: **En el bloque de "clientes", cambian los códigos a enviar en concepto de "condicion_pago". [Consultar la tabla de referencia](tablas-de-referencia.md#condiciones-de-venta) 
-* **Nueva condición de pago: **Se agrega la condición de pago "otras", la cual le permite enviar cualquier texto para que salga impreso en el pdf. Ésta información deberá ser enviada, dentro del campo "condicion_pago_otra" en el bloque de "clientes". [Consultar ejemplo aquí](api-factura-electronica-afip-facturacion-nuevo-comprobante/#estructura-de-cliente). Éste campo es util cuando se lo junta con el campo de vencimiento (donde se indica la fecha de vencimiento de manera manual)
-* **Nuevas monedas de facturación: **Ahora podes emitir comprobantes en otras monedas extranjeras. [Consultá las monedas disponibles aquí ](tablas-de-referencia.md#monedas). Si necesitas alguna que no esté incluida, solicitála via email. 
+* **Cambio de códigos: **En el bloque de "clientes", cambian los códigos a enviar en concepto de "condicion\_pago". [Consultar la tabla de referencia](tablas-de-referencia.md#condiciones-de-venta)&#x20;
+* **Nueva condición de pago: **Se agrega la condición de pago "otras", la cual le permite enviar cualquier texto para que salga impreso en el pdf. Ésta información deberá ser enviada, dentro del campo "condicion\_pago\_otra" en el bloque de "clientes". [Consultar ejemplo aquí](api-factura-electronica-afip-facturacion-nuevo-comprobante/#estructura-de-cliente). Éste campo es util cuando se lo junta con el campo de vencimiento (donde se indica la fecha de vencimiento de manera manual)
+* **Nuevas monedas de facturación: **Ahora podes emitir comprobantes en otras monedas extranjeras. [Consultá las monedas disponibles aquí ](tablas-de-referencia.md#monedas). Si necesitas alguna que no esté incluida, solicitála via email.&#x20;
 
 
 
@@ -98,12 +102,12 @@ Cambios para la emisión de un nuevo comprobante:
 ## 10 de Julio de 2019
 
 **1) Nuevos campos para Percepciones e Impuestos internos **Se agregaron campos dentro del bloque "comprobantes" para el envio de las percepciones e impuestos internos \
-percepciones_iibb_base,\
-percepciones_iibb_alicuota,\
-percepciones_iva_base,\
-percepciones_iva_alicuota,\
-impuestos_internos_base,\
-impuestos_internos_alicuota,\
+percepciones\_iibb\_base,\
+percepciones\_iibb\_alicuota,\
+percepciones\_iva\_base,\
+percepciones\_iva\_alicuota,\
+impuestos\_internos\_base,\
+impuestos\_internos\_alicuota,\
 **D**ocumentacion:   [https://tusfacturas.gitbook.io/api-factura-electronica-afip/facturacion-nuevo-comprobante](https://tusfacturas.gitbook.io/api-factura-electronica-afip/facturacion-nuevo-comprobante)\
 \
 **2) RG Especiales**
@@ -113,7 +117,7 @@ Ej: Quienes facturan alquileres casa familia, aplicados a la RG 4004-E deben env
 \
 **3) Comprobantes asociados**
 
-Se agrego el campo "comprobante_fecha" dentro de los datos a enviar. Éste campo es obligatorio para los nuevos comprobantes de tipo "Factura Electronica de Creédito MiPyme (FCE)"Consultá la documentacion:  [https://tusfacturas.gitbook.io/api-factura-electronica-afip/facturacion-nuevo-comprobante#estructura-de-comprobantes-asociados](https://tusfacturas.gitbook.io/api-factura-electronica-afip/facturacion-nuevo-comprobante#estructura-de-comprobantes-asociados) \
+Se agrego el campo "comprobante\_fecha" dentro de los datos a enviar. Éste campo es obligatorio para los nuevos comprobantes de tipo "Factura Electronica de Creédito MiPyme (FCE)"Consultá la documentacion:  [https://tusfacturas.gitbook.io/api-factura-electronica-afip/facturacion-nuevo-comprobante#estructura-de-comprobantes-asociados](https://tusfacturas.gitbook.io/api-factura-electronica-afip/facturacion-nuevo-comprobante#estructura-de-comprobantes-asociados) \
 \
 **4) Factura Electrónica de Creédito MiPyme (FCE)**
 

@@ -76,7 +76,7 @@ como la siguiente:
 {% endswagger-response %}
 {% endswagger %}
 
-### Ejemplo del JSON a enviar
+### Ejemplo del JSON a enviar:
 
 ```
 {
@@ -88,3 +88,25 @@ como la siguiente:
 }
 ```
 
+### Ejemplo del JSON de respuesta:
+
+```
+En caso de éxito:
+
+{
+	"error": "N",
+	"errores": [],
+	"rta": "",
+	"esta_obligado": "S",
+	"importe_desde": 100000
+}
+
+En caso de detectar errores:
+
+{
+	"error": "S",
+	"errores": ["El CUIT enviado INF es invalido."],
+	"rta": "", 
+}
+
+```

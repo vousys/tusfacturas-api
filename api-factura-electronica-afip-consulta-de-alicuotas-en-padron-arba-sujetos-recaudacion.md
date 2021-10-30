@@ -7,7 +7,7 @@ description: >-
 # API Factura electrónica AFIP  - Consulta de alícuotas en padrón ARBA sujetos recaudación
 
 {% hint style="info" %}
-El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso. 
+El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.&#x20;
 
 Siempre es importante que re-confirmes con tus asesores impositivos si la alícuota obtenida corresponde o no ser aplicada al comprobante que vas a emitir.
 {% endhint %}
@@ -95,10 +95,10 @@ Ejemplo de cuando NO existe en tu base de clientes
 {% hint style="info" %}
 CUITS con alícuota cero:
 
-En el supuesto caso que la consulta te retorne alícuota cero, deberás evaluar con tu contador/a si corresponde o no, aplicar el porcentaje máximo a retener/percibir 
+En el supuesto caso que la consulta te retorne alícuota cero, deberás evaluar con tu contador/a si corresponde o no, aplicar el porcentaje máximo a retener/percibir&#x20;
 {% endhint %}
 
-### Estructura del JSON a enviar 
+### Estructura del JSON a enviar&#x20;
 
 ```
 {
@@ -117,3 +117,45 @@ En el supuesto caso que la consulta te retorne alícuota cero, deberás evaluar 
 | `documento_tipo` | <p>Valores Permitidos: <strong>CUIT , DNI</strong><br><strong>Ejemplo: DNI</strong></p> |
 | ---------------- | --------------------------------------------------------------------------------------- |
 | `documento_nro`  | <p>Campo numérico, sin puntos ni guiones.<br><strong>Ejemplo: 30111222334</strong></p>  |
+
+
+
+### Ejemplo de respuesta: Cuando se encuentra información en el padrón
+
+```
+{
+   "error":     "N",
+   "existe_padron":     "S",
+   "errores":  [  "" ],
+   "rta":      "OK",
+   "alicuota_percepcion": 3,
+   "alicuota_retencion":  5,
+}
+```
+
+### Ejemplo de respuesta: Cuando no existen datos en el padrón
+
+```
+{
+   "error":     "N",
+   "existe_padron":     "N",
+   "errores":  [  "" ],
+   "rta":      "OK",
+   "alicuota_percepcion": 0,
+   "alicuota_retencion":  0,
+}
+```
+
+### Ejemplo de respuesta: Cuando el cliente no existe en tu base de clientes.
+
+```
+{
+   "error":     "S",
+   "existe_padron":     "-",
+   "errores":  [  "El cliente no existe en tu cartera" ],
+   "rta":      "OK",
+   "alicuota_percepcion": 0,
+   "alicuota_retencion":  0,
+}
+```
+

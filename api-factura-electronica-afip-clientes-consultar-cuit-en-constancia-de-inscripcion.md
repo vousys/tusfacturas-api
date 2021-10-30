@@ -45,7 +45,21 @@ Tus credenciales de acceso.
    "localidad": "Castelar",
    "codigopostal": "1712",
    "estado":"ACTIVO",
-   "provincia": "BUENOS AIRES"
+   "provincia": "BUENOS AIRES",
+   "actividad":[
+        {
+            "descripcion":"SERVICIOS DE CONSULTORES EN INFORM\u00c3\u0081TICA Y SUMINISTROS DE PROGRAMAS DE INFORM\u00c3\u0081TICA",
+            "id":"620100",
+            "nomenclador":"883",
+            "periodo":"201311"
+         },
+         {
+            "descripcion":"SERVICIOS EMPRESARIALES N.C.P.",
+            "id":"829900",
+            "nomenclador":"883",
+            "periodo":"201906"
+         }
+   ],
    "errores":  [  "" ] 
 }
 ​
@@ -78,12 +92,47 @@ Tus credenciales de acceso.
 | ---------------- | --------------------------------------------------------------- |
 | `documento_nro`  | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
 
+
+
+### Ejemplo del JSON de respuesta
+
+```
+{
+   "error":             "N",
+   "razon_social":      "LA RAZON SOCIAL O NOMBRE",
+   "condicion_impositiva": "RESPONSABLE INSCRIPTO",
+   "direccion": "la calle 123",
+   "localidad": "Castelar",
+   "codigopostal": "1712",
+   "estado":"ACTIVO",
+   "provincia": "BUENOS AIRES",
+   "actividad":[
+        {
+            "descripcion":"SERVICIOS DE CONSULTORES EN INFORM\u00c3\u0081TICA Y SUMINISTROS DE PROGRAMAS DE INFORM\u00c3\u0081TICA",
+            "id":"620100",
+            "nomenclador":"883",
+            "periodo":"201311"
+         },
+         {
+            "descripcion":"SERVICIOS EMPRESARIALES N.C.P.",
+            "id":"829900",
+            "nomenclador":"883",
+            "periodo":"201906"
+         }
+   ],
+   "errores":  [  "" ] 
+}
+
+```
+
+
+
 ### Valores posibles de la respuesta obtenida
 
-condicion_impositiva puede retornar los siguientes valores:
+condicion\_impositiva puede retornar los siguientes valores:
 
 * MONOTRIBUTO
 * EXENTO
 * RESPONSABLE INSCRIPTO
 
- 
+&#x20;

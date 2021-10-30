@@ -69,7 +69,7 @@ Importante: Los campos número y punto de venta, se retornan como numéricos
 {% endswagger-response %}
 {% endswagger %}
 
-### Ejemplo del JSON a enviar para consultar la numeración del próximo comprobante.
+### Ejemplo del JSON a enviar, para consultar la numeración del próximo comprobante.
 
 {% code title="JSON" %}
 ```
@@ -86,9 +86,27 @@ Importante: Los campos número y punto de venta, se retornan como numéricos
 ```
 {% endcode %}
 
-### Estructura de datos 
+### Estructura de datos&#x20;
 
 | `tipo`        | <p>Campo numérico según tabla de referencia de <a href="https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes">Tipos de comprobantes(***)</a>.<br><strong>Ejemplo: FACTURA B</strong></p> |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `operacion`   | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). <br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p>                                  |
 | `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
+
+###
+
+### Ejemplo de JSON de respuesta
+
+```
+{
+	"error": "N",
+	"errores": [""],
+	"rta": "OK",
+	"comprobante": {
+		"tipo": "NOTA DE DEBITO B",
+		"operacion": "V",
+		"punto_venta": 2,
+		"numero": 6
+	}
+}
+```

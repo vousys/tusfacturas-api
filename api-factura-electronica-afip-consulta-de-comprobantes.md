@@ -6,6 +6,8 @@ description: >-
 
 # API Factura electrónica AFIP  - Comprobantes: Consulta y re-armado de PDF
 
+## Consulta individual de un comprobante
+
 Tipo de datos: **JSON**\
 Charset: **UTF-8**
 
@@ -176,7 +178,99 @@ Importante:
 Los datos devueltos por éste método mantienen la misma estructura que los enviados para generar un comprobante.
 {% endhint %}
 
-### Ejemplo de JSON a enviar para consultar un comprobante:
+
+
+### Ejemplo del JSON de respuesta:
+
+```
+{
+	"error": "N",
+	"errores": [""]
+	"rta": "OK",
+	"cliente": {
+		"documento_tipo": "DNI",
+		"documento_nro": "1292963535 ",
+		"razon_social": "Pirulo",
+		"email": "test@test.com",
+		"domicilio": "Av Sta Fe 123"
+	},
+	"comprobante": {
+		"fecha": "28\/07\/2015",
+		"tipo": "NOTA DE DEBITO B",
+		"moneda": "PES",
+		"idioma": 1,
+		"cotizacion": 1,
+		"operacion": "V",
+		"punto_venta": 2,
+		"numero": 6,
+		"periodo_facturado_desde": "27\/07\/2015",
+		"periodo_facturado_hasta": "30\/07\/2015",
+		"rubro": "Servicios web",
+		"rubro_grupo_contable": "servicios",
+		"detalle": [{
+			"cantidad": 1,
+			"producto": {
+				"descripcion": "PAPAS",
+				"precio_unitario": 121.54,
+				"alicuota": 21,
+				"unidad_medida": 7,
+				"precio_total": 121.54
+ 			},
+			"leyenda": "blanca, cepillada"
+		}, {
+			"cantidad": 1.5,
+			"producto": {
+				"descripcion": "HUEVOS",
+				"precio_unitario": 60.50,
+				"alicuota": 21,
+				"unidad_medida": 7,
+				"precio_total": 90.75
+				
+			},
+			"leyenda": ""
+		}, {
+			"cantidad": 2,
+			"producto": {
+				"descripcion": "ZANAHORIA",
+				"precio_unitario": 242,
+				"alicuota": 21,
+				"unidad_medida": 7,
+				"precio_total": 484 
+           },
+			"leyenda": ""
+		}, ],
+		"bonificacion": 120,
+		"subtotal_1":  380.45,
+		"iva_alicuota": 21,
+		"subtotal_2": 75,
+		"iva_alicuota_2": 10.5,
+		"leyenda_gral": "bla bla bla",
+        "percepciones_iibb":        "0",
+        "percepciones_iibb_base":   "0",
+        "percepciones_iibb_alicuota": "0",
+        "percepciones_iva":         "0",
+        "percepciones_iva_base":    "0",
+        "percepciones_iva_alicuota": "0",
+     	"exentos":                  "0",
+        "impuestos_internos":       "0",
+        "impuestos_internos_base":   "0",
+        "impuestos_internos_alicuota": "0" ,
+		"nogravados": 0,
+		"total": 543.21,
+		"cae": "65301278726386 ",
+		"afip_qr
+		"afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
+		"afip_qr": "https:\/\/www.afip.gob.ar\/fe\/qr\/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMS0wNi0wNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjEwIiwidGlwb0NtcCI6MSwibnJvQ21wIjoiMDAwMDAwNzgiLCJpbXBvcnRlIjoiMDAwMDAwMDAwMzA4NS41MCIsIm1vbmVkYSI6IlBFUyIs ",
+		"vencimiento_cae": "07\/08\/2015",
+		"vencimiento_pago": "27\/08\/2015",
+		"comprobante_pdf_url": "https://www.dominio.com/00000006.pdf",
+	}
+}
+```
+
+
+
+### Ejemplo de JSON a enviar :
 
 ```
 {
@@ -192,6 +286,8 @@ Los datos devueltos por éste método mantienen la misma estructura que los envi
 }
 
 ```
+
+## Consultar  comprobantes por fecha
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta_avanzada" method="post" summary="Consulta de comprobantes por fecha" %}
 {% swagger-description %}
@@ -237,6 +333,30 @@ Tus credenciales de acceso
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Devuelve un array con cada "comprobante". Misma estructura de datos devuelta en el metodo de consulta individual." %}
+```
+
+
+```
+{% endswagger-response %}
+{% endswagger %}
+
+### Ejemplo de JSON a enviar para consultar por fecha un comprobante:
+
+```
+{
+"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
+"apikey"    :  "9991",
+"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
+"busqueda_tipo": "F",
+"comprobante":  {
+                "fecha":     "23/05/2021",
+                "operacion": "V" 
+        }
+}
+```
+
+### Ejemplo del JSON de respuesta:
+
 ```
 {
 	"error": "N",
@@ -405,23 +525,10 @@ Tus credenciales de acceso
 	]
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
 
-### Ejemplo de JSON a enviar para consultar por fecha un comprobante:
 
-```
-{
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
-"apikey"    :  "9991",
-"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
-"busqueda_tipo": "F",
-"comprobante":  {
-                "fecha":     "23/05/2021",
-                "operacion": "V" 
-        }
-}
-```
+
+## Consulta de comprobantes por rango de números
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta_avanzada" method="post" summary="Consulta de comprobantes por rango de números" %}
 {% swagger-description %}
@@ -659,7 +766,7 @@ Tus credenciales de acceso
 {% endswagger-response %}
 {% endswagger %}
 
-### Ejemplo del json a enviar para consultar comprobantes por rango de números:
+### Ejemplo del JSON a enviar :
 
 ```
 {
@@ -676,6 +783,179 @@ Tus credenciales de acceso
 	}
 }
 ```
+
+### Ejemplo del JSON de respuesta:
+
+```
+			   {
+	"error": "N",
+	"errores": [""],
+	"rta": "OK",
+	"comprobantes": [ 
+	{
+		"cliente": {
+			"documento_tipo": "DNI",
+			"documento_nro": "1292963535 ",
+			"razon_social": "Pirulo",
+			"email": "test@test.com",
+			"domicilio": "Av Sta Fe 123"
+		},
+		"comprobante": {
+			"fecha": "23\/05\/2021",
+			"tipo": "NOTA DE DEBITO B",
+			"moneda": "PES",
+			"idioma": 1,
+			"cotizacion": 1,
+			"operacion": "V",
+			"punto_venta": 10,
+			"numero": 6,
+			"periodo_facturado_desde": "27\/07\/2015",
+			"periodo_facturado_hasta": "30\/07\/2015",
+			"rubro": "Servicios web",
+			"rubro_grupo_contable": "servicios",
+			"detalle": [{
+				"cantidad": 1,
+				"producto": {
+					"descripcion": "PAPAS",
+					"precio_unitario": 121.54,
+					"alicuota": 21,
+					"unidad_medida": 7,
+					"precio_total": 121.54
+	 			},
+				"leyenda": "blanca, cepillada"
+			}, {
+				"cantidad": 1.5,
+				"producto": {
+					"descripcion": "HUEVOS",
+					"precio_unitario": 60.50,
+					"alicuota": 21,
+					"unidad_medida": 7,
+					"precio_total": 90.75
+					
+				},
+				"leyenda": ""
+			}, {
+				"cantidad": 2,
+				"producto": {
+					"descripcion": "ZANAHORIA",
+					"precio_unitario": 242,
+					"alicuota": 21,
+					"unidad_medida": 7,
+					"precio_total": 484 
+	           },
+				"leyenda": ""
+			} ],
+			"bonificacion": 120,
+			"subtotal_1":  380.45,
+			"iva_alicuota": 21,
+			"subtotal_2": 75,
+			"iva_alicuota_2": 10.5,
+			"leyenda_gral": "bla bla bla",
+	        "percepciones_iibb":        "0",
+	        "percepciones_iibb_base":   "0",
+	        "percepciones_iibb_alicuota": "0",
+	        "percepciones_iva":         "0",
+	        "percepciones_iva_base":    "0",
+	        "percepciones_iva_alicuota": "0",
+	     	"exentos":                  "0",
+	        "impuestos_internos":       "0",
+	        "impuestos_internos_base":   "0",
+	        "impuestos_internos_alicuota": "0" ,
+			"nogravados": 0,
+			"total": 543.21,
+			"cae": "65301278726386 ",
+			"afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
+			"afip_qr": "https:\/\/www.afip.gob.ar\/fe\/qr\/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMS0wNi0wNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjEwIiwidGlwb0NtcCI6MSwibnJvQ21wIjoiMDAwMDAwNzgiLCJpbXBvcnRlIjoiMDAwMDAwMDAwMzA4NS41MCIsIm1vbmVkYSI6IlBFUyIs ",
+			"vencimiento_cae": "30\/05\/2021",
+			"vencimiento_pago": "23\/05\/2021",
+			"comprobante_pdf_url": "https://www.dominio.com/00000006.pdf"
+		}
+	},
+
+	{
+		"cliente": {
+			"documento_tipo": "DNI",
+			"documento_nro": "1292963535 ",
+			"razon_social": "Pirulo",
+			"email": "test@test.com",
+			"domicilio": "Av Sta Fe 123"
+		},
+		"comprobante": {
+			"fecha": "23\/05\/2021",
+			"tipo": "NOTA DE DEBITO B",
+			"moneda": "PES",
+			"idioma": 1,
+			"cotizacion": 1,
+			"operacion": "V",
+			"punto_venta": 10,
+			"numero": 5,
+			"periodo_facturado_desde": "27\/07\/2015",
+			"periodo_facturado_hasta": "30\/07\/2015",
+			"rubro": "Servicios web",
+			"rubro_grupo_contable": "servicios",
+			"detalle": [{
+				"cantidad": 1,
+				"producto": {
+					"descripcion": "PAPAS",
+					"precio_unitario": 121.54,
+					"alicuota": 21,
+					"unidad_medida": 7,
+					"precio_total": 121.54
+	 			},
+				"leyenda": "blanca, cepillada"
+			}, {
+				"cantidad": 1.5,
+				"producto": {
+					"descripcion": "HUEVOS",
+					"precio_unitario": 60.50,
+					"alicuota": 21,
+					"unidad_medida": 7,
+					"precio_total": 90.75
+					
+				},
+				"leyenda": ""
+			}, {
+				"cantidad": 2,
+				"producto": {
+					"descripcion": "ZANAHORIA",
+					"precio_unitario": 242,
+					"alicuota": 21,
+					"unidad_medida": 7,
+					"precio_total": 484 
+	           },
+				"leyenda": ""
+			} ],
+			"bonificacion": 120,
+			"subtotal_1":  380.45,
+			"iva_alicuota": 21,
+			"subtotal_2": 75,
+			"iva_alicuota_2": 10.5,
+			"leyenda_gral": "bla bla bla",
+	        "percepciones_iibb":        "0",
+	        "percepciones_iibb_base":   "0",
+	        "percepciones_iibb_alicuota": "0",
+	        "percepciones_iva":         "0",
+	        "percepciones_iva_base":    "0",
+	        "percepciones_iva_alicuota": "0",
+	     	"exentos":                  "0",
+	        "impuestos_internos":       "0",
+	        "impuestos_internos_base":   "0",
+	        "impuestos_internos_alicuota": "0" ,
+			"nogravados": 0,
+			"total": 543.21,
+			"cae": "65301278726386 ",
+			"afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
+			"afip_qr": "https:\/\/www.afip.gob.ar\/fe\/qr\/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMS0wNi0wNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjEwIiwidGlwb0NtcCI6MSwibnJvQ21wIjoiMDAwMDAwNzgiLCJpbXBvcnRlIjoiMDAwMDAwMDAwMzA4NS41MCIsIm1vbmVkYSI6IlBFUyIs ",
+			"vencimiento_cae": "30\/05\/2021",
+			"vencimiento_pago": "23\/05\/2021",
+			"comprobante_pdf_url": "https://www.dominio.com/00000006.pdf"
+		}
+	}
+	]
+}
+```
+
+
 
 ## Regeneración del archivo PDF
 
@@ -761,6 +1041,15 @@ Tus credenciales de acceso
 
 ```
 {% endcode %}
+
+### Ejemplo del JSON de respuesta:
+
+```
+{
+"error" :  "N",
+"comprobante_pdf_url"    :  "http://www.prueba.com"
+}
+```
 
 ## Estructura de "Comprobante":
 

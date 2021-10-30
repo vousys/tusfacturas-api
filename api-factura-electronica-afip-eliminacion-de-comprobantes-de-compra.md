@@ -59,3 +59,13 @@ Tus Credenciales de acceso
 | `operacion`   | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de de compra (C). <br>Valores Permitidos: <strong>C</strong><br><strong>Ejemplo: C</strong></p>                                                 |
 | `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
 | `numero`      | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
+
+
+
+### Ejemplo del JSON de respuesta
+
+```
+{"error":"N",
+"errores":[],
+"rta":"El comprobante se ha eliminado."}
+```
