@@ -6,7 +6,7 @@ description: >-
 
 # API Factura electrónica AFIP - Comprobantes: Facturación individual de nueva venta
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas.
+Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. &#x20;
 
 Ten en cuenta que los comprobantes que emitas, impactaran de inmediato en nuestra plataforma y obtendrás la respuesta al instante.&#x20;
 
@@ -599,7 +599,9 @@ En caso que quieras reflejar en los comprobantes generados, un signo de porcenta
 
 ### Estructura de "Comprobantes Asociados"&#x20;
 
-**Solo para las notas de débito y las notas de crédito**, AFIP requiere que se envíe un bloque de información adicional con "comprobantes asociados".  A partir del 01/04/2021 existen 2 maneras de informar los comprobantes asociados:
+**Solo para las notas de débito y las notas de crédito**, AFIP requiere que se envíe un bloque de información adicional con "comprobantes asociados". Los comprobantes asociados son aquellos comprobantes que éstas incluyendo para anular o afectar, según corresponda y son datos que posee el emisor del comprobante en cuestión.
+
+&#x20; A partir del 01/04/2021 existen 2 maneras de informar los comprobantes asociados:
 
 a) Detallando comprobantes asociados
 
