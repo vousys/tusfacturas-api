@@ -9,8 +9,9 @@
   * [API - Factura electrónica AFIP: Comprobantes de tipo A](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
   * [API - Factura electrónica AFIP: Comprobantes de tipo B](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)
   * [API - Factura electrónica AFIP: Comprobantes de tipo C](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)
-  * [API - Factura electrónica AFIP: Comprobantes de tipo E \(Factura de exportación\)](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)
-  * [API Factura electrónica AFIP: Factura de Crédito Electrónica MiPyme \(FCE\)](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)
+  * [API - Factura electrónica AFIP: Comprobantes de tipo E (Factura de exportación)](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)
+  * [API Factura electrónica AFIP: Factura de Crédito Electrónica MiPyme (FCE)](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)
+  * [¿Qué tipos de comprobante debo/puedo emitir?](api-factura-electronica-afip-facturacion-nuevo-comprobante/que-tipos-de-comprobante-debo-puedo-emitir.md)
 * [API Factura electrónica: Consulta de obligado a recibir Factura de Crédito electrónica MiPyme](api-factura-electronica-afip-consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md)
 * [API Factura electrónica AFIP  - Facturación por Lotes](api-factura-electronica-afip-api-facturacion-por-lotes.md)
 * [API Factura electrónica AFIP  - Comprobantes: Consulta y re-armado de PDF](api-factura-electronica-afip-consulta-de-comprobantes.md)
@@ -29,14 +30,13 @@
 * [Tablas de referencia](tablas-de-referencia.md)
 * [Changelog](changelog.md)
 
-## API v1 \(OLD\)
+## API v1 (OLD)
 
-* [Facturación por lotes \(Async + programado + webhook\)](api-v1-old/nuevo-comprobante-de-venta-async.md)
+* [Facturación por lotes (Async + programado + webhook)](api-v1-old/nuevo-comprobante-de-venta-async.md)
 
----
+***
 
 * [Términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html)
 * [Creá tu cuenta ahora](https://www.tusfacturas.app/registrarme-factura-electronica.html)
 * [Planes API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
 * [Contactános](https://www.tusfacturas.app/#contact)
-
