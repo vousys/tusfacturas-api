@@ -1,6 +1,6 @@
 # Changelog
 
-## 15 de diciembre de 2021
+## 16 de diciembre de 2021
 
 Se agrega la condición frente al IVA: "IVNA", correspondiente a "IVA No Alcanzado"
 
