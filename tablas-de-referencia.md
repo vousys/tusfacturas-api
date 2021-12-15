@@ -71,15 +71,15 @@
 | Otra                   |   0                                     | 214            |
 |                        |                                         |                |
 
-### Condiciones ante el IVA
+### Condiciones frente al IVA
 
-| Condición ante el IVA |     | Valor a enviar |
-| --------------------- | --- | -------------- |
-| Consumidor Final      |     | CF             |
-| Responsable Inscripto |     | RI             |
-| Monotributo           |     | M              |
-| Exento                |     | E              |
-| Cliente del exterior  |     | CDEX           |
+| Consumidor Final      | CF   |
+| --------------------- | ---- |
+| Responsable Inscripto | RI   |
+| Monotributo           | M    |
+| Exento                | E    |
+| Cliente del exterior  | CDEX |
+| IVA No Alcanzado      | IVNA |
 
 ### Tipos de comprobantes
 
