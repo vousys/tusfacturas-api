@@ -1,5 +1,9 @@
 # Changelog
 
+## 28 de diciembre de 2021
+
+Se agrega un método para informar los pagos asociados a un comprobante ya emitido. Conocé más desde aquí: [https://developers.tusfacturas.app/api-factura-electronica-afip-ingresar-pago](https://developers.tusfacturas.app/api-factura-electronica-afip-ingresar-pago)
+
 ## 16 de diciembre de 2021
 
 Se agrega la condición frente al IVA: "IVNA", correspondiente a "IVA No Alcanzado"

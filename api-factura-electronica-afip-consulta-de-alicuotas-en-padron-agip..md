@@ -4,7 +4,7 @@ description: >-
   alícuotas existentes en el padrón AGIP
 ---
 
-# API Factura electrónica AFIP  - Consulta de alícuotas en padrón AGIP.
+# API Factura electrónica AFIP  | Consulta de alícuotas en padrón AGIP.
 
 {% hint style="info" %}
 El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.
@@ -133,6 +133,6 @@ Ten en cuenta que solo almacenamos la información descargada desde AGIP para el
 
 ## Estructura de "Cliente"
 
-| `documento_tipo` | Valores Permitidos: **CUIT **                                   |
+| `documento_tipo` | Valores Permitidos: **CUIT**                                    |
 | ---------------- | --------------------------------------------------------------- |
 | `documento_nro`  | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |

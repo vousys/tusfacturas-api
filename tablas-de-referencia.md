@@ -1,3 +1,9 @@
+---
+description: >-
+  A continuación podrás consultar las tablas de referencia para usar con nuestra
+  API.
+---
+
 # Tablas de referencia
 
 ### Tipos de documento

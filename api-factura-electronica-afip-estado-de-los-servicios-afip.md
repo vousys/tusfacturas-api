@@ -27,10 +27,11 @@ Tus credenciales de acceso
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación. 
+{% swagger-response status="200" description="" %}
+En caso de no existir errores, se devolverá la variable error con un valor "N", además de las variables que enunciamos a continuación.&#x20;
 
-Facturación devolverá "OK" si los servicios de la AFIP funcionan bien o devolverá un mensaje de alerta con el detalle de la incidencia
-" %}
+Facturación devolverá "OK" si los servicios de la AFIP funcionan sin inconvenientes o devolverá un mensaje de alerta con el detalle de la incidencia.
+
 {% code title="JSON" %}
 ```
 {

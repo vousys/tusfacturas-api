@@ -1,10 +1,10 @@
 ---
 description: >-
   Consulta desde la API de TusFacturas.app, la información relacionada con tu
-  cuenta
+  cuenta.
 ---
 
-# API TusFacturas.app - Mi Cuenta
+# API TusFacturas.app | Mi Cuenta
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/micuenta/consumo" method="post" summary="Consultá el consumo de tu cuenta" %}
 {% swagger-description %}
@@ -316,31 +316,31 @@ Ej:
 
 | Campo a enviar | Descripción                                |
 | -------------- | ------------------------------------------ |
-| api_key        | La API KEY obtenida desde MercadoPago.     |
-| api_secret     | La API SECRET obtenieda desde MercadoPago. |
+| api\_key       | La API KEY obtenida desde MercadoPago.     |
+| api\_secret    | La API SECRET obtenieda desde MercadoPago. |
 
 #### Objeto "xero"
 
-| Campo a enviar | Descripción                                                                                                                                 |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| habilitado     | Indica si se encuentra habilitado o no. Valores esperados: S o N                                                                            |
-| consumer_key   | La consumer KEY obtenida desde XERO                                                                                                         |
-| shared_secret  | La shared_secret obtenida desde XERO                                                                                                        |
-| habilitado_web | Indica si se encuentra habilitado para sincronizar con XERO cuando se emiten comprobantes desde la plataforma web. Valores esperados: S o N |
-| habilitado_api | Indica si se encuentra habilitado para sincronizar con XERO cuando se emiten comprobantes desde la API. Valores esperados: S o N            |
+| Campo a enviar  | Descripción                                                                                                                                 |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| habilitado      | Indica si se encuentra habilitado o no. Valores esperados: S o N                                                                            |
+| consumer\_key   | La consumer KEY obtenida desde XERO                                                                                                         |
+| shared\_secret  | La shared\_secret obtenida desde XERO                                                                                                       |
+| habilitado\_web | Indica si se encuentra habilitado para sincronizar con XERO cuando se emiten comprobantes desde la plataforma web. Valores esperados: S o N |
+| habilitado\_api | Indica si se encuentra habilitado para sincronizar con XERO cuando se emiten comprobantes desde la API. Valores esperados: S o N            |
 
 #### Objeto "factura"
 
-| Campo a enviar                 | Descripcion                                                                                                                                                     |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| leyenda_general_predeterminada | Una leyenda predeterminada que saldrá impresa en todos los comprobantes que emitas.                                                                             |
-| titulo                         | El titulo que saldrá como encabezado de la factura. En gral se usa la razón social o el nombre de fantasía de la empresa. Máx de caracteres permitidos: 18      |
-| subtitulo                      | El subtitulo que saldrá en el encabezado de la factura, bajo el titulo principal. Máx de caracteres permitidos: 18                                              |
-| reply_to_email                 | La dirección de email para los reply-to en cada envío de comprobante.                                                                                           |
-| reply_to                       | El nombre de quien envía los comprobantes.                                                                                                                      |
-| mensaje                        | El mensaje predeterminado que saldrá en el envío de cada comprobante.                                                                                           |
-| copias                         | La cantidad de copias que se generan dentro del PDF. Valores esperados:  2= para recibir original y duplicado, 3= para recibir original, duplicado y triplicado |
-| cbu                            | Opcional: El número del CBU. Campo numérico, maximo 30 dígitos.                                                                                                 |
+| Campo a enviar                   | Descripcion                                                                                                                                                     |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| leyenda\_general\_predeterminada | Una leyenda predeterminada que saldrá impresa en todos los comprobantes que emitas.                                                                             |
+| titulo                           | El titulo que saldrá como encabezado de la factura. En gral se usa la razón social o el nombre de fantasía de la empresa. Máx de caracteres permitidos: 18      |
+| subtitulo                        | El subtitulo que saldrá en el encabezado de la factura, bajo el titulo principal. Máx de caracteres permitidos: 18                                              |
+| reply\_to\_email                 | La dirección de email para los reply-to en cada envío de comprobante.                                                                                           |
+| reply\_to                        | El nombre de quien envía los comprobantes.                                                                                                                      |
+| mensaje                          | El mensaje predeterminado que saldrá en el envío de cada comprobante.                                                                                           |
+| copias                           | La cantidad de copias que se generan dentro del PDF. Valores esperados:  2= para recibir original y duplicado, 3= para recibir original, duplicado y triplicado |
+| cbu                              | Opcional: El número del CBU. Campo numérico, maximo 30 dígitos.                                                                                                 |
 
 #### JSON De ejemplo a enviar
 
