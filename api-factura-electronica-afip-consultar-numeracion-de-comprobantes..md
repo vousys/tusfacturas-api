@@ -11,34 +11,26 @@ description: >-
 
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="comprobante" %}
-**tipo**
+{% swagger-parameter in="body" name="comprobante" required="true" type="Object" %}
+**CAMPOS DEL OBJETO COMPROBANTE:**&#x20;
 
-    Campo numérico según tabla de referencia de Tipos de comprobantes(***). Ejemplo: FACTURA B 
+**tipo**    Campo numérico según tabla de referencia de Tipos de comprobantes(\*\*\*).&#x20;
 
-**operacion**
+Ejemplo: FACTURA B&#x20;
 
-    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V 
-
-\
-
-
-
-
-**punto_venta**
-
-    Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3
+**operacion**    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V \
+**punto\_venta**    Campo numérico entero. Longitud máxima **5** digitos. Ejemplo: 3
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="true" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="true" %}
 Tus credenciales de acceso.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="true" %}
 Tus credenciales de acceso
 
 \
@@ -47,10 +39,9 @@ Tus credenciales de acceso
 
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="En caso de detectar algún error, el campo error, se devuelve con una "S" y dentro de "errores" se devolverá una lista con cada uno de los mensajes.
+{% swagger-response status="200" description="" %}
+En caso de detectar algún error, el campo error, se devuelve con una "S" y dentro de "errores" se devolverá una lista con cada uno de los mensajes.Importante: Los campos número y punto de venta, se retornan como numéricos
 
-Importante: Los campos número y punto de venta, se retornan como numéricos
-" %}
 {% code title="JSON" %}
 ```
 {

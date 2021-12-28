@@ -405,7 +405,7 @@ Para poder generar el comprobante, debes enviar de todos los datos según se inf
 {% endcode %}
 
 {% hint style="info" %}
-Importante: **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es responsabilidad del cliente corroborar y validar éstos datos. **
+Importante: **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es responsabilidad del cliente corroborar y validar éstos datos.**&#x20;
 
 Recordá que **AFIP recibe únicamente totales**, no el detalle de los items que facturás, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
 {% endhint %}
@@ -434,7 +434,7 @@ Recordá que **AFIP recibe únicamente totales**, no el detalle de los items que
 | detalle                         | SI                            |  Lista de conceptos a facturar. [Objeto JSON](./#estructura-de-detalle-de-conceptos) Según estructura que se detalla a continuación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | fex                             | REQUERIDO PARA COMPROBANTES E | Solo para comprobantes de tipo E. Según estructura detallada en: [Factura electronica de exportacion".](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | bonificacion                    | OPCIONAL                      |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor aplicado en concepto de bonificación sin IVA Ejemplo: 12.67. Tener en cuenta para el cálculo que la bonificación se aplica sobre el primer subtotal SIN IVA y se lo gravará con el importe de IVA que le corresponda.                                                                                                                                                                                                                                                                                                                                                                                                          |
-| leyenda\_gral                   | OPCIONAL                      |  Campo alfanumérico. Longitud máxima 255 caracteres. Contenido opcional. Es una leyenda general que saldrá impresa en el bloque central de productos del comprobante Ejemplo: Aplica plan 12 cuotas sin interes. Ten en cuenta que a partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618".  _Éste valor no debe ser enviado en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma. |
+| leyenda\_gral                   | OPCIONAL                      |  Campo alfanumérico. Longitud máxima 255 caracteres. Contenido opcional. Es una leyenda general que saldrá impresa en el bloque central de productos del comprobante Ejemplo: Aplica plan 12 cuotas sin interes. Ten en cuenta que a partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._  Éste valor no debe ser enviado en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma. |
 | comentario                      | OPCIONAL                      | Campo alfanumerico, opcional. Longitud máxima: 255 caracteres. Éste campo no saldrá impreso en la factura.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | percepciones\_iibb              | OPCIONAL                      |  Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la percepción de ingresos brutos realizada Ejemplo: 142.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | percepciones\_iibb\_base        | OPCIONAL                      | La base imponible  sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -505,7 +505,7 @@ Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos    
 | `condicion_pago`      | <p>Campo numérico según <a href="../tablas-de-referencia.md#condiciones-de-venta">tabla de referencia</a>.  </p><ul><li>se debe enviar obligatoriamente el campo <strong>condicion_pago_otra</strong> "con la descripción de la misma.</li></ul><p><br><strong>Ejemplo: 211 .</strong></p> |
 |                       |                                                                                                                                                                                                                                                                                            |
 | condicion\_pago\_otra | Campo alfanumerico. Longitud máxima 100 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                                                                                                                    |
-| `condicion_iva`       | <p>Campo numérico que indica la condicion de iva, según <a href="../tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>. Valores Permitidos: <strong>CF, RI, M, E </strong><br><strong>Ejemplo: RI</strong></p>                           |
+| `condicion_iva`       | <p>Campo numérico que indica la condicion de iva, según <a href="../tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>. Valores Permitidos: <strong>CF, RI, M, E</strong> <br><strong>Ejemplo: RI</strong></p>                           |
 | codigo                | Campo alfanumerico opcional. Longitud máxima 50 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                                                                                                            |
 
 ###
@@ -594,7 +594,7 @@ Los campos que debes enviar son los siguientes:
 |                               |                                                                                                                                                                                                                                                                                                                                       |
 
 {% hint style="info" %}
-En caso que quieras reflejar en los comprobantes generados, un signo de porcentaje (%), deberás enviarlo en la descripción del producto de ésta manera:  **#\&#** , asi como si quisieras que parte de esa descripción del producto se imprima en otra linea, deberás enviar:  **#@# **
+En caso que quieras reflejar en los comprobantes generados, un signo de porcentaje (%), deberás enviarlo en la descripción del producto de ésta manera:  **#\&#** , asi como si quisieras que parte de esa descripción del producto se imprima en otra linea, deberás enviar:  **#@#**&#x20;
 {% endhint %}
 
 ### Estructura de "Comprobantes Asociados"&#x20;
@@ -658,7 +658,7 @@ Información de los campos a enviar:
 
 Solo para comprobantes de tipo tradicional, y a partir del 01/04/2021, AFIP habilitará la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados.&#x20;
 
-Para utilizar ésta herramienta,  **no se debe enviar el bloque** de "_comprobantes asociados"  _y en su lugar debe enviarse un bloque llamado_ "comprobantes\_asociados\_periodo", _el cual debe tener la siguiente estructura:
+Para utilizar ésta herramienta,  **no se debe enviar el bloque** de "_comprobantes asociados"_  y en su lugar debe enviarse un bloque llamado _"comprobantes\_asociados\_periodo",_ el cual debe tener la siguiente estructura:
 
 ```
  comprobante: {
@@ -714,7 +714,7 @@ Ten en cuenta que TusFacturas NO realiza validaciones sobre éstos campos. Los r
 Si uno de los items enviados posee el valor vacio, éste item no será procesado.
 {% endhint %}
 
-### Estructura de "pagos"  (opcional)
+### Estructura de "pagos"  (opcional) <a href="#estructuradepagos" id="estructuradepagos"></a>
 
 Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "pagos" con la estructura como se detalla a continuación.
 
@@ -735,7 +735,7 @@ Cosas a tener en cuenta:&#x20;
 | formas\_pago     | SI        | array con multiples items, según estructura que se detalla a continuación                                |
 | total            | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p> |
 
-Información de los campos que componen el **array de pagos > formas\_pago **
+Información de los campos que componen el **array de pagos > formas\_pago**&#x20;
 
 | nombre del campo | Requerido | Detalle                                                                                                                                                                                 |
 | ---------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -748,14 +748,14 @@ Ejemplo del JSON a enviar.
 ```
 comprobante: {
    .... 
-  			  "pagos" : {
-						"formas_pago" : [ 
-										{"descripcion" : "VISA DB", "importe" : 0.6},
-										{"descripcion" : "MercadoPago", "importe" : 50}
-						
-							], 
-							"total": 50.6
-				}, 
+   "pagos" : 
+   {
+	"formas_pago" : [ 
+			{"descripcion" : "VISA DB", "importe" : 0.6},
+			{"descripcion" : "MercadoPago", "importe" : 50}
+			], 
+	"total": 50.6
+   }, 
  }
 ```
 {% endcode %}
