@@ -11,26 +11,34 @@ description: >-
 
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="comprobante" required="true" type="Object" %}
-**CAMPOS DEL OBJETO COMPROBANTE:**&#x20;
+{% swagger-parameter in="body" name="comprobante" %}
+**tipo**
 
-**tipo**    Campo numérico según tabla de referencia de Tipos de comprobantes(\*\*\*).&#x20;
+    Campo numérico según tabla de referencia de Tipos de comprobantes(***). Ejemplo: FACTURA B 
 
-Ejemplo: FACTURA B&#x20;
+**operacion**
 
-**operacion**    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V \
-**punto\_venta**    Campo numérico entero. Longitud máxima **5** digitos. Ejemplo: 3
+    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V 
+
+\
+
+
+
+
+**punto_venta**
+
+    Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" required="true" %}
+{% swagger-parameter in="body" name="apikey" type="string" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="true" %}
+{% swagger-parameter in="body" name="apitoken" type="string" %}
 Tus credenciales de acceso.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="true" %}
+{% swagger-parameter in="body" name="usertoken" type="string" %}
 Tus credenciales de acceso
 
 \
@@ -39,9 +47,10 @@ Tus credenciales de acceso
 
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="" %}
-En caso de detectar algún error, el campo error, se devuelve con una "S" y dentro de "errores" se devolverá una lista con cada uno de los mensajes.Importante: Los campos número y punto de venta, se retornan como numéricos
+{% swagger-response status="200" description="En caso de detectar algún error, el campo error, se devuelve con una "S" y dentro de "errores" se devolverá una lista con cada uno de los mensajes.
 
+Importante: Los campos número y punto de venta, se retornan como numéricos
+" %}
 {% code title="JSON" %}
 ```
 {

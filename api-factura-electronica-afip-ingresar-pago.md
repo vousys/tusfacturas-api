@@ -1,11 +1,23 @@
 ---
 description: >-
-  Mediante ésta función podrás ingresar pagos a cada comprobante que emítas, de
-  modo que la cuenta corriente refleje no solo las ventas, sino los cobros que
-  capturas desde tu plataforma.
+  Mediante ésta función, podrás ingresar pagos a cada comprobante que emítas, de
+  modo que la cuenta corriente refleje no solo las ventas, sino también, los
+  cobros que capturas desde tu plataforma.
 ---
 
 # API Factura electrónica AFIP - Ingresar pago
+
+Los pagos que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
+
+{% hint style="info" %}
+Cosas a tener en cuenta:&#x20;
+
+* **NO** podrás enviar los siguientes medios de pago: cheques y detalle de retenciones.
+* Se realizara una validación del total que se indique, contra la sumatoria de los medios de pago detallados
+* El total de los pagos **NO** debe superar el importe total del comprobante, pero si puede ser inferior, para indicar que el comprobante recibió un pago parcial.
+{% endhint %}
+
+&#x20;
 
 {% swagger method="post" path="/v2/facturacion/pagar" baseUrl="https://www.tusfacturas.app/app/api" summary="Ingresar pagos a un comprobante emitido" %}
 {% swagger-description %}
@@ -56,7 +68,36 @@ Ejemplos de las respuestas JSON en caso de éxito o error
 {% endswagger-response %}
 {% endswagger %}
 
-### Estructura de comprobante
+## Ejemplo del JSON completo a enviar
+
+```
+{
+	"apitoken": "asdadsadasdada",
+	"apikey": 10000,
+	"usertoken": "asdadasdadsasd",
+	 
+	"comprobante": 
+	{
+		"tipo": "FACTURA A",
+		"operacion": "V",
+		"punto_venta": "00010",
+		"numero": "00000109", 
+		"pagos" : 
+		      {
+			"formas_pago" : [ 
+				{"descripcion" : "VISA", "importe" : 200},
+				{"descripcion" : "MercadoPago", "importe" : 1000}				
+					], 
+			"total": 1200
+			}
+	}
+}
+ 
+```
+
+
+
+### Estructura del objeto "comprobante
 
 | Nombre del campo | Tipo de dato                                                                                                                                            |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -66,19 +107,21 @@ Ejemplos de las respuestas JSON en caso de éxito o error
 | operacion        | <p>Campo alfanumérico. </p><p>Longitud 1 carácter. </p><p>Indica si envía una factura de venta (V) o de compra (C). </p><p>Valores Permitidos: V   </p> |
 | pagos            | Según estructura que se detalla a continuación                                                                                                          |
 
-### Estructura de pagos&#x20;
+```
+{
+	  
+	"comprobante": 
+	{
+		"tipo": "FACTURA A",
+		"operacion": "V",
+		"punto_venta": "00010",
+		"numero": "00000109", 
+		"pagos" : { .... }
+	}
+}
+```
 
-Los pagos que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
-
-{% hint style="info" %}
-Cosas a tener en cuenta:&#x20;
-
-* **NO** podrás enviar los siguientes medios de pago: cheques y detalle de retenciones.
-* Se realizara una validación del total que se indique, contra la sumatoria de los medios de pago detallados
-* El total de los pagos **NO** debe superar el importe total del comprobante, pero si puede ser inferior, para indicar que el comprobante recibió un pago parcial.
-{% endhint %}
-
-&#x20;Información de los campos que componen el **bloque "pagos"**
+### Estructura del objeto pagos  
 
 | nombre del campo | Requerido | Detalle                                                                                                  |
 | ---------------- | --------- | -------------------------------------------------------------------------------------------------------- |
@@ -87,10 +130,10 @@ Cosas a tener en cuenta:&#x20;
 
 Información de los campos que componen el **array de pagos > formas\_pago**&#x20;
 
-| nombre del campo | Requerido | Detalle                                                                                                                                                                                 |
-| ---------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| descripcion      | SI        | El nombre del medio de pago elegido para cancelar el comprobante. 255 caracteres max. En caso que el medio de pago, no exista en nuestra plataforma, será dado de alta automáticamente. |
-| importe          | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                |
+| nombre del campo | Requerido | Detalle                                                                                                                                                                                               |
+| ---------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| descripcion      | SI        | <p>El nombre del medio de pago elegido para cancelar el comprobante. 255 caracteres max. </p><p>En caso que el medio de pago, no exista en nuestra plataforma, será dado de alta automáticamente.</p> |
+| importe          | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                              |
 
 Ejemplo del JSON a enviar.
 
@@ -138,3 +181,4 @@ comprobante: {
 }
  
 ```
+
