@@ -12,6 +12,7 @@
   * [API - Factura electrónica AFIP | Comprobantes de tipo E (Factura de exportación)](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)
   * [API Factura electrónica AFIP | Factura de Crédito Electrónica MiPyme (FCE)](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)
   * [¿Qué tipos de comprobante debo/puedo emitir?](api-factura-electronica-afip-facturacion-nuevo-comprobante/que-tipos-de-comprobante-debo-puedo-emitir.md)
+  * [API Factura electrónica AFIP | ¿Cómo se si emitir una factura mipyme o una común?](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-or-como-se-si-emitir-una-factura-mipyme-o-una-comun.md)
 * [API Factura electrónica |  Esta obligado a recibir Factura de Crédito electrónica MiPyme?](api-factura-electronica-afip-consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md)
 * [API Factura electrónica AFIP  | Facturación por Lotes](api-factura-electronica-afip-api-facturacion-por-lotes.md)
 * [API Factura electrónica AFIP  | Comprobantes: Consulta de comprobantes y re-armado de PDF](api-factura-electronica-afip-consulta-de-comprobantes.md)
