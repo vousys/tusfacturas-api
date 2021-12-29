@@ -30,6 +30,7 @@
 * [API Factura electrónica AFIP  | Consulta de CUIT País en AFIP](consulta-de-cuit-pais-afip.md)
 * [API Factura electrónica AFIP  | Consulta de Incoterms](consulta-de-incoterms.md)
 * [Tablas de referencia](tablas-de-referencia.md)
+* [FAQs | Preguntas frecuentes](faqs-or-preguntas-frecuentes.md)
 * [Changelog](changelog.md)
 
 ## API v1 (OLD)
