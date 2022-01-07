@@ -20,6 +20,7 @@
 * [API Factura electrónica AFIP | Consultar numeración de comprobantes.](api-factura-electronica-afip-consultar-numeracion-de-comprobantes..md)
 * [API Factura electrónica AFIP |  Ingresar pago](api-factura-electronica-afip-or-ingresar-pago.md)
 * [API Factura electrónica AFIP  | Cotizaciones AFIP](cotizacion-monedas-afip.md)
+* [API Factura electrónica AFIP | Consulta de tope para ventas a consumidor final](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
 * [API Factura electrónica AFIP | Consulta el CUIT desde la constancia de inscripción](api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md)
 * [API Factura electrónica AFIP  | Consulta las alícuotas en el  padrón ARBA sujetos recaudación](api-factura-electronica-afip-consulta-de-alicuotas-en-padron-arba-sujetos-recaudacion.md)
 * [API Factura electrónica AFIP  | Consulta de alícuotas en padrón AGIP.](api-factura-electronica-afip-consulta-de-alicuotas-en-padron-agip..md)
