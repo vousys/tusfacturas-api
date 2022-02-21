@@ -6,11 +6,15 @@ description: >-
 
 # API Factura electrónica AFIP | Comprobantes: Facturación individual de nueva venta
 
+{% hint style="info" %}
+**ATENCIÓN!** A partir de marzo 2022, éste servicio se modificará para brindarte una solución con muchas más herramientas. Consultanos para más información
+{% endhint %}
+
 Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas.
 
 Ten en cuenta que los comprobantes que emitas, impactaran de inmediato en nuestra plataforma y obtendrás la respuesta al instante.
 
-{% hint style="info" %}
+{% hint style="danger" %}
 Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰.
 {% endhint %}
 
