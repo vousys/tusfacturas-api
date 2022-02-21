@@ -5,46 +5,42 @@ description: >-
   de procesamiento.
 ---
 
-# API Factura electrónica AFIP  | Facturación por Lotes
+# API Factura electrónica AFIP | Facturación por Lotes
+
+{% hint style="info" %}
+**ATENCIÓN!** A partir de marzo 2022, éste servicio se modificará para brindarte una solución con muchas más herramientas. Consultanos para más información
+{% endhint %}
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/facturacion/lotes" method="post" summary="Facturación por Lotes" %}
 {% swagger-description %}
-
-
-\
-
+\\
 
 Charset: UTF-8
 
-\
+\\
 
-
-
-
-\
-
+\\
 
 Formato esperado: JSON
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="requests" type="array" %}
+{% swagger-parameter in="body" name="requests" type="array" required="false" %}
 Según estructura de de cada item (detallado abajo).
 
-\
-
+\\
 
 Máximo de request que se recibirán por cada llamada: 500
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
@@ -91,12 +87,88 @@ Tus credenciales de acceso
 {% endswagger-response %}
 {% endswagger %}
 
-## Estructura de  "requests"
+{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/facturacion/lotes" method="post" summary="Facturación por Lotes" %}
+{% swagger-description %}
+\\
+
+Charset: UTF-8
+
+\\
+
+\\
+
+Formato esperado: JSON
+{% endswagger-description %}
+
+{% swagger-parameter in="body" name="requests" type="array" required="false" %}
+Según estructura de de cada item (detallado abajo).
+
+\\
+
+Máximo de request que se recibirán por cada llamada: 500
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
+Tus credenciales de acceso
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
+Tus credenciales de acceso
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
+Tus credenciales de acceso
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+{% code title="JSON" %}
+```
+{
+    "error": "N",
+    "errores": [],
+    "response": [{
+        "error": "N",
+        "errores": [],
+        "cae": "68466696512853 ",
+        "comprobante_nro": "00003-00000074",
+        "cae_vencimiento": "26\/11\/2018",
+        "observaciones": "AFIP genero el comprobante pero lo ha marcado como observado por los siguientes motivos: Observacion: Factura individual, DocTipo: 80, DocNro 22222222222 no se encuentra inscripto en condicion ACTIVA en el impuesto (IVA). [ codigo: 10063 ]. Dichas observaciones no requieren accion de su parte.",
+        "envio_x_mail": "N",
+        "envio_x_mail_direcciones": "",
+        "rta": "El comprobante FACTURA A 00003-00000074 (XXXXXX) se ha guardado correctamente ",
+        "vencimiento_cae": "26\/11\/2018",
+        "vencimiento_pago": "16\/11\/2018",
+        "comprobante_tipo": "FACTURA A",
+        "afip_codigo_barras": "111111111110010000368466696512853201811262 ",
+        "comprobante_pdf_url": "https:\/\/www.dominio.com\/00000074.pdf"
+    }, {
+        "error": "N",
+        "errores": [],
+        "cae": "68466696512866 ",
+        "comprobante_nro": "00003-00000075",
+        "cae_vencimiento": "26\/11\/2018",
+        "observaciones": "AFIP genero el comprobante pero lo ha marcado como observado por los siguientes motivos: Observacion: Factura individual, DocTipo: 80, DocNro 22222222222 no se encuentra inscripto en condicion ACTIVA en el impuesto (IVA). [ codigo: 10063 ]. Dichas observaciones no requieren accion de su parte.",
+        "envio_x_mail": "N",
+        "envio_x_mail_direcciones": "",
+        "rta": "El comprobante FACTURA A 00003-00000075 (XXXXXX) se ha guardado correctamente ",
+        "vencimiento_cae": "26\/11\/2018",
+        "vencimiento_pago": "16\/11\/2018",
+        "comprobante_tipo": "FACTURA A",
+        "afip_codigo_barras": "111111111110010000368466696512866201811266 ",
+        "comprobante_pdf_url": "https:\/\/www.dominio.com\/00000075.pdf"
+    }]
+}
+```
+{% endcode %}
+{% endswagger-response %}
+{% endswagger %}
+
+## Estructura de "requests"
 
 Requests es un array, que contiene cada uno de los comprobantes a emitir.
 
 {% hint style="info" %}
-La **cantidad máxima de requests** (por cada llamada que realices) debe ser de 100.
+La **cantidad máxima de requests** (por cada llamada que realices) debe ser de 100 pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma mantiene hasta 90 segundos los requests y luego te arroja una respuesta de timeout (524) y los comprobantes que enviaste, seguirán procesandose en background .
 
 Todos los requests de llamada, deben ser del **mismo tipo de comprobante**.
 
@@ -386,7 +458,7 @@ Si un comprobante tiene error, ese comprobante y los siguientes vendrán rechaza
 
 #### ¿Cuanto es el tiempo promedio que demora enviar 100 comprobantes?
 
-Tenes un promedio de  3  minutos dependiendo de si ademas de generar el comprobante, el mismo debe ser enviado por email de manera automática
+Tenes un promedio de 3 minutos dependiendo de si ademas de generar el comprobante, el mismo debe ser enviado por email de manera automática
 
 #### ¿Hay una reducción de tiempo considerable al emitir los comprobantes de esta forma?
 
