@@ -560,11 +560,9 @@ Los campos que debes enviar son los siguientes:
 |                          |                                                                                                                                                                                  |
 |                          |                                                                                                                                                                                  |
 
-### Estructura del bloque: "Concepto / Producto"
+## Estructura del bloque: "Concepto / Producto"
 
-{% hint style="info" %}
-Si el producto ya existía en la base de datos de nuestra plataforma, para la lista de precios indicada basado en el código y/o descripción del mismo, será actualizado con los nuevos datos, solo si indicas que deseas actualizar el precio. En caso de no querer actualizar el producto, si el mismo ya existía, se facturará con el nuevo precio y descripción que envíes, pero mantendrá sus datos anteriores.
-{% endhint %}
+Cada producto o servicio que factures, deberá ser enviado con la siguiente estructura:
 
 ```
 {
@@ -604,9 +602,9 @@ Los campos que debes enviar son los siguientes:
 | `impuestos_internos_alicuota` | La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numerico, con 2 decimales. ej: 10.5                                                                                                                                                                                                  |
 |                               |                                                                                                                                                                                                                                                                                                                           |
 
-### Estructura de "Comprobantes Asociados"
+## Estructura de "Comprobantes Asociados"
 
-**Solo para las notas de débito y las notas de crédito**, AFIP requiere que se envíe un bloque de información adicional con "comprobantes asociados". Los comprobantes asociados son aquellos comprobantes que éstas incluyendo para anular o afectar, según corresponda y son datos que posee el emisor del comprobante en cuestión.
+**Solo para las notas de débito y las notas de crédito**, AFIP requiere de manera obligatoria, que se envíe un bloque de información adicional con "comprobantes asociados". Los comprobantes asociados son aquellos comprobantes que éstas incluyendo para anular o afectar, según corresponda y son datos que posee el emisor del comprobante en cuestión.
 
 A partir del 01/04/2021 existen 2 maneras de informar los comprobantes asociados:
 
@@ -617,18 +615,14 @@ b) Indicando un período de comprobantes asociados.
 Podes ver un [ejemplo de comprobante con comprobantes asociados desde aquí](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a)
 
 {% hint style="info" %}
-Solo deberán enviar los comprobantes asociados, cuando se emitan Notas de Débito o Notas de Crédito de tipo A, B, C, M y Comprobantes de tipo MiPyme.
+En todos las notas de crédito y/o notas de débito de cualquier tipo ( A,B, C, E y de tipo MiPyme), **éste bloque es obligatorio,** ya sea que lo hagas por período o por detalle de comprobantes**.**
 {% endhint %}
 
-#### a) Envío de comprobantes asociados detallados:
+### Envío de comprobantes asociados: "detallados"
 
-En caso de enviar el detalle de los comprobantes que se asocian, éstos deberán ser enviados dentro de un array, en el bloque llamado "comprobantes\_asociados", acorde a la estructura que se detalla a continuación para cada comprobante asociado.
+Para éste tipo de información, es obligatorio enviar el detalle de los comprobantes que se anulan, dentro de un array, en el bloque llamado "**comprobantes\_asociados**", acorde a la estructura que se detalla a continuación para cada comprobante asociado.
 
-A partir del 01/04/2021, y solo para comprobantes de tipo tradicional, AFIP habilitará una nueva herramienta para informar éstos comprobantes asociados, donde no se detallan enviar un periodo desde/hasta en lugar del detalle de cada comprobante asociado.Debes tener en cuenta que se excluyen de ésta modalidad de información, los comprobantes de tipo exportación y MiPyme
-
-{% hint style="info" %}
-En todos las notas de crédito y/o notas de débito de tipo MiPyme y/o de exportación, **éste bloque es obligatorio.**
-{% endhint %}
+Ten en cuenta que AFIP realiza validaciones sobre éstos datos, ya que según lo que facture tu cliente, tiene una cantidad de dias X habiltiados para anularlas.&#x20;
 
 ```
 comprobante: {
@@ -661,11 +655,11 @@ Información de los campos a enviar:
 | `cuit`              | <p>Campo numérico, sin puntos ni guiones. Es el CUIT del emisor del comprobante asociado.<br><strong>Ejemplo: 1111111111</strong></p>                                  |
 | `comprobante_fecha` | La fecha del comprobante en formato dd/mm/aaaa. El día y el mes deben tener 2 dígitos.                                                                                 |
 
-#### b) Comprobantes asociados por período
+### Comprobantes asociados: "por período"
 
-Solo para comprobantes de tipo tradicional, y a partir del 01/04/2021, AFIP habilitará la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados.
+A partir del 01/04/2021, AFIP habilitó la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados, para todo comprobante de tipo tradicional (A,B,C)
 
-Para utilizar ésta herramienta, **no se debe enviar el bloque** de "_comprobantes asociados"_ y en su lugar debe enviarse un bloque llamado _"comprobantes\_asociados\_periodo",_ el cual debe tener la siguiente estructura:
+Para utilizar ésta herramienta, **no se debe enviar el bloque de "**_**comprobantes asociados"**_ **y en su lugar debe enviarse un bloque llamado **_**"comprobantes\_asociados\_periodo",**_ el cual debe tener la siguiente estructura:
 
 ```
  comprobante: {
@@ -679,15 +673,11 @@ Para utilizar ésta herramienta, **no se debe enviar el bloque** de "_comprobant
 
 Se deberá respetar el formato para las fechas que debe ser dd/mm/aaaa (el día y el mes deben tener 2 dígitos).
 
-{% hint style="info" %}
-Solo se podrá informar un periodo desde/hasta para aquellos comprobantes que **NO** sean de tipo: MiPyme ni comprobantes de exportación.
-{% endhint %}
+## Estructura de "RG Especiales" (OPCIONAL)
 
-### Estructura de "RG Especiales" (solo según corresponda)
+Si tu empresa o la de tu cliente, operan bajo alguna RG particular, se deberá enviar un array con los datos adicionales, según se especifican en la [tabla de Datos adicionales para RG Especiales](../tablas-de-referencia.md#datos-opcionales-para-rg-especiales).
 
-Según la RG a la que tu empresa aplique, se deberá enviar un array con los datos adicionales, según se especifican en la [tabla de Datos adicionales para RG Especiales](../tablas-de-referencia.md#datos-opcionales-para-rg-especiales).
-
-Ten en cuenta que solo podrás aplicar a un [regimen](../tablas-de-referencia.md#datos-opcionales-para-rg-especiales) por cada comprobante que emitas.
+Ten en cuenta que solo podrás aplicar a un [regimen](../tablas-de-referencia.md#datos-opcionales-para-rg-especiales) , por cada comprobante que emitas.
 
 {% code title="JSON" %}
 ```
@@ -709,47 +699,48 @@ comprobante: {
 ```
 {% endcode %}
 
-Información de los campos a enviar en el array de "datos":
+### Datos a tener en cuenta:
+
+{% hint style="info" %}
+* TusFacturasAPP no realiza validaciones sobre éstos campos. Todas las validaciones son realizadas por la propia AFIP en caso que corresponda.
+* Si alguno de los items enviados posee un valor vacio, éste item no será procesado.
+{% endhint %}
+
+### Información de los campos a enviar en el array de "datos":
 
 | `id`    | Campo númerico. Valores esperados según[Tabla de Datos Opcionales para RG Especiales](../tablas-de-referencia.md#datos-opcionales-para-rg-especiales) |
 | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `valor` | Campo alfanumérico.                                                                                                                                   |
 
-{% hint style="info" %}
-Ten en cuenta que TusFacturas NO realiza validaciones sobre éstos campos. Los realiza la propia AFIP en caso que corresponda.
+## Estructura de "pagos" (OPCIONAL) <a href="#estructuradepagos" id="estructuradepagos"></a>
 
-Si uno de los items enviados posee el valor vacio, éste item no será procesado.
-{% endhint %}
-
-### Estructura de "pagos" (opcional) <a href="#estructuradepagos" id="estructuradepagos"></a>
-
-Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "pagos" con la estructura como se detalla a continuación.
+Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "**pagos**" con la estructura como se detalla a continuación.
 
 Los pagos que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
 
-{% hint style="info" %}
-Cosas a tener en cuenta:
+### Datos a tener en cuenta:
 
+{% hint style="info" %}
 * **NO** podrás enviar los siguientes medios de pago: cheques y detalle de retenciones.
-* Se realizara una validación del total que se indique, contra la sumatoria de los medios de pago detallados
+* Se realizará una validación del total que se indique, contra la sumatoria de los medios de pago detallados, previo al guardado del comprobante.
 * El total de los pagos **NO** debe superar el importe total del comprobante, pero si puede ser inferior, para indicar que el comprobante recibió un pago parcial.
 {% endhint %}
 
-Información de los campos que componen el **bloque "pagos"**
+### Información de los campos que componen el **bloque "pagos"**
 
 | nombre del campo | Requerido | Detalle                                                                                                  |
 | ---------------- | --------- | -------------------------------------------------------------------------------------------------------- |
 | formas\_pago     | SI        | array con multiples items, según estructura que se detalla a continuación                                |
 | total            | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p> |
 
-Información de los campos que componen el **array de pagos > formas\_pago**
+### Información de los campos que componen el **array de  "formas\_pago"**
 
 | nombre del campo | Requerido | Detalle                                                                                                                                                                                 |
 | ---------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | descripcion      | SI        | El nombre del medio de pago elegido para cancelar el comprobante. 255 caracteres max. En caso que el medio de pago, no exista en nuestra plataforma, será dado de alta automáticamente. |
 | importe          | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                |
 
-Ejemplo del JSON a enviar.
+### Ejemplo del JSON a enviar.
 
 {% code title="JSON" %}
 ```
