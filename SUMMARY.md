@@ -37,7 +37,7 @@
 
 ## API v1 (OLD)
 
-* [Facturación por lotes (Async + programado + webhook)](api-v1-old/nuevo-comprobante-de-venta-async.md)
+* [Facturación por lotes v1](api-v1-old/nuevo-comprobante-de-venta-async.md)
 
 ***
 

@@ -1,60 +1,55 @@
-# Facturación por lotes (Async + programado + webhook)
+# Facturación por lotes v1
 
 {% hint style="info" %}
-Atencion! éste método está deshabilitado&#x20;
+Atencion! **éste método está deshabilitado**
 {% endhint %}
 
 {% swagger baseUrl="https://www.tusfacturas.com.ar/api" path="/v2/facturacion/lotes" method="post" summary="Facturación por Lotes" %}
 {% swagger-description %}
 Ten en cuenta que no podras enviar comprobantes de tipo E con ésta modalidad.Charset: UTF-8
 
-\
-
+\\
 
 Formato esperado: JSON
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="fecha_envio_inicial" type="string" %}
+{% swagger-parameter in="body" name="fecha_envio_inicial" type="string" required="false" %}
 La fecha a partir de cuando se quiere comenzar a enviar los comprobantes.
 
-\
-
+\\
 
 La fecha no puede ser inferior a hoy.
 
-\
-
+\\
 
 Si la fecha no es enviada se tomara la del día actual.
 
-\
-
+\\
 
 Importante: Ésta fecha NO sobre-escribe la fecha que se indica en cada comprobante. Tener en cuenta que AFIP no permite emitir comprobantes con menos de 10 días y si ya existe una fecha posterior. Ej. Emiti la factura con fecha (HOY) y luego envío a generar una factura con fecha (AYER). retornará error desde AFIP.Formato esperado: dd/mm/aaaa
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="webhook_url" type="string" %}
+{% swagger-parameter in="body" name="webhook_url" type="string" required="false" %}
 La URL donde te notificaremos de cada comprobante que se ha generado. Formato esperado: https://www.tudominio.com
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="requests" type="array" %}
+{% swagger-parameter in="body" name="requests" type="array" required="false" %}
 Según estructura de de cada item, detallado abajo.
 
-\
-
+\\
 
 Máximo de request que se recibirán por cada llamada: 500
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
@@ -117,13 +112,13 @@ Vas a recibir por POST un JSON con la siguiente estructura, para que puedas rela
 Ten en cuenta que dentro de la captura del webhook, deberás realizar las validaciones correspondientes desde tu lado (que apikey, apitoken, usertoken te correspondan, que el id de referencia se corresponda, etc)
 {% endhint %}
 
-### Estructura de  "requests"
+### Estructura de "requests"
 
 Requests es un array, que contiene cada uno de los comprobantes a emitir.
 
 El limite máx de request por llamada que esperamos recibir es 500.
 
-La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar ([comprobantes de tipo A](../api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](../api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](../api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](../api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)) con la salvedad de que debe agregarse el campo `facturacion_lote_id_referencia`, dentro de la [estructura JSON de "comprobante" ](../api-factura-electronica-afip-facturacion-nuevo-comprobante/#ejemplo-de-json-que-debes-enviar) y el campo `numero` debe ser enviado en cero, de modo que se genere la numeración correlativa a medida que se procesa. **No podrás enviar comprobantes de tipo E en ésta modalidad.**
+La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar ([comprobantes de tipo A](../api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](../api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](../api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](../api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)) con la salvedad de que debe agregarse el campo `facturacion_lote_id_referencia`, dentro de la [estructura JSON de "comprobante" ](../api-factura-electronica-afip-facturacion-nuevo-comprobante/#ejemplo-de-json-que-debes-enviar)y el campo `numero` debe ser enviado en cero, de modo que se genere la numeración correlativa a medida que se procesa. **No podrás enviar comprobantes de tipo E en ésta modalidad.**
 
 #### Validaciones que realizamos en ésta etapa:
 
@@ -131,7 +126,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 * Que no se envien más de 500 requests por llamada.
 * Las credenciales de acceso enviadas en cada request deben corresponder con las suyas.
 * Dentro de cada request, el campo "numero" del comprobante, debe estar en cero.
-* Dentro de cada request, el comprobante  debe recibir un valor para facturacion\_lote\_id\_referencia con contenido. TusFacturas NO validará si el mismo se encuentra duplicado.
+* Dentro de cada request, el comprobante debe recibir un valor para facturacion\_lote\_id\_referencia con contenido. TusFacturas NO validará si el mismo se encuentra duplicado.
 * No validamos en ésta etapa, que el comprobante tenga todos los datos válidos.
 
 #### ¿Que pasa si un comprobante tiene error?
@@ -333,11 +328,11 @@ Saltea el comprobante y continúa con el siguiente dado que los comprobantes que
 
 Por ej si enviaste un lote de 5 facturas , con diferente fecha, y se fueron procesando en el orden enviado, con el siguiente estado:
 
-* Factura 1  (10/01/2018) - PROCESADA Y FACTURADA
-* Factura 2  (10/01/2018) - PROCESADA Y FACTURADA
-* Factura 3  (15/01/2018) - PROCESADA CON ERROR
-* Factura 4  (16/01/2018) - PROCESADA Y FACTURADA
-* Factura 5  (18/01/2018) - PENDIENTE
+* Factura 1 (10/01/2018) - PROCESADA Y FACTURADA
+* Factura 2 (10/01/2018) - PROCESADA Y FACTURADA
+* Factura 3 (15/01/2018) - PROCESADA CON ERROR
+* Factura 4 (16/01/2018) - PROCESADA Y FACTURADA
+* Factura 5 (18/01/2018) - PENDIENTE
 
 Cuando se reintente procesar la FACTURA 3, la AFIP va a retornar error, ya que se HA emitido una factura con fecha posterior.
 
