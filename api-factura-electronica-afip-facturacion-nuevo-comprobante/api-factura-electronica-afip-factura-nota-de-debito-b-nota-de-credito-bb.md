@@ -10,7 +10,7 @@ description: >-
 A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
 
 {% hint style="info" %}
-Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
+
 {% endhint %}
 
 ```
@@ -72,16 +72,23 @@ Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, 
 }
 ```
 
+### Datos a tener en cuenta:
+
 {% hint style="info" %}
-Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
+* Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
+* Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
 
-* Nro de documento = "0"&#x20;
-* Tipo de documento = "OTRO"
-* En nombre, lo que tu contador/a te recomiende.&#x20;
+&#x20;               Nro de documento = "0"
 
-Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos (En Marzo 2021 el tope es de $20,932.- , pero éste valor puede sufrir modificaciones).
+&#x20;              Tipo de documento = "OTRO"
 
-&#x20;Consultanos el valor actualizado a  tusfacturas@vousys.com&#x20;
+&#x20;              En nombre, lo que tu contador/a te recomiende.
+
+&#x20;    Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos.        &#x20;
+
+&#x20;     Consultá diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](../api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+
+
 {% endhint %}
 
 ### Ejemplo de llamada en PHP
@@ -104,6 +111,5 @@ echo "<p>Vencimiento del cae:".$json_rta_curl->vencimiento_cae."</p>";
 echo "<p>Comprobante pdf url:".$json_rta_curl->comprobante_pdf_url."</p>"; 
 echo "<p>error:". $json_rta_curl->error ."</p>"; 
 echo "<p>errores:". implode("," , $json_rta_curl->errores) ."</p>"; 
-
 
 ```
