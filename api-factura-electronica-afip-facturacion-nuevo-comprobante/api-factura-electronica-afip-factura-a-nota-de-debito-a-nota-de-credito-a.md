@@ -5,13 +5,19 @@ description: >-
   crédito  MiPyme A / Nota de débito  MiPyme A
 ---
 
-# API - Factura electrónica AFIP | Comprobantes de tipo A ( NC A)
+# API - Factura electrónica AFIP | Comprobantes de tipo A
+
+
+
+{% hint style="info" %}
+A partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._ **Éste dato no debe ser enviado en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.**
+{% endhint %}
+
+## Ejemplo de: NOTA DE CRÉDITO A
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que detalla los comprobantes asociados.
 
 Podés consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
-
-Ten en cuenta que a partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._ Éste dato no debe ser enviado en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.
 
 ```
 { "usertoken" :  "hagagay2y884e1405e26c03c85", 
@@ -98,6 +104,78 @@ Ten en cuenta que a partir del 01-07-2021, todo comprobante A que se emita a un 
 }
  
 ```
+
+## Ejemplo de FACTURA A&#x20;
+
+A continuación podrás ver un ejemplo del JSON para emitir una FACTURA A.
+
+```
+{ "usertoken" :  "hagagay2y884e1405e26c03c85", 
+ "apikey"    :  "1234", 
+ "apitoken"  :  "asduasuya81238173189378921378",
+ 
+"cliente": 
+    {
+         "documento_tipo":       "CUIT", 
+         "documento_nro":        "30712293841", 
+         "razon_social":         "VOUSYS", 
+         "email":                "tusfacturas@vousys.com", 
+         "domicilio":            "AV.LIBERTADOR 571", 
+         "provincia":            "2", 
+         "envia_por_mail":       "S", 
+         "condicion_pago":       "211", 
+         "condicion_iva":        "RI" 
+    },
+ 
+"comprobante": 
+    {    "fecha":                    "20/03/2018", 
+         "tipo":                     "FACTURA A", 
+         "operacion":                "V", 
+         "punto_venta":              "0002", 
+         "numero":                   "00000012", 
+         "periodo_facturado_desde":  "28/02/2018", 
+         "periodo_facturado_hasta":  "28/02/2018", 
+         "rubro":                    "Alimentos", 
+         "rubro_grupo_contable":     "Alimentos",
+
+"detalle":
+             [
+                  {
+                     "cantidad":     "1", 
+                     "producto":     
+                         {
+                         "descripcion":     "EXENTO - AVENA INSTANTANEA x5 kg. al 21", 
+                         "unidad_bulto":     "1", 
+                         "lista_precios":     "Lista de precios API 3", 
+                         "codigo":     "16098", 
+                         "precio_unitario_sin_iva":     "100",
+                         "alicuota": "21"
+                         },
+                     "leyenda":     "Enviadas en cajas separadas"
+                 }                   
+  
+             ],
+         "bonificacion":             "0.00", 
+         "leyenda_gral":             " ", 
+         "percepciones_iibb":        "0",
+         "percepciones_iibb_base":   "0",
+         "percepciones_iibb_alicuota": "0",
+         "percepciones_iva":         "0",
+         "percepciones_iva_base":    "0",
+         "percepciones_iva_alicuota": "0",
+         "exentos":                  "0",
+         "impuestos_internos":       "0",
+         "impuestos_internos_base":   "0",
+         "impuestos_internos_alicuota": "0",
+         "total":                    "121" ,
+          "comprobantes_asociados": []         
+         
+    } 
+}
+ 
+```
+
+}
 
 ### Ejemplo de llamada en PHP
 
