@@ -18,8 +18,6 @@ Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir fa
 
 Al utilizar éste servicio, los comprobantes que emitas, impactaran de inmediato en nuestra plataforma y obtendrás la respuesta al instante (siempre y cuando los servicios de AFIP se encuentren funcionando).
 
-
-
 {% hint style="danger" %}
 Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰.
 {% endhint %}
@@ -582,8 +580,14 @@ Si el producto ya existía en la base de datos de nuestra plataforma, para la li
 }
 ```
 
+### Datos a tener en cuenta:
+
 {% hint style="info" %}
-Recuerda que las facturas C, no llevan IVA y debes enviar cada concepto con su precio final; sin embargo las facturas A y B deben enviarse siempre SIN IVA. Las facturas B llevan IVA siempre, solo que tu cliente no lo puede discriminar.
+* Si el producto ya existía en tu base de productos de nuestra plataforma ( se valida que sea la misma lista de precios, código de producto y/o descripción del mismo), el mismo será actualizado por completo, con los nuevos datos que envíes, solo  si indicas que deseas actualizar el precio con el campo "actualiza\_precio":"S".  En caso de no querer actualizar el producto, si el mismo ya existía, se facturará con el nuevo precio y descripción que envíes, pero mantendrá sus datos anteriores.
+* Si el comprobante que envias a facturar es de tipo C, todos sus productos no deben llevar IVA, y debes enviar cada concepto con su precio final
+* Si el comprobante que envías, es de tipo A o B, los productos o servicios que envíes a facturar, deben ser enviados siempre SIN IVA, porque el IVA se calcula del lado de nuestra plataforma en base al campo "alicuota" que envías. Conocé más de los tipos de comprobantes, [desde aquí ](que-tipos-de-comprobante-debo-puedo-emitir.md)
+* En caso que alguno de tus conceptos cuente con un signo porcentual (%) en el nombre (ej:  Promo 20% OFF)  deberás reemplazarlo por los siguientes caracteres: **#\&#**&#x20;
+* En caso que alguno de tus conceptos cuente con una nueva línea, en su nombre, o porque deba imprimirse en 2 líneas, deberás generar el salto de línea donde desees, ingresando los caracteres:  **#@#**&#x20;
 {% endhint %}
 
 Los campos que debes enviar son los siguientes:
@@ -599,10 +603,6 @@ Los campos que debes enviar son los siguientes:
 | `actualiza_precio`            | Indica si se actualiza el precio del producto y sus datos adicionales (como ser la unidad de medida, código, unidades por bulto y otros datos adicionales), tomando como valor de referencia,la información enviada en el comprobante. Campo Alfabético, de 1 caracter. Valores permitidos: S (si) N (no). **Ejemplo: S** |
 | `impuestos_internos_alicuota` | La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numerico, con 2 decimales. ej: 10.5                                                                                                                                                                                                  |
 |                               |                                                                                                                                                                                                                                                                                                                           |
-
-{% hint style="info" %}
-En caso que quieras reflejar en los comprobantes generados, un signo de porcentaje (%), deberás enviarlo en la descripción del producto de ésta manera: **#\&#** , asi como si quisieras que parte de esa descripción del producto se imprima en otra linea, deberás enviar: **#@#**
-{% endhint %}
 
 ### Estructura de "Comprobantes Asociados"
 
