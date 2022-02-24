@@ -4,7 +4,7 @@ description: >-
   NOTA DE DÉBITO E, NOTA DE CRÉDITO E.
 ---
 
-# API - Factura electrónica AFIP | Comprobantes de tipo E (Factura de exportación)
+# API - Factura electrónica AFIP | Comprobantes de tipo E (comprobantes de exportación)
 
 A continuación te mostramos la estructura de los datos que se requieren para generar un comprobante de tipo exportación, ya sea NC, ND o FACTURA.
 
@@ -15,32 +15,35 @@ Al final del documento encontrarás un ejemplo completo de comprobante de export
 Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del campo "**comprobante**", un campo adicional llamado: "**fex**", con la siguiente estructura :
 
 ```
-{
-        "permisos_tiene"      : "S" ,
-        "fecha_pago"          : "12/10/2019",
-        "tipo_exportacion"    : "2",
-        "pais_comprobante_id" : "123",
-        "forma_pago_leyenda"  : "Payment via paypal 30 days ",
-        "cliente_pais_cuit"   : "50000000016",
-        "incoterms_tipo_id"   : "FOB",
-        "incoterms_nro"       : "AAAAGGGGGGGGGGGAAA ",
-        "permisos"    : [
-                            {
-                                "codigo_despacho"  :  "1234567890123456",
-                                 "pais_destino_id" :    "112"
-                            },
+{ 
 
-                            {
-                                "codigo_despacho"   :  "1234567890144456",
-                                 "pais_destino_id"  :    "123"
-                            },
+  "comprobante": { 
+        ..., 
+        "fex": {
+              "permisos_tiene"      : "S" ,
+              "fecha_pago"          : "12/10/2019",
+              "tipo_exportacion"    : "2",
+              "pais_comprobante_id" : "123",
+              "forma_pago_leyenda"  : "Payment via paypal 30 days ",
+              "cliente_pais_cuit"   : "50000000016",
+              "incoterms_tipo_id"   : "FOB",
+              "incoterms_nro"       : "AAAAGGGGGGGGGGGAAA ",
+              "permisos"    : [
+                                  {
+                                      "codigo_despacho"  :  "1234567890123456",
+                                       "pais_destino_id" :    "112"
+                                  },
 
-                             {
-                                "codigo_despacho"   :    "4444567890123456",
-                                 "pais_destino_id"  :    "145"
-                            }
-                        ],
-       "comprobantes_asociados": [
+                                  {
+                                      "codigo_despacho"   :  "1234567890144456",
+                                       "pais_destino_id"  :    "123"
+                                  },
+                                   {
+                                      "codigo_despacho"   :    "4444567890123456",
+                                       "pais_destino_id"  :    "145"
+                                  }
+                              ],
+              "comprobantes_asociados": [
                             {
                                 "tipo_comprobante"   :    "NOTA DE CREDITO E",
                                  "punto_venta"  :    "145",
@@ -49,6 +52,7 @@ Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del
                                  "cuit": 30111222334     
                             } 
                        ]
+      }
 }
 ```
 

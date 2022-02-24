@@ -9,7 +9,7 @@
   * [API - Factura electrónica AFIP | Comprobantes de tipo A](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
   * [API - Factura electrónica AFIP | Comprobantes de tipo B](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)
   * [API - Factura electrónica AFIP | Comprobantes de tipo C](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)
-  * [API - Factura electrónica AFIP | Comprobantes de tipo E (Factura de exportación)](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)
+  * [API - Factura electrónica AFIP | Comprobantes de tipo E (comprobantes de exportación)](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)
   * [API Factura electrónica AFIP | Factura de Crédito Electrónica MiPyme (FCE)](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)
   * [¿Qué tipos de comprobante debo/puedo emitir?](api-factura-electronica-afip-facturacion-nuevo-comprobante/que-tipos-de-comprobante-debo-puedo-emitir.md)
   * [API Factura electrónica AFIP | ¿Cómo se si emitir una factura mipyme o una común?](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-or-como-se-si-emitir-una-factura-mipyme-o-una-comun.md)
