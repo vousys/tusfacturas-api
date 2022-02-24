@@ -4,17 +4,30 @@ description: >-
   comprobantes de venta desde tu sistema actual.
 ---
 
-# API Factura electrónica AFIP | Comprobantes: Facturación individual de nueva venta
+# API Factura electrónica AFIP | Comprobantes: Facturación individual e instantánea
+
+Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md)
+
+En TusFacturasAPP, contamos con 2 modalidades para la emisión de comprobantes:
+
+* Facturas individuales instantáneas: donde envías un solo request para ser procesado y obtenes la respuesta al instante.
+* Lote de facturas instantáneas: donde envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante. Conocé más sobre la [facturación electrónica en lotes, aquí.](../api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
 
 {% hint style="info" %}
 **ATENCIÓN!** A partir de marzo 2022, éste servicio se modificará para brindarte una solución con muchas más herramientas. Consultanos para más información
 {% endhint %}
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md)
+## ¿Qué puedo facturar?
 
-## Métodos disponibles para emitir un comprobante.
+Podes enviar a facturar cualquier tipo de comprobante A,B,C,E, M y comprobantes de tipo "MiPyme, ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.
 
-### Facturación instantánea
+&#x20;¿No sabes qué [tipo de comprobante debes emitir](que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md)
+
+Tenés alguna duda del servicio? checkea las [API FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los canales de atención que tenemos disponibles en la plataforma web [www.tusfacturas.app](https://www.tusfacturas.app)
+
+
+
+## Métodos disponibles: **Facturación instantánea individual**
 
 Al utilizar éste servicio, los comprobantes que emitas, impactaran de inmediato en nuestra plataforma y obtendrás la respuesta al instante (siempre y cuando los servicios de AFIP se encuentren funcionando).
 
@@ -22,7 +35,7 @@ Al utilizar éste servicio, los comprobantes que emitas, impactaran de inmediato
 Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰.
 {% endhint %}
 
-A continuación te mostramos la estructura que debe tener el JSON que envíes:
+A donde debes enviar el request:&#x20;
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/nuevo" method="post" summary="Nuevo comprobante de Venta" %}
 {% swagger-description %}

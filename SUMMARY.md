@@ -5,7 +5,7 @@
 * [Autenticación](api-factura-electronica-afip-autenticacion.md)
 * [Plugins y SDKs](api-factura-electronica-afip-plugins-y-sdks.md)
 * [Estado de los servicios AFIP](api-factura-electronica-afip-estado-de-los-servicios-afip.md)
-* [API Factura electrónica AFIP | Comprobantes: Facturación individual de nueva venta](api-factura-electronica-afip-facturacion-nuevo-comprobante/README.md)
+* [API Factura electrónica AFIP | Comprobantes: Facturación individual e instantánea](api-factura-electronica-afip-facturacion-nuevo-comprobante/README.md)
   * [API - Factura electrónica AFIP | Comprobantes de tipo A](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
   * [API - Factura electrónica AFIP | Comprobantes de tipo B](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)
   * [API - Factura electrónica AFIP | Comprobantes de tipo C](api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)
