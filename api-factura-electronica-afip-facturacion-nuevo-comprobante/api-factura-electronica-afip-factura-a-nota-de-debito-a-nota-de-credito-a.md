@@ -7,10 +7,12 @@ description: >-
 
 # API - Factura electrónica AFIP | Comprobantes de tipo A
 
-
+## Datos a tener en cuenta:
 
 {% hint style="info" %}
 A partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._ **Éste dato no debe ser enviado en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.**
+
+No sabes en que momento emitir comprobantes de tipo **A**? Consultá [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante A.&#x20;
 {% endhint %}
 
 ## Ejemplo de: NOTA DE CRÉDITO A
