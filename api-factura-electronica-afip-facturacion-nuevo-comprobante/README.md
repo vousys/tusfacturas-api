@@ -10,7 +10,7 @@ Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir fa
 
 En TusFacturasAPP, contamos con 2 modalidades para la emisión de comprobantes:
 
-* Facturas individuales instantáneas: donde envías un solo request para ser procesado y obtenes la respuesta al instante.
+* Facturas individuales instantáneas: donde envías un solo request para ser procesado y obtenes la respuesta al instante (se detalla a continuación).
 * Lote de facturas instantáneas: donde envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante. Conocé más sobre la [facturación electrónica en lotes, aquí.](../api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
 
 {% hint style="info" %}
@@ -27,9 +27,9 @@ Tenés alguna duda del servicio? checkea las [API FAQs](../faqs-or-preguntas-fre
 
 
 
-## Métodos disponibles: **Facturación instantánea individual**
+## **Facturación instantánea individual**
 
-Al utilizar éste servicio, los comprobantes que emitas, impactaran de inmediato en nuestra plataforma y obtendrás la respuesta al instante (siempre y cuando los servicios de AFIP se encuentren funcionando).
+Al utilizar éste servicio, los comprobantes que emitas, impactarán de inmediato en nuestra plataforma y obtendrás la respuesta al instante (siempre y cuando los servicios de AFIP se encuentren funcionando).
 
 {% hint style="danger" %}
 Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰.
@@ -516,7 +516,7 @@ Tené en cuenta, que solo podrás facturar sin indicar el documento del comprado
 
 | **`documento_tipo`**  | <p>Valores Permitidos: <strong>CUIT , DNI, PASAPORTE, OTRO</strong><br><strong>Ejemplo: DNI</strong></p>                                                                                                                                                                                 |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `documento_nro`       | <p>Campo numérico, sin puntos ni guiones.</p><p>Para casos de clientes del exterior, que posean <strong>pasaporte</strong>, ten en cuenta que AFIP solo permite el envío de números.<br><strong>Ejemplo: 30111222334</strong></p>                                                        |
+| `documento_nro`       | <p>Campo numérico, sin puntos ni guiones.</p><p>Para casos de clientes del exterior, que posean <strong>pasaporte</strong>, ten en cuenta que AFIP solo permite el envío de números. Longitud máxima: 11 digitos.<br><strong>Ejemplo: 30111222334</strong></p>                           |
 | `razon_social`        | <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Pirulo S.A</strong></p>                                                                                                                                                                                       |
 | `email`               | <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: tusfacturas@vousys.com</strong></p>                                                                                                                                                                           |
 | `domicilio`           | <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Av. Santa Fe 123</strong></p>                                                                                                                                                                                 |
