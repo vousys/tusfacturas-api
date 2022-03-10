@@ -5,7 +5,7 @@ description: >-
   por e-mail.
 ---
 
-# API Factura electrónica AFIP | Reenviar comprobante
+# Reenviar comprobante a un cliente
 
 Tipo de datos: **JSON**\
 Charset: **UTF-8**
@@ -15,57 +15,33 @@ Charset: **UTF-8**
 Mediante éste método podrás hacer el reenvío de un comprobante a tu cliente.
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="comprobante" required="true" %}
-**tipo:**
+{% swagger-parameter in="body" name="comprobante" required="false" %}
+Un objeto compuesto de los siguientes atributos: ****&#x20;
 
-    Campo numérico según tabla de referencia de Tipos de comprobantes(***). Ejemplo: FACTURA B 
+**tipo:** Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A&#x20;
 
-\
+**operacion :** Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.
 
+**punto\_venta** Campo númerico para indicar el número del punto de venta.
 
-
-
-**operacion:**
-
-    Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V  Ejemplo: V 
-
-\
-
-
-
-
-**punto_venta:**
-
-    Campo numérico entero. Longitud máxima 4 dígitos. Ejemplo: 3 
-
-\
-
-
-
-
-**numero:**
-
-    Campo numérico entero. Longitud máxima 8 digitos. Ejemplo: 4567 
-
-\
-
+**numero :** Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.
 
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" required="true" %}
-Tus credenciales de acceso.  
+{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
+Tus credenciales de acceso.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="true" %}
-Tus Credenciales de acceso.  
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="true" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
 Tus Credenciales de acceso.
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="En caso de respuesta exitosa el campo "error" retornará una "S" y en caso de error una "N" y dentro de errores, una lista con cada uno de los errores encontrados.La estructura de los datos devueltos es igual a la envidada para la generación de los comprobantes.A continuación se visualiza un ejemplo del JSON retornado para el comprobante consultado.Importante: -  Los campos numéricos son retornados como número, salvo el CAE y el CUIT-  Para comprobantes tipo B, el precio ya incluye la alícuota de IVA calculada." %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
+Tus Credenciales de acceso.
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="En caso de respuesta exitosa el campo " %}
 {% tabs %}
 {% tab title="JSON" %}
 ```

@@ -4,69 +4,33 @@ description: >-
   clientes.
 ---
 
-# API TusFacturas.app  - Clientes | Cuenta Corriente
+# Consulta de Cuentas Corrientes
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api" path="v2/clientes/cuenta-corriente" method="post" summary="Consulta de cuenta corriente" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="cliente" type="object" %}
-**documento_tipo**
+{% swagger-parameter in="body" name="cliente" type="object" required="false" %}
+**documento\_tipo**
 
-    Valores Permitidos: CUIT 
-
-\
-
-
-
-
-**documento_nro**
-
-    Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334
+**documento\_nro**
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
-
-{% swagger-response status="200" description="En caso de existir algún error, se retornará el campo "error" = "S" y dentro de "errores" una lista con todos los errores encontrados.
-" %}
-```
-{
-	"error": "N",
-	"errores": [""],
-	"rta": "OK",
-	"resultados": [{
-		"fecha": "11\/05\/2017",
-		"concepto": "FACTURA A 0002-00000001 (CUIT DE PRUEBA)",
-		"debe": 112.1,
-		"haber": 0,
-		"resta_abonar_de_este_comprobante": 112.1,
-		"saldo": 112.1
-	}, {
-		"fecha": "11\/05\/2017",
-		"concepto": "FACTURA A 0002-00000002 (CUIT DE PRUEBA)",
-		"debe": 112.1,
-		"haber": 0,
-		"resta_abonar_de_este_comprobante": 112.1,
-		"saldo": 224.2
-	}]
- 
-}
-```
-{% endswagger-response %}
 {% endswagger %}
 
-### Ejemplo del JSON que debes enviar&#x20;
+### Ejemplo del JSON que debes enviar
 
 ```
 {
@@ -88,7 +52,7 @@ Tus credenciales de acceso
 
 ### Estructura de los datos devueltos
 
-Se devolverá una lista, conteniendo la siguiente estructura,  con cada uno de los registros de la cuenta corriente de tu cliente.
+Se devolverá una lista, conteniendo la siguiente estructura, con cada uno de los registros de la cuenta corriente de tu cliente.
 
 ```
     {
@@ -100,4 +64,3 @@ Se devolverá una lista, conteniendo la siguiente estructura,  con cada uno de l
         "saldo":224.2
     }
 ```
-

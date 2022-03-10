@@ -16,7 +16,7 @@ Charset: **UTF-8**
 Mediante éste método podrás consultar la información asociada a un determinado comprobante.
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="comprobante" required="true" %}
+{% swagger-parameter in="body" name="comprobante" required="false" %}
 Un objeto compuesto de los siguientes atributos: ****&#x20;
 
 **tipo:** Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A&#x20;
@@ -30,15 +30,15 @@ Un objeto compuesto de los siguientes atributos: ****&#x20;
 
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" required="true" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
 Tus credenciales de acceso.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="true" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
 Tus Credenciales de acceso.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="true" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
 Tus Credenciales de acceso.
 {% endswagger-parameter %}
 {% endswagger %}
@@ -385,7 +385,7 @@ Mediante ésta consulta podrás obtener hasta 3,000 comprobantes por consulta y 
 Se deberá enviar el valor "TN"
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="comprobante" type="string" required="true" %}
+{% swagger-parameter in="body" name="comprobante" type="string" required="false" %}
 Se debera enviar un objeto con los siguientes atributos:
 
 
@@ -401,15 +401,15 @@ Se debera enviar un objeto con los siguientes atributos:
 **numero\_hasta**: Campo numérico entero. Longitud máxima 8 dígitos. Ejemplo: 4567
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="true" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="true" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" required="true" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
@@ -783,19 +783,19 @@ Mediante éste método podrás regenerar el archivos pdf.
 
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="true" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
 tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="true" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" required="true" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="comprobante" required="true" %}
+{% swagger-parameter in="body" name="comprobante" required="false" %}
 Un objeto compuesto de los siguientes atributos: ****&#x20;
 
 **tipo:** Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A&#x20;

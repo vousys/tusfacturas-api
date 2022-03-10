@@ -41,25 +41,7 @@ A donde debes enviar el request:&#x20;
 {% swagger-description %}
 Charset: UTF-8
 
-\\
-
-Tipo de dato esperado: JSON
-
-\\
-
-Tipo de envio: POST
-
-\\
-
-\\
-
-Éste método te permite generar comprobantes de venta, ya sea Facturas electrónicas AFIP, como Notas de débito o de crédito.
-
-\\
-
-Nuestra plataforma te permite emitir comprobantes de tipo A, B, C, E, M ya sean de factura electrónica AFIP como de Factura de crédito electrónica MiPyme AFIP.
-
-\\
+Tipo de dato esperado: JSON 
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="usertoken" type="string" required="false" %}

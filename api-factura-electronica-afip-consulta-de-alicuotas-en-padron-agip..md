@@ -16,23 +16,21 @@ Siempre es importante que re-confirmes con tus asesores impositivos si la alícu
 {% swagger-description %}
 El método te devolverá las alícuotas (en porcentaj) que le corresponden según AGIP.
 
-\\
 
-\\
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="cliente" type="object" required="false" %}
+Un objeto conteniendo los siguientes datos:
+
 **documento\_tipo**
 
 Valores Permitidos: CUIT , DNI Ejemplo: DNI
-
-\\
 
 **documento\_nro**
 
 Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334
 
-\\
+
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="usertoken" type="string" required="false" %}

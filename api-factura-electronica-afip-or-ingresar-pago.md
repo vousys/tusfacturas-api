@@ -5,39 +5,45 @@ description: >-
   cobros que capturas desde tu plataforma.
 ---
 
-# API Factura electrónica AFIP |  Ingresar pago
+# Ingresar pago a un comprobante emitido
 
 Los pagos que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
 
-{% hint style="info" %}
-Cosas a tener en cuenta:&#x20;
+## Datos a tener en cuenta
 
+{% hint style="info" %}
 * **NO** podrás enviar los siguientes medios de pago: cheques y detalle de retenciones.
 * Se realizara una validación del total que se indique, contra la sumatoria de los medios de pago detallados
 * El total de los pagos **NO** debe superar el importe total del comprobante, pero si puede ser inferior, para indicar que el comprobante recibió un pago parcial.
 {% endhint %}
-
-&#x20;
 
 {% swagger method="post" path="/v2/facturacion/pagar" baseUrl="https://www.tusfacturas.app/app/api" summary="Ingresar pagos a un comprobante emitido" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="apitoken" required="true" %}
+{% swagger-parameter in="body" name="apitoken" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" required="true" %}
+{% swagger-parameter in="body" name="apikey" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" required="true" %}
+{% swagger-parameter in="body" name="usertoken" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="comprobante" type="object" required="true" %}
-Según estructura que se detalla a continuación
+{% swagger-parameter in="body" name="comprobante" type="object" required="false" %}
+Un objeto compuesto de los siguientes atributos: ****&#x20;
+
+**tipo:** Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A&#x20;
+
+**operacion :** Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.
+
+**punto\_venta** Campo númerico para indicar el número del punto de venta.
+
+**numero :** Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.
 
 
 {% endswagger-parameter %}
@@ -95,17 +101,15 @@ Ejemplos de las respuestas JSON en caso de éxito o error
  
 ```
 
-
-
 ### Estructura del objeto "comprobante
 
-| Nombre del campo | Tipo de dato                                                                                                                                            |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tipo             | <p>Campo numérico según tabla de referencia de Tipos de comprobantes(***). </p><p>Ejemplo: FACTURA B</p>                                                |
-| punto\_venta     | <p>Campo numérico entero. </p><p>Longitud máxima 5 dígitos. </p><p>Ejemplo: 3</p>                                                                       |
-| numero           | <p>Campo numérico entero. </p><p>Longitud máxima 8 digitos. </p>                                                                                        |
-| operacion        | <p>Campo alfanumérico. </p><p>Longitud 1 carácter. </p><p>Indica si envía una factura de venta (V) o de compra (C). </p><p>Valores Permitidos: V   </p> |
-| pagos            | Según estructura que se detalla a continuación                                                                                                          |
+| Nombre del campo | Tipo de dato                                                                                                                                      |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tipo             | <p>Campo numérico según tabla de referencia de Tipos de comprobantes(***).</p><p>Ejemplo: FACTURA B</p>                                           |
+| punto\_venta     | <p>Campo numérico entero.</p><p>Longitud máxima 5 dígitos.</p><p>Ejemplo: 3</p>                                                                   |
+| numero           | <p>Campo numérico entero.</p><p>Longitud máxima 8 digitos.</p>                                                                                    |
+| operacion        | <p>Campo alfanumérico.</p><p>Longitud 1 carácter.</p><p>Indica si envía una factura de venta (V) o de compra (C).</p><p>Valores Permitidos: V</p> |
+| pagos            | Según estructura que se detalla a continuación                                                                                                    |
 
 ```
 {
@@ -121,19 +125,19 @@ Ejemplos de las respuestas JSON en caso de éxito o error
 }
 ```
 
-### Estructura del objeto pagos &#x20;
+### Estructura del objeto pagos
 
 | nombre del campo | Requerido | Detalle                                                                                                  |
 | ---------------- | --------- | -------------------------------------------------------------------------------------------------------- |
 | formas\_pago     | SI        | array con multiples items, según estructura que se detalla a continuación                                |
 | total            | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p> |
 
-Información de los campos que componen el **array de pagos > formas\_pago**&#x20;
+Información de los campos que componen el **array de pagos > formas\_pago**
 
-| nombre del campo | Requerido | Detalle                                                                                                                                                                                               |
-| ---------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| descripcion      | SI        | <p>El nombre del medio de pago elegido para cancelar el comprobante. 255 caracteres max. </p><p>En caso que el medio de pago, no exista en nuestra plataforma, será dado de alta automáticamente.</p> |
-| importe          | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                              |
+| nombre del campo | Requerido | Detalle                                                                                                                                                                                              |
+| ---------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| descripcion      | SI        | <p>El nombre del medio de pago elegido para cancelar el comprobante. 255 caracteres max.</p><p>En caso que el medio de pago, no exista en nuestra plataforma, será dado de alta automáticamente.</p> |
+| importe          | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                             |
 
 Ejemplo del JSON a enviar.
 
@@ -154,8 +158,6 @@ comprobante: {
 {% endcode %}
 
 ## Ejemplo del JSON completo a enviar
-
-
 
 ```
 {
@@ -181,4 +183,3 @@ comprobante: {
 }
  
 ```
-
