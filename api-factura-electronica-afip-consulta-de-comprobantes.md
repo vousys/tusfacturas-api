@@ -16,33 +16,29 @@ Charset: **UTF-8**
 Mediante éste método podrás consultar la información asociada a un determinado comprobante.
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="comprobante" required="false" %}
-**tipo:**
+{% swagger-parameter in="body" name="comprobante" required="true" %}
+Un objeto compuesto de los siguientes atributos: ****&#x20;
 
-\\
+**tipo:** Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A&#x20;
 
-**operacion:**
+**operacion :** Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.
 
-\\
+**punto\_venta** Campo númerico para indicar el número del punto de venta.
 
-**punto\_venta:**
+**numero :** Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.
 
-\\
 
-**numero:**
-
-\\
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="true" %}
 Tus credenciales de acceso.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="true" %}
 Tus Credenciales de acceso.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="true" %}
 Tus Credenciales de acceso.
 {% endswagger-parameter %}
 {% endswagger %}
@@ -169,17 +165,9 @@ Se deberá enviar el valor "F"
 {% swagger-parameter in="body" name="comprobante" type="object" required="false" %}
 Un objeto con los siguientes atributos:
 
-\\
+**fecha**: en formato dd/mm/aaaa
 
-**fecha**
-
-: en formato dd/mm/aaaa
-
-\\
-
-**operacion**
-
-: Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V
+**operacion**: Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
@@ -397,49 +385,31 @@ Mediante ésta consulta podrás obtener hasta 3,000 comprobantes por consulta y 
 Se deberá enviar el valor "TN"
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="comprobante" type="string" required="false" %}
+{% swagger-parameter in="body" name="comprobante" type="string" required="true" %}
 Se debera enviar un objeto con los siguientes atributos:
 
-\\
 
-**tipo**
 
-: Campo numérico según tabla de referencia de Tipos de comprobantes(
+**tipo**: Campo numérico según tabla de referencia de Tipos de comprobantes. Ejemplo: FACTURA B
 
-_\*_
+**operacion**: Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V
 
-). Ejemplo: FACTURA B
+**punto\_venta**: Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3
 
-\\
+**numero\_desde**: Campo numérico entero. Longitud máxima 8 digitos. Ejemplo: 4567
 
-**operacion**
-
-: Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V
-
-\\
-
-**punto\_venta**
-
-: Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3
-
-**numero\_desde**
-
-: Campo numérico entero. Longitud máxima 8 digitos. Ejemplo: 4567
-
-**numero\_hasta**
-
-: Campo numérico entero. Longitud máxima 8 dígitos. Ejemplo: 4567
+**numero\_hasta**: Campo numérico entero. Longitud máxima 8 dígitos. Ejemplo: 4567
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="true" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="true" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="true" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
@@ -813,32 +783,30 @@ Mediante éste método podrás regenerar el archivos pdf.
 
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="true" %}
 tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="true" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="true" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="comprobante" required="false" %}
-**tipo**
+{% swagger-parameter in="body" name="comprobante" required="true" %}
+Un objeto compuesto de los siguientes atributos: ****&#x20;
 
-\\
+**tipo:** Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A&#x20;
 
-**operacion**
+**operacion :** Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.
 
-\\
+**punto\_venta** Campo númerico para indicar el número del punto de venta.
 
-**punto\_venta**
+**numero :** Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.
 
-\\
 
-**numero**
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Regenera el PDF y te devuelve la URL del archivo" %}
@@ -851,7 +819,7 @@ Tus credenciales de acceso
 {% endswagger-response %}
 {% endswagger %}
 
-### Ejemplo del JSON a enviar para regenerar el pdf
+### Ejemplo del JSON a enviar para re-generar el pdf
 
 {% code title="JSON" %}
 ```
