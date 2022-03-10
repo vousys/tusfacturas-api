@@ -4,7 +4,7 @@ description: >-
   alícuotas existentes en el padrón AGIP
 ---
 
-# API Factura electrónica AFIP  | Consulta de alícuotas en padrón AGIP.
+# Consultar las alícuotas, en padrón AGIP
 
 {% hint style="info" %}
 El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.
@@ -16,52 +16,39 @@ Siempre es importante que re-confirmes con tus asesores impositivos si la alícu
 {% swagger-description %}
 El método te devolverá las alícuotas (en porcentaj) que le corresponden según AGIP.
 
-\
+\\
 
-
- 
-
-\
-
-
-
+\\
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="cliente" type="object" %}
-**documento_tipo**
+{% swagger-parameter in="body" name="cliente" type="object" required="false" %}
+**documento\_tipo**
 
- Valores Permitidos: CUIT , DNI Ejemplo: DNI
+Valores Permitidos: CUIT , DNI Ejemplo: DNI
 
-\
+\\
 
+**documento\_nro**
 
+Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334
 
-
-**documento_nro**
-
- Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334
-
-\
-
-
-
+\\
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
 Tus credenciales de acceso.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
 Tus credenciales de acceso.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="En caso de no existir errores, se devolverá la variable error con un valor "N" ademas de las variables que enunciamos a continuación." %}
+{% swagger-response status="200" description="En caso de no existir errores, se devolverá la variable error con un valor " %}
 ```
-
 Ejemplo de cuando existe en padron AGIP
 
 {
@@ -98,7 +85,6 @@ Ejemplo de cuando NO existe en tu base de clientes
    "alicuota_percepcion": 0,
    "alicuota_retencion":  0,
 }
-
 
 
 

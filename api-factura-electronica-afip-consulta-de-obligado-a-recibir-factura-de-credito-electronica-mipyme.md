@@ -5,12 +5,12 @@ description: >-
   electrónica MiPyme.
 ---
 
-# API Factura electrónica |  Esta obligado a recibir Factura de Crédito electrónica MiPyme?
+# Consulta de obligado a recibir Factura de Crédito electrónica MiPyme
 
 {% hint style="info" %}
 El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.
 
-IMPORTANTE: Para poder realizar ésta consulta,  deberás tener agregado en tu cuenta AFIP, el servicio de "**Webservice Registro de Facturas de Crédito Electrónica MiPyMEs "** . Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 6 ](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
+IMPORTANTE: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP, el servicio de "**Webservice Registro de Facturas de Crédito Electrónica MiPyMEs "** . Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 6](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
 {% endhint %}
 
 {% swagger baseUrl="https://www.tusfacturas.app/app" path="/api/v2/facturacion/requiere_fec" method="post" summary="Consulta de obligado a recibir MiPyme" %}
@@ -18,29 +18,26 @@ IMPORTANTE: Para poder realizar ésta consulta,  deberás tener agregado en tu c
 Éste método te devolverá si tu cliente se encuentra obligado a recibir facturas de tipo MiPyme y a partir de que monto se encuentra obligado.
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="fecha" type="string" %}
+{% swagger-parameter in="body" name="fecha" type="string" required="false" %}
 La fechad de emisión del comprobante en cuestión. Formato esperado: dd/mm/aaaa
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="cuit" type="number" %}
+{% swagger-parameter in="body" name="cuit" type="number" required="false" %}
 El CUIT de tu cliente. Campo numérico de 11 digitos
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="number" %}
+{% swagger-parameter in="body" name="apikey" type="number" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
 Tus credenciales de acceso
 
-\
-
-
-
+\\
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
@@ -65,7 +62,6 @@ como la siguiente:
 	"errores": ["El CUIT enviado INF es invalido."],
 	"rta": "", 
 }
-
 
 
 
@@ -108,5 +104,4 @@ En caso de detectar errores:
 	"errores": ["El CUIT enviado INF es invalido."],
 	"rta": "", 
 }
-
 ```

@@ -5,7 +5,7 @@ description: >-
   crédito  MiPyme B / Nota de débito  MiPyme B
 ---
 
-# API - Factura electrónica AFIP | Comprobantes de tipo B
+# Ejemplos de comprobantes tipo "B"
 
 A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
 
@@ -53,16 +53,16 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
 		"cotizacion": 1,
 		"moneda": "PES",
 		"punto_venta": 3,
-    "percepciones_iibb":        "0",
-    "percepciones_iibb_base":   "0",
-    "percepciones_iibb_alicuota": "0",
-    "percepciones_iva":         "0",
-    "percepciones_iva_base":    "0",
-    "percepciones_iva_alicuota": "0",
-    "exentos":                  "0", 
-    "impuestos_internos":       "0",
-    "impuestos_internos_base":   "0",
-    "impuestos_internos_alicuota": "0" 
+    		"percepciones_iibb":        "0",
+    		"percepciones_iibb_base":   "0",
+    		"percepciones_iibb_alicuota": "0",
+    		"percepciones_iva":         "0",
+    		"percepciones_iva_base":    "0",
+   		 "percepciones_iva_alicuota": "0",
+    		"exentos":                  "0", 
+    		"impuestos_internos":       "0",
+   		 "impuestos_internos_base":   "0",
+    		"impuestos_internos_alicuota": "0" 
 	},
 	"usertoken": "a7ahdt5sdddddd7725d7fa4f4e63646bc169b"
 }
@@ -83,7 +83,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
 
 &#x20;    Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos.        &#x20;
 
-&#x20;     Consultá diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](../api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+&#x20;     Consultá diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
 
 
 {% endhint %}
