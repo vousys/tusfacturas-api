@@ -117,16 +117,16 @@ Los datos devueltos por éste método mantienen la misma estructura que los envi
 		"subtotal_2": 75,
 		"iva_alicuota_2": 10.5,
 		"leyenda_gral": "bla bla bla",
-        "percepciones_iibb":        "0",
-        "percepciones_iibb_base":   "0",
-        "percepciones_iibb_alicuota": "0",
-        "percepciones_iva":         "0",
-        "percepciones_iva_base":    "0",
-        "percepciones_iva_alicuota": "0",
-     	"exentos":                  "0",
-        "impuestos_internos":       "0",
-        "impuestos_internos_base":   "0",
-        "impuestos_internos_alicuota": "0" ,
+        	"percepciones_iibb":        "0",
+        	"percepciones_iibb_base":   "0",
+        	"percepciones_iibb_alicuota": "0",
+        	"percepciones_iva":         "0",
+        	"percepciones_iva_base":    "0",
+        	"percepciones_iva_alicuota": "0",
+     		"exentos":                  "0",
+        	"impuestos_internos":       "0",
+        	"impuestos_internos_base":   "0",
+        	"impuestos_internos_alicuota": "0" ,
 		"nogravados": 0,
 		"total": 543.21,
 		"cae": "65301278726386 ",
@@ -479,7 +479,7 @@ A partir del 01/05/2022, está consultá comenzará a ser paginada, con un lími
 } 
 ```
 
-## ¿Cómo realizar una consulta avanzada, por external reference?
+### ¿Cómo realizar una consulta avanzada, por external reference?
 
 Ésta búsqueda te permite obtener todos los comprobantes, de una determinada external\_reference.&#x20;
 
