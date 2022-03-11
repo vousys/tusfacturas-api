@@ -1,5 +1,9 @@
 # Changelog
 
+## 11 de marzo de 2022
+
+Se modifica la documentación de la consulta de comprobantes individual y avanzada. Se agrega el método de consulta por "external\_reference" a partir del 01/04/2022 y se agrega la paginación a la consulta avanzada, a partir del 01/05/2022.
+
 ## 07 de febrero de 2022
 
 Nuevo comprobante de venta: Se agrega el campo "external\_reference" dentro del bloque "comprobante" para que puedas referenciar cada comprobante en tu sistema, ya sea si lo envías por lotes o individuales.
