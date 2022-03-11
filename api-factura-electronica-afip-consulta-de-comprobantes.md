@@ -46,13 +46,29 @@ Tus Credenciales de acceso.
 | `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
 | `numero`      | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
 
+#### Ejemplo de JSON a enviar :
+
+```
+{
+"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
+"apikey"    :  "9991",
+"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
+"comprobante":  {
+                "tipo":                     "NOTA DE DEBITO B",
+                "operacion":                "V",
+                "punto_venta":              "2",
+                "numero":                   "6"
+        }
+}
+```
+
 
 
 {% hint style="info" %}
 Los datos devueltos por éste método mantienen la misma estructura que los enviados para generar un comprobante.
 {% endhint %}
 
-### Ejemplo del JSON de respuesta:
+#### Ejemplo del JSON de respuesta:
 
 ```
 {
@@ -140,21 +156,7 @@ Los datos devueltos por éste método mantienen la misma estructura que los envi
 }
 ```
 
-### Ejemplo de JSON a enviar :
-
-```
-{
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
-"apikey"    :  "9991",
-"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
-"comprobante":  {
-                "tipo":                     "NOTA DE DEBITO B",
-                "operacion":                "V",
-                "punto_venta":              "2",
-                "numero":                   "6"
-        }
-}
-```
+####
 
 ## Consulta avanzada de comprobantes&#x20;
 
@@ -166,7 +168,7 @@ Podrás buscar por:
 2. &#x20;Todos los comprobantes de un mismo tipo (Ej: FACTURA A ) entre un determinado rango numerico (Ej: 00000010 al 00000050). [ ](api-factura-electronica-afip-consulta-de-comprobantes.md#como-realizar-una-consulta-avanzada-por-rango-de-numeros):arrow\_right:
 3. Todos los comprobantes de una misma external reference  ( :calendar\_spiral:disponible desde 01/04/2022)  :arrow\_right: &#x20;
 
-
+#### Cómo llamar a la API?
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta_avanzada" method="post" summary="Consulta de comprobantes avanzada" %}
 {% swagger-description %}
