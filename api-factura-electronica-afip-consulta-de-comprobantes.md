@@ -168,9 +168,9 @@ Podrás buscar por:
 
 
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta_avanzada" method="post" summary="Consulta de comprobantes por fecha" %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta_avanzada" method="post" summary="Consulta de comprobantes avanzada" %}
 {% swagger-description %}
-
+Estructura general para todo tipo de consulta avanzada
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="busqueda_tipo" type="string" required="false" %}
@@ -280,16 +280,16 @@ Ej:
 			"subtotal_2": 75,
 			"iva_alicuota_2": 10.5,
 			"leyenda_gral": "bla bla bla",
-	        "percepciones_iibb":        "0",
-	        "percepciones_iibb_base":   "0",
-	        "percepciones_iibb_alicuota": "0",
-	        "percepciones_iva":         "0",
-	        "percepciones_iva_base":    "0",
-	        "percepciones_iva_alicuota": "0",
-	     	"exentos":                  "0",
-	        "impuestos_internos":       "0",
-	        "impuestos_internos_base":   "0",
-	        "impuestos_internos_alicuota": "0" ,
+	        	"percepciones_iibb":        "0",
+	       		"percepciones_iibb_base":   "0",
+	        	"percepciones_iibb_alicuota": "0",
+	        	"percepciones_iva":         "0",
+	        	"percepciones_iva_base":    "0",
+	        	"percepciones_iva_alicuota": "0",
+	     		"exentos":                  "0",
+	        	"impuestos_internos":       "0",
+	        	"impuestos_internos_base":   "0",
+	        	"impuestos_internos_alicuota": "0" ,
 			"nogravados": 0,
 			"total": 543.21,
 			"cae": "65301278726386 ",
@@ -360,16 +360,16 @@ Ej:
 			"subtotal_2": 75,
 			"iva_alicuota_2": 10.5,
 			"leyenda_gral": "bla bla bla",
-	        "percepciones_iibb":        "0",
-	        "percepciones_iibb_base":   "0",
-	        "percepciones_iibb_alicuota": "0",
-	        "percepciones_iva":         "0",
-	        "percepciones_iva_base":    "0",
-	        "percepciones_iva_alicuota": "0",
-	     	"exentos":                  "0",
-	        "impuestos_internos":       "0",
-	        "impuestos_internos_base":   "0",
-	        "impuestos_internos_alicuota": "0" ,
+	        	"percepciones_iibb":        "0",
+	        	"percepciones_iibb_base":   "0",
+	        	"percepciones_iibb_alicuota": "0",
+	        	"percepciones_iva":         "0",
+	        	"percepciones_iva_base":    "0",
+	        	"percepciones_iva_alicuota": "0",
+	     		"exentos":                  "0",
+	        	"impuestos_internos":       "0",
+	        	"impuestos_internos_base":   "0",
+	        	"impuestos_internos_alicuota": "0" ,
 			"nogravados": 0,
 			"total": 543.21,
 			"cae": "65301278726386 ",
