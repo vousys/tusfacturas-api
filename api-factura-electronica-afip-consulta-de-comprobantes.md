@@ -1,31 +1,25 @@
 ---
 description: >-
-  Utilizá la API de facturación electrónica de TusFacturas.app, para consultar y
-  generar nuevamente el PDF de tus comprobantes.
+  Utilizá la API de facturación electrónica de TusFacturas.app, para consultar
+  los comprobantes emitidos desde la plataforma.
 ---
 
-# Consulta de comprobantes y re-armado de PDF
+# Consulta de comprobantes
 
-## Consulta individual de un comprobante
+## 1. Consulta individual de un comprobante
+
+Mediante éste método, podrás consultar la información asociada a un determinado comprobante.
 
 Tipo de datos: **JSON**\
 Charset: **UTF-8**
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/consulta " method="post" summary="Consulta individual de comprobante" %}
 {% swagger-description %}
-Mediante éste método podrás consultar la información asociada a un determinado comprobante.
+
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="comprobante" required="false" %}
-Un objeto compuesto de los siguientes atributos: ****&#x20;
-
-**tipo:** Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A&#x20;
-
-**operacion :** Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.
-
-**punto\_venta** Campo númerico para indicar el número del punto de venta.
-
-**numero :** Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.
+{% swagger-parameter in="body" name="comprobante" required="false" type="object" %}
+Un objeto según estructura que se detalla a continuación.
 
 
 {% endswagger-parameter %}
@@ -42,6 +36,16 @@ Tus Credenciales de acceso.
 Tus Credenciales de acceso.
 {% endswagger-parameter %}
 {% endswagger %}
+
+### Estructura de "Comprobante":
+
+| `tipo`        | <p>Campo numérico según tabla de referencia de <a href="https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes">Tipos de comprobantes(***)</a>.<br><strong>Ejemplo: FACTURA B</strong></p> |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `operacion`   | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p>                                   |
+| `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
+| `numero`      | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
+
+
 
 {% hint style="info" %}
 Los datos devueltos por éste método mantienen la misma estructura que los enviados para generar un comprobante.
@@ -151,19 +155,35 @@ Los datos devueltos por éste método mantienen la misma estructura que los envi
 }
 ```
 
-## Consultar comprobantes por fecha
+## 2. Consulta avanzada de comprobantes&#x20;
+
+Mediante ésta consulta podrás obtener todos los comprobantes emitidos, según determinadas condiciones de búsqueda.
+
+Podrás buscar por:
+
+* [ ] a. Todos los comprobantes de una determinada fecha
+* [ ] b. Todos los comprobantes de un mismo tipo (Ej: FACTURA A ) entre un determinado rango numerico (Ej: 00000010 al 00000050)
+* [ ] c. Todos los comprobantes de una misma external reference  ( :calendar\_spiral:disponible desde abril 2022)&#x20;
+
+
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta_avanzada" method="post" summary="Consulta de comprobantes por fecha" %}
 {% swagger-description %}
-Mediante ésta consulta podrás obtener todos los comprobantes emitidos en una determinada fecha. La consulta está limitada a retornar como máximo 3,000 registros y la información obtenida será la relacionada al punto de venta desde el cual estás realizando la consulta.
+
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="busqueda_tipo" type="string" required="false" %}
-Se deberá enviar el valor "F"
+Campo alfanumérico.&#x20;
+
+Valores permitidos: "F", EXT\_REF", "TN"
+
+Se detalla a continuación como usarlo.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="comprobante" type="object" required="false" %}
-Un objeto con los siguientes atributos:
+Un objeto con cierta estructura acorde al tipo de busqueda a realizar. Se detalla a continuación.
+
+con los siguientes atributos:
 
 **fecha**: en formato dd/mm/aaaa
 
@@ -188,6 +208,32 @@ Tus credenciales de acceso
 {% endswagger-response %}
 {% endswagger %}
 
+## 2.a Consulta Avanzada por fecha
+
+Para realizar una búsqueda avanzada de todos los comprobantes emitidos en una determinada fecha, deberás enviar los siguientes atributos:
+
+busqueda\_tipo = "F"
+
+| Atributo       | Info |
+| -------------- | ---- |
+| busqueda\_tipo |      |
+|                |      |
+|                |      |
+
+### Estructura de "Comprobante":
+
+| `tipo`         | <p>Campo numérico según tabla de referencia de <a href="https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes">Tipos de comprobantes(***)</a>.<br><strong>Ejemplo: FACTURA B</strong></p> |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `operacion`    | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p>                                   |
+| `punto_venta`  | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
+| `numero_desde` | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
+| `numero_hasta` | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
+
+Mediante ésta consulta podrás obtener todos los comprobantes emitidos en una determinada fecha. La consulta está limitada a retornar como máximo 3,000 registros y la información obtenida será la relacionada al punto de venta desde el cual estás realizando la consulta.
+
+Tipo de datos: **JSON**\
+Charset: **UTF-8**
+
 ### Ejemplo de JSON a enviar para consultar por fecha un comprobante:
 
 ```
@@ -204,6 +250,8 @@ Tus credenciales de acceso
 ```
 
 ### Ejemplo del JSON de respuesta:
+
+Cada comprobante devuelto, tendrá la misma estructura que te entrega [la consulta de comprobante individual](api-factura-electronica-afip-consulta-de-comprobantes.md#1.-consulta-individual-de-un-comprobante)&#x20;
 
 ```
 {
@@ -374,31 +422,21 @@ Tus credenciales de acceso
 }
 ```
 
-## Consulta de comprobantes por rango de números
+## 3.Consulta de comprobantes por rango de números
+
+Mediante ésta consulta podrás obtener hasta 3,000 comprobantes por consulta y la información obtenida será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso.
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta_avanzada" method="post" summary="Consulta de comprobantes por rango de números" %}
 {% swagger-description %}
-Mediante ésta consulta podrás obtener hasta 3,000 comprobantes por consulta y la información obtenida será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso.
+
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="busqueda_tipo" type="string" required="false" %}
 Se deberá enviar el valor "TN"
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="comprobante" type="string" required="false" %}
-Se debera enviar un objeto con los siguientes atributos:
-
-
-
-**tipo**: Campo numérico según tabla de referencia de Tipos de comprobantes. Ejemplo: FACTURA B
-
-**operacion**: Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V
-
-**punto\_venta**: Campo numérico entero. Longitud máxima 4 digitos. Ejemplo: 3
-
-**numero\_desde**: Campo numérico entero. Longitud máxima 8 digitos. Ejemplo: 4567
-
-**numero\_hasta**: Campo numérico entero. Longitud máxima 8 dígitos. Ejemplo: 4567
+{% swagger-parameter in="body" name="comprobante" type="object" required="false" %}
+Se debera enviar un objeto, según estructura que se detalla a continuación
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
@@ -585,6 +623,17 @@ Tus credenciales de acceso
 {% endswagger-response %}
 {% endswagger %}
 
+### Estructura de "Comprobante":
+
+| `tipo`         | <p>Campo numérico según tabla de referencia de <a href="https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes">Tipos de comprobantes(***)</a>.<br><strong>Ejemplo: FACTURA B</strong></p> |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `operacion`    | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p>                                   |
+| `punto_venta`  | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
+| `numero_desde` | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
+| `numero_hasta` | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
+
+
+
 ### Ejemplo del JSON a enviar :
 
 ```
@@ -605,8 +654,10 @@ Tus credenciales de acceso
 
 ### Ejemplo del JSON de respuesta:
 
+Cada comprobante devuelto, tendrá la misma estructura que te entrega [la consulta de comprobante individual](api-factura-electronica-afip-consulta-de-comprobantes.md#1.-consulta-individual-de-un-comprobante)&#x20;
+
 ```
-			   {
+{
 	"error": "N",
 	"errores": [""],
 	"rta": "OK",
@@ -771,86 +822,6 @@ Tus credenciales de acceso
 		}
 	}
 	]
-}
+} 
 ```
 
-## Regeneración del archivo PDF
-
-Mediante éste método podrás regenerar el archivos pdf.
-
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/regenerar_pdf " method="post" summary="Regeneración de PDFs" %}
-{% swagger-description %}
-
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="comprobante" required="false" %}
-Un objeto compuesto de los siguientes atributos: ****&#x20;
-
-**tipo:** Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A&#x20;
-
-**operacion :** Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.
-
-**punto\_venta** Campo númerico para indicar el número del punto de venta.
-
-**numero :** Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.
-
-
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="Regenera el PDF y te devuelve la URL del archivo" %}
-```
-{
-"error" :  "N",
-"comprobante_pdf_url"    :  "http://www.prueba.com"
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-### Ejemplo del JSON a enviar para re-generar el pdf
-
-{% code title="JSON" %}
-```
-{
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
-"apikey"    :  "9991",
-"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
-"comprobante":  {
-                "tipo":                     "NOTA DE DEBITO B",
-                "operacion":                "V",
-                "punto_venta":              "2",
-                "numero":                   "6"
-        }
-}
-
-```
-{% endcode %}
-
-### Ejemplo del JSON de respuesta:
-
-```
-{
-"error" :  "N",
-"comprobante_pdf_url"    :  "http://www.prueba.com"
-}
-```
-
-## Estructura de "Comprobante":
-
-| `tipo`        | <p>Campo numérico según tabla de referencia de <a href="https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes">Tipos de comprobantes(***)</a>.<br><strong>Ejemplo: FACTURA B</strong></p> |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `operacion`   | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p>                                   |
-| `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
-| `numero`      | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
