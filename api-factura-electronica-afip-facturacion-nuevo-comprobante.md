@@ -14,7 +14,7 @@ En TusFacturasAPP, contamos con 2 modalidades para la emisión de comprobantes:
 * Lote de facturas instantáneas: donde envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante. Conocé más sobre la [facturación electrónica en lotes, aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
 
 {% hint style="info" %}
-**ATENCIÓN!** A partir de marzo 2022, éste servicio se modificará para brindarte una solución con muchas más herramientas. Consultanos para más información
+**ATENCIÓN!** A partir de abril 2022, éste servicio se modificará para brindarte una solución con muchas más herramientas. Consultanos para más información
 {% endhint %}
 
 ## ¿Qué puedo facturar?
