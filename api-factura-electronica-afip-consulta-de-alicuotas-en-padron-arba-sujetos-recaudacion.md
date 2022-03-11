@@ -17,7 +17,7 @@ Siempre es importante que re-confirmes con tus asesores impositivos si la alícu
 El método te devolverá las alícuotas (en porcentajes) que le corresponden según ARBA.
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="cliente" type="object" required="true" %}
+{% swagger-parameter in="body" name="cliente" type="object" required="false" %}
 Un objeto conteniendo los siguientes datos:
 
 **documento\_tipo**
