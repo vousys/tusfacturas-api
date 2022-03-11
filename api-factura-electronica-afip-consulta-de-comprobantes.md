@@ -457,9 +457,7 @@ A partir del 01/05/2022, está consultá comenzará a ser paginada, con un lími
 | `numero_desde` | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
 | `numero_hasta` | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
 
-
-
-### Ejemplo del JSON a enviar :
+#### Ejemplo del JSON a enviar :
 
 ```
 {
