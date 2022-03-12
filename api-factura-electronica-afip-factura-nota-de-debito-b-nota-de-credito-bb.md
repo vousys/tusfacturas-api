@@ -7,6 +7,12 @@ description: >-
 
 # Ejemplos de comprobantes tipo "B"
 
+Los comprobantes de tipo "B", son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto".
+
+No sabes en qué momento emitir comprobantes de tipo **B**? Consultá [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
+
+
+
 A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
 
 ```
@@ -81,9 +87,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
 
 &#x20;              En nombre, lo que tu contador/a te recomiende.
 
-&#x20;    Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos.        &#x20;
-
-&#x20;     Consultá diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+Tené en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos. Consultá diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
 
 
 {% endhint %}

@@ -41,7 +41,7 @@ A donde debes enviar el request:&#x20;
 {% swagger-description %}
 Charset: UTF-8
 
-Tipo de dato esperado: JSON 
+Tipo de dato esperado: JSON&#x20;
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
@@ -85,20 +85,21 @@ Estructura de "Cliente", según se informa a continuación
      "envio_x_mail_direcciones":"direccion1@sudominio.com,direccion2@sudominio.com"
   }  
   
+  
 ```
 {% endcode %}
 {% endswagger-response %}
 {% endswagger %}
 
+####
 
-
-### Ejemplo de JSON para generar un comprobante.
+#### Ejemplo de JSON para generar un comprobante.
 
 ```
 {
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
-"apikey"    :  "9991",
-"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
+"usertoken" :  "xxxxxx",
+"apikey"    :  "xxxx",
+"apitoken"  :  "xxxxxx",
 "cliente"   :
                 {   "documento_tipo":       "DNI",
                     "documento_nro":        "1292963535",
@@ -243,7 +244,7 @@ Obtendrás la siguiente respuesta, con todos los datos que necesitas para almace
 La respuesta incluye el texto que se necesita para armar el código QR (en caso que generes el PDF desde tu lado) y/o el viejo código de barras (para comprobantes anteriores).&#x20;
 
 {% hint style="info" %}
-Te sugerimos descargar el pdf y almacenarlo en tu plataforma, ya que si tu cuenta o suscripción no se encuentran activas, no podrás obtenerlo.
+Es importante que descargues el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
 {% endhint %}
 
 ```
@@ -290,7 +291,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 
 
 
-### Datos para tener en cuenta:
+#### Datos para tener en cuenta:
 
 {% hint style="info" %}
 * El CAE es el Código de Autorización Electrónico que otorga AFIP, como confirmación de la creación del comprobante. Es un dato importante para almacenar como respuesta.
@@ -300,7 +301,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * Para evitar inconsistencias en la validación de las sumatorias, te sugerimos redondear los valores decimales con "Round half even".
 {% endhint %}
 
-### ¿Cómo determino, si debo emitir un comprobante de tipo "MiPyme"?
+#### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme"?
 
 Hay ciertos casos donde AFIP exige que en lugar de emitir una factura A,B o C, le emitas a tu cliente, un comprobante de tipo  "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE)" A, B o C. En ese caso, recibirás en la respuesta, el campo requiere\_fec = "SI".&#x20;
 
@@ -308,7 +309,7 @@ Hay ciertos casos donde AFIP exige que en lugar de emitir una factura A,B o C, l
 
 Te sugerimos comentar ésta modalidad, con tu cliente y asesorarte con su estudio impositivo al respecto.
 
-## Estructura del bloque: "Comprobante"
+### Estructura del bloque: "Comprobante"
 
 Para poder generar un comprobante de tipo factura A,B, C, debes enviar de todos los datos según se informa a continuación:
 
@@ -479,7 +480,7 @@ Para poder generar el comprobante, debes enviar un detalle de todos los datos de
 }
 ```
 
-### Datos a tener en cuenta:
+#### Datos a tener en cuenta:
 
 {% hint style="info" %}
 * Si el cliente ya existe en tu base de clientes de TusFacturasAPP, será actualizado con los nuevos datos, salvo los campos de: tipo de documento, número de documento y condición ante el IVA.
@@ -553,9 +554,8 @@ Los campos que debes enviar son los siguientes:
 | `leyenda`                | <p>Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.<br><strong>Ejemplo: Blanca, cepillada</strong></p>     |
 | bonificacion\_porcentaje | Si se ha aplicado un porcentaje de descuento sobre éste concepto, debe ser enviado. Es un campo númerico con 2 decimales. El separador de decimales esperado es el punto. Ej: 25 |
 |                          |                                                                                                                                                                                  |
-|                          |                                                                                                                                                                                  |
 
-## Estructura del bloque: "Concepto / Producto"
+### Estructura del bloque: "Concepto / Producto"
 
 Cada producto o servicio que factures, deberá ser enviado con la siguiente estructura:
 
@@ -573,7 +573,7 @@ Cada producto o servicio que factures, deberá ser enviado con la siguiente estr
 }
 ```
 
-### Datos a tener en cuenta:
+#### Datos a tener en cuenta:
 
 {% hint style="info" %}
 * Si el producto ya existía en tu base de productos de nuestra plataforma ( se valida que sea la misma lista de precios, código de producto y/o descripción del mismo), el mismo será actualizado por completo, con los nuevos datos que envíes, solo  si indicas que deseas actualizar el precio con el campo "actualiza\_precio":"S".  En caso de no querer actualizar el producto, si el mismo ya existía, se facturará con el nuevo precio y descripción que envíes, pero mantendrá sus datos anteriores.
@@ -597,7 +597,7 @@ Los campos que debes enviar son los siguientes:
 | `impuestos_internos_alicuota` | La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numerico, con 2 decimales. ej: 10.5                                                                                                                                                                                                  |
 |                               |                                                                                                                                                                                                                                                                                                                           |
 
-## Estructura de "Comprobantes Asociados"
+### Estructura de "Comprobantes Asociados"
 
 **Solo para las notas de débito y las notas de crédito**, AFIP requiere de manera obligatoria, que se envíe un bloque de información adicional con "comprobantes asociados". Los comprobantes asociados son aquellos comprobantes que éstas incluyendo para anular o afectar, según corresponda y son datos que posee el emisor del comprobante en cuestión.
 
@@ -668,7 +668,7 @@ Para utilizar ésta herramienta, **no se debe enviar el bloque de "**_**comproba
 
 Se deberá respetar el formato para las fechas que debe ser dd/mm/aaaa (el día y el mes deben tener 2 dígitos).
 
-## Estructura de "RG Especiales" (OPCIONAL)
+### Estructura de "RG Especiales"&#x20;
 
 Si tu empresa o la de tu cliente, operan bajo alguna RG particular, se deberá enviar un array con los datos adicionales, según se especifican en la [tabla de Datos adicionales para RG Especiales](tablas-de-referencia.md#datos-opcionales-para-rg-especiales).
 
@@ -694,26 +694,26 @@ comprobante: {
 ```
 {% endcode %}
 
-### Datos a tener en cuenta:
+#### Datos a tener en cuenta:
 
 {% hint style="info" %}
 * TusFacturasAPP no realiza validaciones sobre éstos campos. Todas las validaciones son realizadas por la propia AFIP en caso que corresponda.
 * Si alguno de los items enviados posee un valor vacio, éste item no será procesado.
 {% endhint %}
 
-### Información de los campos a enviar en el array de "datos":
+#### Información de los campos a enviar en el array de "datos":
 
 | `id`    | Campo númerico. Valores esperados según[Tabla de Datos Opcionales para RG Especiales](tablas-de-referencia.md#datos-opcionales-para-rg-especiales) |
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `valor` | Campo alfanumérico.                                                                                                                                |
 
-## Estructura de "pagos" (OPCIONAL) <a href="#estructuradepagos" id="estructuradepagos"></a>
+### Estructura de "pagos"  <a href="#estructuradepagos" id="estructuradepagos"></a>
 
 Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "**pagos**" con la estructura como se detalla a continuación.
 
 Los pagos que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
 
-### Datos a tener en cuenta:
+#### Datos a tener en cuenta:
 
 {% hint style="info" %}
 * **NO** podrás enviar los siguientes medios de pago: cheques y detalle de retenciones.
@@ -721,21 +721,21 @@ Los pagos que informes, se usan solo para la gestión interna de nuestra platafo
 * El total de los pagos **NO** debe superar el importe total del comprobante, pero si puede ser inferior, para indicar que el comprobante recibió un pago parcial.
 {% endhint %}
 
-### Información de los campos que componen el **bloque "pagos"**
+#### Información de los campos que componen el **bloque "pagos"**
 
 | nombre del campo | Requerido | Detalle                                                                                                  |
 | ---------------- | --------- | -------------------------------------------------------------------------------------------------------- |
 | formas\_pago     | SI        | array con multiples items, según estructura que se detalla a continuación                                |
 | total            | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p> |
 
-### Información de los campos que componen el **array de  "formas\_pago"**
+#### Información de los campos que componen el **array de  "formas\_pago"**
 
 | nombre del campo | Requerido | Detalle                                                                                                                                                                                 |
 | ---------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | descripcion      | SI        | El nombre del medio de pago elegido para cancelar el comprobante. 255 caracteres max. En caso que el medio de pago, no exista en nuestra plataforma, será dado de alta automáticamente. |
 | importe          | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                |
 
-### Ejemplo del JSON a enviar.
+#### Ejemplo del JSON a enviar.
 
 {% code title="JSON" %}
 ```

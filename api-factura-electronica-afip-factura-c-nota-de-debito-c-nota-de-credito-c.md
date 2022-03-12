@@ -5,7 +5,13 @@ description: >-
   crédito  MiPyme C / Nota de débito  MiPyme C
 ---
 
-# API - Factura electrónica AFIP | Comprobantes de tipo C
+# Ejemplos de comprobantes tipo "C"
+
+Los comprobantes de tipo "C", son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Monotributo" o "Exento".
+
+No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
+
+
 
 A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
 
@@ -68,8 +74,8 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
 ### Datos a tener en cuenta:
 
 {% hint style="info" %}
-* Ten en cuenta que los comprobantes C, no llevan IVA.
-* No sabes en que momento emitir comprobantes de tipo C? Consultá [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
+* Los comprobantes C, no llevan IVA.
+* No sabes en qué momento emitir comprobantes de tipo C? Consultá [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
 * Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
 
 &#x20;               Nro de documento = "0"
@@ -78,9 +84,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
 
 &#x20;              En nombre, lo que tu contador/a te recomiende.
 
-&#x20;     Ten en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos.        &#x20;
-
-&#x20;     Consultá diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](../api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+Tené en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos.Consultá diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
 
 
 {% endhint %}
