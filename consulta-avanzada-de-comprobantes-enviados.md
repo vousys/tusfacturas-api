@@ -253,7 +253,7 @@ Ej:
 
 ## ¿Cómo realizar una consulta avanzada por fecha?
 
-La búsqueda por fecha te devuelve todos aquellos comprobantes emitidos en la fecha consultada.&#x20;
+La búsqueda por fecha te devuelve todos aquellos comprobantes enviados (ya sea porque se han emitido o porque se encuentren en la cola de facturación) en la fecha consultada.&#x20;
 
 Debés tener en cuenta que  la información obtenida, será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso y  el ordenamiento de los datos que te devuelve es: del último emitido al primero.&#x20;
 
@@ -298,7 +298,7 @@ Charset: **UTF-8**
 
 ## ¿Cómo realizar una consulta avanzada, por rango de números?
 
-Ésta búsqueda te permite obtener todos los comprobantes dentro de un rango numérico.&#x20;
+Ésta búsqueda te permite obtener todos los comprobantes enviados, ya sea porque se han emitido o porque se encuentren en la cola de facturación, dentro de un rango numérico.&#x20;
 
 Debés tener en cuenta que  la información obtenida, será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso y  el ordenamiento de los datos que te devuelve es: del último emitido al primero.&#x20;
 
@@ -348,13 +348,13 @@ A partir del 01/05/2022, está consultá comenzará a ser paginada, con un lími
 
 ## ¿Cómo realizar una consulta avanzada, por external reference?
 
-Ésta búsqueda te permite obtener todos los comprobantes, de una determinada external\_reference.&#x20;
-
-Debés tener en cuenta que  la información obtenida, será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso y  el ordenamiento de los datos que te devuelve es: del último emitido al primero.&#x20;
-
 {% hint style="info" %}
 Ésta consulta estará disponible a partir del 01/04/2022&#x20;
 {% endhint %}
+
+Ésta búsqueda te permite obtener todos los comprobantes enviados, ya sea porque se han emitido o porque se encuentren en la cola de facturación, de una determinada external\_reference.&#x20;
+
+Debés tener en cuenta que  la información obtenida, será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso y  el ordenamiento de los datos que te devuelve es: del último emitido al primero.&#x20;
 
 #### Detalle de los atributos a enviar:
 
