@@ -244,7 +244,95 @@ Ej:
 			"ctacte_status": "",
 			"comprobante_pdf_url": ""
 		}
+	},
+	
+		{
+		"cliente": {
+			"documento_tipo": "DNI",
+			"documento_nro": "1292963535 ",
+			"razon_social": "Pirulo",
+			"email": "test@test.com",
+			"domicilio": "Av Sta Fe 123"
+		},
+		"comprobante": {
+			"fecha": "23\/05\/2021",
+			"tipo": "NOTA DE DEBITO B",
+			"moneda": "PES",
+			"idioma": 1,
+			"cotizacion": 1,
+			"operacion": "V",
+			"punto_venta": 2,
+			"numero": 5,
+			"periodo_facturado_desde": "27\/07\/2015",
+			"periodo_facturado_hasta": "30\/07\/2015",
+			"rubro": "Servicios web",
+			"rubro_grupo_contable": "servicios",
+			"detalle": [{
+				"cantidad": 1,
+				"producto": {
+					"descripcion": "PAPAS",
+					"precio_unitario": 121.54,
+					"alicuota": 21,
+					"unidad_medida": 7,
+					"precio_total": 121.54
+	 			},
+				"leyenda": "blanca, cepillada"
+			}, {
+				"cantidad": 1.5,
+				"producto": {
+					"descripcion": "HUEVOS",
+					"precio_unitario": 60.50,
+					"alicuota": 21,
+					"unidad_medida": 7,
+					"precio_total": 90.75
+					
+				},
+				"leyenda": ""
+			}, {
+				"cantidad": 2,
+				"producto": {
+					"descripcion": "ZANAHORIA",
+					"precio_unitario": 242,
+					"alicuota": 21,
+					"unidad_medida": 7,
+					"precio_total": 484 
+	           },
+				"leyenda": ""
+			} ],
+			"bonificacion": 120,
+			"subtotal_1":  380.45,
+			"iva_alicuota": 21,
+			"subtotal_2": 75,
+			"iva_alicuota_2": 10.5,
+			"leyenda_gral": "bla bla bla",
+	        	"percepciones_iibb":        "0",
+	        	"percepciones_iibb_base":   "0",
+	        	"percepciones_iibb_alicuota": "0",
+	        	"percepciones_iva":         "0",
+	        	"percepciones_iva_base":    "0",
+	        	"percepciones_iva_alicuota": "0",
+	     		"exentos":                  "0",
+	        	"impuestos_internos":       "0",
+	        	"impuestos_internos_base":   "0",
+	        	"impuestos_internos_alicuota": "0" ,
+			"nogravados": 0,
+			"total": 543.21,
+			"cae": " ",
+			"afip_codigo_barras" : " ",
+			"afip_qr": "",
+			"vencimiento_cae": "",
+			"vencimiento_pago": "23\/05\/2021",
+			"external_reference": "Lun141",
+			"tags": [
+				"etiqueta1",
+				"etiqueta2"
+				],
+			"status": "APROBADO Y EN COLA. SE EMITE EL 16\/03\/2022",
+			"ctacte_status": "",
+			"comprobante_pdf_url": ""
+		}
 	}
+	
 	]
 }
 ```
