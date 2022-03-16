@@ -1,5 +1,9 @@
 # Changelog
 
+## 16 de marzo de 2022
+
+Se modifica la documentación de facturación, y se agrega el bloque de "tags", como opcional para el envío de nuevos comprobantes.
+
 ## 11 de marzo de 2022
 
 Se modifica la documentación de la consulta de comprobantes individual y avanzada. Se agrega el método de consulta por "external\_reference" a partir del 01/04/2022 y se agrega la paginación a la consulta avanzada, a partir del 01/05/2022.
