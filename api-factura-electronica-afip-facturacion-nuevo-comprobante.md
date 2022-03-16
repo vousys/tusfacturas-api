@@ -128,6 +128,10 @@ Estructura de "Cliente", según se informa a continuación
                 "vencimiento":              "30\/08\/2015",
                 "rubro":                    "Servicios web",
                 "external_reference":       "ABC123",
+                "tags": [
+			  "etiqueta1", 
+			  "etiqueta2"
+			],
                 "rubro_grupo_contable":     "servicios",
                 "abono": "S",
                 "abono_frecuencia": "2",
@@ -239,9 +243,7 @@ Estructura de "Cliente", según se informa a continuación
 
 #### &#x20;:white\_check\_mark: Cuando el request resultó exitoso:
 
-Obtendrás la siguiente respuesta, con todos los datos que necesitas para almacenar la info en tu sistema.
-
-La respuesta incluye el texto que se necesita para armar el código QR (en caso que generes el PDF desde tu lado) y/o el viejo código de barras (para comprobantes anteriores).&#x20;
+Obtendrás la siguiente respuesta, con todos los datos que necesitas para almacenar la info en tu sistema.&#x20;
 
 {% hint style="info" %}
 Es importante que descargues el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
@@ -299,6 +301,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * Por cuestiones de seguridad, el número de CAE es un texto y se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
 * Por cuestiones de seguridad, el texto que se retorna en el campo afip\_codigo\_barras y afip\_qr, se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
 * Para evitar inconsistencias en la validación de las sumatorias, te sugerimos redondear los valores decimales con "Round half even".
+* La respuesta exitosa, te incluye el texto que se necesita para armar el código QR (en caso que generes el PDF desde tu lado) y/o el viejo código de barras (para comprobantes anteriores).
 {% endhint %}
 
 #### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme"?
@@ -335,6 +338,10 @@ Para poder generar un comprobante de tipo factura A,B, C, debes enviar de todos 
                 "abono_hasta":"10/2019",
                 "abono_actualiza_precios": "N",
                 "external_reference":       "ABC123",
+                "tags": [
+			  "etiqueta1", 
+			  "etiqueta2"
+			],
                 "detalle":
                             [
                                 {
@@ -457,8 +464,9 @@ Recordá que **AFIP recibe únicamente totales**, no el detalle de los items que
 | exentos                         |            OPCIONAL           | Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de exentos. Solo para comprobantes A y M Ejemplo: 72.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | total                           |               SI              | Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos incluyendo IVA e impuestos. Ejemplo: 12452.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | comprobantes\_asociados         |       SEGUN CORRESPONDA       | Lista de comprobantes asociados. Requerido únicamente para NC o ND de tipo A,B,C,M. [Objeto JSON](api-factura-electronica-afip-facturacion-nuevo-comprobante.md#estructura-de-comprobantes-asociados) Según estructura que se detalla a continuación                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| rg\_especiales                  |       SEGUN CORRESPONDA       | Lista de datos adicionales requeridos por AFIP, según la RG a la que aplique el comprobante. [Objeto JSON](api-factura-electronica-afip-facturacion-nuevo-comprobante.md#estructura-de-rg-especiales) Según estructura que se detalla a continuación                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| external\_reference             |            OPCIONAL           | Dato alfanumérico de hasta 256 caracteres, que se para referenciar éste comprobante dentro de tu sistema.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| rg\_especiales                  |       SEGÚN CORRESPONDA       | Lista de datos adicionales requeridos por AFIP, según la RG a la que aplique el comprobante. [Objeto JSON](api-factura-electronica-afip-facturacion-nuevo-comprobante.md#estructura-de-rg-especiales) Según estructura que se detalla a continuación                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| external\_reference             |       SEGÚN CORRESPONDA       | Dato alfanumérico de hasta 255 caracteres, que se utiliza para referenciar a éste comprobante, dentro de tu sistema. Es opcional, salvo que utilices los métodos de envió a la cola de procesamiento. No se realiza validación de éste campo, para verificar que el mismo no exista.                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| tags                            |            OPCIONAL           | Objeto JSON, según estructura que se detalla a continuación.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 ### Estructura del bloque: "Cliente"
 
@@ -547,13 +555,15 @@ La estructura **de cada concepto** a enviar es la siguiente:
 
 Los campos que debes enviar son los siguientes:
 
-| `cantidad`               | <p>Campo numérico con 2 decimales. Separador de decimales: punto.<br><strong>Ejemplo: 1.50</strong></p>                                                                          |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `afecta_stock`           | <p>Campo alfanumérico de 1 posición. Valores posibles: "S" (si), "N" (no)<br><strong>Ejemplo: S</strong></p>                                                                     |
-| `producto`               | Según estructura de producto                                                                                                                                                     |
-| `leyenda`                | <p>Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.<br><strong>Ejemplo: Blanca, cepillada</strong></p>     |
-| bonificacion\_porcentaje | Si se ha aplicado un porcentaje de descuento sobre éste concepto, debe ser enviado. Es un campo númerico con 2 decimales. El separador de decimales esperado es el punto. Ej: 25 |
-|                          |                                                                                                                                                                                  |
+| `cantidad`                                                             | <p>Campo numérico con 2 decimales. Separador de decimales: punto.<br><strong>Ejemplo: 1.50</strong></p>                                                                          |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `afecta_stock`                                                         | <p>Campo alfanumérico de 1 posición. Valores posibles: "S" (si), "N" (no)<br><strong>Ejemplo: S</strong></p>                                                                     |
+| `producto`                                                             | Según estructura de producto                                                                                                                                                     |
+| `leyenda`                                                              | <p>Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.<br><strong>Ejemplo: Blanca, cepillada</strong></p>     |
+| <mark style="background-color:purple;">bonificacion\_porcentaje</mark> | Si se ha aplicado un porcentaje de descuento sobre éste concepto, debe ser enviado. Es un campo númerico con 2 decimales. El separador de decimales esperado es el punto. Ej: 25 |
+|                                                                        |                                                                                                                                                                                  |
+
+###
 
 ### Estructura del bloque: "Concepto / Producto"
 
@@ -596,6 +606,8 @@ Los campos que debes enviar son los siguientes:
 | `actualiza_precio`            | Indica si se actualiza el precio del producto y sus datos adicionales (como ser la unidad de medida, código, unidades por bulto y otros datos adicionales), tomando como valor de referencia,la información enviada en el comprobante. Campo Alfabético, de 1 caracter. Valores permitidos: S (si) N (no). **Ejemplo: S** |
 | `impuestos_internos_alicuota` | La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numerico, con 2 decimales. ej: 10.5                                                                                                                                                                                                  |
 |                               |                                                                                                                                                                                                                                                                                                                           |
+
+###
 
 ### Estructura de "Comprobantes Asociados"
 
@@ -668,11 +680,13 @@ Para utilizar ésta herramienta, **no se debe enviar el bloque de "**_**comproba
 
 Se deberá respetar el formato para las fechas que debe ser dd/mm/aaaa (el día y el mes deben tener 2 dígitos).
 
+###
+
 ### Estructura de "RG Especiales"&#x20;
 
-Si tu empresa o la de tu cliente, operan bajo alguna RG particular, se deberá enviar un array con los datos adicionales, según se especifican en la [tabla de Datos adicionales para RG Especiales](tablas-de-referencia.md#datos-opcionales-para-rg-especiales).
+Si la empresa, opera bajo alguna RG particular, se deberá enviar un array con los datos adicionales, según se especifican en la [tabla de Datos adicionales para RG Especiales](tablas-de-referencia.md#datos-opcionales-para-rg-especiales).
 
-Ten en cuenta que solo podrás aplicar a un [regimen](tablas-de-referencia.md#datos-opcionales-para-rg-especiales) , por cada comprobante que emitas.
+Ten en cuenta que solo podrás aplicar a un solo [regimen](tablas-de-referencia.md#datos-opcionales-para-rg-especiales) , por cada comprobante que emitas.
 
 {% code title="JSON" %}
 ```
@@ -706,6 +720,8 @@ comprobante: {
 | `id`    | Campo númerico. Valores esperados según[Tabla de Datos Opcionales para RG Especiales](tablas-de-referencia.md#datos-opcionales-para-rg-especiales) |
 | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `valor` | Campo alfanumérico.                                                                                                                                |
+
+### &#x20;<a href="#estructuradepagos" id="estructuradepagos"></a>
 
 ### Estructura de "pagos"  <a href="#estructuradepagos" id="estructuradepagos"></a>
 
@@ -753,4 +769,30 @@ comprobante: {
 ```
 {% endcode %}
 
-##
+
+
+### Estructura de "tags"
+
+{% hint style="info" %}
+Éste bloque se incorporará a partir del 01/04/2022
+{% endhint %}
+
+Si quisieras enviar tags para agregar a tus comprobantes, a modo de etiqueta informativa, debés enviar un array con el nombre de cada una de éstas.
+
+Cada tag, debe ser un campo alfanumérico de hasta 255 caracteres y puedes enviar hasta 50 tags por comprobante.
+
+#### Ejemplo del JSON a enviar.
+
+{% code title="JSON" %}
+```
+comprobante: {
+   .... 
+   "tags" :  [ "etiqueta1", "etiqueta2"],   
+ }
+```
+{% endcode %}
+
+
+
+
+
