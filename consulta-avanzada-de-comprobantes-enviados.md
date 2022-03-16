@@ -1,180 +1,21 @@
 ---
 description: >-
-  Utilizá la API de facturación electrónica de TusFacturas.app, para consultar
-  los comprobantes emitidos desde la plataforma, ya sea por una búsqueda puntual
-  o una búsqueda avanzada.
+  Mediante ésta consulta, podrás obtener todos los comprobantes enviados, según
+  determinadas condiciones de búsqueda.
 ---
 
-# Consulta simple de comprobantes
+# Consulta avanzada de comprobantes enviados
 
 
 
-Mediante éste método, podrás consultar la información asociada a un determinado comprobante.
+### Métodos de búsqueda disponible:
 
-Tipo de datos: **JSON**\
-Charset: **UTF-8**
-
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/consulta " method="post" summary="Consulta individual de comprobante" %}
-{% swagger-description %}
-
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="comprobante" required="false" type="object" %}
-Un objeto según estructura que se detalla a continuación.
-
-
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus Credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus Credenciales de acceso.
-{% endswagger-parameter %}
-{% endswagger %}
-
-#### Estructura del bloque: "Comprobante"
-
-| `tipo`        | <p>Campo numérico según tabla de referencia de <a href="https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes">Tipos de comprobantes(***)</a>.<br><strong>Ejemplo: FACTURA B</strong></p> |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `operacion`   | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p>                                   |
-| `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
-| `numero`      | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
-
-#### Ejemplo de JSON a enviar :
-
-```
-{
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
-"apikey"    :  "9991",
-"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
-"comprobante":  {
-                "tipo":                     "NOTA DE DEBITO B",
-                "operacion":                "V",
-                "punto_venta":              "2",
-                "numero":                   "6"
-        }
-}
-```
-
-
-
-{% hint style="info" %}
-Los datos devueltos por éste método mantienen la misma estructura que los enviados para generar un comprobante.
-{% endhint %}
-
-#### Ejemplo del JSON de respuesta:
-
-```
-{
-	"error": "N",
-	"errores": [""]
-	"rta": "OK",
-	"cliente": {
-		"documento_tipo": "DNI",
-		"documento_nro": "1292963535 ",
-		"razon_social": "Pirulo",
-		"email": "test@test.com",
-		"domicilio": "Av Sta Fe 123"
-	},
-	"comprobante": {
-		"fecha": "28\/07\/2015",
-		"tipo": "NOTA DE DEBITO B",
-		"moneda": "PES",
-		"idioma": 1,
-		"cotizacion": 1,
-		"operacion": "V",
-		"punto_venta": 2,
-		"numero": 6,
-		"periodo_facturado_desde": "27\/07\/2015",
-		"periodo_facturado_hasta": "30\/07\/2015",
-		"rubro": "Servicios web",
-		"rubro_grupo_contable": "servicios",
-		"detalle": [{
-			"cantidad": 1,
-			"producto": {
-				"descripcion": "PAPAS",
-				"precio_unitario": 121.54,
-				"alicuota": 21,
-				"unidad_medida": 7,
-				"precio_total": 121.54
- 			},
-			"leyenda": "blanca, cepillada"
-		}, {
-			"cantidad": 1.5,
-			"producto": {
-				"descripcion": "HUEVOS",
-				"precio_unitario": 60.50,
-				"alicuota": 21,
-				"unidad_medida": 7,
-				"precio_total": 90.75
-				
-			},
-			"leyenda": ""
-		}, {
-			"cantidad": 2,
-			"producto": {
-				"descripcion": "ZANAHORIA",
-				"precio_unitario": 242,
-				"alicuota": 21,
-				"unidad_medida": 7,
-				"precio_total": 484 
-           },
-			"leyenda": ""
-		}, ],
-		"bonificacion": 120,
-		"subtotal_1":  380.45,
-		"iva_alicuota": 21,
-		"subtotal_2": 75,
-		"iva_alicuota_2": 10.5,
-		"leyenda_gral": "bla bla bla",
-        	"percepciones_iibb":        "0",
-        	"percepciones_iibb_base":   "0",
-        	"percepciones_iibb_alicuota": "0",
-        	"percepciones_iva":         "0",
-        	"percepciones_iva_base":    "0",
-        	"percepciones_iva_alicuota": "0",
-     		"exentos":                  "0",
-        	"impuestos_internos":       "0",
-        	"impuestos_internos_base":   "0",
-        	"impuestos_internos_alicuota": "0" ,
-		"nogravados": 0,
-		"total": 543.21,
-		"cae": "65301278726386 ",
-		"afip_qr":			"external_reference": "Lun141",
-			"tags": [
-				"etiqueta1",
-				"etiqueta2"
-				],
-			"status": "ENVIADO A PROCESAR - CON ERROR",
-		"afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
-		"afip_qr": "https:\/\/www.afip.gob.ar\/fe\/qr\/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMS0wNi0wNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjEwIiwidGlwb0NtcCI6MSwibnJvQ21wIjoiMDAwMDAwNzgiLCJpbXBvcnRlIjoiMDAwMDAwMDAwMzA4NS41MCIsIm1vbmVkYSI6IlBFUyIs ",
-		"vencimiento_cae": "07\/08\/2015",
-		"vencimiento_pago": "27\/08\/2015",
-		"comprobante_pdf_url": "https://www.dominio.com/00000006.pdf",
-	}
-}
-```
-
-####
-
-## Consulta avanzada de comprobantes&#x20;
-
-Mediante ésta consulta, podrás obtener todos los comprobantes emitidos, según determinadas condiciones de búsqueda.
-
-Podrás buscar por:
-
-1. &#x20;Todos los comprobantes de una determinada fecha[ ](api-factura-electronica-afip-consulta-de-comprobantes.md#como-realizar-una-consulta-avanzada-por-fecha):arrow\_right:
-2. &#x20;Todos los comprobantes de un mismo tipo (Ej: FACTURA A ) entre un determinado rango numerico (Ej: 00000010 al 00000050). [ ](api-factura-electronica-afip-consulta-de-comprobantes.md#como-realizar-una-consulta-avanzada-por-rango-de-numeros):arrow\_right:
+1. &#x20;Todos los comprobantes de una determinada fecha[ ](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-fecha):arrow\_right:
+2. &#x20;Todos los comprobantes de un mismo tipo (Ej: FACTURA A ) entre un determinado rango numerico (Ej: 00000010 al 00000050). [ ](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-rango-de-numeros):arrow\_right:
 3. Todos los comprobantes de una misma external reference  ( :calendar\_spiral:disponible desde 01/04/2022)  :arrow\_right: &#x20;
 
 {% hint style="info" %}
-A partir del 01/04/2022 ésta consulta te devolverá también, todos aquellos comprobantes que se encuentren en cola de procesamiento.
+A partir del 01/04/2022 ésta consulta te devolverá también, todos aquellos comprobantes que se encuentren en cola de procesamiento ( pendientes de procesamiento, o  procesados por error).
 {% endhint %}
 
 #### Cómo llamar a la API?
@@ -222,7 +63,7 @@ Tus credenciales de acceso
 
 #### Ejemplo del JSON de respuesta:
 
-La consulta te devolverá un array, compuesto por cada comprobante, que tendrá la misma estructura que te entrega [la consulta de comprobante individual](api-factura-electronica-afip-consulta-de-comprobantes.md#1.-consulta-individual-de-un-comprobante) .
+La consulta te devolverá un array, compuesto por cada comprobante, que tendrá la misma estructura que te entrega [la consulta de comprobante individual](consulta-avanzada-de-comprobantes-enviados.md#1.-consulta-individual-de-un-comprobante) .
 
 Ej:
 
@@ -308,6 +149,14 @@ Ej:
 			"afip_qr": "https:\/\/www.afip.gob.ar\/fe\/qr\/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMS0wNi0wNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjEwIiwidGlwb0NtcCI6MSwibnJvQ21wIjoiMDAwMDAwNzgiLCJpbXBvcnRlIjoiMDAwMDAwMDAwMzA4NS41MCIsIm1vbmVkYSI6IlBFUyIs ",
 			"vencimiento_cae": "30\/05\/2021",
 			"vencimiento_pago": "23\/05\/2021",
+			"external_reference": "Lun141",
+			"tags": [
+				"etiqueta1",
+				"etiqueta2"
+				],
+			"status": "EMITIDO",
+			 
+			"ctacte_status"
 			"comprobante_pdf_url": "https://www.dominio.com/00000006.pdf"
 		}
 	},
@@ -383,12 +232,19 @@ Ej:
 	        	"impuestos_internos_alicuota": "0" ,
 			"nogravados": 0,
 			"total": 543.21,
-			"cae": "65301278726386 ",
-			"afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
-			"afip_qr": "https:\/\/www.afip.gob.ar\/fe\/qr\/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMS0wNi0wNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjEwIiwidGlwb0NtcCI6MSwibnJvQ21wIjoiMDAwMDAwNzgiLCJpbXBvcnRlIjoiMDAwMDAwMDAwMzA4NS41MCIsIm1vbmVkYSI6IlBFUyIs ",
-			"vencimiento_cae": "30\/05\/2021",
+			"cae": " ",
+			"afip_codigo_barras" : " ",
+			"afip_qr": "",
+			"vencimiento_cae": "",
 			"vencimiento_pago": "23\/05\/2021",
-			"comprobante_pdf_url": "https://www.dominio.com/00000006.pdf"
+			"external_reference": "Lun141",
+			"tags": [
+				"etiqueta1",
+				"etiqueta2"
+				],
+			"status": "ENVIADO A PROCESAR - CON ERROR",
+			"ctacte_status": "",
+			"comprobante_pdf_url": ""
 		}
 	}
 	]
