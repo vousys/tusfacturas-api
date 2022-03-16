@@ -6,13 +6,11 @@ description: >-
 
 # Consulta avanzada de comprobantes enviados
 
-
-
-### Métodos de búsqueda disponible:
+### Métodos de búsqueda disponibles:
 
 1. &#x20;Todos los comprobantes de una determinada fecha[ ](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-fecha):arrow\_right:
-2. &#x20;Todos los comprobantes de un mismo tipo (Ej: FACTURA A ) entre un determinado rango numerico (Ej: 00000010 al 00000050). [ ](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-rango-de-numeros):arrow\_right:
-3. Todos los comprobantes de una misma external reference  ( :calendar\_spiral:disponible desde 01/04/2022)  :arrow\_right: &#x20;
+2. &#x20;Todos los comprobantes de un mismo tipo (Ej: FACTURA A ) entre un determinado rango numérico (Ej: 00000010 al 00000050). [ ](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-rango-de-numeros):arrow\_right:
+3. Todos los comprobantes de una misma external reference :arrow\_right: &#x20;
 
 {% hint style="info" %}
 A partir del 01/04/2022 ésta consulta te devolverá también, todos aquellos comprobantes que se encuentren en cola de procesamiento ( pendientes de procesamiento, o  procesados por error).
