@@ -154,9 +154,9 @@ Ej:
 				"etiqueta1",
 				"etiqueta2"
 				],
-			"status": "EMITIDO",
-			 
-			"ctacte_status"
+			"ctacte_status
+			"status": "EMITIDO", 
+			"ctacte_status": "IMPAGA",
 			"comprobante_pdf_url": "https://www.dominio.com/00000006.pdf"
 		}
 	},
@@ -251,7 +251,7 @@ Ej:
 }
 ```
 
-### ¿Cómo realizar una consulta avanzada por fecha?
+## ¿Cómo realizar una consulta avanzada por fecha?
 
 La búsqueda por fecha te devuelve todos aquellos comprobantes emitidos en la fecha consultada.&#x20;
 
@@ -296,7 +296,7 @@ Charset: **UTF-8**
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `fecha`     | <p>Campo fecha en formato dd/mm/aaaa<br><strong>Ejemplo: 20/03/2022</strong></p>                                                                                                      |
 
-### ¿Cómo realizar una consulta avanzada, por rango de números?
+## ¿Cómo realizar una consulta avanzada, por rango de números?
 
 Ésta búsqueda te permite obtener todos los comprobantes dentro de un rango numérico.&#x20;
 
@@ -346,7 +346,7 @@ A partir del 01/05/2022, está consultá comenzará a ser paginada, con un lími
 } 
 ```
 
-### ¿Cómo realizar una consulta avanzada, por external reference?
+## ¿Cómo realizar una consulta avanzada, por external reference?
 
 Ésta búsqueda te permite obtener todos los comprobantes, de una determinada external\_reference.&#x20;
 
