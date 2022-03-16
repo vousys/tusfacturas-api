@@ -7,7 +7,7 @@
 * [Estado de los servicios AFIP](api-factura-electronica-afip-estado-de-los-servicios-afip.md)
 * [¿Qué tipos de comprobante debo/puedo emitir?](que-tipos-de-comprobante-debo-puedo-emitir.md)
 * [Facturación](api-factura-electronica-afip-facturacion-ventas.md)
-* [Facturación individual e instantánea](api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
+* [Facturación instantánea e individual](api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
 * [Facturación instantánea por Lotes](api-factura-electronica-afip-api-facturacion-por-lotes.md)
 * [Ejemplos de comprobantes tipo "A"](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
 * [Ejemplos de comprobantes tipo "B"](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)
