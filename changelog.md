@@ -62,7 +62,7 @@ ADC = "AGENTE DE DEPOSITO COLECTIVO"
 
 **Notas de débito y crédito por período - Mod. RG 4.540/2019**
 
-A partir del 01/04/2021 entrará también en vigencia una nueva manera de emitir notas de crédito y débito, donde en lugar de indicar uno o mas comprobantes asociados, se podrá indicar un periodo desde/hasta, el cual contempla los comprobantes emitidos dentro del período en cuestión. [Ver documentación](api-factura-electronica-afip-facturacion-nuevo-comprobante.md#estructura-de-comprobantes-asociados-detallados)
+A partir del 01/04/2021 entrará también en vigencia una nueva manera de emitir notas de crédito y débito, donde en lugar de indicar uno o mas comprobantes asociados, se podrá indicar un periodo desde/hasta, el cual contempla los comprobantes emitidos dentro del período en cuestión. [Ver documentación](api-factura-electronica-afip-facturacion-ventas.md#estructura-de-comprobantes-asociados-detallados)
 
 ***
 
@@ -112,7 +112,7 @@ Cambios para la emisión de un nuevo comprobante:
 
 * **Cambiamos la url a donde deberás enviar los request.** Ahora deberan ser enviados a https://www.tusfacturas.app
 * **Cambio de códigos:** En el bloque de "clientes", cambian los códigos a enviar en concepto de "condicion\_pago". [Consultar la tabla de referencia](tablas-de-referencia.md#condiciones-de-venta)
-* **Nueva condición de pago:** Se agrega la condición de pago "otras", la cual le permite enviar cualquier texto para que salga impreso en el pdf. Ésta información deberá ser enviada, dentro del campo "condicion\_pago\_otra" en el bloque de "clientes". [Consultar ejemplo aquí](api-factura-electronica-afip-facturacion-nuevo-comprobante.md#estructura-de-cliente). Éste campo es util cuando se lo junta con el campo de vencimiento (donde se indica la fecha de vencimiento de manera manual)
+* **Nueva condición de pago:** Se agrega la condición de pago "otras", la cual le permite enviar cualquier texto para que salga impreso en el pdf. Ésta información deberá ser enviada, dentro del campo "condicion\_pago\_otra" en el bloque de "clientes". [Consultar ejemplo aquí](api-factura-electronica-afip-facturacion-ventas.md#estructura-de-cliente). Éste campo es util cuando se lo junta con el campo de vencimiento (donde se indica la fecha de vencimiento de manera manual)
 * **Nuevas monedas de facturación:** Ahora podes emitir comprobantes en otras monedas extranjeras. [Consultá las monedas disponibles aquí ](tablas-de-referencia.md#monedas). Si necesitas alguna que no esté incluida, solicitála via email.
 
 ## 05 de Agosto de 2019

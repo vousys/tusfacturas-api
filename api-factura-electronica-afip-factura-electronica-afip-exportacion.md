@@ -12,7 +12,7 @@ Al final del documento encontrarás un ejemplo completo de comprobante de export
 
 ## Estructura de datos campo "fex"
 
-Para poder generar un [comprobante](api-factura-electronica-afip-facturacion-nuevo-comprobante.md) de tipo E, se requiere enviar dentro del campo "**comprobante**", un campo adicional llamado: "**fex**", con la siguiente estructura :
+Para poder generar un [comprobante](api-factura-electronica-afip-facturacion-ventas.md) de tipo E, se requiere enviar dentro del campo "**comprobante**", un campo adicional llamado: "**fex**", con la siguiente estructura :
 
 ```
 { 

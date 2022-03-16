@@ -11,16 +11,11 @@ description: >-
 **ATENCIÓN!** A partir de abril 2022, éste servicio se modificará para brindarte una solución con muchas más herramientas. Consultanos para más información
 {% endhint %}
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](como-empiezo.md)
-
-En TusFacturasAPP, contamos con 2 modalidades para la emisión de comprobantes:
-
-* Facturas individuales instantáneas: donde envías un solo request para ser procesado y obtenes la respuesta al instante (se detalla a continuación).  Conocé más sobre la ["Facturación individual e instantánea"](api-factura-electronica-afip-facturacion-nuevo-comprobante.md).
-* Lote de facturas instantáneas: donde envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante.  &#x20;
+Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](como-empiezo.md) y luego ["Facturación"](api-factura-electronica-afip-facturacion-ventas.md), para conocer la estructura de cada request que envíes.&#x20;
 
 ## ¿Qué puedo facturar por lote?
 
-Podes enviar a facturar cualquier tipo de comprobante A,B,C y M; ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.
+Podes enviar a facturar comprobantes de tipo A,B,C y M; ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos. **No podrás enviar comprobantes de tipo E ni de Factura de crédito electrónica (FEC) en ésta modalidad.**
 
 &#x20;¿No sabes qué [tipo de comprobante debes emitir](que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md)
 
@@ -34,7 +29,7 @@ Al utilizar éste servicio, los comprobantes que emitas, impactarán de inmediat
 Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰.
 {% endhint %}
 
-Te sugerimos leer primero, la documentación de ["Facturación individual e instantánea"](api-factura-electronica-afip-facturacion-nuevo-comprobante.md), para conocer cómo debe componerse cada request que envíes.
+Te sugerimos leer primero, la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)", para conocer cómo debe componerse cada request que envíes.
 
 
 
@@ -49,10 +44,6 @@ Formato esperado: JSON
 
 {% swagger-parameter in="body" name="requests" type="array" required="false" %}
 Según estructura de de cada item (detallado abajo).
-
-\\
-
-Máximo de request que se recibirán por cada llamada: 500
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
@@ -112,7 +103,7 @@ Tus credenciales de acceso
 
 #### Estructura del bloque: "requests"
 
-Requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de ["Facturación individual e instantánea"](api-factura-electronica-afip-facturacion-nuevo-comprobante.md).
+"requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)".
 
 {% hint style="info" %}
 * La cantidad máxima de requests (por cada llamada que realices) debe ser de 100, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y luego obtendrás una respuesta de timeout (524), pero los comprobantes que enviaste, seguirán siendo procesados en background .
