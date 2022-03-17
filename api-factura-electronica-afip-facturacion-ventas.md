@@ -294,7 +294,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * Por cuestiones de seguridad, el texto que se retorna en el campo afip\_codigo\_barras y afip\_qr, se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
 * Para evitar inconsistencias en la validación de las sumatorias, te sugerimos redondear los valores decimales con "Round half even".
 * La respuesta exitosa, te incluye el texto que se necesita para armar el código QR (en caso que generes el PDF desde tu lado) y/o el viejo código de barras (para comprobantes anteriores).
-* A partir del 01/04/2022, si envias una nota de crédito, donde anulas únicamente 1 comprobante, cuyo el importe de la NC es exactamente igual al del comprobante que éstas anulando, ésto generará automáticamente un recibo de cobro, en la cuenta corriente de tu cliente (sin enviarse ni a AFIP ni a tu cliente), para netear ambos importes.
+* Las notas de débito y crédito requieren que envies obligatoriamente los comprobantes asociados (o su período asociado). [Conocé más desde aquí](api-factura-electronica-afip-facturacion-ventas.md#estructura-de-comprobantes-asociados)
 {% endhint %}
 
 #### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme"?
@@ -604,25 +604,51 @@ Los campos que debes enviar son los siguientes:
 
 ### Estructura de "Comprobantes Asociados"
 
-**Solo para las notas de débito y las notas de crédito**, AFIP requiere de manera obligatoria, que se envíe un bloque de información adicional con "comprobantes asociados". Los comprobantes asociados son aquellos comprobantes que éstas incluyendo para anular o afectar, según corresponda y son datos que posee el emisor del comprobante en cuestión.
+**Solo para las notas de débito y las notas de crédito**, AFIP requiere de manera obligatoria, que se envíe un bloque de información adicional con "comprobantes asociados".&#x20;
 
-A partir del 01/04/2021 existen 2 maneras de informar los comprobantes asociados:
+Los comprobantes asociados son aquellos comprobantes que éstas incluyendo para anular o afectar (según corresponda) y los datos a enviar, pertenecen al emisor del comprobante.
 
-a) Detallando comprobantes asociados
+**Existen 2 maneras de informar los comprobantes asociados:**
 
-b) Indicando un período de comprobantes asociados.
+a) Detallando comprobantes asociados  :track\_next: [#envio-de-comprobantes-asociados-detallados](api-factura-electronica-afip-facturacion-ventas.md#envio-de-comprobantes-asociados-detallados "mention")
 
-Podes ver un [ejemplo de comprobante con comprobantes asociados desde aquí](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a)
+b) Indicando un período de comprobantes asociados. :track\_next: [#comprobantes-asociados-por-periodo](api-factura-electronica-afip-facturacion-ventas.md#comprobantes-asociados-por-periodo "mention")
+
+
 
 {% hint style="info" %}
 En todos las notas de crédito y/o notas de débito de cualquier tipo ( A,B, C, E y de tipo MiPyme), **éste bloque es obligatorio,** ya sea que lo hagas por período o por detalle de comprobantes**.**
 {% endhint %}
 
+#### Ejemplo de JSON a enviar:
+
+Podes ver un [ejemplo de comprobante con comprobantes asociados desde aquí](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a)
+
+
+
 ### Envío de comprobantes asociados: "detallados"
 
 Para éste tipo de información, es obligatorio enviar el detalle de los comprobantes que se anulan, dentro de un array, en el bloque llamado "**comprobantes\_asociados**", acorde a la estructura que se detalla a continuación para cada comprobante asociado.
 
-Ten en cuenta que AFIP realiza validaciones sobre éstos datos, ya que según lo que facture tu cliente, tiene una cantidad de dias X habiltiados para anularlas.&#x20;
+Ten en cuenta que AFIP realiza validaciones sobre éstos datos, ya que según lo que facture tu cliente, tiene una cantidad de días X habilitados para anularlas.&#x20;
+
+{% hint style="info" %}
+**Auto-acreditación en cuenta corriente:**
+
+A partir del 01/04/2022, comienza a funcionar la "auto-acreditación" con las NC, solo si cumple con los siguientes requisitos:
+
+1. Detalla un solo comprobante.&#x20;
+2. El importe de la NC es exactamente igual al del comprobante que éstas anulando (factura o nota de débito).
+3. La factura o nota de débito que estás anulando, no posee pagos.
+
+La auto-acreditación lo que producirá, es generar un recibo de cobro, en la cuenta corriente de tu cliente, para anular contablemente esa factura o nota de débito asociada.
+
+
+{% endhint %}
+
+
+
+Ejemplo del JSON a enviar:
 
 ```
 comprobante: {
