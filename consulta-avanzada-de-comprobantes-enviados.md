@@ -61,15 +61,16 @@ Tus credenciales de acceso
 
 #### Ejemplo del JSON de respuesta:
 
-La consulta te devolverá un array, compuesto por cada comprobante, que tendrá la misma estructura que te entrega [la consulta de comprobante individual](consulta-avanzada-de-comprobantes-enviados.md#1.-consulta-individual-de-un-comprobante)&#x20;
+La consulta te devolverá un array, compuesto por cada comprobante, que tendrá la misma estructura que te entrega la consulta de[ comprobante simple.](api-factura-electronica-afip-consulta-de-comprobantes.md)&#x20;
 
 Ej:
 
 ```
 {
 	"error": "N",
-	"errores": [""],
+	"errores": [],
 	"rta": "OK",
+	"total": 10,
 	"comprobantes": [ 
 	{
 		"cliente": {
@@ -336,6 +337,15 @@ Ej:
 	]
 }
 ```
+
+#### Campos de la respuesta
+
+| Nombre del campo | Info                                                                                                                                                                               |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| error            | Campo alfanumerico. Valores posibles "S" o "N"                                                                                                                                     |
+| errores          | Array conteniendo la lista de errores detectados                                                                                                                                   |
+| total            | Campo numérico, que indica la cantidad de registros encontrados con los parámetros indicados, sin aplicarle la paginación ni limitación. (Dato disponible a partir del 01/04/2022) |
+| comprobantes     | Array conteniendo cada uno de los comproantes encontrados, según estructura que se detalla en la [consulta simple.](api-factura-electronica-afip-consulta-de-comprobantes.md)      |
 
 ## ¿Cómo realizar una consulta avanzada por fecha?
 
