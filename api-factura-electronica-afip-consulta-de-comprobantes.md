@@ -38,7 +38,7 @@ Tus Credenciales de acceso.
 {% endswagger-parameter %}
 {% endswagger %}
 
-#### Estructura del bloque: "Comprobante"
+#### Estructura a enviar dentro del bloque: "Comprobante"
 
 | `tipo`        | <p>Campo numérico según tabla de referencia de <a href="https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes">Tipos de comprobantes(***)</a>.<br><strong>Ejemplo: FACTURA B</strong></p> |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -69,6 +69,8 @@ Los datos devueltos por éste método mantienen la misma estructura que los envi
 {% endhint %}
 
 #### Ejemplo del JSON de respuesta:
+
+La información que obtenés se devuelve estructurada de la misma manera que la enviaste, con el agregado de ciertos campos que se detallan a continuación
 
 ```
 {
@@ -146,9 +148,8 @@ Los datos devueltos por éste método mantienen la misma estructura que los envi
 		"nogravados": 0,
 		"total": 543.21,
 		"cae": "65301278726386 ",
-		"afip_qr":			
 		"external_reference": "Lun141",
-			"tags": [
+		"tags": [
 				"etiqueta1",
 				"etiqueta2"
 				],
@@ -163,5 +164,24 @@ Los datos devueltos por éste método mantienen la misma estructura que los envi
 }
 ```
 
-####
+#### Campos devueltos que no forman parte del JSON que vos envias:
+
+| Nombre del campo        | Info                                                                                                                                                                                                                     |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| cae                     | Campo alfanumérico, con un espacio adicional, devuelto por AFIP, a modo e código de autorización electrónica de la transacción realizada                                                                                 |
+| afip\_qr                | Campo alfanumérico, conteniendo el texto necesario para formar el QR                                                                                                                                                     |
+| ctacte\_status          | Campo alfanumérico, conteniendo el estado del pago de ese comprobante dentro de la cuenta corriente. Los valores posibles son: PAGADA, IMPAGA , PAGO PARCIAL                                                             |
+| status                  | Campo alfanumérico, conteniendo el estado de emisión de ese comprobante . Lo valores les son: "EMITIDO", "APROBADO Y EN COLA. SE EMITE EL dd/mm/aaaa", "EN COLA, ESPERANDO APROBACION", "ENVIADO A PROCESAR - CON ERROR" |
+| afip\_codigo\_barras    | Campo alfanumérico, conteniendo el texto necesario para formar el código de barras de AFIP (legacy)                                                                                                                      |
+| vencimiento\_cae        | Fecha enviada por AFIP al momento de autorizar el comprobante. Formato: dd/mm/aaaa                                                                                                                                       |
+| vencimiento\_pago       | Fecha que indica la fecha de vencimiento del pago. Éste dato enviado por el cliente, o auto-calculado en base a la condición de pago estipulada en el perfil del cliente. Formato: dd/mm/aaaa                            |
+| comprobante\__pdf_\_url | Campo alfanumérico que al pdf del comprobante.                                                                                                                                                                           |
+
+
+
+
+
+
+
+
 

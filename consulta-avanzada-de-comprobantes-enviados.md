@@ -61,7 +61,7 @@ Tus credenciales de acceso
 
 #### Ejemplo del JSON de respuesta:
 
-La consulta te devolverá un array, compuesto por cada comprobante, que tendrá la misma estructura que te entrega [la consulta de comprobante individual](consulta-avanzada-de-comprobantes-enviados.md#1.-consulta-individual-de-un-comprobante) .
+La consulta te devolverá un array, compuesto por cada comprobante, que tendrá la misma estructura que te entrega [la consulta de comprobante individual](consulta-avanzada-de-comprobantes-enviados.md#1.-consulta-individual-de-un-comprobante)&#x20;
 
 Ej:
 
