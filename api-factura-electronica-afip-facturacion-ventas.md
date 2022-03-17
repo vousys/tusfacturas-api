@@ -294,6 +294,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * Por cuestiones de seguridad, el texto que se retorna en el campo afip\_codigo\_barras y afip\_qr, se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
 * Para evitar inconsistencias en la validación de las sumatorias, te sugerimos redondear los valores decimales con "Round half even".
 * La respuesta exitosa, te incluye el texto que se necesita para armar el código QR (en caso que generes el PDF desde tu lado) y/o el viejo código de barras (para comprobantes anteriores).
+* A partir del 01/04/2022, si envias una nota de crédito, donde anulas únicamente 1 comprobante, cuyo el importe de la NC es exactamente igual al del comprobante que éstas anulando, ésto generará automáticamente un recibo de cobro, en la cuenta corriente de tu cliente (sin enviarse ni a AFIP ni a tu cliente), para netear ambos importes.
 {% endhint %}
 
 #### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme"?
