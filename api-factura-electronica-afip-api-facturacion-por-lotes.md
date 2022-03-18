@@ -1,8 +1,7 @@
 ---
 description: >-
   Utilizá la API de facturación electrónica de TusFacturas.app, para enviar a
-  procesar lotes y obtener la respuesta al instante, acelerando los tiempos de
-  procesamiento.
+  procesar lotes y obtener la respuesta al instante.
 ---
 
 # Facturación instantánea por Lotes
@@ -106,11 +105,12 @@ Tus credenciales de acceso
 "requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)".
 
 {% hint style="info" %}
-* La cantidad máxima de requests (por cada llamada que realices) debe ser de 100, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y luego obtendrás una respuesta de timeout (524), pero los comprobantes que enviaste, seguirán siendo procesados en background .
+* La cantidad máxima de requests (por cada llamada que realices) debe ser de 20, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y según funcionen los servicios de AFIP, puedes obtener una respuesta de timeout (524). En caso de recibir un 524, ten en cuenta que los comprobantes que enviaste, seguirán siendo procesados en background, pero no recibirás la respuesta.  Te sugerimos utilizar la modalidad de [Facturación encolada por lotes](facturacion-asincronica-por-lotes-encolada.md) para evitar éste tipo de errores.
 * Todos los requests de ésta llamada, deben ser del **mismo tipo de comprobante**. Ej: todos deben ser FACTURA A
 * Todos los requests de ésta llamada, deben ser de la **misma fecha**. Ej: todos deben ser 12/03/2021
 * Los request deben venir **ordenados por número ascendente**, de la misma manera que si los enviarás a procesar uno por uno.
-* **No podrás enviar comprobantes de tipo E ni de Factura de crédito electrónica (FEC) en ésta modalidad.**
+* **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md) **ni de** [**Factura de crédito electrónica (FEC)**](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md) **en ésta modalidad.**
+* Si se detecta al menos un (1) error de validación de datos de nuestro lado, el lote no se mandará a procesar.
 {% endhint %}
 
 La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar ([comprobantes de tipo A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)) .
