@@ -126,10 +126,6 @@ Ej:
 				"leyenda": ""
 			} ],
 			"bonificacion": 120,
-			"subtotal_1":  380.45,
-			"iva_alicuota": 21,
-			"subtotal_2": 75,
-			"iva_alicuota_2": 10.5,
 			"leyenda_gral": "bla bla bla",
 	        	"percepciones_iibb":        "0",
 	       		"percepciones_iibb_base":   "0",
@@ -214,10 +210,6 @@ Ej:
 				"leyenda": ""
 			} ],
 			"bonificacion": 120,
-			"subtotal_1":  380.45,
-			"iva_alicuota": 21,
-			"subtotal_2": 75,
-			"iva_alicuota_2": 10.5,
 			"leyenda_gral": "bla bla bla",
 	        	"percepciones_iibb":        "0",
 	        	"percepciones_iibb_base":   "0",
@@ -301,10 +293,6 @@ Ej:
 				"leyenda": ""
 			} ],
 			"bonificacion": 120,
-			"subtotal_1":  380.45,
-			"iva_alicuota": 21,
-			"subtotal_2": 75,
-			"iva_alicuota_2": 10.5,
 			"leyenda_gral": "bla bla bla",
 	        	"percepciones_iibb":        "0",
 	        	"percepciones_iibb_base":   "0",
