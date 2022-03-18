@@ -356,11 +356,11 @@ Charset: **UTF-8**
 "apikey"    :  "9991",
 "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
 "busqueda_tipo": "F",
+ "pagina" : 0,
+ "limite": 100 ,
 "comprobante":  {
                 "fecha":     "23/05/2021",
-                "operacion": "V",
-                "pagina" : 0,
-                "limite": 100 
+                "operacion": "V"
         }
 }
 ```
@@ -416,15 +416,15 @@ A partir del 01/05/2022, está consultá comenzará a ser paginada, con un lími
 "apikey"    :  "9991",
 "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
 "busqueda_tipo": "TN",
+ "pagina" : 0,
+ "limite": 100 ,
 "comprobante": 
 	{
 			"tipo": "FACTURA A",
 			"operacion": "V",
 			"punto_venta": "00010",
 			"numero_desde": "00000001",
-			"numero_hasta": "00000300",
-			"pagina": 0,
-			"limite": 1000
+			"numero_hasta": "00000300" 
 			 
 	}
 } 
@@ -465,6 +465,8 @@ Debés tener en cuenta que  la información obtenida, será la relacionada al pu
 "apikey"    :  "9991",
 "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
 "busqueda_tipo": "EXT_REF",
+ "pagina" : 0,
+ "limite": 100 ,
 "comprobante": {
 		"external_reference": "DD2F1F1",
 		"operacion": "V"
