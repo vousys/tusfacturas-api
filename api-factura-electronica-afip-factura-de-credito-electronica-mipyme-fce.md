@@ -32,9 +32,9 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
 
 ```
 {
-	"usertoken": "hagagay2y884e1405e26c03c85",
-	"apikey": "1234",
-	"apitoken": "asduasuya81238173189378921378",
+	"usertoken": "xxxx",
+	"apikey": "xxxx",
+	"apitoken": "xxxxx",
 	"cliente": {
 		"documento_tipo": "CUIT",
 		"documento_nro": "30712293841",
@@ -109,14 +109,14 @@ Las notas de crédito requieren que se envíe el bloque de "[Comprobantes asocia
 
 Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_especiales](api-factura-electronica-afip-facturacion-ventas.md#estructura-de-rg-especiales)", el dato id #22 con el valor S o N.
 
-Es importante aclarar que **AFIP no requiere el envio del CBU** para las NC y ND
+Es importante aclarar que **AFIP no requiere el envio del CBU ni ALIAS,** para las NC y ND
 
 {% code title="JSON" %}
 ```
 {
-	"usertoken": "hagagay2y884e1405e26c03c85",
-	"apikey": "1234",
-	"apitoken": "asduasuya81238173189378921378",
+	"usertoken": "xxx",
+	"apikey": "xxxx",
+	"apitoken": "xxxx",
 	"cliente": {
 		"documento_tipo": "CUIT",
 		"documento_nro": "30712293841",
@@ -177,7 +177,7 @@ Es importante aclarar que **AFIP no requiere el envio del CBU** para las NC y ND
                              } 
                 ]
             }, 
-		"comprobantes_asociados": [{
+	"comprobantes_asociados": [{
 			"tipo_comprobante": "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
 			"punto_venta": "3",
 			"numero": 1,

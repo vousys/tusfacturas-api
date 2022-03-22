@@ -105,9 +105,9 @@ Ten en cuenta que solo almacenamos la información descargada desde AGIP para el
 
 ```
 {
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
-"apikey"    :  "9991",
-"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
+"usertoken" :  "xxxx",
+"apikey"    :  "xxxx",
+"apitoken"  :  "xxxxx",
 "cliente":  {                
       "documento_nro":    "30712293841",
       "documento_tipo":   "CUIT"        

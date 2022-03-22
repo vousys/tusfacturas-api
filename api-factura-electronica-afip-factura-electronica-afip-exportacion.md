@@ -14,6 +14,8 @@ Al final del documento encontrarás un ejemplo completo de comprobante de export
 
 Para poder generar un [comprobante](api-factura-electronica-afip-facturacion-ventas.md) de tipo E, se requiere enviar dentro del campo "**comprobante**", un campo adicional llamado: "**fex**", con la siguiente estructura :
 
+### Ejemplo de JSON para FACTURA E
+
 ```
 { 
 
@@ -42,33 +44,25 @@ Para poder generar un [comprobante](api-factura-electronica-afip-facturacion-ven
                                       "codigo_despacho"   :    "4444567890123456",
                                        "pais_destino_id"  :    "145"
                                   }
-                              ],
-              "comprobantes_asociados": [
-                            {
-                                "tipo_comprobante"   :    "NOTA DE CREDITO E",
-                                 "punto_venta"  :    "145",
-                                 "numero"         : 12313,
-                                 "comprobante_fecha": "07/07/2018",
-                                 "cuit": 30111222334     
-                            } 
-                       ]
+                              ]
+               
       }
 }
 ```
 
 ### Información de cada uno de los campos :
 
-| `tipo_exportacion`       | <p>Campo numérico. Longitud 1 caracter. Valores esperados:<br>1= Exportación definitiva de bienes<br>2= Servicios<br>4= Otros.<br><strong>Ejemplo: 2</strong></p>                                                                                                                                                       |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `permisos_tiene`         | <p>Campo alfabético. Longitud 1 caracter. Indica si se posee documento aduanero de exportación (permiso de embarque). Valores esperados:<br>S= Si posee<br>N= No posee<br>(vacio)= No especifica<br><strong>Ejemplo: S</strong></p>                                                                                     |
-| `permisos`               | Solo deberán ser enviados los permisos cuando el campo permisos\_tiene sea igual a "S". Valores a enviar según estructura de datos definida en ["Permisos de exportacion".](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#estructura-de-permisos)                                                 |
-| `pais_comprobante_id`    | <p>Campo numérico. Según tabla de referencia <a href="consulta-de-paises-afip.md">Paises AFIP (**)</a><br><strong>Ejemplo: 123</strong></p>                                                                                                                                                                              |
-| `forma_pago_leyenda`     | <p>Campo alfanumérico. Descripción adicional de la forma de pago<br><strong>Ejemplo: Favor depositar en cuenta XXXXX</strong></p>                                                                                                                                                                                       |
-| `cliente_pais_cuit`      | <p>Campo numérico. Según tabla de referencia <a href="consulta-de-cuit-pais-afip.md">CUIT Pais AFIP (**)</a><br><strong>Ejemplo: 51600004380</strong></p>                                                                                                                                                                |
-| `incoterms_tipo_id`      | <p>Campo alfabético Incoterms – Cláusula de Venta. Según tabla de referencia <a href="consulta-de-incoterms.md">Incoterms (**)</a><br><strong>Ejemplo: EXW</strong></p>                                                                                                                                                 |
-| `incoterms_nro`          | <p>Campo alfanumérico - Información complementaria del incoterm<br><strong>Ejemplo: Texto dic.</strong></p>                                                                                                                                                                                                             |
-| `comprobantes_asociados` | Se deberá informar el/los comprobante/s asociados solamente si el comprobante que se está autorizando corresponde a una Nota de Débito o Nota de Crédito. Según estructura de "[Comprobantes asociados"](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#estructura-de-comprobantes-asociados). |
-| fecha\_pago              | Campo fecha - formato esperado: dd/mm/aaaa. Éste campo es obligatorio únicamente para Facturas E, si se envia tipo\_exportacion = 2 o tipo\_exportacion=4                                                                                                                                                                |
+| `tipo_exportacion`       | <p>Campo numérico. Longitud 1 caracter. Valores esperados:<br>1= Exportación definitiva de bienes<br>2= Servicios<br>4= Otros.<br><strong>Ejemplo: 2</strong></p>                                                                                                                                                                 |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `permisos_tiene`         | <p>Campo alfabético. Longitud 1 caracter. Indica si se posee documento aduanero de exportación (permiso de embarque). Valores esperados:<br>S= Si posee<br>N= No posee<br>(vacio)= No especifica<br><strong>Ejemplo: S</strong></p>                                                                                               |
+| `permisos`               | Solo deberán ser enviados los permisos cuando el campo permisos\_tiene sea igual a "S". Valores a enviar según estructura de datos definida en ["Permisos de exportacion".](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#estructura-de-permisos)                                                           |
+| `pais_comprobante_id`    | <p>Campo numérico. Según tabla de referencia <a href="consulta-de-paises-afip.md">Paises AFIP (**)</a><br><strong>Ejemplo: 123</strong></p>                                                                                                                                                                                        |
+| `forma_pago_leyenda`     | <p>Campo alfanumérico. Descripción adicional de la forma de pago<br><strong>Ejemplo: Favor depositar en cuenta XXXXX</strong></p>                                                                                                                                                                                                 |
+| `cliente_pais_cuit`      | <p>Campo numérico. Según tabla de referencia <a href="consulta-de-cuit-pais-afip.md">CUIT Pais AFIP (**)</a><br><strong>Ejemplo: 51600004380</strong></p>                                                                                                                                                                          |
+| `incoterms_tipo_id`      | <p>Campo alfabético Incoterms – Cláusula de Venta. Según tabla de referencia <a href="consulta-de-incoterms.md">Incoterms (**)</a><br><strong>Ejemplo: EXW</strong></p>                                                                                                                                                           |
+| `incoterms_nro`          | <p>Campo alfanumérico - Información complementaria del incoterm<br><strong>Ejemplo: Texto dic.</strong></p>                                                                                                                                                                                                                       |
+| `comprobantes_asociados` | OPCIONAL. Se deberá informar el/los comprobante/s asociados solamente si el comprobante que se está autorizando corresponde a una Nota de Débito o Nota de Crédito. Según estructura de "[Comprobantes asociados"](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#estructura-de-comprobantes-asociados). |
+| fecha\_pago              | Campo fecha - formato esperado: dd/mm/aaaa. Éste campo es obligatorio únicamente para Facturas E, si se envia tipo\_exportacion = 2 o tipo\_exportacion=4                                                                                                                                                                          |
 
 ### Estructura de "Permisos "
 
@@ -87,9 +81,9 @@ Información de los campos a enviar:Información de los campos a enviar:
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | `pais_destino_id` | <p>Campo numérico. Según tabla de referencia <a href="consulta-de-paises-afip.md">Paises AFIP (**)</a><br><strong>Ejemplo: 123</strong></p>    |
 
-### Estructura de "Comprobantes Asociados"
+### FEX: Estructura de "Comprobantes Asociados"
 
-Cada uno de los comprobantes asociados de exportación que disponga, deberán ser enviados acordes a la estructura que se detalla a continuación.
+Dentro del bloque "fex"y en caso de emitir una NOTA DE CRÉDITO E o una NOTA DE DÉBITO E, se deberá detallar cada uno de los comprobantes asociados que se anulan, acordes a la estructura que se detalla a continuación.
 
 {% hint style="info" %}
 Solo deberán ser enviados los comprobantes asociados, cuando el campo exportacion\_tipo sea igual a "1" .
@@ -104,7 +98,7 @@ Solo deberán ser enviados los comprobantes asociados, cuando el campo exportaci
 } 
 ```
 
-Solo deberán ser enviados los comprobantes asociados, cuando el campo exportacion\_tipo sea igual a "1"
+
 
 Información de los campos a enviar:
 
@@ -112,9 +106,9 @@ Información de los campos a enviar:
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `punto_venta`      | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                |
 | `numero`           | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p> |
-| `CUIT`             | <p>Campo numérico, sin puntos ni guiones.<br><strong>Ejemplo: 30111222334</strong></p>                                                                                 |
+| `CUIT`             | <p>Campo numérico, sin puntos ni guiones del emisor del comprobante asociado (o sea TU CUIT)<br><strong>Ejemplo: 30111222334</strong></p>                              |
 
-### Ejemplo de JSON completo a enviar
+### Ejemplo de NOTA DE DÉBITO E
 
 ```
 {

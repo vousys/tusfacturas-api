@@ -17,7 +17,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
 
 ```
 {
-	"apitoken": "kkakak208a17cdfc4e4741437baddaa6",
+	"apitoken": "xxxx",
 	"cliente": {
 		"documento_tipo": "DNI",
 		"condicion_iva": "CF",
@@ -29,7 +29,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
 		"email": "email@dominio.com",
 		"envia_por_mail": "N"
 	},
-	"apikey": "1235",
+	"apikey": "xxxx",
 	"comprobante": {
 		"rubro": "Sevicios web",
 		"percepciones_iva": 0,
@@ -70,7 +70,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
    		 "impuestos_internos_base":   "0",
     		"impuestos_internos_alicuota": "0" 
 	},
-	"usertoken": "a7ahdt5sdddddd7725d7fa4f4e63646bc169b"
+	"usertoken": "xxxx"
 }
 ```
 

@@ -62,9 +62,9 @@ En caso de detectar algún error, el campo error, se devuelve con una "S" y dent
 {% code title="JSON" %}
 ```
 {
-	"usertoken": "jajajja8c8bf67c884e1405e26c03c85",
-	"apikey": "9991",
-	"apitoken": "kkakak208a17cdfc4e4741437baddaa6",
+	"usertoken": "xxxxx",
+	"apikey": "xxxxx",
+	"apitoken": "xxxxx",
 	"comprobante": {
 		"tipo": "NOTA DE DEBITO B",
 		"operacion": "V",

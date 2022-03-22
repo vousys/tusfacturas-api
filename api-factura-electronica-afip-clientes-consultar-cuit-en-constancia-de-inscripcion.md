@@ -4,12 +4,12 @@ description: >-
   inscripción de AFIP, y obtené los datos en formato JSON.
 ---
 
-# API Factura electrónica AFIP | Consulta el CUIT desde la constancia de inscripción
+# Consultar datos de un CUIT, desde la constancia de inscripción
 
 {% hint style="info" %}
 El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.
 
-**IMPORTANTE**: Para poder realizar ésta consulta,  deberás tener agregado en tu cuenta AFIP, el servicio de CONSULTA DE CONSTANCIA DE INSCRIPCIÓN. Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 5  ](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
+**IMPORTANTE**: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP, el servicio de CONSULTA DE CONSTANCIA DE INSCRIPCIÓN. Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 5](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
 {% endhint %}
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/clientes/afip-info" method="post" summary="Obtener datos de un CUIT" %}
@@ -17,19 +17,19 @@ El límite de request que dispones para realizar las consultas, es el mismo limi
 
 {% endswagger-description %}
 
-{% swagger-parameter in="body" name="cliente" type="string" %}
+{% swagger-parameter in="body" name="cliente" type="string" required="false" %}
 Objeto de tipo cliente
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apikey" type="string" %}
+{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
 Tus credenciales de acceso
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" %}
+{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
 Tus credenciales de acceso.
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" %}
+{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
 Tus credenciales de acceso.
 {% endswagger-parameter %}
 
@@ -62,7 +62,6 @@ Tus credenciales de acceso.
    "errores":  [  "" ] 
 }
 ​
-
 ```
 {% endcode %}
 {% endswagger-response %}
@@ -73,15 +72,14 @@ Tus credenciales de acceso.
 {% code title="JSON" %}
 ```
 {
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
-"apikey"    :  "9991",
-"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
+"usertoken" :  "xxxx",
+"apikey"    :  "xxx",
+"apitoken"  :  "xxxx",
 "cliente":  {                      
     "documento_nro":    "30712293841",      
     "documento_tipo":   "CUIT"                   
     } 
  }
-
 ```
 {% endcode %}
 
@@ -90,8 +88,6 @@ Tus credenciales de acceso.
 | `documento_tipo` | Valores Permitidos: **CUIT**                                    |
 | ---------------- | --------------------------------------------------------------- |
 | `documento_nro`  | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
-
-
 
 ### Ejemplo del JSON de respuesta
 
@@ -121,10 +117,7 @@ Tus credenciales de acceso.
    ],
    "errores":  [  "" ] 
 }
-
 ```
-
-
 
 ### Posibles valores, de la respuesta obtenida.
 
@@ -133,5 +126,3 @@ condicion\_impositiva puede retornar los siguientes valores:
 * MONOTRIBUTO
 * EXENTO
 * RESPONSABLE INSCRIPTO
-
-&#x20;

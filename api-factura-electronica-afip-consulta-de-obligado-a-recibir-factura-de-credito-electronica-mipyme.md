@@ -76,9 +76,9 @@ como la siguiente:
 
 ```
 {
-	"apitoken": "asdadasd123",
-	"apikey": 0001,
-	"usertoken": "asdasdasd123",
+	"apitoken": "xxxx",
+	"apikey": xxxx,
+	"usertoken": "xxxx",
 	"cuit": 12345678901,
 	"fecha": "08/12/2019"
 }

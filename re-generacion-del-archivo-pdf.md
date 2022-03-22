@@ -50,9 +50,9 @@ Un objeto compuesto de los siguientes atributos: ****&#x20;
 {% code title="JSON" %}
 ```
 {
-"usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
-"apikey"    :  "9991",
-"apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
+"usertoken" :  "xxxx",
+"apikey"    :  "xxxx",
+"apitoken"  :  "xxxx",
 "comprobante":  {
                 "tipo":                     "NOTA DE DEBITO B",
                 "operacion":                "V",
@@ -68,8 +68,8 @@ Un objeto compuesto de los siguientes atributos: ****&#x20;
 
 ```
 {
-"error" :  "N",
-"comprobante_pdf_url"    :  "http://www.prueba.com"
+        "error" :  "N",
+        "comprobante_pdf_url"    :  "http://www.prueba.com"
 }
 ```
 

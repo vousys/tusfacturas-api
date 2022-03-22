@@ -44,9 +44,9 @@ Tus Credenciales de acceso
 {% code title="JSON" %}
 ```
 {
-   "usertoken":"JHJKHJHJKHJK",
-    "apitoken":"HJKHJHJKHKJHK",
-    "apikey":"111" 
+   "usertoken":"xxxxx",
+    "apitoken":"xxxx",
+    "apikey":"xxxx" 
 }
 ```
 {% endcode %}

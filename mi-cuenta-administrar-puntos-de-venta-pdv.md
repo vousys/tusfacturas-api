@@ -1,6 +1,6 @@
 # Mi cuenta - Administrar puntos de venta (PDV)
 
-Con la API de TusFacturasAPP, podrás administrar tus puntos venta, crearlos, editarlos, solicitar el certificado de enlace con AFIP y hasta predeterminarlos. 
+Con la API de TusFacturasAPP, podrás administrar tus puntos venta, crearlos, editarlos, solicitar el certificado de enlace con AFIP y hasta predeterminarlos.&#x20;
 
 ## Agregar o modificar puntos de venta
 
@@ -162,9 +162,9 @@ Tus credenciales actuales de acceso.
 {% code title="JSON" %}
 ```
 {
-   "usertoken":"JHJKHJHJKHJK",
-    "apitoken":"HJKHJHJKHKJHK",
-    "apikey":"111",
+   "usertoken":"xxxx",
+    "apitoken":"xxx",
+    "apikey":"xxxx",
     "operacion":"A",
     "punto_venta": "00023",
     "direccion":"AV. 68 N75A - 50, PISO 4, Buenos Aires, Argentina",

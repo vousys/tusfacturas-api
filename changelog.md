@@ -1,5 +1,13 @@
 # Changelog
 
+## 22 de marzo de 2022
+
+Se incluye la documentación de ["Webhooks (notificaciones)](webhooks-notificaciones.md)
+
+## 21 de Marzo de 2022
+
+Se incluye la documentación de la ["Facturación por lotes asincrónica (encolada)](facturacion-asincronica-por-lotes-encolada.md)
+
 ## 17 de marzo de 2022
 
 Se incluye en la documentación de la [consulta avanzada de comprobantes](consulta-avanzada-de-comprobantes-enviados.md), el campo de total de registros resultantes de esa búsqueda, la paginación y su límite por página.
@@ -8,15 +16,15 @@ Se incluye también en la documentación de [facturación](api-factura-electroni
 
 ## 16 de marzo de 2022
 
-Se modifica la documentación de facturación, y se agrega el bloque de "tags", como opcional para el envío de nuevos comprobantes a partir del 01/04/2022.
+Se modifica la documentación de [facturación](api-factura-electronica-afip-facturacion-ventas.md), y se agrega el bloque de "**tags**", como opcional para el envío de nuevos comprobantes a partir del 01/04/2022.
 
 ## 11 de marzo de 2022
 
-Se modifica la documentación de la consulta de comprobantes individual y avanzada. Se agrega el método de consulta por "external\_reference" a partir del 01/04/2022 y se agrega la paginación a la consulta avanzada, a partir del 01/05/2022.
+Se modifica la documentación de la[ consulta de comprobantes individual](api-factura-electronica-afip-consulta-de-comprobantes.md) y [avanzada](consulta-avanzada-de-comprobantes-enviados.md). Se agrega el método de [consulta por "external\_reference"](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference) , a partir del 01/04/2022 y se agrega la paginación a la consulta avanzada, a partir del 01/05/2022.
 
 ## 07 de febrero de 2022
 
-Nuevo comprobante de venta: Se agrega el campo "external\_reference" dentro del bloque "comprobante" para que puedas referenciar cada comprobante en tu sistema, ya sea si lo envías por lotes o individuales.
+Nuevo comprobante de venta: Se agrega el campo "external\_reference" dentro del bloque "comprobante", para que puedas referenciar cada comprobante en tu sistema, ya sea si lo envías por lotes o individuales.
 
 ## 12 de enero de 2022
 

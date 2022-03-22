@@ -48,9 +48,9 @@ Tus credenciales de acceso
 {% code title="JSON" %}
 ```
 {
-"usertoken" :  "5ef7asdasdadsaa1b88fcabba3f",
-"apikey"    :  "13562",
-"apitoken"  :  "7668aadas21321adasdiaddaa6",
+"usertoken" :  "xxxx",
+"apikey"    :  "xxxx",
+"apitoken"  :  "xxxx",
 "mes": 11,
 "anio": 2018,
 "email": "tumail@dominio.com"

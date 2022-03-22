@@ -10,6 +10,7 @@
 * [Facturación instantánea e individual](api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
 * [Facturación instantánea por Lotes](api-factura-electronica-afip-api-facturacion-por-lotes.md)
 * [Facturación asincrónica por Lotes (encolada)](facturacion-asincronica-por-lotes-encolada.md)
+* [Webhooks (notificaciones)](webhooks-notificaciones.md)
 * [Ejemplos de comprobantes tipo "A"](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
 * [Ejemplos de comprobantes tipo "B"](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)
 * [Ejemplos de comprobantes tipo "C"](api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)
@@ -38,12 +39,11 @@
 * [Parámetros:  Consulta de los CUIT País en AFIP](consulta-de-cuit-pais-afip.md)
 * [Parámetros: Consulta de Incoterms](consulta-de-incoterms.md)
 * [Tablas de referencia](tablas-de-referencia.md)
+* [Guía de migración a facturación asincrónico (encolado)](guia-de-migracion-a-facturacion-asincronico-encolado.md)
 * [FAQs | Preguntas frecuentes](faqs-or-preguntas-frecuentes.md)
 * [Changelog](changelog.md)
 
 ## API v1 (OLD)
-
-* [Facturación por lotes v1](api-v1-old/nuevo-comprobante-de-venta-async.md)
 
 ***
 

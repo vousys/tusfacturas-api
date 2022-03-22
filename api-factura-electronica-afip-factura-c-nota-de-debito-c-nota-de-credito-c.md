@@ -17,7 +17,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
 
 ```
 {
-	"apitoken": "kkakak208a17cdfc4e4741437baddaa6",
+	"apitoken": "xxx",
 	"cliente": {
 		"documento_tipo": "CUIT",
 		"condicion_iva": "M",
@@ -29,7 +29,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
 		"email": "tusfacturas@vousys.com",
 		"envia_por_mail": "N"
 	},
-	"apikey": "1235",
+	"apikey": "xxx",
 	"comprobante": {
 		"rubro": "Sevicios web",
 		"percepciones_iva": 0,
@@ -67,7 +67,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
         "impuestos_internos_base":   "0",
         "impuestos_internos_alicuota": "0"
 	},
-	"usertoken": "a7ahdt5s7725d7fa4f4e63646bc169b"
+	"usertoken": "xxxx"
 }
 ```
 

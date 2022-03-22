@@ -7,13 +7,17 @@ description: >-
 
 # Facturación asincrónica por Lotes (encolada)
 
-
-
 {% hint style="info" %}
 **ATENCIÓN!** Éste servicio comenzará a funcionar a partir del 01/04/2022
 {% endhint %}
 
 Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](como-empiezo.md) y luego ["Facturación"](api-factura-electronica-afip-facturacion-ventas.md), para conocer la estructura de cada request que envíes.&#x20;
+
+
+
+## ¿Cómo funciona el modo asincrónico, de facturación por lote?
+
+![](.gitbook/assets/image.png)
 
 ## ¿Qué puedo facturar por lote?
 
@@ -108,14 +112,14 @@ Tus credenciales de acceso
 {% hint style="info" %}
 ### Datos a tener en cuenta:
 
-* La cantidad máxima de requests (por cada llamada que realices) debe ser de <mark style="background-color:yellow;">XXX</mark>, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y  puedes llegar a obtener una respuesta de timeout (524). En caso de recibir un 524, ten en cuenta que los comprobantes que enviaste, seguirán siendo procesados en background, y recibirás un hook con la respuesta de éxito o error, de su encolamiento. &#x20;
+* La cantidad máxima de requests (por cada llamada que realices) debe ser de 100, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y  puedes llegar a obtener una respuesta de timeout (524). En caso de recibir un 524, ten en cuenta que los comprobantes que enviaste, seguirán siendo procesados en background, y recibirás un hook con la respuesta de éxito o error, de su encolamiento. &#x20;
 * Puedes enviar comprobantes de **diferente tipo de comprobante**.   Ej: Puedes enviar en el mismo lote Facturas A Y FACTURAS  B.
 * Todos los requests de ésta llamada, deben ser de la **misma fecha**. Ej: todos deben ser 12/03/2021
 * Los request deben venir **sin número**. El campo "numero" debe venir en cero (0)
-* Debes enviar un "external\_reference".
-* Tu CUIT + PDV debe tener una dirección de webhook definida.
+* Debes enviar un "external\_reference" de manera obligatoria.
+* Tu CUIT + PDV, debe tener una dirección de webhook definida.
 * **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md) **ni de** [**Factura de crédito electrónica (FEC)**](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md) **en ésta modalidad.**
-* Si se detecta al menos un (1) error de validación de datos, el lote no se mandará a procesar.
+* Si se detecta al menos un (1) error de validación de datos, el lote no se mandará a procesar y obtendrás la respuesta al instante, no por un webhook.
 {% endhint %}
 
 La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar ([comprobantes de tipo A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)) .
@@ -498,4 +502,10 @@ No, no se puede. Recibirás un error instantáneo, informandote que existen comp
 
 #### En el hook que recibo, obtengo todos los datos del comprobante?
 
-No. El hook te envia el estado de ese request. Luego deberás realizar una  [consulta avanzada por external\_reference](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference),  para obtener los datos generados de éste comprobante
+No. El hook te envia el estado de ese request y el mensaje de error, en caso que no se haya podido procesar.&#x20;
+
+En caso de éxito, deberás realizar una  [consulta avanzada por external\_reference](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference),  para obtener los datos generados de éste comprobante
+
+#### ¿Hay una reducción de tiempo considerable al emitir los comprobantes de esta forma?
+
+Optimizas, porque lo podes dejar programado con anterioridad, podes mandar el lote el dia 5 e indicar que esos comprobantes se emitan el dia 29; ademas tu proceso no se trabaria esperando la respuesta de la factura como si la mandaras instantánea. Sigue con las siguientes y a medida q va procesando te va notificando.

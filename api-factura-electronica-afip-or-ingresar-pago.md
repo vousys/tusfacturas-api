@@ -78,9 +78,9 @@ Ejemplos de las respuestas JSON en caso de éxito o error
 
 ```
 {
-	"apitoken": "asdadsadasdada",
-	"apikey": 10000,
-	"usertoken": "asdadasdadsasd",
+	"apitoken": "xxxx",
+	"apikey": xxxx,
+	"usertoken": "xxxx",
 	 
 	"comprobante": 
 	{
@@ -161,9 +161,9 @@ comprobante: {
 
 ```
 {
-	"apitoken": "asdadsadasdada",
-	"apikey": 10000,
-	"usertoken": "asdadasdadsasd",
+	"apitoken": "xxxx",
+	"apikey": xxxx,
+	"usertoken": "xxx",
 	 
 	"comprobante": 
 	{
