@@ -4,6 +4,8 @@
 
 Se agrega el campo "webhook" a la documentación de "[Mi cuenta - administrar puntos de venta (PDV)](mi-cuenta-administrar-puntos-de-venta-pdv.md)
 
+Se agrega la documentación de "[Eliminar comprobante encolado](eliminar-comprobante-encolado.md)"
+
 ## 22 de marzo de 2022
 
 Se incluye la documentación de ["Webhooks (notificaciones)](webhooks-notificaciones.md)

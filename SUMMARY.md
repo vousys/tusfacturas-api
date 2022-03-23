@@ -22,6 +22,7 @@
 * [Consulta avanzada de comprobantes enviados](consulta-avanzada-de-comprobantes-enviados.md)
 * [Consultar numeración de comprobantes.](api-factura-electronica-afip-consultar-numeracion-de-comprobantes..md)
 * [Ingresar pago a un comprobante emitido](api-factura-electronica-afip-or-ingresar-pago.md)
+* [Eliminar comprobante encolado](eliminar-comprobante-encolado.md)
 * [Re-generación del archivo PDF](re-generacion-del-archivo-pdf.md)
 * [Reenviar comprobante a un cliente](api-factura-electronica-afip-or-reenviar-comprobante.md)
 * [Consulta de Cuentas Corrientes](api-factura-electronica-afip-clientes-cuenta-corriente.md)
