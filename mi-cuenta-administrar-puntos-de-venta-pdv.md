@@ -24,6 +24,12 @@ Con la API de TusFacturasAPP, podrás administrar tus puntos venta, crearlos, ed
 
 {% endswagger-description %}
 
+{% swagger-parameter in="body" name="webhook" type="string" %}
+Campo alfanumérico de hasta 255 caracteres. Formato esperado: https://www.dominio.com/script-nombre.
+
+[Más información](webhooks-notificaciones.md#direccion-del-webhook)
+{% endswagger-parameter %}
+
 {% swagger-parameter in="body" name="operacion" type="string" required="false" %}
 Valores esperados: A o M
 
@@ -179,6 +185,7 @@ Tus credenciales actuales de acceso.
     "esta_activo": "S",
     "es_predeterminado": "S",
     "conceptos_tipo": "PS",
+    "webhook": "https://www.dominio.com/script-name",
     "factura" : {
         "leyenda_general_predeterminada": "TEST",
         "titulo" : "PIRULO & CO",
@@ -231,9 +238,9 @@ Tus credenciales de acceso
 {% code title="JSON" %}
 ```
 {
-   "usertoken":"JHJKHJHJKHJK",
-    "apitoken":"HJKHJHJKHKJHK",
-    "apikey":"111" 
+   "usertoken":"xxxx",
+    "apitoken":"xxxx",
+    "apikey":"xxxx" 
 }
 ```
 {% endcode %}
@@ -272,9 +279,9 @@ Tus credenciales de acceso.
 {% code title="JSON" %}
 ```
 {
-   "usertoken":"JHJKHJHJKHJK",
-    "apitoken":"HJKHJHJKHKJHK",
-    "apikey":"111" 
+   "usertoken":"xxxx",
+    "apitoken":"xxxx",
+    "apikey":"xx" 
 }
 ```
 {% endcode %}
