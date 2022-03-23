@@ -46,14 +46,15 @@ Vas a recibir por POST, un JSON con la siguiente estructura, para que puedas rel
 
 ### Tipos de evento posibles, por recurso
 
-|   recurso   |   evento  | info                                                                                                                                                       |
-| :---------: | :-------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| facturacion |  encolado | Éste evento te informa, que el comprobante que enviaste, se encuentra ya en la cola de procesamiento, para ser emitido en la fecha que indicaste.          |
-| facturacion |  emitido  | Éste evento te informa que el comprobante que enviaste, se ha facturado correctamente.                                                                     |
-| facturacion |   error   | Éste evento te informa que el comprobante que enviaste, no se ha podido procesar y recibrás dentro del atributo "msg", la lista con los errores detectados |
-| facturacion | eliminado | Éste evento te informa que se ha eliminado un comprobante.                                                                                                 |
-|     test    |    test   | Se utilizará éste evento para probar la url de tu webhook                                                                                                  |
-|             |           |                                                                                                                                                            |
+|   recurso   |     evento    | info                                                                                                                                                       |
+| :---------: | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| facturacion |    encolado   | Éste evento te informa, que el comprobante que enviaste, se encuentra ya en la cola de procesamiento, para ser emitido en la fecha que indicaste.          |
+| facturacion |    emitido    | Éste evento te informa que el comprobante que enviaste, se ha facturado correctamente.                                                                     |
+| facturacion |     error     | Éste evento te informa que el comprobante que enviaste, no se ha podido procesar y recibrás dentro del atributo "msg", la lista con los errores detectados |
+| facturacion |   eliminado   | Éste evento te informa que se ha eliminado un comprobante.                                                                                                 |
+| facturacion | cambio\_fecha | Éste evento te informa que se ha cambiado la fecha del comprobante.                                                                                        |
+|     test    |      test     | Se utilizará éste evento para probar la url de tu webhook                                                                                                  |
+|             |               |                                                                                                                                                            |
 
 ## Reintentos
 
