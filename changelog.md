@@ -8,6 +8,8 @@ Se agrega la documentación de "[Eliminar comprobante encolado](eliminar-comprob
 
 Se agrega la documentación de "[Cambiar fecha a comprobantes encolado](cambiar-fecha-a-comprobante-encolado.md)"
 
+Se agrega la documentación de "[Reenviar a procesar, comprobante encolado con error](reenviar-a-procesar-comprobante-encolado-con-error.md)
+
 ## 22 de marzo de 2022
 
 Se incluye la documentación de ["Webhooks (notificaciones)](webhooks-notificaciones.md)

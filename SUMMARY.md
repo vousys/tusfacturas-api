@@ -24,6 +24,7 @@
 * [Ingresar pago a un comprobante emitido](api-factura-electronica-afip-or-ingresar-pago.md)
 * [Eliminar comprobantes encolados](eliminar-comprobantes-encolados.md)
 * [Cambiar fecha a comprobante encolado](cambiar-fecha-a-comprobante-encolado.md)
+* [Reenviar a procesar, comprobante encolado con error](reenviar-a-procesar-comprobante-encolado-con-error.md)
 * [Re-generación del archivo PDF](re-generacion-del-archivo-pdf.md)
 * [Reenviar comprobante a un cliente](api-factura-electronica-afip-or-reenviar-comprobante.md)
 * [Consulta de Cuentas Corrientes](api-factura-electronica-afip-clientes-cuenta-corriente.md)
