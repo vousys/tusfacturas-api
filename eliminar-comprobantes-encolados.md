@@ -4,7 +4,7 @@ description: >-
   encuentran en cola de procesamiento
 ---
 
-# Eliminar comprobante encolado
+# Eliminar comprobantes encolados
 
 Mediante éste método podrás eliminar aquellos comprobantes de la cola de procesamiento.
 
@@ -54,7 +54,7 @@ Tus Credenciales de acceso.
  
 ```
 
-Ejemplo de respuestas posibles
+### Ejemplo de respuestas posibles
 
 Dado que podría llegar a existir +1 comprobante para una misma external\_reference (no debería), existen 3  tipos de respuesta posible.
 
