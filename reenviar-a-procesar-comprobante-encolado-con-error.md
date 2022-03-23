@@ -6,6 +6,10 @@ description: >-
 
 # Reenviar a procesar, comprobante encolado con error
 
+{% hint style="info" %}
+**ATENCIÓN!** Éste servicio comenzará a funcionar a partir del 01/04/2022
+{% endhint %}
+
 Mediante éste método podrás reenviar a procesar, un comprobante que se encuentra en cola de procesamiento con error.&#x20;
 
 {% hint style="info" %}

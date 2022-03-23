@@ -6,6 +6,10 @@ description: >-
 
 # Cambiar fecha a comprobante encolado
 
+{% hint style="info" %}
+**ATENCIÓN!** Éste servicio comenzará a funcionar a partir del 01/04/2022
+{% endhint %}
+
 Mediante éste método podrás cambiar la fecha de un  comprobante que se encuentre en cola de procesamiento.&#x20;
 
 Ten en cuenta, que la fecha del comprobante, determina la fecha en que éste se emitirá.
