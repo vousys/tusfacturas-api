@@ -64,6 +64,8 @@ Dado que podría llegar a existir +1 comprobante para una misma external\_refere
 
 #### Éxito:
 
+Al enviar la petición recibirás instantáneamente la siguiente respuesta:
+
 ```
 {
 	"error": "N",
@@ -72,6 +74,20 @@ Dado que podría llegar a existir +1 comprobante para una misma external\_refere
 	"procesados": [
 		"El comprobante FACTURA A 00010-00000000 se ha eliminado correctamente. "
 	]
+}
+```
+
+y también recibirás un webhook, para informarte de dicha eliminación:
+
+```
+{
+	"creado": "18/03/2022 15:58:11",
+	"evento": "eliminado",
+	"recurso": "facturacion",
+	"external_reference": "mi_extref",
+	"intento": 1,
+	"msg": [],
+	"hook_id": "xxxxx"
 }
 ```
 
