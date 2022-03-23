@@ -29,9 +29,9 @@ Tenés alguna duda del servicio? checkea las [API FAQs](faqs-or-preguntas-frecue
 
 ## **Facturación asincrónica por Lote**
 
-Al utilizar éste servicio, los comprobantes que emitas, quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un webhook para que puedas obtener la información generada. &#x20;
+Al utilizar éste servicio, los comprobantes que emitas, quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
 
-Te sugerimos leer primero, la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)", para conocer cómo debe componerse cada request que envíes y la documentación "Webhooks (notificaciones)" para conocer cómo funciona el servicio de notificaciones.
+Te sugerimos leer primero, la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)", para conocer cómo debe componerse cada request que envíes y la documentación "[Webhooks (notificaciones)](webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
 
 
 
@@ -116,8 +116,8 @@ Tus credenciales de acceso
 * Puedes enviar comprobantes de **diferente tipo de comprobante**.   Ej: Puedes enviar en el mismo lote Facturas A Y FACTURAS  B.
 * Todos los requests de ésta llamada, deben ser de la **misma fecha**. Ej: todos deben ser 12/03/2021. **La fecha que envíes en cada comprobante determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes en cola con fecha posterior a hoy.
 * Los request deben venir **sin número**. El campo "numero" debe venir en cero (0)
-* Debes enviar un "external\_reference" de manera obligatoria.
-* Tu CUIT + PDV, debe tener una dirección de webhook definida.
+* **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
+* **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](mi-cuenta-administrar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar.
 * **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md) **ni de** [**Factura de crédito electrónica (FEC)**](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md) **en ésta modalidad.**
 * Si se detecta al menos un (1) error de validación de datos, el lote no se mandará a procesar y obtendrás la respuesta al instante, no por un webhook.
 {% endhint %}
