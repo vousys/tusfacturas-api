@@ -15,7 +15,7 @@ Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir fa
 * **Facturas individuales instantáneas**: donde envías un solo request para ser procesado, y obtenes la respuesta al instante. [Conocé más sobre la facturación electrónica individual e instantánea, desde aquí](api-factura-electronica-afip-facturacion-ventas.md#facturacion-instantanea-individual)
 * :new: **Facturas individuales en cola:** donde envías un solo request para ser procesado, y  obtenes la respuesta mediante un hook. Conocé más sobre la facturación electrónica individual en cola, desde aquí&#x20;
 * **Lote de facturas instantáneas**: donde envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante. Conocé más sobre la [facturación electrónica en lotes, aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
-* :new: **Lote de facturas en cola:** donde envías una cierta cantidad de requests para ser procesados y obtenes la respuesta mediante un hook. Conocé más sobre la facturación electrónica por lotes en cola, aquí.
+* :new: **Lote de facturas asincrónico en cola:** donde envías una cierta cantidad de requests para ser procesados y obtenes la respuesta mediante un hook. Conocé más sobre la [facturación electrónica por lotes en cola](facturacion-asincronica-por-lotes-encolada.md), aquí.
 
 ## ¿Qué puedo facturar?
 
