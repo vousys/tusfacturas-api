@@ -1,7 +1,8 @@
 ---
 description: >-
   Utilizá el servicio de notificaciones para obtener información, en tiempo
-  real, cada vez que ocurre un evento.
+  real, cada vez que ocurre un evento, en la modalidad de facturación
+  asincrónica encolada.
 ---
 
 # Webhooks (notificaciones)
@@ -16,7 +17,7 @@ description: >-
 
 Un `webhook` es una notificación que se envía de un servidor a otro, mediante una llamada `HTTP POST` al ocurrir un determinado evento.
 
-TusFacturasAPP te enviará un webhook, siempre que se produzca uno o más eventos registrados,  evitando pérdida de datos siempre que se presente alguna situación.
+TusFacturasAPP te enviará un webhook, siempre que se produzca uno o más eventos registrados en la modalidad de facturación asincrónica encolada,  evitando pérdida de datos siempre que se presente alguna situación.
 
 ## Dirección del webhook
 
@@ -28,7 +29,7 @@ El formato esperado es: _https://www.dominio.com/script-nombre_
 
 ## **¿Qué te notificaremos vía  webhook?**
 
-Vas a recibir por POST, un JSON con la siguiente estructura, para que puedas relacionar mediante el external\_reference que nos enviaste, al comprobante en cuestión:
+Vas a recibir por **POST** un JSON, con la siguiente estructura, para que puedas relacionar mediante el _external\_reference_ que nos enviaste, al comprobante en cuestión, por tal motivo el _external\_reference_ que envíes, debe ser único.
 
 {% code title="JSON" %}
 ```
@@ -85,19 +86,13 @@ Hook 5 \_\_\_\_\_\_\_\_\_\_\_\_\_ será enviado el 23/03/2022 a las 07:35
 
 
 
-#### Ejemplo en php de como devolver un http (200)
-
-```
-<?php
-    http_response_code(200);
-?>
-```
-
 ## &#x20;Una vez que recibo el webhook, ¿Qué hago?
 
 Una vez recibido el webhook, deberás  realizar las consultas respectivas para obtener los datos generados.
 
-&#x20;A continuación te mostramos la documentación asociada del método que debes consultar, según el recurso del que recibís el webhook.
+&#x20;A continuación te mostramos, la documentación asociada al recurso del que recibís el webhook.
+
+
 
 |   Recurso   |                                                                      Documentación                                                                     |
 | :---------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: |
