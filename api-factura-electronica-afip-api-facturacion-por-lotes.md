@@ -25,10 +25,10 @@ Tenés alguna duda del servicio? checkea las [API FAQs](faqs-or-preguntas-frecue
 Al utilizar éste servicio, los comprobantes que emitas, impactarán de inmediato en nuestra plataforma y obtendrás la respuesta al instante (siempre y cuando los servicios de AFIP se encuentren funcionando).
 
 {% hint style="danger" %}
-Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰.
+Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰. Para evitar éste tipo de problemas, te sugerimos utilizar la [facturación por lotes asincrónica (encolada)](facturacion-asincronica-por-lotes-encolada.md)
 {% endhint %}
 
-Te sugerimos leer primero, la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)", para conocer cómo debe componerse cada request que envíes.
+Es necesario leer primero, la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)", para conocer cómo debe componerse cada request que envíes.
 
 
 
@@ -105,7 +105,9 @@ Tus credenciales de acceso
 "requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)".
 
 {% hint style="info" %}
-* La cantidad máxima de requests (por cada llamada que realices) debe ser de 20, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y según funcionen los servicios de AFIP, puedes obtener una respuesta de timeout (524). En caso de recibir un 524, ten en cuenta que los comprobantes que enviaste, seguirán siendo procesados en background, pero no recibirás la respuesta.  Te sugerimos utilizar la modalidad de [Facturación encolada por lotes](facturacion-asincronica-por-lotes-encolada.md) para evitar éste tipo de errores.
+**Datos a tener en cuenta**
+
+* **La cantidad máxima de requests (por lote) debe ser de 20**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y según funcionen los servicios de AFIP, puedes obtener una respuesta de timeout (524). En caso de recibir un 524, ten en cuenta que los comprobantes que enviaste, seguirán siendo procesados en background, pero no recibirás la respuesta.  Te sugerimos utilizar la modalidad de [Facturación encolada por lotes](facturacion-asincronica-por-lotes-encolada.md) para evitar éste tipo de errores.
 * Todos los requests de ésta llamada, deben ser del **mismo tipo de comprobante**. Ej: todos deben ser FACTURA A
 * Todos los requests de ésta llamada, deben ser de la **misma fecha**. Ej: todos deben ser 12/03/2021
 * Los request deben venir **ordenados por número ascendente**, de la misma manera que si los enviarás a procesar uno por uno.
@@ -114,13 +116,6 @@ Tus credenciales de acceso
 {% endhint %}
 
 La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar ([comprobantes de tipo A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)) .
-
-#### Validaciones que realizamos antes de enviarlos a procesar:
-
-* Que no superen el límite establecido de requests por llamada.
-* Las credenciales de acceso enviadas en cada request deben corresponder con las suyas.
-* Dentro de cada request, el campo "numero" del comprobante, debe contener el numero del comprobante en cuestión, ya que con él deberás luego relacionarlo en tu sistema y manejar las respuestas.
-* El tipo de comprobante y la fecha de los comprobantes que incluyas, deben ser las mismas.
 
 #### Ejemplo de JSON a enviar
 

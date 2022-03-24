@@ -9,7 +9,13 @@ description: >-
 
 
 
-Mediante éste método, podrás consultar la información asociada a un determinado comprobante.
+Mediante éste método, podrás consultar la información asociada a un determinado comprobante.&#x20;
+
+{% hint style="info" %}
+Es importante que descargues toda la información, junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
+{% endhint %}
+
+
 
 Tipo de datos: **JSON**\
 Charset: **UTF-8**

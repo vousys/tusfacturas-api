@@ -9,6 +9,7 @@
 * [Webhooks (notificaciones)](webhooks-notificaciones.md)
 * [Facturación](api-factura-electronica-afip-facturacion-ventas.md)
 * [Facturación instantánea e individual](api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
+* [Facturación asincrónica e  individual (encolada)](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
 * [Facturación instantánea por Lotes](api-factura-electronica-afip-api-facturacion-por-lotes.md)
 * [Facturación asincrónica por Lotes (encolada)](facturacion-asincronica-por-lotes-encolada.md)
 * [Ejemplos de comprobantes tipo "A"](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)

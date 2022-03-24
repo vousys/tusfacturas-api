@@ -117,7 +117,7 @@ Tus credenciales de acceso
 * **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
 * **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](mi-cuenta-administrar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los lotes y serán rechazados de manera instantánea.
 * **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)  **en ésta modalidad.**
-* **La suscripción de tu espacio de trabajo se encuentre vigente y activa, como asi también que tengas cupo disponible**, para emitir la cantidad de comprobantes de venta que estás enviando en el lote.
+* **Al momento del envío del lote, la suscripción de tu espacio de trabajo se encuentra vigente, activa y posee cupo disponible**, para emitir la cantidad de comprobante que estás enviando en el lote.
 * Si se detecta al menos un (1) error de validación de datos, el lote no se mandará a procesar y obtendrás la respuesta al instante, no por un webhook.
 
 

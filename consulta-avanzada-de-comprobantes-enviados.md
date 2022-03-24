@@ -8,9 +8,9 @@ description: >-
 
 ### Métodos de búsqueda disponibles:
 
-1. &#x20;Todos los comprobantes de una determinada fecha[ ](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-fecha):arrow\_right:
-2. &#x20;Todos los comprobantes de un mismo tipo (Ej: FACTURA A ) entre un determinado rango numérico (Ej: 00000010 al 00000050). [ ](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-rango-de-numeros):arrow\_right:
-3. Todos los comprobantes de una misma external reference :arrow\_right: &#x20;
+1. &#x20;Todos los comprobantes de una [determinada fecha](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-fecha)[ ](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-fecha):arrow\_right:
+2. &#x20;Todos los comprobantes de un mismo tipo (Ej: FACTURA A ) entre un determinado [rango numérico](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-rango-de-numeros) (Ej: 00000010 al 00000050). [ ](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-rango-de-numeros):arrow\_right:
+3. Todos los comprobantes de una misma [external reference](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference) :arrow\_right: &#x20;
 
 {% hint style="info" %}
 A partir del 01/04/2022 ésta consulta te devolverá también, todos aquellos comprobantes que se encuentren en cola de procesamiento ( pendientes de procesamiento, o  procesados por error).
@@ -342,7 +342,7 @@ La búsqueda por fecha te devuelve todos aquellos comprobantes enviados (ya sea 
 Debés tener en cuenta que  la información obtenida, será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso y  el ordenamiento de los datos que te devuelve es: del último emitido al primero.&#x20;
 
 {% hint style="info" %}
-A partir del 01/05/2022, está consultá comenzará a ser paginada, con un límite máximo de registros por página de 3,000.&#x20;
+A partir del 01/05/2022, está consultá comenzará a ser paginada, con un límite máximo de registros por página de 1,000.&#x20;
 {% endhint %}
 
 #### Ejemplo de JSON a enviar para consultar por fecha un comprobante:
@@ -372,13 +372,32 @@ Charset: **UTF-8**
 | busqueda\_tipo |          Campo alfanumérico esperado: "**F**"          |
 |   comprobante  |         Objeto según se detalla a continuación         |
 |     pagina     |        Valor numérico entero. Mínimo esperado: 0       |
-|     limite     | Valor numérico entero. Mínimo esperado: 0 Máximo: 3000 |
+|     limite     | Valor numérico entero. Mínimo esperado: 0 Máximo: 1000 |
 
 #### Estructura de "Comprobante":
 
 | `operacion` | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p> |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `fecha`     | <p>Campo fecha en formato dd/mm/aaaa<br><strong>Ejemplo: 20/03/2022</strong></p>                                                                                                      |
+
+
+
+#### Que te devolverá ?
+
+```
+{
+	"rta": "OK",
+	"error": "N",
+	"total": 4,
+	"errores": [],
+	"comprobantes": [
+		{comprobante_ver_consulta_simple},
+		{comprobante_ver_consulta_simple},
+		{comprobante_ver_consulta_simple},
+		{comprobante_ver_consulta_simple}
+		]
+}
+```
 
 ## ¿Cómo realizar una consulta avanzada, por rango de números?
 
@@ -387,7 +406,7 @@ Charset: **UTF-8**
 Debés tener en cuenta que  la información obtenida, será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso y  el ordenamiento de los datos que te devuelve es: del último emitido al primero.&#x20;
 
 {% hint style="info" %}
-A partir del 01/05/2022, está consultá comenzará a ser paginada, con un límite máximo de registros por página de 3,000.&#x20;
+A partir del 01/05/2022, está consultá comenzará a ser paginada, con un límite máximo de registros por página de 1,000.&#x20;
 {% endhint %}
 
 #### Detalle de los atributos a enviar:
@@ -397,7 +416,7 @@ A partir del 01/05/2022, está consultá comenzará a ser paginada, con un lími
 | busqueda\_tipo |          Campo alfanumérico esperado: "**TN**"         |
 |   comprobante  |         Objeto según se detalla a continuación         |
 |     pagina     |        Valor numérico entero. Mínimo esperado: 0       |
-|     limite     | Valor numérico entero. Mínimo esperado: 0 Máximo: 3000 |
+|     limite     | Valor numérico entero. Mínimo esperado: 0 Máximo: 1000 |
 
 #### Estructura de "Comprobante":
 
@@ -430,6 +449,25 @@ A partir del 01/05/2022, está consultá comenzará a ser paginada, con un lími
 } 
 ```
 
+#### Que te devolverá ?
+
+```
+{
+	"rta": "OK",
+	"error": "N",
+	"total": 4,
+	"errores": [],
+	"comprobantes": [
+		{comprobante_ver_consulta_simple},
+		{comprobante_ver_consulta_simple},
+		{comprobante_ver_consulta_simple},
+		{comprobante_ver_consulta_simple}
+		]
+}
+```
+
+
+
 ## ¿Cómo realizar una consulta avanzada, por external reference?
 
 {% hint style="info" %}
@@ -444,10 +482,10 @@ Debés tener en cuenta que  la información obtenida, será la relacionada al pu
 
 |    Atributo    |                    Valores esperados                   |
 | :------------: | :----------------------------------------------------: |
-| busqueda\_tipo |       Campo alfanumérico esperado: "**EXT\_REF**       |
+| busqueda\_tipo |    Campo alfanumérico, valor esperado: "**EXT\_REF**   |
 |   comprobante  |         Objeto según se detalla a continuación         |
 |     pagina     |        Valor númerico entero. Mínimo esperado: 0       |
-|     limite     | Valor númerico entero. Mínimo esperado: 0 Máximo: 3000 |
+|     limite     | Valor númerico entero. Mínimo esperado: 0 Máximo: 1000 |
 
 #### Estructura de "Comprobante":
 
@@ -472,5 +510,22 @@ Debés tener en cuenta que  la información obtenida, será la relacionada al pu
 		"operacion": "V"
 	}
 } 
+```
+
+#### Que te devolverá ?
+
+```
+{
+	"rta": "OK",
+	"error": "N",
+	"total": 4,
+	"errores": [],
+	"comprobantes": [
+		{comprobante_ver_consulta_simple},
+		{comprobante_ver_consulta_simple},
+		{comprobante_ver_consulta_simple},
+		{comprobante_ver_consulta_simple}
+		]
+}
 ```
 

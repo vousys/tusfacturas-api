@@ -5,7 +5,7 @@ description: >-
   instante.
 ---
 
-# Facturación individual e instantánea
+# Facturación instantánea e individual
 
 Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas.&#x20;
 
@@ -13,10 +13,10 @@ Te sugerimos revisar el apartado de [¿Cómo empiezo?](como-empiezo.md) y luego 
 
 ## **Facturación instantánea individual**
 
-Al utilizar éste servicio, los comprobantes que emitas, impactarán de inmediato en nuestra plataforma y obtendrás la respuesta al instante (siempre y cuando los servicios de AFIP se encuentren funcionando).
+Al utilizar éste servicio, podrás enviar a facturar un (1) comprobante, el mismo impactará de inmediato en nuestra plataforma, y obtendrás la respuesta al instante (siempre y cuando los servicios de AFIP se encuentren funcionando).
 
 {% hint style="danger" %}
-Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰.
+Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰. Te sugerimos utilizar el método de [facturación asincrónico](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md) para evitar éstos inconvenientes.
 {% endhint %}
 
 A donde debes enviar el request:&#x20;
@@ -90,7 +90,7 @@ Estructura de "Cliente", según se informa en el apartado de
 Sea cual sea la modalidad que utilices para facturar, por cada comprobante que emitas, obtendrás la siguiente respuesta, con todos los datos que necesitas para almacenar en tu sistema.&#x20;
 
 {% hint style="info" %}
-Es importante que descargues el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
+Es importante  que descargues toda la información, junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
 {% endhint %}
 
 ```

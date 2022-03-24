@@ -8,12 +8,12 @@ description: >-
 
 Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](como-empiezo.md)
 
-
+### Modalidades de facturación
 
 #### En TusFacturasAPP, contamos con 4 modalidades para la emisión de comprobantes:
 
 * **Facturas individuales instantáneas**: donde envías un solo request para ser procesado, y obtenes la respuesta al instante. [Conocé más sobre la facturación electrónica individual e instantánea, desde aquí](api-factura-electronica-afip-facturacion-ventas.md#facturacion-instantanea-individual)
-* :new: **Facturas individuales en cola:** donde envías un solo request para ser procesado, y  obtenes la respuesta mediante un hook. Conocé más sobre la facturación electrónica individual en cola, desde aquí&#x20;
+* :new: **Facturas individuales en cola:** donde envías un solo request para ser procesado, y  obtenes la respuesta mediante un hook. Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
 * **Lote de facturas instantáneas**: donde envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante. Conocé más sobre la [facturación electrónica en lotes, aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
 * :new: **Lote de facturas asincrónico en cola:** donde envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](webhooks-notificaciones.md). Conocé más sobre la [facturación electrónica por lotes en cola](facturacion-asincronica-por-lotes-encolada.md), aquí.
 
@@ -238,7 +238,7 @@ Estructura de "Cliente", según se informa a continuación
 Sea cual sea la modalidad que utilices para facturar, por cada comprobante que emitas, obtendrás la siguiente respuesta, con todos los datos que necesitas para almacenar en tu sistema.&#x20;
 
 {% hint style="info" %}
-Es importante que descargues el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
+Es importante que descargues toda la información, junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
 {% endhint %}
 
 ```
