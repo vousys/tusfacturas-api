@@ -129,6 +129,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 * Que **no superen el límite** establecido de requests por llamada.
 * **Las credenciales de acceso** enviadas en cada request deben corresponder con las suyas.
 * Dentro de cada request, el campo "**numero**" del comprobante, **debe venir en cero (0)**.
+* Validaciones varias de datos enviados, sumatorias, valores incompletos, etc.
 * **El campo de "external\_reference debe contener un valor**, el cual debería ser único dentro de tu sistema, para evitar inconsistencias cuando te notifiquemos la respuesta, ya que será el dato con el que deberás referenciarlo internamente.  TusFacturasAPP no realizá ésta validación.
 * **La fecha de los comprobantes** que incluyas, **deben ser las mismas** para todos los requests.
 * **Debes tener configurado un webhook, en tu CUIT + PDV**. Para ésto ingresá a nuestra aplicación web www.tusfacturas.app con tu e-mail de usuario administrador y contraseña. Accedé al MENÚ > Mi espacio de trabajo > Cuits + PDV y editá el registro que corresponda.
