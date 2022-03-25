@@ -1,18 +1,20 @@
 ---
 description: >-
-  Mediante ésta función, podrás ingresar pagos a cada comprobante que emítas, de
-  modo que la cuenta corriente refleje no solo las ventas, sino también, los
+  Mediante ésta función, podrás ingresar cobros por cada comprobante que emítas,
+  de modo que la cuenta corriente refleje no solo las ventas, sino también, los
   cobros que capturas desde tu plataforma.
 ---
 
 # Ingresar pago a un comprobante emitido
 
-Los pagos que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
+{% hint style="info" %}
+Los cobros que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
+{% endhint %}
 
 ## Datos a tener en cuenta
 
 {% hint style="info" %}
-* **NO** podrás enviar los siguientes medios de pago: cheques y detalle de retenciones.
+* **NO** podrás enviar los siguientes medios de pago: "cheques" y ni "retenciones"..
 * Se realizara una validación del total que se indique, contra la sumatoria de los medios de pago detallados
 * El total de los pagos **NO** debe superar el importe total del comprobante, pero si puede ser inferior, para indicar que el comprobante recibió un pago parcial.
 {% endhint %}
@@ -44,6 +46,8 @@ Un objeto compuesto de los siguientes atributos: ****&#x20;
 **punto\_venta** Campo númerico para indicar el número del punto de venta.
 
 **numero :** Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.
+
+**pagos**: Bloque según estructura que se detalla a continuación
 
 
 {% endswagger-parameter %}

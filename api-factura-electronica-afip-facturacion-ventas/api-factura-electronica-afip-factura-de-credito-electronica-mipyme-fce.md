@@ -11,7 +11,7 @@ description: >-
 Se recomienda leer los requerimientos y conceptos básicos en el Micrositio de AFIP ([http://www.afip.gob.ar/facturadecreditoelectronica/default.asp](http://www.afip.gob.ar/facturadecreditoelectronica/default.asp)) y ademas, consultar con su contador/a.
 {% endhint %}
 
-La particularidad de éstos tipos de comprobante es que requiere de manera obligatoria que se envie información asociada, dentro del bloque de " [rg\_especiales](api-factura-electronica-afip-facturacion-ventas.md#estructura-de-rg-especiales) ", ademas de que solo aplica para ciertos receptores a partir de cierto monto.
+La particularidad de éstos tipos de comprobante es que requiere de manera obligatoria que se envie información asociada, dentro del bloque de " [rg\_especiales](./#estructura-de-rg-especiales) ", ademas de que solo aplica para ciertos receptores a partir de cierto monto.
 
 Por el momento AFIP cuenta con éstos datos a enviar:
 
@@ -105,9 +105,9 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
 
 ### Nota de crédito electrónica A MiPyme (FCE)
 
-Las notas de crédito requieren que se envíe el bloque de "[Comprobantes asociados](api-factura-electronica-afip-facturacion-ventas.md#estructura-de-comprobantes-asociados)" , con la particularidad de que éstos comprobantes asociados deben estar en la misma moneda que el comprobante que se está enviando a generar y la fecha del comprobante asociado tiene que ser igual o menor a la fecha del comprobante que se está autorizando.
+Las notas de crédito requieren que se envíe el bloque de "[Comprobantes asociados](./#estructura-de-comprobantes-asociados)" , con la particularidad de que éstos comprobantes asociados deben estar en la misma moneda que el comprobante que se está enviando a generar y la fecha del comprobante asociado tiene que ser igual o menor a la fecha del comprobante que se está autorizando.
 
-Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_especiales](api-factura-electronica-afip-facturacion-ventas.md#estructura-de-rg-especiales)", el dato id #22 con el valor S o N.
+Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_especiales](./#estructura-de-rg-especiales)", el dato id #22 con el valor S o N.
 
 Es importante aclarar que **AFIP no requiere el envio del CBU ni ALIAS,** para las NC y ND
 

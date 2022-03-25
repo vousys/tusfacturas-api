@@ -1,14 +1,18 @@
 # Changelog
 
+## 25 de marzo de 2022
+
+Se agrega la documentación de "[nuevo recibo de cobro](recibos-de-cobro-y-ordenes-de-pago/api-factura-electronica-afip-or-ingresar-pago-1.md)"  y "[nueva orden de pago](recibos-de-cobro-y-ordenes-de-pago/api-factura-electronica-afip-or-ingresar-pago-2.md)"
+
 ## 23 de marzo de 2022
 
-Se agrega el campo "webhook" a la documentación de "[Mi cuenta - administrar puntos de venta (PDV)](mi-cuenta-administrar-puntos-de-venta-pdv.md)
+Se agrega el campo "webhook" a la documentación de "[Mi cuenta - administrar puntos de venta (PDV)](mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md)
 
-Se agrega la documentación de "[Eliminar comprobante encolado](eliminar-comprobantes-encolados.md)".
+Se agrega la documentación de "[Eliminar comprobante encolado](api-factura-electronica-afip-facturacion-ventas/eliminar-comprobantes-encolados.md)".
 
-Se agrega la documentación de "[Cambiar fecha a comprobantes encolado](cambiar-fecha-a-comprobante-encolado.md)"
+Se agrega la documentación de "[Cambiar fecha a comprobantes encolado](api-factura-electronica-afip-facturacion-ventas/cambiar-fecha-a-comprobante-encolado.md)"
 
-Se agrega la documentación de "[Reenviar a procesar, comprobante encolado con error](reenviar-a-procesar-comprobante-encolado-con-error.md)
+Se agrega la documentación de "[Reenviar a procesar, comprobante encolado con error](api-factura-electronica-afip-facturacion-ventas/reenviar-a-procesar-comprobante-encolado-con-error.md)
 
 ## 22 de marzo de 2022
 
@@ -16,21 +20,21 @@ Se incluye la documentación de ["Webhooks (notificaciones)](webhooks-notificaci
 
 ## 21 de Marzo de 2022
 
-Se incluye la documentación de la ["Facturación por lotes asincrónica (encolada)](facturacion-asincronica-por-lotes-encolada.md)
+Se incluye la documentación de la ["Facturación por lotes asincrónica (encolada)](api-factura-electronica-afip-facturacion-ventas/facturacion-asincronica-por-lotes-encolada.md)
 
 ## 17 de marzo de 2022
 
-Se incluye en la documentación de la [consulta avanzada de comprobantes](consulta-avanzada-de-comprobantes-enviados.md), el campo de total de registros resultantes de esa búsqueda, la paginación y su límite por página.
+Se incluye en la documentación de la [consulta avanzada de comprobantes](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md), el campo de total de registros resultantes de esa búsqueda, la paginación y su límite por página.
 
-Se incluye también en la documentación de [facturación](api-factura-electronica-afip-facturacion-ventas.md) > [comprobantes asociados](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#envio-de-comprobantes-asociados-detallados), una nueva acción que se ejecutará a partir del 01/04/2022 con las notas de crédito: la auto-acreditación en caja de la NC.
+Se incluye también en la documentación de [facturación](api-factura-electronica-afip-facturacion-ventas/) > [comprobantes asociados](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#envio-de-comprobantes-asociados-detallados), una nueva acción que se ejecutará a partir del 01/04/2022 con las notas de crédito: la auto-acreditación en caja de la NC.
 
 ## 16 de marzo de 2022
 
-Se modifica la documentación de [facturación](api-factura-electronica-afip-facturacion-ventas.md), y se agrega el bloque de "**tags**", como opcional para el envío de nuevos comprobantes a partir del 01/04/2022.
+Se modifica la documentación de [facturación](api-factura-electronica-afip-facturacion-ventas/), y se agrega el bloque de "**tags**", como opcional para el envío de nuevos comprobantes a partir del 01/04/2022.
 
 ## 11 de marzo de 2022
 
-Se modifica la documentación de la[ consulta de comprobantes individual](api-factura-electronica-afip-consulta-de-comprobantes.md) y [avanzada](consulta-avanzada-de-comprobantes-enviados.md). Se agrega el método de [consulta por "external\_reference"](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference) , a partir del 01/04/2022 y se agrega la paginación a la consulta avanzada, a partir del 01/05/2022.
+Se modifica la documentación de la[ consulta de comprobantes individual](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-comprobantes.md) y [avanzada](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md). Se agrega el método de [consulta por "external\_reference"](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference) , a partir del 01/04/2022 y se agrega la paginación a la consulta avanzada, a partir del 01/05/2022.
 
 ## 07 de febrero de 2022
 
@@ -90,7 +94,7 @@ ADC = "AGENTE DE DEPOSITO COLECTIVO"
 
 **Notas de débito y crédito por período - Mod. RG 4.540/2019**
 
-A partir del 01/04/2021 entrará también en vigencia una nueva manera de emitir notas de crédito y débito, donde en lugar de indicar uno o mas comprobantes asociados, se podrá indicar un periodo desde/hasta, el cual contempla los comprobantes emitidos dentro del período en cuestión. [Ver documentación](api-factura-electronica-afip-facturacion-ventas.md#estructura-de-comprobantes-asociados-detallados)
+A partir del 01/04/2021 entrará también en vigencia una nueva manera de emitir notas de crédito y débito, donde en lugar de indicar uno o mas comprobantes asociados, se podrá indicar un periodo desde/hasta, el cual contempla los comprobantes emitidos dentro del período en cuestión. [Ver documentación](api-factura-electronica-afip-facturacion-ventas/#estructura-de-comprobantes-asociados-detallados)
 
 ***
 
@@ -120,11 +124,11 @@ Se agrega una variable al response de la emisión de comprobantes, llamado "requ
 
 ## 16 de octubre de 2019
 
-Se agrega el campo ["fecha\_pago" ](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)para las facturas de exportación.
+Se agrega el campo ["fecha\_pago" ](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)para las facturas de exportación.
 
 ## 14 de octubre de 2019
 
-Se agrega el campo "cbu" al [bloque de la factura](mi-cuenta.md#objeto-factura), en Mi Cuenta -> Mis Puntos de venta / administrar.
+Se agrega el campo "cbu" al [bloque de la factura](mi-cuenta/mi-cuenta.md#objeto-factura), en Mi Cuenta -> Mis Puntos de venta / administrar.
 
 ## 22 de septiembre de 2019
 
@@ -139,9 +143,9 @@ En conjunto con este cambio, se dejó sin uso el campo de "nogravados" que se en
 Cambios para la emisión de un nuevo comprobante:
 
 * **Cambiamos la url a donde deberás enviar los request.** Ahora deberan ser enviados a https://www.tusfacturas.app
-* **Cambio de códigos:** En el bloque de "clientes", cambian los códigos a enviar en concepto de "condicion\_pago". [Consultar la tabla de referencia](tablas-de-referencia.md#condiciones-de-venta)
-* **Nueva condición de pago:** Se agrega la condición de pago "otras", la cual le permite enviar cualquier texto para que salga impreso en el pdf. Ésta información deberá ser enviada, dentro del campo "condicion\_pago\_otra" en el bloque de "clientes". [Consultar ejemplo aquí](api-factura-electronica-afip-facturacion-ventas.md#estructura-de-cliente). Éste campo es util cuando se lo junta con el campo de vencimiento (donde se indica la fecha de vencimiento de manera manual)
-* **Nuevas monedas de facturación:** Ahora podes emitir comprobantes en otras monedas extranjeras. [Consultá las monedas disponibles aquí ](tablas-de-referencia.md#monedas). Si necesitas alguna que no esté incluida, solicitála via email.
+* **Cambio de códigos:** En el bloque de "clientes", cambian los códigos a enviar en concepto de "condicion\_pago". [Consultar la tabla de referencia](parametros/tablas-de-referencia.md#condiciones-de-venta)
+* **Nueva condición de pago:** Se agrega la condición de pago "otras", la cual le permite enviar cualquier texto para que salga impreso en el pdf. Ésta información deberá ser enviada, dentro del campo "condicion\_pago\_otra" en el bloque de "clientes". [Consultar ejemplo aquí](api-factura-electronica-afip-facturacion-ventas/#estructura-de-cliente). Éste campo es util cuando se lo junta con el campo de vencimiento (donde se indica la fecha de vencimiento de manera manual)
+* **Nuevas monedas de facturación:** Ahora podes emitir comprobantes en otras monedas extranjeras. [Consultá las monedas disponibles aquí ](parametros/tablas-de-referencia.md#monedas). Si necesitas alguna que no esté incluida, solicitála via email.
 
 ## 05 de Agosto de 2019
 

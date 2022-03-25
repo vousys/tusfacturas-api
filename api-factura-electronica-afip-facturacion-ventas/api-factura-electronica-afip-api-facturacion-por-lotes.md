@@ -10,15 +10,15 @@ description: >-
 **ATENCIÓN!** A partir de abril 2022, éste servicio se modificará para brindarte una solución con muchas más herramientas. Consultanos para más información
 {% endhint %}
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](como-empiezo.md) y luego ["Facturación"](api-factura-electronica-afip-facturacion-ventas.md), para conocer la estructura de cada request que envíes.&#x20;
+Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) y luego ["Facturación"](./), para conocer la estructura de cada request que envíes.&#x20;
 
 ## ¿Qué puedo facturar por lote?
 
 Podes enviar a facturar comprobantes de tipo A,B,C y M; ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos. **No podrás enviar comprobantes de tipo E ni de Factura de crédito electrónica (FEC) en ésta modalidad.**
 
-&#x20;¿No sabes qué [tipo de comprobante debes emitir](que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md)
+&#x20;¿No sabes qué [tipo de comprobante debes emitir](../que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 
-Tenés alguna duda del servicio? checkea las [API FAQs](faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los canales de atención que tenemos disponibles en la plataforma web [www.tusfacturas.app](https://www.tusfacturas.app)
+Tenés alguna duda del servicio? checkea las [API FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los canales de atención que tenemos disponibles en la plataforma web [www.tusfacturas.app](https://www.tusfacturas.app)
 
 ## **Facturación instantánea por Lote**
 
@@ -28,7 +28,7 @@ Al utilizar éste servicio, los comprobantes que emitas, impactarán de inmediat
 Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰. Para evitar éste tipo de problemas, te sugerimos utilizar la [facturación por lotes asincrónica (encolada)](facturacion-asincronica-por-lotes-encolada.md)
 {% endhint %}
 
-Es necesario leer primero, la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)", para conocer cómo debe componerse cada request que envíes.
+Es necesario leer primero, la documentación de "[Facturación](./)", para conocer cómo debe componerse cada request que envíes.
 
 
 
@@ -102,7 +102,7 @@ Tus credenciales de acceso
 
 #### Estructura del bloque: "requests"
 
-"requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)".
+"requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](./)".
 
 {% hint style="info" %}
 **Datos a tener en cuenta**

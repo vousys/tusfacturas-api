@@ -12,7 +12,7 @@ Al final del documento encontrarás un ejemplo completo de comprobante de export
 
 ## Estructura de datos campo "fex"
 
-Para poder generar un [comprobante](api-factura-electronica-afip-facturacion-ventas.md) de tipo E, se requiere enviar dentro del campo "**comprobante**", un campo adicional llamado: "**fex**", con la siguiente estructura :
+Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del campo "**comprobante**", un campo adicional llamado: "**fex**", con la siguiente estructura :
 
 ### Ejemplo de JSON para FACTURA E
 
@@ -56,10 +56,10 @@ Para poder generar un [comprobante](api-factura-electronica-afip-facturacion-ven
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `permisos_tiene`         | <p>Campo alfabético. Longitud 1 caracter. Indica si se posee documento aduanero de exportación (permiso de embarque). Valores esperados:<br>S= Si posee<br>N= No posee<br>(vacio)= No especifica<br><strong>Ejemplo: S</strong></p>                                                                                               |
 | `permisos`               | Solo deberán ser enviados los permisos cuando el campo permisos\_tiene sea igual a "S". Valores a enviar según estructura de datos definida en ["Permisos de exportacion".](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#estructura-de-permisos)                                                           |
-| `pais_comprobante_id`    | <p>Campo numérico. Según tabla de referencia <a href="consulta-de-paises-afip.md">Paises AFIP (**)</a><br><strong>Ejemplo: 123</strong></p>                                                                                                                                                                                        |
+| `pais_comprobante_id`    | <p>Campo numérico. Según tabla de referencia <a href="../parametros/consulta-de-paises-afip.md">Paises AFIP (**)</a><br><strong>Ejemplo: 123</strong></p>                                                                                                                                                                          |
 | `forma_pago_leyenda`     | <p>Campo alfanumérico. Descripción adicional de la forma de pago<br><strong>Ejemplo: Favor depositar en cuenta XXXXX</strong></p>                                                                                                                                                                                                 |
-| `cliente_pais_cuit`      | <p>Campo numérico. Según tabla de referencia <a href="consulta-de-cuit-pais-afip.md">CUIT Pais AFIP (**)</a><br><strong>Ejemplo: 51600004380</strong></p>                                                                                                                                                                          |
-| `incoterms_tipo_id`      | <p>Campo alfabético Incoterms – Cláusula de Venta. Según tabla de referencia <a href="consulta-de-incoterms.md">Incoterms (**)</a><br><strong>Ejemplo: EXW</strong></p>                                                                                                                                                           |
+| `cliente_pais_cuit`      | <p>Campo numérico. Según tabla de referencia <a href="../parametros/consulta-de-cuit-pais-afip.md">CUIT Pais AFIP (**)</a><br><strong>Ejemplo: 51600004380</strong></p>                                                                                                                                                            |
+| `incoterms_tipo_id`      | <p>Campo alfabético Incoterms – Cláusula de Venta. Según tabla de referencia <a href="../parametros/consulta-de-incoterms.md">Incoterms (**)</a><br><strong>Ejemplo: EXW</strong></p>                                                                                                                                             |
 | `incoterms_nro`          | <p>Campo alfanumérico - Información complementaria del incoterm<br><strong>Ejemplo: Texto dic.</strong></p>                                                                                                                                                                                                                       |
 | `comprobantes_asociados` | OPCIONAL. Se deberá informar el/los comprobante/s asociados solamente si el comprobante que se está autorizando corresponde a una Nota de Débito o Nota de Crédito. Según estructura de "[Comprobantes asociados"](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#estructura-de-comprobantes-asociados). |
 | fecha\_pago              | Campo fecha - formato esperado: dd/mm/aaaa. Éste campo es obligatorio únicamente para Facturas E, si se envia tipo\_exportacion = 2 o tipo\_exportacion=4                                                                                                                                                                          |
@@ -77,9 +77,9 @@ Cada uno de los permisos de exportación que disponga, deberán ser enviados aco
 
 Información de los campos a enviar:Información de los campos a enviar:
 
-| `codigo_despacho` | Campo alfanumérico. Longitud 16 caracteres. Deberá ser un permiso válido, formato 99999AAXX999999A (donde XX podrán ser números o letras). |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `pais_destino_id` | <p>Campo numérico. Según tabla de referencia <a href="consulta-de-paises-afip.md">Paises AFIP (**)</a><br><strong>Ejemplo: 123</strong></p>    |
+| `codigo_despacho` | Campo alfanumérico. Longitud 16 caracteres. Deberá ser un permiso válido, formato 99999AAXX999999A (donde XX podrán ser números o letras).            |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pais_destino_id` | <p>Campo numérico. Según tabla de referencia <a href="../parametros/consulta-de-paises-afip.md">Paises AFIP (**)</a><br><strong>Ejemplo: 123</strong></p> |
 
 ### FEX: Estructura de "Comprobantes Asociados"
 

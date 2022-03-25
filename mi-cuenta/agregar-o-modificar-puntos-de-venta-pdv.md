@@ -1,8 +1,11 @@
-# Mi cuenta - Administrar puntos de venta (PDV)
+---
+description: >-
+  Con la API de TusFacturasAPP, podrás administrar tus puntos venta, crearlos,
+  editarlos, solicitar el certificado de enlace con AFIP y hasta
+  predeterminarlos.
+---
 
-Con la API de TusFacturasAPP, podrás administrar tus puntos venta, crearlos, editarlos, solicitar el certificado de enlace con AFIP y hasta predeterminarlos.&#x20;
-
-## Agregar o modificar puntos de venta
+# Agregar o modificar puntos de venta (PDV)
 
 ### &#x20;Datos a tener en cuenta:
 
@@ -27,7 +30,7 @@ Con la API de TusFacturasAPP, podrás administrar tus puntos venta, crearlos, ed
 {% swagger-parameter in="body" name="webhook" type="string" %}
 Campo alfanumérico de hasta 255 caracteres. Formato esperado: https://www.dominio.com/script-nombre.
 
-[Más información](webhooks-notificaciones.md#direccion-del-webhook)
+[Más información](../webhooks-notificaciones.md#direccion-del-webhook)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="operacion" type="string" required="false" %}
@@ -200,88 +203,5 @@ Tus credenciales actuales de acceso.
 ```
 {% endcode %}
 
-## Predeterminar CUIT + Punto de venta
+##
 
-Mediante éste método, podrás marcar como predeterminado el punto de venta, desde el cual estas realizando la solicitud.
-
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/puntos_venta/predeterminar" method="post" summary="Predeterminar CUIT + Punto de venta" %}
-{% swagger-description %}
-
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-
-\\
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
-```
-{
-	"error": "N",
-	"errores": [] 
-}
-```
-{% endswagger-response %}
-{% endswagger %}
-
-#### Ejemplo del JSON a enviar:
-
-{% code title="JSON" %}
-```
-{
-   "usertoken":"xxxx",
-    "apitoken":"xxxx",
-    "apikey":"xxxx" 
-}
-```
-{% endcode %}
-
-## Solicitar certificado de enlace con AFIP
-
-Mediante éste método podrás obtener en la casilla de e-mail de los administradores de tu cuenta, un nuevo certificado de seguridad.
-
-El certificado se generará para el CUIT desde el cual estas haciendo la solicitud.
-
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/puntos_venta/certificado" method="post" summary="Solicitar certificado" %}
-{% swagger-description %}
-
-{% endswagger-description %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
-```
-```
-{% endswagger-response %}
-{% endswagger %}
-
-### Ejemplo del JSON a enviar:
-
-{% code title="JSON" %}
-```
-{
-   "usertoken":"xxxx",
-    "apitoken":"xxxx",
-    "apikey":"xx" 
-}
-```
-{% endcode %}

@@ -9,7 +9,7 @@ description: >-
 
 Los comprobantes de tipo "B", son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto".
 
-No sabes en qué momento emitir comprobantes de tipo **B**? Consultá [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
+No sabes en qué momento emitir comprobantes de tipo **B**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
 
 
 
@@ -78,7 +78,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
 
 {% hint style="info" %}
 * Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
-* No sabes en que momento emitir comprobantes de tipo B? Consultá [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
+* No sabes en que momento emitir comprobantes de tipo B? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
 * Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
 
 &#x20;               Nro de documento = "0"

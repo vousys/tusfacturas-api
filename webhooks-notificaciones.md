@@ -94,11 +94,11 @@ Una vez recibido el webhook, deberás  realizar las consultas respectivas para o
 
 
 
-|   Recurso   |                                                                      Documentación                                                                     |
-| :---------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: |
-| facturacion |  [consulta avanzada por external\_reference](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference) |
-|             |                                                                                                                                                        |
-|             |                                                                                                                                                        |
+|   Recurso   |                                                                                              Documentación                                                                                             |
+| :---------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| facturacion |  [consulta avanzada por external\_reference](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference) |
+|             |                                                                                                                                                                                                        |
+|             |                                                                                                                                                                                                        |
 
 
 

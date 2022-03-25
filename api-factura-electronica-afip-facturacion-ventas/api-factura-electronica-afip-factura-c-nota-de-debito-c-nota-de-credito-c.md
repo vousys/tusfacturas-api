@@ -9,7 +9,7 @@ description: >-
 
 Los comprobantes de tipo "C", son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Monotributo" o "Exento".
 
-No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
+No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
 
 
 
@@ -75,7 +75,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
 
 {% hint style="info" %}
 * Los comprobantes C, no llevan IVA.
-* No sabes en qué momento emitir comprobantes de tipo C? Consultá [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
+* No sabes en qué momento emitir comprobantes de tipo C? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
 * Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
 
 &#x20;               Nro de documento = "0"

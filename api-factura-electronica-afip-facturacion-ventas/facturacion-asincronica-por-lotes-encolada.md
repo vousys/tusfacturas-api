@@ -11,27 +11,27 @@ description: >-
 **ATENCIÓN!** Éste servicio comenzará a funcionar a partir del 01/04/2022
 {% endhint %}
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](como-empiezo.md) y luego ["Facturación"](api-factura-electronica-afip-facturacion-ventas.md), para conocer la estructura de cada request que envíes.&#x20;
+Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) y luego ["Facturación"](./), para conocer la estructura de cada request que envíes.&#x20;
 
 
 
 ## ¿Cómo funciona el modo asincrónico, de facturación por lote?
 
-![](.gitbook/assets/image.png)
+![](../.gitbook/assets/image.png)
 
 ## ¿Qué puedo facturar por lote?
 
 Podes enviar a facturar comprobantes de tipo A,B,C, M y comprobantes de tipo Factura de crédito electrónica MiPyme; ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos. **No podrás enviar comprobantes de tipo E  en ésta modalidad.**
 
-&#x20;¿No sabes qué [tipo de comprobante debes emitir](que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md)
+&#x20;¿No sabes qué [tipo de comprobante debes emitir](../que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 
-Tenés alguna duda del servicio? checkea las [API FAQs](faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los canales de atención que tenemos disponibles en la plataforma web [www.tusfacturas.app](https://www.tusfacturas.app)
+Tenés alguna duda del servicio? checkea las [API FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los canales de atención que tenemos disponibles en la plataforma web [www.tusfacturas.app](https://www.tusfacturas.app)
 
 ## **Facturación asincrónica por Lote**
 
-Al utilizar éste servicio, los comprobantes que emitas, quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
+Al utilizar éste servicio, los comprobantes que emitas, quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
 
-Te sugerimos leer primero, la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)", para conocer cómo debe componerse cada request que envíes y la documentación "[Webhooks (notificaciones)](webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
+Te sugerimos leer primero, la documentación de "[Facturación](./)", para conocer cómo debe componerse cada request que envíes y la documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
 
 #### A donde debes enviar el request?
 
@@ -105,7 +105,7 @@ Tus credenciales de acceso
 
 #### Estructura del bloque: "requests"
 
-"requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](api-factura-electronica-afip-facturacion-ventas.md)".
+"requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](./)".
 
 {% hint style="info" %}
 ### Datos a tener en cuenta:
@@ -115,7 +115,7 @@ Tus credenciales de acceso
 * Todos los requests de ésta llamada, deben ser de la **misma fecha**. Ej: todos deben ser 12/03/2021. **La fecha que envíes en cada comprobante determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy.
 * Los request deben venir **con el campo número en cero (0)**.
 * **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
-* **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](mi-cuenta-administrar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los lotes y serán rechazados de manera instantánea.
+* **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](../mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los lotes y serán rechazados de manera instantánea.
 * **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)  **en ésta modalidad.**
 * **Al momento del envío del lote, la suscripción de tu espacio de trabajo se encuentra vigente, activa y posee cupo disponible**, para emitir la cantidad de comprobante que estás enviando en el lote.
 * Si se detecta al menos un (1) error de validación de datos, el lote no se mandará a procesar y obtendrás la respuesta al instante, no por un webhook.
@@ -328,7 +328,7 @@ Ejemplo de una llamada con 3 requests, donde el segundo el comprobante enviado, 
 
 #### :green\_circle: Cuando el lote se ha aceptado para su procesamiento:
 
-En caso que no se detecten errores tempranos, en la etapa de validación de los datos enviados en el lote, obtendrás la respuesta a cada request enviado, en su mismo orden y luego de enviarte ésta información, recibirás un [webhook](webhooks-notificaciones.md) por cada request enviado, para informarte que se ha encolado, como se explica a continuación.
+En caso que no se detecten errores tempranos, en la etapa de validación de los datos enviados en el lote, obtendrás la respuesta a cada request enviado, en su mismo orden y luego de enviarte ésta información, recibirás un [webhook](../webhooks-notificaciones.md) por cada request enviado, para informarte que se ha encolado, como se explica a continuación.
 
 Ejemplo de un lote enviado, con 3 requests:
 
@@ -402,7 +402,7 @@ Ejemplo de un lote enviado, con 3 requests:
 
 ## Webhooks de respuesta&#x20;
 
-Existen 3 tipos de evento posible, para el recurso de facturación que podes recibir en ésta instancia:  "encolado", "emitido" y "error". Te sugerimos conocer más sobre los webhooks, en la documentación de [Webhooks (notificaciones)](webhooks-notificaciones.md).
+Existen 3 tipos de evento posible, para el recurso de facturación que podes recibir en ésta instancia:  "encolado", "emitido" y "error". Te sugerimos conocer más sobre los webhooks, en la documentación de [Webhooks (notificaciones)](../webhooks-notificaciones.md).
 
 ### :purple\_circle: Hook de "encolado"  &#x20;
 

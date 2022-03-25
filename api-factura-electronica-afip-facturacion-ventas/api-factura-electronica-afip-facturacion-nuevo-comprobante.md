@@ -9,7 +9,7 @@ description: >-
 
 Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas.&#x20;
 
-Te sugerimos revisar el apartado de [¿Cómo empiezo?](como-empiezo.md) y luego ["Facturación"](api-factura-electronica-afip-facturacion-ventas.md), para conocer como funciona el servicio y la estructura de cada request que envíes.&#x20;
+Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) y luego ["Facturación"](./), para conocer como funciona el servicio y la estructura de cada request que envíes.&#x20;
 
 ## **Facturación instantánea individual**
 
@@ -43,7 +43,7 @@ Tus credenciales de acceso
 {% swagger-parameter in="body" name="comprobante" type="object" required="false" %}
 Estructura de "comprobante" según se informa en el apartado de 
 
-["facturacion"](api-factura-electronica-afip-facturacion-ventas.md)
+["facturacion"](./)
 
 
 {% endswagger-parameter %}
@@ -51,7 +51,7 @@ Estructura de "comprobante" según se informa en el apartado de
 {% swagger-parameter in="body" name="cliente" type="object" required="false" %}
 Estructura de "Cliente", según se informa en el apartado de 
 
-["facturacion"](api-factura-electronica-afip-facturacion-ventas.md)
+["facturacion"](./)
 
 
 {% endswagger-parameter %}

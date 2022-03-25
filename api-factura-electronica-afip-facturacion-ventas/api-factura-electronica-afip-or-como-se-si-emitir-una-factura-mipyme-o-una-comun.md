@@ -11,7 +11,7 @@ description: >-
 
 **1) Controlar el response de las facturas comúnes con error | "requiere\_fec" = "S"**
 
-Si envías una factura y viene con error, en el response vas a recibir un campo que se llama requiere\_fec, si está en "SI", debes emitirle una fc mipyme. En ese caso, le cambias el tipo de comprobante al mipyme que corresponda, y volves a enviar el request.[ Conocé más desde aquí](api-factura-electronica-afip-facturacion-ventas.md#como-determinar-si-debo-emitir-un-comprobante-de-tipo-mipyme)\
+Si envías una factura y viene con error, en el response vas a recibir un campo que se llama requiere\_fec, si está en "SI", debes emitirle una fc mipyme. En ese caso, le cambias el tipo de comprobante al mipyme que corresponda, y volves a enviar el request.[ Conocé más desde aquí](./#como-determinar-si-debo-emitir-un-comprobante-de-tipo-mipyme)\
 \
 **2) Usar el método previo de consulta: "Éstoy obligado a emitir una FEC", antes de enviar a facturar**
 
