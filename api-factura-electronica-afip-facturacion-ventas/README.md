@@ -305,6 +305,8 @@ Hay ciertos casos donde AFIP exige que en lugar de emitir una factura A,B o C, l
 
 Te sugerimos comentar ésta modalidad, con tu cliente y asesorarte con su estudio impositivo al respecto.
 
+## Estructura de un request:
+
 ### Estructura del bloque: "Comprobante"
 
 Para poder generar un comprobante de tipo factura A,B, C, debes enviar de todos los datos según se informa a continuación:
