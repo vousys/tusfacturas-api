@@ -7,9 +7,7 @@ description: >-
 
 # Facturación asincrónica por Lotes (encolada)
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) y luego ["Facturación"](./), para conocer la estructura de cada request que envíes.&#x20;
-
-
+Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) si es la primera vez que utilizas nuestros servicios
 
 ## ¿Cómo funciona el modo asincrónico, de facturación por lote?
 
@@ -27,7 +25,13 @@ Tenés alguna duda del servicio? checkea las [API FAQs](../faqs-or-preguntas-fre
 
 Al utilizar éste servicio, los comprobantes que emitas, quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
 
-Te sugerimos leer primero, la documentación de "[Facturación](./)", para conocer cómo debe componerse cada request que envíes y la documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
+
+
+Te sugerimos leer primero:&#x20;
+
+1. La documentación de "[Facturación](./)", para conocer cómo debe componerse el request que envíes
+2. La documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
+3. [FAQs sobre la cola de procesamiento](../faqs-or-cola-de-procesamiento.md)
 
 #### A donde debes enviar el request?
 
@@ -108,7 +112,7 @@ Tus credenciales de acceso
 
 * **La cantidad máxima de requests por lote es de 100 comprobantes**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y  puedes llegar a obtener una respuesta de timeout (524). En caso de recibir un 524, los requests que enviaste, seguirán siendo procesados en background, y recibirás un hook con la respuesta de éxito o error, de su encolamiento. &#x20;
 * Puedes enviar en un mismo lote, comprobantes de **diferente tipo de comprobante**.   Ej: Puedes enviar en el mismo lote Facturas A Y FACTURAS  B.
-* Todos los requests de ésta llamada, deben ser de la **misma fecha**. Ej: todos deben ser 12/03/2021. **La fecha que envíes en cada comprobante determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy. _Si envías algún comprobante con fecha anterior a hoy, se emitirá hoy y probablemente recibas algun error de validación de fechas de AFIP si has emitido comprobantes con fecha posterior, por lo que deberás usar el método de "_[_cambiar fecha a comprobante encolado_](cambiar-fecha-a-comprobante-encolado.md)_"_
+* Todos los requests de ésta llamada, deben ser de la **misma fecha**. Ej: todos deben ser 12/03/2021. **La fecha que envíes en cada comprobante determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy. __&#x20;
 * Los request deben venir **con el campo número en cero (0)**.
 * **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
 * **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](../mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los lotes y serán rechazados de manera instantánea.
@@ -471,53 +475,5 @@ El JSON que recibirás será similar al siguiente ejemplo y a diferencia de los 
 }  
 ```
 
-
-
-## FAQs
-
-#### Si un request es aceptado para su procesamiento, y se detectan errores, se vuelve a enviar automáticamente a procesar?
-
-Solo se vuelve a enviar automáticamente a procesar, si el error obtenido, se debe a caídas del servicio de facturación de AFIP.
-
-#### Si tengo comprobantes en cola de procesamiento, y quiero enviar un nuevo request en cola, ya sea por lotes o individual, se puede?
-
-Si, se puede, siempre y cuando cumpla con los requisitos mencionados para ser procesado.
-
-#### Si tengo comprobantes en cola de procesamiento, y quiero enviar un nuevo request pero que sea en la modalidad instantánea, se puede?
-
-No, no se puede. Recibirás un error instantáneo, informandote que existen comprobantes en cola y que solo podrás enviarlos bajo esa modalidad.&#x20;
-
-#### En el hook que recibo, obtengo todos los datos del comprobante?
-
-No. El hook te envia el estado de ese request y el mensaje de error, en caso que no se haya podido procesar.&#x20;
-
-En caso de éxito, deberás realizar una  [consulta avanzada por external\_reference](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference),  para obtener los datos generados de éste comprobante
-
-#### ¿Hay una reducción de tiempo considerable al emitir los comprobantes de esta forma?
-
-Optimizas, porque lo podes dejar programado con anterioridad, podes mandar el lote el dia 5 e indicar que esos comprobantes se emitan el dia 29; además tu proceso no se trabaria esperando la respuesta de la factura como si la mandaras instantánea. Sigue con las siguientes y a medida q va procesando te va notificando.
-
-#### ¿Qué sucede si los servicios de AFIP no se encuentran funcionando, puedo enviar requests?
-
-Si, está especialmente desarrollado para éstos casos. Los requests que envíes, se guardarán en la cola de procesamiento y serán enviados a medida que los servicios de AFIP se restauren.
-
-#### ¿Qué sucede si los servicios de AFIP no se encuentran funcionando y tengo comprobantes en cola?
-
-Los comprobantes seguirán en la cola y se emitirán cuando los servicios de AFIP se encuentren funcionando, siempre y cuando la fecha de éstos comprobantes sea menor o igual a la del día.
-
-#### ¿Puedo enviar requests con fecha posterior a hoy?
-
-Si, podes enviarlos y quedarán en la cola de procesamiento hasta la fecha indicada en el comprobante.
-
-#### ¿Puedo cambiar la fecha de un request que se encuentra en la cola de procesamiento?
-
-Si, para eso debés utilizar el método de:  Cambiar fecha encolado
-
-#### ¿Puedo eliminar requests que aún no se han procesado?
-
-Si, para eso debés utilizar el método de:  Eliminar comprobante encolado
-
-
-
-
+&#x20;
 

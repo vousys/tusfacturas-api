@@ -55,7 +55,8 @@
   * [Parámetros:  Consulta de los CUIT País en AFIP](parametros/consulta-de-cuit-pais-afip.md)
   * [Parámetros: Consulta de Incoterms](parametros/consulta-de-incoterms.md)
   * [Tablas de referencia](parametros/tablas-de-referencia.md)
-* [FAQs | Preguntas frecuentes](faqs-or-preguntas-frecuentes.md)
+* [FAQs | Preguntas generales](faqs-or-preguntas-frecuentes.md)
+* [FAQs | cola de procesamiento](faqs-or-cola-de-procesamiento.md)
 * [Changelog](changelog.md)
 
 ## TusFacturasAPP

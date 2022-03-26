@@ -9,13 +9,17 @@ description: >-
 
 Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas.&#x20;
 
-Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) y luego ["Facturación"](./), para conocer como funciona el servicio y la estructura de cada request que envíes.&#x20;
+Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) si es la primera vez que utilizas nuestros servicios.&#x20;
 
 ## **Facturación asincrónica e individual (encolada)**
 
 Al utilizar éste servicio, los comprobantes que emitas, quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
 
-Te sugerimos leer primero, la documentación de "[Facturación](./)", para conocer cómo debe componerse el request que envíes y la documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
+Te sugerimos leer primero:&#x20;
+
+1. La documentación de "[Facturación](./)", para conocer cómo debe componerse el request que envíes
+2. La documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
+3. [FAQs sobre la cola de procesamiento](../faqs-or-cola-de-procesamiento.md)
 
 &#x20;
 
@@ -28,7 +32,7 @@ Te sugerimos leer primero, la documentación de "[Facturación](./)", para conoc
 {% hint style="info" %}
 ### Datos a tener en cuenta:
 
-* &#x20;**La fecha que envíes en el comprobante, determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy. _Si envías algún comprobante con fecha anterior a hoy, se emitirá hoy y probablemente recibas algún error de validación de fechas de AFIP si has emitido comprobantes con fecha posterior, por lo que deberás usar el método de "_[_cambiar fecha a comprobante encolado_](cambiar-fecha-a-comprobante-encolado.md)_"._
+* &#x20;**La fecha que envíes en el comprobante, determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy.  Te sugerimos leer el apartado de "[FAQs sobre la cola de procesamiento](../faqs-or-cola-de-procesamiento.md)". __&#x20;
 * El request, deben venir **con el campo número en cero (0)**.
 * **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
 * **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](../mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los lotes y serán rechazados de manera instantánea.
@@ -212,6 +216,4 @@ El JSON que recibirás será similar al siguiente ejemplo y a diferencia de los 
 ```
 
 
-
-####
 
