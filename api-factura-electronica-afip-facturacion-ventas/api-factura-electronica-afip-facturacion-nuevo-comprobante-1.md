@@ -28,7 +28,7 @@ Te sugerimos leer primero, la documentación de "[Facturación](./)", para conoc
 {% hint style="info" %}
 ### Datos a tener en cuenta:
 
-* &#x20;**La fecha que envíes en el comprobante, determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy.
+* &#x20;**La fecha que envíes en el comprobante, determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy. _Si envías algún comprobante con fecha anterior a hoy, se emitirá hoy y probablemente recibas algún error de validación de fechas de AFIP si has emitido comprobantes con fecha posterior, por lo que deberás usar el método de "_[_cambiar fecha a comprobante encolado_](cambiar-fecha-a-comprobante-encolado.md)_"._
 * El request, deben venir **con el campo número en cero (0)**.
 * **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
 * **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](../mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los lotes y serán rechazados de manera instantánea.
