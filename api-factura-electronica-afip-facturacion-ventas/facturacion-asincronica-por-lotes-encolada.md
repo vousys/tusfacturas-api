@@ -35,7 +35,7 @@ Te sugerimos leer primero, la documentación de "[Facturación](./)", para conoc
 
 #### A donde debes enviar el request?
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/facturacion/lotes_encola" method="post" summary="Facturación por Lotes asincrónica (encolada). Max: 200 requests por lote." %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/facturacion/lotes_encola" method="post" summary="Facturación por Lotes asincrónica (encolada). Max: 100 requests por lote." %}
 {% swagger-description %}
 
 
@@ -110,7 +110,7 @@ Tus credenciales de acceso
 {% hint style="info" %}
 ### Datos a tener en cuenta:
 
-* **La cantidad máxima de requests por lote es de 200 comprobantes**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y  puedes llegar a obtener una respuesta de timeout (524). En caso de recibir un 524, los requests que enviaste, seguirán siendo procesados en background, y recibirás un hook con la respuesta de éxito o error, de su encolamiento. &#x20;
+* **La cantidad máxima de requests por lote es de 100 comprobantes**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y  puedes llegar a obtener una respuesta de timeout (524). En caso de recibir un 524, los requests que enviaste, seguirán siendo procesados en background, y recibirás un hook con la respuesta de éxito o error, de su encolamiento. &#x20;
 * Puedes enviar en un mismo lote, comprobantes de **diferente tipo de comprobante**.   Ej: Puedes enviar en el mismo lote Facturas A Y FACTURAS  B.
 * Todos los requests de ésta llamada, deben ser de la **misma fecha**. Ej: todos deben ser 12/03/2021. **La fecha que envíes en cada comprobante determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy.
 * Los request deben venir **con el campo número en cero (0)**.
