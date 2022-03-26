@@ -637,13 +637,13 @@ Ten en cuenta que AFIP realiza validaciones sobre éstos datos, ya que según lo
 {% hint style="info" %}
 **Auto-acreditación en cuenta corriente:**
 
-A partir del 01/04/2022, comienza a funcionar la "auto-acreditación" con las NC, solo si cumple con los siguientes requisitos:
+A partir del 26/03/2022, comienza a funcionar la "auto-acreditación" con las NC, solo si cumple con los siguientes requisitos:
 
 1. Detalla un solo comprobante.&#x20;
 2. El importe de la NC es exactamente igual al del comprobante que éstas anulando (factura o nota de débito).
-3. La factura o nota de débito que estás anulando, no posee pagos.
+3. La factura o nota de débito que estás anulando, se encuentra impaga al 100%.
 
-La auto-acreditación lo que producirá, es generar un recibo de cobro, en la cuenta corriente de tu cliente, para anular contablemente esa factura o nota de débito asociada.
+La auto-acreditación generará un recibo de cobro, en la cuenta corriente de tu cliente, para anular contablemente esa factura o nota de débito asociada. No se enviará ningún PDF a tu cliente. Es solo para tu gestión interna.
 
 
 {% endhint %}
