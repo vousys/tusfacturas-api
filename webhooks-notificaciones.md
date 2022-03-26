@@ -7,10 +7,6 @@ description: >-
 
 # Webhooks (notificaciones)
 
-{% hint style="info" %}
-**ATENCIÓN!** Éste servicio, se encontrará disponible, a partir del 01/04/2022
-{% endhint %}
-
 ![](.gitbook/assets/image.png)
 
 ## ¿Qué es un WebHook?
