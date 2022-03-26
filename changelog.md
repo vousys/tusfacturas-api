@@ -30,7 +30,7 @@ Se incluye también en la documentación de [facturación](api-factura-electroni
 
 ## 16 de marzo de 2022
 
-Se modifica la documentación de [facturación](api-factura-electronica-afip-facturacion-ventas/), y se agrega el bloque de "**tags**", como opcional para el envío de nuevos comprobantes a partir del 01/04/2022.
+Se modifica la documentación de [facturación](api-factura-electronica-afip-facturacion-ventas/), y se agrega el bloque de "**tags**", como opcional para el envío de nuevos comprobantes.
 
 ## 11 de marzo de 2022
 

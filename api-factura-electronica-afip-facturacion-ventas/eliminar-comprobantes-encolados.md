@@ -6,10 +6,6 @@ description: >-
 
 # Eliminar comprobantes encolados
 
-{% hint style="info" %}
-**ATENCIÓN!** Éste servicio comenzará a funcionar a partir del 01/04/2022
-{% endhint %}
-
 Mediante éste método podrás eliminar aquellos comprobantes de la cola de procesamiento.
 
 Tipo de datos: **JSON**\

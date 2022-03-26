@@ -11,10 +11,6 @@ Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir fa
 
 Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) y luego ["Facturación"](./), para conocer como funciona el servicio y la estructura de cada request que envíes.&#x20;
 
-{% hint style="info" %}
-**ATENCIÓN!** Éste servicio comenzará a funcionar a partir del 01/04/2022
-{% endhint %}
-
 ## **Facturación asincrónica e individual (encolada)**
 
 Al utilizar éste servicio, los comprobantes que emitas, quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;

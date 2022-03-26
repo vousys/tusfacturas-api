@@ -6,10 +6,6 @@ description: >-
 
 # Facturación instantánea por Lotes
 
-{% hint style="info" %}
-**ATENCIÓN!** A partir de abril 2022, éste servicio se modificará para brindarte una solución con muchas más herramientas. Consultanos para más información
-{% endhint %}
-
 Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) y luego ["Facturación"](./), para conocer la estructura de cada request que envíes.&#x20;
 
 ## ¿Qué puedo facturar por lote?

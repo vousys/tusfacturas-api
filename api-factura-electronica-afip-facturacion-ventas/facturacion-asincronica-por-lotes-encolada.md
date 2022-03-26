@@ -7,10 +7,6 @@ description: >-
 
 # Facturación asincrónica por Lotes (encolada)
 
-{% hint style="info" %}
-**ATENCIÓN!** Éste servicio comenzará a funcionar a partir del 01/04/2022
-{% endhint %}
-
 Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) y luego ["Facturación"](./), para conocer la estructura de cada request que envíes.&#x20;
 
 
