@@ -381,7 +381,7 @@ En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechaz
 
 #### Si falla una emisión del comprobante de un lote, ¿se realiza un rollback de las emitidas hasta el momento en ese lote? ¿Se emite hasta dicha factura? ¿Saltea el comprobante y continúa con el siguiente?
 
-Si un comprobante tiene error, ese comprobante y los siguientes vendrán rechazados. No existe rollback porque se va procesando contra AFIP y generando en nuestra plataforma en el orden en que se reciben.
+No se realiza rollback, ya que se utiliza el método por lotes provisto por AFIP. Si un comprobante tiene error, ese comprobante y los siguientes vendrán rechazados.&#x20;
 
 #### ¿Hay una reducción de tiempo considerable al emitir los comprobantes de esta forma?
 
@@ -392,7 +392,9 @@ Si.
 No, los comprobantes deben ser enviados bajo el criterio de:
 
 1. Mismo tipo de comprobante
-2. Número de comprobante (ascendente)
-3. Fecha
+2. Fecha (ascendente)
+3. Número de comprobante (ascendente)
+
+
 
 &#x20;
