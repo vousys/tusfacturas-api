@@ -311,14 +311,14 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 
 En el caso de un error en la etapa de validación de los datos enviados, el lote no se procesará y obtendrás la respuesta al instante. No se te notificará vía webhook.
 
-Ejemplo de una llamada con 3 requests, donde el segundo el comprobante enviado, tiene una fecha distinta al resto, el lote no se procesará y obtendrás el siguiente error:
+Ejemplo de una llamada con 3 requests, donde el segundo el comprobante enviado, tiene el número de comprobante, el lote no se procesará y obtendrás el siguiente error:
 
 {% code title="JSON" %}
 ```
 {
 	"error": "S",
 	"errores": [
-		"El request enviado en el orden 1 (comenzando en 0) tiene una fecha diferente y todos deben llevar la misma fecha. El lote no se procesara."
+		"El request enviado en el orden 1 (comenzando en 0) tiene el numero de comprobante y todos deben venir en cero. El lote no se procesara."
 	],
 	"error_cod": [],
 	"error_details": []
