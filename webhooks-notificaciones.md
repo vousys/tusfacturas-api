@@ -41,6 +41,12 @@ Vas a recibir por **POST** un JSON, con la siguiente estructura, para que puedas
 ```
 {% endcode %}
 
+En los headers del request que te enviamos, podrás observar la/s siguiente/s cabeceras:
+
+User-Agent: TusFacturasAPP-webhook/1.0
+
+
+
 ### Tipos de evento posibles, por recurso
 
 |   recurso   |     evento    | info                                                                                                                                                       |
