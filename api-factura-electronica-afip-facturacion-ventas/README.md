@@ -13,13 +13,13 @@ Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir fa
 #### En TusFacturasAPP, contamos con 4 modalidades para la emisión de comprobantes:
 
 * **Facturas individuales instantáneas**: donde envías un solo request para ser procesado, y obtenes la respuesta al instante. [Conocé más sobre la facturación electrónica individual e instantánea, desde aquí](./#facturacion-instantanea-individual)
-* :new: **Facturas individuales en cola:** donde envías un solo request para ser procesado, y  obtenes la respuesta mediante un hook. Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
+* :new: **Facturas individuales en cola:** donde envías un solo request para ser procesado, y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md). Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
 * **Lote de facturas instantáneas**: donde envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante. Conocé más sobre la [facturación electrónica en lotes, aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
 * :new: **Lote de facturas asincrónico en cola:** donde envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md). Conocé más sobre la [facturación electrónica por lotes en cola](facturacion-asincronica-por-lotes-encolada.md), aquí.
 
 ## ¿Qué puedo facturar?
 
-Nuestro servicio API de facturación, te permite enviar a facturar cualquier tipo de comprobante A,B,C,E, M, comprobantes de tipo "MiPyme, ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
+Nuestro servicio API de facturación, te permite enviar a facturar cualquier tipo de comprobante A,B,C,E, M, comprobantes de tipo " Factura de crédito MiPyme", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
 
 &#x20;¿No sabes qué [tipo de comprobante debes emitir](../que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 
@@ -85,7 +85,7 @@ Estructura de "Cliente", según se informa a continuación
 
 ####
 
-#### Ejemplo de JSON para generar un comprobante.
+#### Ejemplo de JSON generico, para generar un comprobante.
 
 ```
 {
@@ -295,6 +295,8 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * Para evitar inconsistencias en la validación de las sumatorias, te sugerimos redondear los valores decimales con "Round half even".
 * La respuesta exitosa, te incluye el texto que se necesita para armar el código QR (en caso que generes el PDF desde tu lado) y/o el viejo código de barras (para comprobantes anteriores).
 * Las notas de débito y crédito requieren que envies obligatoriamente los comprobantes asociados (o su período asociado). [Conocé más desde aquí](./#estructura-de-comprobantes-asociados)
+* **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es tu responsabilidad corroborar y validar éstos datos.**
+* **AFIP recibe únicamente totales**, no el detalle de los items que facturás, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
 {% endhint %}
 
 #### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme"?
@@ -305,120 +307,9 @@ Hay ciertos casos donde AFIP exige que en lugar de emitir una factura A,B o C, l
 
 Te sugerimos comentar ésta modalidad, con tu cliente y asesorarte con su estudio impositivo al respecto.
 
-## Estructura de un request:
+## ¿Cómo se armar un request?
 
 ### Estructura del bloque: "Comprobante"
-
-Para poder generar un comprobante de tipo factura A,B, C, debes enviar de todos los datos según se informa a continuación:
-
-{% code title="JSON" %}
-```
-   "comprobante":  {
-
-                "fecha":                    "28\/07\/2015",
-                "tipo":                     "FACTURA B",
-                "moneda":                   "DOL",
-               "idioma":                   "1",
-                "cotizacion":               "15.20",
-                "operacion":                "V",
-                "punto_venta":              "2",
-                "numero":                   "6",
-                "periodo_facturado_desde":  "27\/07\/2015",
-                "periodo_facturado_hasta":  "30\/07\/2015",
-                "vencimiento":              "30\/08\/2015",
-                "rubro":                    "Servicios web",
-                "rubro_grupo_contable":     "servicios",
-                "abono": "S",
-                "abono_frecuencia": "2",
-                "abono_hasta":"10/2019",
-                "abono_actualiza_precios": "N",
-                "external_reference":       "ABC123",
-                "tags": [
-			  "etiqueta1", 
-			  "etiqueta2"
-			],
-                "detalle":
-                            [
-                                {
-                                    "cantidad":"1",
-                                    "bonificacion_porcentaje": "0",
-                                    "afecta_stock": "N",
-                                    "producto":
-                                            {"descripcion":     "PAPAS",
-                                             "unidad_bulto":    "10",
-                                             "lista_precios":   "MI LISTA DE PRECIOS",
-                                             "codigo":          "",
-                                             "precio_unitario_sin_iva":"100.45",
-                                             "alicuota":      "21",
-                                             "unidad_medida": "7",
-                                             "impuestos_internos_alicuota": 0,
-                                             "actualiza_precio": "S"
-                                             },
-                                    "leyenda":"blanca, cepillada"
-                                },
-
-
-                                {
-                                    "cantidad":"1.5",
-                                    "afecta_stock": "N",
-                                     "bonificacion_porcentaje": "0",
-                                    "producto":
-                                            {"descripcion":     "HUEVOS",
-                                             "unidad_bulto":    "30",
-                                             "lista_precios":   "MAPPLETS",
-                                             "codigo":          "MPH",
-                                             "precio_unitario_sin_iva":"50",
-                                             "alicuota":      "10.5",
-                                             "impuestos_internos_alicuota": 0,
-                                             "unidad_medida": "7",
-                                             "actualiza_precio": "N"
-                                             },
-                                    "leyenda":""
-                                },
-
-                                {
-                                    "cantidad":"2",
-                                    "afecta_stock": "S",
-                                     "bonificacion_porcentaje": "0",
-                                    "producto":
-                                            {"descripcion":     "ZANAHORIA",
-                                             "unidad_bulto":    "50",
-                                             "lista_precios":   "MI LISTA DE PRECIOS",
-                                             "codigo":          "ZNH1",
-                                             "precio_unitario_sin_iva":"200",
-                                             "alicuota":      "21",
-                                             "impuestos_internos_alicuota": 0,
-                                             "unidad_medida": "7"
-                                             },
-                                    "leyenda":""
-                                }
-
-                            ],
-                "bonificacion":             "120",
-                "leyenda_gral":             "Segun Orden de compra III1333",
-                "comentario":               "Factura correspondiente al servicio XX",
-                "percepciones_iibb":        "0",
-                "percepciones_iibb_base":   "0",
-                "percepciones_iibb_alicuota": "0",
-                "percepciones_iibb_juridiccion": "10",
-                "percepciones_iva":         "0",
-                "percepciones_iva_base":    "0",
-                "percepciones_iva_alicuota": "0",
-                "exentos":                  "0",
-                "impuestos_internos":       "0",
-                "impuestos_internos_base":   "0",
-                "impuestos_internos_alicuota": "0", 
-                "total":                    "543.22",
-                "comprobantes_asociados":    []
-        }
-```
-{% endcode %}
-
-{% hint style="info" %}
-Importante: **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es responsabilidad del cliente corroborar y validar éstos datos.**
-
-Recordá que **AFIP recibe únicamente totales**, no el detalle de los items que facturás, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
-{% endhint %}
 
 #### Información de los campos a enviar:
 
@@ -468,35 +359,25 @@ Recordá que **AFIP recibe únicamente totales**, no el detalle de los items que
 Para poder generar el comprobante, debes enviar un detalle de todos los datos del cliente según se informa a continuación.
 
 ```
-{   
-"documento_tipo":       "DNI",
-"documento_nro":        "1292963535",
-"razon_social":         "Pirulo",
-"email":                "test@test.com",
-"domicilio":            "Av Sta Fe 123",
-"provincia":            "2",
-"codigo":               "CLO2",
-"envia_por_mail":       "S",
-"condicion_pago":       "214",
-"condicion_pago_otra":  "Cobrado en ventanilla",
-"condicion_iva":        "CF"
+comprobante: {
+   .... 
+   cliente: {   
+      "documento_tipo":       "DNI",
+      "documento_nro":        "1292963535",
+      "razon_social":         "Pirulo",
+      "email":                "test@test.com",
+      "domicilio":            "Av Sta Fe 123",
+      "provincia":            "2",
+      "codigo":               "CLO2",
+      "envia_por_mail":       "S",
+      "condicion_pago":       "214",
+      "condicion_pago_otra":  "Cobrado en ventanilla",
+      "condicion_iva":        "CF"
+   }
 }
 ```
 
-#### Datos a tener en cuenta:
 
-{% hint style="info" %}
-* Si el cliente ya existe en tu base de clientes de TusFacturasAPP, será actualizado con los nuevos datos, salvo los campos de: tipo de documento, número de documento y condición ante el IVA.
-* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
-
-Nro de documento = "0"
-
-Tipo de documento = "OTRO"
-
-En nombre, indicá lo que tu contador/a te recomiende.
-
-Tené en cuenta, que solo podrás facturar sin indicar el documento del comprador, hasta ciertos montos que AFIP actualiza regularmente. TusFacturasAPP, cuenta con un método que te permite obtener el monto actualizado. [Consultá la documentaión de los documento : los topes de venta a CF](https://developers.tusfacturas.app/api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final)
-{% endhint %}
 
 #### Información de los campos a enviar:
 
@@ -509,16 +390,30 @@ Tené en cuenta, que solo podrás facturar sin indicar el documento del comprado
 | `provincia`           | <p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.<br><strong>Ejemplo: 2</strong></p>                                                                                                                                                   |
 | `envia_por_mail`      | <p>Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: <strong>S , N</strong><br><strong>Ejemplo: S</strong></p>                                                                                                                                                             |
 | `condicion_pago`      | <p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#condiciones-de-venta">tabla de referencia</a>.</p><ul><li>se debe enviar obligatoriamente el campo <strong>condicion_pago_otra</strong> "con la descripción de la misma.</li></ul><p><br><strong>Ejemplo: 211 .</strong></p> |
-|                       |                                                                                                                                                                                                                                                                                                     |
 | condicion\_pago\_otra | Campo alfanumerico. Longitud máxima 100 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                                                                                                                             |
 | `condicion_iva`       | <p>Campo numérico que indica la condicion de iva, según <a href="../parametros/tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>. Valores Permitidos: <strong>CF, RI, M, E</strong><br><strong>Ejemplo: RI</strong></p>                          |
 | codigo                | Campo alfanumerico opcional. Longitud máxima 50 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                                                                                                                     |
+
+{% hint style="info" %}
+**Datos a tener en cuenta:**
+
+* Si el cliente ya existe en tu base de clientes de TusFacturasAPP, será actualizado con los nuevos datos, salvo los campos de: tipo de documento, número de documento y condición ante el IVA.
+* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
+
+Nro de documento = "0"
+
+Tipo de documento = "OTRO"
+
+En nombre, indicá lo que tu contador/a te recomiende.
+
+Tené en cuenta, que solo podrás facturar sin indicar el documento del comprador, hasta ciertos montos que AFIP actualiza regularmente. TusFacturasAPP, cuenta con un método que te permite obtener el monto actualizado. [Consultá la documentaión de los documento : los topes de venta a CF](https://developers.tusfacturas.app/api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final)
+{% endhint %}
 
 ###
 
 ### Estructura del bloque: "Detalle de conceptos"
 
-El detalle de conceptos se compone de una lista de cada uno de los productos que vas a facturar.
+El detalle de conceptos se compone de una lista de cada uno de los productos o servicios, que vas a facturar.
 
 {% hint style="info" %}
 Recuerda que debes enviar una **lista (array)** de conceptos. **El máximo de conceptos permitidos por comprobante es de 130**.
@@ -528,7 +423,9 @@ La estructura **de cada concepto** a enviar es la siguiente:
 
 {% code title="JSON" %}
 ```
-{
+comprobante: {
+   .... 
+   detalle: [{
 	"cantidad": "1.5",
 	"afecta_stock": "N",
 	"bonificacion_porcentaje": "0",
@@ -544,7 +441,26 @@ La estructura **de cada concepto** a enviar es la siguiente:
 		"actualiza_precio":"S"
 	},
 	"leyenda": ""
-}
+       },
+       {
+	"cantidad": "3",
+	"afecta_stock": "S",
+	"bonificacion_porcentaje": "50",
+	"producto": {
+		"descripcion": "PALITOS SALADOS",
+		"unidad_bulto": "30",
+		"lista_precios": "SNACKS",
+		"codigo": "PLi",
+		"precio_unitario_sin_iva": "50",
+		"impuestos_internos_alicuota": 0,
+		"alicuota": "10.5",
+		"unidad_medida": "7",
+		"actualiza_precio":"S"
+	},
+	"leyenda": "En paquetes de 190gr"
+       }
+      ]
+   } 
 ```
 {% endcode %}
 
@@ -553,14 +469,14 @@ Los campos que debes enviar son los siguientes:
 | `cantidad`                                                             | <p>Campo numérico con 2 decimales. Separador de decimales: punto.<br><strong>Ejemplo: 1.50</strong></p>                                                                          |
 | ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `afecta_stock`                                                         | <p>Campo alfanumérico de 1 posición. Valores posibles: "S" (si), "N" (no)<br><strong>Ejemplo: S</strong></p>                                                                     |
-| `producto`                                                             | Según estructura de producto                                                                                                                                                     |
+| `producto`                                                             | Según estructura de producto que se detalla en el bloque siguiente.                                                                                                              |
 | `leyenda`                                                              | <p>Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.<br><strong>Ejemplo: Blanca, cepillada</strong></p>     |
 | <mark style="background-color:purple;">bonificacion\_porcentaje</mark> | Si se ha aplicado un porcentaje de descuento sobre éste concepto, debe ser enviado. Es un campo númerico con 2 decimales. El separador de decimales esperado es el punto. Ej: 25 |
 |                                                                        |                                                                                                                                                                                  |
 
 ###
 
-### Estructura del bloque: "Concepto / Producto"
+### Estructura del bloque: "detalle>producto"
 
 Cada producto o servicio que factures, deberá ser enviado con la siguiente estructura:
 
@@ -578,11 +494,13 @@ Cada producto o servicio que factures, deberá ser enviado con la siguiente estr
 }
 ```
 
-#### Datos a tener en cuenta:
+####
 
 {% hint style="info" %}
+**Datos a tener en cuenta:**
+
 * Si el producto ya existía en tu base de productos de nuestra plataforma ( se valida que sea la misma lista de precios, código de producto y/o descripción del mismo), el mismo será actualizado por completo, con los nuevos datos que envíes, solo  si indicas que deseas actualizar el precio con el campo "actualiza\_precio":"S".  En caso de no querer actualizar el producto, si el mismo ya existía, se facturará con el nuevo precio y descripción que envíes, pero mantendrá sus datos anteriores.
-* Si el comprobante que envias a facturar es de tipo C, todos sus productos no deben llevar IVA, y debes enviar cada concepto con su precio final
+* Si el comprobante que envías a facturar es de tipo C, todos sus productos no deben llevar IVA, y debes enviar cada concepto con su precio final
 * Si el comprobante que envías, es de tipo A o B, los productos o servicios que envíes a facturar, deben ser enviados siempre SIN IVA, porque el IVA se calcula del lado de nuestra plataforma en base al campo "alicuota" que envías. Conocé más de los tipos de comprobantes, [desde aquí ](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 * En caso que alguno de tus conceptos cuente con un signo porcentual (%) en el nombre (ej:  Promo 20% OFF)  deberás reemplazarlo por los siguientes caracteres: **#\&#**&#x20;
 * En caso que alguno de tus conceptos cuente con una nueva línea, en su nombre, o porque deba imprimirse en 2 líneas, deberás generar el salto de línea donde desees, ingresando los caracteres:  **#@#**&#x20;
