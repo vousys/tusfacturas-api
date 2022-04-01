@@ -292,7 +292,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * Los CAE tienen fecha de vencimiento y se devuelve en formato dd/mm/aaaa
 * Por cuestiones de seguridad, el número de CAE es un texto y se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
 * Por cuestiones de seguridad, el texto que se retorna en el campo afip\_codigo\_barras y afip\_qr, se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
-* Para evitar inconsistencias en la validación de las sumatorias, te sugerimos redondear los valores decimales con "Round half even".
+* Para evitar inconsistencias en la validación de las sumatorias, te sugerimos redondear a 2 decimales los valores y aplicar el redondeo con "Round half even".
 * La respuesta exitosa, te incluye el texto que se necesita para armar el código QR (en caso que generes el PDF desde tu lado) y/o el viejo código de barras (para comprobantes anteriores).
 * Las notas de débito y crédito requieren que envies obligatoriamente los comprobantes asociados (o su período asociado). [Conocé más desde aquí](./#estructura-de-comprobantes-asociados)
 * **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es tu responsabilidad corroborar y validar éstos datos.**
