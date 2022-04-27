@@ -199,7 +199,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
  
 ```
 
-##
+
 
 ## Ejemplo de FACTURA A&#x20;
 
