@@ -91,6 +91,10 @@ Estructura de "Cliente", según se informa en el apartado de
 
 En el caso de un error en la etapa de validación de los datos enviados, el request no se procesará y obtendrás la respuesta al instante. No se te notificará vía webhook.
 
+{% hint style="info" %}
+Próximamente, se te notificará por webhook.
+{% endhint %}
+
 Ejemplo :
 
 {% code title="JSON" %}

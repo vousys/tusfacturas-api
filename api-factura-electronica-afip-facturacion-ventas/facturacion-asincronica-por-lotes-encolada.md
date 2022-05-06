@@ -311,6 +311,10 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 
 En el caso de un error en la etapa de validación de los datos enviados, el lote no se procesará y obtendrás la respuesta al instante. No se te notificará vía webhook.
 
+{% hint style="info" %}
+Próximamente, se te notificará por webhook y el lote se procesará solo con los aptos para su procesamiento. Consultános para más información.
+{% endhint %}
+
 Ejemplo de una llamada con 3 requests, donde el segundo el comprobante enviado, tiene el número de comprobante, el lote no se procesará y obtendrás el siguiente error:
 
 {% code title="JSON" %}
