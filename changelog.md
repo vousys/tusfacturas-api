@@ -1,9 +1,5 @@
 # Changelog
 
-## 06 de mayo de 2022
-
-Se remueve
-
 ## 25 de marzo de 2022
 
 Se agrega la documentación de "[nuevo recibo de cobro](recibos-de-cobro-y-ordenes-de-pago/api-factura-electronica-afip-or-ingresar-pago-1.md)"  y "[nueva orden de pago](recibos-de-cobro-y-ordenes-de-pago/api-factura-electronica-afip-or-ingresar-pago-2.md)"
