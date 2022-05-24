@@ -83,3 +83,7 @@ Si, para eso debés utilizar el método de:  [Cambiar fecha encolado](api-factur
 #### ¿Puedo eliminar requests que aún no se han procesado?
 
 Si, para eso debés utilizar el método de:  [Eliminar comprobante encolado](api-factura-electronica-afip-facturacion-ventas/eliminar-comprobantes-encolados.md)
+
+**Si creo un abono desde la API o desde la plataforma web, ¿Cada vez que se emita la factura, me notifica por webhook?**
+
+No. La plataforma en ese caso no te notifica por webhook. Si llegas a necesitar ésta funcionalidad, por favor contactanos.
