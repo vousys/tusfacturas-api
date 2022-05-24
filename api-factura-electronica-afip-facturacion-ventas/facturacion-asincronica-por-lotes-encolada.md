@@ -307,28 +307,159 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 
 ### **¿Que te retornaremos ?**
 
-#### :red\_circle: Error de validación, de los datos enviados en el lote:
+#### :red\_circle: Error de validación de los datos enviados en el lote:
 
-En el caso de un error en la etapa de validación de los datos enviados, el lote no se procesará y obtendrás la respuesta al instante. No se te notificará vía webhook.
+Si enviás un lote que no cumple con los requisitos básicos, detallados a continuación:&#x20;
 
-{% hint style="info" %}
-Próximamente, se te notificará por webhook y el lote se procesará solo con los aptos para su procesamiento. Consultános para más información.
-{% endhint %}
+* La cantidad de requests supera el máximo permitido.
+* No has enviado ningún request a procesar en el bloque de "requests"
+* Tu CUIT+PDV no posee una dirección de webhook válida
 
-Ejemplo de una llamada con 3 requests, donde el segundo el comprobante enviado, tiene el número de comprobante, el lote no se procesará y obtendrás el siguiente error:
+Ten en cuenta que el lote no se procesará, obtendrás la respuesta al instante y no se te notificará vía webhook.
+
+Ejemplo de una llamada con 300 requests, que superan el máximo establecido:
 
 {% code title="JSON" %}
 ```
 {
 	"error": "S",
 	"errores": [
-		"El request enviado en el orden 1 (comenzando en 0) tiene el numero de comprobante y todos deben venir en cero. El lote no se procesara."
+		"Esta enviando 300 requests, cuando el limite permitido es 100. El lote no se procesara.",
+		"El lote no se procesara ya que contiene errores en todos sus requests. Se enviaron a procesar: 3 requests y se aceptaron procesar: 0. "
 	],
 	"error_cod": [],
-	"error_details": []
+	"error_details": [],
+	"response": []
 }
 ```
 {% endcode %}
+
+En cambio, si existen errores en algunos requests, el lote se procesará parcialmente y se te irá notificando vía webhook de su procesamiento.
+
+Ej: un lote con 3 requests, donde el primero no tiene una external\_reference definida, puede arrojarte una respuesta al instante, de éste estilo:
+
+```
+{
+	"error": "S",
+	"errores": [
+		"El lote se procesara parcialmente ya que contiene errores en alguno de sus requests. Se enviaron a procesar: 3 requests y se aceptaron procesar: 2. "
+	],
+	"error_cod": [],
+	"error_details": [],
+	"response": [
+		{
+			"error": "N",
+			"errores": [],
+			"cae": " ",
+			"cae_vencimiento": null,
+			"observaciones": "",
+			"envio_x_mail": "N",
+			"envio_x_mail_direcciones": "",
+			"tfc_generacion_tipo": 3,
+			"external_reference": "M170_502",
+			"rta": "El comprobante  se ha guardado correctamente ",
+			"vencimiento_cae": "01\/01\/2000",
+			"vencimiento_pago": "13\/05\/2022",
+			"comprobante_nro": "00010-00000000",
+			"comprobante_tipo": "FACTURA B",
+			"afip_codigo_barras": "",
+			"afip_qr": "",
+			"comprobante_pdf_url": ""
+		},
+		{
+			"error": "N",
+			"errores": [],
+			"cae": " ",
+			"cae_vencimiento": null,
+			"observaciones": "",
+			"envio_x_mail": "N",
+			"envio_x_mail_direcciones": "",
+			"tfc_generacion_tipo": 3,
+			"external_reference": "M170503",
+			"rta": "El comprobante  se ha guardado correctamente ",
+			"vencimiento_cae": "01\/01\/2000",
+			"vencimiento_pago": "11\/04\/2022",
+			"comprobante_nro": "00010-00000000",
+			"comprobante_tipo": "FACTURA A",
+			"afip_codigo_barras": "",
+			"afip_qr": "",
+			"comprobante_pdf_url": ""
+		},
+		{
+			"error": "S",
+			"errores": [
+				"El request enviado en el orden 0 (comenzando en 0) incluye un comprobante con un external_reference no valido.  Este request no se procesara."
+			],
+			"external_reference": "% 'M17051",
+			"rta": "Eror. No se procesara"
+		}
+	]
+}
+```
+
+y a su vez, enviarte los siguientes webhooks:
+
+```
+{
+	"creado": "24\/05\/2022 16:46:39",
+	"evento": "encolado",
+	"recurso": "facturacion",
+	"external_reference": "M170_502",
+	"intento": 1,
+	"msg": [],
+	"hook_id": "xxxx"
+}
+```
+
+```
+{
+	"creado": "24\/05\/2022 16:46:39",
+	"evento": "error",
+	"recurso": "facturacion",
+	"external_reference": "% 'M17051",
+	"intento": 1,
+	"msg": ["El request enviado en el orden 0 (comenzando en 0) incluye un comprobante con un external_reference no valido.  Este request no se procesara."],
+	"hook_id": "xxxx"
+}
+```
+
+```
+{
+	"creado": "24\/05\/2022 16:46:39",
+	"evento": "encolado",
+	"recurso": "facturacion",
+	"external_reference": "M170503",
+	"intento": 1,
+	"msg": [],
+	"hook_id": "xxxx"
+}
+```
+
+```
+{
+	"creado": "24\/05\/2022 16:47:06",
+	"evento": "error",
+	"recurso": "facturacion",
+	"external_reference": "M170503",
+	"intento": 1,
+	"msg": [" AFIP Factura electronica, informa el siguiente error: Cod. Error: #6661145.10016 - El numero o fecha del comprobante no se corresponde con el proximo a autorizar. Consultar metodo FECompUltimoAutorizado. Si necesitas ayuda, contactanos", " AFIP Factura electronica, informa el siguiente error: Cod. Error: #6661145.0 - AFIP rechazo la generacion del comprobante Si necesitas ayuda, contactanos ", "AFIP No devolvio el CAE asociado. (Cod. Error #6661141.S1254)", "AFIP No devolvio el CAE asociado. (Cod. Error #6661141.S1278)"],
+	"hook_id": "xxxx"
+}
+```
+
+```
+{
+	"creado": "24\/05\/2022 16:47:10",
+	"evento": "error",
+	"recurso": "facturacion",
+	"external_reference": "M170_502",
+	"intento": 1,
+	"msg": [" AFIP Factura electronica, informa el siguiente error: Cod. Error: #6661145.10016 - El numero o fecha del comprobante no se corresponde con el proximo a autorizar. Consultar metodo FECompUltimoAutorizado. Si necesitas ayuda, contactanos", " AFIP Factura electronica, informa el siguiente error: Cod. Error: #6661145.0 - AFIP rechazo la generacion del comprobante Si necesitas ayuda, contactanos", "AFIP No devolvio el CAE asociado. (Cod. Error #6661141.S1254)", "AFIP No devolvio el CAE asociado. (Cod. Error #6661141.S1278)"],
+	"hook_id": "xxxx"
+}
+```
+
+
 
 #### :green\_circle: Cuando el lote se ha aceptado para su procesamiento:
 

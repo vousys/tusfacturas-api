@@ -89,26 +89,84 @@ Estructura de "Cliente", según se informa en el apartado de
 
 #### :red\_circle: Error de validación, de los datos enviados :
 
-En el caso de un error en la etapa de validación de los datos enviados, el request no se procesará y obtendrás la respuesta al instante. No se te notificará vía webhook.
+Si el request enviado, posee errores en la validación o formato de los campos enviados, pero  cumple con los siguientes requisitos básicos:
 
-{% hint style="info" %}
-Próximamente, se te notificará por webhook.
-{% endhint %}
+* Tu CUIT/PDV tiene una dirección de webhook valida
+* Tu request cuenta con el campo "external\_reference"&#x20;
 
-Ejemplo :
+Recibirás la respuesta al instante y también se te notificará vía webhook.&#x20;
+
+Ejemplo de un request, cuya external\_reference no es válida:
 
 {% code title="JSON" %}
 ```
 {
 	"error": "S",
 	"errores": [
-		"Este comprobante no puede emitirse en este momento, ya que tienes comprobantes pendientes en la cola de procesamiento. Para evitar problemas con la numeracion, puedes intentar crearlo nuevamente, pero enviandolo a la COLA DE PROCESAMIENTO, y sera emitido cuando se terminen de procesar los anteriores."
+		"La external reference enviada, posee caracteres no validos.",
+		"Error al crear al cliente . No se podra generar el comprobante. Revise los datos enviados."
 	],
 	"error_cod": [],
-	"error_details": []
+	"error_details": [
+		{
+			"code": "TFC-8002",
+			"text": "La external reference enviada, posee caracteres no validos."
+		},
+		{
+			"code": "TFC-6001",
+			"text": "Error al crear al cliente . No se podra generar el comprobante. Revise los datos enviados."
+		}
+	],
+	"external_reference": "1%'703"
 }
+
 ```
 {% endcode %}
+
+Ejemplo del hook que recibirás:
+
+```
+{
+	"creado": "24\/05\/2022 16:58:51",
+	"evento": "error",
+	"recurso": "facturacion",
+	"external_reference": "1%'703",
+	"intento": 1,
+	"msg": ["La external reference enviada, posee caracteres no validos.", "Error al crear al cliente . No se podra generar el comprobante. Revise los datos enviados."],
+	"hook_id": "xxxx"
+}
+```
+
+En cambio, si tu request **no cumple con los requisitos básicos** previamente mencionados, solo recibirás al instante la respuesta y no se te notificará por webhook.
+
+```
+{
+	"error": "S",
+	"errores": [
+		"Cuando se envia un comprobante a la cola, debes enviar una referencia externa en el campo external_reference.",
+		"La external reference enviada, posee caracteres no validos.",
+		"Error al crear al cliente . No se podra generar el comprobante. Revise los datos enviados."
+	],
+	"error_cod": [],
+	"error_details": [
+		{
+			"code": "TFC-8002",
+			"text": "Cuando se envia un comprobante a la cola, debes enviar una referencia externa en el campo external_reference."
+		},
+		{
+			"code": "TFC-8002",
+			"text": "La external reference enviada, posee caracteres no validos."
+		},
+		{
+			"code": "TFC-6001",
+			"text": "Error al crear al cliente . No se podra generar el comprobante. Revise los datos enviados."
+		}
+	],
+	"external_reference": ""
+}
+```
+
+
 
 #### :green\_circle: Cuando el request se ha aceptado para su procesamiento:
 
