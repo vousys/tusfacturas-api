@@ -32,7 +32,11 @@ Tus credenciales de acceso
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="moneda" type="string" required="false" %}
-La moneda a consultar, según nuestra tabla de referencia de monedas. En caso que no envies éste dato, obtendrás la cotización del dolar.
+La moneda a consultar, según nuestra 
+
+[tabla de referencia de monedas](../parametros/tablas-de-referencia.md#monedas)
+
+. En caso que no envies éste dato, obtendrás la cotización del dolar.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="fecha" type="string" required="false" %}
