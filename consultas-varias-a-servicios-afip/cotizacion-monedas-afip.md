@@ -1,13 +1,13 @@
 ---
 description: >-
   Consulta desde la API de facturación electrónica de TusFacturas.app, las
-  diferentes cotizaciones brindadas por AFIP.
+  diferentes cotizaciones de monedas brindadas por AFIP.
 ---
 
 # Consultar las cotizaciones AFIP
 
 {% hint style="info" %}
-Ésta información es actualizada a cada hora desde AFIP. El límite de request que dispones para realizar las consultas, es el limite que tenés habilitado en tu plan para la emisión de comprobantes, multiplicado por 12 (ya que puedes consultar la cotización del dólar una vez por hora) . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 12,000 request a éste método en el período en curso.
+Ten en cuenta que para la moneda "dólar": AFIP trabaja con la cotización oficial del Banco de la Nación Argentina, correspondiente al DOLAR DIVISAS y la cotización es actualizada a cada hora.
 {% endhint %}
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/tablas_referencia/cotizacion" method="post" summary="Obtener cotización desde AFIP" %}
