@@ -46,26 +46,26 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
 				"lista_precios": "standard",
 				"leyenda": "",
 				"unidad_bulto": 1,
-				"alicuota": 21,
-				"precio_unitario_sin_iva": 114.88
+				"alicuota": 0,
+				"precio_unitario_sin_iva": 100
 			}
 		}],
 		"fecha": "28/03/2018",
 		"rubro_grupo_contable": "Sevicios",
-		"total": 114.88,
+		"total": 100,
 		"cotizacion": 1,
 		"moneda": "PES",
 		"punto_venta": 3,
-        "percepciones_iibb":        "0",
-        "percepciones_iibb_base":   "0",
-        "percepciones_iibb_alicuota": "0",
-        "percepciones_iva":         "0",
-        "percepciones_iva_base":    "0",
-        "percepciones_iva_alicuota": "0",
-        "exentos":                  "0", 
-        "impuestos_internos":       "0",
-        "impuestos_internos_base":   "0",
-        "impuestos_internos_alicuota": "0"
+        	"percepciones_iibb":        "0",
+        	"percepciones_iibb_base":   "0",
+        	"percepciones_iibb_alicuota": "0",
+        	"percepciones_iva":         "0",
+        	"percepciones_iva_base":    "0",
+        	"percepciones_iva_alicuota": "0",
+        	"exentos":                  "0", 
+        	"impuestos_internos":       "0",
+        	"impuestos_internos_base":   "0",
+        	"impuestos_internos_alicuota": "0"
 	},
 	"usertoken": "xxxx"
 }
@@ -114,9 +114,9 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
                          {"descripcion":     "EXENTO - AVENA INSTANTANEA x5 kg. al 21", 
                          "unidad_bulto":     "1", 
                          "lista_precios":     "Lista de precios API 3", 
-                         "codigo":     "16098", 
+                         "codigo":             "16098", 
                          "precio_unitario_sin_iva":     "100",
-                         "alicuota": "-1"
+                         "alicuota": "0"
                          },
                      "leyenda":     ""
                  } ,
@@ -129,7 +129,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
                          "lista_precios":     "Lista de precios API 3", 
                          "codigo":     "160398", 
                          "precio_unitario_sin_iva":     "10",
-                         "alicuota": "-1"
+                         "alicuota": "0"
                          },
                      "leyenda":     ""
                  }                  
@@ -208,7 +208,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
                          "lista_precios":     "Lista de precios API 3", 
                          "codigo":     "16098", 
                          "precio_unitario_sin_iva":     "100",
-                         "alicuota": "-1"
+                         "alicuota": "0"
                          },
                      "leyenda":     ""
                  } ,
@@ -221,7 +221,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
                          "lista_precios":     "Lista de precios API 3", 
                          "codigo":     "160398", 
                          "precio_unitario_sin_iva":     "10",
-                         "alicuota": "-1"
+                         "alicuota": "0"
                          },
                      "leyenda":     ""
                  }                  
