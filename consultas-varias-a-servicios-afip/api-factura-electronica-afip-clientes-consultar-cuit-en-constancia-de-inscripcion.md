@@ -126,3 +126,7 @@ condicion\_impositiva puede retornar los siguientes valores:
 * MONOTRIBUTO
 * EXENTO
 * RESPONSABLE INSCRIPTO
+
+{% hint style="info" %}
+Ten en cuenta que si el CUIT no se encuentra inscripto en ningún impuesto, nuestra plataforma te devolverá los datos que ésta encuentra en AFIP,  pero el campo "error"  en "S", ya que no podemos determinar que la condición frente al IVA.
+{% endhint %}
