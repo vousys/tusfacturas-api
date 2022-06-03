@@ -1,5 +1,9 @@
 # Changelog
 
+## 03 de junio de 2022
+
+Se agrega el tipo de documento: CDI y CUIL en las [tablas de referencia.](parametros/)
+
 ## 24 de mayo de 2022
 
 Se modificó el manejo de errores para los comprobantes asincrónicos (en lote o individual), ya que se empieza a notificar vía webhook, si corresponde.
