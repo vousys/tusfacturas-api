@@ -167,10 +167,7 @@ Es importante aclarar que **AFIP no requiere el envio del CBU ni ALIAS,** para l
             {   "regimen" : "Factura de Crédito Electrónica MiPyMEs (FCE)",
                  "datos"  : 
 
-                           [{
-                               "id"      :    2101,
-                               "valor"  :    "1234567890123456789011"
-                            },
+                           [ 
                             {
                               "id"      :    22,
                              "valor"  :    "S"
