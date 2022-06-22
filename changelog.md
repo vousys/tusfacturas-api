@@ -1,5 +1,9 @@
 # Changelog
 
+## 22 de junio de 2022
+
+Facturación: Se agrega en el response del bloque de "comprobante", la estructura de información para los micrositios, para los métodos de nuevas ventas y consultas.
+
 ## 03 de junio de 2022
 
 Se agrega el tipo de documento: CDI y CUIL en las [tablas de referencia.](parametros/)
