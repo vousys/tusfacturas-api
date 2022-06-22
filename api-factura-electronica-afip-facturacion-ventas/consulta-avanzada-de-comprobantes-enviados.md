@@ -224,6 +224,10 @@ Ej:
 			"nogravados": 0,
 			"total": 543.21,
 			"cae": " ",
+			"micrositios": {
+				"cliente": "url-del-micrositio",
+				"descarga":"url-del-micrositio"
+		     	},
 			"afip_codigo_barras" : " ",
 			"afip_qr": "",
 			"vencimiento_cae": "",
@@ -298,6 +302,10 @@ Ej:
 	        	"percepciones_iibb_base":   "0",
 	        	"percepciones_iibb_alicuota": "0",
 	        	"percepciones_iva":         "0",
+	  		 "micrositios": {
+				"cliente": "url-del-micrositio",
+				"descarga":"url-del-micrositio"
+		     	},
 	        	"percepciones_iva_base":    "0",
 	        	"percepciones_iva_alicuota": "0",
 	     		"exentos":                  "0",

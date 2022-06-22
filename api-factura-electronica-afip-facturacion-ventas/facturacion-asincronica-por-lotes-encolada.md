@@ -381,6 +381,10 @@ Ej: un lote con 3 requests, donde el primero no tiene una external\_reference de
 			"vencimiento_pago": "11\/04\/2022",
 			"comprobante_nro": "00010-00000000",
 			"comprobante_tipo": "FACTURA A",
+			"micrositios": {
+				"cliente": "url-del-micrositio",
+				"descarga":"url-del-micrositio"
+		     	},
 			"afip_codigo_barras": "",
 			"afip_qr": "",
 			"comprobante_pdf_url": ""
@@ -488,6 +492,10 @@ Ejemplo de un lote enviado, con 3 requests:
 			"comprobante_nro": "00010-00000000",
 			"comprobante_tipo": "FACTURA A",
 			"afip_codigo_barras": "",
+			"micrositios": {
+				"cliente": "url-del-micrositio",
+				"descarga":"url-del-micrositio"
+		     	},
 			"afip_qr": "",
 			"comprobante_pdf_url": ""
 		},
@@ -506,6 +514,10 @@ Ejemplo de un lote enviado, con 3 requests:
 			"vencimiento_pago": "18\/03\/2022",
 			"comprobante_nro": "00010-00000000",
 			"comprobante_tipo": "FACTURA B",
+			"micrositios": {
+				"cliente": "url-del-micrositio",
+				"descarga":"url-del-micrositio"
+		     	},
 			"afip_codigo_barras": "",
 			"afip_qr": "",
 			"comprobante_pdf_url": ""
@@ -525,6 +537,10 @@ Ejemplo de un lote enviado, con 3 requests:
 			"vencimiento_pago": "18\/03\/2022",
 			"comprobante_nro": "00010-00000000",
 			"comprobante_tipo": "FACTURA A",
+			"micrositios": {
+				"cliente": "url-del-micrositio",
+				"descarga":"url-del-micrositio"
+		     	},
 			"afip_codigo_barras": "",
 			"afip_qr": "",
 			"comprobante_pdf_url": ""

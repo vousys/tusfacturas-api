@@ -351,6 +351,10 @@ En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechaz
         "comprobante_tipo": "FACTURA A",
         "afip_codigo_barras": "111111111110010000368466696512853201811262 ",
         "comprobante_pdf_url": "https:\/\/www.dominio.com\/074.pdf",
+           "micrositios": {
+			"cliente": "url-del-micrositio",
+			"descarga":"url-del-micrositio"
+		     },
         "external_reference":"AAAA"
     }, {
         "error": "S",

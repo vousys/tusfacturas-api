@@ -109,6 +109,10 @@ Es importante  que descargues toda la información, junto con el pdf y lo almace
      "external_reference":  "ABC123",
      "comprobante_nro": "0000123",
      "comprobante_tipo": "NOTA DE DEBITO B",
+        "micrositios": {
+			"cliente": "url-del-micrositio",
+			"descarga":"url-del-micrositio"
+		     },
      "envio_x_mail_direcciones":"direccion1@sudominio.com,direccion2@sudominio.com"
   }  
 ```

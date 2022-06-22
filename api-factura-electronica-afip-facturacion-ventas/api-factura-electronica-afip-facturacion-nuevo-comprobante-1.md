@@ -194,6 +194,10 @@ Ejemplo :
 	"afip_qr": "",
 	"envio_x_mail": "N",
 	"envio_x_mail_direcciones": "",
+	"micrositios": {
+			"cliente": "",
+			"descarga":""
+		     },
 	"comprobante_pdf_url": ""
 }
 ```

@@ -257,6 +257,10 @@ Es importante que descargues toda la información, junto con el pdf y lo almacen
      "external_reference":  "ABC123",
      "comprobante_nro": "0000123",
      "comprobante_tipo": "NOTA DE DEBITO B",
+     "micrositios": {
+			"cliente": "url-del-micrositio",
+			"descarga":"url-del-micrositio"
+		     },
      "envio_x_mail_direcciones":"direccion1@sudominio.com,direccion2@sudominio.com"
   }  
 ```
@@ -297,6 +301,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * Las notas de débito y crédito requieren que envies obligatoriamente los comprobantes asociados (o su período asociado). [Conocé más desde aquí](./#estructura-de-comprobantes-asociados)
 * **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es tu responsabilidad corroborar y validar éstos datos.**
 * **AFIP recibe únicamente totales**, no el detalle de los items que facturás, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
+* Las URL de los micrositios solo te serán devueltas con datos, si los mismos se encuentran habilitados en tu cuenta. Para configurarlo, ingresá a nuestra plataforma web, menú > mi espacio de trabajo > mis micrositios.
 {% endhint %}
 
 #### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme"?
