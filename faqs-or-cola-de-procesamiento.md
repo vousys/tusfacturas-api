@@ -87,3 +87,11 @@ Si, para eso debés utilizar el método de:  [Eliminar comprobante encolado](api
 **Si creo un abono desde la API o desde la plataforma web, ¿Cada vez que se emita la factura, me notifica por webhook?**
 
 No. La plataforma en ese caso no te notifica por webhook. Si llegas a necesitar ésta funcionalidad, por favor contactanos.
+
+**Si se intentó emitir 100 veces un comprobante en cola, ¿En qué momento recibo un webhook con el error?**
+
+Recibís un webhook de error cuando se alcance el máximo de intentos definidos.&#x20;
+
+**¿Qué debo hacer si un comprobante superó el límite de reintentos?**
+
+Debes solucionar el inconveniente y probar de enviar a re-procesar ese comprobante, usando el método de ["Reenviar a procesar, comprobante encolado con error"](api-factura-electronica-afip-facturacion-ventas/reenviar-a-procesar-comprobante-encolado-con-error.md)
