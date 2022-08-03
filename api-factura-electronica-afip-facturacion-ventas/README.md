@@ -6,11 +6,11 @@ description: >-
 
 # Facturación
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md)
+Una vez configurada tu cuenta y creado tu CUIT+PDV en TusFacturasAPP, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md)
 
-### Modalidades de facturación
+### Modalidades de facturación online&#x20;
 
-#### En TusFacturasAPP, contamos con 4 modalidades para la emisión de comprobantes:
+#### En TusFacturasAPP, contamos con 4 modalidades para la emisión de comprobantes online:
 
 * **Facturas individuales instantáneas**: donde envías un solo request para ser procesado, y obtenes la respuesta al instante. [Conocé más sobre la facturación electrónica individual e instantánea, desde aquí](./#facturacion-instantanea-individual)
 * :new: **Facturas individuales en cola:** donde envías un solo request para ser procesado, y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md). Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
