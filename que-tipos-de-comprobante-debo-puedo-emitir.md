@@ -1,5 +1,7 @@
 # ¿Qué tipos de comprobante debo/puedo emitir?
 
+## Conocé qué tipos de comprobante debes/podes emitir según tu condición impositiva y la de tu cliente.
+
 TusFacturasAPP te permite emitir diferentes tipos de comprobantes.
 
 Conocé todos los tipos de comprobante disponibles, desde aquí: [https://developers.tusfacturas.app/tablas-de-referencia#tipos-de-comprobantes](https://developers.tusfacturas.app/tablas-de-referencia#tipos-de-comprobantes)

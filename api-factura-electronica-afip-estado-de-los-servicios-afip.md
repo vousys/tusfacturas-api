@@ -6,8 +6,12 @@ description: >-
 
 # Estado de los servicios AFIP
 
+## Consultá el estado de los servicios de facturación de AFIP
+
 {% hint style="info" %}
-Los servicios de AFIP se caen regularmente, es importante que siempre verifiques el estado de los servicios.
+Los servicios de AFIP se caen regularmente.
+
+Ten en cuenta que todos nuestros métodos controlan internamente el estado de los servicios AFIP, y si alguno no se encuentra operativo, automáticamente vas a recibir la respuesta correspondiente en cada request que envíes, junto con su mensaje de error.
 {% endhint %}
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/estado_servicios/alertas" method="post" summary="Consulta de estados de los servicios" %}
@@ -72,7 +76,3 @@ Si existe alguna alerta activada porque los servicios de AFIP no se encuentren f
 	"rta": "ERROR"
 }
 ```
-
-{% hint style="info" %}
-Ten en cuenta que todos nuestros métodos controlan internamente el estado de los servicios y si alguno no se encuentra operativo, automáticamente vas a recibir la respuesta correspondiente en cada request que envíes, junto con su mensaje de error..
-{% endhint %}

@@ -1,5 +1,7 @@
 # Consultas varias a servicios AFIP
 
+## Servicios API de consulta AFIP&#x20;
+
 Aquí encontrarás diferentes servicios que puedes consultar, que son provistos por AFIP, como ser:
 
 * [Consultar las cotizaciones del dólar y otras monedas extranjeras](cotizacion-monedas-afip.md).

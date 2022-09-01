@@ -6,6 +6,8 @@ description: >-
 
 # FAQs | cola de procesamiento
 
+## Preguntas frecuentes sobre el servicio API de facturación en cola de procesamiento
+
 #### Cuándo y qué se emite
 
 La cola de procesamiento intentará emitir en el transcurso del día , todos aquellos comprobantes que se encuentren:

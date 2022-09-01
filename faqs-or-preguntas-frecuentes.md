@@ -1,4 +1,10 @@
+---
+description: Las respuestas a las preguntas más frecuentes
+---
+
 # FAQs | Preguntas generales
+
+## Preguntas frecuentes sobre el servicio API
 
 **Si no quiero que mis clientes ingresen a TusFacturasAPP, ¿Se puede utilizar igual?**
 
