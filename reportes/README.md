@@ -1,7 +1,5 @@
 # Reportes
 
-## API de facturación electrónica: Reportes&#x20;
-
 Utilizá la API de facturación electrónica de TusFacturasAPP, para solicitar algunos reportes desde tu plataforma.
 
 Podrás solicitar el reporte de :&#x20;
