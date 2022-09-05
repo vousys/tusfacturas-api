@@ -1,4 +1,12 @@
+---
+description: >-
+  Según tu condición frente al IVA y la de tu cliente, se determina en
+  Argentina, que tipos de comprobantes podes emitir.
+---
+
 # ¿Qué tipos de comprobante debo/puedo emitir?
+
+## Conocé qué tipos de comprobante debes/podes emitir según tu condición impositiva y la de tu cliente.
 
 TusFacturasAPP te permite emitir diferentes tipos de comprobantes.
 

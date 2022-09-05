@@ -1,3 +1,9 @@
+---
+description: >-
+  Conocé cómo usando el servicio de facturación electrónica de TusFacturasAPP
+  podes obtener información de los servicios de consulta de AFIP.
+---
+
 # Consultas varias a servicios AFIP
 
 ## Servicios API de consulta AFIP&#x20;

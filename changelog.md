@@ -1,3 +1,7 @@
+---
+description: Conocé los últimos cambios realizados sobre nuestra plataforma API.
+---
+
 # Changelog
 
 ## 22 de junio de 2022
