@@ -32,3 +32,16 @@ Automáticamente se activan las alertas y recibís un error, porque impedimos la
 **Estoy integrando desde reactjs y obtengo un error de CORS.**
 
 En ese caso, te sugerimos que tu frontend se comunique con tu backend y desde el backend realices la petición a nuestra API. También te sugerimos usar axios para el fetch
+
+**¿AFIP me permite facturar con cualquier fecha?**
+
+No. AFIP no te permite facturar con cualquier fecha.  Para CUITs cuyas actividades estén indicadas como  servicios, AFIP permitirá facturar con una anterioridad de hasta 10 días. Para CUITs cuyas actividades estén relacionadas a la comercialización de bienes, el plazo es de 5 días hacia atrás. Esto ademas aplica, contemplando que no hayas emitido previamente algun comprobante con fecha posterior a la que queres emitir.
+
+Ej:&#x20;
+
+Si  hoy es 20/10/2022 y queres emitir una factura con fecha 01/10/2022 AFIP te lo va a rechazar.
+
+Si  hoy es 20/10/2022 y queres emitir una factura con fecha 18/10/2022, pero ya emitiste una con fecha 10/10/2022, AFIP te lo va a rechazar.
+
+
+
