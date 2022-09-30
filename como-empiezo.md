@@ -8,7 +8,7 @@ description: El paso a paso para comenzar a integrar TusFacturasAPP, con tu plat
 
 Para probar la integración con la API, debes [crear una cuenta](https://www.tusfacturas.app/registrarme-factura-electronica.html) en nuestra plataforma [desde aquí](https://www.tusfacturas.app/registrarme-factura-electronica.html).
 
-Luego de creada la cuenta y por cuestiones de seguridad, contáctanos a hola@tusfacturas.app, **desde la casilla con la cual te registraste** y te brindamos el plan API DEV, para que puedas emitir hasta 150 comprobantes _que no son de curso legal_, por 1 mes y sin costo (solo para nuevas cuentas y por única vez). Una vez vencido tu período de prueba, deberás contratar algún [plan API](https://www.tusfacturas.com.ar/tarifas-factura-electronica.html) de los que tenemos disponibles [aquí](https://www.tusfacturas.com.ar/tarifas-factura-electronica.html).
+Luego de creada la cuenta y por cuestiones de seguridad, contáctanos a hola@tusfacturas.app, **desde la casilla con la cual te registraste** y te brindamos el plan API DEV, para que puedas emitir hasta 150 comprobantes _que no son de curso legal_, por 1 mes y sin costo (solo para nuevas cuentas y por única vez). Una vez vencido tu período de prueba, deberás contratar algún [plan API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html) de los que tenemos disponibles [aquí.](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
 
 Por cuestiones legales, nuestra plataforma **no cuenta con un ambiente de testing**, por lo que no podrás enlazar con AFIP tu CUIT, mientras realizas las pruebas, evitando problemas con el fisco, dado que los comprobantes emitidos no pueden ser modificados ni eliminados.
 
