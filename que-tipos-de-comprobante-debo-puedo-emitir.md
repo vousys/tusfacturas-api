@@ -10,7 +10,7 @@ description: >-
 
 TusFacturasAPP te permite emitir diferentes tipos de comprobantes.
 
-Conocé todos los tipos de comprobante disponibles, desde aquí: [https://developers.tusfacturas.app/tablas-de-referencia#tipos-de-comprobantes](https://developers.tusfacturas.app/tablas-de-referencia#tipos-de-comprobantes)
+Conocé todos los tipos de comprobante disponibles, [desde aquí](parametros/tablas-de-referencia.md).
 
 Para más información, te dejamos el link oficial de AFIP: [https://www.afip.gob.ar/informacionVisual/documentos/facturacionExp/Tipos-de-Facturas-a-emitir.pdf](https://www.afip.gob.ar/informacionVisual/documentos/facturacionExp/Tipos-de-Facturas-a-emitir.pdf)
 
