@@ -21,9 +21,9 @@ A partir del 01-07-2021, todo comprobante A que se emita a un monotributista deb
 
 ## Ejemplo de: NOTA DE CRÉDITO A  - detallando comprobantes.
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que [detalla los comprobantes asociados.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#envio-de-comprobantes-asociados-detallados)
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que detalla los comprobantes asociados.
 
-Podés consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
+Podés consultar la documentación con referencia a cada campo, [desde aquí](./).
 
 ```
 { "usertoken" :  "xxxxx", 
@@ -115,7 +115,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)
 
-Podés consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
+Podés consultar la documentación con referencia a cada campo, [desde aquí.](./)
 
 ```
 { "usertoken" :  "xxxxx", 

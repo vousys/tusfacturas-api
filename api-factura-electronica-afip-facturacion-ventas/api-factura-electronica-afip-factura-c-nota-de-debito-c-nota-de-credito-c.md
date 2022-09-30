@@ -13,7 +13,7 @@ No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aqu
 
 
 
-A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
+A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
 
 ```
 {
