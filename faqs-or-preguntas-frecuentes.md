@@ -43,5 +43,9 @@ Si  hoy es 20/10/2022 y queres emitir una factura con fecha 01/10/2022 AFIP te l
 
 Si  hoy es 20/10/2022 y queres emitir una factura con fecha 18/10/2022, pero ya emitiste una con fecha 10/10/2022, AFIP te lo va a rechazar.
 
+**¿Puedo eliminar o modificar un comprobante que impactó en AFIP?**
+
+No. Aquellos comprobantes que impactaron en AFIP sólo pueden ser anulados contablemente, generando una nota de crédito.
+
 
 

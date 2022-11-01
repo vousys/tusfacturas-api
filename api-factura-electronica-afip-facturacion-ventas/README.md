@@ -302,6 +302,8 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es tu responsabilidad corroborar y validar éstos datos.**
 * **AFIP recibe únicamente totales**, no el detalle de los items que facturás, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
 * Las URL de los micrositios solo te serán devueltas con datos, si los mismos se encuentran habilitados en tu cuenta. Para configurarlo, ingresá a nuestra plataforma web, menú > mi espacio de trabajo > mis micrositios.
+* **Aquellos comprobantes que hayan impactado en AFIP, no podrán ser eliminados ni modificados, sólo pueden ser anulados contablemente, generando una nota de crédito.**
+* Ningún comprobante puede ser modificado una vez emitido.
 {% endhint %}
 
 #### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme"?
