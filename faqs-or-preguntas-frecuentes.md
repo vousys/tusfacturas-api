@@ -47,5 +47,17 @@ Si  hoy es 20/10/2022 y queres emitir una factura con fecha 18/10/2022, pero ya 
 
 No. Aquellos comprobantes que impactaron en AFIP sólo pueden ser anulados contablemente, generando una nota de crédito.
 
+**¿Como es la numeración de los comprobantes?**
+
+La numeración de los comprobantes es secuencial por: Tipo de comprobante y punto de venta; Con lo cual si vos emitiste la Factura A 00001-0000123, la siguiente seria: Factura A 00001-0000124. Sin embargo, podes tener el punto de venta 2 y a su vez emitir también la Factura A 00002-0000123 y a su vez, podes emitir la factura B 00001-0000123
+
+**¿Los PDFs que se generan de la factura, quedan disponibles para mas adelante en algun CDN o los tengo que descargar y guardar yo?**
+
+Cada vez que se emite un comprobante, la API te devuelve la URL para que descargues el PDF. Siempre recomendamos descargarlo, ya que si tu suscripción no se encuentra activa y vigente, no lo podras recuperar ni descargar.
+
+**¿Nuestro sistema va a ir sumando clientes paulatinamente, que tipo de suscripción me conviene contratar?**&#x20;
+
+Vos podés contratar un plan con X cuits/PDV y comprobantes y manejar a todo ahí, sin embargo nos han contado clientes que eso no les sirvió ya que tenían un plan grande contratado y uno de sus clientes incremento su capacidad, lo que los llevo a tener que contratar un plan aún superior por un solo cliente y los costos ya no cerraban, con lo cual en las próximas integraciones que hicieron, cada cliente abonara su propia suscripción y ellos les brindaban por medio de un fee el uso del servicio dentro de su plataforma. Son cosas para que tengas en cuenta y analices la mejor estrategia para tu empresa, ya que para TusFacturasAPP es indiferente como lo manejes.
+
 
 
