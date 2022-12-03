@@ -21,7 +21,7 @@ Tenés alguna duda del servicio? checkea las [API FAQs](../faqs-or-preguntas-fre
 Al utilizar éste servicio, los comprobantes que emitas, impactarán de inmediato en nuestra plataforma y obtendrás la respuesta al instante, ya que utiliza el servicio de facturación por lotes de AFIP (siempre y cuando los servicios de dicho organismo se encuentren funcionando).
 
 {% hint style="danger" %}
-Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰. Para evitar éste tipo de problemas, te sugerimos utilizar la [facturación por lotes asincrónica (encolada)](api-de-facturacion-asincronica-por-lotes-encolada.md)
+Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰. Para evitar éste tipo de problemas, te sugerimos utilizar la [facturación por lotes asincrónica (encolada)](facturacion-asincronica-por-lotes-encolada.md)
 {% endhint %}
 
 Es necesario leer primero, la documentación de "[Facturación](./)", para conocer cómo debe componerse cada request que envíes.
@@ -103,7 +103,7 @@ Tus credenciales de acceso
 {% hint style="info" %}
 **Datos a tener en cuenta**
 
-* **La cantidad máxima de requests (por lote) debe ser de 20**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y según funcionen los servicios de AFIP, puedes obtener una respuesta de timeout (524). En caso de recibir un 524, ten en cuenta que los comprobantes que enviaste, seguirán siendo procesados en background, pero no recibirás la respuesta.  Te sugerimos utilizar la modalidad de [Facturación encolada por lotes](api-de-facturacion-asincronica-por-lotes-encolada.md) para evitar éste tipo de errores.
+* **La cantidad máxima de requests (por lote) debe ser de 20**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y según funcionen los servicios de AFIP, puedes obtener una respuesta de timeout (524). En caso de recibir un 524, ten en cuenta que los comprobantes que enviaste, seguirán siendo procesados en background, pero no recibirás la respuesta.  Te sugerimos utilizar la modalidad de [Facturación encolada por lotes](facturacion-asincronica-por-lotes-encolada.md) para evitar éste tipo de errores.
 * Todos los requests de ésta llamada, deben ser del **mismo tipo de comprobante**. Ej: todos deben ser FACTURA A
 * Los request deben venir **ordenados por número ascendente**, de la misma manera que si los enviarás a procesar uno por uno.
 * **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md) **ni de** [**Factura de crédito electrónica (FEC)**](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md) **en ésta modalidad.**
