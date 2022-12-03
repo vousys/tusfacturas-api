@@ -15,7 +15,7 @@ Una vez configurada tu cuenta y creado tu CUIT+PDV en TusFacturasAPP, podrás co
 * **Facturas individuales instantáneas**: donde envías un solo request para ser procesado, y obtenes la respuesta al instante. [Conocé más sobre la facturación electrónica individual e instantánea, desde aquí](./#facturacion-instantanea-individual)
 * :new: **Facturas individuales en cola:** donde envías un solo request para ser procesado, y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md). Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
 * **Lote de facturas instantáneas**: donde envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante. Conocé más sobre la [facturación electrónica en lotes, aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
-* :new: **Lote de facturas asincrónico en cola:** donde envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md). Conocé más sobre la [facturación electrónica por lotes en cola](facturacion-asincronica-por-lotes-encolada.md), aquí.
+* :new: **Lote de facturas asincrónico en cola:** donde envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md). Conocé más sobre la [facturación electrónica por lotes en cola](api-de-facturacion-asincronica-por-lotes-encolada.md), aquí.
 
 ## ¿Qué puedo facturar?
 

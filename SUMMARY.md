@@ -11,7 +11,7 @@
   * [Facturación instantánea e individual](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
   * [Facturación asincrónica e  individual (encolada)](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
   * [Facturación instantánea por Lotes](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-api-facturacion-por-lotes.md)
-  * [Facturación asincrónica por Lotes (encolada)](api-factura-electronica-afip-facturacion-ventas/facturacion-asincronica-por-lotes-encolada.md)
+  * [API de Facturación asincrónica por Lotes (encolada)](api-factura-electronica-afip-facturacion-ventas/api-de-facturacion-asincronica-por-lotes-encolada.md)
   * [Ejemplos de comprobantes tipo "A"](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
   * [Ejemplos de comprobantes tipo "B"](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)
   * [Ejemplos de comprobantes tipo "C"](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)

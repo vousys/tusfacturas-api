@@ -36,7 +36,7 @@ Se incluye la documentación de ["Webhooks (notificaciones)](webhooks-notificaci
 
 ## 21 de Marzo de 2022
 
-Se incluye la documentación de la ["Facturación por lotes asincrónica (encolada)](api-factura-electronica-afip-facturacion-ventas/facturacion-asincronica-por-lotes-encolada.md)
+Se incluye la documentación de la ["Facturación por lotes asincrónica (encolada)](api-factura-electronica-afip-facturacion-ventas/api-de-facturacion-asincronica-por-lotes-encolada.md)
 
 ## 17 de marzo de 2022
 
