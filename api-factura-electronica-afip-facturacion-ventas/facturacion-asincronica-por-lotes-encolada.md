@@ -9,25 +9,25 @@ description: >-
 
 Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) si es la primera vez que utilizas nuestros servicios
 
-## ¿Cómo funciona el modo asincrónico, de facturación por lote?
+## ¿Cómo funciona el modo asincrónico de facturación API por lote?
 
 ![](../.gitbook/assets/image.png)
 
-## ¿Qué puedo facturar por lote?
+## ¿Qué puedo facturar con la API por lote asincrónica?
 
-Podes enviar a facturar comprobantes de tipo A,B,C, M y comprobantes de tipo Factura de crédito electrónica MiPyme; ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos. **No podrás enviar comprobantes de tipo E  en ésta modalidad.**
+Podes enviar a facturar comprobantes de tipo A,B,C, M y comprobantes de tipo Factura de crédito electrónica MiPyme; ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos, pero **no podrás enviar comprobantes de tipo E  en ésta modalidad.**
 
 &#x20;¿No sabes qué [tipo de comprobante debes emitir](../que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 
-Tenés alguna duda del servicio? checkea las [API FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los canales de atención que tenemos disponibles en la plataforma web [www.tusfacturas.app](https://www.tusfacturas.app)
+Tenés alguna duda del servicio? chequea las [API FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contáctanos por los canales de atención que tenemos disponibles en la plataforma web [www.tusfacturas.app](https://www.tusfacturas.app)
 
 ## **Facturación asincrónica por Lote**
 
-Al utilizar éste servicio, los comprobantes que emitas, quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
+Al utilizar éste servicio los comprobantes que envíes quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
 
 
 
-Te sugerimos leer primero:&#x20;
+Antes de comenzar, te sugerimos leer :&#x20;
 
 1. La documentación de "[Facturación](./)", para conocer cómo debe componerse el request que envíes
 2. La documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
@@ -105,19 +105,19 @@ Tus credenciales de acceso
 
 #### Estructura del bloque: "requests"
 
-"requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](./)".
+"requests debe ser un array (en JSON) que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](./)".
 
 {% hint style="info" %}
 ### Datos a tener en cuenta:
 
-* **La cantidad máxima de requests por lote es de 100 comprobantes**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y  puedes llegar a obtener una respuesta de timeout (524). En caso de recibir un 524, los requests que enviaste, seguirán siendo procesados en background, y recibirás un hook con la respuesta de éxito o error, de su encolamiento. &#x20;
-* Puedes enviar en un mismo lote, comprobantes de **diferente tipo de comprobante**.   Ej: Puedes enviar en el mismo lote Facturas A Y FACTURAS  B.
+* **La cantidad máxima de requests por lote es de 100 comprobantes**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y  podes llegar a obtener una respuesta de timeout (524). En caso de recibir un 524, los requests que enviaste, seguirán siendo procesados en background, y recibirás un hook con la respuesta de éxito o error de su encolamiento. &#x20;
+* Podes enviar en un mismo lote comprobantes de **diferente tipo de comprobante**.   Ej: Podes enviar en el mismo lote Facturas A Y FACTURAS  B.
 * **La fecha que envíes en cada comprobante determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy. __&#x20;
 * Los request deben venir **con el campo número en cero (0)**.
 * **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
 * **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](../mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los lotes y serán rechazados de manera instantánea.
 * **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)  **en ésta modalidad.**
-* **Al momento del envío del lote, la suscripción de tu espacio de trabajo se encuentra vigente, activa y posee cupo disponible**, para emitir la cantidad de comprobante que estás enviando en el lote.
+* **Al momento del envío del lote, la suscripción de tu espacio de trabajo debe encontrarse  vigente, activa y con cupo disponible** para emitir la cantidad de comprobante que estás enviando en el lote.
 * Si se detecta al menos un (1) error de validación de datos, el lote no se mandará a procesar y obtendrás la respuesta al instante, no por un webhook.
 
 
@@ -307,7 +307,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 
 ### **¿Que te retornaremos ?**
 
-#### :red\_circle: Error de validación de los datos enviados en el lote:
+#### :red\_circle: ERROR: Error de validación de los datos enviados en el lote:
 
 Si enviás un lote que no cumple con los requisitos básicos, detallados a continuación:&#x20;
 
@@ -465,11 +465,11 @@ y a su vez, enviarte los siguientes webhooks:
 
 
 
-#### :green\_circle: Cuando el lote se ha aceptado para su procesamiento:
+#### :green\_circle: ACEPTADO: Cuando el lote se ha aceptado para su procesamiento:
 
-En caso que no se detecten errores tempranos, en la etapa de validación de los datos enviados en el lote, obtendrás la respuesta a cada request enviado, en su mismo orden y luego de enviarte ésta información, recibirás un [webhook](../webhooks-notificaciones.md) por cada request enviado, para informarte que se ha encolado, como se explica a continuación.
+En caso que no se detecten errores tempranos en la etapa de validación de los datos enviados en el lote, obtendrás la respuesta a cada request enviado, en su mismo orden y luego de enviarte ésta información, recibirás un [webhook](../webhooks-notificaciones.md) por cada request enviado, para informarte que se ha encolado, como se explica a continuación.
 
-Ejemplo de un lote enviado, con 3 requests:
+Ejemplo de un lote enviado con 3 requests:
 
 ```
 {

@@ -25,7 +25,7 @@ Te sugerimos leer primero:&#x20;
 
 ### ¿Cómo funciona el modo asincrónico, de facturación individual?
 
-![](../.gitbook/assets/image.png)
+Tu servidor envia el request a TusFacturasAPP y queda en cola de procesamiento. A medida que se va procesando, te va enviando un webhook con la respuesta de ese procesamiento (puede ser éxito o error)
 
 
 
@@ -35,9 +35,9 @@ Te sugerimos leer primero:&#x20;
 * &#x20;**La fecha que envíes en el comprobante, determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy.  Te sugerimos leer el apartado de "[FAQs sobre la cola de procesamiento](../faqs-or-cola-de-procesamiento.md)". __&#x20;
 * El request, deben venir **con el campo número en cero (0)**.
 * **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
-* **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](../mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los lotes y serán rechazados de manera instantánea.
+* **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](../mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los requests y serán rechazados de manera instantánea.
 * **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)  **en ésta modalidad.**
-* **Al momento del envío del request, la suscripción de tu espacio de trabajo se encuentre vigente, activa y posea cupo disponible**, para emitir el comprobante.
+* **Al momento del envío del request, la suscripción de tu espacio de trabajo debe encontrarse vigente, activa y con cupo de facturación disponible** para emitir el comprobante (aunque no se emita hoy).
 * Si se detecta al menos un (1) error de validación de datos,  no se mandará a procesar y obtendrás la respuesta al instante, no por un webhook.
 {% endhint %}
 
@@ -87,7 +87,7 @@ Estructura de "Cliente", según se informa en el apartado de
 
 ### **¿Que te retornaremos ?**
 
-#### :red\_circle: Error de validación, de los datos enviados :
+#### :red\_circle: ERROR: Error de validación de los datos enviados :
 
 Si el request enviado, posee errores en la validación o formato de los campos enviados, pero  cumple con los siguientes requisitos básicos:
 
@@ -168,7 +168,7 @@ En cambio, si tu request **no cumple con los requisitos básicos** previamente m
 
 
 
-#### :green\_circle: Cuando el request se ha aceptado para su procesamiento:
+#### :green\_circle: ACEPTADO: Cuando el request se ha aceptado para su procesamiento:
 
 En caso que no se detecten errores tempranos, en la etapa de validación de los datos enviados, obtendrás la siguiente respuesta de manera instantánea y recibirás un [webhook](../webhooks-notificaciones.md)  para informarte que se ha encolado, como se explica a continuación.
 
@@ -210,7 +210,7 @@ Existen 3 tipos de evento posible, para el recurso de facturación que podes rec
 
 Te sugerimos conocer más sobre los webhooks, en la documentación de [Webhooks (notificaciones)](../webhooks-notificaciones.md).
 
-### :purple\_circle: Hook de "encolado"  &#x20;
+### :purple\_circle:  Hook de "encolado"  &#x20;
 
 |   recurso   |  evento  |
 | :---------: | :------: |
