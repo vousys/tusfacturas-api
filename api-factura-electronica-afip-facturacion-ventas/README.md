@@ -19,7 +19,7 @@ Una vez configurada tu cuenta y creado tu CUIT+PDV en TusFacturasAPP, podrás co
 
 ## ¿Qué puedo facturar?
 
-Nuestro servicio API de facturación, te permite enviar a facturar cualquier tipo de comprobante A,B,C,E, M, comprobantes de tipo " Factura de crédito MiPyme", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
+Nuestro servicio API de facturación, te permite enviar a facturar cualquier tipo de comprobante [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M, comprobantes de tipo " Factura de crédito MiPyme", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
 
 &#x20;¿No sabes qué [tipo de comprobante debes emitir](../que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 
