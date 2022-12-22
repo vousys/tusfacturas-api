@@ -6,7 +6,7 @@ description: >-
 
 # Parámetros:  Consulta de los CUIT País en AFIP
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/tablas_referencia/cuit_pais" method="post" summary="Consulta de cuit país" %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="v2/tablas_referencia/cuit_pais" method="post" summary="Consulta de cuit país" %}
 {% swagger-description %}
 
 {% endswagger-description %}

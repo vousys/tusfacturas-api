@@ -6,7 +6,7 @@ description: >-
 
 # Parámetros: Consulta de Países en AFIP
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="v2/tablas_referencia/paises" method="post" summary="Consulta de paises " %}
+{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/tablas_referencia/paises" method="post" summary="Consulta de paises " %}
 {% swagger-description %}
 
 {% endswagger-description %}
