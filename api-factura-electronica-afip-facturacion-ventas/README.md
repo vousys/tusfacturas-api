@@ -388,24 +388,24 @@ comprobante: {
 
 #### Información de los campos a enviar:
 
-| **`documento_tipo`**  | <p>Valores Permitidos: <strong>CUIT , DNI, PASAPORTE, OTRO</strong><br><strong>Ejemplo: DNI</strong></p>                                                                                                                                                                                            |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `documento_nro`       | <p>Campo numérico, sin puntos ni guiones.</p><p>Para casos de clientes del exterior, que posean <strong>pasaporte</strong>, ten en cuenta que AFIP solo permite el envío de números. Longitud máxima: 11 digitos.<br><strong>Ejemplo: 30111222334</strong></p>                                      |
-| `razon_social`        | <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Pirulo S.A</strong></p>                                                                                                                                                                                                  |
-| `email`               | <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: tusfacturas@vousys.com</strong></p>                                                                                                                                                                                      |
-| `domicilio`           | <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Av. Santa Fe 123</strong></p>                                                                                                                                                                                            |
-| `provincia`           | <p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.<br><strong>Ejemplo: 2</strong></p>                                                                                                                                                   |
-| `envia_por_mail`      | <p>Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: <strong>S , N</strong><br><strong>Ejemplo: S</strong></p>                                                                                                                                                             |
-| `condicion_pago`      | <p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#condiciones-de-venta">tabla de referencia</a>.</p><ul><li>se debe enviar obligatoriamente el campo <strong>condicion_pago_otra</strong> "con la descripción de la misma.</li></ul><p><br><strong>Ejemplo: 211 .</strong></p> |
-| condicion\_pago\_otra | Campo alfanumerico. Longitud máxima 100 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                                                                                                                             |
-| `condicion_iva`       | <p>Campo numérico que indica la condicion de iva, según <a href="../parametros/tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>. Valores Permitidos: <strong>CF, RI, M, E</strong><br><strong>Ejemplo: RI</strong></p>                          |
-| codigo                | Campo alfanumerico opcional. Longitud máxima 50 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                                                                                                                     |
+|  **`documento_tipo`** | REQUERIDO |                                                                                               <p>Valores Permitidos: <strong>CUIT , DNI, PASAPORTE, OTRO</strong><br><strong>Ejemplo: DNI</strong></p>                                                                                              |
+| :-------------------: | --------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|    `documento_nro`    | REQUERIDO |                                                                                                        <p>Campo numérico, sin puntos ni guiones.<br><strong>Ejemplo: 30111222334</strong></p>                                                                                                       |
+|     `razon_social`    | REQUERIDO |                                                                                                  <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Pirulo S.A</strong></p>                                                                                                 |
+|        `email`        | OPCIONAL  |                                                                                            <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: tusfacturas@vousys.com</strong></p>                                                                                           |
+|      `domicilio`      | REQUERIDO |                                                                                              <p>Campo alfanumérico. Longitud máxima 255 caracteres. <br><strong>Ejemplo: Av. Santa Fe 123</strong></p>                                                                                              |
+|      `provincia`      | REQUERIDO |                                                                          <p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.<br><strong>Ejemplo: 2</strong></p>                                                                          |
+|    `envia_por_mail`   | REQUERIDO |                                                                               <p>Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: <strong>S , N</strong><br><strong>Ejemplo: S</strong></p>                                                                               |
+|    `condicion_pago`   | REQUERIDO | <p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#condiciones-de-venta">tabla de referencia</a>.</p><ul><li>se debe enviar obligatoriamente el campo <strong>condicion_pago_otra</strong> "con la descripción de la misma.</li></ul><p><br><strong>Ejemplo: 211 .</strong></p> |
+| condicion\_pago\_otra | OPCIONAL  |                                                                                                       Campo alfanumérico. Longitud máxima 100 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                       |
+|    `condicion_iva`    | REQUERIDO |              <p>Campo numérico que indica la condición de iva, según <a href="../parametros/tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>. Valores Permitidos: <strong>CF, RI, M, E</strong><br><strong>Ejemplo: RI</strong></p>             |
+|         codigo        | OPCIONAL  |                                                                                                   Campo alfanumérico opcional. Longitud máxima 50 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                   |
 
 {% hint style="info" %}
 **Datos a tener en cuenta:**
 
 * Si el cliente ya existe en tu base de clientes de TusFacturasAPP, será actualizado con los nuevos datos, salvo los campos de: tipo de documento, número de documento y condición ante el IVA.
-* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
+* Si queres facturar un comprobante **a consumidor final, sin especificar su nombre y DNI**, debes enviar en el campo tipo y número de documento, lo siguiente:
 
 Nro de documento = "0"
 
@@ -414,6 +414,8 @@ Tipo de documento = "OTRO"
 En nombre, indicá lo que tu contador/a te recomiende.
 
 Tené en cuenta, que solo podrás facturar sin indicar el documento del comprador, hasta ciertos montos que AFIP actualiza regularmente. TusFacturasAPP, cuenta con un método que te permite obtener el monto actualizado. [Consultá la documentaión de los documento : los topes de venta a CF](https://developers.tusfacturas.app/api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final)
+
+* Para casos de clientes del exterior, que posean **pasaporte**, tené en cuenta que AFIP solo permite el envío de números.&#x20;
 {% endhint %}
 
 ###
@@ -473,13 +475,13 @@ comprobante: {
 
 Los campos que debes enviar son los siguientes:
 
-| `cantidad`                                                             | <p>Campo numérico con 2 decimales. Separador de decimales: punto.<br><strong>Ejemplo: 1.50</strong></p>                                                                          |
-| ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `afecta_stock`                                                         | <p>Campo alfanumérico de 1 posición. Valores posibles: "S" (si), "N" (no)<br><strong>Ejemplo: S</strong></p>                                                                     |
-| `producto`                                                             | Según estructura de producto que se detalla en el bloque siguiente.                                                                                                              |
-| `leyenda`                                                              | <p>Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.<br><strong>Ejemplo: Blanca, cepillada</strong></p>     |
-| <mark style="background-color:purple;">bonificacion\_porcentaje</mark> | Si se ha aplicado un porcentaje de descuento sobre éste concepto, debe ser enviado. Es un campo númerico con 2 decimales. El separador de decimales esperado es el punto. Ej: 25 |
-|                                                                        |                                                                                                                                                                                  |
+| `cantidad`                                                             | REQUERIDO |                                      <p>Campo numérico con 2 decimales. Separador de decimales: punto.<br><strong>Ejemplo: 1.50</strong></p>                                     |
+| ---------------------------------------------------------------------- | --------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `afecta_stock`                                                         | REQUERIDO |                                   <p>Campo alfanumérico de 1 posición. Valores posibles: "S" (si), "N" (no)<br><strong>Ejemplo: S</strong></p>                                   |
+| `producto`                                                             | REQUERIDO |                                                        Según estructura de producto que se detalla en el bloque siguiente.                                                       |
+| `leyenda`                                                              | OPCIONAL  |   <p>Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.<br><strong>Ejemplo: Blanca, cepillada</strong></p>   |
+| <mark style="background-color:purple;">bonificacion\_porcentaje</mark> | OPCIONAL  | Si se ha aplicado un porcentaje de descuento sobre éste concepto, debe ser enviado. Es un campo númerico con 2 decimales. El separador de decimales esperado es el punto. Ej: 25 |
+|                                                                        |           |                                                                                                                                                                                  |
 
 ###
 
@@ -515,23 +517,23 @@ Cada producto o servicio que factures, deberá ser enviado con la siguiente estr
 
 Los campos que debes enviar son los siguientes:
 
-| `descripcion`                 | <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Papa blanca</strong></p>                                                                                                                                                                                                                       |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `unidad_bulto`                | <p>Campo numérico entero requerido. Indica la cantidad de unidades que componen un bulto. Valor minimo esperado: 1<br><strong>Ejemplo: 12</strong></p>                                                                                                                                                                    |
-| `lista_precios`               | <p>Campo alfanumérico. Longitud máxima 255 caracteres. Nombre de la lista de precios a la cual pertenece. No saldrá impreso en la factura pero es requerido.<br><strong>Ejemplo: Verdura Orgánica</strong></p>                                                                                                            |
-| `codigo`                      | <p>Campo alfanumérico. Longitud máxima 10 caracteres. campo Opcional<br><strong>Ejemplo: ABX780</strong></p>                                                                                                                                                                                                              |
-| `precio_unitario_sin_iva`     | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                                                                                                                                                  |
-| `alicuota`                    | <p>Indica la alicuota de IVA con la que grava ese producto. Valores Permitidos:</p><p><strong>27, 21 , 10.5 , 0 , -1 ( para exento), -2 (no gravados)</strong><br><strong>Ejemplo: 10.5</strong></p>                                                                                                                      |
-| `unidad_medida`               | <p>Campo numérico que indica la unidad de medida, según<a href="../parametros/tablas-de-referencia.md#productos-unidades-de-medida-afip"> tabla de referencia Unidades de Medida(**).</a><br><strong>Ejemplo: 7</strong></p>                                                                                              |
-| `actualiza_precio`            | Indica si se actualiza el precio del producto y sus datos adicionales (como ser la unidad de medida, código, unidades por bulto y otros datos adicionales), tomando como valor de referencia,la información enviada en el comprobante. Campo Alfabético, de 1 caracter. Valores permitidos: S (si) N (no). **Ejemplo: S** |
-| `impuestos_internos_alicuota` | La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numerico, con 2 decimales. ej: 10.5                                                                                                                                                                                                  |
-|                               |                                                                                                                                                                                                                                                                                                                           |
+| `descripcion`                 | REQUERIDO |                                                                                                            <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Papa blanca</strong></p>                                                                                                            |
+| ----------------------------- | --------- | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `unidad_bulto`                | REQUERIDO |                                                                                   <p>Campo numérico entero requerido. Indica la cantidad de unidades que componen un bulto. Valor minimo esperado: 1<br><strong>Ejemplo: 12</strong></p>                                                                                  |
+| `lista_precios`               | REQUERIDO |                                                       <p>Campo alfanumérico. Longitud máxima 255 caracteres. Nombre de la lista de precios a la cual pertenece. No saldrá impreso en la factura pero es requerido.<br><strong>Ejemplo: Verdura Orgánica</strong></p>                                                      |
+| `codigo`                      | OPCIONAL  |                                                                                                        <p>Campo alfanumérico. Longitud máxima 10 caracteres. campo Opcional<br><strong>Ejemplo: ABX780</strong></p>                                                                                                       |
+| `precio_unitario_sin_iva`     | REQUERIDO |                                                                                                          <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                                         |
+| `alicuota`                    | REQUERIDO |                                                            <p>Indica la alícuota de IVA con la que grava ese producto. Valores Permitidos:</p><p><strong>27, 21 , 10.5 , 0 , -1 ( para exento), -2 (no gravados)</strong><br><strong>Ejemplo: 10.5</strong></p>                                                           |
+| `unidad_medida`               | REQUERIDO |                                                <p>Campo numérico que indica la unidad de medida, según<a href="../parametros/tablas-de-referencia.md#productos-unidades-de-medida-afip"> tabla de referencia Unidades de Medida(**).</a><br><strong>Ejemplo: 7</strong></p>                                               |
+| `actualiza_precio`            | REQUERIDO | Indica si se actualiza el precio del producto y sus datos adicionales (como ser la unidad de medida, código, unidades por bulto y otros datos adicionales), tomando como valor de referencia,la información enviada en el comprobante. Campo Alfabético, de 1 carácter. Valores permitidos: S (si) N (no). **Ejemplo: S** |
+| `impuestos_internos_alicuota` | OPCIONAL  |                                                                                                  La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numerico, con 2 decimales. ej: 10.5                                                                                                 |
+|                               |           |                                                                                                                                                                                                                                                                                                                           |
 
 ###
 
 ### Estructura de "Comprobantes Asociados"
 
-**Solo para las notas de débito y las notas de crédito**, AFIP requiere de manera obligatoria, que se envíe un bloque de información adicional con "comprobantes asociados".&#x20;
+**Éste bloque solo para las notas de débito y las notas de crédito.** En éste caso AFIP requiere de manera obligatoria, que se envíe un bloque de información adicional con "comprobantes asociados".&#x20;
 
 Los comprobantes asociados son aquellos comprobantes que éstas incluyendo para anular o afectar (según corresponda) y los datos a enviar, pertenecen al emisor del comprobante.
 
@@ -601,12 +603,12 @@ comprobante: {
 
 Información de los campos a enviar:
 
-| `tipo_comprobante`  | Campo alfabético. Valores esperados según [tabla de tipos de comprobante.](../parametros/tablas-de-referencia.md#tipos-de-comprobantes)                                |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `punto_venta`       | <p>Campo numérico entero. Longitud máxima 5 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                |
-| `numero`            | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p> |
-| `cuit`              | <p>Campo numérico, sin puntos ni guiones. Es el CUIT del emisor del comprobante asociado.<br><strong>Ejemplo: 1111111111</strong></p>                                  |
-| `comprobante_fecha` | La fecha del comprobante en formato dd/mm/aaaa. El día y el mes deben tener 2 dígitos.                                                                                 |
+| `tipo_comprobante`  | REQUERIDO |                            Campo alfabético. Valores esperados según [tabla de tipos de comprobante.](../parametros/tablas-de-referencia.md#tipos-de-comprobantes)                            |
+| ------------------- | --------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `punto_venta`       | REQUERIDO |                                                    <p>Campo numérico entero. Longitud máxima 5 digitos.<br><strong>Ejemplo: 3</strong></p>                                                    |
+| `numero`            | REQUERIDO |             <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>            |
+| `cuit`              | REQUERIDO | <p>Campo numérico, sin puntos ni guiones. Es el CUIT de quien emitió el comprobante asociado. Siempre debe ser el mismo de quien está facturando.<br><strong>Ejemplo: 1111111111</strong></p> |
+| `comprobante_fecha` | REQUERIDO |                                                     La fecha del comprobante en formato dd/mm/aaaa. El día y el mes deben tener 2 dígitos.                                                    |
 
 ### Comprobantes asociados: "por período"
 
@@ -669,9 +671,9 @@ comprobante: {
 
 ### &#x20;<a href="#estructuradepagos" id="estructuradepagos"></a>
 
-### Estructura de "pagos"  <a href="#estructuradepagos" id="estructuradepagos"></a>
+### Estructura de "pagos"   <a href="#estructuradepagos" id="estructuradepagos"></a>
 
-Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "**pagos**" con la estructura como se detalla a continuación.
+Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "**pagos**" con la estructura como se detalla a continuación. **Éste bloque es opcional.**
 
 Los pagos que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
 
@@ -685,17 +687,17 @@ Los pagos que informes, se usan solo para la gestión interna de nuestra platafo
 
 #### Información de los campos que componen el **bloque "pagos"**
 
-| nombre del campo | Requerido | Detalle                                                                                                  |
-| ---------------- | --------- | -------------------------------------------------------------------------------------------------------- |
-| formas\_pago     | SI        | array con multiples items, según estructura que se detalla a continuación                                |
-| total            | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p> |
+| nombre del campo |           | Detalle                                                                                                  |
+| ---------------- | :-------: | -------------------------------------------------------------------------------------------------------- |
+| formas\_pago     | REQUERIDO | array con multiples items, según estructura que se detalla a continuación                                |
+| total            | REQUERIDO | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p> |
 
 #### Información de los campos que componen el **array de  "formas\_pago"**
 
 | nombre del campo | Requerido | Detalle                                                                                                                                                                                 |
-| ---------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| descripcion      | SI        | El nombre del medio de pago elegido para cancelar el comprobante. 255 caracteres max. En caso que el medio de pago, no exista en nuestra plataforma, será dado de alta automáticamente. |
-| importe          | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                |
+| ---------------- | :-------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| descripcion      | REQUERIDO | El nombre del medio de pago elegido para cancelar el comprobante. 255 caracteres max. En caso que el medio de pago, no exista en nuestra plataforma, será dado de alta automáticamente. |
+| importe          | REQUERIDO | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                |
 
 #### Ejemplo del JSON a enviar.
 
