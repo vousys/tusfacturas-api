@@ -25,7 +25,9 @@ Te sugerimos leer primero:&#x20;
 
 ### ¿Cómo funciona el modo asincrónico, de facturación individual?
 
-Tu servidor envia el request a TusFacturasAPP y queda en cola de procesamiento. A medida que se va procesando, te va enviando un webhook con la respuesta de ese procesamiento (puede ser éxito o error)
+1. Tu servidor envía el request a TusFacturasAPP y éste queda en cola de procesamiento.&#x20;
+2. A medida que TF va procesando, te envían un webhook con la respuesta de ese procesamiento (puede ser de éxito o error)
+3. En caso que recibas una respuesta exitosa, deberás consultar el comprobante usando el método de [consulta avanzada por external\_reference](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados#como-realizar-una-consulta-avanzada-por-external-reference)
 
 
 
@@ -137,7 +139,7 @@ Ejemplo del hook que recibirás:
 }
 ```
 
-En cambio, si tu request **no cumple con los requisitos básicos** previamente mencionados, solo recibirás al instante la respuesta y no se te notificará por webhook.
+En cambio, si tu request **no cumple con los requisitos básicos** previamente mencionados, solo recibirás al instante la respuesta y no se te notificará por webhook (el comprobante no entrará en la cola de procesamiento)
 
 ```
 {
@@ -206,7 +208,7 @@ Ejemplo :
 
 ## Webhooks de respuesta&#x20;
 
-Existen 3 tipos de evento posible, para el recurso de facturación que podes recibir en ésta instancia:  "encolado", "emitido" y "error".&#x20;
+Existen 3 tipos de eventos posibles para el recurso de facturación que podes recibir en ésta instancia:  "encolado", "emitido" y "error".&#x20;
 
 Te sugerimos conocer más sobre los webhooks, en la documentación de [Webhooks (notificaciones)](../webhooks-notificaciones.md).
 
@@ -238,7 +240,7 @@ El hook de "encolado", te informa que el request ha sido aceptado para su proces
 | :---------: | :-----: |
 | facturacion | emitido |
 
-El hook de "emido", te informa que el request ha sido procesado con éxito y se ha emitido el comprobante correctamente.  Una vez recibido éste hook, podrás realizar una [consulta avanzada por external\_reference](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference),  para obtener los datos generados de éste comprobante.&#x20;
+El hook de "emido", te informa que el request ha sido procesado con éxito y se ha emitido el comprobante correctamente.  Una vez recibido éste hook, podrás realizar una [consulta avanzada por external\_reference](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference),  para obtener la información de éste comprobante generado.&#x20;
 
 El JSON que recibirás será similar al siguiente ejemplo:&#x20;
 
