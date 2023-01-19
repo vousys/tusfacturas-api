@@ -10,12 +10,39 @@ Una vez configurada tu cuenta y creado tu CUIT+PDV en TusFacturasAPP, podrás co
 
 ### Modalidades de facturación online&#x20;
 
-#### En TusFacturasAPP, contamos con 4 modalidades para la emisión de comprobantes online:
+En TusFacturasAPP, contamos con 4 modalidades para la emisión de comprobantes online; Sin embargo **te recomendamos** utilizar siempre que sea posible, los **métodos de facturación asincrónicos**, ya que los instantáneos dependen de cómo funcionen los servicios de AFIP en el momento de la emisión.
 
-* **Facturas individuales instantáneas**: donde envías un solo request para ser procesado, y obtenes la respuesta al instante. [Conocé más sobre la facturación electrónica individual e instantánea, desde aquí](./#facturacion-instantanea-individual)
-* :new: **Facturas individuales en cola:** donde envías un solo request para ser procesado, y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md). Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
-* **Lote de facturas instantáneas**: donde envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante. Conocé más sobre la [facturación electrónica en lotes, aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
-* :new: **Lote de facturas asincrónico en cola:** donde envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md). Conocé más sobre la [facturación electrónica por lotes en cola](facturacion-asincronica-por-lotes-encolada.md), aquí.
+#### **Facturas individuales instantáneas**
+
+Utilizando éste método vos envías un solo request para ser procesado, y obtenes la respuesta al instante (dependes del estado de los servicios de AFIP)
+
+[Conocé más sobre la facturación electrónica individual e instantánea, desde aquí](./#facturacion-instantanea-individual)
+
+****
+
+#### **Facturas individuales en cola       **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark>**  ** &#x20;
+
+En éste método envías un solo request para ser procesado, y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md).&#x20;
+
+Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
+
+****
+
+#### **Lote de facturas instantáneas**
+
+En éste método envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante.&#x20;
+
+Conocé más sobre la [facturación electrónica en lotes, aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
+
+****
+
+#### **Lote de facturas asincrónico en cola      **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark>**  ** &#x20;
+
+En éste método envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md).&#x20;
+
+Conocé más sobre la [facturación electrónica por lotes en cola](facturacion-asincronica-por-lotes-encolada.md), aquí.
+
+
 
 ## ¿Qué puedo facturar?
 
@@ -314,7 +341,7 @@ Hay ciertos casos donde AFIP exige que en lugar de emitir una factura A,B o C, l
 
 Te sugerimos comentar ésta modalidad, con tu cliente y asesorarte con su estudio impositivo al respecto.
 
-## ¿Cómo se armar un request?
+## ¿Cómo es la estructura de un request?
 
 ### Estructura del bloque: "Comprobante"
 
