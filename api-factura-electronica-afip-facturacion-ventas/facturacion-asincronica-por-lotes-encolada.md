@@ -116,9 +116,9 @@ Tus credenciales de acceso
 * Los request deben venir **con el campo número en cero (0)**.
 * **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
 * **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](../mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los lotes y serán rechazados de manera instantánea.
-* **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)  **en ésta modalidad ni programar abonos.**
+* **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)  **en ésta modalidad.**
 * **Al momento del envío del lote, la suscripción de tu espacio de trabajo debe encontrarse  vigente, activa y con cupo disponible** para emitir la cantidad de comprobante que estás enviando en el lote.
-* Si se detecta al menos un (1) error de validación de datos, el lote no se mandará a procesar y obtendrás la respuesta al instante, no por un webhook.
+* Si se detecta al menos un (1) error de validación de datos, el lote se procesará parcialmente. De aquellos comprobantes con error obtendrás la respuesta al instante, no por un webhook.
 
 
 {% endhint %}
@@ -128,7 +128,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 #### Ejemplo de JSON a enviar
 
 {% code title="JSON" %}
-```
+```json
 {
 	"apitoken": "xxxx",
 	"apikey": "xxxx",
@@ -175,12 +175,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 				"cotizacion": 1,
 				"moneda": "PES",
 				"punto_venta": 3,
-				"percepciones_iibb": "0",
-				"percepciones_iibb_base": "0",
-				"percepciones_iibb_alicuota": "0",
-				"percepciones_iva": "0",
-				"percepciones_iva_base": "0",
-				"percepciones_iva_alicuota": "0",
+				"tributos": [],
 				"exentos": "0",
 				"impuestos_internos": "0",
 				"impuestos_internos_base": "0",
@@ -230,12 +225,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 				"cotizacion": 1,
 				"moneda": "PES",
 				"punto_venta": 3,
-				"percepciones_iibb": "0",
-				"percepciones_iibb_base": "0",
-				"percepciones_iibb_alicuota": "0",
-				"percepciones_iva": "0",
-				"percepciones_iva_base": "0",
-				"percepciones_iva_alicuota": "0",
+				"tributos": [],
 				"exentos": "0",
 				"impuestos_internos": "0",
 				"impuestos_internos_base": "0",
@@ -287,12 +277,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 				"cotizacion": 1,
 				"moneda": "PES",
 				"punto_venta": 3,
-				"percepciones_iibb": "0",
-				"percepciones_iibb_base": "0",
-				"percepciones_iibb_alicuota": "0",
-				"percepciones_iva": "0",
-				"percepciones_iva_base": "0",
-				"percepciones_iva_alicuota": "0",
+				"tributos": [],
 				"exentos": "0",
 				"impuestos_internos": "0",
 				"impuestos_internos_base": "0",
@@ -301,7 +286,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 			}
 		}
 	]
-}
+}on
 ```
 {% endcode %}
 
@@ -309,7 +294,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 
 #### :red\_circle: ERROR: Error de validación de los datos enviados en el lote:
 
-Si enviás un lote que no cumple con los requisitos básicos, detallados a continuación:&#x20;
+Si enviasjsonsons un lote que no cumple con los requisitos básicos, detallados a continuación:&#x20;
 
 * La cantidad de requests supera el máximo permitido.
 * No has enviado ningún request a procesar en el bloque de "requests"
@@ -320,7 +305,7 @@ Ten en cuenta que el lote no se procesará, obtendrás la respuesta al instante 
 Ejemplo de una llamada con 300 requests, que superan el máximo establecido:
 
 {% code title="JSON" %}
-```
+```json
 {
 	"error": "S",
 	"errores": [
@@ -338,7 +323,7 @@ En cambio, si existen errores en algunos requests, el lote se procesará parcial
 
 Ej: un lote con 3 requests, donde el primero no tiene una external\_reference definida, puede arrojarte una respuesta al instante, de éste estilo:
 
-```
+```json
 {
 	"error": "S",
 	"errores": [
@@ -403,7 +388,7 @@ Ej: un lote con 3 requests, donde el primero no tiene una external\_reference de
 
 y a su vez, enviarte los siguientes webhooks:
 
-```
+```json
 {
 	"creado": "24\/05\/2022 16:46:39",
 	"evento": "encolado",
@@ -427,7 +412,7 @@ y a su vez, enviarte los siguientes webhooks:
 }
 ```
 
-```
+```json
 {
 	"creado": "24\/05\/2022 16:46:39",
 	"evento": "encolado",
@@ -439,7 +424,7 @@ y a su vez, enviarte los siguientes webhooks:
 }
 ```
 
-```
+```json
 {
 	"creado": "24\/05\/2022 16:47:06",
 	"evento": "error",
@@ -451,7 +436,7 @@ y a su vez, enviarte los siguientes webhooks:
 }
 ```
 
-```
+```json
 {
 	"creado": "24\/05\/2022 16:47:10",
 	"evento": "error",
@@ -471,7 +456,7 @@ En caso que no se detecten errores tempranos en la etapa de validación de los d
 
 Ejemplo de un lote enviado con 3 requests:
 
-```
+```json
 {
 	"error": "N",
 	"errores": [],
@@ -565,7 +550,7 @@ El hook de "encolado", te informa que el request ha sido aceptado para su proces
 
 &#x20;El JSON que recibirás será similar al siguiente ejemplo:
 
-```
+```json
 {
 	"creado": "18/03/2022 15:58:11",
 	"evento": "encolado",
@@ -587,7 +572,7 @@ El hook de "emido", te informa que el request ha sido procesado con éxito y se 
 
 El JSON que recibirás será similar al siguiente ejemplo:&#x20;
 
-```
+```json
 {
 	"creado": "18/03/2022 15:58:11",
 	"evento": "emitido",
@@ -609,7 +594,7 @@ El hook de "error", te informa que el request ha sido procesado, pero se han det
 
 El JSON que recibirás será similar al siguiente ejemplo y a diferencia de los anteriores, obtendrás la lista de errores detectados, dentro del campo "msg".
 
-```
+```json
 {
 	"creado": "18/03/2022 15:58:11",
 	"evento": "error",

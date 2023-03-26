@@ -16,7 +16,7 @@ Si, podes generar el PDF desde tu plataforma, ya que TusFacturasAPP te envia en 
 
 **¿Es muy tedioso de configurar?**
 
-No, nuestra plataforma se caracteriza por ser muy simple de usar. Para comenzar a facturar tan solo debes hacer los siguientes pasos:
+No. TusFacturasAPP se caracteriza por ser muy simple de usar y de configurar. Para comenzar a facturar tan solo debes hacer los siguientes pasos:
 
 1. Das de alta en nuestra plataforma el CUIT+ PDV, completando la info obligatoria.
 2. Haces el enlace con AFIP según el instructivo que se envía automáticamente desde la plataforma. Todo se hace online, no puede llevarte más de 10 mins, pero tenes que tener los datos de AFIP (CUIT y la clave fiscal), para poder entrar y hacerlo. TusFacturasAPP no gestiona ni administra datos de acceso al panel de AFIP de los clientes.
@@ -59,5 +59,5 @@ Cada vez que se emite un comprobante, la API te devuelve la URL para que descarg
 
 Vos podés contratar un plan con X cuits/PDV y comprobantes y manejar a todo ahí, sin embargo nos han contado clientes que eso no les sirvió ya que tenían un plan grande contratado y uno de sus clientes incremento su capacidad, lo que los llevo a tener que contratar un plan aún superior por un solo cliente y los costos ya no cerraban, con lo cual en las próximas integraciones que hicieron, cada cliente abonara su propia suscripción y ellos les brindaban por medio de un fee el uso del servicio dentro de su plataforma. Son cosas para que tengas en cuenta y analices la mejor estrategia para tu empresa, ya que para TusFacturasAPP es indiferente como lo manejes.
 
-
+###
 

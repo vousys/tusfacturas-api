@@ -4,6 +4,16 @@ description: Conocé los últimos cambios realizados sobre nuestra plataforma AP
 
 # Changelog
 
+## 26 de marzo de 2023
+
+Facturación: Se agrega el bloque "tributos" dentro de la estructuctura de "comprobante" y el atributo "rg5329" al bloque de productos y clientes. Se eliminan los siguientes atributos de un comprobante:  percepciones\_iibb, percepciones\_iibb\_base, percepciones\_iibb\_alicuota, percepciones\_iibb2, percepciones\_iibb2\_base, percepciones\_iibb2\_alicuota, percepciones\_iva, percepciones\_iva\_base, percepciones\_iva\_alicuota.
+
+Se habilita el envió de hasta un máximo de 6 percepciones de IVA y/o Ingresos brutos.
+
+Se adecua la plataforma para la entrada en vigencia de la [RG5329.](faqs-or-rg5329.md)
+
+
+
 ## 22 de junio de 2022
 
 Facturación: Se agrega en el response del bloque de "comprobante", la estructura de información para los micrositios, para los métodos de nuevas ventas y consultas.

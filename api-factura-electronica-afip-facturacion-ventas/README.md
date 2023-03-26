@@ -46,7 +46,7 @@ Conocé más sobre la [facturación electrónica por lotes en cola](facturacion-
 
 ## ¿Qué puedo facturar?
 
-Nuestro servicio API de facturación, te permite enviar a facturar cualquier tipo de comprobante [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M, comprobantes de tipo " Factura de crédito MiPyme", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
+Nuestro servicio API de facturación electrónica, te permite enviar a facturar cualquier tipo de comprobante [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M, comprobantes de tipo "Factura de crédito MiPyme", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
 
 &#x20;¿No sabes qué [tipo de comprobante debes emitir](../que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 
@@ -112,151 +112,176 @@ Estructura de "Cliente", según se informa a continuación
 
 ####
 
-#### Ejemplo de JSON generico, para generar un comprobante.
+#### Ejemplo de JSON generico <mark style="color:purple;">completo con todas las posibles opciones</mark>, para generar un comprobante.
 
-```
+Tené en cuenta que según el tipo de comprobante que emitas, pueden variar los bloques que debes enviar.
+
+__
+
+```json
 {
-"usertoken" :  "xxxxxx",
-"apikey"    :  "xxxx",
-"apitoken"  :  "xxxxxx",
-"cliente"   :
-                {   "documento_tipo":       "DNI",
-                    "documento_nro":        "1292963535",
-                    "razon_social":         "Pirulo",
-                    "email":                "test@test.com",
-                    "domicilio":            "Av Sta Fe 123",
-                    "provincia":            "2",
-                    "envia_por_mail":       "S",
-                    "condicion_pago":       "214",
-                    "condicion_pago_otra":  "Cobrado en ventanilla",
-                    "condicion_iva":        "CF"
-                },
-
-"comprobante":  {
-
-                "fecha":                    "28\/07\/2015",
-                "tipo":                     "NOTA DE DEBITO B",
-                "moneda":                   "DOL",
-               "idioma":                   "1",
-                "cotizacion":               "15.20",
-                "operacion":                "V",
-                "punto_venta":              "2",
-                "numero":                   "6",
-                "periodo_facturado_desde":  "27\/07\/2015",
-                "periodo_facturado_hasta":  "30\/07\/2015",
-                "vencimiento":              "30\/08\/2015",
-                "rubro":                    "Servicios web",
-                "external_reference":       "ABC123",
-                "tags": [
-			  "etiqueta1", 
-			  "etiqueta2"
-			],
-                "rubro_grupo_contable":     "servicios",
-                "abono": "S",
-                "abono_frecuencia": "2",
-                "abono_hasta":"10/2019",
-                "abono_actualiza_precios": "N",
-                "detalle":
-                            [
-                                {
-                                    "cantidad":"1",
-                                    "afecta_stock": "N",
-                                     "bonificacion_porcentaje": "0",
-                                    "producto":
-                                            {"descripcion":     "PAPAS",
-                                             "unidad_bulto":    "10",
-                                             "lista_precios":   "MI LISTA DE PRECIOS",
-                                             "codigo":          "",
-                                             "precio_unitario_sin_iva":"100.45",
-                                             "alicuota":      "21",
-                                             "impuestos_internos_alicuota": 0,
-                                             "unidad_medida": "7",
-                                             "actualiza_precio": "S"
-                                             },
-                                    "leyenda":"blanca, cepillada"
-                                },
-
-
-                                {
-                                    "cantidad":"1.5",
-                                     "bonificacion_porcentaje": "0",
-                                    "afecta_stock": "N",
-                                    "producto":
-                                            {"descripcion":     "HUEVOS",
-                                             "unidad_bulto":    "30",
-                                             "lista_precios":   "MAPPLETS",
-                                             "codigo":          "MPH",
-                                             "precio_unitario_sin_iva":"50",
-                                             "alicuota":      "10.5",
-                                             "impuestos_internos_alicuota": 0,
-                                             "unidad_medida": "7",
-                                             "actualiza_precio": "N"
-                                             },
-                                    "leyenda":""
-                                },
-
-                                {
-                                    "cantidad":"2",
-                                     "bonificacion_porcentaje": "0",
-                                    "afecta_stock": "S",
-                                    "producto":
-                                            {"descripcion":     "ZANAHORIA",
-                                             "unidad_bulto":    "50",
-                                             "lista_precios":   "MI LISTA DE PRECIOS",
-                                             "codigo":          "ZNH1",
-                                             "precio_unitario_sin_iva":"200",
-                                             "alicuota":      "21",
-                                             "impuestos_internos_alicuota": 0,
-                                             "unidad_medida": "7"
-                                             },
-                                    "leyenda":""
-                                }
-
-                            ],
-            "rg_especiales":
-                 {   "regimen" : "RG 4004-E",
-                      "datos"  : 
-
-                           [{
-                               "id"      :    17,
-                               "valor"  :    "2"
-                            },
-                            {
-                              "id"      :    1801,
-                             "valor"  :    "111111111111"
-                             },
-                            {
-                              "id"      :    1802,
-                             "valor"  :    "PRUEBA"
-                             }]
-                },  
-                "pagos" : 
-                      {
-                   	"formas_pago" : [ 
-                   			{"descripcion" : "VISA DB", "importe" : 0.6},
-                   			{"descripcion" : "MercadoPago", "importe" : 50}
-                   			], 
-                   	"total": 50.6
-                      },                                                               
-                "bonificacion":             "120",
-                "leyenda_gral":             "Segun Orden de compra III1333",
-                "comentario":               "Factura correspondiente al servicio XX",
-                "percepciones_iibb":        "0",
-                "percepciones_iibb_base":   "0",
-                "percepciones_iibb_alicuota": "0",
-                "percepciones_iva":         "0",
-                "percepciones_iva_base":    "0",
-                "percepciones_iva_alicuota": "0",
-                "exentos":                  "0",
-                "impuestos_internos":       "0",
-                "impuestos_internos_base":   "0",
-                "impuestos_internos_alicuota": "0",
-                "total":                    "543.22" 
-                
-        }
+   "usertoken":"xxxxxx",
+   "apikey":"xxxx",
+   "apitoken":"xxxxxx",
+   "cliente":{
+      "documento_tipo":"DNI",
+      "documento_nro":"1292963535",
+      "razon_social":"Pirulo",
+      "email":"test@test.com",
+      "domicilio":"Av Sta Fe 123",
+      "provincia":"2",
+      "envia_por_mail":"S",
+      "condicion_pago":"214",
+      "condicion_pago_otra":"Cobrado en ventanilla",
+      "condicion_iva":"CF",
+      "rg5329":"N"
+   },
+   "comprobante":{
+      "fecha":"28\/07\/2015",
+      "tipo":"NOTA DE DEBITO B",
+      "moneda":"DOL",
+      "idioma":"1",
+      "cotizacion":"15.20",
+      "operacion":"V",
+      "punto_venta":"2",
+      "numero":"6",
+      "periodo_facturado_desde":"27\/07\/2015",
+      "periodo_facturado_hasta":"30\/07\/2015",
+      "vencimiento":"30\/08\/2015",
+      "rubro":"Servicios web",
+      "external_reference":"ABC123",
+      "tags":[
+         "etiqueta1",
+         "etiqueta2"
+      ],
+      "rubro_grupo_contable":"servicios",
+      "abono":"S",
+      "abono_frecuencia":"2",
+      "abono_hasta":"10/2019",
+      "abono_actualiza_precios":"N",
+      "detalle":[
+         {
+            "cantidad":"1",
+            "afecta_stock":"N",
+            "bonificacion_porcentaje":"0",
+            "producto":{
+               "descripcion":"PAPAS",
+               "unidad_bulto":"10",
+               "lista_precios":"MI LISTA DE PRECIOS",
+               "codigo":"",
+               "precio_unitario_sin_iva":"100.45",
+               "alicuota":"21",
+               "impuestos_internos_alicuota":0,
+               "unidad_medida":"7",
+               "actualiza_precio":"S",
+               "rg5329":"N"
+            },
+            "leyenda":"blanca, cepillada"
+         },
+         {
+            "cantidad":"1.5",
+            "bonificacion_porcentaje":"0",
+            "afecta_stock":"N",
+            "producto":{
+               "descripcion":"HUEVOS",
+               "unidad_bulto":"30",
+               "lista_precios":"MAPPLETS",
+               "codigo":"MPH",
+               "precio_unitario_sin_iva":"50",
+               "alicuota":"10.5",
+               "impuestos_internos_alicuota":0,
+               "unidad_medida":"7",
+               "actualiza_precio":"N",
+               "rg5329":"N"
+            },
+            "leyenda":""
+         },
+         {
+            "cantidad":"2",
+            "bonificacion_porcentaje":"0",
+            "afecta_stock":"S",
+            "producto":{
+               "descripcion":"ZANAHORIA",
+               "unidad_bulto":"50",
+               "lista_precios":"MI LISTA DE PRECIOS",
+               "codigo":"ZNH1",
+               "precio_unitario_sin_iva":"200",
+               "alicuota":"21",
+               "impuestos_internos_alicuota":0,
+               "unidad_medida":"7",
+               "actualiza_precio":"S",
+               "rg5329":"N"
+            },
+            "leyenda":""
+         }
+      ],
+      "rg_especiales":{
+         "regimen":"Factura de Cr\u00e9dito Electr\u00f3nica MiPyMEs (FCE)",
+         "datos":[
+            {
+               "id":2101,
+               "valor":"0170215820000005295250"
+            },
+            {
+               "id":23,
+               "valor":"HANDYWAY CARGO S.A"
+            },
+            {
+               "id":27,
+               "valor":"SCA"
+            }
+         ]
+      },
+      "comprobantes_asociados":[
+         {
+            "tipo_comprobante":"FACTURA C",
+            "punto_venta":"3",
+            "numero":"00000349",
+            "comprobante_fecha":"03/03/2022",
+            "cuit":27285051466
+         }
+      ],
+      "comprobantes_asociados_periodo":{
+         "fecha_desde":"20/11/2020",
+         "fecha_hasta":"20/12/2020"
+      },
+      "pagos":{
+         "formas_pago":[
+            {
+               "descripcion":"VISA DB",
+               "importe":0.6
+            },
+            {
+               "descripcion":"MercadoPago",
+               "importe":50
+            }
+         ],
+         "total":50.6
+      },
+      "tributos":[
+         {
+            "tipo":6,
+            "regimen":1,
+            "base_imponible":1000,
+            "alicuota":10,
+            "total":100
+         }
+      ],
+      "exentos":"0",
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "bonificacion":"120",
+      "leyenda_gral":"Segun Orden de compra III1333",
+      "comentario":"Factura correspondiente al servicio XX",
+      "total":"573.22"
+   }
 }
-
 ```
+
+_(Información de ejemplo, solo para visualizar su estructura )_
+
+__
 
 ### Que te retorna la llamada a la API?
 
@@ -268,7 +293,7 @@ Sea cual sea la modalidad que utilices para facturar, por cada comprobante que e
 Es importante que descargues toda la información, junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
 {% endhint %}
 
-```
+```json
 {
     "error":     "N",
      "errores": [ ""],    
@@ -296,7 +321,7 @@ Es importante que descargues toda la información, junto con el pdf y lo almacen
 
 En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados
 
-```
+```json
 {
   "error": "S",
   "errores": [
@@ -319,21 +344,38 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 #### Datos para tener en cuenta:
 
 {% hint style="info" %}
+**CAE (Código de Autorización electrónica de AFIP)**
+
 * El CAE es el Código de Autorización Electrónico que otorga AFIP, como confirmación de la creación del comprobante. Es un dato importante para almacenar como respuesta.
 * Los CAE tienen fecha de vencimiento y se devuelve en formato dd/mm/aaaa
 * Por cuestiones de seguridad, el número de CAE es un texto y se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
+
+**AFIP CÓDIGO DE BARRAS / QR**
+
 * Por cuestiones de seguridad, el texto que se retorna en el campo afip\_codigo\_barras y afip\_qr, se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
-* Para evitar inconsistencias en la validación de las sumatorias, te sugerimos redondear a 2 decimales los valores y aplicar el redondeo con "Round half even".
 * La respuesta exitosa, te incluye el texto que se necesita para armar el código QR (en caso que generes el PDF desde tu lado) y/o el viejo código de barras (para comprobantes anteriores).
+
+**NOTAS DE DÉBITO Y CRÉDITO**
+
 * Las notas de débito y crédito requieren que envies obligatoriamente los comprobantes asociados (o su período asociado). [Conocé más desde aquí](./#estructura-de-comprobantes-asociados)
-* **TusFacturas.app NO válida que la sumatoria de los ítems que estas enviando para facturar se correspondan con los totales. Es tu responsabilidad corroborar y validar éstos datos.**
-* **AFIP recibe únicamente totales**, no el detalle de los items que facturás, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica , TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
-* Las URL de los micrositios solo te serán devueltas con datos, si los mismos se encuentran habilitados en tu cuenta. Para configurarlo, ingresá a nuestra plataforma web, menú > mi espacio de trabajo > mis micrositios.
-* **Aquellos comprobantes que hayan impactado en AFIP, no podrán ser eliminados ni modificados, sólo pueden ser anulados contablemente, generando una nota de crédito.**
+
+**REDONDEO DE NÚMEROS / SUMATORIAS / TOTALES**
+
+* Para evitar inconsistencias en la validación de las sumatorias, te sugerimos redondear a 2 decimales los valores y aplicar el redondeo con "Round half even".
+* **TusFacturas.app NO válida la totalidad de los datos enviados como asi tampoco las sumatorias de los ítems que estas enviando para facturar. Es tu responsabilidad corroborar y validar éstos datos antes de enviarlos.**
+* **AFIP recibe únicamente totales**, no el detalle de los items que facturas, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica, TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
+
+**MICROSITIOS**
+
+* Las URL de los micrositios solo te serán devueltas con datos, si los mismos se encuentran habilitados en tu cuenta. Para configurarlo, ingresá a nuestra plataforma web, menú > mi espacio de trabajo > mis micrositios. Conocé más de los micrositios [desde aquí](https://www.tusfacturas.app/).
+
+**EDICIÓN / ELIMINACIÓN DE COMPROBANTES**&#x20;
+
+* **Aquellos comprobantes que hayan impactado en AFIP, no podrán ser eliminados, sólo pueden ser anulados contablemente, generando una nota de crédito.**
 * Ningún comprobante puede ser modificado una vez emitido.
 {% endhint %}
 
-#### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme"?
+#### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme" en lugar de una factura A común?
 
 Hay ciertos casos donde AFIP exige que en lugar de emitir una factura A,B o C, le emitas a tu cliente, un comprobante de tipo  "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE)" A, B o C. En ese caso, recibirás en la respuesta, el campo requiere\_fec = "SI".&#x20;
 
@@ -347,52 +389,45 @@ Te sugerimos comentar ésta modalidad, con tu cliente y asesorarte con su estudi
 
 #### Información de los campos a enviar:
 
-| Nombre del campo                |         Es requerido?         | Comentarios                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------------------- | :---------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| fecha                           |               SI              | Campo fecha. Para facturación afip deberá ser la fecha del día. Formato esperado: dd/mm/aaaa. Ejemplo: 13/05/2018                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| tipo                            |               SI              | Campo alfabético según [tabla de referencia de Tipos de comprobantes](../parametros/tablas-de-referencia.md#tipos-de-comprobantes).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| operacion                       |               SI              | Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| idioma                          |               SI              | Campo numérico. Longitud 1 caracter. Indica el idioma en que se imprimira el PDF del comprobante. Valores Permitidos: 1 = Español, 2= Ingles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| punto\_venta                    |               SI              | Campo numérico entero. Longitud máxima 5 digitos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| moneda                          |               SI              | Campo alfanumérico de 3 Digitos según [tabla de referencia de Monedas](../parametros/tablas-de-referencia.md#monedas) .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| cotizacion                      |               SI              | Campo numérico con 2 decimales. Puede obtener la cotización del día según AFIP desde nuestro método de consulta de cotización Ejemplo: 15.20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| numero                          |            OPCIONAL           | El numero del comprobante a generar. Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante contra AFIP. Si el nro de comprobante NO es enviado, traeremos la próxima numeración . Ejemplo: 4567                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| vencimiento                     |            OPCIONAL           | Campo fecha, formato esperado: dd/mm/aaaa. Si no se envía la fecha de vencimiento del pago, se calculará en base a la condición de pago del cliente, contra la fecha del comprobante. En caso que quieras enviar vos, la a de vencimiento, debes indicarlo aca.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| periodo\_facturado\_desde       |               SI              | Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen productos y asi lo indiquen en la configuración de su CUIT+punto de venta. Obligatorio para quienes facturen Servicios o Productos y Servicios.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| periodo\_facturado\_hasta       |               SI              | Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen productos y así lo indiquen en la configuración de su CUIT+punto de venta.Obligatorio para quienes facturen Servicios o Productos y Servicios.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| rubro                           |               SI              | Campo alfanumérico. Longitud máxima 255 caracteres. Indica el rubro al cual pertenecerá el comprobante. Ésta información no saldrá impresa en el comprobante.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| rubro\_grupo\_contable          |               SI              | Campo alfanumérico. Longitud máxima 255 caracteres. Indica el grupo contable al que pertenece el rubro. Ésta información no saldrá impresa en el comprobante.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| abono                           |            OPCIONAL           | Campo alfabético, longitud máxima 1 caracter. Valores permitidos S (si) o N (no). Indica si el comprobante a generar es un abono recurrente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| abono\_frecuencia               | REQUERIDO SOLO SI ENVIA ABONO | Campo numerico sin decimales. Indica la frecuencia en meses con la que debe generarse la recurrencia del abono.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| abono\_hasta                    | REQUERIDO SOLO SI ENVIA ABONO | Campo fecha (mm/yyyy). Longitud maxima 7. Indica el mes y año hasta el cual debe generarse el abono recurrente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| abono\_actualiza\_precios       | REQUERIDO SOLO SI ENVIA ABONO | Campo alfabético, longitud máxima 1 caracter. Valores permitidos S (si) o N (no). Indica si cada vez que se genera el abono, se actualiza los precios de los productos contra el precio actual de la lista de precios.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| detalle                         |               SI              | Lista de conceptos a facturar. [Objeto JSON](./#estructura-de-detalle-de-conceptos) Según estructura que se detalla a continuación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| fex                             | REQUERIDO PARA COMPROBANTES E | Solo para comprobantes de tipo E. Según estructura detallada en: [Factura electronica de exportacion".](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| bonificacion                    |            OPCIONAL           | Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor aplicado en concepto de bonificación sin IVA Ejemplo: 12.67. Tener en cuenta para el cálculo que la bonificación se aplica sobre el primer subtotal SIN IVA y se lo gravará con el importe de IVA que le corresponda.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| leyenda\_gral                   |            OPCIONAL           | <p>Campo alfanumérico. Longitud máxima 255 caracteres. Contenido opcional. Es una leyenda general que saldrá impresa en el bloque central de productos del comprobante. Si queres que parte del texto salga en una linea nueva, agrega: #@# , si queres enviar el "%", en su lugar envía: #&#x26;#.</p><p></p><p> Ejemplo: Aplica plan 12 cuotas, con un 10#&#x26;# de interes. </p><p></p><p>Ten en cuenta que a partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "<em>El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618".</em> <strong>Éste valor no debe ser enviado en el campo "leyenda_gral",</strong> ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.</p> |
-| comentario                      |            OPCIONAL           | Campo alfanumerico, opcional. Longitud máxima: 255 caracteres. Éste campo no saldrá impreso en la factura.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| percepciones\_iibb              |            OPCIONAL           | Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la percepción de ingresos brutos realizada Ejemplo: 142.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| percepciones\_iibb\_base        |            OPCIONAL           | La base imponible sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| percepciones\_iibb\_alicuota    |            OPCIONAL           | La alícuota sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| percepciones\_iibb\_juridiccion |            OPCIONAL           | La juridicción a la que pertenece la percepción aplicada. El valor a enviar corresponde al ID de la [provincia, según nuestra tabla de referencias.](../parametros/tablas-de-referencia.md#provincias)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| percepciones\_iva               |            OPCIONAL           | Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la percepción de IVA realizada Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| percepciones\_iva\_base         |            OPCIONAL           | La base imponible sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| percepciones\_iva\_alicuota     |            OPCIONAL           | La alícuota sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| impuestos\_internos             |            OPCIONAL           | Indica el valor monetario correspondiente a los impuestos internos. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| impuestos\_internos\_base       |            OPCIONAL           | La base imponible sobre la cual se calcularon los impuestos internos. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| impuestos\_internos\_alicuota   |            OPCIONAL           | La alícuota sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| exentos                         |            OPCIONAL           | Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario en concepto de exentos. Solo para comprobantes A y M Ejemplo: 72.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| total                           |               SI              | Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos incluyendo IVA e impuestos. Ejemplo: 12452.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| comprobantes\_asociados         |       SEGUN CORRESPONDA       | Lista de comprobantes asociados. Requerido únicamente para NC o ND de tipo A,B,C,M. [Objeto JSON](./#estructura-de-comprobantes-asociados) Según estructura que se detalla a continuación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| rg\_especiales                  |       SEGÚN CORRESPONDA       | Lista de datos adicionales requeridos por AFIP, según la RG a la que aplique el comprobante. [Objeto JSON](./#estructura-de-rg-especiales) Según estructura que se detalla a continuación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| external\_reference             |       SEGÚN CORRESPONDA       | Dato alfanumérico de hasta 255 caracteres (solo se permiten letras, números, guión bajo y guión medio), que se utiliza para referenciar a éste comprobante, dentro de tu sistema. Es opcional, salvo que utilices los métodos de envió a la cola de procesamiento. No se realiza validación de éste campo, para verificar que el mismo no exista.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| tags                            |            OPCIONAL           | Objeto JSON, según estructura que se detalla a continuación.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Nombre del campo              |         Es requerido?         | Comentarios                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ----------------------------- | :---------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| fecha                         |               SI              | Campo fecha. Para facturación afip deberá ser la fecha del día. Formato esperado: dd/mm/aaaa. Ejemplo: 13/05/2018                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| tipo                          |               SI              | Campo alfabético según [tabla de referencia de Tipos de comprobantes](../parametros/tablas-de-referencia.md#tipos-de-comprobantes).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| operacion                     |               SI              | Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| idioma                        |               SI              | Campo numérico. Longitud 1 caracter. Indica el idioma en que se imprimira el PDF del comprobante. Valores Permitidos: 1 = Español, 2= Ingles                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| punto\_venta                  |               SI              | Campo numérico entero. Longitud máxima 5 digitos.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| moneda                        |               SI              | Campo alfanumérico de 3 Digitos según [tabla de referencia de Monedas](../parametros/tablas-de-referencia.md#monedas) .                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| cotizacion                    |               SI              | Campo numérico con 2 decimales. Puede obtener la cotización del día según AFIP desde nuestro método de consulta de cotización Ejemplo: 15.20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| numero                        |            OPCIONAL           | El numero del comprobante a generar. Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante contra AFIP. Si el nro de comprobante NO es enviado, traeremos la próxima numeración . Ejemplo: 4567                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| vencimiento                   |            OPCIONAL           | Campo fecha, formato esperado: dd/mm/aaaa. Si no se envía la fecha de vencimiento del pago, se calculará en base a la condición de pago del cliente, contra la fecha del comprobante. En caso que quieras enviar vos, la a de vencimiento, debes indicarlo aca.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| periodo\_facturado\_desde     |               SI              | Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen productos y asi lo indiquen en la configuración de su CUIT+punto de venta. Obligatorio para quienes facturen Servicios o Productos y Servicios.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| periodo\_facturado\_hasta     |               SI              | Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen productos y así lo indiquen en la configuración de su CUIT+punto de venta.Obligatorio para quienes facturen Servicios o Productos y Servicios.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| rubro                         |               SI              | Campo alfanumérico. Longitud máxima 255 caracteres. Indica el rubro al cual pertenecerá el comprobante. Ésta información no saldrá impresa en el comprobante.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| rubro\_grupo\_contable        |               SI              | Campo alfanumérico. Longitud máxima 255 caracteres. Indica el grupo contable al que pertenece el rubro. Ésta información no saldrá impresa en el comprobante.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| abono                         |            OPCIONAL           | Campo alfabético, longitud máxima 1 caracter. Valores permitidos S (si) o N (no). Indica si el comprobante a generar es un abono recurrente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| abono\_frecuencia             | REQUERIDO SOLO SI ENVIA ABONO | Campo numerico sin decimales. Indica la frecuencia en meses con la que debe generarse la recurrencia del abono.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| abono\_hasta                  | REQUERIDO SOLO SI ENVIA ABONO | Campo fecha (mm/yyyy). Longitud maxima 7. Indica el mes y año hasta el cual debe generarse el abono recurrente.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| abono\_actualiza\_precios     | REQUERIDO SOLO SI ENVIA ABONO | Campo alfabético, longitud máxima 1 caracter. Valores permitidos S (si) o N (no). Indica si cada vez que se genera el abono, se actualiza los precios de los productos contra el precio actual de la lista de precios.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| detalle                       |               SI              | Lista de conceptos a facturar. [Objeto JSON](./#estructura-de-detalle-de-conceptos) Según estructura que se detalla a continuación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| fex                           | REQUERIDO PARA COMPROBANTES E | Solo para comprobantes de tipo E. Según estructura detallada en: [Factura electronica de exportacion".](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| bonificacion                  |            OPCIONAL           | Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor aplicado en concepto de bonificación sin IVA Ejemplo: 12.67. Tener en cuenta para el cálculo que la bonificación se aplica sobre el primer subtotal SIN IVA y se lo gravará con el importe de IVA que le corresponda.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| leyenda\_gral                 |            OPCIONAL           | <p>Campo alfanumérico. Longitud máxima 500 caracteres. Contenido opcional. Es una leyenda general que saldrá impresa en el bloque central de productos del comprobante. Si queres que parte del texto salga en una linea nueva, agrega: #@# , si queres enviar el "%", en su lugar envía: #&#x26;#.</p><p></p><p> Ejemplo: Aplica plan 12 cuotas, con un 10#&#x26;# de interes. </p><p></p><p>Ten en cuenta que a partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "<em>El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618".</em> <strong>Éste valor no debe ser enviado en el campo "leyenda_gral",</strong> ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.</p> |
+| comentario                    |            OPCIONAL           | Campo alfanumerico, opcional. Longitud máxima: 255 caracteres. Éste campo no saldrá impreso en la factura.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| tributos                      |       SEGUN CORRESPONDA       | Lista de percepciones y otros impuestos, según se detalla su estructura a continuación.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| impuestos\_internos           |            OPCIONAL           | Indica el valor monetario correspondiente a los impuestos internos. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| impuestos\_internos\_base     |            OPCIONAL           | La base imponible sobre la cual se calcularon los impuestos internos. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| impuestos\_internos\_alicuota |            OPCIONAL           | La alícuota sobre la cual se calculo la percepción. Campo numérico con 2 decimales. separador de decimales: punto. Ejemplo: 42.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| total                         |               SI              | Campo numérico con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos incluyendo IVA e impuestos. Ejemplo: 12452.67                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| comprobantes\_asociados       |       SEGUN CORRESPONDA       | Lista de comprobantes asociados. Requerido únicamente para NC o ND de tipo A,B,C,M. [Objeto JSON](./#estructura-de-comprobantes-asociados) Según estructura que se detalla a continuación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| rg\_especiales                |       SEGÚN CORRESPONDA       | Lista de datos adicionales requeridos por AFIP, según la RG a la que aplique el comprobante. [Objeto JSON](./#estructura-de-rg-especiales) Según estructura que se detalla a continuación                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| external\_reference           |       SEGÚN CORRESPONDA       | Dato alfanumérico de hasta 255 caracteres (solo se permiten letras, números, guión bajo y guión medio), que se utiliza para referenciar a éste comprobante, dentro de tu sistema. Es opcional, salvo que utilices los métodos de envió a la cola de procesamiento. No se realiza validación de éste campo, para verificar que el mismo no exista.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| tags                          |            OPCIONAL           | Objeto JSON, según estructura que se detalla a continuación.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ### Estructura del bloque: "Cliente"
 
 Para poder generar el comprobante, debes enviar un detalle de todos los datos del cliente según se informa a continuación.
 
-```
+```json
 comprobante: {
    .... 
    cliente: {   
@@ -406,7 +441,8 @@ comprobante: {
       "envia_por_mail":       "S",
       "condicion_pago":       "214",
       "condicion_pago_otra":  "Cobrado en ventanilla",
-      "condicion_iva":        "CF"
+      "condicion_iva":        "CF",
+      "rg5329":                "N"
    }
 }
 ```
@@ -415,18 +451,21 @@ comprobante: {
 
 #### Información de los campos a enviar:
 
-|  **`documento_tipo`** | REQUERIDO |                                                                                               <p>Valores Permitidos: <strong>CUIT , DNI, PASAPORTE, OTRO</strong><br><strong>Ejemplo: DNI</strong></p>                                                                                              |
-| :-------------------: | --------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|    `documento_nro`    | REQUERIDO |                                                                                                        <p>Campo numérico, sin puntos ni guiones.<br><strong>Ejemplo: 30111222334</strong></p>                                                                                                       |
-|     `razon_social`    | REQUERIDO |                                                                                                  <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Pirulo S.A</strong></p>                                                                                                 |
-|        `email`        | OPCIONAL  |                                                                                            <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: tusfacturas@vousys.com</strong></p>                                                                                           |
-|      `domicilio`      | REQUERIDO |                                                                                              <p>Campo alfanumérico. Longitud máxima 255 caracteres. <br><strong>Ejemplo: Av. Santa Fe 123</strong></p>                                                                                              |
-|      `provincia`      | REQUERIDO |                                                                          <p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.<br><strong>Ejemplo: 2</strong></p>                                                                          |
-|    `envia_por_mail`   | REQUERIDO |                                                                               <p>Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: <strong>S , N</strong><br><strong>Ejemplo: S</strong></p>                                                                               |
-|    `condicion_pago`   | REQUERIDO | <p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#condiciones-de-venta">tabla de referencia</a>.</p><ul><li>se debe enviar obligatoriamente el campo <strong>condicion_pago_otra</strong> "con la descripción de la misma.</li></ul><p><br><strong>Ejemplo: 211 .</strong></p> |
-| condicion\_pago\_otra | OPCIONAL  |                                                                                                       Campo alfanumérico. Longitud máxima 100 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                       |
-|    `condicion_iva`    | REQUERIDO |              <p>Campo numérico que indica la condición de iva, según <a href="../parametros/tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>. Valores Permitidos: <strong>CF, RI, M, E</strong><br><strong>Ejemplo: RI</strong></p>             |
-|         codigo        | OPCIONAL  |                                                                                                   Campo alfanumérico opcional. Longitud máxima 50 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                   |
+|  **`documento_tipo`** | REQUERIDO         |                                                                                               <p>Valores Permitidos: <strong>CUIT , DNI, PASAPORTE, OTRO</strong><br><strong>Ejemplo: DNI</strong></p>                                                                                              |
+| :-------------------: | ----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|    `documento_nro`    | REQUERIDO         |                                                                                                        <p>Campo numérico, sin puntos ni guiones.<br><strong>Ejemplo: 30111222334</strong></p>                                                                                                       |
+|     `razon_social`    | REQUERIDO         |                                                                                                  <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Pirulo S.A</strong></p>                                                                                                 |
+|        `email`        | OPCIONAL          |                                                                                            <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: tusfacturas@vousys.com</strong></p>                                                                                           |
+|      `domicilio`      | REQUERIDO         |                                                                                              <p>Campo alfanumérico. Longitud máxima 255 caracteres. <br><strong>Ejemplo: Av. Santa Fe 123</strong></p>                                                                                              |
+|      `provincia`      | REQUERIDO         |                                                                          <p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.<br><strong>Ejemplo: 2</strong></p>                                                                          |
+|    `envia_por_mail`   | REQUERIDO         |                                                                               <p>Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: <strong>S , N</strong><br><strong>Ejemplo: S</strong></p>                                                                               |
+|    `condicion_pago`   | REQUERIDO         | <p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#condiciones-de-venta">tabla de referencia</a>.</p><ul><li>se debe enviar obligatoriamente el campo <strong>condicion_pago_otra</strong> "con la descripción de la misma.</li></ul><p><br><strong>Ejemplo: 211 .</strong></p> |
+| condicion\_pago\_otra | OPCIONAL          |                                                                                                       Campo alfanumérico. Longitud máxima 100 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                       |
+|    `condicion_iva`    | REQUERIDO         |              <p>Campo numérico que indica la condición de iva, según <a href="../parametros/tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>. Valores Permitidos: <strong>CF, RI, M, E</strong><br><strong>Ejemplo: RI</strong></p>             |
+|         codigo        | OPCIONAL          |                                                                                                   Campo alfanumérico opcional. Longitud máxima 50 caracteres. **Ejemplo: Cobrado en ventanilla.**                                                                                                   |
+|         rg5329        | SEGÚN CORRESPONDA |                                                                    <p>Este campo te permite indicar si tu cliente es pasible de <a href="../faqs-or-rg5329.md">percepción IVA RG5329</a>.</p><p>Valores posibles: "S" o "N".</p>                                                                    |
+
+
 
 {% hint style="info" %}
 **Datos a tener en cuenta:**
@@ -458,7 +497,7 @@ Recuerda que debes enviar una **lista (array)** de conceptos. **El máximo de co
 La estructura **de cada concepto** a enviar es la siguiente:
 
 {% code title="JSON" %}
-```
+```json
 comprobante: {
    .... 
    detalle: [{
@@ -474,7 +513,8 @@ comprobante: {
 		"impuestos_internos_alicuota": 0,
 		"alicuota": "10.5",
 		"unidad_medida": "7",
-		"actualiza_precio":"S"
+		"actualiza_precio":"S",
+		"rg5329": "S"
 	},
 	"leyenda": ""
        },
@@ -491,7 +531,8 @@ comprobante: {
 		"impuestos_internos_alicuota": 0,
 		"alicuota": "10.5",
 		"unidad_medida": "7",
-		"actualiza_precio":"S"
+		"actualiza_precio":"S",
+		"rg5329": "N"
 	},
 	"leyenda": "En paquetes de 190gr"
        }
@@ -508,7 +549,6 @@ Los campos que debes enviar son los siguientes:
 | `producto`                                                             | REQUERIDO |                                                        Según estructura de producto que se detalla en el bloque siguiente.                                                       |
 | `leyenda`                                                              | OPCIONAL  |   <p>Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.<br><strong>Ejemplo: Blanca, cepillada</strong></p>   |
 | <mark style="background-color:purple;">bonificacion\_porcentaje</mark> | OPCIONAL  | Si se ha aplicado un porcentaje de descuento sobre éste concepto, debe ser enviado. Es un campo númerico con 2 decimales. El separador de decimales esperado es el punto. Ej: 25 |
-|                                                                        |           |                                                                                                                                                                                  |
 
 ###
 
@@ -516,7 +556,7 @@ Los campos que debes enviar son los siguientes:
 
 Cada producto o servicio que factures, deberá ser enviado con la siguiente estructura:
 
-```
+```json
 {
 "descripcion":     "HUEVOS",
 "unidad_bulto":    "30",
@@ -526,7 +566,8 @@ Cada producto o servicio que factures, deberá ser enviado con la siguiente estr
 "alicuota":      "10.5",
 "unidad_medida": "7",
 "impuestos_internos_alicuota": 0,
-"actualiza_precio": "N"
+"actualiza_precio": "N",
+"rg5329": "S"
 }
 ```
 
@@ -536,7 +577,7 @@ Cada producto o servicio que factures, deberá ser enviado con la siguiente estr
 **Datos a tener en cuenta:**
 
 * Si el producto ya existía en tu base de productos de nuestra plataforma ( se valida que sea la misma lista de precios, código de producto y/o descripción del mismo), el mismo será actualizado por completo, con los nuevos datos que envíes, solo  si indicas que deseas actualizar el precio con el campo "actualiza\_precio":"S".  En caso de no querer actualizar el producto, si el mismo ya existía, se facturará con el nuevo precio y descripción que envíes, pero mantendrá sus datos anteriores.
-* Si el comprobante que envías a facturar es de tipo C, todos sus productos no deben llevar IVA, y debes enviar cada concepto con su precio final
+* Si el comprobante que envías a facturar es de tipo C, todos sus productos no deben llevar IVA y debes enviar cada concepto con su precio final
 * Si el comprobante que envías, es de tipo A o B, los productos o servicios que envíes a facturar, deben ser enviados siempre SIN IVA, porque el IVA se calcula del lado de nuestra plataforma en base al campo "alicuota" que envías. Conocé más de los tipos de comprobantes, [desde aquí ](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 * En caso que alguno de tus conceptos cuente con un signo porcentual (%) en el nombre (ej:  Promo 20% OFF)  deberás reemplazarlo por los siguientes caracteres: **#\&#**&#x20;
 * En caso que alguno de tus conceptos cuente con una nueva línea, en su nombre, o porque deba imprimirse en 2 líneas, deberás generar el salto de línea donde desees, ingresando los caracteres:  **#@#**&#x20;
@@ -544,17 +585,17 @@ Cada producto o servicio que factures, deberá ser enviado con la siguiente estr
 
 Los campos que debes enviar son los siguientes:
 
-| `descripcion`                 | REQUERIDO |                                                                                                            <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Papa blanca</strong></p>                                                                                                            |
-| ----------------------------- | --------- | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| `unidad_bulto`                | REQUERIDO |                                                                                   <p>Campo numérico entero requerido. Indica la cantidad de unidades que componen un bulto. Valor minimo esperado: 1<br><strong>Ejemplo: 12</strong></p>                                                                                  |
-| `lista_precios`               | REQUERIDO |                                                       <p>Campo alfanumérico. Longitud máxima 255 caracteres. Nombre de la lista de precios a la cual pertenece. No saldrá impreso en la factura pero es requerido.<br><strong>Ejemplo: Verdura Orgánica</strong></p>                                                      |
-| `codigo`                      | OPCIONAL  |                                                                                                        <p>Campo alfanumérico. Longitud máxima 10 caracteres. campo Opcional<br><strong>Ejemplo: ABX780</strong></p>                                                                                                       |
-| `precio_unitario_sin_iva`     | REQUERIDO |                                                                                                          <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                                         |
-| `alicuota`                    | REQUERIDO |                                                            <p>Indica la alícuota de IVA con la que grava ese producto. Valores Permitidos:</p><p><strong>27, 21 , 10.5 , 0 , -1 ( para exento), -2 (no gravados)</strong><br><strong>Ejemplo: 10.5</strong></p>                                                           |
-| `unidad_medida`               | REQUERIDO |                                                <p>Campo numérico que indica la unidad de medida, según<a href="../parametros/tablas-de-referencia.md#productos-unidades-de-medida-afip"> tabla de referencia Unidades de Medida(**).</a><br><strong>Ejemplo: 7</strong></p>                                               |
-| `actualiza_precio`            | REQUERIDO | Indica si se actualiza el precio del producto y sus datos adicionales (como ser la unidad de medida, código, unidades por bulto y otros datos adicionales), tomando como valor de referencia,la información enviada en el comprobante. Campo Alfabético, de 1 carácter. Valores permitidos: S (si) N (no). **Ejemplo: S** |
-| `impuestos_internos_alicuota` | OPCIONAL  |                                                                                                  La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numerico, con 2 decimales. ej: 10.5                                                                                                 |
-|                               |           |                                                                                                                                                                                                                                                                                                                           |
+| `descripcion`                 | REQUERIDO         |                                                                                                            <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Papa blanca</strong></p>                                                                                                            |
+| ----------------------------- | ----------------- | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `unidad_bulto`                | REQUERIDO         |                                                                                   <p>Campo numérico entero requerido. Indica la cantidad de unidades que componen un bulto. Valor minimo esperado: 1<br><strong>Ejemplo: 12</strong></p>                                                                                  |
+| `lista_precios`               | REQUERIDO         |                                                       <p>Campo alfanumérico. Longitud máxima 255 caracteres. Nombre de la lista de precios a la cual pertenece. No saldrá impreso en la factura pero es requerido.<br><strong>Ejemplo: Verdura Orgánica</strong></p>                                                      |
+| `codigo`                      | OPCIONAL          |                                                                                                        <p>Campo alfanumérico. Longitud máxima 10 caracteres. campo Opcional<br><strong>Ejemplo: ABX780</strong></p>                                                                                                       |
+| `precio_unitario_sin_iva`     | REQUERIDO         |                                                                                                          <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                                                         |
+| `alicuota`                    | REQUERIDO         |                                                            <p>Indica la alícuota de IVA con la que grava ese producto. Valores Permitidos:</p><p><strong>27, 21 , 10.5 , 0 , -1 ( para exento), -2 (no gravados)</strong><br><strong>Ejemplo: 10.5</strong></p>                                                           |
+| `unidad_medida`               | REQUERIDO         |                                                <p>Campo numérico que indica la unidad de medida, según<a href="../parametros/tablas-de-referencia.md#productos-unidades-de-medida-afip"> tabla de referencia Unidades de Medida(**).</a><br><strong>Ejemplo: 7</strong></p>                                               |
+| `actualiza_precio`            | REQUERIDO         | Indica si se actualiza el precio del producto y sus datos adicionales (como ser la unidad de medida, código, unidades por bulto y otros datos adicionales), tomando como valor de referencia,la información enviada en el comprobante. Campo Alfabético, de 1 carácter. Valores permitidos: S (si) N (no). **Ejemplo: S** |
+| `impuestos_internos_alicuota` | OPCIONAL          |                                                                                                  La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numérico, con 2 decimales. ej: 10.5                                                                                                 |
+| rg5329                        | SEGÚN CORRESPONDA |           <p>Este campo te permite indicar si tu producto percibe la percepción IVA RG5329.</p><p>Valores posibles: "S" o "N".</p><p>Si envias el valor en "S", debes enviar el campo "actualiza_precio" tambien en "S".</p><p>Conocé cuando aplicar la RG5329 <a href="../faqs-or-rg5329.md">desde aquí</a></p>          |
 
 ###
 
@@ -566,7 +607,7 @@ Los comprobantes asociados son aquellos comprobantes que éstas incluyendo para 
 
 **Existen 2 maneras de informar los comprobantes asociados:**
 
-a) Detallando comprobantes asociados  :track\_next: [#envio-de-comprobantes-asociados-detallados](./#envio-de-comprobantes-asociados-detallados "mention")
+a) Detallando los comprobantes asociados que anulas  :track\_next: [#envio-de-comprobantes-asociados-detallados](./#envio-de-comprobantes-asociados-detallados "mention")
 
 b) Indicando un período de comprobantes asociados. :track\_next: [#comprobantes-asociados-por-periodo](./#comprobantes-asociados-por-periodo "mention")
 
@@ -606,7 +647,7 @@ La auto-acreditación generará un recibo de cobro, en la cuenta corriente de tu
 
 Ejemplo del JSON a enviar:
 
-```
+```json
 comprobante: {
    .... 
    ,comprobantes_asociados:[
@@ -655,7 +696,60 @@ Para utilizar ésta herramienta, **no se debe enviar el bloque de "**_**comproba
 
 Se deberá respetar el formato para las fechas que debe ser dd/mm/aaaa (el día y el mes deben tener 2 dígitos).
 
-###
+
+
+### Estructura del bloque: "tributos"&#x20;
+
+Cuando requieras enviar percepciones de IVA o percepciones de Ingresos Brutos (IIBB) deberás enviar dentro del bloque "comprobante", un array con la siguiente estructura:&#x20;
+
+Ejemplo:&#x20;
+
+<pre class="language-json"><code class="lang-json">		 
+<strong> "tributos": [	
+</strong>			{
+				"tipo" : 7,
+				"regimen": 22,
+				"base_imponible": 2000,
+				"alicuota": 20,
+				"total": 400				
+			}, 		
+			{
+				"tipo" : 6,
+				"regimen": 3,
+				"base_imponible": 1000,
+				"alicuota": 3,
+				"total": 30
+			}, 		
+			{
+				"tipo" : 6,
+				"regimen": 3,
+				"base_imponible": 1000,
+				"alicuota": 1.5,
+				"total": 15	
+			},
+			{
+				"tipo" : 6,
+				"regimen": 1,
+				"base_imponible": 1000,
+				"alicuota": 10,
+				"total": 100
+			}
+		],  
+</code></pre>
+
+#### Información de los campos a enviar dentro de cada "tributo":
+
+| nombre del campo | Valores esperados                                                                                                                                                                                                   |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tipo             | Campo numérico, según tabla de referencia [#bloque-tributos-greater-than-tipos-de-percepcion-a-aplicar](../parametros/tablas-de-referencia.md#bloque-tributos-greater-than-tipos-de-percepcion-a-aplicar "mention") |
+| regimen          | Campo numérico, según tabla de referencia: [#bloque-tributos-greater-than-regimen-de-percepcion](../parametros/tablas-de-referencia.md#bloque-tributos-greater-than-regimen-de-percepcion "mention")                |
+| base\_imponible  |  Campo numérico con hasta 2 decimales, donde se indica la base imponible sobre la cual se aplica la percepción.                                                                                                     |
+| alicuota         | Campo numérico con hasta 2 decimales, donde se indica la alícuota de dicha percepción                                                                                                                               |
+| total            | Campo numérico de hasta 2 decimales, con el importe total de la percepción a aplicar.                                                                                                                               |
+
+
+
+
 
 ### Estructura de "RG Especiales"&#x20;
 
@@ -692,9 +786,9 @@ comprobante: {
 
 #### Información de los campos a enviar en el array de "datos":
 
-| `id`    | Campo númerico. Valores esperados según[Tabla de Datos Opcionales para RG Especiales](../parametros/tablas-de-referencia.md#datos-opcionales-para-rg-especiales) |
-| ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `valor` | Campo alfanumérico.                                                                                                                                              |
+| `id`    | Campo númerico. Valores esperados según [Tabla de Datos Opcionales para RG Especiales](../parametros/tablas-de-referencia.md#datos-opcionales-para-rg-especiales) |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `valor` | Campo alfanumérico.                                                                                                                                               |
 
 ### &#x20;<a href="#estructuradepagos" id="estructuradepagos"></a>
 

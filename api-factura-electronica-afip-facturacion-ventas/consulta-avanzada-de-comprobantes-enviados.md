@@ -65,272 +65,215 @@ La consulta te devolverá un array, compuesto por cada comprobante, que tendrá 
 
 Ej:
 
-```
+```json
 {
-	"error": "N",
-	"errores": [],
-	"rta": "OK",
-	"total": 10,
-	"comprobantes": [ 
-	{
-		"cliente": {
-			"documento_tipo": "DNI",
-			"documento_nro": "1292963535 ",
-			"razon_social": "Pirulo",
-			"email": "test@test.com",
-			"domicilio": "Av Sta Fe 123"
-		},
-		"comprobante": {
-			"fecha": "23\/05\/2021",
-			"tipo": "NOTA DE DEBITO B",
-			"moneda": "PES",
-			"idioma": 1,
-			"cotizacion": 1,
-			"operacion": "V",
-			"punto_venta": 2,
-			"numero": 6,
-			"periodo_facturado_desde": "27\/07\/2015",
-			"periodo_facturado_hasta": "30\/07\/2015",
-			"rubro": "Servicios web",
-			"rubro_grupo_contable": "servicios",
-			"detalle": [{
-				"cantidad": 1,
-				"producto": {
-					"descripcion": "PAPAS",
-					"precio_unitario": 121.54,
-					"alicuota": 21,
-					"unidad_medida": 7,
-					"precio_total": 121.54
-	 			},
-				"leyenda": "blanca, cepillada"
-			}, {
-				"cantidad": 1.5,
-				"producto": {
-					"descripcion": "HUEVOS",
-					"precio_unitario": 60.50,
-					"alicuota": 21,
-					"unidad_medida": 7,
-					"precio_total": 90.75
-					
-				},
-				"leyenda": ""
-			}, {
-				"cantidad": 2,
-				"producto": {
-					"descripcion": "ZANAHORIA",
-					"precio_unitario": 242,
-					"alicuota": 21,
-					"unidad_medida": 7,
-					"precio_total": 484 
-	           },
-				"leyenda": ""
-			} ],
-			"bonificacion": 120,
-			"leyenda_gral": "bla bla bla",
-	        	"percepciones_iibb":        "0",
-	       		"percepciones_iibb_base":   "0",
-	        	"percepciones_iibb_alicuota": "0",
-	        	"percepciones_iva":         "0",
-	        	"percepciones_iva_base":    "0",
-	        	"percepciones_iva_alicuota": "0",
-	     		"exentos":                  "0",
-	        	"impuestos_internos":       "0",
-	        	"impuestos_internos_base":   "0",
-	        	"impuestos_internos_alicuota": "0" ,
-			"nogravados": 0,
-			"total": 543.21,
-			"cae": "65301278726386 ",
-			"afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
-			"afip_qr": "https:\/\/www.afip.gob.ar\/fe\/qr\/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMS0wNi0wNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjEwIiwidGlwb0NtcCI6MSwibnJvQ21wIjoiMDAwMDAwNzgiLCJpbXBvcnRlIjoiMDAwMDAwMDAwMzA4NS41MCIsIm1vbmVkYSI6IlBFUyIs ",
-			"vencimiento_cae": "30\/05\/2021",
-			"vencimiento_pago": "23\/05\/2021",
-			"external_reference": "Lun141",
-			"tags": [
-				"etiqueta1",
-				"etiqueta2"
-				],
-			"ctacte_status
-			"status": "EMITIDO", 
-			"ctacte_status": "IMPAGA",
-			"comprobante_pdf_url": "https://www.dominio.com/00000006.pdf"
-		}
-	},
-
-	{
-		"cliente": {
-			"documento_tipo": "DNI",
-			"documento_nro": "1292963535 ",
-			"razon_social": "Pirulo",
-			"email": "test@test.com",
-			"domicilio": "Av Sta Fe 123"
-		},
-		"comprobante": {
-			"fecha": "23\/05\/2021",
-			"tipo": "NOTA DE DEBITO B",
-			"moneda": "PES",
-			"idioma": 1,
-			"cotizacion": 1,
-			"operacion": "V",
-			"punto_venta": 2,
-			"numero": 5,
-			"periodo_facturado_desde": "27\/07\/2015",
-			"periodo_facturado_hasta": "30\/07\/2015",
-			"rubro": "Servicios web",
-			"rubro_grupo_contable": "servicios",
-			"detalle": [{
-				"cantidad": 1,
-				"producto": {
-					"descripcion": "PAPAS",
-					"precio_unitario": 121.54,
-					"alicuota": 21,
-					"unidad_medida": 7,
-					"precio_total": 121.54
-	 			},
-				"leyenda": "blanca, cepillada"
-			}, {
-				"cantidad": 1.5,
-				"producto": {
-					"descripcion": "HUEVOS",
-					"precio_unitario": 60.50,
-					"alicuota": 21,
-					"unidad_medida": 7,
-					"precio_total": 90.75
-					
-				},
-				"leyenda": ""
-			}, {
-				"cantidad": 2,
-				"producto": {
-					"descripcion": "ZANAHORIA",
-					"precio_unitario": 242,
-					"alicuota": 21,
-					"unidad_medida": 7,
-					"precio_total": 484 
-	           },
-				"leyenda": ""
-			} ],
-			"bonificacion": 120,
-			"leyenda_gral": "bla bla bla",
-	        	"percepciones_iibb":        "0",
-	        	"percepciones_iibb_base":   "0",
-	        	"percepciones_iibb_alicuota": "0",
-	        	"percepciones_iva":         "0",
-	        	"percepciones_iva_base":    "0",
-	        	"percepciones_iva_alicuota": "0",
-	     		"exentos":                  "0",
-	        	"impuestos_internos":       "0",
-	        	"impuestos_internos_base":   "0",
-	        	"impuestos_internos_alicuota": "0" ,
-			"nogravados": 0,
-			"total": 543.21,
-			"cae": " ",
-			"micrositios": {
-				"cliente": "url-del-micrositio",
-				"descarga":"url-del-micrositio"
-		     	},
-			"afip_codigo_barras" : " ",
-			"afip_qr": "",
-			"vencimiento_cae": "",
-			"vencimiento_pago": "23\/05\/2021",
-			"external_reference": "Lun141",
-			"tags": [
-				"etiqueta1",
-				"etiqueta2"
-				],
-			"status": "ENVIADO A PROCESAR - CON ERROR",
-			"ctacte_status": "",
-			"comprobante_pdf_url": ""
-		}
-	},
-	
-		{
-		"cliente": {
-			"documento_tipo": "DNI",
-			"documento_nro": "1292963535 ",
-			"razon_social": "Pirulo",
-			"email": "test@test.com",
-			"domicilio": "Av Sta Fe 123"
-		},
-		"comprobante": {
-			"fecha": "23\/05\/2021",
-			"tipo": "NOTA DE DEBITO B",
-			"moneda": "PES",
-			"idioma": 1,
-			"cotizacion": 1,
-			"operacion": "V",
-			"punto_venta": 2,
-			"numero": 5,
-			"periodo_facturado_desde": "27\/07\/2015",
-			"periodo_facturado_hasta": "30\/07\/2015",
-			"rubro": "Servicios web",
-			"rubro_grupo_contable": "servicios",
-			"detalle": [{
-				"cantidad": 1,
-				"producto": {
-					"descripcion": "PAPAS",
-					"precio_unitario": 121.54,
-					"alicuota": 21,
-					"unidad_medida": 7,
-					"precio_total": 121.54
-	 			},
-				"leyenda": "blanca, cepillada"
-			}, {
-				"cantidad": 1.5,
-				"producto": {
-					"descripcion": "HUEVOS",
-					"precio_unitario": 60.50,
-					"alicuota": 21,
-					"unidad_medida": 7,
-					"precio_total": 90.75
-					
-				},
-				"leyenda": ""
-			}, {
-				"cantidad": 2,
-				"producto": {
-					"descripcion": "ZANAHORIA",
-					"precio_unitario": 242,
-					"alicuota": 21,
-					"unidad_medida": 7,
-					"precio_total": 484 
-	           },
-				"leyenda": ""
-			} ],
-			"bonificacion": 120,
-			"leyenda_gral": "bla bla bla",
-	        	"percepciones_iibb":        "0",
-	        	"percepciones_iibb_base":   "0",
-	        	"percepciones_iibb_alicuota": "0",
-	        	"percepciones_iva":         "0",
-	  		 "micrositios": {
-				"cliente": "url-del-micrositio",
-				"descarga":"url-del-micrositio"
-		     	},
-	        	"percepciones_iva_base":    "0",
-	        	"percepciones_iva_alicuota": "0",
-	     		"exentos":                  "0",
-	        	"impuestos_internos":       "0",
-	        	"impuestos_internos_base":   "0",
-	        	"impuestos_internos_alicuota": "0" ,
-			"nogravados": 0,
-			"total": 543.21,
-			"cae": " ",
-			"afip_codigo_barras" : " ",
-			"afip_qr": "",
-			"vencimiento_cae": "",
-			"vencimiento_pago": "23\/05\/2021",
-			"external_reference": "Lun141",
-			"tags": [
-				"etiqueta1",
-				"etiqueta2"
-				],
-			"status": "APROBADO Y EN COLA. SE EMITE EL 16\/03\/2022",
-			"ctacte_status": "",
-			"comprobante_pdf_url": ""
-		}
-	}
-	
-	]
+   "rta":"OK",
+   "error":"N",
+   "total":3,
+   "errores":[
+      
+   ],
+   "comprobantes":[
+      {
+         "cliente":{
+            "documento_tipo":"DNI",
+            "documento_nro":"1292963535 ",
+            "razon_social":"Pirulo",
+            "email":"test@test.com",
+            "domicilio":"Av Sta Fe 123"
+         },
+         "comprobante":{
+            "fecha":"06\/01\/2023",
+            "tipo":"FACTURA A",
+            "operacion":"V",
+            "punto_venta":10,
+            "numero":603,
+            "moneda":"PES",
+            "cotizacion":1,
+            "periodo_facturado_desde":"06\/01\/2023",
+            "periodo_facturado_hasta":"06\/01\/2023",
+            "rubro":"Deudores Varios",
+            "rubro_grupo_contable":"Ventas",
+            "detalle":[
+               {
+                  "cantidad":1,
+                  "producto":{
+                     "descripcion":"PRODUCTO DE PRUEBA",
+                     "precio_unitario":20000,
+                     "alicuota":21,
+                     "bonificacion":10000,
+                     "impuestos_internos_alicuota":10,
+                     "precio_total":10000
+                  },
+                  "bonificacion_porcentaje":50,
+                  "leyenda":"Hola manoala"
+               }
+            ],
+            "bonificacion":0,
+            "leyenda_gral":" ",
+            "percepciones_iibb":0,
+            "percepciones_iva":0,
+            "tributos":[
+               
+            ],
+            "exentos":0,
+            "nogravados":0,
+            "impuestos_internos":500,
+            "impuestos_internos_base":5000,
+            "impuestos_internos_alicuota":10,
+            "total":12600,
+            "cae":"73016074427512 ",
+            "afip_codigo_barras":"12121212121006000300000000000000201811052 ",
+            "afip_qr":"https:\/\/www.afip.gob.ar\/fe\/qr\/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjadadasdasdaAyMS0wNi0wNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjEwIiwidGlwb0NtcCI6MSwibnJvQ21wIjoiMDAwMDAwNzgiLCJpbXBvcnRlIjoiMDAwMDAwMDAwMzA4NS41MCIsIm1vbmVkYSI6IlBFUyIs ",
+            "vencimiento_cae":"07\/08\/2015",
+            "vencimiento_pago":"27\/08\/2015",
+            "comprobante_pdf_url":"https://www.dominio.com/00000006.pdf",
+            "external_reference":3303,
+            "tags":[
+               "etiqueta1",
+               "etiqueta2"
+            ],
+            "status":"EMITIDO",
+            "ctacte_status":"PAGO PARCIAL",
+            "micrositios":{
+               "cliente":"https:\/\/servicios.tusfacturas.app\/micrositios\/c\/asdsadsd\/adasdasd\/14228423\/acceder",
+               "descarga":"https:\/\/servicios.tusfacturas.app\/micrositios\/descargas\/asdasd\/asdsad\/kZ8Hl9fpUb4xFDK16O\/00000602"
+            }
+         }
+      },
+      {
+         "cliente":{
+            "documento_tipo":"DNI",
+            "documento_nro":"1292963535 ",
+            "razon_social":"Pirulo",
+            "email":"test@test.com",
+            "domicilio":"Av Sta Fe 123"
+         },
+         "comprobante":{
+            "fecha":"06\/12\/2022",
+            "tipo":"FACTURA A",
+            "operacion":"V",
+            "punto_venta":10,
+            "numero":602,
+            "moneda":"PES",
+            "cotizacion":1,
+            "periodo_facturado_desde":"06\/12\/2022",
+            "periodo_facturado_hasta":"06\/12\/2022",
+            "rubro":"Deudores Varios",
+            "rubro_grupo_contable":"Ventas",
+            "detalle":[
+               {
+                  "cantidad":1,
+                  "producto":{
+                     "descripcion":"PRODUCTO DE PRUEBA",
+                     "precio_unitario":20000,
+                     "alicuota":21,
+                     "bonificacion":10000,
+                     "impuestos_internos_alicuota":10,
+                     "precio_total":10000
+                  },
+                  "bonificacion_porcentaje":50,
+                  "leyenda":"Hola manoala"
+               }
+            ],
+            "bonificacion":0,
+            "leyenda_gral":" ",
+            "percepciones_iibb":0,
+            "percepciones_iva":0,
+            "tributos":[
+               
+            ],
+            "exentos":0,
+            "nogravados":0,
+            "impuestos_internos":1000,
+            "impuestos_internos_base":10000,
+            "impuestos_internos_alicuota":10,
+            "total":13100,
+            "cae":"72496063743552 ",
+            "afip_codigo_barras":"12121212121006000300000000000000201811052 ",
+            "afip_qr":"https:\/\/www.afip.gob.ar\/fe\/qr\/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjadadasdasdaAyMS0wNi0wNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjEwIiwidGlwb0NtcCI6MSwibnJvQ21wIjoiMDAwMDAwNzgiLCJpbXBvcnRlIjoiMDAwMDAwMDAwMzA4NS41MCIsIm1vbmVkYSI6IlBFUyIs ",
+            "vencimiento_cae":"07\/08\/2015",
+            "vencimiento_pago":"27\/08\/2015",
+            "comprobante_pdf_url":"https://www.dominio.com/00000006.pdf",
+            "external_reference":"",
+            "tags":[
+               
+            ],
+            "status":"EMITIDO",
+            "ctacte_status":"IMPAGA",
+            "micrositios":{
+               "cliente":"https:\/\/servicios.tusfacturas.app\/micrositios\/c\/asdsadsd\/adasdasd\/14228423\/acceder",
+               "descarga":"https:\/\/servicios.tusfacturas.app\/micrositios\/descargas\/asdasd\/asdsad\/kZ8Hl9fpUb4xFDK16O\/00000602"
+            }
+         }
+      },
+      {
+         "cliente":{
+            "documento_tipo":"DNI",
+            "documento_nro":"1292963535 ",
+            "razon_social":"Pirulo",
+            "email":"test@test.com",
+            "domicilio":"Av Sta Fe 123"
+         },
+         "comprobante":{
+            "fecha":"02\/11\/2022",
+            "tipo":"FACTURA A",
+            "operacion":"V",
+            "punto_venta":10,
+            "numero":601,
+            "moneda":"PES",
+            "cotizacion":1,
+            "periodo_facturado_desde":"02\/11\/2022",
+            "periodo_facturado_hasta":"02\/11\/2022",
+            "rubro":"Deudores varios",
+            "rubro_grupo_contable":"Deudores varios",
+            "detalle":[
+               {
+                  "cantidad":1,
+                  "producto":{
+                     "descripcion":"Gomas de borrar",
+                     "precio_unitario":200,
+                     "alicuota":0,
+                     "bonificacion":0,
+                     "impuestos_internos_alicuota":0,
+                     "precio_total":200
+                  },
+                  "bonificacion_porcentaje":0,
+                  "leyenda":""
+               }
+            ],
+            "bonificacion":0,
+            "leyenda_gral":" ",
+            "percepciones_iibb":0,
+            "percepciones_iva":0,
+            "tributos":[
+               
+            ],
+            "exentos":0,
+            "nogravados":0,
+            "impuestos_internos":0,
+            "impuestos_internos_base":0,
+            "impuestos_internos_alicuota":0,
+            "total":200,
+            "cae":"72446045034650 ",
+            "afip_codigo_barras":"12121212121006000300000000000000201811052 ",
+            "afip_qr":"https:\/\/www.afip.gob.ar\/fe\/qr\/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjadadasdasdaAyMS0wNi0wNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjEwIiwidGlwb0NtcCI6MSwibnJvQ21wIjoiMDAwMDAwNzgiLCJpbXBvcnRlIjoiMDAwMDAwMDAwMzA4NS41MCIsIm1vbmVkYSI6IlBFUyIs ",
+            "vencimiento_cae":"07\/08\/2015",
+            "vencimiento_pago":"27\/08\/2015",
+            "comprobante_pdf_url":"https://www.dominio.com/00000006.pdf",
+            "external_reference":"",
+            "tags":[
+               
+            ],
+            "status":"EMITIDO",
+            "ctacte_status":"IMPAGA",
+            "micrositios":{
+               "cliente":"https:\/\/servicios.tusfacturas.app\/micrositios\/c\/asdsadsd\/adasdasd\/14228423\/acceder",
+               "descarga":"https:\/\/servicios.tusfacturas.app\/micrositios\/descargas\/asdasd\/asdsad\/kZ8Hl9fpUb4xFDK16O\/00000602"
+            }
+         }
+      }
+   ]
 }
 ```
 
@@ -358,11 +301,11 @@ A partir del 01/05/2022, está consultá comenzará a ser paginada, con un lími
 Tipo de datos: **JSON**\
 Charset: **UTF-8**
 
-```
+```json
 {
 "usertoken" :  "xxxx",
 "apikey"    :  "xxxx",
-"apitoken"  :  "xxxx",
+"apitoken"  :  "xxxx",json
 "busqueda_tipo": "F",
  "pagina" : 0,
  "limite": 100 ,
@@ -392,7 +335,7 @@ Charset: **UTF-8**
 
 #### Que te devolverá ?
 
-```
+```json
 {
 	"rta": "OK",
 	"error": "N",
@@ -437,7 +380,7 @@ A partir del 01/05/2022, está consultá comenzará a ser paginada, con un lími
 
 #### Ejemplo del JSON a enviar :
 
-```
+```json
 {
 "usertoken" :  "xxxx",
 "apikey"    :  "xxxx",
@@ -459,7 +402,7 @@ A partir del 01/05/2022, está consultá comenzará a ser paginada, con un lími
 
 #### Que te devolverá ?
 
-```
+```json
 {
 	"rta": "OK",
 	"error": "N",
@@ -505,7 +448,7 @@ Debés tener en cuenta que  la información obtenida, será la relacionada al pu
 
 #### Ejemplo del JSON a enviar :
 
-```
+```json
 {
 "usertoken" :  "xxxx",
 "apikey"    :  "xxxx",
@@ -522,7 +465,7 @@ Debés tener en cuenta que  la información obtenida, será la relacionada al pu
 
 #### Que te devolverá ?
 
-```
+```json
 {
 	"rta": "OK",
 	"error": "N",

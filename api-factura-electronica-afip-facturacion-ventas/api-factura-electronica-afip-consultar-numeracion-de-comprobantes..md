@@ -60,7 +60,7 @@ En caso de detectar algún error, el campo error, se devuelve con una "S" y dent
 ### Ejemplo del JSON a enviar, para consultar la numeración del próximo comprobante.
 
 {% code title="JSON" %}
-```
+```json
 {
 	"usertoken": "xxxxx",
 	"apikey": "xxxxx",
@@ -85,7 +85,7 @@ En caso de detectar algún error, el campo error, se devuelve con una "S" y dent
 
 ### Ejemplo de JSON de respuesta
 
-```
+```json
 {
 	"error": "N",
 	"errores": [""],

@@ -4,7 +4,7 @@ description: >-
   NOTA DE DÉBITO E, NOTA DE CRÉDITO E.
 ---
 
-# Comprobantes de tipo "E" (comprobantes de exportación)
+# Comprobantes de exportación de tipo "E"
 
 A continuación te mostramos la estructura de los datos que se requieren para generar un comprobante de tipo exportación, ya sea NC, ND o FACTURA.
 
@@ -110,7 +110,7 @@ Información de los campos a enviar:
 
 ### Ejemplo de NOTA DE DÉBITO E
 
-```
+```json
 {
 "usertoken" :  "jajajja8c8bf67c884e1405e26c03c85",
 "apikey"    :  "9991",
@@ -219,13 +219,6 @@ Información de los campos a enviar:
                             ],
                 "bonificacion":             "0",
                 "leyenda_gral":             "bla bla bla",
-                "percepciones_iibb":        "0",
-                "percepciones_iibb_base":   "0",
-                "percepciones_iibb_alicuota": "0",
-                "percepciones_iva":         "0",
-                "percepciones_iva_base":    "0",
-                "percepciones_iva_alicuota": "0",
-                "exentos":                  "0",
                 "impuestos_internos":       "0",
                 "impuestos_internos_base":   "0",
                 "impuestos_internos_alicuota": "0",
@@ -237,12 +230,14 @@ Información de los campos a enviar:
 ### Datos a tener en cuenta:
 
 {% hint style="info" %}
-Para comprobantes de tipo E, los siguientes campos deberá enviarlos en cero: bonificación, exentos, percepciones (IIBB e IVA), no gravados, impuestos internos.
+Para comprobantes de tipo E, los siguientes campos deberá enviarlos en cero: bonificación, no gravados, impuestos internos.
+
+El bloque tributos deberá ser enviado vacío.
 {% endhint %}
 
 ### Ejemplo de llamada en PHP
 
-```
+```php
 // ENVIO REQUEST
 $url ="https://www.tusfacturas.app/app/api/v2/facturacion/nuevo" ;
 $ch = curl_init( $url );

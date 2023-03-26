@@ -233,3 +233,48 @@ También puede consultar ésta información con el método [Consultar unidades d
 | uiacthor              |   | 51             |
 | uiactig               |   | 64             |
 | unidades              |   | 7              |
+
+### Bloque "tributos" > Tipos de percepción a aplicar
+
+| Si queres enviar.. | Valor a enviar |
+| ------------------ | -------------- |
+| Percepciones IVA   | 6              |
+| Percepciones IIBB  | 7              |
+|                    |                |
+
+### Bloque "tributos" > Régimen de percepción
+
+| Tipo de tributo   | Régimen                | Valor a enviar |
+| ----------------- | ---------------------- | -------------- |
+| Percepciones IVA  | No especificado        | 1              |
+| Percepciones IVA  | Reg. General (RG 2408) | 2              |
+| Percepciones IVA  | RG 5329                | 3              |
+| Percepciones IIBB | CAPITAL FEDERAL        | 4              |
+| Percepciones IIBB | BUENOS AIRES           | 5              |
+| Percepciones IIBB | CATAMARCA              | 6              |
+| Percepciones IIBB | CHACO                  | 7              |
+| Percepciones IIBB | CHUBUT                 | 8              |
+| Percepciones IIBB | CORDOBA                | 9              |
+| Percepciones IIBB | CORRIENTES             | 10             |
+| Percepciones IIBB | ENTRE RIOS             | 11             |
+| Percepciones IIBB | FORMOSA                | 12             |
+| Percepciones IIBB | JUJUY                  | 13             |
+| Percepciones IIBB | LA PAMPA               | 14             |
+| Percepciones IIBB | LA RIOJA               | 15             |
+| Percepciones IIBB | MENDOZA                | 16             |
+| Percepciones IIBB | MISIONES               | 17             |
+| Percepciones IIBB | NEUQUEN                | 18             |
+| Percepciones IIBB | RIO NEGRO              | 19             |
+| Percepciones IIBB | SALTA                  | 20             |
+| Percepciones IIBB | SAN JUAN               | 21             |
+| Percepciones IIBB | SAN LUIS               | 22             |
+| Percepciones IIBB | SANTA CRUZ             | 23             |
+| Percepciones IIBB | SANTA FE               | 24             |
+| Percepciones IIBB | SANTIAGO DEL ESTERO    | 25             |
+| Percepciones IIBB | TIERRA DEL FUEGO       | 26             |
+| Percepciones IIBB | TUCUMAN                | 27             |
+| Percepciones IIBB | Otro                   | 28             |
+|                   |                        |                |
+
+
+

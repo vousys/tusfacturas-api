@@ -30,76 +30,77 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
 
 ## Factura de crédito electrónica A MiPyme (FCE)
 
-```
+```json
 {
-	"usertoken": "xxxx",
-	"apikey": "xxxx",
-	"apitoken": "xxxxx",
-	"cliente": {
-		"documento_tipo": "CUIT",
-		"documento_nro": "30712293841",
-		"razon_social": "VOUSYS",
-		"email": "tusfacturas@vousys.com",
-		"domicilio": "AV.LIBERTADOR 571",
-		"provincia": "2",
-		"envia_por_mail": "S",
-		"condicion_pago": "210",
-		"condicion_iva": "RI"
-	},
-	"comprobante": {
-		"fecha": "20/03/2018",
-		"tipo": "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
-		"operacion": "V",
-		"punto_venta": "0002",
-		"numero": "00000012",
-		"periodo_facturado_desde": "07/07/2019",
-		"periodo_facturado_hasta": "07/07/2019",
-		"rubro": "Alimentos",
-		"rubro_grupo_contable": "Alimentos",
-		"detalle": [ {
-			"cantidad": "1",
-			"producto": {
-				"descripcion": "p2",
-				"unidad_bulto": "1",
-				"lista_precios": "Lista de precios API 3",
-				"codigo": "160398",
-				"precio_unitario_sin_iva": 100000000,
-				"alicuota": "21"
-			},
-			"leyenda": ""
-		}],
-		"bonificacion": "0.00",
-		"leyenda_gral": " ",
-		"percepciones_iibb": "0",
-		"percepciones_iibb_base": "0",
-		"percepciones_iibb_alicuota": "0",
-		"percepciones_iva": "0",
-		"percepciones_iva_base": "0",
-		"percepciones_iva_alicuota": "0",
-		"exentos": "0", 
-		"impuestos_internos": "0",
-		"impuestos_internos_base": "0",
-		"impuestos_internos_alicuota": "0",
-		"total": "121000000",
-        "rg_especiales":   
-            {   "regimen" : "Factura de Crédito Electrónica MiPyMEs (FCE)",
-                 "datos"  : 
-
-                           [{
-                               "id"      :    2101,
-                               "valor"  :    "1234567890123456789011"
-                            },
-                            {
-                              "id"      :    23,
-                             "valor"  :    "Prueba"
-                             },
-                             {
-                              "id"      :    27,
-                             "valor"  :    "SCA"
-                             }
-                ]
-            }, 
-	}
+   "usertoken":"xxxx",
+   "apikey":"xxxx",
+   "apitoken":"xxxxx",
+   "cliente":{
+      "documento_tipo":"CUIT",
+      "documento_nro":"30712293841",
+      "razon_social":"VOUSYS",
+      "email":"tusfacturas@vousys.com",
+      "domicilio":"AV.LIBERTADOR 571",
+      "provincia":"2",
+      "envia_por_mail":"S",
+      "condicion_pago":"210",
+      "condicion_iva":"RI"
+   },
+   "comprobante":{
+      "fecha":"20/03/2018",
+      "tipo":"FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
+      "operacion":"V",
+      "punto_venta":"0002",
+      "numero":"00000012",
+      "periodo_facturado_desde":"07/07/2019",
+      "periodo_facturado_hasta":"07/07/2019",
+      "rubro":"Alimentos",
+      "rubro_grupo_contable":"Alimentos",
+      "detalle":[
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"p2",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"160398",
+               "precio_unitario_sin_iva":100000000,
+               "alicuota":"21"
+            },
+            "leyenda":""
+         }
+      ],
+      "bonificacion":"0.00",
+      "leyenda_gral":" ",
+      "tributos":[{
+            "tipo":7,
+            "regimen":10,
+            "base_imponible":200,
+            "alicuota":10,
+            "total":20
+         }],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":"121000020",
+      "rg_especiales":{
+         "regimen":"Factura de Crédito Electrónica MiPyMEs (FCE)",
+         "datos":[
+            {
+               "id":2101,
+               "valor":"1234567890123456789011"
+            },
+            {
+               "id":23,
+               "valor":"Prueba"
+            },
+            {
+               "id":27,
+               "valor":"SCA"
+            }
+         ]
+      }
+   }
 }
 ```
 
@@ -112,7 +113,7 @@ Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_espec
 Es importante aclarar que **AFIP no requiere el envio del CBU ni ALIAS,** para las NC y ND
 
 {% code title="JSON" %}
-```
+```json
 {
 	"usertoken": "xxx",
 	"apikey": "xxxx",
@@ -152,28 +153,32 @@ Es importante aclarar que **AFIP no requiere el envio del CBU ni ALIAS,** para l
 		}],
 		"bonificacion": "0.00",
 		"leyenda_gral": " ",
-		"percepciones_iibb": "0",
-		"percepciones_iibb_base": "0",
-		"percepciones_iibb_alicuota": "0",
-		"percepciones_iva": "0",
-		"percepciones_iva_base": "0",
-		"percepciones_iva_alicuota": "0",
+		 "tributos": [
+			{
+				"tipo" : 7,
+				"regimen": 22,
+				"base_imponible": 1000,
+				"alicuota": 10,
+				"total": 100
+				
+			}]
 		"exentos": "0", 
 		"impuestos_internos": "0",
 		"impuestos_internos_base": "0",
 		"impuestos_internos_alicuota": "0",
-		"total": "121000000",
-        "rg_especiales":   
-            {   "regimen" : "Factura de Crédito Electrónica MiPyMEs (FCE)",
-                 "datos"  : 
+		"total": "121000100",
+        	"rg_especiales":   
+            		{  
+            		 "regimen" : "Factura de Crédito Electrónica MiPyMEs (FCE)",
+                 	"datos"  : 
 
                            [ 
-                            {
-                              "id"      :    22,
-                             "valor"  :    "S"
-                             } 
-                ]
-            }, 
+                            	{
+                             	 "id"      :    22,
+                             	"valor"  :    "S"
+                             	} 
+                	   ]
+            		}, 
 	"comprobantes_asociados": [{
 			"tipo_comprobante": "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
 			"punto_venta": "3",
@@ -188,7 +193,7 @@ Es importante aclarar que **AFIP no requiere el envio del CBU ni ALIAS,** para l
 {% endcode %}
 
 {% hint style="info" %}
-Ten en cuenta que TusFacturas.app no realiza validaciones con respecto a los datos enviados. Las validaciones se realizan exclusivamente del lado de AFIP, previa generación del comprobante.
+Ten en cuenta que TusFacturas.app no realiza validaciones con respecto a los datos enviados referente a la RG MiPyme. Las validaciones se realizan exclusivamente del lado de AFIP, previa generación del comprobante.
 {% endhint %}
 
 ###

@@ -57,6 +57,7 @@
   * [Tablas de referencia](parametros/tablas-de-referencia.md)
 * [FAQs | Preguntas generales](faqs-or-preguntas-frecuentes.md)
 * [FAQs | cola de procesamiento](faqs-or-cola-de-procesamiento.md)
+* [FAQs | RG5329](faqs-or-rg5329.md)
 * [Changelog](changelog.md)
 
 ## TusFacturasAPP

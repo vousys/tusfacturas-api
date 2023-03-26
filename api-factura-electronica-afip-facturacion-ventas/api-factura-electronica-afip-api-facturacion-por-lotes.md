@@ -115,7 +115,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 #### Ejemplo de JSON a enviar
 
 {% code title="JSON" %}
-```
+```json
 {
 	"apitoken": "xxxx",
 	"apikey": "xxxx",
@@ -162,13 +162,8 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 				"cotizacion": 1,
 				"moneda": "PES",
 				"punto_venta": 3,
-				"percepciones_iibb": "0",
-				"percepciones_iibb_base": "0",
-				"percepciones_iibb_alicuota": "0",
-				"percepciones_iva": "0",
-				"percepciones_iva_base": "0",
-				"percepciones_iva_alicuota": "0",
 				"exentos": "0",
+				"tributos": [],
 				"impuestos_internos": "0",
 				"impuestos_internos_base": "0",
 				"impuestos_internos_alicuota": "0"
@@ -216,13 +211,8 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 				"total": 139.0,
 				"cotizacion": 1,
 				"moneda": "PES",
-				"punto_venta": 3,
-				"percepciones_iibb": "0",
-				"percepciones_iibb_base": "0",
-				"percepciones_iibb_alicuota": "0",
-				"percepciones_iva": "0",
-				"percepciones_iva_base": "0",
-				"percepciones_iva_alicuota": "0",
+				"punto_venta": 3, 
+				"tributos": [],
 				"exentos": "0",
 				"impuestos_internos": "0",
 				"impuestos_internos_base": "0",
@@ -274,12 +264,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 				"cotizacion": 1,
 				"moneda": "PES",
 				"punto_venta": 3,
-				"percepciones_iibb": "0",
-				"percepciones_iibb_base": "0",
-				"percepciones_iibb_alicuota": "0",
-				"percepciones_iva": "0",
-				"percepciones_iva_base": "0",
-				"percepciones_iva_alicuota": "0",
+				"tributos": [],
 				"exentos": "0",
 				"impuestos_internos": "0",
 				"impuestos_internos_base": "0",
@@ -295,7 +280,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 #### Ejemplo de como invocarlo desde PHP
 
 {% code title="PHP" %}
-```
+```php
 // ENVIO REQUEST
 $url ="https://www.tusfacturas.app/api/v2/facturacion/lotes" ;
 
@@ -317,7 +302,7 @@ curl_close($ch);
 Ej: una llamada con 3 requests, donde segundo el comprobante enviado tiene un tipo de comprobante diferente.
 
 {% code title="JSON" %}
-```
+```json
 {
     "error": "S",
     "errores": ["El comprobante enviado en la fila 1 (comenzando en 0) tiene un tipo de comprobante diferente."]
@@ -332,7 +317,7 @@ En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechaz
 {% endhint %}
 
 {% code title="JSON" %}
-```
+```json
  {
     "error": "S",
     "errores": [],

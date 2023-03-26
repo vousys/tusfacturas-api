@@ -25,90 +25,94 @@ A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO
 
 Podés consultar la documentación con referencia a cada campo, [desde aquí](./).
 
-```
-{ "usertoken" :  "xxxxx", 
- "apikey"    :  "xxxx", 
- "apitoken"  :  "xxxxx",
- 
-"cliente": 
-    {
-         "documento_tipo":       "CUIT", 
-         "documento_nro":        "30712293841", 
-         "razon_social":         "VOUSYS", 
-         "email":                "tusfacturas@vousys.com", 
-         "domicilio":            "AV.LIBERTADOR 571", 
-         "provincia":            "2", 
-         "envia_por_mail":       "S", 
-         "condicion_pago":       "211", 
-         "condicion_iva":        "RI" 
-    },
- 
-"comprobante": 
-    {    "fecha":                    "20/03/2018", 
-         "tipo":                     "NOTA DE CREDITO A", 
-         "operacion":                "V", 
-         "punto_venta":              "0002", 
-         "numero":                   "00000012", 
-         "periodo_facturado_desde":  "28/02/2018", 
-         "periodo_facturado_hasta":  "28/02/2018", 
-         "rubro":                    "Alimentos", 
-         "rubro_grupo_contable":     "Alimentos",
-
-"detalle":
-             [
-                  {
-                     "cantidad":     "1", 
-                     "producto":     
-                         {"descripcion":     "EXENTO - AVENA INSTANTANEA x5 kg. al 21", 
-                         "unidad_bulto":     "1", 
-                         "lista_precios":     "Lista de precios API 3", 
-                         "codigo":     "16098", 
-                         "precio_unitario_sin_iva":     "100",
-                         "alicuota": "-1"
-                         },
-                     "leyenda":     ""
-                 } ,
-
-                  {
-                     "cantidad":     "1", 
-                     "producto":     
-                         {"descripcion":     "p2", 
-                         "unidad_bulto":     "1", 
-                         "lista_precios":     "Lista de precios API 3", 
-                         "codigo":     "160398", 
-                         "precio_unitario_sin_iva":     "10",
-                         "alicuota": "21"
-                         },
-                     "leyenda":     ""
-                 }                  
-  
-             ],
-         "bonificacion":             "0.00", 
-         "leyenda_gral":             " ", 
-         "percepciones_iibb":        "0",
-         "percepciones_iibb_base":   "0",
-         "percepciones_iibb_alicuota": "0",
-         "percepciones_iva":         "0",
-         "percepciones_iva_base":    "0",
-         "percepciones_iva_alicuota": "0",
-         "exentos":                  "0",
-         "impuestos_internos":       "0",
-         "impuestos_internos_base":   "0",
-         "impuestos_internos_alicuota": "0",
-         "total":                    "112.1" ,
-          "comprobantes_asociados": [
-                            {
-                                "tipo_comprobante"   :    "FACTURA A",
-                                 "punto_venta"  :    "145",
-                                 "numero" : 12313,
-                                 "comprobante_fecha": "07/07/2018",
-                                 "cuit": 1111111111111     
-                            } 
-                       ]         
-         
-    } 
+```json
+{
+   "usertoken":"xxxxx",
+   "apikey":"xxxx",
+   "apitoken":"xxxxx",
+   "cliente":{
+      "documento_tipo":"CUIT",
+      "documento_nro":"30712293841",
+      "razon_social":"VOUSYS",
+      "email":"tusfacturas@vousys.com",
+      "domicilio":"AV.LIBERTADOR 571",
+      "provincia":"2",
+      "envia_por_mail":"S",
+      "condicion_pago":"211",
+      "condicion_iva":"RI",
+      "rg5329":"N"
+   },
+   "comprobante":{
+      "fecha":"20/03/2018",
+      "tipo":"NOTA DE CREDITO A",
+      "operacion":"V",
+      "punto_venta":"0002",
+      "numero":"00000012",
+      "periodo_facturado_desde":"28/02/2018",
+      "periodo_facturado_hasta":"28/02/2018",
+      "rubro":"Alimentos",
+      "rubro_grupo_contable":"Alimentos",
+      "detalle":[
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"16098",
+               "precio_unitario_sin_iva":"100",
+               "alicuota":"-1",
+               "rg5329":"N"
+            },
+            "leyenda":""
+         },
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"p2",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"160398",
+               "precio_unitario_sin_iva":"10",
+               "alicuota":"21",
+               "rg5329":"N"
+            },
+            "leyenda":""
+         }
+      ],
+      "bonificacion":"0.00",
+      "leyenda_gral":" ",
+      "tributos":[
+         {
+            "tipo":6,
+            "regimen":2,
+            "base_imponible":100,
+            "alicuota":10,
+            "total":10
+         },
+         {
+            "tipo":7,
+            "regimen":5,
+            "base_imponible":200,
+            "alicuota":10,
+            "total":20
+         }
+      ],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":"142.1",
+      "comprobantes_asociados":[
+         {
+            "tipo_comprobante":"FACTURA A",
+            "punto_venta":"145",
+            "numero":12313,
+            "comprobante_fecha":"07/07/2018",
+            "cuit":1111111111111
+         }
+      ]
+   }
 }
- 
 ```
 
 ## Ejemplo de: NOTA DE DÉBITO A - asociando períodos
@@ -117,165 +121,299 @@ A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO
 
 Podés consultar la documentación con referencia a cada campo, [desde aquí.](./)
 
-```
-{ "usertoken" :  "xxxxx", 
- "apikey"    :  "xxxx", 
- "apitoken"  :  "xxxxx",
- 
-"cliente": 
-    {
-         "documento_tipo":       "CUIT", 
-         "documento_nro":        "30712293841", 
-         "razon_social":         "VOUSYS", 
-         "email":                "tusfacturas@vousys.com", 
-         "domicilio":            "AV.LIBERTADOR 571", 
-         "provincia":            "2", 
-         "envia_por_mail":       "S", 
-         "condicion_pago":       "211", 
-         "condicion_iva":        "RI" 
-    },
- 
-"comprobante": 
-    {    "fecha":                    "20/03/2018", 
-         "tipo":                     "NOTA DE CREDITO A", 
-         "operacion":                "V", 
-         "punto_venta":              "0002", 
-         "numero":                   "00000012", 
-         "periodo_facturado_desde":  "28/02/2018", 
-         "periodo_facturado_hasta":  "28/02/2018", 
-         "rubro":                    "Alimentos", 
-         "rubro_grupo_contable":     "Alimentos",
-
-"detalle":
-             [
-                  {
-                     "cantidad":     "1", 
-                     "producto":     
-                         {"descripcion":     "EXENTO - AVENA INSTANTANEA x5 kg. al 21", 
-                         "unidad_bulto":     "1", 
-                         "lista_precios":     "Lista de precios API 3", 
-                         "codigo":     "16098", 
-                         "precio_unitario_sin_iva":     "100",
-                         "alicuota": "-1"
-                         },
-                     "leyenda":     ""
-                 } ,
-
-                  {
-                     "cantidad":     "1", 
-                     "producto":     
-                         {"descripcion":     "p2", 
-                         "unidad_bulto":     "1", 
-                         "lista_precios":     "Lista de precios API 3", 
-                         "codigo":     "160398", 
-                         "precio_unitario_sin_iva":     "10",
-                         "alicuota": "21"
-                         },
-                     "leyenda":     ""
-                 }                  
-  
-             ],
-         "bonificacion":             "0.00", 
-         "leyenda_gral":             " ", 
-         "percepciones_iibb":        "0",
-         "percepciones_iibb_base":   "0",
-         "percepciones_iibb_alicuota": "0",
-         "percepciones_iva":         "0",
-         "percepciones_iva_base":    "0",
-         "percepciones_iva_alicuota": "0",
-         "exentos":                  "0",
-         "impuestos_internos":       "0",
-         "impuestos_internos_base":   "0",
-         "impuestos_internos_alicuota": "0",
-         "total":                    "112.1" ,
-          comprobantes_asociados_periodo: 
-          {
-            "fecha_desde"   :    "20/11/2020",
-            "fecha_hasta"  :    "25/11/2020"  
-        }     
-         
-    } 
+```json
+{
+   "usertoken":"xxxxx",
+   "apikey":"xxxx",
+   "apitoken":"xxxxx",
+   "cliente":{
+      "documento_tipo":"CUIT",
+      "documento_nro":"30712293841",
+      "razon_social":"VOUSYS",
+      "email":"tusfacturas@vousys.com",
+      "domicilio":"AV.LIBERTADOR 571",
+      "provincia":"2",
+      "envia_por_mail":"S",
+      "condicion_pago":"211",
+      "condicion_iva":"RI",
+      "rg5329":"N"
+   },
+   "comprobante":{
+      "fecha":"20/03/2018",
+      "tipo":"NOTA DE DEBITO A",
+      "operacion":"V",
+      "punto_venta":"0002",
+      "numero":"00000012",
+      "periodo_facturado_desde":"28/02/2018",
+      "periodo_facturado_hasta":"28/02/2018",
+      "rubro":"Alimentos",
+      "rubro_grupo_contable":"Alimentos",
+      "detalle":[
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"16098",
+               "precio_unitario_sin_iva":"100",
+               "alicuota":"-1",
+               "rg5329":"N"
+            },
+            "leyenda":""
+         },
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"p2",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"160398",
+               "precio_unitario_sin_iva":"10",
+               "alicuota":"21",
+               "rg5329":"N"
+            },
+            "leyenda":""
+         }
+      ],
+      "bonificacion":"0.00",
+      "leyenda_gral":" ",
+      "tributos":[
+         {
+            "tipo":6,
+            "regimen":2,
+            "base_imponible":100,
+            "alicuota":10,
+            "total":10
+         },
+         {
+            "tipo":7,
+            "regimen":5,
+            "base_imponible":200,
+            "alicuota":10,
+            "total":20
+         }
+      ],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":"142.1",
+      "comprobantes_asociados":[
+         {
+            "tipo_comprobante":"FACTURA A",
+            "punto_venta":"145",
+            "numero":12313,
+            "comprobante_fecha":"07/07/2018",
+            "cuit":1111111111111
+         }
+      ]
+   }
 }
- 
 ```
 
 
 
 ## Ejemplo de FACTURA A&#x20;
 
-A continuación podrás ver un ejemplo del JSON para emitir una FACTURA A.
+A continuación podrás ver un ejemplo del JSON para emitir una FACTURA A que no aplica a la RG5329.
 
-```
-{ "usertoken" :  "xxxx", 
- "apikey"    :  "xxx", 
- "apitoken"  :  "xxxx",
- 
-"cliente": 
-    {
-         "documento_tipo":       "CUIT", 
-         "documento_nro":        "30712293841", 
-         "razon_social":         "VOUSYS", 
-         "email":                "tusfacturas@vousys.com", 
-         "domicilio":            "AV.LIBERTADOR 571", 
-         "provincia":            "2", 
-         "envia_por_mail":       "S", 
-         "condicion_pago":       "211", 
-         "condicion_iva":        "RI" 
-    },
- 
-"comprobante": 
-    {    "fecha":                    "20/03/2018", 
-         "tipo":                     "FACTURA A", 
-         "operacion":                "V", 
-         "punto_venta":              "0002", 
-         "numero":                   "00000012", 
-         "periodo_facturado_desde":  "28/02/2018", 
-         "periodo_facturado_hasta":  "28/02/2018", 
-         "rubro":                    "Alimentos", 
-         "rubro_grupo_contable":     "Alimentos",
-
-"detalle":
-             [
-                  {
-                     "cantidad":     "1", 
-                     "producto":     
-                         {
-                         "descripcion":     "EXENTO - AVENA INSTANTANEA x5 kg. al 21", 
-                         "unidad_bulto":     "1", 
-                         "lista_precios":     "Lista de precios API 3", 
-                         "codigo":     "16098", 
-                         "precio_unitario_sin_iva":     "100",
-                         "alicuota": "21"
-                         },
-                     "leyenda":     "Enviadas en cajas separadas"
-                 }                   
-  
-             ],
-         "bonificacion":             "0.00", 
-         "leyenda_gral":             " ", 
-         "percepciones_iibb":        "0",
-         "percepciones_iibb_base":   "0",
-         "percepciones_iibb_alicuota": "0",
-         "percepciones_iva":         "0",
-         "percepciones_iva_base":    "0",
-         "percepciones_iva_alicuota": "0",
-         "exentos":                  "0",
-         "impuestos_internos":       "0",
-         "impuestos_internos_base":   "0",
-         "impuestos_internos_alicuota": "0",
-         "total":                    "121" ,
-          "comprobantes_asociados": []         
+```json
+{
+   "usertoken":"xxxx",
+   "apikey":"xxx",
+   "apitoken":"xxxx",
+   "cliente":{
+      "documento_tipo":"CUIT",
+      "documento_nro":"30712293841",
+      "razon_social":"VOUSYS",
+      "email":"tusfacturas@vousys.com",
+      "domicilio":"AV.LIBERTADOR 571",
+      "provincia":"2",
+      "envia_por_mail":"S",
+      "condicion_pago":"211",
+      "condicion_iva":"RI"
+   },
+   "comprobante":{
+      "fecha":"20/03/2018",
+      "tipo":"FACTURA A",
+      "operacion":"V",
+      "punto_venta":"0002",
+      "numero":"00000012",
+      "periodo_facturado_desde":"28/02/2018",
+      "periodo_facturado_hasta":"28/02/2018",
+      "rubro":"Alimentos",
+      "rubro_grupo_contable":"Alimentos",
+      "detalle":[
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"16098",
+               "precio_unitario_sin_iva":"100",
+               "alicuota":"21",
+               "rg5329":"N"
+            },
+            "leyenda":"Enviadas en cajas separadas"
+         }
+      ],
+      "bonificacion":"0.00",
+      "leyenda_gral":" ",
+      "tributos":[
+         {
+            "tipo":6,
+            "regimen":2,
+            "base_imponible":100,
+            "alicuota":10,
+            "total":10
+         },
+         {
+            "tipo":7,
+            "regimen":5,
+            "base_imponible":200,
+            "alicuota":10,
+            "total":20
+         }
+      ],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":"151",
+      "comprobantes_asociados":[
          
-    } 
+      ]
+   }
 }
- 
 ```
 
+#### Ejemplo de cómo emitir una factura A que percibe IVA por la RG5329.&#x20;
+
+Conocé cuándo aplicar la RG5329, desde nuestras [FAQs](../faqs-or-preguntas-frecuentes.md)
+
+```json
+{
+   "usertoken":"xxxx",
+   "apikey":"xxx",
+   "apitoken":"xxxx",
+   "cliente":{
+      "documento_tipo":"CUIT",
+      "documento_nro":"30712293841",
+      "razon_social":"VOUSYS",
+      "email":"tusfacturas@vousys.com",
+      "domicilio":"AV.LIBERTADOR 571",
+      "provincia":"2",
+      "envia_por_mail":"S",
+      "condicion_pago":"211",
+      "condicion_iva":"RI",
+      "rg5329":"S"
+   },
+   "comprobante":{
+      "fecha":"26/03/2023",
+      "tipo":"FACTURA A",
+      "operacion":"V",
+      "punto_venta":"0002",
+      "numero":"00000012",
+      "periodo_facturado_desde":"28/02/2018",
+      "periodo_facturado_hasta":"28/02/2018",
+      "rubro":"Alimentos",
+      "rubro_grupo_contable":"Alimentos",
+      "detalle":[
+         {
+            "cantidad":"2",
+            "afecta_stock":"N",
+            "bonificacion_porcentaje":"0",
+            "producto":{
+               "descripcion":"Papel carta",
+               "unidad_bulto":"1",
+               "lista_precios":"MI LISTA DE PRECIOS",
+               "codigo":"",
+               "precio_unitario_sin_iva":102000,
+               "alicuota":21,
+               "impuestos_internos_alicuota":0,
+               "rg5329":"S",
+               "unidad_medida":"7",
+               "actualiza_precio":"S"
+            },
+            "leyenda":""
+         },
+         {
+            "cantidad":"1",
+            "afecta_stock":"N",
+            "bonificacion_porcentaje":"0",
+            "producto":{
+               "descripcion":"Paneles solares",
+               "unidad_bulto":"1",
+               "lista_precios":"MI LISTA DE PRECIOS",
+               "codigo":"",
+               "precio_unitario_sin_iva":1000,
+               "alicuota":21,
+               "impuestos_internos_alicuota":0,
+               "unidad_medida":"7",
+               "actualiza_precio":"N"
+            },
+            "leyenda":""
+         },
+         {
+            "cantidad":"1",
+            "afecta_stock":"N",
+            "bonificacion_porcentaje":"0",
+            "producto":{
+               "descripcion":"Celulares",
+               "unidad_bulto":"1",
+               "lista_precios":"MI LISTA DE PRECIOS",
+               "codigo":"",
+               "precio_unitario_sin_iva":200300,
+               "alicuota":10.5,
+               "impuestos_internos_alicuota":0,
+               "unidad_medida":"7",
+               "actualiza_precio":"S",
+               "rg5329":"S"
+            },
+            "leyenda":""
+         }
+      ],
+      "bonificacion":"0.00",
+      "leyenda_gral":" ",
+      "tributos":[
+         {
+            "tipo":6,
+            "regimen":3,
+            "base_imponible":204000,
+            "alicuota":3,
+            "total":6120
+         },
+         {
+            "tipo":6,
+            "regimen":3,
+            "base_imponible":200300,
+            "alicuota":1.5,
+            "total":3004.5
+         },
+         {
+            "tipo":7,
+            "regimen":5,
+            "base_imponible":200,
+            "alicuota":10,
+            "total":20
+         }
+      ],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":478526,
+      "comprobantes_asociados":[
+         
+      ]
+   }
 }
+```
+
+
 
 ### Ejemplo de llamada en PHP
 
-```
+```php
 // ENVIO REQUEST
 $url ="https://www.tusfacturas.app/app/api/v2/facturacion/nuevo" ;
 $ch = curl_init( $url );

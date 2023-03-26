@@ -38,7 +38,8 @@ Te sugerimos leer primero:&#x20;
 * El request, deben venir **con el campo número en cero (0)**.
 * **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
 * **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](../mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los requests y serán rechazados de manera instantánea.
-* **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)  **en ésta modalidad ni programar abonos.**
+* **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)  **en ésta modalidad.**
+* Si creas abonos, tené en cuenta que no recibirás un hook por cada vez que el abono se emita, solo con la primera emisión. (funcionalidad en desarrollo)
 * **Al momento del envío del request, la suscripción de tu espacio de trabajo debe encontrarse vigente, activa y con cupo de facturación disponible** para emitir el comprobante (aunque no se emita hoy).
 * Si se detecta al menos un (1) error de validación de datos,  no se mandará a procesar y obtendrás la respuesta al instante, no por un webhook.
 {% endhint %}
@@ -101,7 +102,7 @@ Recibirás la respuesta al instante y también se te notificará vía webhook.&#
 Ejemplo de un request, cuya external\_reference no es válida:
 
 {% code title="JSON" %}
-```
+```json
 {
 	"error": "S",
 	"errores": [
@@ -127,7 +128,7 @@ Ejemplo de un request, cuya external\_reference no es válida:
 
 Ejemplo del hook que recibirás:
 
-```
+```json
 {
 	"creado": "24\/05\/2022 16:58:51",
 	"evento": "error",
@@ -141,7 +142,7 @@ Ejemplo del hook que recibirás:
 
 En cambio, si tu request **no cumple con los requisitos básicos** previamente mencionados, solo recibirás al instante la respuesta y no se te notificará por webhook (el comprobante no entrará en la cola de procesamiento)
 
-```
+```json
 {
 	"error": "S",
 	"errores": [
@@ -176,7 +177,7 @@ En caso que no se detecten errores tempranos, en la etapa de validación de los 
 
 Ejemplo :
 
-```
+```json
 {
 	"error": "N",
 	"errores": [],
@@ -222,7 +223,7 @@ El hook de "encolado", te informa que el request ha sido aceptado para su proces
 
 &#x20;El JSON que recibirás será similar al siguiente ejemplo:
 
-```
+```json
 {
 	"creado": "18/03/2022 15:58:11",
 	"evento": "encolado",
@@ -244,7 +245,7 @@ El hook de "emido", te informa que el request ha sido procesado con éxito y se 
 
 El JSON que recibirás será similar al siguiente ejemplo:&#x20;
 
-```
+```json
 {
 	"creado": "18/03/2022 15:58:11",
 	"evento": "emitido",
@@ -266,7 +267,7 @@ El hook de "error", te informa que el request ha sido procesado, pero se han det
 
 El JSON que recibirás será similar al siguiente ejemplo y a diferencia de los anteriores, obtendrás la lista de errores detectados, dentro del campo "msg".
 
-```
+```json
 {
 	"creado": "18/03/2022 15:58:11",
 	"evento": "error",
