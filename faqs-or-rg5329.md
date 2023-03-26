@@ -57,6 +57,13 @@ En el servicio API, la información relativa a la percepción RG5329 debe ser en
 
 
 
+### ¿Cual es la alícuota que se aplica a la percepción IVA RG5329?
+
+Cuando la alícuota de IVA de tu producto sea 21%, se aplica una alícuota de 3%\
+Cuando la alícuota de IVA de tu producto sea 10,5%, se aplica una alícuota de 1.5%
+
+
+
 ### Qué debes modificar en el JSON
 
 #### 1. Productos
