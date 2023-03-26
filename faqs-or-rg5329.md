@@ -47,8 +47,8 @@ Para que puedas aplicar las percepciones IVA RG5329, se deben cumplir las siguie
 3. El cliente está marcado como "Si, es sujeto pasible de percepción de IVA RG5329"
 4. El producto está marcado como "Si, aplica percepción de IVA a productos comprendidos en la RG5329"
 5. Emitís un comprobante de tipo "A"
-6. El importe total de las percepciones de IVA RG 5329, superan el mínimo impuesto por AFIP de $3000.01
-7. La fecha de vigencia de la RG5329 es anterior o igual al día de la fecha
+6. El importe total de las percepciones de IVA RG 5329, superan el mínimo impuesto por AFIP de $3,000
+7. La fecha de vigencia de la RG5329 (01/04/2023) es anterior o igual al día de la fecha
 8. No podrás usar el servicio de integración con tiendas de E-commerce si aplicas percepciones de cualquier tipo
 9. No podrás crear abonos que apliquen percepciones de cualquier tipo.
 10. Solo podrás emitir ventas que apliquen a la RG5329 desde nuestra plataforma web y/o servicio API.
