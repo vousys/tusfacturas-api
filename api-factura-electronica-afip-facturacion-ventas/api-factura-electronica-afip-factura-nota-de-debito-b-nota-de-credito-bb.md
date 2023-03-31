@@ -1,19 +1,18 @@
 ---
 description: >-
-  Emití con la API de TusFacturas.app los siguientes comprobantes: FacturaB /
-  Nota de débito B / Nota de crédito B / Factura de crédito MiPyme B / Nota de
-  crédito  MiPyme B / Nota de débito  MiPyme B
+  Emití con la API de facturación electrónica AFIP Argentina provista por
+  TusFacturasApp, comprobantes AFIP de tipo "B"
 ---
 
 # Ejemplos de comprobantes tipo "B"
 
-Los comprobantes de tipo "B", son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto".
-
-No sabes en qué momento emitir comprobantes de tipo **B**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
+Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito B / Factura de crédito MiPyme B / Notas de crédito MiPyme B / Nota de débito MiPyme B), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto" y se emitan a un consumidor final o un exento en IVA. No sabes en qué momento emitir comprobantes de tipo **B**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
 
 
 
-A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B, una NOTA DE DEBITO B y una NOTA DE CREDITO B. Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
+### Ejemplo de Factura B
+
+A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B, una NOTA DE DÉBITO B y una NOTA DE CRÉDITO B. Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
 
 ```json
 {
@@ -72,7 +71,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B, una N
 }n
 ```
 
-## Ejemplo de: NOTA DE CRÉDITO B  - detallando comprobantes.
+## Ejemplo de: NOTA DE CRÉDITO B  - detallando los comprobantes que anulas.
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que [detalla los comprobantes asociados.](./#comprobantes-asociados-por-periodo)
 

@@ -1,5 +1,7 @@
 ---
-description: Las respuestas a las preguntas más frecuentes
+description: >-
+  Las respuestas a las preguntas más frecuentes acerca del servicio API de
+  facturación electrónica AFIP provisto por TusFacturasAPP
 ---
 
 # FAQs | Preguntas generales

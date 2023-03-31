@@ -1,5 +1,7 @@
 ---
-description: Mediante éste método podrás regenerar el archivos pdf.
+description: >-
+  La API de facturación electrónica AFIP de TusFacturasAPP, te permite regenerar
+  el archivo pdf de tu comprobante las veces que necesites.
 ---
 
 # Re-generación del archivo PDF

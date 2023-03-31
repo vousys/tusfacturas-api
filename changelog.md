@@ -1,5 +1,7 @@
 ---
-description: Conocé los últimos cambios realizados sobre nuestra plataforma API.
+description: >-
+  A continuación podrás conocer los cambios realizados sobre nuestra plataforma
+  API.
 ---
 
 # Changelog

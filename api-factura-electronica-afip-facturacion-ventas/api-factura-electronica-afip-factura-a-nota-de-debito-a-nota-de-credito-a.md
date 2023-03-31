@@ -1,13 +1,12 @@
 ---
 description: >-
-  Emití con la API de TusFacturas.app los siguientes comprobantes:  Factura A /
-  Nota de débito A / Nota de crédito A / Factura de crédito MiPyme A / Nota de
-  crédito  MiPyme A / Nota de débito  MiPyme A
+  Emití con la API de facturación electrónica AFIP Argentina provista por
+  TusFacturasApp, comprobantes AFIP de tipo "A"
 ---
 
 # Ejemplos de comprobantes tipo "A"
 
-Los comprobantes de tipo "A", son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto".
+Los comprobantes de tipo "A" (Factura A / Nota de débito A / Nota de crédito A / Factura de crédito MiPyme A / Nota de crédito MiPyme A / Nota de débito MiPyme A), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto".
 
 No sabes en qué momento emitir comprobantes de tipo **A**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante A.&#x20;
 

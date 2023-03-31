@@ -1,14 +1,14 @@
 ---
 description: >-
-  Mediante éste método podrás hacer el reenvío de un comprobante ya emitido a tu
-  cliente, siempre y cuando hayas especificado en el cliente, que se le enviaba
-  por e-mail.
+  Mediante éste método podrás hacer el reenvío por e-mail de un comprobante a tu
+  cliente las veces que necesites.
 ---
 
 # Reenviar comprobante a un cliente
 
-Tipo de datos: **JSON**\
-Charset: **UTF-8**
+Debes tener en cuenta que la función de "reenviar comprobante" solo estará habilitada si al momento de generar el comprobante, habías indicado en el perfil de tu cliente que el comprobante se enviaba por e-mail. &#x20;
+
+
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/reenviar " method="post" summary="Reenviar un comprobante a tu cliente" %}
 {% swagger-description %}
@@ -59,7 +59,7 @@ Tus Credenciales de acceso.
 {% endswagger-response %}
 {% endswagger %}
 
-### Ejemplo del JSON a enviar:
+### Ejemplo del JSON a enviar para reenviar un comprobante:
 
 ```
 {
@@ -74,3 +74,4 @@ Tus Credenciales de acceso.
         }
 }
 ```
+

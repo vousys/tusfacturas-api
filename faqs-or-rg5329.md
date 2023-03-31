@@ -1,13 +1,10 @@
 ---
 description: >-
-  Para que nuestra plataforma aplique correctamente las percepciones RG5329 en
-  los comprobantes que emitas, se requieren realizar ciertos pasos de
-  configuración inicial.
+  Conocé cómo configurar tu cuenta aplicar las percepciones RG5329 en los
+  comprobantes que emitas.
 ---
 
 # FAQs | RG5329
-
-
 
 Te sugerimos siempre consultar con tu contador o asesor impositivo antes de realizar ésta configuración.
 

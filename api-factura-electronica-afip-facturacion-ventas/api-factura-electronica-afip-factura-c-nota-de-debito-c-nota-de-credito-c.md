@@ -1,17 +1,16 @@
 ---
 description: >-
-  Emití con la API de TusFacturas.app los siguientes comprobantes: Factura C /
-  Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C / Nota de
-  crédito  MiPyme C / Nota de débito  MiPyme C
+  Emití con la API de facturación electrónica AFIP Argentina provista por
+  TusFacturasApp, comprobantes AFIP de tipo "C"
 ---
 
 # Ejemplos de comprobantes tipo "C"
 
-Los comprobantes de tipo "C", son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Monotributo" o "Exento".
-
-No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
+Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C / Nota de crédito MiPyme C / Nota de débito MiPyme C), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Monotributo" o "Exento". No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
 
 
+
+### Ejemplo de Factura "C"
 
 A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
 
@@ -74,7 +73,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
 }
 ```
 
-## Ejemplo de: NOTA DE CRÉDITO C  - detallando comprobantes.
+## Ejemplo de: NOTA DE CRÉDITO C  - detallando los comprobantes que anulas.
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO C, que [detalla los comprobantes asociados.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#envio-de-comprobantes-asociados-detallados)
 
