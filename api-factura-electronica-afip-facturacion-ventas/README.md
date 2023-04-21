@@ -18,15 +18,15 @@ Utilizando éste método vos envías un solo request para ser procesado, y obten
 
 [Conocé más sobre la facturación electrónica individual e instantánea, desde aquí](./#facturacion-instantanea-individual)
 
-****
 
-#### **Facturas individuales en cola       **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark>**  ** &#x20;
+
+#### **Facturas individuales en cola       **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
 
 En éste método envías un solo request para ser procesado, y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md).&#x20;
 
 Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
 
-****
+
 
 #### **Lote de facturas instantáneas**
 
@@ -34,9 +34,9 @@ En éste método envías una cierta cantidad de requests para ser procesados y o
 
 Conocé más sobre la [facturación electrónica en lotes, aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
 
-****
 
-#### **Lote de facturas asincrónico en cola      **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark>**  ** &#x20;
+
+#### **Lote de facturas asincrónico en cola      **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
 
 En éste método envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md).&#x20;
 
@@ -114,9 +114,7 @@ Estructura de "Cliente", según se informa a continuación
 
 #### Ejemplo de JSON generico <mark style="color:purple;">completo con todas las posibles opciones</mark>, para generar un comprobante.
 
-Tené en cuenta que según el tipo de comprobante que emitas, pueden variar los bloques que debes enviar.
-
-__
+Tené en cuenta que según el tipo de comprobante que emítas, pueden variar los bloques que debes enviar.&#x20;
 
 ```json
 {
@@ -279,9 +277,27 @@ __
 }
 ```
 
-_(Información de ejemplo, solo para visualizar su estructura )_
+_Información de ejemplo - solo para visualizar su estructura -_&#x20;
 
-__
+### Ejemplos de comprobantes según su tipo / letra
+
+| Tipo de comprobante                                                                                                                                   | Ejemplo                                                                                                                |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Factura A, Nota de débito A, Nota de crédito A                                                                                                        | Ver [ejemplo de comprobantes tipo "A"](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)   |
+| Factura B, Nota de débito B, Nota de crédito B                                                                                                        | Ver [ejemplo de comprobantes tipo "B"](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)    |
+| Factura C, Nota de débito C, Nota de crédito C                                                                                                        | Ver [ejemplo de comprobantes tipo "C"](api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)   |
+| Factura E, Nota de débito E, Nota de crédito E                                                                                                        | Ver [ejemplo de comprobantes tipo "E"](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)           |
+| Factura de Crédito Electrónica MiPyme (FCE),  Nota de débito de Crédito Electrónica MiPyme (FCE), Nota de crédito de Crédito Electrónica MiPyme (FCE) | Ver [ejemplo de comprobantes tipo "MiPyme"](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md) |
+
+#### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme" en lugar de una factura A común?
+
+Hay ciertos casos donde AFIP exige que en lugar de emitir una factura A,B o C, le emitas a tu cliente, un comprobante de tipo  "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE)" A, B o C. En ese caso, recibirás en la respuesta, el campo requiere\_fec = "SI".&#x20;
+
+Ésto se debe a que el emisor o el receptor están informados como Pyme en AFIP y/o el monto del comprobante a emitir supera el límite que AFIP tiene definido. Ésta info varia día a día, pero disponemos de un método para que puedas invocarlo, previo a éste servicio para conocerlo. Consultá la documentación [desde aquí](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce) y te sugerimos comentar ésta modalidad, con tu cliente y asesorarte con su estudio impositivo al respecto.
+
+
+
+
 
 ### Que te retorna la llamada a la API?
 
@@ -375,14 +391,6 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * Ningún comprobante puede ser modificado una vez emitido.
 {% endhint %}
 
-#### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme" en lugar de una factura A común?
-
-Hay ciertos casos donde AFIP exige que en lugar de emitir una factura A,B o C, le emitas a tu cliente, un comprobante de tipo  "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE)" A, B o C. En ese caso, recibirás en la respuesta, el campo requiere\_fec = "SI".&#x20;
-
-Ésto se debe a que el emisor o el receptor están informados como Pyme en AFIP y/o el monto del comprobante a emitir supera el límite que AFIP tiene definido. Ésta info varia día a día, pero disponemos de un método para que puedas invocarlo, previo a éste servicio para conocerlo. Consultá la documentación [desde aquí](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce).&#x20;
-
-Te sugerimos comentar ésta modalidad, con tu cliente y asesorarte con su estudio impositivo al respecto.
-
 ## ¿Cómo es la estructura de un request?
 
 ### Estructura del bloque: "Comprobante"
@@ -455,7 +463,7 @@ comprobante: {
 | :-------------------: | ----------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |    `documento_nro`    | REQUERIDO         |                                                                                                        <p>Campo numérico, sin puntos ni guiones.<br><strong>Ejemplo: 30111222334</strong></p>                                                                                                       |
 |     `razon_social`    | REQUERIDO         |                                                                                                  <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Pirulo S.A</strong></p>                                                                                                 |
-|        `email`        | OPCIONAL          |                                                                                            <p>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: tusfacturas@vousys.com</strong></p>                                                                                           |
+|        `email`        | OPCIONAL          |                                                                       <p>Campo alfanumérico. Longitud máxima 255 caracteres. Máximo 15 direcciones separadas por coma.<br><strong>Ejemplo: tusfacturas@vousys.com</strong></p>                                                                      |
 |      `domicilio`      | REQUERIDO         |                                                                                              <p>Campo alfanumérico. Longitud máxima 255 caracteres. <br><strong>Ejemplo: Av. Santa Fe 123</strong></p>                                                                                              |
 |      `provincia`      | REQUERIDO         |                                                                          <p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.<br><strong>Ejemplo: 2</strong></p>                                                                          |
 |    `envia_por_mail`   | REQUERIDO         |                                                                               <p>Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: <strong>S , N</strong><br><strong>Ejemplo: S</strong></p>                                                                               |
@@ -479,22 +487,22 @@ Tipo de documento = "OTRO"
 
 En nombre, indicá lo que tu contador/a te recomiende.
 
-Tené en cuenta, que solo podrás facturar sin indicar el documento del comprador, hasta ciertos montos que AFIP actualiza regularmente. TusFacturasAPP, cuenta con un método que te permite obtener el monto actualizado. [Consultá la documentaión de los documento : los topes de venta a CF](https://developers.tusfacturas.app/api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final)
+Tené en cuenta, que solo podrás facturar sin indicar el documento del comprador, hasta ciertos montos que AFIP actualiza regularmente. TusFacturasAPP, cuenta con un método que te permite obtener el monto actualizado. [Consultá la documentación: los topes de venta a CF](https://developers.tusfacturas.app/api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final)
 
-* Para casos de clientes del exterior, que posean **pasaporte**, tené en cuenta que AFIP solo permite el envío de números.&#x20;
+* Para casos de clientes del exterior, que posean **pasaporte**, tené en cuenta que AFIP sólo permite el envío de números.&#x20;
 {% endhint %}
 
 ###
 
 ### Estructura del bloque: "Detalle de conceptos"
 
-El detalle de conceptos se compone de una lista de cada uno de los productos o servicios, que vas a facturar.
+El detalle de conceptos se compone de una lista de cada uno de los productos o servicios que vas a facturar.
 
 {% hint style="info" %}
-Recuerda que debes enviar una **lista (array)** de conceptos. **El máximo de conceptos permitidos por comprobante es de 130**.
+&#x20;**El máximo de conceptos permitidos por comprobante es de 130**.
 {% endhint %}
 
-La estructura **de cada concepto** a enviar es la siguiente:
+La estructura **de la lista de conceptos** a enviar es la siguiente:
 
 {% code title="JSON" %}
 ```json
@@ -541,7 +549,7 @@ comprobante: {
 ```
 {% endcode %}
 
-Los campos que debes enviar son los siguientes:
+Los campos que debes enviar en cada concepto de la lista del bloque "detalle" son los siguientes:
 
 | `cantidad`                                                             | REQUERIDO |                                      <p>Campo numérico con 2 decimales. Separador de decimales: punto.<br><strong>Ejemplo: 1.50</strong></p>                                     |
 | ---------------------------------------------------------------------- | --------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -556,28 +564,27 @@ Los campos que debes enviar son los siguientes:
 
 Cada producto o servicio que factures, deberá ser enviado con la siguiente estructura:
 
-```json
-{
-"descripcion":     "HUEVOS",
-"unidad_bulto":    "30",
-"lista_precios":   "MAPPLETS",
-"codigo":          "MPH",
-"precio_unitario_sin_iva":"50",
-"alicuota":      "10.5",
-"unidad_medida": "7",
-"impuestos_internos_alicuota": 0,
-"actualiza_precio": "N",
-"rg5329": "S"
+<pre class="language-json"><code class="lang-json">{
+    "descripcion":     "HUEVOS",
+<strong>    "unidad_bulto":    "30",
+</strong>    "lista_precios":   "MAPPLETS",
+    "codigo":          "MPH",
+    "precio_unitario_sin_iva":"50",
+    "alicuota":      "10.5",
+    "unidad_medida": "7",
+    "impuestos_internos_alicuota": 0,
+    "actualiza_precio": "N",
+    "rg5329": "N"
 }
-```
+</code></pre>
 
-####
+
 
 {% hint style="info" %}
 **Datos a tener en cuenta:**
 
 * Si el producto ya existía en tu base de productos de nuestra plataforma ( se valida que sea la misma lista de precios, código de producto y/o descripción del mismo), el mismo será actualizado por completo, con los nuevos datos que envíes, solo  si indicas que deseas actualizar el precio con el campo "actualiza\_precio":"S".  En caso de no querer actualizar el producto, si el mismo ya existía, se facturará con el nuevo precio y descripción que envíes, pero mantendrá sus datos anteriores.
-* Si el comprobante que envías a facturar es de tipo C, todos sus productos no deben llevar IVA y debes enviar cada concepto con su precio final
+* Si el comprobante que envías a facturar es de tipo C, todos los productos/conceptos que factures no deben llevar IVA y deberás enviar cada concepto con su precio final
 * Si el comprobante que envías, es de tipo A o B, los productos o servicios que envíes a facturar, deben ser enviados siempre SIN IVA, porque el IVA se calcula del lado de nuestra plataforma en base al campo "alicuota" que envías. Conocé más de los tipos de comprobantes, [desde aquí ](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 * En caso que alguno de tus conceptos cuente con un signo porcentual (%) en el nombre (ej:  Promo 20% OFF)  deberás reemplazarlo por los siguientes caracteres: **#\&#**&#x20;
 * En caso que alguno de tus conceptos cuente con una nueva línea, en su nombre, o porque deba imprimirse en 2 líneas, deberás generar el salto de línea donde desees, ingresando los caracteres:  **#@#**&#x20;
@@ -601,7 +608,7 @@ Los campos que debes enviar son los siguientes:
 
 ### Estructura de "Comprobantes Asociados"
 
-**Éste bloque solo para las notas de débito y las notas de crédito.** En éste caso AFIP requiere de manera obligatoria, que se envíe un bloque de información adicional con "comprobantes asociados".&#x20;
+**Éste bloque se utiliza solo para las notas de débito y las notas de crédito.** En éste caso AFIP requiere de manera obligatoria, que se envíe un bloque de información adicional con "comprobantes asociados".&#x20;
 
 Los comprobantes asociados son aquellos comprobantes que éstas incluyendo para anular o afectar (según corresponda) y los datos a enviar, pertenecen al emisor del comprobante.
 
@@ -614,7 +621,7 @@ b) Indicando un período de comprobantes asociados. :track\_next: [#comprobantes
 
 
 {% hint style="info" %}
-En todos las notas de crédito y/o notas de débito de cualquier tipo ( A,B, C, E y de tipo MiPyme), **éste bloque es obligatorio,** ya sea que lo hagas por período o por detalle de comprobantes**.**
+En todos las notas de crédito y/o notas de débito de cualquier tipo ( A,B, C, E y de tipo MiPyme), **éste bloque es obligatorio** ya sea que lo hagas por período o por detalle de comprobantes**.**
 {% endhint %}
 
 #### Ejemplo de JSON a enviar:
@@ -638,7 +645,7 @@ A partir del 26/03/2022, comienza a funcionar la "auto-acreditación" con las NC
 2. El importe de la NC es exactamente igual al del comprobante que éstas anulando (factura o nota de débito).
 3. La factura o nota de débito que estás anulando, se encuentra impaga al 100%.
 
-La auto-acreditación generará un recibo de cobro, en la cuenta corriente de tu cliente, para anular contablemente esa factura o nota de débito asociada. No se enviará ningún PDF a tu cliente. Es solo para tu gestión interna.
+La auto-acreditación generará un recibo de cobro, en la cuenta corriente de tu cliente, para anular contablemente esa factura o nota de débito asociada. No se enviará ningún PDF a tu cliente ni se enviará éste recibo de cobro a AIP. Esta información es solo para tu gestión interna dentro de nuestra plataforma.
 
 
 {% endhint %}

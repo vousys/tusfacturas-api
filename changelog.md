@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+## 21 de abril de 2023
+
+Facturacion > Clientes: Se amplia hasta 15 casillas de e-mail.
+
 ## 26 de marzo de 2023
 
 Facturación: Se agrega el bloque "tributos" dentro de la estructuctura de "comprobante" y el atributo "rg5329" al bloque de productos y clientes. Se eliminan los siguientes atributos de un comprobante:  percepciones\_iibb, percepciones\_iibb\_base, percepciones\_iibb\_alicuota, percepciones\_iibb2, percepciones\_iibb2\_base, percepciones\_iibb2\_alicuota, percepciones\_iva, percepciones\_iva\_base, percepciones\_iva\_alicuota.
