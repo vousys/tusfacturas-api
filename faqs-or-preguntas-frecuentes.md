@@ -61,5 +61,7 @@ Cada vez que se emite un comprobante, la API te devuelve la URL para que descarg
 
 Vos podés contratar un plan con X cuits/PDV y comprobantes y manejar a todo ahí, sin embargo nos han contado clientes que eso no les sirvió ya que tenían un plan grande contratado y uno de sus clientes incremento su capacidad, lo que los llevo a tener que contratar un plan aún superior por un solo cliente y los costos ya no cerraban, con lo cual en las próximas integraciones que hicieron, cada cliente abonara su propia suscripción y ellos les brindaban por medio de un fee el uso del servicio dentro de su plataforma. Son cosas para que tengas en cuenta y analices la mejor estrategia para tu empresa, ya que para TusFacturasAPP es indiferente como lo manejes.
 
-###
+
+
+**¿Tenes más dudas?** Contactanos por el chat de la web [www.tusfacturas.app](https://www.tusfacturas.app)
 

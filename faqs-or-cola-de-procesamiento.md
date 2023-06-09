@@ -111,3 +111,7 @@ Debes solucionar el inconveniente y probar de enviar a re-procesar ese comproban
 **Si envío un lote de comprobantes, ¿Cómo recibo los hooks?**
 
 Siempre vas a recibir los hooks independientes por cada comprobante.
+
+
+
+**¿Tenes más dudas?** Contactanos por el chat de la web [www.tusfacturas.app](https://www.tusfacturas.app)
