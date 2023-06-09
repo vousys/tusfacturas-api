@@ -62,7 +62,7 @@ No. El hook te envia el estado de ese request y el mensaje de error, en caso que
 
 En caso de éxito, deberás realizar una  [consulta avanzada por external\_reference](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference),  para obtener los datos generados de éste comprobante
 
-#### ¿Hay una reducción de tiempo considerable al emitir los comprobantes de esta forma?
+#### ¿Hay una reducción de tiempo considerable al emitir los comprobantes de esta forma
 
 Optimizas, porque lo podes dejar programado con anterioridad, podes mandar el lote el dia 5 e indicar que esos comprobantes se emitan el dia 29; además tu proceso no se trabaria esperando la respuesta de la factura como si la mandaras instantánea. Sigue con las siguientes y a medida q va procesando te va notificando.
 
@@ -78,22 +78,36 @@ Los comprobantes seguirán en la cola y se emitirán cuando los servicios de AFI
 
 Si, podes enviarlos y quedarán en la cola de procesamiento hasta la fecha indicada en el comprobante.
 
-#### ¿Puedo cambiar la fecha de un request que se encuentra en la cola de procesamiento?
+#### ¿Puedo cambiar la fecha de un request que se encuentra en la cola de procesamiento
 
 Si, para eso debés utilizar el método de:  [Cambiar fecha encolado](api-factura-electronica-afip-facturacion-ventas/cambiar-fecha-a-comprobante-encolado.md)
+
+
 
 #### ¿Puedo eliminar requests que aún no se han procesado?
 
 Si, para eso debés utilizar el método de:  [Eliminar comprobante encolado](api-factura-electronica-afip-facturacion-ventas/eliminar-comprobantes-encolados.md)
 
+
+
 **Si creo un abono desde la API o desde la plataforma web, ¿Cada vez que se emita la factura, me notifica por webhook?**
 
 No. La plataforma en ese caso no te notifica por webhook. Si llegas a necesitar ésta funcionalidad, por favor contactanos.
+
+
 
 **Si se intentó emitir 100 veces un comprobante en cola, ¿En qué momento recibo un webhook con el error?**
 
 Recibís un webhook de error cuando se alcance el máximo de intentos definidos.&#x20;
 
+
+
 **¿Qué debo hacer si un comprobante superó el límite de reintentos?**
 
 Debes solucionar el inconveniente y probar de enviar a re-procesar ese comprobante, usando el método de ["Reenviar a procesar, comprobante encolado con error"](api-factura-electronica-afip-facturacion-ventas/reenviar-a-procesar-comprobante-encolado-con-error.md)
+
+
+
+**Si envío un lote de comprobantes, ¿Cómo recibo los hooks?**
+
+Siempre vas a recibir los hooks independientes por cada comprobante.

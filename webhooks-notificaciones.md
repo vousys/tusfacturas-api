@@ -49,15 +49,7 @@ User-Agent: TusFacturasAPP-webhook/1.0
 
 ### Tipos de evento posibles, por recurso
 
-|   recurso   |     evento    | info                                                                                                                                                       |
-| :---------: | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| facturacion |    encolado   | Éste evento te informa, que el comprobante que enviaste, se encuentra ya en la cola de procesamiento, para ser emitido en la fecha que indicaste.          |
-| facturacion |    emitido    | Éste evento te informa que el comprobante que enviaste, se ha facturado correctamente.                                                                     |
-| facturacion |     error     | Éste evento te informa que el comprobante que enviaste, no se ha podido procesar y recibrás dentro del atributo "msg", la lista con los errores detectados |
-| facturacion |   eliminado   | Éste evento te informa que se ha eliminado un comprobante.                                                                                                 |
-| facturacion | cambio\_fecha | Éste evento te informa que se ha cambiado la fecha del comprobante.                                                                                        |
-|     test    |      test     | Se utilizará éste evento para probar la url de tu webhook                                                                                                  |
-|             |               |                                                                                                                                                            |
+<table><thead><tr><th align="center">recurso</th><th width="154.8318397469689" align="center">evento</th><th>info</th></tr></thead><tbody><tr><td align="center">facturacion</td><td align="center">encolado</td><td>Éste evento te informa, que el comprobante que enviaste, se encuentra ya en la cola de procesamiento, para ser emitido en la fecha que indicaste.</td></tr><tr><td align="center">facturacion</td><td align="center">emitido</td><td>Éste evento te informa que el comprobante que enviaste, se ha facturado correctamente.</td></tr><tr><td align="center">facturacion</td><td align="center">error</td><td>Éste evento te informa que el comprobante que enviaste, no se ha podido procesar y recibrás dentro del atributo "msg", la lista con los errores detectados</td></tr><tr><td align="center">facturacion</td><td align="center">eliminado</td><td>Éste evento te informa que se ha eliminado un comprobante.</td></tr><tr><td align="center">facturacion</td><td align="center">cambio_fecha</td><td>Éste evento te informa que se ha cambiado la fecha del comprobante.</td></tr><tr><td align="center">test</td><td align="center">test</td><td>Se utilizará éste evento para probar la url de tu webhook</td></tr><tr><td align="center"></td><td align="center"></td><td></td></tr></tbody></table>
 
 ## Reintentos
 
@@ -113,6 +105,12 @@ La dirección del webhook, se configura dentro de tu CUIT+PDV. Para eso deberás
 #### En caso de que la dirección de mi webhook, presente inconvenientes y falle el webhook, ¿se realizan reintentos hasta completar la notificación?
 
 Si. Te sugerimos consultar el apartado de "[reintentos](webhooks-notificaciones.md#reintentos)", de ésta misma página.
+
+
+
+**Si envío un lote de comprobantes, ¿Cómo recibo los hooks?**
+
+Siempre vas a recibir los hooks independientes por cada comprobante.
 
 ####
 
