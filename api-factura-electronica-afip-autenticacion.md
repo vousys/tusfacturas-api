@@ -21,6 +21,13 @@ En todas las consultas que realices deberás enviar obligatoriamente, la siguien
 | `apikey`    | <p>Valor númerico</p><p><strong>Ejemplo:1134</strong></p>                                  |
 | `usertoken` | <p>Valor alfanumerico<br><strong>Ejemplo:aa6b8fe8c8bf67c884e1405e26c03c85</strong><br></p> |
 
+## Requerimientos <a href="#errores-http" id="errores-http"></a>
+
+SSL: **requiere TLS 1.2+**\
+Tipo de datos entrada y respuesta: **JSON**\
+Charset: **UTF-8**\
+Tipo de request : **POST**
+
 ## Errores HTTP <a href="#errores-http" id="errores-http"></a>
 
 Errores de HTTP comunes que puede devolver :\
