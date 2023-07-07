@@ -63,5 +63,11 @@ Vos podés contratar un plan con X cuits/PDV y comprobantes y manejar a todo ah�
 
 
 
+**¿Qué sucede si me quedo sin cupo de facturación?**
+
+Si te quedas sin cupo de facturación vas a recibir un mensaje de error en cada request que envies y no podrás facturar hasta que adquieras una nueva suscripción. TusFacturasAPP le avisa por e-mail a todos los usuarios administradores del espacio de trabajo, cuando el cupo disponible sea inferior a un 20% y repite este mensaje cada 3 días.
+
+
+
 **¿Tenes más dudas?** Contactanos por el chat de la web [www.tusfacturas.app](https://www.tusfacturas.app)
 
