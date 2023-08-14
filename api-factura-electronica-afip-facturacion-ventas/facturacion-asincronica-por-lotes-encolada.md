@@ -112,7 +112,7 @@ Tus credenciales de acceso
 
 * **La cantidad máxima de requests por lote es de 100 comprobantes**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y  podes llegar a obtener una respuesta de timeout (524). En caso de recibir un 524, los requests que enviaste, seguirán siendo procesados en background, y recibirás un hook con la respuesta de éxito o error de su encolamiento. &#x20;
 * Podes enviar en un mismo lote comprobantes de **diferente tipo de comprobante**.   Ej: Podes enviar en el mismo lote Facturas A Y FACTURAS  B.
-* **La fecha que envíes en cada comprobante determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy. __&#x20;
+* **La fecha que envíes en cada comprobante determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy. &#x20;
 * Los request deben venir **con el campo número en cero (0)**.
 * **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
 * **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](../mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los lotes y serán rechazados de manera instantánea.
@@ -138,12 +138,12 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 			"apikey": "xxxxx",
 			"usertoken": "xxxxx",
 			"cliente": {
-				"documento_tipo": "CUIT",
-				"condicion_iva": "M",
+				"documento_tipo": "DNI",
+				"condicion_iva": "CF",
 				"domicilio": "Av Sta Fe 23132",
 				"condicion_pago": "211",
-				"documento_nro": "3071229384",
-				"razon_social": "VOUSYS",
+				"documento_nro": "71229384",
+				"razon_social": "Juan",
 				"provincia": "2",
 				"email": "email@dominio.com",
 				"envia_por_mail": "N"
@@ -153,7 +153,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 				"rubro": "Sevicios web",
 				"percepciones_iva": 0,
 				"tipo": "FACTURA B",
-				"numero": 1,
+				"numero": 0,
 				"percepciones_iibb": 0,
 				"bonificacion": 0,
 				"operacion": "V",
@@ -193,7 +193,7 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 				"domicilio": "XXX",
 				"condicion_pago": "211",
 				"documento_nro": "30712252430",
-				"razon_social": "VYAR SRL",
+				"razon_social": "JUAN SA",
 				"provincia": "2",
 				"email": "email@dominio.com",
 				"envia_por_mail": "N"
@@ -240,12 +240,12 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 			"apikey": "xxxxx",
 			"usertoken": "xxxxx",
 			"cliente": {
-				"documento_tipo": "CUIT",
-				"condicion_iva": "M",
+				"documento_tipo": "OTRO",
+				"condicion_iva": "CF",
 				"domicilio": "Av Sta Fe 23132",
 				"condicion_pago": "211",
-				"documento_nro": "3071229384",
-				"razon_social": "VOUSYS",
+				"documento_nro": "0",
+				"razon_social": "Consumidor final",
 				"provincia": "2",
 				"email": "email@dominio.com",
 				"envia_por_mail": "N"
