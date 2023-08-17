@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Documentación de la API para Factura Electrónica AFIP](README.md)
+* [TusFacturasAPP: API Factura Electrónica AFIP](README.md)
 * [¿Cómo empiezo?](como-empiezo.md)
 * [Autenticación](api-factura-electronica-afip-autenticacion.md)
 * [Plugins y SDKs](api-factura-electronica-afip-plugins-y-sdks.md)
