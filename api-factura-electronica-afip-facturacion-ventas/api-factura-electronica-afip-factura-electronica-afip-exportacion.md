@@ -128,6 +128,7 @@ Información de los campos a enviar:
                 },
 "comprobante":  {
                 "fecha":                    "28\/07\/2015",
+                "vencimiento":              "26/03/2023",
                 "tipo":                     "NOTA DE DEBITO E",
                 "moneda":                   "DOL",
                "idioma":                   "1",

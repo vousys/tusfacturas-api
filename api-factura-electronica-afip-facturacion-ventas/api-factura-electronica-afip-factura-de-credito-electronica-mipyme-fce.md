@@ -48,6 +48,7 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
    },
    "comprobante":{
       "fecha":"20/03/2018",
+      "vencimiento":"26/03/2023",
       "tipo":"FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
       "operacion":"V",
       "punto_venta":"0002",
@@ -131,6 +132,7 @@ Es importante aclarar que **AFIP no requiere el envio del CBU ni ALIAS,** para l
 	},
 	"comprobante": {
 		"fecha": "20/03/2018",
+		"vencimiento":"26/03/2023",
 		"tipo": "NOTA DE CREDITO ELECTRONICA MiPyME (FCE) A",
 		"operacion": "V",
 		"punto_venta": "0002",

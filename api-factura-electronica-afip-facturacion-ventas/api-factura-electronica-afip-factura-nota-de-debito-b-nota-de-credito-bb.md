@@ -57,6 +57,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B, una N
          }
       ],
       "fecha":"28/03/2018",
+      "vencimiento":"26/03/2023",
       "rubro_grupo_contable":"Sevicios",
       "total":139.0,
       "cotizacion":1,
@@ -95,6 +96,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](.
    },
    "comprobante":{
       "fecha":"20/03/2018",
+      "vencimiento":"26/03/2023",
       "tipo":"NOTA DE CREDITO B",
       "operacion":"V",
       "punto_venta":"0002",
@@ -177,6 +179,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](.
  
 "comprobante": 
     {    "fecha":                    "20/03/2018", 
+         "vencimiento":              "26/03/2023",
          "tipo":                     "NOTA DE DEBITO B", 
          "operacion":                "V", 
          "punto_venta":              "0002", 

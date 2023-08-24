@@ -32,6 +32,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
    },
    "comprobante":{
       "fecha":"20/03/2018",
+      "vencimiento":"26/03/2023",
       "tipo":"FACTURA C",
       "operacion":"V",
       "punto_venta":"0002",
@@ -97,6 +98,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
    },
    "comprobante":{
       "fecha":"20/03/2018",
+      "vencimiento":"26/03/2023",
       "tipo":"NOTA DE CREDITO C",
       "operacion":"V",
       "punto_venta":"0002",
@@ -166,6 +168,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
    },
    "comprobante":{
       "fecha":"20/03/2018",
+      "vencimiento":"26/03/2023",
       "tipo":"NOTA DE DEBITO C",
       "operacion":"V",
       "punto_venta":"0002",

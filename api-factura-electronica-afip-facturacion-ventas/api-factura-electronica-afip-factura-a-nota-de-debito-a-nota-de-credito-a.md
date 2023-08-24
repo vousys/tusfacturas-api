@@ -43,6 +43,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí](./
    },
    "comprobante":{
       "fecha":"20/03/2018",
+      "vencimiento":"26/03/2023",
       "tipo":"NOTA DE CREDITO A",
       "operacion":"V",
       "punto_venta":"0002",
@@ -139,6 +140,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](.
    },
    "comprobante":{
       "fecha":"20/03/2018",
+      "vencimiento":"26/03/2023",
       "tipo":"NOTA DE DEBITO A",
       "operacion":"V",
       "punto_venta":"0002",
@@ -235,6 +237,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA A que no
    "comprobante":{
       "fecha":"20/03/2018",
       "tipo":"FACTURA A",
+      "vencimiento":"26/03/2023",
       "operacion":"V",
       "punto_venta":"0002",
       "numero":"00000012",
@@ -309,6 +312,7 @@ Conocé cuándo aplicar la RG5329, desde nuestras [FAQs](../faqs-or-preguntas-fr
    },
    "comprobante":{
       "fecha":"26/03/2023",
+      "vencimiento":"26/03/2023",
       "tipo":"FACTURA A",
       "operacion":"V",
       "punto_venta":"0002",
