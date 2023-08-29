@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+## 29 de agosto de 2023
+
+Facturación > Vencimiento del comprobante. A partir del 01/10/2023 el campo "vencimiento" del comprobante será un dato obligatorio.
+
 ## 21 de abril de 2023
 
 Facturacion > Clientes: Se amplia hasta 15 casillas de e-mail.
