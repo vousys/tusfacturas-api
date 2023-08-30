@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+## 30 de agosto de 2023
+
+Facturación: A partir del 01/01/2024 se dejará de enviar como respuesta en el JSON, el campo "afip\_codigo\_barras"
+
 ## 29 de agosto de 2023
 
 Facturación > Vencimiento del comprobante. A partir del 01/10/2023 el campo "vencimiento" del comprobante será un dato obligatorio.

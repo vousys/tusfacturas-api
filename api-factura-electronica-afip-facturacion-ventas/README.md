@@ -372,6 +372,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 **AFIP CÓDIGO DE BARRAS / QR**
 
 * Por cuestiones de seguridad, el texto que se retorna en el campo afip\_codigo\_barras y afip\_qr, se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
+* Atención! El campo afip\_codigo\_barras dejará de ser enviado a partir del 01/01/2024
 * La respuesta exitosa, te incluye el texto que se necesita para armar el código QR (en caso que generes el PDF desde tu lado) y/o el viejo código de barras (para comprobantes anteriores).
 
 **NOTAS DE DÉBITO Y CRÉDITO**
