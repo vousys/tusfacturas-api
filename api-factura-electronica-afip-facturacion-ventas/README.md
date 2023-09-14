@@ -561,7 +561,22 @@ Cada producto o servicio que factures, deberá ser enviado con la siguiente estr
 * Si el comprobante que envías, es de tipo A o B, los productos o servicios que envíes a facturar, deben ser enviados siempre SIN IVA, porque el IVA se calcula del lado de nuestra plataforma en base al campo "alicuota" que envías. Conocé más de los tipos de comprobantes, [desde aquí ](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 * En caso que alguno de tus conceptos cuente con un signo porcentual (%) en el nombre (ej:  Promo 20% OFF)  deberás reemplazarlo por los siguientes caracteres: **#\&#**&#x20;
 * En caso que alguno de tus conceptos cuente con una nueva línea, en su nombre, o porque deba imprimirse en 2 líneas, deberás generar el salto de línea donde desees, ingresando los caracteres:  **#@#**&#x20;
+* **Cómo calcular el IVA:**
+  *   Si necesitas calcular cuánto vale tu producto sin IVA, te dejamos un cálculo rápido:&#x20;
+
+      Precio del producto con 21% de IVA = 121
+
+      Para saber el precio sin el 21% de IVA debes hacer:  121 / 1.21  = 100
+  * Si quisieras saber cuanto es el precio de tu producto + 21% de IVA, debes hacer el siguiente cálculo:
+
+&#x20;            Precio del producto sin 21% de IVA = 100
+
+&#x20;            Para saber el precio con el 21% de IVA debes hacer:  100 x 1.21 = 121
+
+
 {% endhint %}
+
+
 
 Los campos que debes enviar son los siguientes:
 
