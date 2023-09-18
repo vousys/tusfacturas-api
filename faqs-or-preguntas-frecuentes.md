@@ -14,7 +14,7 @@ Si, se puede utilizar igual, ya que vos tendrías el usuario para acceder a la p
 
 **¿Puedo generar el PDF desde mi plataforma?**
 
-Si, podes generar el PDF desde tu plataforma, ya que TusFacturasAPP te envia en el retorno de la llamada a la API de nueva facturacion, el CAE, el vencimiento del CAE, y el texto necesario para armar el QR.
+Si, podes generar el PDF desde tu plataforma, ya que TusFacturasAPP te envia en el retorno de la llamada a la API de nueva facturación, el CAE, el vencimiento del CAE, y el texto necesario para armar el QR.
 
 **¿Es muy tedioso de configurar?**
 
@@ -55,7 +55,7 @@ La numeración de los comprobantes es secuencial por: Tipo de comprobante y punt
 
 **¿Los PDFs que se generan de la factura, quedan disponibles para mas adelante en algun CDN o los tengo que descargar y guardar yo?**
 
-Cada vez que se emite un comprobante, la API te devuelve la URL para que descargues el PDF. Siempre recomendamos descargarlo, ya que si tu suscripción no se encuentra activa y vigente, no lo podras recuperar ni descargar.
+Cada vez que se emite un comprobante, la API te devuelve la URL temporal para que descargues el PDF en ese momento. Siempre recomendamos descargarlo, ya que si tu suscripción no se encuentra activa y vigente, no lo podrás recuperar ni descargar.
 
 **¿Nuestro sistema va a ir sumando clientes paulatinamente, que tipo de suscripción me conviene contratar?**&#x20;
 

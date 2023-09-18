@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+## 18 de septiembre de 2023
+
+Las URLs de los PDF que se emiten pasan a ser temporales para que puedas descargar el comprobante solo en el momento de la petición.
+
 ## 30 de agosto de 2023
 
 Facturación: A partir del 01/01/2024 se dejará de enviar como respuesta en el JSON, el campo "afip\_codigo\_barras"

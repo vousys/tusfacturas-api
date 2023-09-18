@@ -308,8 +308,8 @@ Hay ciertos casos donde AFIP exige que en lugar de emitir una factura A,B o C, l
 
 Sea cual sea la modalidad que utilices para facturar, por cada comprobante que emitas, obtendrás la siguiente respuesta, con todos los datos que necesitas para almacenar en tu sistema.&#x20;
 
-{% hint style="info" %}
-Es importante que descargues toda la información junto con el contenido del pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo. Ademas, la URL que obtenes es temporal.
+{% hint style="warning" %}
+Es importante que descargues toda la información junto con el contenido del pdf y lo almacenes en tu plataforma. La URL del PDF es temporal por lo que no podrás recuperarlo desde ese link en otro momento, y ademas si tu cuenta o suscripción no se encuentran vigentes, no podrás volver a obtenerlo. &#x20;
 {% endhint %}
 
 ```json
