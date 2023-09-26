@@ -15,6 +15,7 @@
   * [Ejemplos de comprobantes tipo "A"](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
   * [Ejemplos de comprobantes tipo "B"](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)
   * [Ejemplos de comprobantes tipo "C"](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)
+  * [Facturas a consumidor final, sin especificar datos](api-factura-electronica-afip-facturacion-ventas/facturas-a-consumidor-final-sin-especificar-datos.md)
   * [Comprobantes de exportación de tipo "E"](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-electronica-afip-exportacion.md)
   * [Comprobantes de tipo: Factura de Crédito Electrónica MiPyme (FCE)](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)
   * [¿Cómo determino si emitir una factura mipyme, o una factura común?](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-or-como-se-si-emitir-una-factura-mipyme-o-una-comun.md)
