@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+## 27 de septiembre de 2023
+
+Facturación: Se agregan algunas percepciones de tipo "impuestos nacionales" para ser enviadas dentro del bloque de tributos
+
 ## 18 de septiembre de 2023
 
 Las URLs de los PDF que se emiten pasan a ser temporales para que puedas descargar el comprobante solo en el momento de la petición.
