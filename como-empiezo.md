@@ -4,25 +4,28 @@ description: El paso a paso para comenzar a integrar TusFacturasAPP, con tu plat
 
 # ¿Cómo empiezo?
 
-## Aprendé cómo integrar tu sistema con la API de TusFacturasAPP
+## Aprendé cómo integrar a tu software la API AFIP de TusFacturasAPP
 
-Para probar la integración con la API, debes [crear una cuenta](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) en nuestra plataforma [desde aquí](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
+Para probar la integración con la API para AFIP, debes [crear una cuenta](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) en nuestra plataforma [desde aquí](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
 
-Luego de creada la cuenta y con tu plan API DEV activo, podrás emitir hasta 150 comprobantes _que no son de curso legal_ por 1 mes y sin costo (solo para nuevas cuentas y por única vez). Una vez vencido tu período de prueba, deberás contratar algún [plan API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html) de los que tenemos disponibles [aquí.](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
+Luego de creada la cuenta y con tu plan API DEV activo, podrás emitir hasta 1500 comprobantes _**que no son de curso legal**_** por 1 mes y sin costo** (solo para nuevas cuentas y por única vez). Una vez vencido tu período de prueba, deberás contratar algún [plan API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html) de los que tenemos disponibles [aquí.](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
 
-Por cuestiones legales, nuestra plataforma **no cuenta con un ambiente de testing**, por lo que no podrás enlazar con AFIP tu CUIT mientras realizas las pruebas, evitando problemas con el fisco, ya que los comprobantes emitidos no pueden ser modificados ni eliminados.
+Por cuestiones legales, nuestra plataforma **no cuenta con un ambiente de testing**, por lo que no podrás enlazar tu CUIT con AFIP mientras realizas las pruebas, evitando problemas con el fisco, ya que los comprobantes emitidos en AFIP no pueden ser modificados ni eliminados.
 
-Mientras estés en testing la respuesta que recibirás desde nuestra API es la misma que si lo harias contra AFIP, solo que los campos CAE y vencimiento del CAE,te retornarán vacíos y no contarás con las validaciones adicionales que AFIP realiza desde su lado.
+Mientras estés en testing la respuesta que recibirás desde nuestra API es la misma que si lo harias en modo productivo impactando los comprobantes en AFIP, solo que los campos CAE y vencimiento del CAE retornaran vacios; Ademas no contarás con las validaciones adicionales que AFIP realiza desde sus servicios.
 
-Te sugerimos revisar nuestros [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html), para estar al tanto de lo que podés y no podés realizar en nuestra plataforma.
+Te sugerimos revisar nuestros [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html) para estar al tanto de lo que podés y no podés realizar en nuestra plataforma.
 
-Mientras estés en etapa de testing, te sugerimos configurar tu CUIT, con un punto de venta (PDV) irreal (Ej: 679). Una vez que hayas probado todo, eliminas desde nuestra plataforma web todos los comprobantes asociados a ese CUIT/PDV y luego das de baja el CUIT/PDV para crear el nuevo y enlazarlo con AFIP.
+Mientras estés en etapa de testing:
 
-**Resumen de pasos, para comenzar a trabajar:**
+* Sugerimos configurar tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679).&#x20;
+* Una vez que hayas probado todo y estes listo/a para ir a producción, podrás borrar desde nuestra plataforma web todos los comprobantes asociados a ese CUIT/PDV y luego dar de baja el CUIT/PDV para crear el nuevo y enlazarlo con AFIP.
+
+**Resumen para comenzar a trabajar:**
 
 1\) Crea tu cuenta API DEV [desde aquí](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html), gratis por 1 mes.
 
-2\) Configura tu CUIT/Punto de venta (PDV) desde nuestra plataforma web [www.tusfacturas.app](https://www.tusfacturas.app/app/login.html), ingresando a  menú > "Mi espacio de trabajo > Cuits/PDV.  Una vez creado el CUIT/PDV, obtendrás las keys requeridas para iniciar tu integración.
+2\) Configura tu CUIT/Punto de venta (PDV) desde nuestra plataforma web [www.tusfacturas.app](https://www.tusfacturas.app/app/login.html), ingresando a  menú > "Mi espacio de trabajo > Cuits/PDV.  Una vez creado el CUIT/PDV, desde la pantalla del listado obtendrás las keys requeridas para iniciar tu integración.
 
 3\) En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a hola@tusfacturas.app o contactanos por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
 

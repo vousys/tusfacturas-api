@@ -6,6 +6,6 @@ description: >-
 
 # Plugins y SDKs
 
-Descargá el SDK para PHP de la API para facturación electrónica AFIP, desde nuestro repositorio GIT [https://github.com/vousys/tusfacturas](https://github.com/vousys/tusfacturas)
+Descargá el SDK para PHP de la API para AFIP - facturación electrónica Argentina, desde nuestro repositorio GIT [https://github.com/vousys/tusfacturas](https://github.com/vousys/tusfacturas)
 
 ![https://github.com/vousys/tusfacturas](.gitbook/assets/Github.png)

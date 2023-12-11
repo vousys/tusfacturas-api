@@ -1,7 +1,7 @@
 ---
 description: >-
-  Conocé que datos necesitas para poder integrar tu sistema con la API de
-  facturación electrónica de TusFacturasAPP
+  Conocé que datos necesitas para poder integrar en tu software con la API para
+  AFIP -  facturación electrónica Argentina provista por TusFacturasAPP
 ---
 
 # Autenticación

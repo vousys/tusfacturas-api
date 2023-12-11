@@ -6,7 +6,7 @@ description: >-
 
 # Estado de los servicios AFIP
 
-## Consultá el estado de los servicios de facturación de AFIP
+## Consultá el estado de los servicios de facturación de AFIP con nuestra API
 
 {% hint style="info" %}
 Los servicios de AFIP se caen regularmente.

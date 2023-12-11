@@ -1,18 +1,18 @@
 ---
 description: >-
-  Utilizá la API de facturación electrónica AFIP de TusFacturas.app, para emitir
-  comprobantes de venta desde tu sistema actual.
+  Facturación electrónica Argentina fácil y rápida con la API para AFIP de
+  TusFacturas.app. Olvídate de los webservices (ws) de AFIP.
 ---
 
 # Facturación
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV en TusFacturasAPP, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md)
+Una vez configurada tu cuenta y creado tu CUIT+PDV en TusFacturasAPP, podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md)
 
 ### Modalidades de facturación online&#x20;
 
 En TusFacturasAPP, contamos con 4 modalidades para la emisión de comprobantes online; Sin embargo **te recomendamos** utilizar siempre que sea posible, los **métodos de facturación asincrónicos**, ya que los instantáneos dependen de cómo funcionen los servicios de AFIP en el momento de la emisión.
 
-#### **Facturas individuales instantáneas**
+#### **Facturas AFIP individuales  e instantáneas**
 
 Utilizando éste método vos envías un solo request para ser procesado, y obtenes la respuesta al instante (dependes del estado de los servicios de AFIP)
 
@@ -20,17 +20,17 @@ Utilizando éste método vos envías un solo request para ser procesado, y obten
 
 
 
-#### **Facturas individuales en cola       **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
+#### **Facturas AFIP individuales en cola       **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
 
-En éste método envías un solo request para ser procesado, y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md).&#x20;
+En éste método envías un solo request para ser procesado, y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md) (no dependes del estado de los servicios de facturación de AFIP)
 
 Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
 
 
 
-#### **Lote de facturas instantáneas**
+#### **Lote de facturas AFIP instantáneas**
 
-En éste método envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante.&#x20;
+En éste método envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante  (dependes del estado de los servicios de AFIP).
 
 Conocé más sobre la [facturación electrónica en lotes, aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
 
@@ -38,15 +38,15 @@ Conocé más sobre la [facturación electrónica en lotes, aquí.](api-factura-e
 
 #### **Lote de facturas asincrónico en cola      **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
 
-En éste método envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md).&#x20;
+En éste método envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md)  (no dependes del estado de los servicios de facturación de AFIP)
 
 Conocé más sobre la [facturación electrónica por lotes en cola](facturacion-asincronica-por-lotes-encolada.md), aquí.
 
 
 
-## ¿Qué puedo facturar?
+## ¿Qué puedo facturar con la API?
 
-Nuestro servicio API de facturación electrónica, te permite enviar a facturar cualquier tipo de comprobante [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M, comprobantes de tipo "Factura de crédito MiPyme", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
+Nuestro servicio API de facturación electrónica AFIP, te permite enviar a facturar  comprobantes de tipo [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M, comprobantes de tipo "[Factura de crédito MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
 
 &#x20;¿No sabes qué [tipo de comprobante debes emitir](../que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 
