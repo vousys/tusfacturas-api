@@ -22,7 +22,7 @@ Utilizando éste método vos envías un solo request para ser procesado, y obten
 
 #### **Facturas AFIP individuales en cola       **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
 
-En éste método envías un solo request para ser procesado, y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md) (no dependes del estado de los servicios de facturación de AFIP)
+En éste método envías un solo request para ser procesado y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md) (no dependes del estado de los servicios de facturación de AFIP)
 
 Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
 

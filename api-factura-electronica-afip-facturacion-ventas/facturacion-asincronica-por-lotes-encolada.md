@@ -33,7 +33,16 @@ Antes de comenzar, te sugerimos leer :&#x20;
 2. La documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
 3. [FAQs sobre la cola de procesamiento](../faqs-or-cola-de-procesamiento.md)
 
-#### A donde debes enviar el request?
+
+
+### Sugerencias para grandes volúmenes de facturación
+
+* Distribuí tu facturación en múltiples puntos de venta, de modo que cada uno se procese en paralelo y así optimizarás la emisión de las facturas.
+* Cantidad estimada de comprobantes que se emiten por hora, dependiendo del día y horario: entre 600 y 900 por hora y punto de venta.
+
+
+
+#### A dónde debes enviar el request?
 
 {% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/facturacion/lotes_encola" method="post" summary="Facturación por Lotes asincrónica (encolada). Max: 100 requests por lote." %}
 {% swagger-description %}
