@@ -4,7 +4,7 @@ description: El paso a paso para comenzar a integrar TusFacturasAPP, con tu plat
 
 # ¿Cómo empiezo?
 
-## Aprendé cómo integrar a tu software la API AFIP de TusFacturasAPP
+## Aprende cómo integrar a tu software la API de facturación electrónica AFIP
 
 Para probar la integración con la API para AFIP, debes [crear una cuenta](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) en nuestra plataforma [desde aquí](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
 
@@ -12,9 +12,9 @@ Luego de creada la cuenta y con tu plan API DEV activo, podrás emitir hasta 150
 
 Por cuestiones legales, nuestra plataforma **no cuenta con un ambiente de testing**, por lo que no podrás enlazar tu CUIT con AFIP mientras realizas las pruebas, evitando problemas con el fisco, ya que los comprobantes emitidos en AFIP no pueden ser modificados ni eliminados.
 
-Mientras estés en testing la respuesta que recibirás desde nuestra API es la misma que si lo harias en modo productivo impactando los comprobantes en AFIP, solo que los campos CAE y vencimiento del CAE retornaran vacios; Ademas no contarás con las validaciones adicionales que AFIP realiza desde sus servicios.
+Mientras estés en testing la respuesta que recibirás desde nuestra API es la misma que si lo harías en modo productivo impactando los comprobantes en AFIP, solo que los campos CAE y vencimiento del CAE retornaran vacios; Ademas no contarás con las validaciones adicionales que AFIP realiza desde sus servicios.
 
-Te sugerimos revisar nuestros [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html) para estar al tanto de lo que podés y no podés realizar en nuestra plataforma.
+Te sugerimos revisar nuestros [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html) para estar al tanto de lo que podés y no podes realizar en nuestra plataforma.
 
 Mientras estés en etapa de testing:
 
@@ -30,3 +30,5 @@ Mientras estés en etapa de testing:
 3\) En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a hola@tusfacturas.app o contactanos por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
 
 4\) Una vez activa tu cuenta con el plan API DEV, ingresá desde nuestra la web [www.tusfacturas.app](https://www.tusfacturas.app/app/login.html) a  menú > "Mi espacio de trabajo > Configurar éste espacio de trabajo y habilita tu IP dentro del bloque "ACCESO API".
+
+¿Qué esperas para comenzar a emitir factura electrónica AFIP?
