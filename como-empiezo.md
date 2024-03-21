@@ -14,7 +14,7 @@ Por cuestiones legales, nuestra plataforma **no cuenta con un ambiente de testin
 
 Mientras estés en testing la respuesta que recibirás desde nuestra API es la misma que si lo harías en modo productivo impactando los comprobantes en AFIP, solo que los campos CAE y vencimiento del CAE retornaran vacios; Ademas no contarás con las validaciones adicionales que AFIP realiza desde sus servicios.
 
-Te sugerimos revisar nuestros [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html) para estar al tanto de lo que podés y no podes realizar en nuestra plataforma.
+Te sugerimos revisar nuestros [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html) para estar al tanto de lo que podés y no podes realizar en nuestra plataforma y leer las [FAQs](faqs-or-preguntas-frecuentes.md).
 
 Mientras estés en etapa de testing:
 

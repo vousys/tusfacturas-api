@@ -12,6 +12,14 @@ description: >-
 
 Si, se puede utilizar igual, ya que vos tendrías el usuario para acceder a la plataforma y no tus clientes. Deberías realizar o enviarle manualmente a cada cliente, el instructivo de enlace con AFIP, que te envia nuestra plataforma, de modo que toda factura que emitan sea de curso legal.
 
+**¿Qué cuenta como request?**
+
+Un request es toda petición realizada a la API en cualquiera de sus métodos.
+
+**¿La URL de descarga de PDF cuenta como un request?**
+
+No cuenta como un request, pero debes tener en cuenta que las urls de descarga de PDF son temporales. Sugerimos descargar siempre el PDF a tu servidor y consultarlo las veces que sea necesario desde ahi.
+
 **¿Puedo generar el PDF desde mi plataforma?**
 
 Si, podes generar el PDF desde tu plataforma, ya que TusFacturasAPP te envia en el retorno de la llamada a la API de nueva facturación, el CAE, el vencimiento del CAE, y el texto necesario para armar el QR.
