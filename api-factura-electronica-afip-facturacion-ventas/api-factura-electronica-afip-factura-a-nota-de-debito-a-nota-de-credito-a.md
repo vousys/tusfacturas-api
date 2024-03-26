@@ -18,7 +18,9 @@ A partir del 01-07-2021, todo comprobante A que se emita a un monotributista deb
 
 {% endhint %}
 
-## Ejemplo de: NOTA DE CRÉDITO A  - detallando comprobantes.
+####
+
+#### Ejemplo de: NOTA DE CRÉDITO A  - detallando comprobantes.
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que detalla los comprobantes asociados.
 
@@ -115,7 +117,15 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí](./
 }
 ```
 
-## Ejemplo de: NOTA DE DÉBITO A - asociando períodos
+
+
+### NOTA DE DEBITO A
+
+#### ¿Qué es una nota de débito electrónica?
+
+Es un comprobante dígital legalmente equivalente a la [nota de débito](https://www.tusfacturas.app/como-emitir-notas-de-debito-electronica-afip.html) en formato papel, que la reemplaza en la mayoría de las operaciones de quienes estén obligados u opten por su utilización.
+
+#### Ejemplo de: NOTA DE DÉBITO A - asociando períodos
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)
 

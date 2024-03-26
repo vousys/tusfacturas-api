@@ -6,7 +6,9 @@ description: >-
 
 # Ejemplos de comprobantes tipo "C"
 
-Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C / Nota de crédito MiPyme C / Nota de débito MiPyme C), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Monotributo" o "Exento". No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
+Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C / Nota de crédito MiPyme C / Nota de débito MiPyme C), son aquellos que solo pueden ser emitidos por un CUIT cuya [condición frente al IVA](https://www.tusfacturas.app/que-tipo-de-comprobante-debo-emitir-segun-mi-condicion-frente-al-iva.html) sea "Monotributo" o "Exento".&#x20;
+
+No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
 
 
 
@@ -74,7 +76,13 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
 }
 ```
 
-## Ejemplo de: NOTA DE CRÉDITO C  - detallando los comprobantes que anulas.
+### NOTA DE CRÉDITO C
+
+#### ¿Qué es una nota de crédito electrónica?
+
+Es un comprobante dígital legalmente equivalente a la [nota de crédito](https://www.tusfacturas.app/como-emitir-notas-de-credito-electronica-afip.html) en formato papel, que la reemplaza en la mayoría de las operaciones de quienes estén obligados u opten por su utilización.
+
+#### Ejemplo de: NOTA DE CRÉDITO C  - detallando los comprobantes que anulas.
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO C, que [detalla los comprobantes asociados.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#envio-de-comprobantes-asociados-detallados)
 
@@ -144,9 +152,15 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
 }
 ```
 
-## Ejemplo de: NOTA DE DÉBITO C - asociando períodos
+### &#x20;NOTA DE DÉBITO C&#x20;
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO C, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)
+#### ¿Qué es una nota de débito electrónica?
+
+Es un comprobante dígital legalmente equivalente a la [nota de débito](https://www.tusfacturas.app/como-emitir-notas-de-debito-electronica-afip.html) en formato papel, que la reemplaza en la mayoría de las operaciones de quienes estén obligados u opten por su utilización.
+
+#### Ejemplo de: NOTA DE DÉBITO C - asociando períodos
+
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE DEBITO C, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)
 
 Podés consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
 
