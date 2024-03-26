@@ -18,7 +18,11 @@ A partir del 01-07-2021, todo comprobante A que se emita a un monotributista deb
 
 {% endhint %}
 
-####
+### Nota de Crédito A
+
+#### ¿Qué es una nota de crédito electrónica?
+
+Es un comprobante dígital legalmente equivalente a la [nota de crédito](https://www.tusfacturas.app/como-emitir-notas-de-credito-electronica-afip.html) en formato papel, que la reemplaza en la mayoría de las operaciones de quienes estén obligados u opten por su utilización.
 
 #### Ejemplo de: NOTA DE CRÉDITO A  - detallando comprobantes.
 
