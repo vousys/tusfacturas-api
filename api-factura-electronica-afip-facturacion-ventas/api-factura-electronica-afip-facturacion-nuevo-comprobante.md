@@ -21,42 +21,26 @@ Es importante que controles los errores, dado que los servicios de AFIP se caen 
 
 A donde debes enviar el request:&#x20;
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/nuevo" method="post" summary="Nuevo comprobante de Venta" %}
-{% swagger-description %}
+## Nuevo comprobante de Venta
+
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/nuevo`
+
 Charset: UTF-8
 
 Tipo de dato esperado: JSON&#x20;
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+| Name        | Type   | Description                                                                        |
+| ----------- | ------ | ---------------------------------------------------------------------------------- |
+| usertoken   | string | Tus credenciales de acceso                                                         |
+| apitoken    | string | Tus credenciales de acceso                                                         |
+| apikey      | string | Tus credenciales de acceso                                                         |
+| comprobante | object | Estructura de "comprobante" según se informa en el apartado de ["facturacion"](./) |
+| cliente     | object | Estructura de "Cliente", según se informa en el apartado de ["facturacion"](./)    |
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="comprobante" type="object" required="false" %}
-Estructura de "comprobante" según se informa en el apartado de 
-
-["facturacion"](./)
-
-
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="cliente" type="object" required="false" %}
-Estructura de "Cliente", según se informa en el apartado de 
-
-["facturacion"](./)
-
-
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 {% code title="JSON" %}
 ```javascript
 {
@@ -80,8 +64,8 @@ Estructura de "Cliente", según se informa en el apartado de
   
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Que te retorna la llamada a la API?
 

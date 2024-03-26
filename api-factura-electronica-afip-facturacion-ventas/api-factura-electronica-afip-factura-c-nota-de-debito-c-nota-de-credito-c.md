@@ -22,8 +22,8 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
    "cliente":{
       "documento_tipo":"CUIT",
       "documento_nro":"30712293841",
-      "razon_social":"VOUSYS",
-      "email":"tusfacturas@vousys.com",
+      "razon_social":"VOUSYS TusFacturasAPP",
+      "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
       "envia_por_mail":"S",
@@ -88,8 +88,8 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
    "cliente":{
       "documento_tipo":"CUIT",
       "documento_nro":"30712293841",
-      "razon_social":"VOUSYS",
-      "email":"tusfacturas@vousys.com",
+      "razon_social":"VOUSYS TusFacturasAPP",
+      "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
       "envia_por_mail":"S",
@@ -158,8 +158,8 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
    "cliente":{
       "documento_tipo":"CUIT",
       "documento_nro":"30712293841",
-      "razon_social":"VOUSYS",
-      "email":"tusfacturas@vousys.com",
+      "razon_social":"VOUSYS TusFacturasAPP",
+      "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
       "envia_por_mail":"S",
@@ -256,3 +256,5 @@ echo "<p>error:". $json_rta_curl->error ."</p>";
 echo "<p>errores:". implode("," , $json_rta_curl->errores) ."</p>"; 
 
 ```
+
+TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) especialmente diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).

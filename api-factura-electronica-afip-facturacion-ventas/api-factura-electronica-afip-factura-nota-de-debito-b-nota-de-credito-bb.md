@@ -86,8 +86,8 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](.
    "cliente":{
       "documento_tipo":"DNI",
       "documento_nro":"12345678",
-      "razon_social":"VOUSYS",
-      "email":"tusfacturas@vousys.com",
+      "razon_social":"VOUSYS TusFacturasAPP",
+      "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
       "envia_por_mail":"S",
@@ -157,7 +157,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](.
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO B, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)
 
-Podés consultar la documentación con referencia a cada campo, [desde aquí.](./)
+Podés consultar la documentación con referencia a cada campo [desde aquí.](./)
 
 ```json
 { "usertoken" :  "xxxxx", 
@@ -168,8 +168,8 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](.
     {
          "documento_tipo":       "DNI", 
          "documento_nro":        "12345678", 
-         "razon_social":         "VOUSYS", 
-         "email":                "tusfacturas@vousys.com", 
+         "razon_social":         "VOUSYS TusFacturasAPP", 
+         "email":                "a@a.com", 
          "domicilio":            "AV.LIBERTADOR 571", 
          "provincia":            "2", 
          "envia_por_mail":       "S", 
@@ -245,9 +245,9 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](.
 ### Datos a tener en cuenta:
 
 {% hint style="info" %}
-* Ten en cuenta, que en los comprobantes B, el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
-* No sabes en que momento emitir comprobantes de tipo B? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
-* Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
+* En los comprobantes B el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
+* ¿No sabes en que momento emitir comprobantes de tipo B? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
+* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
 
 &#x20;               Nro de documento = "0"
 
@@ -255,7 +255,7 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](.
 
 &#x20;              En nombre, lo que tu contador/a te recomiende.
 
-Tené en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos. Consultá diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+Tené en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos. Consulta diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
 
 
 {% endhint %}
@@ -282,3 +282,7 @@ echo "<p>error:". $json_rta_curl->error ."</p>";
 echo "<p>errores:". implode("," , $json_rta_curl->errores) ."</p>"; 
 
 ```
+
+
+
+TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) especialmente diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).

@@ -48,45 +48,29 @@ Te sugerimos leer primero:&#x20;
 
 ### A donde enviar el request?
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/nuevo_encola" method="post" summary="Nuevo comprobante de Venta asincrónico e individual (encolado)" %}
-{% swagger-description %}
+## Nuevo comprobante de Venta asincrónico e individual (encolado)
+
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/nuevo_encola`
+
 Charset: UTF-8
 
 Tipo de dato esperado: JSON&#x20;
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+| Name        | Type   | Description                                                                        |
+| ----------- | ------ | ---------------------------------------------------------------------------------- |
+| usertoken   | string | Tus credenciales de acceso                                                         |
+| apitoken    | string | Tus credenciales de acceso                                                         |
+| apikey      | string | Tus credenciales de acceso                                                         |
+| comprobante | object | Estructura de "comprobante" según se informa en el apartado de ["facturacion"](./) |
+| cliente     | object | Estructura de "Cliente", según se informa en el apartado de ["facturacion"](./)    |
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+{% tabs %}
+{% tab title="200 " %}
 
-{% swagger-parameter in="body" name="comprobante" type="object" required="false" %}
-Estructura de "comprobante" según se informa en el apartado de 
-
-["facturacion"](./)
-
-
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="cliente" type="object" required="false" %}
-Estructura de "Cliente", según se informa en el apartado de 
-
-["facturacion"](./)
-
-
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
-
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### **¿Que te retornaremos ?**
 
