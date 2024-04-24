@@ -7,7 +7,7 @@
 * [Estado de los servicios AFIP](api-factura-electronica-afip-estado-de-los-servicios-afip.md)
 * [¿Qué tipos de comprobante debo/puedo emitir?](que-tipos-de-comprobante-debo-puedo-emitir.md)
 * [Webhooks (notificaciones)](webhooks-notificaciones.md)
-* [Facturación](api-factura-electronica-afip-facturacion-ventas/README.md)
+* [API Facturación AFIP](api-factura-electronica-afip-facturacion-ventas/README.md)
   * [Facturación instantánea e individual](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
   * [Facturación asincrónica e  individual (encolada)](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
   * [Facturación instantánea por Lotes](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-api-facturacion-por-lotes.md)
