@@ -23,7 +23,7 @@ Te sugerimos leer primero:&#x20;
 
 &#x20;
 
-### ¿Cómo funciona el modo asincrónico, de facturación individual?
+### ¿Cómo funciona el modo asincrónico de facturación individual?
 
 1. Tu servidor envía el request a TusFacturasAPP y éste queda en cola de procesamiento.&#x20;
 2. A medida que TF va procesando, te envían un webhook con la respuesta de ese procesamiento (puede ser de éxito o error)
@@ -44,11 +44,20 @@ Te sugerimos leer primero:&#x20;
 * Si se detecta al menos un (1) error de validación de datos,  no se mandará a procesar y obtendrás la respuesta al instante, no por un webhook.
 {% endhint %}
 
+### ¿Qué dato adicional debe tener el request para ser procesado?
 
+Los request que se envíen de manera asincrónica deben contar con el campo de "external\_reference" presente dentro del bloque de "comprobante" , como se visualiza en éste ejemplo de código capturado  [desde aquí](./#estructura-generica-para-el-envio-de-un-comprobante).  Ej:
 
-### A donde enviar el request?
+```
+ "comprobante":{
+      "external_reference":"ABC123",
+      ...
+}
+```
 
-## Nuevo comprobante de Venta asincrónico e individual (encolado)
+### ¿Donde debo enviar los request?
+
+#### Nuevo comprobante de Venta asincrónico e individual (encolado)
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/nuevo_encola`
 

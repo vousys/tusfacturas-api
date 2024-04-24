@@ -6,7 +6,7 @@ description: El paso a paso para comenzar a integrar TusFacturasAPP, con tu plat
 
 ## Aprende cómo integrar a tu software la API de facturación electrónica AFIP
 
-Para probar la integración con la API para AFIP, debes [crear una cuenta](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) en nuestra plataforma [desde aquí](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
+Para probar la integración con la API para AFIP, debes crear una cuenta en nuestra plataforma [desde aquí](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
 
 Luego de creada la cuenta y con tu plan API DEV activo, podrás emitir hasta 1500 comprobantes _**que no son de curso legal**_** por 1 mes y sin costo** (solo para nuevas cuentas y por única vez). Una vez vencido tu período de prueba, deberás contratar algún [plan API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html) de los que tenemos disponibles [aquí.](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
 
@@ -21,7 +21,7 @@ Mientras estés en etapa de testing:
 * Sugerimos configurar tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679).&#x20;
 * Una vez que hayas probado todo y estes listo/a para ir a producción, podrás borrar desde nuestra plataforma web todos los comprobantes asociados a ese CUIT/PDV y luego dar de baja el CUIT/PDV para crear el nuevo y enlazarlo con AFIP.
 
-**Resumen para comenzar a trabajar:**
+### **Resumen para comenzar a trabajar:**
 
 1\) Crea tu cuenta API DEV [desde aquí](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html), gratis por 1 mes.
 
@@ -31,4 +31,4 @@ Mientras estés en etapa de testing:
 
 4\) Una vez activa tu cuenta con el plan API DEV, ingresá desde nuestra la web [www.tusfacturas.app](https://www.tusfacturas.app/app/login.html) a  menú > "Mi espacio de trabajo > Configurar éste espacio de trabajo y habilita tu IP dentro del bloque "ACCESO API".
 
-¿Qué esperas para comenzar a emitir factura electrónica AFIP?
+¿Qué esperas para comenzar a [emitir factura electrónica AFIP](https://www.tusfacturas.app/como-empezamos-a-hacer-facturas-electronicas.html) con nuestra API?
