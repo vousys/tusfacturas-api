@@ -10,38 +10,23 @@ Debes tener en cuenta que la función de "reenviar comprobante" solo estará hab
 
 
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/reenviar " method="post" summary="Reenviar un comprobante a tu cliente" %}
-{% swagger-description %}
+## Reenviar un comprobante a tu cliente
+
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/reenviar`&#x20;
+
 Mediante éste método podrás hacer el reenvío de un comprobante a tu cliente.
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="comprobante" required="false" %}
-Un objeto compuesto de los siguientes atributos: ****&#x20;
+#### Request Body
 
-**tipo:** Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A&#x20;
+| Name        | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| comprobante | String | <p>Un objeto compuesto de los siguientes atributos: </p><p><strong>tipo:</strong> Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A </p><p><strong>operacion :</strong> Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.</p><p><strong>punto_venta</strong> Campo númerico para indicar el número del punto de venta.</p><p><strong>numero :</strong> Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.</p><p></p> |
+| apikey      | string | Tus credenciales de acceso.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| apitoken    | string | Tus Credenciales de acceso.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| usertoken   | string | Tus Credenciales de acceso.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-**operacion :** Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.
-
-**punto\_venta** Campo númerico para indicar el número del punto de venta.
-
-**numero :** Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.
-
-
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus Credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus Credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="En caso de respuesta exitosa el campo " %}
+{% tabs %}
+{% tab title="200 En caso de respuesta exitosa el campo " %}
 {% tabs %}
 {% tab title="JSON" %}
 ```
@@ -56,8 +41,8 @@ Tus Credenciales de acceso.
 ```
 {% endtab %}
 {% endtabs %}
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Ejemplo del JSON a enviar para reenviar un comprobante:
 

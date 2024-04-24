@@ -15,39 +15,26 @@ Ten en cuenta, que la fecha del comprobante, determina la fecha en que éste se 
 Tipo de datos: **JSON**\
 Charset: **UTF-8**
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/cambiar_fecha_encolado " method="post" summary="Cambiar la fecha de uno o más comprobantes en cola de procesamiento" %}
-{% swagger-description %}
+## Cambiar la fecha de uno o más comprobantes en cola de procesamiento
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/cambiar_fecha_encolado`&#x20;
 
-{% swagger-parameter in="body" name="external_reference" type="String" %}
-Campo alfanumérico de hasta 255 caracteres.
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="vencimiento" type="String" %}
-Fecha de vencimiento del pago de dicho comprobante. Formato esperado: dd/mm/aaaa
-{% endswagger-parameter %}
+| Name                | Type   | Description                                                                      |
+| ------------------- | ------ | -------------------------------------------------------------------------------- |
+| apikey              | string | Tus credenciales de acceso.                                                      |
+| apitoken            | string | Tus Credenciales de acceso.                                                      |
+| usertoken           | string | Tus Credenciales de acceso.                                                      |
+| fecha               | string | Fecha del comprobante. Formato esperado: dd/mm/aaaa                              |
+| external\_reference | String | Campo alfanumérico de hasta 255 caracteres.                                      |
+| vencimiento         | String | Fecha de vencimiento del pago de dicho comprobante. Formato esperado: dd/mm/aaaa |
 
-{% swagger-parameter in="body" name="fecha" type="string" %}
-Fecha del comprobante. Formato esperado: dd/mm/aaaa
-{% endswagger-parameter %}
+{% tabs %}
+{% tab title="200  " %}
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus Credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus Credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description=" " %}
-
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Ejemplo del JSON a enviar:
 

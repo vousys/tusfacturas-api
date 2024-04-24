@@ -6,23 +6,17 @@ description: >-
 
 # Parámetros: Consulta de Países en AFIP
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/tablas_referencia/paises" method="post" summary="Consulta de paises " %}
-{% swagger-description %}
+## Consulta de paises&#x20;
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/tablas_referencia/paises`
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
-{% endswagger %}
+| Name      | Type   | Description                 |
+| --------- | ------ | --------------------------- |
+| apikey    | string | Tus credenciales de acceso  |
+| apitoken  | string | Tus credenciales de acceso  |
+| usertoken | string | Tus credenciales de acceso. |
 
 ### Estructura del JSON a enviar
 

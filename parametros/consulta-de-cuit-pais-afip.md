@@ -6,24 +6,20 @@ description: >-
 
 # Parámetros:  Consulta de los CUIT País en AFIP
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="v2/tablas_referencia/cuit_pais" method="post" summary="Consulta de cuit país" %}
-{% swagger-description %}
+## Consulta de cuit país
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/tablas_referencia/cuit_pais`
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+| Name      | Type   | Description                |
+| --------- | ------ | -------------------------- |
+| apikey    | string | Tus credenciales de acceso |
+| apitoken  | string | Tus credenciales de acceso |
+| usertoken | string | Tus credenciales de acceso |
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="En caso de no existir errores, se devolverá la variable error con un valor " %}
+{% tabs %}
+{% tab title="200 En caso de no existir errores, se devolverá la variable error con un valor " %}
 ```
 {
         "error":     "N",
@@ -34,8 +30,8 @@ Tus credenciales de acceso
                   ] 
  }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Ejemplo del JSON a enviar
 

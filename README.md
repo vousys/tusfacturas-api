@@ -12,6 +12,8 @@ TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/soft
 
 Al utilizar la API de facturación electrónica AFIP provista por TusFacturasAPP , podrás generar de manera segura y rápida, comprobantes electrónicas válidos en AFIP Argentina. Contamos con el respaldo de un estudio impositivo que nos mantiene asesorados ante las nuevas normativas que surgen día a día en nuestro país.
 
+<figure><img src=".gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
+
 Además de usar la API, podrás utilizar nuestra plataforma web, con todas las funcionalidades que ésta brinda.
 
 \

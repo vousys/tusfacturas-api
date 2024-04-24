@@ -19,40 +19,21 @@ Los cobros que informes, se usan solo para la gestión interna de nuestra plataf
 * El total de los pagos **NO** debe superar el importe total del comprobante, pero si puede ser inferior, para indicar que el comprobante recibió un pago parcial.
 {% endhint %}
 
-{% swagger method="post" path="/v2/facturacion/pagar" baseUrl="https://www.tusfacturas.app/app/api" summary="Ingresar pagos a un comprobante emitido" %}
-{% swagger-description %}
+## Ingresar pagos a un comprobante emitido
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/pagar`
 
-{% swagger-parameter in="body" name="apitoken" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="apikey" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+| Name        | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| apitoken    | String | Tus credenciales de acceso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| apikey      | String | Tus credenciales de acceso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| usertoken   | String | Tus credenciales de acceso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| comprobante | object | <p>Un objeto compuesto de los siguientes atributos: </p><p><strong>tipo:</strong> Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A </p><p><strong>operacion :</strong> Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.</p><p><strong>punto_venta</strong> Campo númerico para indicar el número del punto de venta.</p><p><strong>numero :</strong> Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.</p><p><strong>pagos</strong>: Bloque según estructura que se detalla a continuación</p><p></p> |
 
-{% swagger-parameter in="body" name="usertoken" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="comprobante" type="object" required="false" %}
-Un objeto compuesto de los siguientes atributos: ****&#x20;
-
-**tipo:** Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A&#x20;
-
-**operacion :** Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.
-
-**punto\_venta** Campo númerico para indicar el número del punto de venta.
-
-**numero :** Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.
-
-**pagos**: Bloque según estructura que se detalla a continuación
-
-
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="" %}
+{% tabs %}
+{% tab title="200: OK " %}
 Ejemplos de las respuestas JSON en caso de éxito o error
 
 {% tabs %}
@@ -75,8 +56,8 @@ Ejemplos de las respuestas JSON en caso de éxito o error
 ```
 {% endtab %}
 {% endtabs %}
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ## Ejemplo del JSON completo a enviar
 

@@ -18,46 +18,30 @@ A partir del 01/04/2022 ésta consulta te devolverá también, todos aquellos co
 
 #### Cómo llamar a la API?
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/v2" path="/facturacion/consulta_avanzada" method="post" summary="Consulta de comprobantes avanzada" %}
-{% swagger-description %}
+## Consulta de comprobantes avanzada
+
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/consulta_avanzada`
+
 Estructura general para todo tipo de consulta avanzada
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="busqueda_tipo" type="string" required="false" %}
-Campo alfanumérico.&#x20;
+#### Request Body
 
-Valores permitidos: "F", EXT\_REF", "TN"
-{% endswagger-parameter %}
+| Name           | Type   | Description                                                                                  |
+| -------------- | ------ | -------------------------------------------------------------------------------------------- |
+| busqueda\_tipo | string | <p>Campo alfanumérico. </p><p>Valores permitidos: "F", EXT_REF", "TN"</p>                    |
+| comprobante    | object | Objeto atributos, según estructura que se detalla a continuación para cada tipo de búsqueda. |
+| usertoken      | string | Tus credenciales de acceso                                                                   |
+| apitoken       | string | Tus credenciales de acceso                                                                   |
+| apikey         | string | Tus credenciales de acceso                                                                   |
+| limite         | int    | Valor entero númerico.                                                                       |
+| pagina         | int    | Valor entero númerico.                                                                       |
 
-{% swagger-parameter in="body" name="limite" type="int" %}
-Valor entero númerico.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="pagina" type="int" %}
-Valor entero númerico.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="comprobante" type="object" required="false" %}
-Objeto atributos, según estructura que se detalla a continuación para cada tipo de búsqueda.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="Devuelve un array con cada " %}
+{% tabs %}
+{% tab title="200 Devuelve un array con cada " %}
 ```
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 #### Ejemplo del JSON de respuesta:
 

@@ -13,34 +13,24 @@ El límite de request que dispones para realizar las consultas, es el mismo limi
 IMPORTANTE: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP, el servicio de "**Webservice Registro de Facturas de Crédito Electrónica MiPyMEs "** . Te indicamos cómo hacerlo en el [instructivo de integración con AFIP : Paso 6](https://youtu.be/\_YSRksd0\_A0)
 {% endhint %}
 
-{% swagger baseUrl="https://www.tusfacturas.app/app" path="/api/v2/facturacion/requiere_fec" method="post" summary="Consulta de obligado a recibir MiPyme" %}
-{% swagger-description %}
+## Consulta de obligado a recibir MiPyme
+
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/requiere_fec`
+
 Éste método te devolverá si tu cliente se encuentra obligado a recibir facturas de tipo MiPyme y a partir de que monto se encuentra obligado.
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="fecha" type="string" required="false" %}
-La fechad de emisión del comprobante en cuestión. Formato esperado: dd/mm/aaaa
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="cuit" type="number" required="false" %}
-El CUIT de tu cliente. Campo numérico de 11 digitos
-{% endswagger-parameter %}
+| Name      | Type   | Description                                                                    |
+| --------- | ------ | ------------------------------------------------------------------------------ |
+| fecha     | string | La fechad de emisión del comprobante en cuestión. Formato esperado: dd/mm/aaaa |
+| cuit      | number | El CUIT de tu cliente. Campo numérico de 11 digitos                            |
+| apikey    | number | Tus credenciales de acceso                                                     |
+| usertoken | string | Tus credenciales de acceso                                                     |
+| apitoken  | string | <p>Tus credenciales de acceso</p><p>\</p>                                      |
 
-{% swagger-parameter in="body" name="apikey" type="number" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-
-\\
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 {% code title="JSON" %}
 ```
 En caso de no encontrar errores obtendrás una respuesta 
@@ -69,8 +59,8 @@ como la siguiente:
 
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Ejemplo del JSON a enviar:
 

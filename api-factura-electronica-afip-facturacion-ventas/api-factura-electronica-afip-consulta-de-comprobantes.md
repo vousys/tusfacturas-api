@@ -20,29 +20,18 @@ Es importante que descargues toda la información, junto con el pdf y lo almacen
 Tipo de datos: **JSON**\
 Charset: **UTF-8**
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/consulta " method="post" summary="Consulta individual de comprobante" %}
-{% swagger-description %}
+## Consulta individual de comprobante
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/consulta`&#x20;
 
-{% swagger-parameter in="body" name="comprobante" required="false" type="object" %}
-Un objeto según estructura que se detalla a continuación.
+#### Request Body
 
-
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus Credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus Credenciales de acceso.
-{% endswagger-parameter %}
-{% endswagger %}
+| Name        | Type   | Description                                                             |
+| ----------- | ------ | ----------------------------------------------------------------------- |
+| comprobante | object | <p>Un objeto según estructura que se detalla a continuación.</p><p></p> |
+| apikey      | string | Tus credenciales de acceso.                                             |
+| apitoken    | string | Tus Credenciales de acceso.                                             |
+| usertoken   | string | Tus Credenciales de acceso.                                             |
 
 #### Estructura a enviar dentro del bloque: "Comprobante"
 
@@ -171,17 +160,7 @@ La información que obtenés se devuelve estructurada de la misma manera que la 
 
 #### Campos devueltos que no forman parte del JSON que vos envias:
 
-| Nombre del campo        | Info                                                                                                                                                                                                                                                             |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cae                     | Campo alfanumérico, con un espacio adicional, devuelto por AFIP, a modo e código de autorización electrónica de la transacción realizada                                                                                                                         |
-| afip\_qr                | Campo alfanumérico, conteniendo el texto necesario para formar el QR                                                                                                                                                                                             |
-| ctacte\_status          | Campo alfanumérico, conteniendo el estado del pago de ese comprobante dentro de la cuenta corriente. Los valores posibles son: PAGADA, IMPAGA , PAGO PARCIAL                                                                                                     |
-| status                  | Campo alfanumérico, conteniendo el estado de emisión de ese comprobante . Lo valores les son: "EMITIDO", "APROBADO Y EN COLA. SE EMITE EL dd/mm/aaaa", "EN COLA, ESPERANDO APROBACION", "ENVIADO A PROCESAR - CON ERROR"                                         |
-| afip\_codigo\_barras    | Campo alfanumérico, conteniendo el texto necesario para formar el código de barras de AFIP (legacy)                                                                                                                                                              |
-| vencimiento\_cae        | Fecha enviada por AFIP al momento de autorizar el comprobante. Formato: dd/mm/aaaa                                                                                                                                                                               |
-| vencimiento\_pago       | Fecha que indica la fecha de vencimiento del pago. Éste dato enviado por el cliente, o auto-calculado en base a la condición de pago estipulada en el perfil del cliente. Formato: dd/mm/aaaa                                                                    |
-| comprobante\__pdf_\_url | Campo alfanumérico que al pdf del comprobante.                                                                                                                                                                                                                   |
-| micrositios             | En este campo se te devolverá la URL del micrositio del cliente y la de url del micrositio de descarga, solo si tu cuenta tiene los micrositios habilitados. Para configurarlo, ingresá a nuestra plataforma web, menú > mi espacio de trabajo > mis micrositios |
+<table><thead><tr><th width="198">Nombre del campo</th><th>Info</th></tr></thead><tbody><tr><td>cae</td><td>Campo alfanumérico, con un espacio adicional, devuelto por AFIP, a modo e código de autorización electrónica de la transacción realizada</td></tr><tr><td>afip_qr</td><td>Campo alfanumérico, conteniendo el texto necesario para formar el QR </td></tr><tr><td>ctacte_status</td><td>Campo alfanumérico, conteniendo el estado del pago de ese comprobante dentro de la cuenta corriente. Los valores posibles son: PAGADA, IMPAGA , PAGO PARCIAL</td></tr><tr><td>status</td><td>Campo alfanumérico, conteniendo el estado de emisión de ese comprobante . Lo valores les son: "EMITIDO", "APROBADO Y EN COLA. SE EMITE EL dd/mm/aaaa", "EN COLA, ESPERANDO APROBACION", "ENVIADO A PROCESAR - CON ERROR"</td></tr><tr><td>afip_codigo_barras</td><td>Campo alfanumérico, conteniendo el texto necesario para formar el código de barras de AFIP (legacy)</td></tr><tr><td>vencimiento_cae</td><td>Fecha enviada por AFIP al momento de autorizar el comprobante. Formato: dd/mm/aaaa</td></tr><tr><td>vencimiento_pago</td><td>Fecha que indica la fecha de vencimiento del pago. Éste dato enviado por el cliente, o auto-calculado en base a la condición de pago estipulada en el perfil del cliente. Formato: dd/mm/aaaa</td></tr><tr><td>comprobante_<em>pdf</em>_url</td><td>Campo alfanumérico que al pdf del comprobante.</td></tr><tr><td>micrositios</td><td>En este campo se te devolverá la URL del micrositio del cliente y la de url del micrositio de descarga, solo si tu cuenta tiene los micrositios habilitados. Para configurarlo, ingresá a nuestra plataforma web, menú > mi espacio de trabajo > mis micrositios</td></tr></tbody></table>
 
 
 

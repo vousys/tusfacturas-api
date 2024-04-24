@@ -7,24 +7,22 @@ description: >-
 
 # Consultar el tope para ventas a consumidor final
 
-{% swagger method="post" path="/facturacion/topecf" baseUrl="https://www.tusfacturas.app/app/api/v2" summary=" " %}
-{% swagger-description %}
+## &#x20;
+
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/topecf`
+
 Mediante éste método, podrás consultar el tope especificado por AFIP, para ventas a consumidor final, sin requisito de detallar tipo y número de documento del comprador.
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="apikey" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="apitoken" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+| Name      | Type   | Description                |
+| --------- | ------ | -------------------------- |
+| apikey    | String | Tus credenciales de acceso |
+| apitoken  | String | Tus credenciales de acceso |
+| usertoken | String | Tus credenciales de acceso |
 
-{% swagger-parameter in="body" name="usertoken" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="" %}
+{% tabs %}
+{% tab title="200: OK " %}
 ```javascript
 {
 	"error": "N",
@@ -32,8 +30,8 @@ Tus credenciales de acceso
 	"monto": 26228
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Ejemplo de JSON a enviar
 

@@ -8,34 +8,28 @@ description: >-
 
 
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/puntos_venta/predeterminar" method="post" summary="Predeterminar CUIT + Punto de venta" %}
-{% swagger-description %}
+## Predeterminar CUIT + Punto de venta
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/puntos_venta/predeterminar`
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+| Name      | Type   | Description                               |
+| --------- | ------ | ----------------------------------------- |
+| apitoken  | string | Tus credenciales de acceso                |
+| apikey    | string | Tus credenciales de acceso                |
+| usertoken | string | <p>Tus credenciales de acceso</p><p>\</p> |
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-
-\\
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```
 {
 	"error": "N",
 	"errores": [] 
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 #### Ejemplo del JSON a enviar:
 

@@ -10,41 +10,25 @@ description: >-
 Ten en cuenta que para la moneda "dólar": AFIP trabaja con la cotización oficial del Banco de la Nación Argentina, correspondiente al DOLAR DIVISAS y la cotización es actualizada a cada hora.
 {% endhint %}
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/tablas_referencia/cotizacion" method="post" summary="Obtener cotización desde AFIP" %}
-{% swagger-description %}
+## Obtener cotización desde AFIP
+
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/tablas_referencia/cotizacion`
+
 Puedes obtener la cotización de las diferentes monedas que tenemos publicadas en nuestra
 
 **tabla de referencia de monedas**
 
 . La cotización es obtenida desde AFIP.
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="moneda" type="string" required="false" %}
-La moneda a consultar, según nuestra 
-
-[tabla de referencia de monedas](../parametros/tablas-de-referencia.md#monedas)
-
-. En caso que no envies éste dato, obtendrás la cotización del dolar.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="fecha" type="string" required="false" %}
-Si indicas la fecha en formato dd/mm/aaaa, te mostraremos la ultima cotización encontrada en AFIP para ese día, según los datos que hemos almacenado. Ten en cuenta que no podrás consultar mas de 2 meses atras.
-
-
-{% endswagger-parameter %}
-{% endswagger %}
+| Name      | Type   | Description                                                                                                                                                                                                                     |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| usertoken | string | Tus credenciales de acceso                                                                                                                                                                                                      |
+| apitoken  | string | Tus credenciales de acceso                                                                                                                                                                                                      |
+| apikey    | string | Tus credenciales de acceso                                                                                                                                                                                                      |
+| moneda    | string | La moneda a consultar, según nuestra [tabla de referencia de monedas](../parametros/tablas-de-referencia.md#monedas). En caso que no envies éste dato, obtendrás la cotización del dolar.                                       |
+| fecha     | string | <p>Si indicas la fecha en formato dd/mm/aaaa, te mostraremos la ultima cotización encontrada en AFIP para ese día, según los datos que hemos almacenado. Ten en cuenta que no podrás consultar mas de 2 meses atras.</p><p></p> |
 
 ### Estructura del JSON a enviar
 

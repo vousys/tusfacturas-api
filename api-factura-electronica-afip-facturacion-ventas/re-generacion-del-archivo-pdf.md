@@ -6,46 +6,29 @@ description: >-
 
 # Re-generación del archivo PDF
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/facturacion/regenerar_pdf " method="post" summary="Regeneración de PDFs" %}
-{% swagger-description %}
+## Regeneración de PDFs
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/regenerar_pdf`&#x20;
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-tus credenciales de acceso
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+| Name        | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| usertoken   | string | tus credenciales de acceso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| apitoken    | string | Tus credenciales de acceso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| apikey      | string | Tus credenciales de acceso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| comprobante | String | <p>Un objeto compuesto de los siguientes atributos: </p><p><strong>tipo:</strong> Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A </p><p><strong>operacion :</strong> Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.</p><p><strong>punto_venta</strong> Campo númerico para indicar el número del punto de venta.</p><p><strong>numero :</strong> Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.</p><p></p> |
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="comprobante" required="false" %}
-Un objeto compuesto de los siguientes atributos: ****&#x20;
-
-**tipo:** Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A&#x20;
-
-**operacion :** Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.
-
-**punto\_venta** Campo númerico para indicar el número del punto de venta.
-
-**numero :** Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.
-
-
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="Regenera el PDF y te devuelve la URL del archivo" %}
+{% tabs %}
+{% tab title="200 Regenera el PDF y te devuelve la URL del archivo" %}
 ```
 {
 "error" :  "N",
 "comprobante_pdf_url"    :  "http://www.prueba.com"
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Ejemplo del JSON a enviar para re-generar el pdf
 
