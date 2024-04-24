@@ -19,122 +19,38 @@ description: >-
 
 * Si das de alta un punto de venta de un CUIT que ya existía en TusfacturasAPP y emitía factura electrónica, automáticamente, éste quedará habilitado para emitir factura electrónica AFIP, sin requerir cargar en AFIP un nuevo certificado de seguridad. Lo único que deberás hacer en AFIP, es dar de alta el nuevo punto de venta de tipo "webservices".
 
-****
+
 {% endhint %}
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/puntos_venta/administrar" method="post" summary="Administrar CUIT + Punto de venta" %}
-{% swagger-description %}
+## Administrar CUIT + Punto de venta
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/puntos_venta/administrar`
 
-{% swagger-parameter in="body" name="webhook" type="string" %}
-Campo alfanumérico de hasta 255 caracteres. Formato esperado: https://www.dominio.com/script-nombre.
+#### Request Body
 
-[Más información](../webhooks-notificaciones.md#direccion-del-webhook)
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="operacion" type="string" required="false" %}
-Valores esperados: A o M
-
-A = Alta de nuevo punto de venta
-
-
-
-M = Modifica el punto de venta, correspondiente a las apikey desde las cuales estoy enviando para hacer el request.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="conceptos_tipo" type="string" required="false" %}
-Debe indicar el tipo de conceptos que factura, los cuales pueden ser:
-
-P = Productos
-
-PS = Productos y Servicios
-
-S = Servicios
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="es_predeterminado" type="string" required="false" %}
-Indica si el CUIT + Punto de venta es el predeterminado. Valores esperados: S o N
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="esta_activo" type="string" required="false" %}
-Indica si el CUIT + Punto de venta se encuentra activo y disponible para generar comprobantes. Valores esperados: S o N
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="mercadopago" type="object" required="false" %}
-Según objeto "mercadopago" que se detalla abajo.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="xero" type="object" required="false" %}
-Según objeto "xero" que se detalla abajo.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="es_agente_retencion" type="string" required="false" %}
-Indica si el punto de venta es agente de retención. Valores esperados: S o N.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="factura" type="object" required="false" %}
-Un objeto del tipo "factura" según se detalla abajo.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="punto_venta" type="number" required="false" %}
-El número del punto de venta a crear.
-
-\\
-
-Ej: 4
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="factura_afip" type="string" required="false" %}
-Indica si va a querer emitir factura electrónica AFIP. En el caso que la respuesta sea "S", se enviará ademas, via email (a la casilla del administrador), el instructivo para realizar el enlace con AFIP, junto con el certificado de seguridad requerido por AFIP.
-
-\\
-
-Valores esperados: S o N.
-
-\\
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="fecha_inicio" type="string" required="false" %}
-Fecha de inicio de actividades. Formato: dd/mm/aaaa
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="iibb" type="string" required="false" %}
-El nro de ingresos brutos.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="iva_emails" type="string" required="false" %}
-Las direcciones de email separadas por coma donde quieren recibir mensualmente el iva compras-ventas.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="iva_condicion" type="string" required="false" %}
-La condición impositiva según tabla de referencia.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="direccion" type="string" required="false" %}
-El domicilio fiscal. Dirección + número
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="cuit" type="number" required="false" %}
-Tu CUIT. Solo números.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="razon_social" type="string" required="false" %}
-La razón social
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales actuales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales actuales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales actuales de acceso.
-{% endswagger-parameter %}
-{% endswagger %}
+| Name                  | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| operacion             | string | <p>Valores esperados: A o M</p><p>A = Alta de nuevo punto de venta</p><p></p><p>M = Modifica el punto de venta, correspondiente a las apikey desde las cuales estoy enviando para hacer el request.</p>                                                                                                                                                                                                                  |
+| conceptos\_tipo       | string | <p>Debe indicar el tipo de conceptos que factura, los cuales pueden ser:</p><p>P = Productos</p><p>PS = Productos y Servicios</p><p>S = Servicios</p>                                                                                                                                                                                                                                                                    |
+| es\_predeterminado    | string | Indica si el CUIT + Punto de venta es el predeterminado. Valores esperados: S o N                                                                                                                                                                                                                                                                                                                                        |
+| esta\_activo          | string | Indica si el CUIT + Punto de venta se encuentra activo y disponible para generar comprobantes. Valores esperados: S o N                                                                                                                                                                                                                                                                                                  |
+| mercadopago           | object | Según objeto "mercadopago" que se detalla abajo.                                                                                                                                                                                                                                                                                                                                                                         |
+| xero                  | object | Según objeto "xero" que se detalla abajo.                                                                                                                                                                                                                                                                                                                                                                                |
+| es\_agente\_retencion | string | Indica si el punto de venta es agente de retención. Valores esperados: S o N.                                                                                                                                                                                                                                                                                                                                            |
+| factura               | object | Un objeto del tipo "factura" según se detalla abajo.                                                                                                                                                                                                                                                                                                                                                                     |
+| punto\_venta          | number | <p>El número del punto de venta a crear.</p><p>\</p><p>Ej: 4</p>                                                                                                                                                                                                                                                                                                                                                         |
+| factura\_afip         | string | <p>Indica si va a querer <a href="https://www.tusfacturas.app/como-empezamos-a-hacer-facturas-electronicas.html">emitir factura electrónica AFIP</a>. En el caso que la respuesta sea "S", se enviará ademas, via email (a la casilla del administrador), el instructivo para realizar el enlace con AFIP, junto con el certificado de seguridad requerido por AFIP.</p><p>\</p><p>Valores esperados: S o N.</p><p>\</p> |
+| fecha\_inicio         | string | Fecha de inicio de actividades. Formato: dd/mm/aaaa                                                                                                                                                                                                                                                                                                                                                                      |
+| iibb                  | string | El nro de ingresos brutos.                                                                                                                                                                                                                                                                                                                                                                                               |
+| iva\_emails           | string | Las direcciones de email separadas por coma donde quieren recibir mensualmente el iva compras-ventas.                                                                                                                                                                                                                                                                                                                    |
+| iva\_condicion        | string | La condición impositiva según tabla de referencia.                                                                                                                                                                                                                                                                                                                                                                       |
+| direccion             | string | El domicilio fiscal. Dirección + número                                                                                                                                                                                                                                                                                                                                                                                  |
+| cuit                  | number | Tu CUIT. Solo números.                                                                                                                                                                                                                                                                                                                                                                                                   |
+| razon\_social         | string | La razón social                                                                                                                                                                                                                                                                                                                                                                                                          |
+| apitoken              | string | Tus credenciales actuales de acceso.                                                                                                                                                                                                                                                                                                                                                                                     |
+| apikey                | string | Tus credenciales actuales de acceso.                                                                                                                                                                                                                                                                                                                                                                                     |
+| usertoken             | string | Tus credenciales actuales de acceso.                                                                                                                                                                                                                                                                                                                                                                                     |
+| webhook               | string | <p>Campo alfanumérico de hasta 255 caracteres. Formato esperado: https://www.dominio.com/script-nombre.</p><p><a href="../webhooks-notificaciones.md#direccion-del-webhook">Más información</a></p>                                                                                                                                                                                                                      |
 
 #### Objeto "mercadopago"
 
