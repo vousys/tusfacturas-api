@@ -29,6 +29,6 @@ Mientras estés en etapa de testing:
 
 3\) En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a hola@tusfacturas.app o contactanos por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
 
-4\) Una vez activa tu cuenta con el plan API DEV, ingresá desde nuestra la web [www.tusfacturas.app](https://www.tusfacturas.app/app/login.html) a  menú > "Mi espacio de trabajo > Configurar éste espacio de trabajo y habilita tu IP dentro del bloque "ACCESO API".
+4\) Una vez activa tu cuenta con el plan API DEV, ingresá desde nuestra la web [www.tusfacturas.app](https://www.tusfacturas.app/app/login.html) a  menú > Mi espacio de trabajo > Configurar éste espacio de trabajo y habilita tu IP dentro del bloque "ACCESO API".
 
 ¿Qué esperas para comenzar a [emitir factura electrónica AFIP](https://www.tusfacturas.app/como-empezamos-a-hacer-facturas-electronicas.html) con nuestra API?
