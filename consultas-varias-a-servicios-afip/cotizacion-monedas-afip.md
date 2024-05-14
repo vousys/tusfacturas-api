@@ -6,19 +6,32 @@ description: >-
 
 # Consultar las cotizaciones AFIP
 
+Accede a cotizaciones de monedas AFIP en tiempo real con la API de facturación electrónica de TusFacturas.app
+
+Obtene información precisa y actualizada sobre el tipo de cambio oficial de AFIP para sus facturas electrónicas.
+
+### Beneficios de utilizar la API de facturación electrónica de TusFacturas.app para consultar cotizaciones de monedas AFIP:
+
+* Información en tiempo real: Accedes a las últimas cotizaciones de monedas AFIP al momento de generar sus facturas electrónicas.&#x20;
+* Precisión garantizada: Obtenes datos oficiales directamente de AFIP, eliminando la necesidad de realizar cálculos manuales o utilizar fuentes no confiables.&#x20;
+* Eficiencia optimizada: Automatizas la consulta de cotizaciones de monedas AFIP, ahorrando tiempo y esfuerzo en su proceso de facturación electrónica.&#x20;
+* Integración perfecta: Integra la consulta de cotizaciones de monedas AFIP en tu sistema de gestión existente para una experiencia fluida y automatizada.&#x20;
+
+TusFacturas.app es la solución ideal para empresas que buscan simplificar y optimizar su proceso de facturación electrónica, incluyendo la consulta precisa y automatizada de cotizaciones de monedas AFIP.
+
+Comenza a utilizar la API de facturación electrónica de TusFacturas.app hoy mismo y experimenta la diferencia.
+
 {% hint style="info" %}
 Ten en cuenta que para la moneda "dólar": AFIP trabaja con la cotización oficial del Banco de la Nación Argentina, correspondiente al DOLAR DIVISAS y la cotización es actualizada a cada hora.
 {% endhint %}
 
-## Obtener cotización desde AFIP
+## Request
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/tablas_referencia/cotizacion`
 
 Puedes obtener la cotización de las diferentes monedas que tenemos publicadas en nuestra
 
-**tabla de referencia de monedas**
-
-. La cotización es obtenida desde AFIP.
+[**tabla de referencia de monedas**](../parametros/tablas-de-referencia.md#monedas)
 
 #### Request Body
 

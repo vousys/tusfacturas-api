@@ -1,7 +1,8 @@
 ---
 description: >-
-  Facturación electrónica Argentina fácil y rápida con la API para AFIP de
-  TusFacturas.app. Olvídate de los webservices (ws) de AFIP
+  Facturación Electrónica AFIP Simplificada. Emití facturas electrónicas AFIP de
+  forma rápida, segura y sencilla con nuestra API. ¡Integrá la facturación
+  electrónica en tu sistema de gestión hoy mismo!
 layout:
   title:
     visible: true
@@ -19,11 +20,15 @@ layout:
 
 <figure><img src="../.gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
 
+Nuestra API de facturación AFIP te permite integrar la facturación electrónica directamente en tu plataforma, eliminando la necesidad de lidiar con los complejos webservices de AFIP. TusFacturasAPP es la solución SaaS ideal para tu negocio.
+
+### ¿Cómo empiezo?
+
 Una vez configurada tu cuenta y creado tu CUIT+PDV en TusFacturasAPP, podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md)
 
-### Modalidades de facturación online&#x20;
+### ¿Cómo puedo facturar con TusFacturasAPP?&#x20;
 
-En TusFacturasAPP, contamos con 4 modalidades para la emisión de comprobantes online; Sin embargo **te recomendamos** utilizar siempre que sea posible, los **métodos de facturación asincrónicos**, ya que los instantáneos dependen de cómo funcionen los servicios de AFIP en el momento de la emisión.
+En TusFacturasAPP contamos con 4 modalidades para la emisión de comprobantes online; Sin embargo **te recomendamos** utilizar siempre que sea posible, los **métodos de facturación asincrónicos**, ya que los instantáneos dependen de cómo funcionen los servicios de AFIP en el momento de la emisión.
 
 #### **Facturas AFIP individuales  e instantáneas**
 
