@@ -28,13 +28,13 @@ description: >-
 
 #### Request Body
 
-| Name      | Type   | Description                                                                                                                          |
-| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| productos | array  | **Una lista de objetos "**[**producto**](api-factura-electronica-afip-clientes-cuenta-corriente.md#estructura-de-cada-producto)**"** |
-| usertoken | string | Tus credenciales de acceso                                                                                                           |
-| apikey    | string | Tus credenciales de acceso                                                                                                           |
-| apitoken  | string | Tus credenciales de acceso                                                                                                           |
-| operacion | string | Valores posibles: "A" para agregar nuevos productos o "M" para modificar productos                                                   |
+| Name      | Type   | Description                                                                                         |
+| --------- | ------ | --------------------------------------------------------------------------------------------------- |
+| productos | array  | **Una lista de objetos "**[**producto**](administrar-productos.md#estructura-de-cada-producto)**"** |
+| usertoken | string | Tus credenciales de acceso                                                                          |
+| apikey    | string | Tus credenciales de acceso                                                                          |
+| apitoken  | string | Tus credenciales de acceso                                                                          |
+| operacion | string | Valores posibles: "A" para agregar nuevos productos o "M" para modificar productos                  |
 
 ### Ejemplo del JSON que debes enviar
 

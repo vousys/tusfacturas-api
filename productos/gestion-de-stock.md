@@ -28,13 +28,13 @@ description: >-
 
 #### Request Body
 
-| Name      | Type   | Description                                                                                                                            |
-| --------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| productos | array  | **Una lista de objetos "**[**producto**](api-factura-electronica-afip-clientes-cuenta-corriente-2.md#estructura-de-cada-producto)**"** |
-| usertoken | string | Tus credenciales de acceso                                                                                                             |
-| apikey    | string | Tus credenciales de acceso                                                                                                             |
-| apitoken  | string | Tus credenciales de acceso                                                                                                             |
-| operacion | string | Valores posibles:  "A" = Alta de unidades al stock ó "B" = "Baja de unidades al stock"                                                 |
+| Name      | Type   | Description                                                                                    |
+| --------- | ------ | ---------------------------------------------------------------------------------------------- |
+| productos | array  | **Una lista de objetos "**[**producto**](gestion-de-stock.md#estructura-de-cada-producto)**"** |
+| usertoken | string | Tus credenciales de acceso                                                                     |
+| apikey    | string | Tus credenciales de acceso                                                                     |
+| apitoken  | string | Tus credenciales de acceso                                                                     |
+| operacion | string | Valores posibles:  "A" = Alta de unidades al stock ó "B" = "Baja de unidades al stock"         |
 
 ### Ejemplo del JSON que debes enviar
 

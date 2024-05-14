@@ -8,11 +8,11 @@ description: >-
 
 ### **Nuestra API de productos le permite:**
 
-* Crear nuevos productos con rapidez y sencillez.
-* Modificar fácilmente la información de productos existentes.
-* Consultar y obtener información detallada sobre cada producto.
-* Ingresar nuevas unidades al stock
-* Quitar unidades del stock
+* [Crear nuevos productos](administrar-productos.md) con rapidez y sencillez.
+* [Modificar](administrar-productos.md) fácilmente la información de productos existentes.
+* [Consultar ](consultar-productos.md)y obtener información detallada sobre cada producto.
+* [Ingresar unidades](gestion-de-stock.md) al stock
+* [Quitar unidades](gestion-de-stock.md) del stock
 
 ### **Beneficios de utilizar nuestra API de productos:**
 

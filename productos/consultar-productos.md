@@ -27,12 +27,12 @@ description: >-
 
 #### Request Body
 
-| Name      | Type   | Description                                                                                                                            |
-| --------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| productos | array  | **Una lista de objetos "**[**producto**](api-factura-electronica-afip-clientes-cuenta-corriente-1.md#estructura-de-cada-producto)**"** |
-| usertoken | string | Tus credenciales de acceso                                                                                                             |
-| apikey    | string | Tus credenciales de acceso                                                                                                             |
-| apitoken  | string | Tus credenciales de acceso                                                                                                             |
+| Name      | Type   | Description                                                                                       |
+| --------- | ------ | ------------------------------------------------------------------------------------------------- |
+| productos | array  | **Una lista de objetos "**[**producto**](consultar-productos.md#estructura-de-cada-producto)**"** |
+| usertoken | string | Tus credenciales de acceso                                                                        |
+| apikey    | string | Tus credenciales de acceso                                                                        |
+| apitoken  | string | Tus credenciales de acceso                                                                        |
 
 ### Ejemplo del JSON que debes enviar
 
