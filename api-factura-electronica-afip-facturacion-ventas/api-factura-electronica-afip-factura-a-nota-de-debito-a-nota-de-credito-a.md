@@ -28,7 +28,7 @@ Es un comprobante dígital legalmente equivalente a la [nota de crédito](https:
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que detalla los comprobantes asociados.
 
-Podés consultar la documentación con referencia a cada campo, [desde aquí](./).
+Podés consultar la documentación con referencia a cada campo, [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
 
 ```json
 {
@@ -121,8 +121,6 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí](./
 }
 ```
 
-
-
 ### NOTA DE DEBITO A
 
 #### ¿Qué es una nota de débito electrónica?
@@ -133,7 +131,7 @@ Es un comprobante dígital legalmente equivalente a la [nota de débito](https:/
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)
 
-Podés consultar la documentación con referencia a cada campo, [desde aquí.](./)
+Podés consultar la documentación con referencia a cada campo, [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
 
 ```json
 {
@@ -213,15 +211,9 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](.
       "impuestos_internos_base":"0",
       "impuestos_internos_alicuota":"0",
       "total":"142.1",
-      "comprobantes_asociados":[
-         {
-            "tipo_comprobante":"FACTURA A",
-            "punto_venta":"145",
-            "numero":12313,
-            "comprobante_fecha":"07/07/2018",
-            "cuit":1111111111111
-         }
-      ]
+       "comprobantes_asociados_periodo": {
+        "fecha_desde"   :    "20/11/2020",
+        "fecha_hasta"  :    "25/11/2020"  
    }
 }
 ```
@@ -451,4 +443,4 @@ echo "<p>errores:". implode("," , $json_rta_curl->errores) ."</p>";
 
 ```
 
-TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) especialmente diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).
+TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y un [software de gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).

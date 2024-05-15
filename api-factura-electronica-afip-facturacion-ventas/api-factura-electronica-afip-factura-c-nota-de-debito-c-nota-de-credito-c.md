@@ -10,7 +10,23 @@ Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C
 
 No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
 
+### Datos a tener en cuenta:
 
+{% hint style="info" %}
+* Los comprobantes C, no llevan IVA.
+* No sabes en qué momento emitir comprobantes de tipo C? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
+* Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
+
+&#x20;               Nro de documento = "0"
+
+&#x20;              Tipo de documento = "OTRO"
+
+&#x20;              En nombre, lo que tu contador/a te recomiende.
+
+Tené en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos.Consultá diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+
+
+{% endhint %}
 
 ### Ejemplo de Factura "C"
 
@@ -84,9 +100,9 @@ Es un comprobante dígital legalmente equivalente a la [nota de crédito](https:
 
 #### Ejemplo de: NOTA DE CRÉDITO C  - detallando los comprobantes que anulas.
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO C, que [detalla los comprobantes asociados.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#envio-de-comprobantes-asociados-detallados)
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO C, que detalla los comprobantes asociados.
 
-Podés consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
+Podés consultar la documentación con referencia a cada campo, [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
 
 ```json
 {
@@ -144,10 +160,15 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
       "bonificacion":"0.00",
       "leyenda_gral":" ",
       "total":"110",
-      "comprobantes_asociados_periodo":{
-         "fecha_desde":"20/11/2020",
-         "fecha_hasta":"25/11/2020"
-      }
+      "comprobantes_asociados":[
+         {
+            "tipo_comprobante":"FACTURA C",
+            "punto_venta":"145",
+            "numero":12313,
+            "comprobante_fecha":"07/07/2018",
+            "cuit":1111111111111
+         }
+      ]
    }
 }
 ```
@@ -160,9 +181,9 @@ Es un comprobante dígital legalmente equivalente a la [nota de débito](https:/
 
 #### Ejemplo de: NOTA DE DÉBITO C - asociando períodos
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE DEBITO C, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE DEBITO C, que no detalla los comprobantes asociados, sino que indíca su período, tal como se especifica aquí.
 
-Podés consultar la documentación con referencia a cada campo, [desde aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante)
+Podés consultar la documentación con referencia a cada campo, [desde aquí.](api-factura-electronica-afip-notas-credito-debito.md)
 
 ```json
 {
@@ -230,24 +251,6 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](h
 
 
 
-### Datos a tener en cuenta:
-
-{% hint style="info" %}
-* Los comprobantes C, no llevan IVA.
-* No sabes en qué momento emitir comprobantes de tipo C? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
-* Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
-
-&#x20;               Nro de documento = "0"
-
-&#x20;              Tipo de documento = "OTRO"
-
-&#x20;              En nombre, lo que tu contador/a te recomiende.
-
-Tené en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos.Consultá diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
-
-
-{% endhint %}
-
 ### Ejemplo de llamada en PHP
 
 ```php
@@ -271,4 +274,4 @@ echo "<p>errores:". implode("," , $json_rta_curl->errores) ."</p>";
 
 ```
 
-TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) especialmente diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).
+TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y un [software de gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).

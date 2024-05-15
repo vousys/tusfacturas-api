@@ -526,9 +526,7 @@ Los campos que debes enviar en cada concepto de la lista del bloque "detalle" so
 
 <table data-header-hidden><thead><tr><th width="242.66666666666666">NOMBRE DEL CAMPO</th><th width="157" align="center">REQUERIDO?</th><th></th></tr></thead><tbody><tr><td><code>cantidad</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico con 2 decimales. Separador de decimales: punto.<br><strong>Ejemplo: 1.50</strong></td></tr><tr><td><code>afecta_stock</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico de 1 posición. Valores posibles: "S" (si), "N" (no)<br><strong>Ejemplo: S</strong></td></tr><tr><td><code>producto</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Según estructura de producto que se detalla en el bloque siguiente.</td></tr><tr><td><code>leyenda</code></td><td align="center">OPCIONAL</td><td>Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.<br><strong>Ejemplo: Blanca, cepillada</strong></td></tr><tr><td><mark style="background-color:purple;">bonificacion_porcentaje</mark></td><td align="center">OPCIONAL</td><td>Si se ha aplicado un porcentaje de descuento sobre éste concepto, debe ser enviado. Es un campo númerico con 2 decimales. El separador de decimales esperado es el punto. Ej: 25</td></tr></tbody></table>
 
-###
-
-### Estructura del bloque: "detalle>producto"
+### Estructura del bloque: "detalle->producto"
 
 Cada producto o servicio que factures, deberá ser enviado con la siguiente estructura:
 
@@ -577,99 +575,17 @@ Los campos que debes enviar son los siguientes:
 
 <table data-header-hidden><thead><tr><th width="335.66666666666663">NOMBRE DEL CAMPO</th><th width="145" align="center">REQUERIDO?</th><th>INFO</th></tr></thead><tbody><tr><td><code>descripcion</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico. Longitud máxima 255 caracteres y mínima de 4 caracteres.<br><strong>Ejemplo: Papa blanca</strong></td></tr><tr><td><code>unidad_bulto</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico entero requerido. Indica la cantidad de unidades que componen un bulto. Valor minimo esperado: 1<br><strong>Ejemplo: 12</strong></td></tr><tr><td><code>lista_precios</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico. Longitud mínima de 4 caracteres y máxima 255 caracteres. Nombre de la lista de precios a la cual pertenece. No saldrá impreso en la factura pero es requerido.<br><strong>Ejemplo: Verdura Orgánica</strong></td></tr><tr><td><code>codigo</code></td><td align="center">OPCIONAL</td><td>Campo alfanumérico. Longitud máxima 10 caracteres. Si bien el campo es opcional, es recomendable enviarlo.<br><strong>Ejemplo: ABX780</strong></td></tr><tr><td><code>precio_unitario_sin_iva</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></td></tr><tr><td><code>alicuota</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td><p>Indica la alícuota de IVA con la que grava ese producto. Valores Permitidos:</p><p><strong>27, 21 , 10.5 , 0 , -1 ( para exento), -2 (no gravados)</strong><br><strong>Ejemplo: 10.5</strong></p></td></tr><tr><td><code>unidad_medida</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico que indica la unidad de medida, según<a href="../parametros/tablas-de-referencia.md#productos-unidades-de-medida-afip"> tabla de referencia Unidades de Medida(**).</a><br><strong>Ejemplo: 7</strong></td></tr><tr><td><code>actualiza_precio</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Indica si se actualiza el precio del producto y sus datos adicionales (como ser la unidad de medida, código, unidades por bulto y otros datos adicionales), tomando como valor de referencia,la información enviada en el comprobante. Campo Alfabético, de 1 carácter. Valores permitidos: S (si) N (no). <strong>Ejemplo: S</strong></td></tr><tr><td><code>impuestos_internos_alicuota</code></td><td align="center">OPCIONAL</td><td>La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numérico, con 2 decimales. ej: 10.5</td></tr><tr><td>rg5329</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td><p>Este campo te permite indicar si tu producto percibe la percepción IVA RG5329.</p><p>Valores posibles: "S" o "N".</p><p>Si envias el valor en "S", debes enviar el campo "actualiza_precio" tambien en "S".</p><p>Conocé cuando aplicar la RG5329 <a href="../faqs-or-rg5329.md">desde aquí</a></p></td></tr></tbody></table>
 
-###
+
 
 ### Estructura de "Comprobantes Asociados"
 
-**Éste bloque se utiliza solo para las notas de débito y las notas de crédito.** En éste caso AFIP requiere de manera obligatoria, que se envíe un bloque de información adicional con "comprobantes asociados".&#x20;
-
-Los comprobantes asociados son aquellos comprobantes que éstas incluyendo para anular o afectar (según corresponda) y los datos a enviar, pertenecen al emisor del comprobante.
+Encontrá la estructura e información de éste bloque desde la sección "[Notas de crédito/Notas de débito](api-factura-electronica-afip-notas-credito-debito.md)"
 
 **Existen 2 maneras de informar los comprobantes asociados:**
 
-a) Detallando los comprobantes asociados que anulas  :track\_next: [#envio-de-comprobantes-asociados-detallados](./#envio-de-comprobantes-asociados-detallados "mention")
+a) Detallando los comprobantes asociados que anulas.
 
-b) Indicando un período de comprobantes asociados. :track\_next: [#comprobantes-asociados-por-periodo](./#comprobantes-asociados-por-periodo "mention")
-
-
-
-{% hint style="info" %}
-En todos las notas de crédito y/o notas de débito de cualquier tipo ( A,B, C, E y de tipo MiPyme), **éste bloque es obligatorio** ya sea que lo hagas por período o por detalle de comprobantes**.**
-{% endhint %}
-
-#### Ejemplo de JSON a enviar:
-
-Podes ver un [ejemplo de comprobante con comprobantes asociados desde aquí](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a)
-
-
-
-### Envío de comprobantes asociados: "detallados"
-
-Para éste tipo de información, es obligatorio enviar el detalle de los comprobantes que se anulan, dentro de un array, en el bloque llamado "**comprobantes\_asociados**", acorde a la estructura que se detalla a continuación para cada comprobante asociado.
-
-Ten en cuenta que AFIP realiza validaciones sobre éstos datos, ya que según lo que facture tu cliente, tiene una cantidad de días X habilitados para anularlas.&#x20;
-
-{% hint style="info" %}
-**Auto-acreditación en cuenta corriente:**
-
-A partir del 26/03/2022, comienza a funcionar la "auto-acreditación" con las NC, solo si cumple con los siguientes requisitos:
-
-1. Detalla un solo comprobante.&#x20;
-2. El importe de la NC es exactamente igual al del comprobante que éstas anulando (factura o nota de débito).
-3. La factura o nota de débito que estás anulando, se encuentra impaga al 100%.
-
-La auto-acreditación generará un recibo de cobro, en la cuenta corriente de tu cliente, para anular contablemente esa factura o nota de débito asociada. No se enviará ningún PDF a tu cliente ni se enviará éste recibo de cobro a AIP. Esta información es solo para tu gestión interna dentro de nuestra plataforma.
-
-
-{% endhint %}
-
-
-
-Ejemplo del JSON a enviar:
-
-```json
-comprobante: {
-   .... 
-   ,comprobantes_asociados:[
-           {
-             "tipo_comprobante"   :    "FACTURA A",
-              "punto_venta"  :    "145",
-              "numero" : 12313,
-              "comprobante_fecha": "07/07/2019",
-              "cuit": 111111111     
-            } ,
-           {
-             "tipo_comprobante"   :    "FACTURA A",
-              "punto_venta"  :    "146",
-              "numero" : 12314,
-              "comprobante_fecha": "08/07/2019",
-              "cuit": 111111111     
-            } ,   
-      ] 
-  }
-```
-
-Información de los campos a enviar:
-
-<table data-header-hidden><thead><tr><th></th><th width="140.66666666666669" align="center">REQUERIDO</th><th></th></tr></thead><tbody><tr><td><code>tipo_comprobante</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfabético. Valores esperados según <a href="../parametros/tablas-de-referencia.md#tipos-de-comprobantes">tabla de tipos de comprobante.</a></td></tr><tr><td><code>punto_venta</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico entero. Longitud máxima 5 digitos.<br><strong>Ejemplo: 3</strong></td></tr><tr><td><code>numero</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></td></tr><tr><td><code>cuit</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico, sin puntos ni guiones. Es el CUIT de quien emitió el comprobante asociado. Siempre debe ser el mismo de quien está facturando.<br><strong>Ejemplo: 1111111111</strong></td></tr><tr><td><code>comprobante_fecha</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>La fecha del comprobante en formato dd/mm/aaaa. El día y el mes deben tener 2 dígitos.</td></tr></tbody></table>
-
-### Comprobantes asociados: "por período"
-
-A partir del 01/04/2021, AFIP habilitó la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados, para todo comprobante de tipo tradicional (A,B,C)
-
-Para utilizar ésta herramienta, **no se debe enviar el bloque de "**_**comprobantes asociados"**_ **y en su lugar debe enviarse un bloque llamado **_**"comprobantes\_asociados\_periodo",**_ el cual debe tener la siguiente estructura:
-
-```
- comprobante: {
-   .... 
-   ,comprobantes_asociados_periodo: {
-        "fecha_desde"   :    "20/11/2020",
-        "fecha_hasta"  :    "25/11/2020"  
-    }
- } 
-```
-
-Se deberá respetar el formato para las fechas que debe ser dd/mm/aaaa (el día y el mes deben tener 2 dígitos).
+b) Indicando un período de comprobantes asociados.&#x20;
 
 
 

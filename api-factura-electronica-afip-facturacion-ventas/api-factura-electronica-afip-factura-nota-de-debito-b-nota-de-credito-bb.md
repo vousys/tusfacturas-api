@@ -8,11 +8,27 @@ description: >-
 
 Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito B / Factura de crédito MiPyme B / Notas de crédito MiPyme B / Nota de débito MiPyme B), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto" y se emitan a un consumidor final o un exento en IVA. No sabes en qué momento emitir comprobantes de tipo **B**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
 
+### Datos a tener en cuenta:
 
+{% hint style="info" %}
+* En los comprobantes B el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
+* ¿No sabes en que momento emitir comprobantes de tipo B? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
+* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
+
+&#x20;               Nro de documento = "0"
+
+&#x20;              Tipo de documento = "OTRO"
+
+&#x20;              En nombre, lo que tu contador/a te recomiende.
+
+Tené en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos. Consulta diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+
+
+{% endhint %}
 
 ### Ejemplo de Factura B
 
-A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B, una NOTA DE DÉBITO B y una NOTA DE CRÉDITO B. Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
+A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
 
 ```json
 {
@@ -74,9 +90,9 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B, una N
 
 ## Ejemplo de: NOTA DE CRÉDITO B  - detallando los comprobantes que anulas.
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que [detalla los comprobantes asociados.](./#comprobantes-asociados-por-periodo)
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que detalla los comprobantes asociados.
 
-Podés consultar la documentación con referencia a cada campo, [desde aquí.](./)
+Podés consultar la documentación con referencia a cada campo, [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
 
 ```json
 {
@@ -155,9 +171,9 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](.
 
 ## Ejemplo de: NOTA DE DÉBITO B - asociando períodos
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO B, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO B, que no detalla los comprobantes asociados, sino que indíca su período.
 
-Podés consultar la documentación con referencia a cada campo [desde aquí.](./)
+Podés consultar la documentación con referencia a cada campo [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
 
 ```json
 { "usertoken" :  "xxxxx", 
@@ -225,40 +241,14 @@ Podés consultar la documentación con referencia a cada campo [desde aquí.](./
          "impuestos_internos_base":   "0",
          "impuestos_internos_alicuota": "0",
          "total":                    "112.1" ,
-          "comprobantes_asociados": [
-                            {
-                                "tipo_comprobante"   :    "FACTURA B",
-                                 "punto_venta"  :    "145",
-                                 "numero" : 12313,
-                                 "comprobante_fecha": "07/07/2018",
-                                 "cuit": 1111111111111     
-                            } 
-                       ]         
-         
+      "comprobantes_asociados_periodo": {
+        "fecha_desde"   :    "20/11/2020",
+        "fecha_hasta"  :    "25/11/2020" 
     } 
+  } 
 }
 
 ```
-
-##
-
-### Datos a tener en cuenta:
-
-{% hint style="info" %}
-* En los comprobantes B el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
-* ¿No sabes en que momento emitir comprobantes de tipo B? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
-* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
-
-&#x20;               Nro de documento = "0"
-
-&#x20;              Tipo de documento = "OTRO"
-
-&#x20;              En nombre, lo que tu contador/a te recomiende.
-
-Tené en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos. Consulta diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
-
-
-{% endhint %}
 
 ### Ejemplo de llamada en PHP
 
@@ -285,4 +275,4 @@ echo "<p>errores:". implode("," , $json_rta_curl->errores) ."</p>";
 
 
 
-TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) especialmente diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).
+TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y un [software de gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).

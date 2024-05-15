@@ -1,3 +1,10 @@
+---
+description: >-
+  TusFacturasAPP es un software de facturación y un software de gestión 
+  diseñado para empresas que facturen en Argentina. Conoce más de
+  TusFacturasAPP.
+---
+
 # Facturas a consumidor final, sin especificar datos
 
 Si queres facturar un comprobante **a consumidor final, sin especificar su nombre y DNI**, debes enviar dentro del bloque "cliente" >  campo "tipo" y "número"  de documento, lo siguiente:

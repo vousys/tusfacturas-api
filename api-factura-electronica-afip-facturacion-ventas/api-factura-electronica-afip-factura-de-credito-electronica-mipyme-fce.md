@@ -102,13 +102,16 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
 
 ### Nota de crédito electrónica A MiPyme (FCE)
 
-Las notas de crédito requieren que se envíe el bloque de "[Comprobantes asociados](./#estructura-de-comprobantes-asociados)" , con la particularidad de que éstos comprobantes asociados deben estar en la misma moneda que el comprobante que se está enviando a generar y la fecha del comprobante asociado tiene que ser igual o menor a la fecha del comprobante que se está autorizando.
+{% hint style="info" %}
+**Datos a tener en cuenta:**&#x20;
 
-Ademas, es importante recalcar que deben enviar dentro del bloque de "[rg\_especiales](./#estructura-de-rg-especiales)", el dato id #22 con el valor S o N.
+* Para éstas NC y ND,  **AFIP no requiere el envio del CBU ni ALIAS**
+* Debes enviar dentro del bloque de "[rg\_especiales](./#estructura-de-rg-especiales)", el dato id #22 con el valor S o N según corresponda. Consultá con tu estudio contable para que te asesoren al respecto.
+* Los comprobantes que se asocien deben haberse emitido en la misma moneda en que se esta emitiendo la nota de crédito/débito.
+* La fecha del comprobante que asocies debe ser menor o igual a la fecha del comprobante que estas queriendo emitir. Tené en cuenta que AFIP realiza validaciones en cuanto a la fecha de los comprobantes que asocies, ya que no se permiten notas de crédito a comprobantes con  +15 días.
+{% endhint %}
 
-Es importante aclarar que **AFIP no requiere el envio del CBU ni ALIAS,** para las NC y ND
-
-{% code title="JSON" %}
+{% code title="Ejemplo de JSON" %}
 ```json
 {
 	"usertoken": "xxx",
@@ -168,7 +171,6 @@ Es importante aclarar que **AFIP no requiere el envio del CBU ni ALIAS,** para l
             		{  
             		 "regimen" : "Factura de Crédito Electrónica MiPyMEs (FCE)",
                  	"datos"  : 
-
                            [ 
                             	{
                              	 "id"      :    22,
@@ -193,7 +195,7 @@ Es importante aclarar que **AFIP no requiere el envio del CBU ni ALIAS,** para l
 Ten en cuenta que TusFacturas.app no realiza validaciones con respecto a los datos enviados referente a la RG MiPyme. Las validaciones se realizan exclusivamente del lado de AFIP, previa generación del comprobante.
 {% endhint %}
 
-###
+TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y un [software de gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).
 
 [\
 ](https://app.gitbook.com/@tusfacturas/s/api-factura-electronica-afip/facturacion-nuevo-comprobante/factura-electronica-afip-exportacion)
