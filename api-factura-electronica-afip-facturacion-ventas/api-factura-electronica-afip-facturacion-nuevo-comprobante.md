@@ -49,34 +49,6 @@ Tipo de dato esperado: JSON&#x20;
 | comprobante | object | Estructura de "comprobante" según se informa en el apartado de ["API facturacion"](./) |
 | cliente     | object | Estructura de "Cliente", según se informa en el apartado de ["facturacion"](./)        |
 
-{% tabs %}
-{% tab title="200 " %}
-{% code title="JSON" %}
-```javascript
-{
-    "error":     "N",
-     "errores": [ ""],    
-     "rta":      "El comprobante NOTA DE DEBITO B 0002-00000006 (MI CUIT) se ha guardado correctamente",    
-     "cae":      "65301278726386 ",
-     "requiere_fec":   "NO ",    
-     "vencimiento_cae":"07\/08\/2015",    
-     "vencimiento_pago":"27\/08\/2015",    
-     "comprobante_pdf_url": "https://www.dominio.com/url",
-     "afip_qr" : "https://www.afip.gob.ar/fe/qr/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMC0xMS0xNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjAwMDAzIiwidGlwb0NtcCI6MTEsIm5yb0NtcCI6IjAwMDAwMjQ5IiwiaW1wb3J0ZSI6IjAwMDAwMDAwMDAwMDEwMCIsIm1vbmVkYSI6IlBFUyIsImN0eiI6IjAwMDAwMDAwMDAwMDEwMDAwMDAiLCJ0aXBvRG9jUmVjIjo5OSwibnJvRG9jUmVjIjoiMCIsInRpcG9Db2RBdXQiOiJFIiwiY29kQXV0IjoiNzA0NjY4OTk1OTcwOTEifQ== "
-     "afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
-     "envio_x_mail": "S",
-     "external_reference":"ABC123",
-     "comprobante_nro": "0000123",
-     "comprobante_tipo": "NOTA DE DEBITO B",
-     "envio_x_mail_direcciones":"direccion1@sudominio.com,direccion2@sudominio.com"
-  }  
-  
-  
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
-
 ### Que te retorna la llamada a la API?
 
 #### &#x20;:white\_check\_mark: Cuando el request resultó exitoso:

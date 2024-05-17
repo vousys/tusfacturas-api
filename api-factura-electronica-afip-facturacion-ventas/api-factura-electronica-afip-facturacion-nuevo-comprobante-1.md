@@ -7,9 +7,13 @@ description: >-
 
 # Facturación asincrónica e  individual (encolada)
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas.&#x20;
+TusFacturasAPP es un proveedor líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
 
-Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) si es la primera vez que utilizas nuestros servicios.&#x20;
+Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
+
+Una vez configurada tu cuenta y creados tus CUIT/Puntos de Venta, podrás comenzar a facturar electrónicamente sin demoras. Revisa nuestras guías "[Cómo empiezo](../como-empiezo.md)" y  "[API Facturación AFIP](./)" para conocer a fondo el servicio y los requerimientos de cada solicitud.
+
+Comienza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. Solicita acceso a nuestra API de facturación electrónica.
 
 ## **Facturación asincrónica e individual (encolada)**
 
@@ -28,8 +32,6 @@ Te sugerimos leer primero:&#x20;
 1. Tu servidor envía el request a TusFacturasAPP y éste queda en cola de procesamiento.&#x20;
 2. A medida que TF va procesando, te envían un webhook con la respuesta de ese procesamiento (puede ser de éxito o error)
 3. En caso que recibas una respuesta exitosa, deberás consultar el comprobante usando el método de [consulta avanzada por external\_reference](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados#como-realizar-una-consulta-avanzada-por-external-reference)
-
-
 
 {% hint style="info" %}
 ### Datos a tener en cuenta:
@@ -74,12 +76,6 @@ Tipo de dato esperado: JSON&#x20;
 | apikey      | string | Tus credenciales de acceso                                                         |
 | comprobante | object | Estructura de "comprobante" según se informa en el apartado de ["facturacion"](./) |
 | cliente     | object | Estructura de "Cliente", según se informa en el apartado de ["facturacion"](./)    |
-
-{% tabs %}
-{% tab title="200 " %}
-
-{% endtab %}
-{% endtabs %}
 
 ### **¿Que te retornaremos ?**
 
