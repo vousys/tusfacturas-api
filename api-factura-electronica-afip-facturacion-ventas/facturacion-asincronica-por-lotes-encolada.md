@@ -1,19 +1,25 @@
 ---
 description: >-
-  Utilizá la API de facturación electrónica de TusFacturas.app, para enviar a
-  procesar lotes y obtener una respuesta asincrónica de su procesamiento,
-  acelerando los tiempos de envío.
+  TusFacturasAPP: Solución SaaS líder en facturación electrónica para empresas.
+  Integra nuestra API y emití comprobantes por lote asincrónicos desde tu
+  plataforma.
 ---
 
 # Facturación asincrónica por Lotes (encolada)
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) si es la primera vez que utilizas nuestros servicios
+TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
 
-## ¿Cómo funciona el modo asincrónico de facturación API por lote?
+Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
+
+Una vez configurada tu cuenta y creados tus CUIT/Puntos de Venta, podrás comenzar a facturar electrónicamente sin demoras. Revisa nuestras guías "[Cómo empiezo](../como-empiezo.md)" y  "[API Facturación AFIP](./)" para conocer a fondo el servicio y los requerimientos de cada solicitud.
+
+Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
+
+### ¿Cómo funciona el modo asincrónico de facturación API por lote?
 
 ![](../.gitbook/assets/image.png)
 
-## ¿Qué puedo facturar con la API por lote asincrónica?
+### ¿Qué puedo facturar con la API por lote asincrónica?
 
 Podes enviar a facturar comprobantes de tipo A,B,C, M y comprobantes de tipo Factura de crédito electrónica MiPyme; ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos, pero **no podrás enviar comprobantes de tipo E  en ésta modalidad.**
 
@@ -21,100 +27,51 @@ Podes enviar a facturar comprobantes de tipo A,B,C, M y comprobantes de tipo Fac
 
 Tenés alguna duda del servicio? chequea las [API FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contáctanos por los canales de atención que tenemos disponibles en la plataforma web [www.tusfacturas.app](https://www.tusfacturas.app)
 
-## **Facturación asincrónica por Lote**
+### **Facturación asincrónica por Lote**
 
 Al utilizar éste servicio los comprobantes que envíes quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
 
-
-
-Antes de comenzar, te sugerimos leer :&#x20;
+#### Antes de comenzar, te sugerimos leer :&#x20;
 
 1. La documentación de "[Facturación](./)", para conocer cómo debe componerse el request que envíes
 2. La documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
 3. [FAQs sobre la cola de procesamiento](../faqs-or-cola-de-procesamiento.md)
 
-
-
+{% hint style="info" %}
 ### Sugerencias para grandes volúmenes de facturación
+
+
 
 * Distribuí tu facturación en múltiples puntos de venta, de modo que cada uno se procese en paralelo y así optimizarás la emisión de las facturas.
 * Cantidad estimada de comprobantes que se emiten por hora, dependiendo del día y horario: entre 600 y 900 por hora y punto de venta.
+{% endhint %}
 
 
 
-#### A dónde debes enviar el request?
+### ¿A dónde debes enviar el request?
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/facturacion/lotes_encola" method="post" summary="Facturación por Lotes asincrónica (encolada). Max: 100 requests por lote." %}
-{% swagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/lotes_encola`
 
+{% hint style="warning" %}
+Máximo: 100 comprobantes por lote.
+{% endhint %}
 
 Charset: UTF-8
 
 Formato esperado: JSON
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="requests" type="array" required="false" %}
-Según estructura de de cada item (detallado abajo).
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+| Name      | Type   | Description                                                                                  |
+| --------- | ------ | -------------------------------------------------------------------------------------------- |
+| requests  | array  | Lista de comprobantes a enviar , segun estructura se detalla en  [API Facturacion AFIP](./). |
+| usertoken | string | Tus credenciales de acceso                                                                   |
+| apitoken  | string | Tus credenciales de acceso                                                                   |
+| apikey    | string | Tus credenciales de acceso                                                                   |
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+### Estructura del bloque: "requests"
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
-{% code title="JSON" %}
-```
-{
-    "error": "N",
-    "errores": [],
-    "response": [{
-        "error": "N",
-        "errores": [],
-        "cae": "68466696512853 ",
-        "comprobante_nro": "00003-00000074",
-        "cae_vencimiento": "26\/11\/2018",
-        "observaciones": "AFIP genero el comprobante pero lo ha marcado como observado por los siguientes motivos: Observacion: Factura individual, DocTipo: 80, DocNro 22222222222 no se encuentra inscripto en condicion ACTIVA en el impuesto (IVA). [ codigo: 10063 ]. Dichas observaciones no requieren accion de su parte.",
-        "envio_x_mail": "N",
-        "envio_x_mail_direcciones": "",
-        "rta": "El comprobante FACTURA A 00003-00000074 (XXXXXX) se ha guardado correctamente ",
-        "vencimiento_cae": "26\/11\/2018",
-        "vencimiento_pago": "16\/11\/2018",
-        "comprobante_tipo": "FACTURA A",
-        "afip_codigo_barras": "111111111110010000368466696512853201811262 ",
-        "comprobante_pdf_url": "https:\/\/www.dominio.com\/00000074.pdf"
-    }, {
-        "error": "N",
-        "errores": [],
-        "cae": "68466696512866 ",
-        "comprobante_nro": "00003-00000075",
-        "cae_vencimiento": "26\/11\/2018",
-        "observaciones": "AFIP genero el comprobante pero lo ha marcado como observado por los siguientes motivos: Observacion: Factura individual, DocTipo: 80, DocNro 22222222222 no se encuentra inscripto en condicion ACTIVA en el impuesto (IVA). [ codigo: 10063 ]. Dichas observaciones no requieren accion de su parte.",
-        "envio_x_mail": "N",
-        "envio_x_mail_direcciones": "",
-        "rta": "El comprobante FACTURA A 00003-00000075 (XXXXXX) se ha guardado correctamente ",
-        "vencimiento_cae": "26\/11\/2018",
-        "vencimiento_pago": "16\/11\/2018",
-        "comprobante_tipo": "FACTURA A",
-        "afip_codigo_barras": "111111111110010000368466696512866201811266 ",
-        "comprobante_pdf_url": "https:\/\/www.dominio.com\/00000075.pdf"
-    }]
-}
-```
-{% endcode %}
-{% endswagger-response %}
-{% endswagger %}
-
-#### Estructura del bloque: "requests"
-
-"requests debe ser un array (en JSON) que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](./)".
+"requests" debe ser un array (en JSON) que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](./)".
 
 {% hint style="info" %}
 ### Datos a tener en cuenta:
@@ -132,7 +89,17 @@ Tus credenciales de acceso
 
 {% endhint %}
 
-La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar ([comprobantes de tipo A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), [Comprobantes de tipo Factura de crédito electrónica MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)) .
+La estructura de cada "{objeto\_comprobante}" debe ser acorde a los siguientes tipos de comprobante a generar:&#x20;
+
+[comprobantes de tipo A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
+
+&#x20;[comprobantes de tipo B](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)
+
+[comprobantes de tipo C](api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)
+
+&#x20;[Comprobantes de tipo Factura de crédito electrónica MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)
+
+Revisa nuestra guía  "[API Facturación AFIP](./)" para conocer a fondo el servicio y los requerimientos de cada solicitud.
 
 #### Ejemplo de JSON a enviar
 
@@ -142,160 +109,12 @@ La estructura de cada "request" debe ser acorde a los siguientes tipos de compro
 	"apitoken": "xxxx",
 	"apikey": "xxxx",
 	"usertoken": "xxxxx",
-	"requests": [{
-			"apitoken": "xxxxx",
-			"apikey": "xxxxx",
-			"usertoken": "xxxxx",
-			"cliente": {
-				"documento_tipo": "DNI",
-				"condicion_iva": "CF",
-				"domicilio": "Av Sta Fe 23132",
-				"condicion_pago": "211",
-				"documento_nro": "71229384",
-				"razon_social": "Juan",
-				"provincia": "2",
-				"email": "email@dominio.com",
-				"envia_por_mail": "N"
-			},
-			"comprobante": {
-				"external_reference": "AAAA",
-				"rubro": "Sevicios web",
-				"percepciones_iva": 0,
-				"tipo": "FACTURA B",
-				"numero": 0,
-				"percepciones_iibb": 0,
-				"bonificacion": 0,
-				"operacion": "V",
-				"detalle": [{
-					"cantidad": 1,
-					"producto": {
-						"descripcion": "Hosting pagina web ",
-						"codigo": 37,
-						"lista_precios": "standard",
-						"leyenda": "",
-						"unidad_bulto": 1,
-						"alicuota": 21,
-						"precio_unitario_sin_iva": 114.88
-					}
-				}],
-				"fecha": "28/03/2022",
-				"rubro_grupo_contable": "Sevicios",
-				"total": 139.0,
-				"cotizacion": 1,
-				"moneda": "PES",
-				"punto_venta": 3,
-				"tributos": [],
-				"exentos": "0",
-				"impuestos_internos": "0",
-				"impuestos_internos_base": "0",
-				"impuestos_internos_alicuota": "0"
-			}
-		},
-		{
-			"apitoken": "xxxxx",
-			"apikey": "xxxxx",
-			"usertoken": "xxxxx",
-
-			"cliente": {
-				"documento_tipo": "CUIT",
-				"condicion_iva": "RI",
-				"domicilio": "XXX",
-				"condicion_pago": "211",
-				"documento_nro": "30712252430",
-				"razon_social": "JUAN SA",
-				"provincia": "2",
-				"email": "email@dominio.com",
-				"envia_por_mail": "N"
-			},
-			"comprobante": {
-				"rubro": "Sevicios web",
-				"percepciones_iva": 0,
-				"tipo": "FACTURA A",
-				"external_reference": "ABC124",
-				"numero": 0,
-				"percepciones_iibb": 0,
-				"bonificacion": 0,
-				"operacion": "V",
-				"detalle": [{
-					"cantidad": 1,
-					"producto": {
-						"descripcion": "Hosting pagina web ",
-						"codigo": 37,
-						"lista_precios": "standard",
-						"leyenda": "",
-						"unidad_bulto": 1,
-						"alicuota": 21,
-						"precio_unitario_sin_iva": 114.88
-					}
-				}],
-				"fecha": "28/03/2022",
-				"rubro_grupo_contable": "Sevicios",
-				"total": 139.0,
-				"cotizacion": 1,
-				"moneda": "PES",
-				"punto_venta": 3,
-				"tributos": [],
-				"exentos": "0",
-				"impuestos_internos": "0",
-				"impuestos_internos_base": "0",
-				"impuestos_internos_alicuota": "0"
-
-			}
-
-		},
-
-		{
-			"apitoken": "xxxxx",
-			"apikey": "xxxxx",
-			"usertoken": "xxxxx",
-			"cliente": {
-				"documento_tipo": "OTRO",
-				"condicion_iva": "CF",
-				"domicilio": "Av Sta Fe 23132",
-				"condicion_pago": "211",
-				"documento_nro": "0",
-				"razon_social": "Consumidor final",
-				"provincia": "2",
-				"email": "email@dominio.com",
-				"envia_por_mail": "N"
-			},
-			"comprobante": {
-				"rubro": "Sevicios web",
-				"percepciones_iva": 0,
-				"tipo": "FACTURA B",
-				"external_reference": "ABC125",
-				"numero": 0,
-				"percepciones_iibb": 0,
-				"bonificacion": 0,
-				"operacion": "V",
-				"detalle": [{
-					"cantidad": 1,
-					"producto": {
-						"descripcion": "Hosting pagina web ",
-						"codigo": 37,
-						"lista_precios": "standard",
-						"leyenda": "",
-						"unidad_bulto": 1,
-						"alicuota": 21,
-						"precio_unitario_sin_iva": 114.88
-					}
-				}],
-				"fecha": "28/03/2022",
-				"rubro_grupo_contable": "Sevicios",
-				"total": 139.0,
-				"cotizacion": 1,
-				"moneda": "PES",
-				"punto_venta": 3,
-				"tributos": [],
-				"exentos": "0",
-				"impuestos_internos": "0",
-				"impuestos_internos_base": "0",
-				"impuestos_internos_alicuota": "0"
-
-			}
-		}
-	]
-}on
+	"requests": [
+			{objeto_comprobante}, 
+			{objeto_comprobante}, 
+			{objeto_comprobante}
+		    ]
+}
 ```
 {% endcode %}
 

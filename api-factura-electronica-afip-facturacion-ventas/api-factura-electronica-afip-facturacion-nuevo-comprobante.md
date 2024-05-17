@@ -1,19 +1,19 @@
 ---
 description: >-
-  Utilizá la API de facturación electrónica AFIP de TusFacturas.app, para emitir
-  comprobantes de venta desde tu sistema actual y obtener la respuesta al
-  instante.
+  TusFacturasAPP: Solución SaaS líder en facturación electrónica para empresas.
+  Integra nuestra API de facturación AFIP y emití comprobantes desde tu
+  plataforma.
 ---
 
 # Facturación instantánea e individual
 
-TusFacturasAPP es un proveedor líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
+TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
 
 Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
 
 Una vez configurada tu cuenta y creados tus CUIT/Puntos de Venta, podrás comenzar a facturar electrónicamente sin demoras. Revisa nuestras guías "[Cómo empiezo](../como-empiezo.md)" y  "[API Facturación AFIP](./)" para conocer a fondo el servicio y los requerimientos de cada solicitud.
 
-Comienza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. Solicita acceso a nuestra API de facturación electrónica.
+Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
 
 ## **¿Qué es la facturación instantánea individual?**
 

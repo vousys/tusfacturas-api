@@ -1,12 +1,18 @@
 ---
 description: >-
-  Utilizá la API de facturación electrónica de TusFacturas.app, para enviar a
-  procesar lotes y obtener la respuesta al instante.
+  TusFacturasAPP: Solución SaaS líder en facturación electrónica para empresas.
+  Integra nuestra API y emití comprobantes por lote desde tu plataforma.
 ---
 
 # Facturación instantánea por Lotes
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV, podrás comenzar a emitir facturas electrónicas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md) y luego ["Facturación"](./), para conocer la estructura de cada request que envíes.&#x20;
+TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
+
+Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
+
+Una vez configurada tu cuenta y creados tus CUIT/Puntos de Venta, podrás comenzar a facturar electrónicamente sin demoras. Revisa nuestras guías "[Cómo empiezo](../como-empiezo.md)" y  "[API Facturación AFIP](./)" para conocer a fondo el servicio y los requerimientos de cada solicitud.
+
+Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
 
 ## ¿Qué puedo facturar por lote?
 
@@ -28,32 +34,27 @@ Es necesario leer primero, la documentación de "[Facturación](./)", para conoc
 
 
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/facturacion/lotes" method="post" summary="Facturación por Lotes" %}
-{% swagger-description %}
+## Facturación por Lotes
+
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/lotes`
+
 
 
 Charset: UTF-8
 
 Formato esperado: JSON
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="requests" type="array" required="false" %}
-Según estructura de de cada item (detallado abajo).
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+| Name      | Type   | Description                                         |
+| --------- | ------ | --------------------------------------------------- |
+| requests  | array  | Según estructura de de cada item (detallado abajo). |
+| usertoken | string | Tus credenciales de acceso                          |
+| apitoken  | string | Tus credenciales de acceso                          |
+| apikey    | string | Tus credenciales de acceso                          |
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 {% code title="JSON" %}
 ```
 {
@@ -93,8 +94,8 @@ Tus credenciales de acceso
 }
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 #### Estructura del bloque: "requests"
 
