@@ -9,15 +9,21 @@ description: >-
 
 TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
 
+### ¿Qué podes hacer con la API para facturación AFIP?
+
 Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
 
-Una vez configurada tu cuenta y creados tus CUIT/Puntos de Venta, podrás comenzar a facturar electrónicamente sin demoras. Revisa nuestras guías "[Cómo empiezo](../como-empiezo.md)" y  "[API Facturación AFIP](./)" para conocer a fondo el servicio y los requerimientos de cada solicitud.
+<figure><img src="../.gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
+
+### ¿Cómo empiezo?
+
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
 Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
 
-## **¿Qué es la facturación instantánea individual?**
+### **¿Qué es la API de facturación  individual e instantánea?**
 
-Con nuestro servicio API de facturación electrónica instantánea, podrás emitir comprobantes fiscales válidos de manera individual y obtener respuestas en tiempo real desde la AFIP. Al enviar una solicitud a través de nuestra API, el comprobante se procesará de inmediato en nuestra plataforma y recibirás la respuesta al instante. Tené en cuenta que el procesamiento del comprobane en AFIP está sujeta al estado de los servicios AFIP.
+Con nuestro servicio API de facturación electrónica instantánea, podrás emitir comprobantes fiscales válidos de manera individual y obtener respuestas en tiempo real desde la AFIP .  Tené en cuenta que el procesamiento del comprobane en AFIP está sujeta al estado de los servicios AFIP.
 
 Esta opción de facturación electrónica individual te brinda agilidad y eficiencia, permitiéndote integrar fácilmente la emisión de facturas, notas de crédito y otros comprobantes en tu flujo de trabajo actual, cumpliendo con todas las regulaciones fiscales vigentes.
 
@@ -33,7 +39,7 @@ Te sugerimos utilizar el método de [facturación asincrónico](api-factura-elec
 
 Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/nuevo`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`nuevo`</mark>
 
 Charset: UTF-8
 

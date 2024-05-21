@@ -8,13 +8,19 @@ description: >-
 
 TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
 
+### ¿Qué podes hacer con la API para facturación AFIP?
+
 Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
 
-Una vez configurada tu cuenta y creados tus CUIT/Puntos de Venta, podrás comenzar a facturar electrónicamente sin demoras. Revisa nuestras guías "[Cómo empiezo](../como-empiezo.md)" y  "[API Facturación AFIP](./)" para conocer a fondo el servicio y los requerimientos de cada solicitud.
+<figure><img src="../.gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
+
+### ¿Cómo empiezo?
+
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
 Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
 
-## ¿Qué puedo facturar por lote?
+### ¿Qué puedo facturar por lote?
 
 Podes enviar a facturar comprobantes de tipo A,B,C y M; ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos. **No podrás enviar comprobantes de tipo E ni de Factura de crédito electrónica (FEC) en ésta modalidad.**
 
@@ -22,9 +28,9 @@ Podes enviar a facturar comprobantes de tipo A,B,C y M; ya sean facturas, notas 
 
 Tenés alguna duda del servicio? checkea las [API FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los canales de atención que tenemos disponibles en la plataforma web [www.tusfacturas.app](https://www.tusfacturas.app)
 
-## **Facturación instantánea por Lote**
+### **Facturación instantánea por Lote**
 
-Al utilizar éste servicio, los comprobantes que emitas, impactarán de inmediato en nuestra plataforma y obtendrás la respuesta al instante, ya que utiliza el servicio de facturación por lotes de AFIP (siempre y cuando los servicios de dicho organismo se encuentren funcionando).
+Al utilizar éste servicio, los comprobantes que emitas impactarán de inmediato en nuestra plataforma y obtendrás la respuesta al instante, ya que utiliza el servicio de facturación por lotes de AFIP (siempre y cuando los servicios de dicho organismo se encuentren funcionando).
 
 {% hint style="danger" %}
 Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰. Para evitar éste tipo de problemas, te sugerimos utilizar la [facturación por lotes asincrónica (encolada)](facturacion-asincronica-por-lotes-encolada.md)
@@ -32,11 +38,9 @@ Es importante que controles los errores, dado que los servicios de AFIP se caen 
 
 Es necesario leer primero, la documentación de "[Facturación](./)", para conocer cómo debe componerse cada request que envíes.
 
+### ¿Dónde debes enviar el request?
 
-
-## Facturación por Lotes
-
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/lotes`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`lotes`</mark>
 
 
 
@@ -53,11 +57,78 @@ Formato esperado: JSON
 | apitoken  | string | Tus credenciales de acceso                          |
 | apikey    | string | Tus credenciales de acceso                          |
 
-{% tabs %}
-{% tab title="200 " %}
+#### Estructura del bloque: "requests"
+
+"requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](./)".
+
+{% hint style="info" %}
+**Datos a tener en cuenta**
+
+* **La cantidad máxima de requests (por lote) debe ser de 20**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y según funcionen los servicios de AFIP, puedes obtener una respuesta de timeout (524). En caso de recibir un 524, ten en cuenta que los comprobantes que enviaste, seguirán siendo procesados en background, pero no recibirás la respuesta.  Te sugerimos utilizar la modalidad de [Facturación encolada por lotes](facturacion-asincronica-por-lotes-encolada.md) para evitar éste tipo de errores.
+* Todos los requests de ésta llamada, deben ser del **mismo tipo de comprobante**. Ej: todos deben ser FACTURA A
+* Los request deben venir **ordenados por número ascendente**, de la misma manera que si los enviarás a procesar uno por uno.
+* **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md) **ni de** [**Factura de crédito electrónica (FEC)**](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md) **en ésta modalidad.**
+* Si se detecta al menos un (1) error de validación de datos de nuestro lado, el lote no se mandará a procesar.
+{% endhint %}
+
+La estructura de cada "{objeto\_comprobante}" debe ser acorde a los siguientes tipos de comprobante a generar:&#x20;
+
+[comprobantes de tipo A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
+
+&#x20;[comprobantes de tipo B](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)
+
+[comprobantes de tipo C](api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)
+
+&#x20;[Comprobantes de tipo Factura de crédito electrónica MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)
+
+Revisa nuestra guía  "[API Facturación AFIP](./)" para conocer a fondo el servicio y los requerimientos de cada solicitud.
+
+#### Ejemplo de JSON a enviar
+
 {% code title="JSON" %}
-```
+```json
 {
+	"apitoken": "xxxx",
+	"apikey": "xxxx",
+	"usertoken": "xxxxx",
+	"requests": [
+			{objeto_comprobante}, 
+			{objeto_comprobante}, 
+			{objeto_comprobante}
+		    ]
+}
+```
+{% endcode %}
+
+#### Ejemplo de como invocarlo desde PHP
+
+{% code title="PHP" %}
+```php
+// ENVIO REQUEST
+$url ="https://www.tusfacturas.app/api/v2/facturacion/lotes" ;
+
+$ch = curl_init( $url );
+curl_setopt( $ch, CURLOPT_POSTFIELDS,  json_encode($facturacion_json) );
+curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+
+$json_rta_curl =  json_decode(  curl_exec($ch) ) ;  
+curl_close($ch);
+​
+```
+{% endcode %}
+
+### :green\_circle: **¿Qué te retornaremos en caso de exito?**
+
+Ej: una llamada con 2 requests.
+
+```json
+
+{
+"error": "N",
+"errores": [],
+"response": [
+   {
     "error": "N",
     "errores": [],
     "response": [{
@@ -93,210 +164,8 @@ Formato esperado: JSON
     }]
 }
 ```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
 
-#### Estructura del bloque: "requests"
-
-"requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](./)".
-
-{% hint style="info" %}
-**Datos a tener en cuenta**
-
-* **La cantidad máxima de requests (por lote) debe ser de 20**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y según funcionen los servicios de AFIP, puedes obtener una respuesta de timeout (524). En caso de recibir un 524, ten en cuenta que los comprobantes que enviaste, seguirán siendo procesados en background, pero no recibirás la respuesta.  Te sugerimos utilizar la modalidad de [Facturación encolada por lotes](facturacion-asincronica-por-lotes-encolada.md) para evitar éste tipo de errores.
-* Todos los requests de ésta llamada, deben ser del **mismo tipo de comprobante**. Ej: todos deben ser FACTURA A
-* Los request deben venir **ordenados por número ascendente**, de la misma manera que si los enviarás a procesar uno por uno.
-* **No podrás enviar comprobantes de** [**tipo E**](api-factura-electronica-afip-factura-electronica-afip-exportacion.md) **ni de** [**Factura de crédito electrónica (FEC)**](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md) **en ésta modalidad.**
-* Si se detecta al menos un (1) error de validación de datos de nuestro lado, el lote no se mandará a procesar.
-{% endhint %}
-
-La estructura de cada "request" debe ser acorde a los siguientes tipos de comprobante a generar ([comprobantes de tipo A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md), [comprobantes de tipo B](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md), [comprobantes de tipo C](api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)[ ](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)) .
-
-#### Ejemplo de JSON a enviar
-
-{% code title="JSON" %}
-```json
-{
-	"apitoken": "xxxx",
-	"apikey": "xxxx",
-	"usertoken": "xxxxx",
-	"requests": [{
-			"apitoken": "xxxxx",
-			"apikey": "xxxxx",
-			"usertoken": "xxxxx",
-			"cliente": {
-				"documento_tipo": "CUIT",
-				"condicion_iva": "M",
-				"domicilio": "Av Sta Fe 23132",
-				"condicion_pago": "211",
-				"documento_nro": "3071229384",
-				"razon_social": "VOUSYS",
-				"provincia": "2",
-				"email": "email@dominio.com",
-				"envia_por_mail": "N"
-			},
-			"comprobante": {
-				"external_reference": "AAAA",
-				"rubro": "Sevicios web",
-				"percepciones_iva": 0,
-				"tipo": "FACTURA B",
-				"numero": 1,
-				"percepciones_iibb": 0,
-				"bonificacion": 0,
-				"operacion": "V",
-				"detalle": [{
-					"cantidad": 1,
-					"producto": {
-						"descripcion": "Hosting pagina web ",
-						"codigo": 37,
-						"lista_precios": "standard",
-						"leyenda": "",
-						"unidad_bulto": 1,
-						"alicuota": 21,
-						"precio_unitario_sin_iva": 114.88
-					}
-				}],
-				"fecha": "28/03/2018",
-				"rubro_grupo_contable": "Sevicios",
-				"total": 139.0,
-				"cotizacion": 1,
-				"moneda": "PES",
-				"punto_venta": 3,
-				"exentos": "0",
-				"tributos": [],
-				"impuestos_internos": "0",
-				"impuestos_internos_base": "0",
-				"impuestos_internos_alicuota": "0"
-			}
-		},
-		{
-			"apitoken": "xxxxx",
-			"apikey": "xxxxx",
-			"usertoken": "xxxxx",
-
-			"cliente": {
-				"documento_tipo": "CUIT",
-				"condicion_iva": "M",
-				"domicilio": "Av Sta Fe 23132",
-				"condicion_pago": "211",
-				"documento_nro": "3071229384",
-				"razon_social": "VOUSYS",
-				"provincia": "2",
-				"email": "email@dominio.com",
-				"envia_por_mail": "N"
-			},
-			"comprobante": {
-				"rubro": "Sevicios web",
-				"percepciones_iva": 0,
-				"tipo": "FACTURA B",
-				"external_reference": "ABC124",
-				"numero": 2,
-				"percepciones_iibb": 0,
-				"bonificacion": 0,
-				"operacion": "V",
-				"detalle": [{
-					"cantidad": 1,
-					"producto": {
-						"descripcion": "Hosting pagina web ",
-						"codigo": 37,
-						"lista_precios": "standard",
-						"leyenda": "",
-						"unidad_bulto": 1,
-						"alicuota": 21,
-						"precio_unitario_sin_iva": 114.88
-					}
-				}],
-				"fecha": "28/03/2018",
-				"rubro_grupo_contable": "Sevicios",
-				"total": 139.0,
-				"cotizacion": 1,
-				"moneda": "PES",
-				"punto_venta": 3, 
-				"tributos": [],
-				"exentos": "0",
-				"impuestos_internos": "0",
-				"impuestos_internos_base": "0",
-				"impuestos_internos_alicuota": "0"
-
-			}
-
-		},
-
-		{
-			"apitoken": "xxxxx",
-			"apikey": "xxxxx",
-			"usertoken": "xxxxx",
-			"cliente": {
-				"documento_tipo": "CUIT",
-				"condicion_iva": "M",
-				"domicilio": "Av Sta Fe 23132",
-				"condicion_pago": "211",
-				"documento_nro": "3071229384",
-				"razon_social": "VOUSYS",
-				"provincia": "2",
-				"email": "email@dominio.com",
-				"envia_por_mail": "N"
-			},
-			"comprobante": {
-				"rubro": "Sevicios web",
-				"percepciones_iva": 0,
-				"tipo": "FACTURA B",
-				"external_reference": "ABC125",
-				"numero": 3,
-				"percepciones_iibb": 0,
-				"bonificacion": 0,
-				"operacion": "V",
-				"detalle": [{
-					"cantidad": 1,
-					"producto": {
-						"descripcion": "Hosting pagina web ",
-						"codigo": 37,
-						"lista_precios": "standard",
-						"leyenda": "",
-						"unidad_bulto": 1,
-						"alicuota": 21,
-						"precio_unitario_sin_iva": 114.88
-					}
-				}],
-				"fecha": "28/03/2018",
-				"rubro_grupo_contable": "Sevicios",
-				"total": 139.0,
-				"cotizacion": 1,
-				"moneda": "PES",
-				"punto_venta": 3,
-				"tributos": [],
-				"exentos": "0",
-				"impuestos_internos": "0",
-				"impuestos_internos_base": "0",
-				"impuestos_internos_alicuota": "0"
-
-			}
-		}
-	]
-}
-```
-{% endcode %}
-
-#### Ejemplo de como invocarlo desde PHP
-
-{% code title="PHP" %}
-```php
-// ENVIO REQUEST
-$url ="https://www.tusfacturas.app/api/v2/facturacion/lotes" ;
-
-$ch = curl_init( $url );
-curl_setopt( $ch, CURLOPT_POSTFIELDS,  json_encode($facturacion_json) );
-curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-
-$json_rta_curl =  json_decode(  curl_exec($ch) ) ;  
-curl_close($ch);
-​
-```
-{% endcode %}
-
-### **¿Que te retornaremos en caso de error ?**
+### :red\_circle: **¿Que te retornaremos en caso de error ?**
 
 #### Error de validación de datos / formato:
 
@@ -311,7 +180,7 @@ Ej: una llamada con 3 requests, donde segundo el comprobante enviado tiene un ti
 ```
 {% endcode %}
 
-#### Error de Procesamiento:
+#### :red\_circle: Error de Procesamiento parcial:
 
 {% hint style="warning" %}
 En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechazado, todos los comprobantes subsiguientes del lote, vendrán rechazados. Ésta funcionalidad está determinada por AFIP.

@@ -9,23 +9,25 @@ description: >-
 
 TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
 
+<figure><img src="../.gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
+
 Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
 
-Una vez configurada tu cuenta y creados tus CUIT/Puntos de Venta, podrás comenzar a facturar electrónicamente sin demoras. Revisa nuestras guías "[Cómo empiezo](../como-empiezo.md)" y  "[API Facturación AFIP](./)" para conocer a fondo el servicio y los requerimientos de cada solicitud.
+### ¿Cómo empiezo?
+
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
 Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
 
-## **Facturación asincrónica e individual (encolada)**
+### **Facturación asincrónica e individual (encolada)**
 
-Al utilizar éste servicio, los comprobantes que emitas, quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
+Al utilizar nuestro servicio API de facturación AFIP asincrónica e individual,  los comprobantes que emitas quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
 
 Te sugerimos leer primero:&#x20;
 
-1. La documentación de "[Facturación](./)", para conocer cómo debe componerse el request que envíes
+1. La documentación de "[API de Facturación AFIP](./)", para conocer cómo debe componerse el request que envíes
 2. La documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
 3. [FAQs sobre la cola de procesamiento](../faqs-or-cola-de-procesamiento.md)
-
-&#x20;
 
 ### ¿Cómo funciona el modo asincrónico de facturación individual?
 
@@ -59,9 +61,7 @@ Los request que se envíen de manera asincrónica deben contar con el campo de "
 
 ### ¿Donde debo enviar los request?
 
-#### Nuevo comprobante de Venta asincrónico e individual (encolado)
-
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/nuevo_encola`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`nuevo_encola`</mark>
 
 Charset: UTF-8
 

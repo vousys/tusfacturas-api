@@ -9,9 +9,15 @@ description: >-
 
 TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
 
+### ¿Qué podes hacer con la API para facturación AFIP?
+
 Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
 
-Una vez configurada tu cuenta y creados tus CUIT/Puntos de Venta, podrás comenzar a facturar electrónicamente sin demoras. Revisa nuestras guías "[Cómo empiezo](../como-empiezo.md)" y  "[API Facturación AFIP](./)" para conocer a fondo el servicio y los requerimientos de cada solicitud.
+<figure><img src="../.gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
+
+### ¿Cómo empiezo?
+
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
 Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
 
@@ -33,24 +39,20 @@ Al utilizar éste servicio los comprobantes que envíes quedarán en una cola de
 
 #### Antes de comenzar, te sugerimos leer :&#x20;
 
-1. La documentación de "[Facturación](./)", para conocer cómo debe componerse el request que envíes
+1. La documentación de "[API Facturación AFIP](./)", para conocer cómo debe componerse el request que envíes
 2. La documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
 3. [FAQs sobre la cola de procesamiento](../faqs-or-cola-de-procesamiento.md)
 
 {% hint style="info" %}
 ### Sugerencias para grandes volúmenes de facturación
 
-
-
 * Distribuí tu facturación en múltiples puntos de venta, de modo que cada uno se procese en paralelo y así optimizarás la emisión de las facturas.
 * Cantidad estimada de comprobantes que se emiten por hora, dependiendo del día y horario: entre 600 y 900 por hora y punto de venta.
 {% endhint %}
 
-
-
 ### ¿A dónde debes enviar el request?
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/lotes_encola`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`lotes_encola`</mark>
 
 {% hint style="warning" %}
 Máximo: 100 comprobantes por lote.
@@ -71,7 +73,7 @@ Formato esperado: JSON
 
 ### Estructura del bloque: "requests"
 
-"requests" debe ser un array (en JSON) que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](./)".
+"requests" debe ser un array (en JSON) que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[API Facturación AFIP](./)".
 
 {% hint style="info" %}
 ### Datos a tener en cuenta:
