@@ -24,65 +24,66 @@ Nuestra API de facturación AFIP te permite integrar la facturación electrónic
 
 ### ¿Cómo empiezo?
 
-Una vez configurada tu cuenta y creado tu CUIT+PDV en TusFacturasAPP, podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas. Te sugerimos revisar el apartado de [¿Cómo empiezo?](../como-empiezo.md)
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
-### ¿Cómo puedo facturar con TusFacturasAPP?&#x20;
+### Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP
 
-En TusFacturasAPP contamos con 4 modalidades para la emisión de comprobantes online; Sin embargo **te recomendamos** utilizar siempre que sea posible, los **métodos de facturación asincrónicos**, ya que los instantáneos dependen de cómo funcionen los servicios de AFIP en el momento de la emisión.
+Características clave:
 
-#### **Facturas AFIP individuales  e instantáneas**
+* ✅ Conexión rápida y segura con AFIP para emitir comprobantes electrónicos válidos
+* ✅ Procesa facturas, notas de crédito, recibos y más desde tu sistema
+* ✅ Documentación detallada y ejemplos de código para una integración sencilla
+* ✅ Notificaciones automáticas por email de comprobantes enviados a clientes
+* ✅ Cumple con todas las regulaciones fiscales vigentes en Argentina
 
-Utilizando éste método vos envías un solo request para ser procesado, y obtenes la respuesta al instante (dependes del estado de los servicios de AFIP)
+### Nuestras opciones de API para facturación electrónica AFIP:&#x20;
+
+* Emisión individual o por lotes: Selecciona la modalidad que mejor se adapte a tu volumen de facturación.
+* Procesamiento instantáneo o asincrónico: Obtene respuestas inmediatas o gestiona tu flujo de trabajo con colas de procesamiento. T**e recomendamos** utilizar siempre que sea posible, los **métodos de facturación asincrónicos**, ya que los instantáneos dependen de cómo funcionen los servicios de AFIP en el momento de la emisión.
+
+### 🔹 API de Facturación  AFIP individual e instántanea:
+
+Utilizando éste método vos envías un solo request para ser procesado, y obtenes la respuesta al instante (sujeto al estado de los servicios AFIP)
 
 [Conocé más sobre la facturación electrónica individual e instantánea, desde aquí](./#facturacion-instantanea-individual)
 
-
-
-#### **Facturas AFIP individuales en cola       **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
+### 🔹 API de Facturación  AFIP individual asincrónica  <mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
 
 En éste método envías un solo request para ser procesado y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md) (no dependes del estado de los servicios de facturación de AFIP)
 
 Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
 
+### 🔹API de Facturación  AFIP por **Lote** instántaneo
 
+Con éste método envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante  (sujeto al estado de los servicios AFIP).
 
-#### **Lote de facturas AFIP instantáneas**
+Conocé más sobre la [facturación electrónica en lotes instantánea, desde aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
 
-En éste método envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante  (dependes del estado de los servicios de AFIP).
-
-Conocé más sobre la [facturación electrónica en lotes, aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
-
-
-
-#### **Lote de facturas asincrónico en cola      **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
+### 🔹API de Facturación  AFIP por **Lote asincrónico **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
 
 En éste método envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md)  (no dependes del estado de los servicios de facturación de AFIP)
 
-Conocé más sobre la [facturación electrónica por lotes en cola](facturacion-asincronica-por-lotes-encolada.md), aquí.
+Conocé más sobre la [facturación electrónica por lotes asincrónico](facturacion-asincronica-por-lotes-encolada.md).
+
+### 📌 ¿Qué comprobantes podes facturar con la API?
+
+Nuestro servicio API de facturación electrónica AFIP te permite enviar a facturar  comprobantes de tipo [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M, comprobantes de tipo "[Factura de crédito MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
+
+&#x20;¿No sabes qué tipo de comprobante debes emitir? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
+
+🧐 Tenés alguna duda del servicio? checkea las [FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los [canales de atención](https://www.tusfacturas.app/contacto.html) que tenemos disponibles.
 
 
 
-## ¿Qué puedo facturar con la API?
+## Estructura genérica para facturar un comprobante.
 
-Nuestro servicio API de facturación electrónica AFIP, te permite enviar a facturar  comprobantes de tipo [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M, comprobantes de tipo "[Factura de crédito MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
-
-&#x20;¿No sabes qué [tipo de comprobante debes emitir](../que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
-
-Tenés alguna duda del servicio? checkea las [API FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los canales de atención que tenemos disponibles, en la plataforma web [www.tusfacturas.app](https://www.tusfacturas.app)
-
-
-
-#### &#x20;A donde debes enviar el request:&#x20;
-
-## Estructura generica para el envio de un comprobante.
-
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/XXXXX`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`metodo-elegido`**</mark>
 
 Charset: UTF-8
 
 Tipo de dato esperado: JSON&#x20;
 
-#### Request Body
+#### Request: Body
 
 | Name        | Type   | Description                                                 |
 | ----------- | ------ | ----------------------------------------------------------- |
@@ -92,37 +93,9 @@ Tipo de dato esperado: JSON&#x20;
 | comprobante | object | Estructura de "comprobante" según se informa a continuación |
 | cliente     | object | Estructura de "Cliente", según se informa a continuación    |
 
-{% tabs %}
-{% tab title="200 " %}
-{% code title="JSON" %}
-```javascript
-{
-    "error":     "N",
-     "errores": [ ""],    
-     "rta":      "El comprobante NOTA DE DEBITO B 0002-00000006 (MI CUIT) se ha guardado correctamente",    
-     "cae":      "65301278726386 ",
-     "requiere_fec":   "NO ",    
-     "vencimiento_cae":"07\/08\/2015",    
-     "vencimiento_pago":"27\/08\/2015",    
-     "comprobante_pdf_url": "https://www.dominio.com/url",
-     "afip_qr" : "https://www.afip.gob.ar/fe/qr/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMC0xMS0xNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjAwMDAzIiwidGlwb0NtcCI6MTEsIm5yb0NtcCI6IjAwMDAwMjQ5IiwiaW1wb3J0ZSI6IjAwMDAwMDAwMDAwMDEwMCIsIm1vbmVkYSI6IlBFUyIsImN0eiI6IjAwMDAwMDAwMDAwMDEwMDAwMDAiLCJ0aXBvRG9jUmVjIjo5OSwibnJvRG9jUmVjIjoiMCIsInRpcG9Db2RBdXQiOiJFIiwiY29kQXV0IjoiNzA0NjY4OTk1OTcwOTEifQ== "
-     "afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
-     "envio_x_mail": "S",
-     "external_reference":"ABC123",
-     "comprobante_nro": "0000123",
-     "comprobante_tipo": "NOTA DE DEBITO B",
-     "envio_x_mail_direcciones":"direccion1@sudominio.com,direccion2@sudominio.com"
-  }  
-  
-  
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
+### JSON de ejemplo
 
-####
-
-#### Ejemplo de JSON generico <mark style="color:purple;">completo con todas las posibles opciones</mark>, para generar un comprobante.
+A continuación te mostramos un ejemplo de JSON generico <mark style="color:purple;">completo con todas las posibles opciones</mark>, para generar un comprobante.
 
 Tené en cuenta que según el tipo de comprobante que emítas, pueden variar los bloques que debes enviar.&#x20;
 
@@ -302,24 +275,20 @@ _Información de ejemplo - solo para visualizar su estructura -_&#x20;
 | Factura E, Nota de débito E, Nota de crédito E                                                                                                        | Ver [ejemplo de comprobantes tipo "E"](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)           |
 | Factura de Crédito Electrónica MiPyme (FCE),  Nota de débito de Crédito Electrónica MiPyme (FCE), Nota de crédito de Crédito Electrónica MiPyme (FCE) | Ver [ejemplo de comprobantes tipo "MiPyme"](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md) |
 
-#### ¿Cómo determinar, si debo emitir un comprobante de tipo "MiPyme" en lugar de una factura A común?
+### ¿Cómo determino, si debo emitir un comprobante de tipo "MiPyme" en lugar de una factura A común?
 
 Hay ciertos casos donde AFIP exige que en lugar de emitir una factura A,B o C, le emitas a tu cliente, un comprobante de tipo  "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE)" A, B o C. En ese caso, recibirás en la respuesta, el campo requiere\_fec = "SI".&#x20;
 
 Ésto se debe a que el emisor o el receptor están informados como Pyme en AFIP y/o el monto del comprobante a emitir supera el límite que AFIP tiene definido. Ésta info varia día a día, pero disponemos de un método para que puedas invocarlo, previo a éste servicio para conocerlo. Consultá la documentación [desde aquí](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-nuevo-comprobante/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce) y te sugerimos comentar ésta modalidad, con tu cliente y asesorarte con su estudio impositivo al respecto.
 
+### ¿Qué te retorna la llamada a la API?
 
+#### &#x20;:white\_check\_mark:  Cuando el request resultó exitoso:
 
-
-
-### Que te retorna la llamada a la API?
-
-#### &#x20;:white\_check\_mark: Cuando el request resultó exitoso:
-
-Sea cual sea la modalidad que utilices para facturar, por cada comprobante que emitas, obtendrás la siguiente respuesta, con todos los datos que necesitas para almacenar en tu sistema.&#x20;
+Sea cual sea la modalidad que utilices para facturar y por cada comprobante que emitas, obtendrás la siguiente respuesta, con todos los datos que necesitas para almacenar en tu sistema.&#x20;
 
 {% hint style="warning" %}
-Es importante que descargues toda la información junto con el contenido del pdf y lo almacenes en tu plataforma. La URL del PDF es temporal por lo que no podrás recuperarlo desde ese link en otro momento, y ademas si tu cuenta o suscripción no se encuentran vigentes, no podrás volver a obtenerlo. &#x20;
+Es importante que descargues toda la información junto con el contenido del pdf y lo almacenes en tu plataforma, ya que si si tu cuenta o suscripción no se encuentran vigentes, no podrás volver a obtenerlo. &#x20;
 {% endhint %}
 
 ```json
@@ -370,9 +339,13 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 
 
 
-#### Datos para tener en cuenta:
+### Datos para tener en cuenta:
 
 {% hint style="info" %}
+**PDF**
+
+* La URL del PDF que recibis es temporal.
+
 **CAE (Código de Autorización electrónica de AFIP)**
 
 * El CAE es el Código de Autorización Electrónico que otorga AFIP, como confirmación de la creación del comprobante. Es un dato importante para almacenar como respuesta.
@@ -387,7 +360,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 
 **NOTAS DE DÉBITO Y CRÉDITO**
 
-* Las notas de débito y crédito requieren que envies obligatoriamente los comprobantes asociados (o su período asociado). [Conocé más desde aquí](./#estructura-de-comprobantes-asociados)
+* Las notas de débito y crédito requieren que envies obligatoriamente los comprobantes asociados (o su período asociado). Conocé más [desde aquí](api-factura-electronica-afip-notas-credito-debito.md)
 
 **REDONDEO DE NÚMEROS / SUMATORIAS / TOTALES**
 
@@ -401,11 +374,11 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 
 **EDICIÓN / ELIMINACIÓN DE COMPROBANTES**&#x20;
 
-* **Aquellos comprobantes que hayan impactado en AFIP, no podrán ser eliminados, sólo pueden ser anulados contablemente, generando una nota de crédito.**
-* Ningún comprobante puede ser modificado una vez emitido.
+* **Aquellos comprobantes que hayan impactado en AFIP, no podrán ser eliminados, sólo pueden ser anulados contablemente, generando una** [**nota de crédito**](api-factura-electronica-afip-notas-credito-debito.md#que-es-una-nota-de-credito-nc-electronica)**.**
+* Ningún comprobante puede ser modificado una vez creado.
 {% endhint %}
 
-## ¿Cómo es la estructura de un request?
+
 
 ### Estructura del bloque: "Comprobante"
 
@@ -446,8 +419,6 @@ comprobante: {
 
 <table data-header-hidden><thead><tr><th align="center">NOMBRE DEL CAMPO</th><th width="144.66666666666669" align="center">REQUERIDO?</th><th>INFO</th></tr></thead><tbody><tr><td align="center"><strong><code>documento_tipo</code></strong></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Valores Permitidos: <strong>CUIT , DNI, PASAPORTE, OTRO</strong><br><strong>Ejemplo: DNI</strong></td></tr><tr><td align="center"><code>documento_nro</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico, sin puntos ni guiones.<br><strong>Ejemplo: 30111222334</strong></td></tr><tr><td align="center"><code>razon_social</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Pirulo S.A</strong></td></tr><tr><td align="center"><code>email</code></td><td align="center">OPCIONAL</td><td>Campo alfanumérico. Longitud máxima 255 caracteres. Máximo 15 direcciones separadas por coma.<br><strong>Ejemplo: tusfacturas@vousys.com</strong></td></tr><tr><td align="center"><code>domicilio</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico. Longitud máxima 255 caracteres. <br><strong>Ejemplo: Av. Santa Fe 123</strong></td></tr><tr><td align="center"><code>provincia</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico según <a href="../parametros/tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.<br><strong>Ejemplo: 2</strong></td></tr><tr><td align="center"><code>envia_por_mail</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: <strong>S , N</strong><br><strong>Ejemplo: S</strong></td></tr><tr><td align="center"><code>condicion_pago</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td><p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#condiciones-de-venta">tabla de referencia</a>.</p><ul><li>se debe enviar obligatoriamente el campo <strong>condicion_pago_otra</strong> "con la descripción de la misma.</li></ul><p><br><strong>Ejemplo: 211 .</strong></p></td></tr><tr><td align="center">condicion_pago_otra</td><td align="center">OPCIONAL</td><td>Campo alfanumérico. Longitud máxima 100 caracteres. <strong>Ejemplo: Cobrado en ventanilla.</strong></td></tr><tr><td align="center"><code>condicion_iva</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico que indica la condición de iva, según <a href="../parametros/tablas-de-referencia.md#condiciones-ante-el-iva">tabla de referencia Condiciones ante el IVA(**)</a>. Valores Permitidos: <strong>CF, RI, M, E</strong><br><strong>Ejemplo: RI</strong></td></tr><tr><td align="center">codigo</td><td align="center">OPCIONAL</td><td>Campo alfanumérico opcional. Longitud máxima 50 caracteres. <strong>Ejemplo: Cobrado en ventanilla.</strong></td></tr><tr><td align="center">rg5329</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td><p>Este campo te permite indicar si tu cliente es pasible de <a href="../faqs-or-rg5329.md">percepción IVA RG5329</a>.</p><p>Valores posibles: "S" o "N".</p></td></tr><tr><td align="center">reclama_deuda</td><td align="center">OPCIONAL</td><td>Indica SI/No para el envio del <a href="https://www.tusfacturas.app/caracteristicas-de-tus-facturas-electronica-clientes.html">recordatorio de pago</a> al cliente. Opciones validas: "S" o "N"</td></tr><tr><td align="center">reclama_deuda_dias</td><td align="center">OPCIONAL</td><td>En caso de haber habilitado el recordatorio de pago atrasado, se debe indicar cuantos dias pasados la fecha de vencimiento del comprobante se desea comenzar a recordar el pago adeudado. Se espera recibir un valor numerico indicando el número de días)</td></tr><tr><td align="center">reclama_deuda_repite_dias</td><td align="center">OPCIONAL</td><td>En caso de haber habilitado del recordatorio de pago atrasado, se debe indicar la frecuencia de cada cuantos dias se desea volver a recordar. Se espera recibir un valor numérico, indicando el número de días.</td></tr></tbody></table>
 
-
-
 {% hint style="info" %}
 **Datos a tener en cuenta:**
 
@@ -464,8 +435,6 @@ Tené en cuenta, que solo podrás facturar sin indicar el documento del comprado
 
 * Para casos de clientes del exterior, que posean **pasaporte**, tené en cuenta que AFIP sólo permite el envío de números.&#x20;
 {% endhint %}
-
-###
 
 ### Estructura del bloque: "Detalle de conceptos"
 
@@ -524,7 +493,7 @@ comprobante: {
 
 Los campos que debes enviar en cada concepto de la lista del bloque "detalle" son los siguientes:
 
-<table data-header-hidden><thead><tr><th width="242.66666666666666">NOMBRE DEL CAMPO</th><th width="157" align="center">REQUERIDO?</th><th></th></tr></thead><tbody><tr><td><code>cantidad</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico con 2 decimales. Separador de decimales: punto.<br><strong>Ejemplo: 1.50</strong></td></tr><tr><td><code>afecta_stock</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico de 1 posición. Valores posibles: "S" (si), "N" (no)<br><strong>Ejemplo: S</strong></td></tr><tr><td><code>producto</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Según estructura de producto que se detalla en el bloque siguiente.</td></tr><tr><td><code>leyenda</code></td><td align="center">OPCIONAL</td><td>Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.<br><strong>Ejemplo: Blanca, cepillada</strong></td></tr><tr><td><mark style="background-color:purple;">bonificacion_porcentaje</mark></td><td align="center">OPCIONAL</td><td>Si se ha aplicado un porcentaje de descuento sobre éste concepto, debe ser enviado. Es un campo númerico con 2 decimales. El separador de decimales esperado es el punto. Ej: 25</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="242.66666666666666">NOMBRE DEL CAMPO</th><th width="157" align="center">REQUERIDO?</th><th></th></tr></thead><tbody><tr><td><code>cantidad</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico con 2 decimales. Separador de decimales: punto.<br><strong>Ejemplo: 1.50</strong></td></tr><tr><td><code>afecta_stock</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico de 1 posición. Valores posibles: "S" (si), "N" (no)<br><strong>Ejemplo: S</strong></td></tr><tr><td><code>producto</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Según estructura de producto que se detalla en el bloque siguiente.</td></tr><tr><td><code>leyenda</code></td><td align="center">OPCIONAL</td><td>Campo alfanumérico. Longitud máxima 100 caracteres. Contenido opcional. Será una descripción que acompañe al producto.<br><strong>Ejemplo: Blanca, cepillada</strong></td></tr><tr><td>bonificacion_porcentaje</td><td align="center">OPCIONAL</td><td>Si se ha aplicado un porcentaje de descuento sobre éste concepto, debe ser enviado. Es un campo númerico con 2 decimales. El separador de decimales esperado es el punto. Ej: 25</td></tr></tbody></table>
 
 ### Estructura del bloque: "detalle->producto"
 
@@ -575,19 +544,9 @@ Los campos que debes enviar son los siguientes:
 
 <table data-header-hidden><thead><tr><th width="335.66666666666663">NOMBRE DEL CAMPO</th><th width="145" align="center">REQUERIDO?</th><th>INFO</th></tr></thead><tbody><tr><td><code>descripcion</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico. Longitud máxima 255 caracteres y mínima de 4 caracteres.<br><strong>Ejemplo: Papa blanca</strong></td></tr><tr><td><code>unidad_bulto</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico entero requerido. Indica la cantidad de unidades que componen un bulto. Valor minimo esperado: 1<br><strong>Ejemplo: 12</strong></td></tr><tr><td><code>lista_precios</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico. Longitud mínima de 4 caracteres y máxima 255 caracteres. Nombre de la lista de precios a la cual pertenece. No saldrá impreso en la factura pero es requerido.<br><strong>Ejemplo: Verdura Orgánica</strong></td></tr><tr><td><code>codigo</code></td><td align="center">OPCIONAL</td><td>Campo alfanumérico. Longitud máxima 10 caracteres. Si bien el campo es opcional, es recomendable enviarlo.<br><strong>Ejemplo: ABX780</strong></td></tr><tr><td><code>precio_unitario_sin_iva</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></td></tr><tr><td><code>alicuota</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td><p>Indica la alícuota de IVA con la que grava ese producto. Valores Permitidos:</p><p><strong>27, 21 , 10.5 , 0 , -1 ( para exento), -2 (no gravados)</strong><br><strong>Ejemplo: 10.5</strong></p></td></tr><tr><td><code>unidad_medida</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico que indica la unidad de medida, según<a href="../parametros/tablas-de-referencia.md#productos-unidades-de-medida-afip"> tabla de referencia Unidades de Medida(**).</a><br><strong>Ejemplo: 7</strong></td></tr><tr><td><code>actualiza_precio</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Indica si se actualiza el precio del producto y sus datos adicionales (como ser la unidad de medida, código, unidades por bulto y otros datos adicionales), tomando como valor de referencia,la información enviada en el comprobante. Campo Alfabético, de 1 carácter. Valores permitidos: S (si) N (no). <strong>Ejemplo: S</strong></td></tr><tr><td><code>impuestos_internos_alicuota</code></td><td align="center">OPCIONAL</td><td>La alícuota que se cobra en concepto de impuestos internos para éste producto. Campo numérico, con 2 decimales. ej: 10.5</td></tr><tr><td>rg5329</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td><p>Este campo te permite indicar si tu producto percibe la percepción IVA RG5329.</p><p>Valores posibles: "S" o "N".</p><p>Si envias el valor en "S", debes enviar el campo "actualiza_precio" tambien en "S".</p><p>Conocé cuando aplicar la RG5329 <a href="../faqs-or-rg5329.md">desde aquí</a></p></td></tr></tbody></table>
 
-
-
 ### Estructura de "Comprobantes Asociados"
 
-Encontrá la estructura e información de éste bloque desde la sección "[Notas de crédito/Notas de débito](api-factura-electronica-afip-notas-credito-debito.md)"
-
-**Existen 2 maneras de informar los comprobantes asociados:**
-
-a) Detallando los comprobantes asociados que anulas.
-
-b) Indicando un período de comprobantes asociados.&#x20;
-
-
+Los comprobantes asociados son requeridos a la hora de emitir una Nota de crédito o nota de débito. Encontrá la estructura e información de éste bloque desde la sección "[Notas de crédito/Notas de débito](api-factura-electronica-afip-notas-credito-debito.md)"
 
 ### Estructura del bloque: "tributos"&#x20;
 
@@ -632,10 +591,6 @@ Ejemplo:&#x20;
 
 <table><thead><tr><th width="248">nombre del campo</th><th width="133.66666666666669">REQUERIDO</th><th>Valores esperados</th></tr></thead><tbody><tr><td>tipo</td><td><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico, según tabla de referencia <a data-mention href="../parametros/tablas-de-referencia.md#bloque-tributos-greater-than-tipos-de-percepcion-a-aplicar">#bloque-tributos-greater-than-tipos-de-percepcion-a-aplicar</a></td></tr><tr><td>regimen</td><td><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico, según tabla de referencia: <a data-mention href="../parametros/tablas-de-referencia.md#bloque-tributos-greater-than-regimen-de-percepcion">#bloque-tributos-greater-than-regimen-de-percepcion</a></td></tr><tr><td>base_imponible</td><td><mark style="color:purple;">REQUERIDO</mark></td><td> Campo numérico con hasta 2 decimales, donde se indica la base imponible sobre la cual se aplica la percepción.</td></tr><tr><td>alicuota</td><td><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico con hasta 2 decimales, donde se indica la alícuota de dicha percepción</td></tr><tr><td>total</td><td><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico de hasta 2 decimales, con el importe total de la percepción a aplicar.</td></tr></tbody></table>
 
-
-
-
-
 ### Estructura de "RG Especiales"&#x20;
 
 Si la empresa, opera bajo alguna RG particular, se deberá enviar un array con los datos adicionales, según se especifican en la [tabla de Datos adicionales para RG Especiales](../parametros/tablas-de-referencia.md#datos-opcionales-para-rg-especiales).
@@ -673,9 +628,7 @@ comprobante: {
 
 <table data-header-hidden><thead><tr><th width="214"></th><th width="151.66666666666669">REQUERIDO</th><th></th></tr></thead><tbody><tr><td><code>id</code></td><td><mark style="color:purple;">REQUERIDO</mark></td><td>Campo númerico. Valores esperados según <a href="../parametros/tablas-de-referencia.md#datos-opcionales-para-rg-especiales">Tabla de Datos Opcionales para RG Especiales</a></td></tr><tr><td><code>valor</code></td><td><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico.</td></tr></tbody></table>
 
-### &#x20;<a href="#estructuradepagos" id="estructuradepagos"></a>
-
-### Estructura de "pagos"   <a href="#estructuradepagos" id="estructuradepagos"></a>
+### Estructura de "pagos"    <a href="#estructuradepagos" id="estructuradepagos"></a>
 
 Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "**pagos**" con la estructura como se detalla a continuación. **Éste bloque es opcional.**
 
@@ -721,10 +674,6 @@ comprobante: {
 
 
 ### Estructura de "tags"
-
-{% hint style="info" %}
-Éste bloque se incorporará a partir del 01/04/2022
-{% endhint %}
 
 Si quisieras enviar tags para agregar a tus comprobantes, a modo de etiqueta informativa, debés enviar un array con el nombre de cada una de éstas.
 
