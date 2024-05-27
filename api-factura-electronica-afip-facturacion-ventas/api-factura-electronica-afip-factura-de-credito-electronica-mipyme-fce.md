@@ -21,18 +21,40 @@ Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez
 
 Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.A continuación te mostramos la estructura de los datos que se requieren para generar un comprobante de tipo exportación, ya sea NC, ND o FACTURA.
 
-### Crea Comprobantes MiPyme sin problemas: Guía Completa
+### ¿Qué son los Comprobantes MiPyme AFIP?
 
-**¿Necesitas generar Comprobantes MiPyme?** Nuestra guía detallada "[API Facturación AFIP](./)" te brinda toda la información necesaria para hacerlo de manera rápida y sencilla.
+Los Comprobantes MiPyme AFIP son una modalidad de facturación electrónica simplificada, diseñada específicamente para **micro, pequeñas y medianas empresas (MiPyMEs)**.
+
+#### **¿Qué los diferencia de las facturas electrónicas comunes?**
+
+* **Beneficios fiscales:** Las MiPyMEs que emiten Comprobantes MiPyme pueden acceder a ciertos beneficios fiscales, como la **reducción de alícuotas de IVA** y la **exención de retenciones de Ganancias**.
+
+#### **¿Quiénes pueden emitir Comprobantes MiPyme?**
+
+Todas las MiPyMEs que se encuentran inscriptas en la AFIP y que cumplan con los requisitos establecidos por el organismo pueden emitir Comprobantes MiPyme.
+
+#### **¿Cómo empezar a emitir Comprobantes MiPyme?**
+
+Para empezar a emitir Comprobantes MiPyme, las MiPyMEs deben:
+
+* **Inscribirse en el servicio "Factura Electrónica MiPyme"** en la AFIP.
+* **Contratar un proveedor de servicios tecnológicos homologado** por la AFIP, como lo es [TusFacturas.app](https://www.tusfacturas.app)
+
+Ten en cuenta que éste tipo de comprobantes MiPyme,  requieren de un tratamiento adicional gestionado desde la web de AFIP para su autorización/aceptación/anulación. Consultá con tu contador/a el procedimiento indicado en la ley.
+
+Para más información acerca de los comprobantes MiPyme, sugerimos leer la información provista por  AFIP: [http://www.afip.gob.ar/facturadecreditoelectronica/default.asp](http://www.afip.gob.ar/facturadecreditoelectronica/default.asp)&#x20;
+
+### API para Comprobantes MiPyme&#x20;
 
 **En esta guía encontrarás:**
 
-* Una descripción completa del servicio [API Facturación AFIP](./).
 * Los requerimientos específicos para cada tipo de solicitud.
 * Los datos exactos que debes enviar para generar nuevos comprobantes de venta.
 * Documentación completa y ejemplos de código para una integración rápida y eficiente.
 
-**Información importante sobre los Comprobantes MiPyme:**
+Consultá la descripción completa del servicio [API Facturación AFIP](./).
+
+#### **Información importante sobre los Comprobantes MiPyme:**
 
 * **Información adicional obligatoria:** Estos comprobantes requieren información adicional dentro del bloque "rg\_especiales".
 * **Aplicabilidad:** Se utilizan solo para ciertos receptores a partir de un monto determinado, que varía según la operación.
@@ -40,11 +62,9 @@ Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de f
 
 **Comenza a crear Comprobantes MiPyme hoy mismo y simplifica tu proceso de facturación electrónica.**
 
-### ¿Qué estructuras debes enviar para generar una factura MiPyme?
+### Estructura del bloque "rg\_especiales"
 
-#### Estructura del bloque "rg\_especiales"
-
-El bloque de "rg\_especiales" debe especificar el [regimen al que pertenece](../parametros/tablas-de-referencia.md#regimenes-posibles-para-el-bloque-rg\_especiales) éste comprobante y enviar información asociada dentro del bloque "datos".
+El bloque de "rg\_especiales" debe especificar el [regimen al que pertenece](../parametros/tablas-de-referencia.md#regimenes-posibles-para-el-bloque-rg\_especiales) éste comprobante y enviar información asociada a éste regimen, dentro del bloque "datos".
 
 {% code title="Ejemplo del JSON" %}
 ```
@@ -68,13 +88,6 @@ comprobante: {
 ```
 {% endcode %}
 
-#### Datos a tener en cuenta:
-
-{% hint style="info" %}
-* TusFacturasAPP no realiza validaciones sobre éstos campos. Todas las validaciones son realizadas por la propia AFIP en caso que corresponda.
-* Si alguno de los items enviados posee un valor vacio, éste item no será procesado.
-{% endhint %}
-
 #### Estructura del array "datos"
 
 Cada item del array debe estar compuesto por los siguientes campos:
@@ -86,14 +99,22 @@ Las opciones posibles de "Id" para enviar dentro del array de "datos" son las si
 <table><thead><tr><th>Descripcion del campo</th><th width="112">Id a enviar</th><th width="145">¿Requerido?</th><th>Detalle</th></tr></thead><tbody><tr><td>CBU emisor</td><td>2101</td><td><mark style="color:purple;"><strong>REQUERIDO</strong></mark> <em>(EXCEPTO NC Y ND)</em></td><td>CBU numérico de 22 caracteres (salvo que envies el ALIAS del CBU)</td></tr><tr><td>Referencia Comercial</td><td>23</td><td>OPCIONAL</td><td>Texto. puede identificar una o varias Referencias Comerciales según corresponda - no repetir el valor.</td></tr><tr><td>CBU Alias del emisor</td><td>2102</td><td>OPCIONAL</td><td>El valor correcto es un ALIAS alfanumerico Longitud de 6 a 20 caracteres, letras de la 'a' a la 'Z', numeros del '0' al '9', caracteres especiales: punto ( . ) o guion medio ( - )</td></tr><tr><td>Anulación</td><td>22</td><td><mark style="color:purple;"><strong>REQUERIDO (SOLO PARA NC Y ND)</strong></mark></td><td>Solo debe ser enviado para las Notas de crédito/debito y el valor esperado es : S o N. Indica si el comprobante fue rechazado por el receptor.</td></tr><tr><td>Referencia de transferencia</td><td>27</td><td><mark style="color:purple;"><strong>REQUERIDO (solo para FACTURAS)</strong></mark></td><td>A partir del 1/4/2021 se deberá enviar éste campo con las siguiente siglas posibles: "SCA" o "ADC" . "SCA se usa para indicar: "TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA" y "ADC" para enviar "AGENTE DE DEPOSITO COLECTIVO"</td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
-Ten en cuenta que éste tipo de comprobantes MiPyme,  requieren de un tratamiento adicional gestionado desde la web de AFIP para su autorización/aceptación/anulación. Consultá con tu contador/a el procedimiento indicado en la ley. Para más información acerca de los comprobantes MiPyme, sugerimos leer la información provista por  AFIP: [http://www.afip.gob.ar/facturadecreditoelectronica/default.asp](http://www.afip.gob.ar/facturadecreditoelectronica/default.asp)&#x20;
+Datos a tener en cuenta:
+
+
+
+* TusFacturasAPP no realiza validaciones sobre éstos campos. Todas las validaciones son realizadas por la propia AFIP en caso que corresponda.
+* Si alguno de los items enviados posee un valor vacio, éste item no será procesado.
+
+
 {% endhint %}
 
-## Factura de crédito electrónica  MiPyme (FCE)
+## Ejemplo de factura de crédito electrónica  MiPyme (FCE)
 
-Ejemplo del JSON que debes enviar para generar un comprobante de tipo Mipyme - Factura
+
 
 ```json
+JSON
 {
    "usertoken":"xxxx",
    "apikey":"xxxx",

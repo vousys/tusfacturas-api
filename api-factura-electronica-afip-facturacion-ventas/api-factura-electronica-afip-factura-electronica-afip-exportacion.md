@@ -1,7 +1,7 @@
 ---
 description: >-
-  Emití con la API de TusFacturas.app los siguientes comprobantes: FACTURA E,
-  NOTA DE DÉBITO E, NOTA DE CRÉDITO E.
+  API de facturación electrónica AFIP para emitir comprobantes de exportación de
+  tipo E: FACTURA E, NOTA DE DÉBITO E, NOTA DE CRÉDITO E.
 ---
 
 # Comprobantes de exportación de tipo "E"
@@ -20,15 +20,39 @@ Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez
 
 Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.A continuación te mostramos la estructura de los datos que se requieren para generar un comprobante de tipo exportación, ya sea NC, ND o FACTURA.
 
+### ¿Qué son las **Facturas Electrónicas de Exportación "E"?**
+
+Las **Facturas Electrónicas de Exportación "E"** son comprobantes digitales que respaldan las ventas de bienes o servicios realizados a clientes en el exterior. Son emitidas de forma obligatoria por empresas argentinas que realizan operaciones de exportación.
+
+### **¿Qué las diferencia de las facturas electrónicas comunes?**
+
+* **Uso específico:** Las Facturas "E" se utilizan exclusivamente para **ventas a compradores no residentes en el país**.
+* **Información adicional:** Las Facturas "E" requieren datos específicos relacionados con la exportación, como el **destino de la mercadería**, el **medio de transporte** y los **datos del comprador extranjero**.
+* **Exención de IVA:** Las exportaciones de bienes y servicios generalmente están exentas del IVA, lo que se refleja en las Facturas "E".
+
+### **¿Quiénes deben emitir Facturas "E"?**
+
+Están obligadas a emitir Facturas "E" todas las empresas argentinas que realicen:
+
+* **Ventas de bienes al exterior:** Incluye productos físicos, como mercaderías, maquinaria y alimentos.
+* **Prestaciones de servicios a no residentes:** Abarca servicios como consultoría, turismo, transporte internacional y otros.
+
+### **¿Cómo emitir Facturas "E"?**
+
+La emisión de Facturas "E" se realiza de forma electrónica a través de **AFIP** o mediante **software homologado por la AFIP, como lo es**[ **TusFacturas.app**](https://www.tusfacturas.app).
+
 ### ¿Cómo crear una Comprobantes de exportacion "E"**?**
 
-Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
+**En esta guía encontrarás:**
 
-Para emitir un comprobante de tipo "E" se requiere agregar el bloque "fex" al request que armes. A continuación podrás ver ejemplos y su estructura.
+* **Explicación detallada del servicio  en nuestra guia:** [**API Facturación AFIP**](./)**.**
+* **Requerimientos específicos para cada tipo de solicitud.**
+* **Datos exactos para generar nuevos comprobantes de venta.**
+* **Documentación completa y ejemplos de código para una integración rápida y eficiente.**
 
-### Estructura de datos bloque: "fex"
+#### **Emisión simplificada de Comprobantes "E":**
 
-Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del campo "**comprobante**", un campo adicional llamado: "**fex**", con la siguiente estructura :
+Para emitir Comprobantes Electrónicos de Exportación ("E"), solo debes **agregar el bloque "fex" al request** que construyas, con la siguiente estructura :
 
 #### Ejemplo de JSON para FACTURA E
 
@@ -71,7 +95,7 @@ Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del
 | `tipo_exportacion`       | <p>Campo numérico. Longitud 1 caracter. Valores esperados:<br>1= Exportación definitiva de bienes<br>2= Servicios<br>4= Otros.<br><strong>Ejemplo: 2</strong></p>                                                                                                                                                                 |
 | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `permisos_tiene`         | <p>Campo alfabético. Longitud 1 caracter. Indica si se posee documento aduanero de exportación (permiso de embarque). Valores esperados:<br>S= Si posee<br>N= No posee<br>(vacio)= No especifica<br><strong>Ejemplo: S</strong></p>                                                                                               |
-| `permisos`               | Solo deberán ser enviados los permisos cuando el campo permisos\_tiene sea igual a "S". Valores a enviar según estructura de datos definida en ["Permisos de exportacion".](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#estructura-de-permisos)                                                           |
+| `permisos`               | Solo deberán ser enviados los permisos cuando el campo permisos\_tiene sea igual a "S". Valores a enviar según estructura de datos definida a continuación en ["Permisos de exportacion".](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#estructura-de-permisos)                                            |
 | `pais_comprobante_id`    | <p>Campo numérico. Según tabla de referencia <a href="../parametros/consulta-de-paises-afip.md">Paises AFIP (**)</a><br><strong>Ejemplo: 123</strong></p>                                                                                                                                                                          |
 | `forma_pago_leyenda`     | <p>Campo alfanumérico. Descripción adicional de la forma de pago<br><strong>Ejemplo: Favor depositar en cuenta XXXXX</strong></p>                                                                                                                                                                                                 |
 | `cliente_pais_cuit`      | <p>Campo numérico. Según tabla de referencia <a href="../parametros/consulta-de-cuit-pais-afip.md">CUIT Pais AFIP (**)</a><br><strong>Ejemplo: 51600004380</strong></p>                                                                                                                                                            |
@@ -82,7 +106,7 @@ Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del
 
 ### Estructura de "Permisos "
 
-Cada uno de los permisos de exportación que disponga, deberán ser enviados acordes a la estructura que se detalla a continuación
+El bloque de "permisos" es un array con cada uno de los permisos de exportación que dispongas. Cada uno de éstos debe ser enviado acordes a la estructura que se detalla a continuación
 
 ```
 {
