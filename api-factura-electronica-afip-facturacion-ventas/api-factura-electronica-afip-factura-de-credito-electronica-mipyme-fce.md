@@ -7,23 +7,91 @@ description: >-
 
 # Comprobantes de tipo: Factura de Crédito Electrónica MiPyme (FCE)
 
+TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
+
+### ¿Qué podes hacer con la API para facturación AFIP?
+
+Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
+
+<figure><img src="../.gitbook/assets/157.webp" alt="SDK AFIP. TusFacturasAPP API Factura Electronica AFIP. AFIP WS"><figcaption></figcaption></figure>
+
+### ¿Cómo empiezo?
+
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
+
+Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.A continuación te mostramos la estructura de los datos que se requieren para generar un comprobante de tipo exportación, ya sea NC, ND o FACTURA.
+
+### Crea Comprobantes MiPyme sin problemas: Guía Completa
+
+**¿Necesitas generar Comprobantes MiPyme?** Nuestra guía detallada "[API Facturación AFIP](./)" te brinda toda la información necesaria para hacerlo de manera rápida y sencilla.
+
+**En esta guía encontrarás:**
+
+* Una descripción completa del servicio [API Facturación AFIP](./).
+* Los requerimientos específicos para cada tipo de solicitud.
+* Los datos exactos que debes enviar para generar nuevos comprobantes de venta.
+* Documentación completa y ejemplos de código para una integración rápida y eficiente.
+
+**Información importante sobre los Comprobantes MiPyme:**
+
+* **Información adicional obligatoria:** Estos comprobantes requieren información adicional dentro del bloque "rg\_especiales".
+* **Aplicabilidad:** Se utilizan solo para ciertos receptores a partir de un monto determinado, que varía según la operación.
+* **Determina el tipo de comprobante:** Accede a [nuestra guía](api-factura-electronica-afip-or-como-se-si-emitir-una-factura-mipyme-o-una-comun.md) para saber si debes emitir una factura MiPyme o una factura común.
+
+**Comenza a crear Comprobantes MiPyme hoy mismo y simplifica tu proceso de facturación electrónica.**
+
+### ¿Qué estructuras debes enviar para generar una factura MiPyme?
+
+#### Estructura del bloque "rg\_especiales"
+
+El bloque de "rg\_especiales" debe especificar el [regimen al que pertenece](../parametros/tablas-de-referencia.md#regimenes-posibles-para-el-bloque-rg\_especiales) éste comprobante y enviar información asociada dentro del bloque "datos".
+
+{% code title="Ejemplo del JSON" %}
+```
+comprobante: {
+   .... 
+   "rg_especiales":   
+  {   "regimen" : "RG 4004-E",
+      "datos"  : 
+            [
+               {
+                   "id"      :    2101,
+                   "valor"  :    "12313123132133"
+                },
+                {
+                  "id"      :    27,
+                 "valor"  :    "SCA"
+                 }
+           ]
+   } 
+ }
+```
+{% endcode %}
+
+#### Datos a tener en cuenta:
+
 {% hint style="info" %}
-Se recomienda leer los requerimientos y conceptos básicos en el Micrositio de AFIP ([http://www.afip.gob.ar/facturadecreditoelectronica/default.asp](http://www.afip.gob.ar/facturadecreditoelectronica/default.asp)) y ademas, consultar con su contador/a.
+* TusFacturasAPP no realiza validaciones sobre éstos campos. Todas las validaciones son realizadas por la propia AFIP en caso que corresponda.
+* Si alguno de los items enviados posee un valor vacio, éste item no será procesado.
 {% endhint %}
 
-La particularidad de éstos tipos de comprobante es que requiere de manera obligatoria que se envie información asociada, dentro del bloque de " [rg\_especiales](./#estructura-de-rg-especiales) ", ademas de que solo aplica para ciertos receptores a partir de cierto monto, el cual varia según el cliente.
+#### Estructura del array "datos"
 
-Conocé cómo podes determinar si corresponde aplicar una factura MiPyme [desde acá](api-factura-electronica-afip-or-como-se-si-emitir-una-factura-mipyme-o-una-comun.md)
+Cada item del array debe estar compuesto por los siguientes campos:
 
-Por el momento AFIP cuenta con éstos datos a enviar:
+<table data-header-hidden><thead><tr><th width="214"></th><th width="151.66666666666669">REQUERIDO</th><th></th></tr></thead><tbody><tr><td><code>id</code></td><td><mark style="color:purple;">REQUERIDO</mark></td><td>Campo númerico, segun se detalla a continuación. </td></tr><tr><td><code>valor</code></td><td><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico.</td></tr></tbody></table>
+
+Las opciones posibles de "Id" para enviar dentro del array de "datos" son las siguientes:
 
 <table><thead><tr><th>Descripcion del campo</th><th width="112">Id a enviar</th><th width="145">¿Requerido?</th><th>Detalle</th></tr></thead><tbody><tr><td>CBU emisor</td><td>2101</td><td><mark style="color:purple;"><strong>REQUERIDO</strong></mark> <em>(EXCEPTO NC Y ND)</em></td><td>CBU numérico de 22 caracteres (salvo que envies el ALIAS del CBU)</td></tr><tr><td>Referencia Comercial</td><td>23</td><td>OPCIONAL</td><td>Texto. puede identificar una o varias Referencias Comerciales según corresponda - no repetir el valor.</td></tr><tr><td>CBU Alias del emisor</td><td>2102</td><td>OPCIONAL</td><td>El valor correcto es un ALIAS alfanumerico Longitud de 6 a 20 caracteres, letras de la 'a' a la 'Z', numeros del '0' al '9', caracteres especiales: punto ( . ) o guion medio ( - )</td></tr><tr><td>Anulación</td><td>22</td><td><mark style="color:purple;"><strong>REQUERIDO (SOLO PARA NC Y ND)</strong></mark></td><td>Solo debe ser enviado para las Notas de crédito/debito y el valor esperado es : S o N. Indica si el comprobante fue rechazado por el receptor.</td></tr><tr><td>Referencia de transferencia</td><td>27</td><td><mark style="color:purple;"><strong>REQUERIDO (solo para FACTURAS)</strong></mark></td><td>A partir del 1/4/2021 se deberá enviar éste campo con las siguiente siglas posibles: "SCA" o "ADC" . "SCA se usa para indicar: "TRANSFERENCIA AL SISTEMA DE CIRCULACION ABIERTA" y "ADC" para enviar "AGENTE DE DEPOSITO COLECTIVO"</td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
-Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento especial gestionado desde la web de AFIP para su autorización/aceptación/anulación. Consultá con tu contador/a el procedimiento indicado en la ley
+Ten en cuenta que éste tipo de comprobantes MiPyme,  requieren de un tratamiento adicional gestionado desde la web de AFIP para su autorización/aceptación/anulación. Consultá con tu contador/a el procedimiento indicado en la ley. Para más información acerca de los comprobantes MiPyme, sugerimos leer la información provista por  AFIP: [http://www.afip.gob.ar/facturadecreditoelectronica/default.asp](http://www.afip.gob.ar/facturadecreditoelectronica/default.asp)&#x20;
 {% endhint %}
 
-## Factura de crédito electrónica A MiPyme (FCE)
+## Factura de crédito electrónica  MiPyme (FCE)
+
+Ejemplo del JSON que debes enviar para generar un comprobante de tipo Mipyme - Factura
 
 ```json
 {
@@ -31,54 +99,10 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
    "apikey":"xxxx",
    "apitoken":"xxxxx",
    "cliente":{
-      "documento_tipo":"CUIT",
-      "documento_nro":"30712293841",
-      "razon_social":"VOUSYS",
-      "email":"a@a.com",
-      "domicilio":"AV.LIBERTADOR 571",
-      "provincia":"2",
-      "envia_por_mail":"S",
-      "condicion_pago":"210",
-      "condicion_iva":"RI"
+      .....
    },
    "comprobante":{
-      "fecha":"20/03/2018",
-      "vencimiento":"26/03/2023",
-      "tipo":"FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
-      "operacion":"V",
-      "punto_venta":"0002",
-      "numero":"00000012",
-      "periodo_facturado_desde":"07/07/2019",
-      "periodo_facturado_hasta":"07/07/2019",
-      "rubro":"Alimentos",
-      "rubro_grupo_contable":"Alimentos",
-      "detalle":[
-         {
-            "cantidad":"1",
-            "producto":{
-               "descripcion":"p2",
-               "unidad_bulto":"1",
-               "lista_precios":"Lista de precios API 3",
-               "codigo":"160398",
-               "precio_unitario_sin_iva":100000000,
-               "alicuota":"21"
-            },
-            "leyenda":""
-         }
-      ],
-      "bonificacion":"0.00",
-      "leyenda_gral":" ",
-      "tributos":[{
-            "tipo":7,
-            "regimen":10,
-            "base_imponible":200,
-            "alicuota":10,
-            "total":20
-         }],
-      "impuestos_internos":"0",
-      "impuestos_internos_base":"0",
-      "impuestos_internos_alicuota":"0",
-      "total":"121000020",
+      ......,
       "rg_especiales":{
          "regimen":"Factura de Crédito Electrónica MiPyMEs (FCE)",
          "datos":[
@@ -102,6 +126,8 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
 
 ### Nota de crédito electrónica A MiPyme (FCE)
 
+En caso que debas anular un comprobante, la operación correcta es emitir una Nota de crédito. Sugerimos revisar la documentación de las [Notas de crédito / Notas de débito](api-factura-electronica-afip-notas-credito-debito.md) para más información.
+
 {% hint style="info" %}
 **Datos a tener en cuenta:**&#x20;
 
@@ -111,62 +137,17 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
 * La fecha del comprobante que asocies debe ser menor o igual a la fecha del comprobante que estas queriendo emitir. Tené en cuenta que AFIP realiza validaciones en cuanto a la fecha de los comprobantes que asocies, ya que no se permiten notas de crédito a comprobantes con  +15 días.
 {% endhint %}
 
-{% code title="Ejemplo de JSON" %}
+{% code title="Ejemplo JSON de una Nota de crédito " %}
 ```json
 {
 	"usertoken": "xxx",
 	"apikey": "xxxx",
 	"apitoken": "xxxx",
 	"cliente": {
-		"documento_tipo": "CUIT",
-		"documento_nro": "30712293841",
-		"razon_social": "VOUSYS",
-		"email": "a@a.com",
-		"domicilio": "AV.LIBERTADOR 571",
-		"provincia": "2",
-		"envia_por_mail": "S",
-		"condicion_pago": "0",
-		"condicion_iva": "RI"
+		.....
 	},
 	"comprobante": {
-		"fecha": "20/03/2018",
-		"vencimiento":"26/03/2023",
-		"tipo": "NOTA DE CREDITO ELECTRONICA MiPyME (FCE) A",
-		"operacion": "V",
-		"punto_venta": "0002",
-		"numero": "00000012",
-		"periodo_facturado_desde": "07/07/2019",
-		"periodo_facturado_hasta": "07/07/2019",
-		"rubro": "Alimentos",
-		"rubro_grupo_contable": "Alimentos",
-		"detalle": [ {
-			"cantidad": "1",
-			"producto": {
-				"descripcion": "p2",
-				"unidad_bulto": "1",
-				"lista_precios": "Lista de precios API 3",
-				"codigo": "160398",
-				"precio_unitario_sin_iva": 100000000,
-				"alicuota": "21"
-			},
-			"leyenda": ""
-		}],
-		"bonificacion": "0.00",
-		"leyenda_gral": " ",
-		 "tributos": [
-			{
-				"tipo" : 7,
-				"regimen": 22,
-				"base_imponible": 1000,
-				"alicuota": 10,
-				"total": 100
-				
-			}]
-		"exentos": "0", 
-		"impuestos_internos": "0",
-		"impuestos_internos_base": "0",
-		"impuestos_internos_alicuota": "0",
-		"total": "121000100",
+		.....,
         	"rg_especiales":   
             		{  
             		 "regimen" : "Factura de Crédito Electrónica MiPyMEs (FCE)",
@@ -178,7 +159,7 @@ Ten en cuenta que éste tipo de comprobantes, luego requieren de un tratamiento 
                              	} 
                 	   ]
             		}, 
-	"comprobantes_asociados": [{
+	         "comprobantes_asociados": [{
 			"tipo_comprobante": "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
 			"punto_venta": "3",
 			"numero": 1,

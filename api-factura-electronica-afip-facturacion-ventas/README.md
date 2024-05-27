@@ -18,7 +18,7 @@ layout:
 
 # API Facturación AFIP
 
-<figure><img src="../.gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/157.webp" alt="TusFacturasAPP API Factura Electronica AFIP. SDK AFIP"><figcaption></figcaption></figure>
 
 Nuestra API de facturación AFIP te permite integrar la facturación electrónica directamente en tu plataforma, eliminando la necesidad de lidiar con los complejos webservices de AFIP. TusFacturasAPP es la solución SaaS ideal para tu negocio.
 

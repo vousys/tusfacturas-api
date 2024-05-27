@@ -122,7 +122,7 @@ description: >-
 | NOTA DE DEBITO ELECTRONICA MiPyME (FCE) C     |
 | NOTA DE CREDITO ELECTRONICA MiPyME (FCE) C    |
 
-### Datos Opcionales para RG Especiales
+### Régimenes posibles para el bloque "RG\_Especiales"
 
 | Regimen                                                           | id   | Descripcion                                                                               |
 | ----------------------------------------------------------------- | ---- | ----------------------------------------------------------------------------------------- |

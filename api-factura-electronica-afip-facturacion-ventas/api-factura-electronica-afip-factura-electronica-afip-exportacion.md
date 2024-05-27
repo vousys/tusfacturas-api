@@ -6,15 +6,31 @@ description: >-
 
 # Comprobantes de exportación de tipo "E"
 
-A continuación te mostramos la estructura de los datos que se requieren para generar un comprobante de tipo exportación, ya sea NC, ND o FACTURA.
+TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
 
-Al final del documento encontrarás un ejemplo completo de comprobante de exportación.
+### ¿Qué podes hacer con la API para facturación AFIP?
 
-## Estructura de datos campo "fex"
+Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
+
+<figure><img src="../.gitbook/assets/157.webp" alt="SDK AFIP. TusFacturasAPP API Factura Electronica AFIP. AFIP WS"><figcaption></figcaption></figure>
+
+### ¿Cómo empiezo?
+
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
+
+Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.A continuación te mostramos la estructura de los datos que se requieren para generar un comprobante de tipo exportación, ya sea NC, ND o FACTURA.
+
+### ¿Cómo crear una Comprobantes de exportacion "E"**?**
+
+Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
+
+Para emitir un comprobante de tipo "E" se requiere agregar el bloque "fex" al request que armes. A continuación podrás ver ejemplos y su estructura.
+
+### Estructura de datos bloque: "fex"
 
 Para poder generar un [comprobante](./) de tipo E, se requiere enviar dentro del campo "**comprobante**", un campo adicional llamado: "**fex**", con la siguiente estructura :
 
-### Ejemplo de JSON para FACTURA E
+#### Ejemplo de JSON para FACTURA E
 
 ```
 { 
@@ -81,32 +97,27 @@ Información de los campos a enviar:Información de los campos a enviar:
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `pais_destino_id` | <p>Campo numérico. Según tabla de referencia <a href="../parametros/consulta-de-paises-afip.md">Paises AFIP (**)</a><br><strong>Ejemplo: 123</strong></p> |
 
-### FEX: Estructura de "Comprobantes Asociados"
+{% hint style="info" %}
+Datos a tener en cuenta para los comprobantes de exportación:&#x20;
 
-Dentro del bloque "fex"y en caso de emitir una NOTA DE CRÉDITO E o una NOTA DE DÉBITO E, se deberá detallar cada uno de los comprobantes asociados que se anulan, acordes a la estructura que se detalla a continuación.
+Los siguientes campos dentro del json del comprobante deberá enviarlos en cero:&#x20;
+
+* bonificación,&#x20;
+* no gravados&#x20;
+* impuestos internos.
+
+El bloque tributos deberá ser enviado vacío.
+{% endhint %}
+
+### Notas de crédito E / Notas de débito E
+
+En caso que debas anular una factura de exportación, el comprobante que debes emitir es una Nota de crédito E, para ésto debes agregar dentro del bloque "fex" un bloque adicional según estructura de "[comprobantes\_asociados](api-factura-electronica-afip-notas-credito-debito.md#ejemplos-json-completos)", que es un array con cada uno de los comprobantes de tipo E que se quieren anular contablemente. Te sugerimos consultar la documentación de [Notas de crédito / Notas de débit](api-factura-electronica-afip-notas-credito-debito.md)o para conocer como el bloque que debes enviar.
 
 {% hint style="info" %}
 Solo deberán ser enviados los comprobantes asociados, cuando el campo exportacion\_tipo sea igual a "1" .
 {% endhint %}
 
-```
- {
-    "tipo_comprobante"   :    "NOTA DE CREDITO E",
-     "punto_venta"  :    "145",
-     "numero" : 12313,
-     "cuit": 30111222334     
-} 
-```
 
-
-
-Información de los campos a enviar:
-
-| `tipo_comprobante` | Campo alfabético. Valores esperados: "FACTURA E", "NOTA DE DEBITO E", "NOTA DE CREDITO E"                                                                              |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `punto_venta`      | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                |
-| `numero`           | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p> |
-| `CUIT`             | <p>Campo numérico, sin puntos ni guiones del emisor del comprobante asociado (o sea TU CUIT)<br><strong>Ejemplo: 30111222334</strong></p>                              |
 
 ### Ejemplo de NOTA DE DÉBITO E
 
@@ -116,30 +127,11 @@ Información de los campos a enviar:
 "apikey"    :  "9991",
 "apitoken"  :  "kkakak208a17cdfc4e4741437baddaa6",
 "cliente"   :
-                {   "documento_tipo":       "DNI",
-                    "documento_nro":        "1292963535",
-                    "razon_social":         "Pirulo",
-                    "email":                "test@test.com",
-                    "domicilio":            "Av Sta Fe 123",
-                    "provincia":            "2",
-                    "envia_por_mail":       "S",
-                    "condicion_pago":       "30",
-                    "condicion_iva":        "CF"
+                {   
+                .....
                 },
 "comprobante":  {
-                "fecha":                    "28\/07\/2015",
-                "vencimiento":              "26/03/2023",
-                "tipo":                     "NOTA DE DEBITO E",
-                "moneda":                   "DOL",
-               "idioma":                   "1",
-                "cotizacion":               "15.20",
-                "operacion":                "V",
-                "punto_venta":              "2",
-                "numero":                   "6",
-                "periodo_facturado_desde":  "27\/07\/2015",
-                "periodo_facturado_hasta":  "30\/07\/2015",
-                "rubro":                    "Servicios web",
-                "rubro_grupo_contable":     "servicios",
+                ....,
                 "fex": {
                             "permisos_tiene"      : "S" ,
                             "tipo_exportacion"    : "1",
@@ -173,68 +165,11 @@ Información de los campos a enviar:
                                                 } 
                                            ]
                     },
-                "detalle":
-                            [
-                                {
-                                    "cantidad":"1",
-                                    "afecta_stock": "N",
-                                    "producto":
-                                            {"descripcion":     "PAPAS",
-                                             "unidad_bulto":    "10",
-                                             "lista_precios":   "MI LISTA DE PRECIOS",
-                                             "codigo":          "",
-                                             "precio_unitario_sin_iva":"100.45",
-                                             "alicuota":      "21",
-                                             "unidad_medida": "7"
-                                             },
-                                    "leyenda":"blanca, cepillada"
-                                },
-                                {
-                                    "cantidad":"1.5",
-                                    "afecta_stock": "N",
-                                    "producto":
-                                            {"descripcion":     "HUEVOS",
-                                             "unidad_bulto":    "30",
-                                             "lista_precios":   "MAPPLETS",
-                                             "codigo":          "MPH",
-                                             "precio_unitario_sin_iva":"50",
-                                             "alicuota":      "10.5",
-                                             "unidad_medida": "7"
-                                             },
-                                    "leyenda":""
-                                },
-                                {
-                                    "cantidad":"2",
-                                    "afecta_stock": "S",
-                                    "producto":
-                                            {"descripcion":     "ZANAHORIA",
-                                             "unidad_bulto":    "50",
-                                             "lista_precios":   "MI LISTA DE PRECIOS",
-                                             "codigo":          "ZNH1",
-                                             "precio_unitario_sin_iva":"200",
-                                             "alicuota":      "21",
-                                             "unidad_medida": "7"
-                                             },
-                                    "leyenda":""
-                                }
-                            ],
-                "bonificacion":             "0",
-                "leyenda_gral":             "bla bla bla",
-                "impuestos_internos":       "0",
-                "impuestos_internos_base":   "0",
-                "impuestos_internos_alicuota": "0",
-                "total":                    "575.45"
+                "detalle": [
+                          .... ]
         }
 }
 ```
-
-### Datos a tener en cuenta:
-
-{% hint style="info" %}
-Para comprobantes de tipo E, los siguientes campos deberá enviarlos en cero: bonificación, no gravados, impuestos internos.
-
-El bloque tributos deberá ser enviado vacío.
-{% endhint %}
 
 ### Ejemplo de llamada en PHP
 

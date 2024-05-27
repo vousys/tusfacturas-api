@@ -6,6 +6,24 @@ description: >-
 
 # Notas de crédito / Notas de débito
 
+TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
+
+### ¿Qué podes hacer con la API para facturación AFIP?
+
+Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
+
+<figure><img src="../.gitbook/assets/157.webp" alt="SDK AFIP. TusFacturasAPP API Factura Electronica AFIP. AFIP WS"><figcaption></figcaption></figure>
+
+### ¿Cómo empiezo?
+
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
+
+Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
+
+### ¿Cómo crear una Nota de crédito o una Nota de débito**?**
+
+Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
+
 AFIP te permite emitir notas de crédito y notas de débito parciales o totales, detallando un comprobante en particular que se anula o hacerlo por períodos desde-hasta, para esto solo debes agregar los bloques: "comprobantes\_asociados" o "comprobantes\_asociados\_periodo" al JSON.
 
 ### ¿Qué es una nota de crédito (NC) electrónica?
@@ -16,7 +34,7 @@ Es un comprobante dígital legalmente equivalente a la [nota de crédito](https:
 
 Es un comprobante dígital legalmente equivalente a la [nota de débito](https://www.tusfacturas.app/como-emitir-notas-de-debito-electronica-afip.html) en formato papel, que la reemplaza en la mayoría de las operaciones de quienes estén obligados u opten por su utilización.
 
-### Emitir Notas de débito/crédito detallando los comprobantes que se anulan
+### ¿Cómo emitir Notas de débito/crédito detallando los comprobantes que se anulan?
 
 Para éste tipo de información, es obligatorio enviar el detalle de los comprobantes que se anulan, dentro de un array, en el bloque llamado "**comprobantes\_asociados**", acorde a la estructura que se detalla a continuación para cada comprobante asociado.
 
@@ -71,7 +89,7 @@ Información de los campos a enviar:
 
 <table data-header-hidden><thead><tr><th></th><th width="140.66666666666669" align="center">REQUERIDO</th><th></th></tr></thead><tbody><tr><td><code>tipo_comprobante</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfabético. Valores esperados según <a href="../parametros/tablas-de-referencia.md#tipos-de-comprobantes">tabla de tipos de comprobante.</a></td></tr><tr><td><code>punto_venta</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico entero. Longitud máxima 5 digitos.<br><strong>Ejemplo: 3</strong></td></tr><tr><td><code>numero</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></td></tr><tr><td><code>cuit</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico, sin puntos ni guiones. Es el CUIT de quien emitió el comprobante asociado. Siempre debe ser el mismo de quien está facturando.<br><strong>Ejemplo: 1111111111</strong></td></tr><tr><td><code>comprobante_fecha</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>La fecha del comprobante en formato dd/mm/aaaa. El día y el mes deben tener 2 dígitos.</td></tr></tbody></table>
 
-### Emitir notas de crédito/débito anulando "por período"
+### ¿Cómo emitir notas de crédito/débito anulando "por período"?
 
 A partir del 01/04/2021, AFIP habilitó la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados, para todo comprobante de tipo tradicional (A,B,C)
 
