@@ -98,6 +98,7 @@ A continuación te mostramos un ejemplo de JSON generico <mark style="color:purp
 
 Tene en cuenta que según el tipo de comprobante que emítas, pueden variar los bloques que debes enviar.&#x20;
 
+{% code title="JSON" fullWidth="true" %}
 ```json
 {
    "usertoken":"xxxxxx",
@@ -261,8 +262,9 @@ Tene en cuenta que según el tipo de comprobante que emítas, pueden variar los 
    }
 }
 ```
+{% endcode %}
 
-_Información de ejemplo - solo para visualizar su estructura -_&#x20;
+_Información de ejemplo, solo para visualizar su estructura._&#x20;
 
 ### Ejemplos de comprobantes según su tipo / letra
 
