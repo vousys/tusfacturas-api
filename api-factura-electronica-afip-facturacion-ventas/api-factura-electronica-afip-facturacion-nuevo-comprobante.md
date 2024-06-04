@@ -23,7 +23,7 @@ Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de f
 
 ### **¿Qué es la API de facturación  individual e instantánea?**
 
-Con nuestro servicio API de facturación electrónica instantánea, podrás emitir comprobantes fiscales válidos de manera individual y obtener respuestas en tiempo real desde la AFIP .  Tené en cuenta que el procesamiento del comprobane en AFIP está sujeta al estado de los servicios AFIP.
+Con nuestro servicio API de facturación electrónica AFIP instantánea, podrás emitir comprobantes fiscales válidos de manera individual y obtener respuestas en tiempo real desde la AFIP .  Tené en cuenta que el procesamiento del comprobante en AFIP está sujeta al estado de los servicios AFIP.
 
 Esta opción de facturación electrónica individual te brinda agilidad y eficiencia, permitiéndote integrar fácilmente la emisión de facturas, notas de crédito y otros comprobantes en tu flujo de trabajo actual, cumpliendo con todas las regulaciones fiscales vigentes.
 

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Emití con la API de facturación electrónica AFIP Argentina provista por
-  TusFacturasApp, comprobantes AFIP de tipo "B"
+  Ejemplos de comprobantes B: Emití facturación electrónica AFIP, fácil y rápido
+  con nuestra API. Confiable desde 2015. ¡Los desarrolladores la aman!
 ---
 
 # Ejemplos de comprobantes tipo "B"

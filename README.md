@@ -1,7 +1,7 @@
 ---
 description: >-
-  Integra tu software con AFIP en cuestión de minutos, utilizando la API de
-  facturación electrónica de TusFacturasAPP
+  Integra la facturación electrónica AFIP fácil y rápido con nuestra API.
+  ¡Confiable desde 2015! Elegida por todos los desarrolladores.
 ---
 
 # API Factura electrónica AFIP Argentina - Factura Electrónica fácil

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Según tu condición frente al IVA y la de tu cliente, se determina en
-  Argentina, que tipos de comprobantes podes emitir.
+  Según tu condición frente al IVA y la de tu cliente, se determina en Argentina
+  que tipos de comprobantes podes emitir.
 ---
 
 # ¿Qué tipos de comprobante debo/puedo emitir?

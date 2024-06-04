@@ -59,7 +59,9 @@ Los request que se envíen de manera asincrónica deben contar con el campo de "
 }
 ```
 
-### ¿Donde debo enviar los request?
+### ¿Cómo generar una venta asincrónica?
+
+Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`nuevo_encola`</mark>
 
