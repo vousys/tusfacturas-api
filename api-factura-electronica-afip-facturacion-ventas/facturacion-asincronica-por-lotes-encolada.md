@@ -54,15 +54,17 @@ Al utilizar éste servicio los comprobantes que envíes quedarán en una cola de
 
 Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
 
+{% hint style="info" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`lotes_encola`</mark>
-
-{% hint style="warning" %}
-Máximo: 100 comprobantes por lote.
 {% endhint %}
 
 Charset: UTF-8
 
 Formato esperado: JSON
+
+{% hint style="warning" %}
+Máximo: 100 comprobantes por lote.
+{% endhint %}
 
 #### Request Body
 

@@ -76,11 +76,33 @@ Nuestro servicio API de [facturación electrónica AFIP ](https://www.tusfactura
 
 ## Estructura genérica para facturar un comprobante.
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`metodo-elegido`**</mark>
+{% hint style="info" %}
+<mark style="color:green;">`POST`</mark>` ``https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`metodo-elegido`**</mark>
+{% endhint %}
 
-Charset: UTF-8
+Ejemplos:
+
+Para [ventas instantáneas](api-factura-electronica-afip-facturacion-nuevo-comprobante.md) [individuales](api-factura-electronica-afip-facturacion-nuevo-comprobante.md):
+
+`https://www.tusfacturas.app/app/api/v2/facturacion/nuevo`
+
+Para [facturación asincrónica individual](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md):
+
+`https://www.tusfacturas.app/app/api/v2/facturacion/nuevo_encola`
+
+Para [lotes instantáneos](api-factura-electronica-afip-api-facturacion-por-lotes.md):
+
+`https://www.tusfacturas.app/app/api/v2/facturacion/lotes`
+
+Para [Lotes asincrónicos](facturacion-asincronica-por-lotes-encolada.md):&#x20;
+
+`https://www.tusfacturas.app/app/api/v2/facturacion/lotes_encola`
+
+
 
 Tipo de dato esperado: JSON&#x20;
+
+Charset: UTF-8
 
 #### Request: Body
 
