@@ -4,13 +4,17 @@ description: >-
   ¡Confiable desde 2015! Elegida por todos los desarrolladores.
 ---
 
-# API Factura electrónica AFIP Argentina - Factura Electrónica fácil
+# API Factura electrónica AFIP Argentina fácil.
 
 TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) especialmente diseñado para empresas que facturen en Argentina.&#x20;
 
 ## API AFIP para Factura Electrónica Argentina
 
-Al utilizar la API de facturación electrónica AFIP provista por TusFacturasAPP , podrás generar de manera segura y rápida, comprobantes electrónicas válidos en AFIP Argentina. Contamos con el respaldo de un estudio impositivo que nos mantiene asesorados ante las nuevas normativas que surgen día a día en nuestro país.
+Al utilizar la [API de facturación electrónica AFIP](https://www.tusfacturas.app/api-factura-electronica-afip.html) provista por TusFacturasAPP , podrás generar de manera segura y rápida, comprobantes electrónicas válidos en AFIP Argentina. Contamos con el respaldo de un estudio impositivo que nos mantiene asesorados ante las nuevas normativas que surgen día a día en nuestro país.
+
+### ¿Qué es la factura electrónica AFIP?
+
+La [factura electrónica AFIP](https://www.tusfacturas.app/factura-electronica-afip.html) es un comprobante digital con el mismo valor legal que el papel, ya que AFIP por medio de la [RG (AFIP) 4290](https://www.tusfacturas.app/normativa-afip-factura-electronica.html), ha generalizado el uso de la factura electrónica para todos los contribuyentes de Argentina.
 
 <figure><img src=".gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
 

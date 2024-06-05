@@ -20,11 +20,11 @@ layout:
 
 <figure><img src="../.gitbook/assets/157.webp" alt="TusFacturasAPP API Factura Electronica AFIP. SDK AFIP"><figcaption></figcaption></figure>
 
-Nuestra API de facturación AFIP te permite integrar la facturación electrónica directamente en tu plataforma, eliminando la necesidad de lidiar con los complejos webservices de AFIP. TusFacturasAPP es la solución SaaS ideal para tu negocio.
+Nuestra [API de facturación electrónica AFIP](https://www.tusfacturas.app/api-factura-electronica-afip.html) te permite integrar la[ facturación electrónica AFIP ](https://www.tusfacturas.app/factura-electronica-afip.html)directamente en tu plataforma, eliminando la necesidad de lidiar con los complejos webservices de AFIP.  TusFacturasAPP es la solución SaaS ideal para tu negocio.
 
 ### ¿Cómo empiezo?
 
-Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a [emitir facturas electrónicas AFIP](https://www.tusfacturas.app/factura-electronica-afip.html) Argentina válidas.&#x20;
 
 ### Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP
 
@@ -66,7 +66,7 @@ Conocé más sobre la [facturación electrónica por lotes asincrónico](factura
 
 ### 📌 ¿Qué comprobantes podes facturar con la API?
 
-Nuestro servicio API de facturación electrónica AFIP te permite enviar a facturar  comprobantes de tipo [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M, comprobantes de tipo "[Factura de crédito MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
+Nuestro servicio API de [facturación electrónica AFIP ](https://www.tusfacturas.app/factura-electronica-afip.html)te permite enviar a facturar  comprobantes de tipo [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M, comprobantes de tipo "[Factura de crédito MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
 
 &#x20;¿No sabes qué tipo de comprobante debes emitir? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 

@@ -6,20 +6,20 @@ description: El paso a paso para comenzar a integrar TusFacturasAPP, con tu plat
 
 ## Aprende cómo integrar a tu software la API de facturación electrónica AFIP
 
-Para probar la integración con la API para AFIP, debes crear una cuenta en nuestra plataforma [desde aquí](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
+* Para probar la integración con la API para AFIP, debes crear una cuenta en nuestra plataforma [desde aquí](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
+* Luego de creada la cuenta y con tu plan API DEV activo, podrás emitir hasta 1500 comprobantes _**que no son de curso legal**_** por 1 mes y sin costo** (solo para nuevas cuentas y por única vez). Una vez vencido tu período de prueba, deberás contratar algún [plan API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html) de los que tenemos disponibles [aquí.](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
 
-Luego de creada la cuenta y con tu plan API DEV activo, podrás emitir hasta 1500 comprobantes _**que no son de curso legal**_** por 1 mes y sin costo** (solo para nuevas cuentas y por única vez). Una vez vencido tu período de prueba, deberás contratar algún [plan API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html) de los que tenemos disponibles [aquí.](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
+### Mientras estes en desarrollo:
 
-Por cuestiones legales, nuestra plataforma **no cuenta con un ambiente de testing**, por lo que no podrás enlazar tu CUIT con AFIP mientras realizas las pruebas, evitando problemas con el fisco, ya que los comprobantes emitidos en AFIP no pueden ser modificados ni eliminados.
+* Por cuestiones legales, nuestra plataforma **no cuenta con un ambiente de testing**, por lo que no podrás enlazar tu CUIT con AFIP mientras realizas las pruebas, evitando problemas con el fisco, ya que los comprobantes emitidos en AFIP no pueden ser modificados ni eliminados; Sin embargo mientras estés en testing la respuesta que recibirás desde nuestra API es la misma que si lo harías en modo productivo impactando los comprobantes en AFIP, solo que los campos CAE y vencimiento del CAE retornaran vacio (tampoco contarás con las validaciones adicionales que AFIP realiza desde sus servicios).
+* Sugerimos configurar tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679).&#x20;
+* Una vez que hayas probado todo y estes listo/a para ir a producción, podrás borrar desde nuestra plataforma web todos los comprobantes asociados a ese CUIT/PDV y luego dar de baja el CUIT/PDV para crear el nuevo y enlazarlo con AFIP.
 
-Mientras estés en testing la respuesta que recibirás desde nuestra API es la misma que si lo harías en modo productivo impactando los comprobantes en AFIP, solo que los campos CAE y vencimiento del CAE retornaran vacios; Ademas no contarás con las validaciones adicionales que AFIP realiza desde sus servicios.
+### Aclarando dudas legales: Lo que necesitas saber.
 
 Te sugerimos revisar nuestros [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html) para estar al tanto de lo que podés y no podes realizar en nuestra plataforma y leer las [FAQs](faqs-or-preguntas-frecuentes.md).
 
-Mientras estés en etapa de testing:
 
-* Sugerimos configurar tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679).&#x20;
-* Una vez que hayas probado todo y estes listo/a para ir a producción, podrás borrar desde nuestra plataforma web todos los comprobantes asociados a ese CUIT/PDV y luego dar de baja el CUIT/PDV para crear el nuevo y enlazarlo con AFIP.
 
 ### **Resumen para comenzar a trabajar:**
 
