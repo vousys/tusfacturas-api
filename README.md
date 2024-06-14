@@ -8,19 +8,22 @@ description: >-
 
 TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) especialmente diseñado para empresas que facturen en Argentina.&#x20;
 
-## API AFIP para Factura Electrónica Argentina
+## ¿Qué es la API para Factura Electrónica ?
 
-Al utilizar la [API de facturación electrónica AFIP](https://www.tusfacturas.app/api-factura-electronica-afip.html) provista por TusFacturasAPP , podrás generar de manera segura y rápida, comprobantes electrónicas válidos en AFIP Argentina. Contamos con el respaldo de un estudio impositivo que nos mantiene asesorados ante las nuevas normativas que surgen día a día en nuestro país.
+La [API de facturación electrónica AFIP](https://www.tusfacturas.app/api-factura-electronica-afip.html) provista por TusFacturasAPP , te permite generar de manera segura y rápida, comprobantes electrónicas válidos en AFIP Argentina. Contamos con el respaldo de un estudio impositivo que nos mantiene asesorados ante las nuevas normativas que surgen día a día en nuestro país.
+
+<figure><img src=".gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
 
 ### ¿Qué es la factura electrónica AFIP?
 
 La [factura electrónica AFIP](https://www.tusfacturas.app/factura-electronica-afip.html) es un comprobante digital con el mismo valor legal que el papel, ya que AFIP por medio de la [RG (AFIP) 4290](https://www.tusfacturas.app/normativa-afip-factura-electronica.html), ha generalizado el uso de la factura electrónica para todos los contribuyentes de Argentina.
 
-<figure><img src=".gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
+### ¿Qué servicios incluye la API?
 
 Además de usar la API, podrás utilizar nuestra plataforma web, con todas las funcionalidades que ésta brinda.
 
-\
+### Integrá la API de factura electrónica AFIP con cualquier lenguaje
+
 En ésta documentación encontrarás  ejemplos en formato JSON, para que los adaptes al lenguaje de programación de tu software Si bien no te podemos brindar soporte para los diferentes lenguajes de programación que existen en el mercado, al ser los input y los output en formato JSON, podes conectarlo el lenguaje que mas te guste, teniendo a mano stackoverflow, por si tenes dudas ;)
 
 \
