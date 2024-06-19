@@ -32,7 +32,7 @@ Te sugerimos leer primero:&#x20;
 ### ¿Cómo funciona el modo asincrónico de facturación individual?
 
 1. Tu servidor envía el request a TusFacturasAPP y éste queda en cola de procesamiento.&#x20;
-2. A medida que TF va procesando, te envían un webhook con la respuesta de ese procesamiento (puede ser de éxito o error)
+2. A medida que TusFacturasAPP va procesando, se envía un webhook con la respuesta de ese procesamiento (puede ser de éxito o error)
 3. En caso que recibas una respuesta exitosa, deberás consultar el comprobante usando el método de [consulta avanzada por external\_reference](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados#como-realizar-una-consulta-avanzada-por-external-reference)
 
 {% hint style="info" %}
@@ -47,6 +47,12 @@ Te sugerimos leer primero:&#x20;
 * **Al momento del envío del request, la suscripción de tu espacio de trabajo debe encontrarse vigente, activa y con cupo de facturación disponible** para emitir el comprobante (aunque no se emita hoy).
 * Si se detecta al menos un (1) error de validación de datos,  no se mandará a procesar y obtendrás la respuesta al instante, no por un webhook.
 {% endhint %}
+
+### Tiempos de procesamiento
+
+Nuestros tiempos de procesamiento son aproximados y varian según el tipo de comprobante que emitas:
+
+Las facturas B asincrónicas se procesan por punto de venta hasta 144,000 facturas por día, mientras que el resto de los tipos de comprobante se procesan un máximo de 14,000 comprobantes por día por punto de venta.
 
 ### ¿Qué dato adicional debe tener el request para ser procesado?
 
