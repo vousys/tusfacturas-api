@@ -128,7 +128,7 @@ Es un comprobante dígital legalmente equivalente a la [nota de débito](https:/
 
 #### Ejemplo de: NOTA DE DÉBITO A - asociando períodos
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE DÉBITO A, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)
 
 Podés consultar la documentación con referencia a cada campo, [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
 
