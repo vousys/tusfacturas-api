@@ -12,7 +12,7 @@ Para crear una compra debes enviar un request como el que envías para las venta
 
 En lugar de enviar el bloque "cliente" debes enviar el bloque "proveedor" con la misma información, como se ve a continuación:
 
-```
+```json
 {    
 "proveedor": {
         "documento_tipo": "CUIT",
@@ -112,8 +112,8 @@ Ejemplo completo de un JSON para generar una compra:
         "comentario": "", 
         "tributos": [
             {
-                "tipo": 6,
-                "regimen": 1,
+                "tipo": 7,
+                "regimen": 6,
                 "base_imponible": 1000,
                 "alicuota": 3,
                 "total": 30
@@ -145,7 +145,7 @@ Ejemplo completo de un JSON para generar una compra:
         "documento_nro": "30537647716",
         "provincia": 2, 
         "condicion_pago": 0,
-        "condicion_pago_otra": 0 
+        "condicion_pago_otra": 0 ,
         "condicion_iva": "RI"
     }
 }
