@@ -32,6 +32,7 @@
   * [Consultar el tope para ventas a consumidor final](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
   * [Compras: Eliminación de comprobantes](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-eliminacion-de-comprobantes-de-compra.md)
   * [Guía de migración a facturación asincrónico (encolado)](api-factura-electronica-afip-facturacion-ventas/guia-de-migracion-a-facturacion-asincronico-encolado.md)
+* [API Compras](api-compras.md)
 * [Recibos de cobro y órdenes de pago](recibos-de-cobro-y-ordenes-de-pago/README.md)
   * [Ingresar pago a un comprobante emitido](recibos-de-cobro-y-ordenes-de-pago/api-factura-electronica-afip-or-ingresar-pago.md)
   * [Generar un recibo de cobro](recibos-de-cobro-y-ordenes-de-pago/api-factura-electronica-afip-or-ingresar-pago-1.md)
