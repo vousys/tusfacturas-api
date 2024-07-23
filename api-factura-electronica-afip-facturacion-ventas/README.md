@@ -24,7 +24,9 @@ Nuestra [API de facturación electrónica AFIP](https://www.tusfacturas.app/api-
 
 ### ¿Cómo empiezo?
 
-Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a [emitir facturas electrónicas AFIP](https://www.tusfacturas.app/factura-electronica-afip.html) Argentina válidas.&#x20;
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) .&#x20;
+
+Una vez configurada tu cuenta y creado tu CUIT/Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a [emitir facturas electrónicas AFIP](https://www.tusfacturas.app/factura-electronica-afip.html) Argentina válidas.&#x20;
 
 ### Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP
 
@@ -40,33 +42,25 @@ Características clave:
 * **Emisión individual o por lotes**: Selecciona la modalidad que mejor se adapte a tu volumen de facturación.
 * **Procesamiento instantáneo o asincrónico**: Obtene respuestas inmediatas o gestiona tu flujo de trabajo con colas de procesamiento. T**e recomendamos** utilizar siempre que sea posible, los **métodos de facturación asincrónicos**, ya que los instantáneos dependen de cómo funcionen los servicios de AFIP en el momento de la emisión.
 
-### 🔹 API de Facturación  AFIP individual e instántanea:
+### Factura tus ventas con la API de Facturación  AFIP individual e instantánea:
 
-Utilizando éste método vos envías un solo request para ser procesado, y obtenes la respuesta al instante (sujeto al estado de los servicios AFIP)
+Utilizando éste método vos envías un solo request para ser procesado, y obtenes la respuesta al instante (sujeto al estado de los servicios AFIP. Conoce más sobre la [facturación electrónica individual e instantánea](api-factura-electronica-afip-facturacion-nuevo-comprobante.md), desde aquí
 
-[Conocé más sobre la facturación electrónica individual e instantánea, desde aquí](./#facturacion-instantanea-individual)
+### Factura tus ventas con la API de Facturación  AFIP individual asincrónica  <mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
 
-### 🔹 API de Facturación  AFIP individual asincrónica  <mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
+En éste método envías un solo request para ser procesado y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md) (no dependes del estado de los servicios de facturación de AFIP). Conoce más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
 
-En éste método envías un solo request para ser procesado y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md) (no dependes del estado de los servicios de facturación de AFIP)
+### Factura tus ventas con la API de Facturación  AFIP por **Lote** instántaneo
 
-Conocé más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
+Con éste método envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante  (sujeto al estado de los servicios AFIP). Conoce más sobre la [facturación electrónica en lotes instantánea, desde aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
 
-### 🔹API de Facturación  AFIP por **Lote** instántaneo
+### Factura tus ventas con la API de Facturación  AFIP por **Lote asincrónico **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
 
-Con éste método envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante  (sujeto al estado de los servicios AFIP).
+En éste método envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md)  (no dependes del estado de los servicios de facturación de AFIP). Conoce más sobre la [facturación electrónica por lotes asincrónico](facturacion-asincronica-por-lotes-encolada.md).
 
-Conocé más sobre la [facturación electrónica en lotes instantánea, desde aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
+### 📌 ¿Qué comprobantes puedo facturar con la API?
 
-### 🔹API de Facturación  AFIP por **Lote asincrónico **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
-
-En éste método envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md)  (no dependes del estado de los servicios de facturación de AFIP)
-
-Conocé más sobre la [facturación electrónica por lotes asincrónico](facturacion-asincronica-por-lotes-encolada.md).
-
-### 📌 ¿Qué comprobantes podes facturar con la API?
-
-Nuestro servicio API de [facturación electrónica AFIP ](https://www.tusfacturas.app/factura-electronica-afip.html)te permite enviar a facturar  comprobantes de tipo [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M, comprobantes de tipo "[Factura de crédito MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
+Nuestro servicio API de [facturación electrónica AFIP ](https://www.tusfacturas.app/factura-electronica-afip.html)te permite enviar a facturar  comprobantes de tipo [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M y comprobantes de tipo "[Factura de crédito MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)", ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
 
 &#x20;¿No sabes qué tipo de comprobante debes emitir? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 
@@ -74,31 +68,37 @@ Nuestro servicio API de [facturación electrónica AFIP ](https://www.tusfactura
 
 
 
-## Estructura genérica para facturar un comprobante.
+## Comencemos con la estructura genérica de un comprobante
+
+Llamamos "comprobante" a todo documento ya sea factura, nota de crédito, nota de débito, pedido, presupuesto y remito tanto de ventas como de compras.&#x20;
 
 {% hint style="info" %}
 <mark style="color:green;">`POST`</mark>` ``https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`metodo-elegido`**</mark>
 {% endhint %}
 
-Ejemplos:
+### Endpoints de cada una de nuestras opciones API de facturación
 
-Para [ventas instantáneas](api-factura-electronica-afip-facturacion-nuevo-comprobante.md) [individuales](api-factura-electronica-afip-facturacion-nuevo-comprobante.md):
+A continuación podrás ver un detalle de cada donde debes enviar los request para cada opción de facturación:
+
+#### Para ventas instantáneas individuales:
 
 `https://www.tusfacturas.app/app/api/v2/facturacion/nuevo`
 
-Para [facturación asincrónica individual](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md):
+#### Para facturación asincrónica individual:
 
 `https://www.tusfacturas.app/app/api/v2/facturacion/nuevo_encola`
 
-Para [lotes instantáneos](api-factura-electronica-afip-api-facturacion-por-lotes.md):
+#### Para lotes instantáneos:
 
 `https://www.tusfacturas.app/app/api/v2/facturacion/lotes`
 
-Para [Lotes asincrónicos](facturacion-asincronica-por-lotes-encolada.md):&#x20;
+#### Para Lotes asincrónicos:&#x20;
 
 `https://www.tusfacturas.app/app/api/v2/facturacion/lotes_encola`
 
 
+
+### Estructura del JSON generico a enviar
 
 Tipo de dato esperado: JSON&#x20;
 
@@ -116,9 +116,9 @@ Charset: UTF-8
 
 ### JSON de ejemplo
 
-A continuación te mostramos un ejemplo de JSON generico <mark style="color:purple;">**completo con todas las posibles opciones**</mark>**,** para generar un comprobante.
+A continuación te mostramos un ejemplo de JSON generico <mark style="background-color:yellow;">**completo con todas las posibles opciones**</mark>**,** para generar un comprobante.
 
-Tene en cuenta que según el tipo de comprobante que emítas, pueden variar los bloques que debes enviar.&#x20;
+Tene en cuenta que según el tipo de comprobante que emítas, pueden variar los bloques que debes enviar, para eso consultá en detalle las páginas de ejemplos
 
 {% code title="JSON" fullWidth="true" %}
 ```json
@@ -362,6 +362,9 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 **PDF**
 
 * La URL del PDF que recibis es temporal, dura solo para el día que la consultas.
+* Es importante que descargues toda la información junto con el contenido del pdf y lo almacenes en tu plataforma, ya que si si tu cuenta o suscripción no se encuentran vigentes, no podrás volver a obtenerlo. &#x20;
+
+
 
 **CAE (Código de Autorización electrónica de AFIP)**
 
@@ -369,15 +372,21 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * Los CAE tienen fecha de vencimiento y se devuelve en formato dd/mm/aaaa
 * Por cuestiones de seguridad, el número de CAE es un texto y se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
 
+
+
 **AFIP CÓDIGO DE BARRAS / QR**
 
 * Por cuestiones de seguridad, el texto que se retorna en el campo afip\_codigo\_barras y afip\_qr, se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
 * Atención! El campo afip\_codigo\_barras dejará de ser enviado a partir del 01/01/2024
 * La respuesta exitosa, te incluye el texto que se necesita para armar el código QR (en caso que generes el PDF desde tu lado) .
 
+
+
 **NOTAS DE DÉBITO Y CRÉDITO**
 
 * Las notas de débito y crédito requieren que envies obligatoriamente los comprobantes asociados (o su período asociado). Conocé más [desde aquí](api-factura-electronica-afip-notas-credito-debito.md)
+
+
 
 **REDONDEO DE NÚMEROS / SUMATORIAS / TOTALES**
 
@@ -385,9 +394,13 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * **TusFacturas.app NO válida la totalidad de los datos enviados como asi tampoco las sumatorias de los ítems que estas enviando para facturar. Es tu responsabilidad corroborar y validar éstos datos antes de enviarlos.**
 * **AFIP recibe únicamente totales**, no el detalle de los items que facturas, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica, TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
 
+
+
 **MICROSITIOS**
 
 * Las URL de los micrositios solo te serán devueltas con datos, si los mismos se encuentran habilitados en tu cuenta. Para configurarlo, ingresá a nuestra plataforma web, menú > mi espacio de trabajo > mis micrositios. Conocé más de los micrositios [desde aquí](https://www.tusfacturas.app/).
+
+
 
 **EDICIÓN / ELIMINACIÓN DE COMPROBANTES**&#x20;
 

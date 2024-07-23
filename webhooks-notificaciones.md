@@ -17,7 +17,7 @@ TusFacturasAPP te enviará un webhook, siempre que se produzca uno o más evento
 
 ## Dirección del webhook
 
-La dirección del webhook, se configura dentro de tu CUIT+PDV. Para eso deberás ingresar al MENÚ > Mi espacio de trabajo > Cuits + PDV y editando el registro de tu CUIT, podrás agregarlo.&#x20;
+La dirección del webhook, se configura dentro de la información de tu CUIT/PDV. Para eso deberás ingresar al MENÚ > Mi espacio de trabajo > Cuits / PDV .
 
 La dirección que establezcas para el webhook, no debe contener un redirect y debe encontrarse funcionando. Si la misma se encuentra fuera de servicio por más de 24hs será ignorada por completo y no se te notificará nada más, hasta que indiques una nueva URL.
 
@@ -25,7 +25,7 @@ El formato esperado es: _https://www.dominio.com/script-nombre_
 
 ## **¿Qué te notificaremos vía  webhook?**
 
-Vas a recibir por **POST** un JSON, con la siguiente estructura, para que puedas relacionar mediante el _external\_reference_ que nos enviaste, al comprobante en cuestión, por tal motivo el _external\_reference_ que envíes, debe ser único.
+Vas a recibir por **POST** un JSON, con la siguiente estructura, para que puedas relacionar mediante el _**external\_reference**_ que nos enviaste, al comprobante en cuestión, por tal motivo el _external\_reference_ que envíes, debe ser único.
 
 {% code title="JSON" %}
 ```
@@ -41,13 +41,17 @@ Vas a recibir por **POST** un JSON, con la siguiente estructura, para que puedas
 ```
 {% endcode %}
 
+
+
+{% hint style="success" %}
+**Verificá el hook recibido:**
+
 En los headers del request que te enviamos, podrás observar la/s siguiente/s cabeceras:
 
 User-Agent: TusFacturasAPP-webhook/1.0
+{% endhint %}
 
-
-
-### Tipos de evento posibles, por recurso
+### Detalle de tipos de evento posibles por recurso
 
 <table><thead><tr><th align="center">recurso</th><th width="154.8318397469689" align="center">evento</th><th>info</th></tr></thead><tbody><tr><td align="center">facturacion</td><td align="center">encolado</td><td>Éste evento te informa, que el comprobante que enviaste, se encuentra ya en la cola de procesamiento, para ser emitido en la fecha que indicaste.</td></tr><tr><td align="center">facturacion</td><td align="center">emitido</td><td>Éste evento te informa que el comprobante que enviaste, se ha facturado correctamente.</td></tr><tr><td align="center">facturacion</td><td align="center">error</td><td>Éste evento te informa que el comprobante que enviaste, no se ha podido procesar y recibrás dentro del atributo "msg", la lista con los errores detectados</td></tr><tr><td align="center">facturacion</td><td align="center">eliminado</td><td>Éste evento te informa que se ha eliminado un comprobante.</td></tr><tr><td align="center">facturacion</td><td align="center">cambio_fecha</td><td>Éste evento te informa que se ha cambiado la fecha del comprobante.</td></tr><tr><td align="center">test</td><td align="center">test</td><td>Se utilizará éste evento para probar la url de tu webhook</td></tr><tr><td align="center"></td><td align="center"></td><td></td></tr></tbody></table>
 
@@ -82,7 +86,7 @@ Hook 5 \_\_\_\_\_\_\_\_\_\_\_\_\_ será enviado el 23/03/2022 a las 07:35
 
 ## &#x20;Una vez que recibo el webhook, ¿Qué hago?
 
-Una vez recibido el webhook, deberás  realizar las consultas respectivas para obtener los datos generados.
+Una vez recibido el webhook, deberás  realizar una [consulta avanzada](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md) a TusFacturasAPP para obtener los datos generados de ese comprobante.
 
 &#x20;A continuación te mostramos, la documentación asociada al recurso del que recibís el webhook.
 
@@ -92,15 +96,12 @@ Una vez recibido el webhook, deberás  realizar las consultas respectivas para o
 | :---------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | facturacion |  [consulta avanzada por external\_reference](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference) |
 |             |                                                                                                                                                                                                        |
-|             |                                                                                                                                                                                                        |
-
-
 
 ## FAQs&#x20;
 
 #### ¿Dónde configuro mi webhook?
 
-La dirección del webhook, se configura dentro de tu CUIT+PDV. Para eso deberás ingresar al MENÚ > Mi espacio de trabajo > Cuits + PDV y editando el registro de tu CUIT, podrás agregarlo. Tené en cuenta que la dirección del hook, debe ser válida.
+La dirección del webhook, se configura dentro de tu CUIT/PDV. Para eso deberás ingresar al MENÚ > Mi espacio de trabajo > Cuits + PDV y editando el registro de tu CUIT, podrás agregarlo. Tené en cuenta que la dirección del hook, debe ser válida.
 
 #### En caso de que la dirección de mi webhook, presente inconvenientes y falle el webhook, ¿se realizan reintentos hasta completar la notificación?
 
@@ -116,4 +117,3 @@ Siempre vas a recibir los hooks independientes por cada comprobante.
 
 **¿Tenes más dudas?** Consultá más preguntas frecuentes sobre la cola de procesamiento, [desde aquí](faqs-or-cola-de-procesamiento.md) o contactanos por el chat de la web [www.tusfacturas.app](https://www.tusfacturas.app)
 
-####
