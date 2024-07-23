@@ -42,7 +42,7 @@ Para empezar a emitir Comprobantes MiPyme, las MiPyMEs deben:
 
 Ten en cuenta que éste tipo de comprobantes MiPyme,  requieren de un tratamiento adicional gestionado desde la web de AFIP para su autorización/aceptación/anulación. Consultá con tu contador/a el procedimiento indicado en la ley.
 
-Para más información acerca de los comprobantes MiPyme, sugerimos leer la información provista por  AFIP: [http://www.afip.gob.ar/facturadecreditoelectronica/default.asp](http://www.afip.gob.ar/facturadecreditoelectronica/default.asp)&#x20;
+Para más información acerca de los comprobantes MiPyme, sugerimos leer la información provista por  AFIP, en el [micrositio de Facturas de crédito MiPyme](https://servicioscf.afip.gob.ar/facturadecreditoelectronica/)
 
 ### API para Comprobantes MiPyme&#x20;
 
