@@ -8,7 +8,7 @@ description: >-
 # Consulta para verificar si estoy obligado a recibir o emitir Factura de Crédito electrónica MiPyme
 
 {% hint style="info" %}
-El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.
+<mark style="background-color:purple;">El uso de éste método contabiliza como 1 request en tu suscripción. El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.</mark>
 
 IMPORTANTE: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP, el servicio de "**Webservice Registro de Facturas de Crédito Electrónica MiPyMEs "** . Te indicamos cómo hacerlo en el [instructivo de integración con AFIP : Paso 6](https://youtu.be/\_YSRksd0\_A0)
 {% endhint %}

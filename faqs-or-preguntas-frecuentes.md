@@ -14,6 +14,8 @@ Sí, podes utilizar nuestra plataforma de facturación electrónica incluso si t
 
 Un request es toda petición realizada a la API en cualquiera de sus métodos, devuelva error o exito.
 
+El límite de request que dispones para realizar las consultas, es el mismo limite que tenes habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en la suscripción en curso.
+
 ### **¿La URL de descarga de PDF cuenta como un request?**
 
 No, la llamada para descargar facturas electrónicas en formato PDF no se considera request adicional en nuestro sistema de facturación. Sin embargo, es importante tener en cuenta que las URLs de descarga de PDF son temporales por motivos de seguridad. Por eso, recomendamos descargar siempre el archivo PDF en tu propio servidor para poder consultarlo las veces que sea necesario de manera local y permanente. De esta forma, optimizas el uso de nuestro servicio de facturación electrónica y mantienes un respaldo confiable de tus comprobantes fiscales en cualquier momento.
