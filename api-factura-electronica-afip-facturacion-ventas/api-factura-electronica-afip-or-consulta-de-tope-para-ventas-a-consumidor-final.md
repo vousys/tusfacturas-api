@@ -7,11 +7,13 @@ description: >-
 
 # Consultar el tope para ventas a consumidor final
 
-## &#x20;
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/topecf`
 
-Mediante éste método, podrás consultar el tope especificado por AFIP, para ventas a consumidor final, sin requisito de detallar tipo y número de documento del comprador.
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`topecf`</mark>
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción
+
+
 
 #### Request Body
 

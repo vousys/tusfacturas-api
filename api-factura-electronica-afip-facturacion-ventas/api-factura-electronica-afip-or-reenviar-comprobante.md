@@ -12,9 +12,11 @@ Debes tener en cuenta que la función de "reenviar comprobante" solo estará hab
 
 ## Reenviar un comprobante a tu cliente
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/reenviar`&#x20;
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`reenviar`</mark>
 
-Mediante éste método podrás hacer el reenvío de un comprobante a tu cliente.
+💡 El uso de éste método  contabiliza como un request en tu suscripción
+
+
 
 #### Request Body
 

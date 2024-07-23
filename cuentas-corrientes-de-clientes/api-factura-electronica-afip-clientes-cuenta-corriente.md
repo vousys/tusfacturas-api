@@ -6,29 +6,20 @@ description: >-
 
 # Consulta de Cuentas Corrientes
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="v2/clientes/cuenta-corriente" method="post" summary="Consulta de cuenta corriente" %}
-{% swagger-description %}
+## Consulta de cuenta corriente
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/apiv2/`<mark style="color:purple;">`clientes/cuenta-corriente`</mark>
 
-{% swagger-parameter in="body" name="cliente" type="object" required="false" %}
-**documento\_tipo**
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
-**documento\_nro**
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-{% endswagger %}
+| Name      | Type   | Description                                                                 |
+| --------- | ------ | --------------------------------------------------------------------------- |
+| cliente   | object | <p><strong>documento_tipo</strong></p><p><strong>documento_nro</strong></p> |
+| usertoken | string | Tus credenciales de acceso                                                  |
+| apikey    | string | Tus credenciales de acceso                                                  |
+| apitoken  | string | Tus credenciales de acceso                                                  |
 
 ### Ejemplo del JSON que debes enviar
 

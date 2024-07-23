@@ -23,7 +23,9 @@ description: >-
 
 ### Request
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/productos/consultar`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`productos/consultar`</mark>
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
 #### Request Body
 

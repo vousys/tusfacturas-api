@@ -22,7 +22,11 @@ A partir del 01/04/2022 ésta consulta te devolverá también, todos aquellos co
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/consulta_avanzada`
 
-Estructura general para todo tipo de consulta avanzada
+💡 El uso de éste método no contabiliza como un request en tu suscripción
+
+
+
+### Estructura general para todo tipo de consulta avanzada
 
 #### Request Body
 

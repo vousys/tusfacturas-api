@@ -11,52 +11,31 @@ description: >-
 Los cobros que informes, se usan solo para la gestión interna de nuestra plataforma y no podrás generar dentro de éste método, cobros por comprobantes que emitiste a tus clientes, para eso debes usar el método de "[Ingresar pago a un comprobante emitido](api-factura-electronica-afip-or-ingresar-pago-1.md#ingresar-pagos-a-un-comprobante-emitido)"
 {% endhint %}
 
-{% swagger method="post" path="/v2/caja/nuevo" baseUrl="https://www.tusfacturas.app/app/api" summary="Generar recibos de cobro" %}
-{% swagger-description %}
+## Generar recibos de cobro
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/caja/`<mark style="color:purple;">`nuevo`</mark>
 
-{% swagger-parameter in="body" name="apitoken" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
-{% swagger-parameter in="body" name="apikey" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="tipo" type="string" %}
-Deberás enviar el valor "RC" 
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="fecha" type="string" %}
-Campo en formato fecha dd/mm/aaaa que indica la fecha en que llevará el recibo de cobro
-{% endswagger-parameter %}
+| Name               | Type   | Description                                                                                                                                                                                                               |
+| ------------------ | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| apitoken           | String | Tus credenciales de acceso                                                                                                                                                                                                |
+| apikey             | String | Tus credenciales de acceso                                                                                                                                                                                                |
+| usertoken          | String | Tus credenciales de acceso                                                                                                                                                                                                |
+| tipo               | string | Deberás enviar el valor "RC"                                                                                                                                                                                              |
+| fecha              | string | Campo en formato fecha dd/mm/aaaa que indica la fecha en que llevará el recibo de cobro                                                                                                                                   |
+| cuenta\_principal  | string | Campo alfanumérico de hasta 255 caracteres. El nombre de la cuenta principal a la que aplicarás éste recibo de cobro. La misma debe existir en los parámetros de tu espacio de trabajo.                                   |
+| cuenta\_secundaria | string | Campo alfanumérico de hasta 255 caracteres. El nombre de la cuenta secundaria (relacionada con la principal) a la que aplicarás éste recibo de cobro. La misma debe existir en los parámetros de tu espacio de trabajo.   |
+| comentario         | string | OPCIONAL. Campo alfanumérico de hasta 255 caracteres, que quedará registrado como un comentario interno                                                                                                                   |
+| leyenda            | string | OPCIONAL. Campo alfanumérico de hasta 255 caracteres, que quedará registrado como leyenda y saldrá impreso en el PDF del recibo, en caso que desees generarlo.                                                            |
+| pagos              | string | Según estructura que se detalla a continuación                                                                                                                                                                            |
 
-{% swagger-parameter in="body" name="cuenta_principal" type="string" %}
-Campo alfanumérico de hasta 255 caracteres. El nombre de la cuenta principal a la que aplicarás éste recibo de cobro. La misma debe existir en los parámetros de tu espacio de trabajo.  
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="cuenta_secundaria" type="string" %}
-Campo alfanumérico de hasta 255 caracteres. El nombre de la cuenta secundaria (relacionada con la principal) a la que aplicarás éste recibo de cobro. La misma debe existir en los parámetros de tu espacio de trabajo.  
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="comentario" type="string" %}
-OPCIONAL. Campo alfanumérico de hasta 255 caracteres, que quedará registrado como un comentario interno
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="leyenda" type="string" %}
-OPCIONAL. Campo alfanumérico de hasta 255 caracteres, que quedará registrado como leyenda y saldrá impreso en el PDF del recibo, en caso que desees generarlo.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="pagos" type="string" %}
-Según estructura que se detalla a continuación
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="" %}
+{% tabs %}
+{% tab title="200: OK " %}
 Ejemplos de las respuestas JSON en caso de éxito o error
 
 {% tabs %}
@@ -79,8 +58,8 @@ Ejemplos de las respuestas JSON en caso de éxito o error
 ```
 {% endtab %}
 {% endtabs %}
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 * ## Datos a tener en cuenta

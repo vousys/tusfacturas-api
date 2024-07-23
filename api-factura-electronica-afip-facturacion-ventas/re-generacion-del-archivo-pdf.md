@@ -8,7 +8,9 @@ description: >-
 
 ## Regeneración de PDFs
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/regenerar_pdf`&#x20;
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`regenerar_pdf`</mark>
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción&#x20;
 
 #### Request Body
 

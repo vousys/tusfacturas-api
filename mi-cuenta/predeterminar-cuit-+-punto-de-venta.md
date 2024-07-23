@@ -10,7 +10,9 @@ description: >-
 
 ## Predeterminar CUIT + Punto de venta
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/puntos_venta/predeterminar`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`puntos_venta/predeterminar`</mark>
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
 #### Request Body
 

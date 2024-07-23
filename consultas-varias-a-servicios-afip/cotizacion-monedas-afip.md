@@ -27,7 +27,11 @@ Ten en cuenta que para la moneda "dólar": AFIP trabaja con la cotización ofici
 
 ## Request
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/tablas_referencia/cotizacion`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`tablas_referencia/cotizacion`</mark>
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción
+
+
 
 Puedes obtener la cotización de las diferentes monedas que tenemos publicadas en nuestra
 

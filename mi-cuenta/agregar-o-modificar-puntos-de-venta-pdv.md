@@ -24,7 +24,9 @@ description: >-
 
 ## Administrar CUIT + Punto de venta
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/puntos_venta/administrar`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`puntos_venta/administrar`</mark>
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
 #### Request Body
 

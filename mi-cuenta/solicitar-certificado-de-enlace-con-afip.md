@@ -8,28 +8,26 @@ description: >-
 
 El certificado se generará para el CUIT desde el cual estas haciendo la solicitud.
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/puntos_venta/certificado" method="post" summary="Solicitar certificado" %}
-{% swagger-description %}
+## Solicitar certificado
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`puntos_venta/certificado`</mark>
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
+| Name      | Type   | Description                 |
+| --------- | ------ | --------------------------- |
+| apikey    | string | Tus credenciales de acceso  |
+| apitoken  | string | Tus credenciales de acceso  |
+| usertoken | string | Tus credenciales de acceso. |
 
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Ejemplo del JSON a enviar:
 

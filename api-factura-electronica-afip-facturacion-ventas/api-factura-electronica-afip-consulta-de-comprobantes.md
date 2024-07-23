@@ -24,6 +24,8 @@ Charset: **UTF-8**
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/consulta`&#x20;
 
+💡 El uso de éste método no contabiliza como un request en tu suscripción
+
 #### Request Body
 
 | Name        | Type   | Description                                                             |

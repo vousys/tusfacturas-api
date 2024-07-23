@@ -21,7 +21,11 @@ Los cobros que informes, se usan solo para la gestión interna de nuestra plataf
 
 ## Ingresar pagos a un comprobante emitido
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/pagar`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`pagar`</mark>
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción
+
+
 
 #### Request Body
 

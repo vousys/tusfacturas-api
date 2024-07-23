@@ -6,41 +6,22 @@ description: >-
 
 # Consultar las alícuotas, en el padrón ARBA sujetos recaudación
 
-{% hint style="info" %}
-El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.
+## Consulta en padrón ARBA
 
-Siempre es importante que re-confirmes con tus asesores impositivos si la alícuota obtenida corresponde o no ser aplicada al comprobante que vas a emitir.
-{% endhint %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`clientes/arba-padron`</mark>
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/" path="v2/clientes/arba-padron" method="post" summary="Consulta en padrón ARBA" %}
-{% swagger-description %}
+💡 El uso de éste método  contabiliza como un request en tu suscripción
+
 El método te devolverá las alícuotas (en porcentajes) que le corresponden según ARBA.
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="cliente" type="object" required="false" %}
-Un objeto conteniendo los siguientes datos:
+#### Request Body
 
-**documento\_tipo**
-
-Valores Permitidos: CUIT , DNI Ejemplo: DNI
-
-**documento\_nro**
-
-Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-{% endswagger %}
+| Name      | Type   | Description                                                                                                                                                                                                                                       |
+| --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| cliente   | object | <p>Un objeto conteniendo los siguientes datos:</p><p><strong>documento_tipo</strong></p><p>Valores Permitidos: CUIT , DNI Ejemplo: DNI</p><p><strong>documento_nro</strong></p><p>Campo numérico, sin puntos ni guiones. Ejemplo: 30111222334</p> |
+| usertoken | string | Tus credenciales de acceso.                                                                                                                                                                                                                       |
+| apitoken  | string | Tus credenciales de acceso.                                                                                                                                                                                                                       |
+| apikey    | string | Tus credenciales de acceso                                                                                                                                                                                                                        |
 
 {% hint style="info" %}
 CUITS con alícuota cero:

@@ -12,28 +12,25 @@ El límite de request que dispones para realizar las consultas, es el mismo limi
 **IMPORTANTE**: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP, el servicio de CONSULTA DE CONSTANCIA DE INSCRIPCIÓN. Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 5](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
 {% endhint %}
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/clientes/afip-info" method="post" summary="Obtener datos de un CUIT" %}
-{% swagger-description %}
+## Obtener datos de un CUIT
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`clientes/afip-info`</mark>
 
-{% swagger-parameter in="body" name="cliente" type="string" required="false" %}
-Objeto de tipo cliente
-{% endswagger-parameter %}
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-response status="200" description="" %}
+| Name      | Type   | Description                 |
+| --------- | ------ | --------------------------- |
+| cliente   | string | Objeto de tipo cliente      |
+| apikey    | string | Tus credenciales de acceso  |
+| usertoken | string | Tus credenciales de acceso. |
+| apitoken  | string | Tus credenciales de acceso. |
+
+{% tabs %}
+{% tab title="200 " %}
 {% code title="JSON" %}
 ```
 {
@@ -64,8 +61,8 @@ Tus credenciales de acceso.
 ​
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ## Ejemplo del JSON a enviar <a href="#estructura-del-json-a-enviar" id="estructura-del-json-a-enviar"></a>
 

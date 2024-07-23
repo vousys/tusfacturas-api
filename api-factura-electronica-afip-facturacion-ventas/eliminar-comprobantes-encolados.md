@@ -13,7 +13,9 @@ Charset: **UTF-8**
 
 ## Eliminar uno o más comprobantes en cola de procesamiento
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/eliminar_encolado`&#x20;
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`eliminar_encolado`</mark>&#x20;
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
 #### Request Body
 

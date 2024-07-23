@@ -6,37 +6,23 @@ description: >-
 
 # Consultar numeración de comprobantes.
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/facturacion/numeracion" method="post" summary="Consultar numeración" %}
-{% swagger-description %}
+## Consultar numeración
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/numeracion`
 
-{% swagger-parameter in="body" name="comprobante" required="false" type="Object" %}
-**CAMPOS DEL OBJETO COMPROBANTE:**
+💡 El uso de éste método no contabiliza como un request en tu suscripción
 
-**tipo** Campo numérico según tabla de referencia de Tipos de comprobantes(\*\*\*).
+#### Request Body
 
-Ejemplo: FACTURA B
+| Name        | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| comprobante | Object | <p><strong>CAMPOS DEL OBJETO COMPROBANTE:</strong></p><p><strong>tipo</strong> Campo numérico según tabla de referencia de Tipos de comprobantes(***).</p><p>Ejemplo: FACTURA B</p><p><strong>operacion</strong> Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V<br><strong>punto_venta</strong> Campo numérico entero. Longitud máxima <strong>5</strong> digitos. Ejemplo: 3</p> |
+| apikey      | string | Tus credenciales de acceso                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| apitoken    | string | Tus credenciales de acceso.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| usertoken   | string | <p>Tus credenciales de acceso</p><p></p>                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 
-**operacion** Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V\
-**punto\_venta** Campo numérico entero. Longitud máxima **5** digitos. Ejemplo: 3
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso.
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-
-
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 En caso de detectar algún error, el campo error, se devuelve con una "S" y dentro de "errores" se devolverá una lista con cada uno de los mensajes.Importante: Los campos número y punto de venta, se retornan como numéricos
 
 {% code title="JSON" %}
@@ -54,8 +40,8 @@ En caso de detectar algún error, el campo error, se devuelve con una "S" y dent
 }
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Ejemplo del JSON a enviar, para consultar la numeración del próximo comprobante.
 

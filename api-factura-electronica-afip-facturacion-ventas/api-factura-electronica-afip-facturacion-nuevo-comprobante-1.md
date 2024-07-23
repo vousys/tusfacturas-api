@@ -74,7 +74,7 @@ Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a pr
 
 `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`nuevo_encola`</mark>
 
-<mark style="background-color:purple;">El uso de éste método contabiliza como 1 request en tu suscripción</mark>
+💡 El uso de éste método contabiliza como 1 request en tu suscripción
 {% endhint %}
 
 Charset: UTF-8

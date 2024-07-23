@@ -8,35 +8,32 @@ description: >-
 
 Tené en cuenta que las compras que cargas en nuestra plataforma no impactan en AFIP y son sólo para tu gestión interna.
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api/v2/facturacion/comprobante_eliminar" path="" method="post" summary="" %}
-{% swagger-description %}
-Ten en cuenta que solo podrás eliminar comprobantes de compra si no tienen pagos relacionados. 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`comprobante_eliminar`</mark>
 
-{% swagger-parameter in="body" name="comprobante" type="object" required="false" %}
-Según estructura que se detalla abajo
-{% endswagger-parameter %}
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus Credenciales de acceso
-{% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus Credenciales de acceso
-{% endswagger-parameter %}
+Ten en cuenta que solo podrás eliminar comprobantes de compra si no tienen pagos relacionados.&#x20;
 
-{% swagger-response status="200" description="" %}
+#### Request Body
+
+| Name        | Type   | Description                           |
+| ----------- | ------ | ------------------------------------- |
+| comprobante | object | Según estructura que se detalla abajo |
+| apikey      | string | Tus credenciales de acceso            |
+| apitoken    | string | Tus Credenciales de acceso            |
+| usertoken   | string | Tus Credenciales de acceso            |
+
+{% tabs %}
+{% tab title="200 " %}
 ```
 {"error":"N",
 "errores":[],
 "rta":"El comprobante se ha eliminado."}
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Ejemplo de JSON a enviar para eliminar un comprobante:
 

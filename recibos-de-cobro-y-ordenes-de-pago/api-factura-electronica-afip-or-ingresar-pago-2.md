@@ -13,7 +13,11 @@ Las órdenes de pago que informes, se usan solo para la gestión interna de nues
 
 ## Generar órdenes de pago&#x20;
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/caja/nuevo`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/caja/`<mark style="color:purple;">`nuevo`</mark>
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción
+
+
 
 #### Request Body
 

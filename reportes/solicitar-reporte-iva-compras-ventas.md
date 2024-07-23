@@ -2,36 +2,25 @@
 
 Mediante éste método, solicitarás el envío del reporte IVA compras-ventas a una casilla de e-mail determinada. Se permite 1 casilla solamente por solicitud.
 
-{% swagger baseUrl="https://www.tusfacturas.app/app/api" path="/v2/micuenta/iva_compras_ventas" method="post" summary="Solicitá el IVA Compras - Ventas" %}
-{% swagger-description %}
+## Solicitá el IVA Compras - Ventas
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`micuenta/iva_compras_ventas`</mark>
 
-{% swagger-parameter in="body" name="anio" type="number" required="false" %}
-El año del período que se consulta.
-{% endswagger-parameter %}
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
-{% swagger-parameter in="body" name="mes" type="number" required="false" %}
-El mes del período que se consulta.
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="email" type="string" required="false" %}
-La dirección de e-mail a donde se enviará el reporte
-{% endswagger-parameter %}
+| Name      | Type   | Description                                          |
+| --------- | ------ | ---------------------------------------------------- |
+| anio      | number | El año del período que se consulta.                  |
+| mes       | number | El mes del período que se consulta.                  |
+| email     | string | La dirección de e-mail a donde se enviará el reporte |
+| apikey    | string | Tus credenciales de acceso                           |
+| apitoken  | string | Tus credenciales de acceso                           |
+| usertoken | string | Tus credenciales de acceso                           |
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="La respuesta es error = S o error = N" %}
+{% tabs %}
+{% tab title="200 La respuesta es error = S o error = N" %}
 {% code title="JSON" %}
 ```
 {
@@ -40,8 +29,8 @@ Tus credenciales de acceso
 }
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 #### Ejemplo del JSON a enviar:
 

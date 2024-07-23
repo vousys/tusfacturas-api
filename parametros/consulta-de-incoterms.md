@@ -6,24 +6,22 @@ description: >-
 
 # Parámetros: Consulta de Incoterms
 
-{% swagger baseUrl=" https://www.tusfacturas.app/app/api/" path="v2/tablas_referencia/incoterms" method="post" summary="Consulta de Incoterms" %}
-{% swagger-description %}
+## Consulta de Incoterms
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`tablas_referencia/incoterms`</mark>
 
-{% swagger-parameter in="body" name="apikey" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
-{% swagger-parameter in="body" name="apitoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="usertoken" type="string" required="false" %}
-Tus credenciales de acceso
-{% endswagger-parameter %}
+| Name      | Type   | Description                |
+| --------- | ------ | -------------------------- |
+| apikey    | string | Tus credenciales de acceso |
+| apitoken  | string | Tus credenciales de acceso |
+| usertoken | string | Tus credenciales de acceso |
 
-{% swagger-response status="200" description="En caso de no existir errores, se devolverá la variable error con un valor " %}
+{% tabs %}
+{% tab title="200 En caso de no existir errores, se devolverá la variable error con un valor " %}
 ```
 {
     "error":     "N",
@@ -37,8 +35,8 @@ Tus credenciales de acceso
               ]
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### Ejemplo de JSON a enviar
 

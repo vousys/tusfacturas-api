@@ -8,7 +8,7 @@ description: >-
 
 ### 10 de julio de 2024
 
-Se crea la [API de compras](api-compras.md), que te permite cargar facturas de compra&#x20;
+Se crea la [API de compras](api-compras/), que te permite cargar facturas de compra&#x20;
 
 ### 14 de mayo de 2024
 

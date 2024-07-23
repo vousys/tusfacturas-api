@@ -8,7 +8,11 @@ description: >-
 
 ## Consulta de cuit país
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/tablas_referencia/cuit_pais`
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`tablas_referencia/cuit_pais`</mark>
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción
+
+
 
 #### Request Body
 

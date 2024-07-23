@@ -17,7 +17,9 @@ Charset: **UTF-8**
 
 ## Cambiar la fecha de uno o más comprobantes en cola de procesamiento
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/cambiar_fecha_encolado`&#x20;
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`cambiar_fecha_encolado`</mark>&#x20;
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
 #### Request Body
 

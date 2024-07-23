@@ -19,7 +19,9 @@ Charset: **UTF-8**
 
 ## Envía nuevamente a procesar, un comprobante que se encuentra en cola de procesamiento con error.&#x20;
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/reenviar_encolado`&#x20;
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`reenviar_encolado`</mark>&#x20;
+
+💡 El uso de éste método  contabiliza como un request en tu suscripción
 
 #### Request Body
 
