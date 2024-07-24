@@ -9,7 +9,7 @@
 * [Webhooks (notificaciones)](webhooks-notificaciones.md)
 * [API Facturación AFIP](api-factura-electronica-afip-facturacion-ventas/README.md)
   * [Facturación instantánea e individual](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
-  * [Facturación asincrónica e  individual (encolada)](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
+  * [Facturación asincrónica e  individual](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
   * [Facturación instantánea por Lotes](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-api-facturacion-por-lotes.md)
   * [Facturación asincrónica por Lotes (encolada)](api-factura-electronica-afip-facturacion-ventas/facturacion-asincronica-por-lotes-encolada.md)
   * [Notas de crédito / Notas de débito](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md)

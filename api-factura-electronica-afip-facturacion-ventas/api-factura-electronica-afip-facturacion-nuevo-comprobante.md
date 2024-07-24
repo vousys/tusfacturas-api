@@ -17,9 +17,7 @@ Integra fácilmente la facturación electrónica en tu software con la API de Tu
 
 ### ¿Cómo empiezo?
 
-Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
-
-Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT/Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
 ### **¿Qué es la API de facturación  individual e instantánea?**
 
@@ -28,7 +26,7 @@ Con nuestro servicio API de facturación electrónica AFIP instantánea, podrás
 Esta opción de facturación electrónica individual te brinda agilidad y eficiencia, permitiéndote integrar fácilmente la emisión de facturas, notas de crédito y otros comprobantes en tu flujo de trabajo actual, cumpliendo con todas las regulaciones fiscales vigentes.
 
 {% hint style="danger" %}
-Es crucial monitorear y manejar adecuadamente los errores, ya que los sistemas de la AFIP suelen presentar frecuentes interrupciones o caídas de servicio. Dependiendo del estado de los servicios de la AFIP, la generación de un comprobante fiscal a través de nuestra plataforma puede demorar hasta 1 minuto y 30 segundos. 😰.&#x20;
+Es crucial monitorear y manejar adecuadamente los errores, ya que los sistemas de la AFIP suelen presentar frecuentes interrupciones o caídas de servicio. Dependiendo del estado de los servicios de la AFIP, la generación de un comprobante fiscal  puede demorar hasta 1 minuto y 30 segundos. 😰.&#x20;
 
 Nuestro sistema de facturación electrónica cuenta con mecanismos robustos de manejo de errores que te notificarán oportunamente cualquier inconveniente con los servidores de la AFIP. De esta manera, podrás tomar las medidas necesarias y evitar demoras o interrupciones en tus procesos de facturación.
 

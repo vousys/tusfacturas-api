@@ -5,7 +5,7 @@ description: >-
   desde tu plataforma.
 ---
 
-# Facturación asincrónica e  individual (encolada)
+# Facturación asincrónica e  individual
 
 TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
 
@@ -17,9 +17,7 @@ Integra fácilmente la facturación electrónica en tu software con la API de Tu
 
 Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
-Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
-
-### **Facturación asincrónica e individual (encolada)**
+### **Facturación asincrónica e individual**&#x20;
 
 Al utilizar nuestro servicio API de facturación AFIP asincrónica e individual,  los comprobantes que emitas quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
 
@@ -32,7 +30,7 @@ Te sugerimos leer primero:&#x20;
 ### ¿Cómo funciona el modo asincrónico de facturación individual?
 
 1. Tu servidor envía el request a TusFacturasAPP y éste queda en cola de procesamiento.&#x20;
-2. A medida que TusFacturasAPP va procesando, se envía un webhook con la respuesta de ese procesamiento (puede ser de éxito o error)
+2. A medida que TusFacturasAPP va procesando de acuerdo al estado de los servicios de AFIP, se envía un webhook con la respuesta de ese procesamiento (puede ser de éxito o error)
 3. En caso que recibas una respuesta exitosa, deberás consultar el comprobante usando el método de [consulta avanzada por external\_reference](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados#como-realizar-una-consulta-avanzada-por-external-reference)
 
 {% hint style="info" %}

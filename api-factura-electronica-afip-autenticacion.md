@@ -9,12 +9,12 @@ description: >-
 {% hint style="info" %}
 **¿Cómo obtener mis credenciales de acceso?**
 
-Una vez creada tu cuenta y teniendo habilitado un plan API, accedé a nuestra plataforma web www.tusfacturas.app > menú > Mi espacio de trabajo > Cuits + PDV y desde ahi, podrás obtener las keys requeridos para poder operar en cada uno de los métodos que tenemos disponibles.
+Una vez creada tu cuenta y teniendo habilitado un plan API, accedé a nuestra plataforma web www.tusfacturas.app > menú > Mi espacio de trabajo > Cuits / PDV y desde ahi, podrás obtener las keys requeridos para poder operar en cada uno de los métodos que tenemos disponibles.
 {% endhint %}
 
 ### ¿Qué datos necesito para enviar un request?
 
-En todas las consultas que realices deberás enviar obligatoriamente, la siguiente información, relacionada a tu CUIT+PDV (Punto de venta).
+En todas las consultas que realices deberás enviar obligatoriamente, la siguiente información, relacionada a tu CUIT/PDV (Punto de venta).
 
 | `apitoken`  | <p>Valor alfanumerico<br><strong>Ejemplo: ad26b8fe8c8bf67c884e1405e26c03c85</strong></p>   |
 | ----------- | ------------------------------------------------------------------------------------------ |
