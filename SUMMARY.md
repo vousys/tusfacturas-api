@@ -4,7 +4,6 @@
 * [¿Cómo empiezo?](como-empiezo.md)
 * [Autenticación](api-factura-electronica-afip-autenticacion.md)
 * [SDK AFIP](api-factura-electronica-afip-plugins-y-sdks.md)
-* [Page](page.md)
 * [Estado de los servicios AFIP](api-factura-electronica-afip-estado-de-los-servicios-afip.md)
 * [¿Qué tipos de comprobante debo/puedo emitir?](que-tipos-de-comprobante-debo-puedo-emitir.md)
 * [Webhooks (notificaciones)](webhooks-notificaciones.md)

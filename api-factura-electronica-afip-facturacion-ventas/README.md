@@ -40,29 +40,17 @@ Características clave:
 * **Emisión individual o por lotes**: Selecciona la modalidad que mejor se adapte a tu volumen de facturación.
 * **Procesamiento instantáneo o asincrónico**: Obtene respuestas inmediatas o gestiona tu flujo de trabajo con colas de procesamiento. T**e recomendamos** utilizar siempre que sea posible, los **métodos de facturación asincrónicos**, ya que los instantáneos dependen de cómo funcionen los servicios de AFIP en el momento de la emisión.
 
-### Factura tus ventas con la API de Facturación  AFIP individual e instantánea:
 
-Utilizando éste método vos envías un solo request para ser procesado, y obtenes la respuesta al instante (sujeto al estado de los servicios AFIP. Conoce más sobre la [facturación electrónica individual e instantánea](api-factura-electronica-afip-facturacion-nuevo-comprobante.md), desde aquí
 
-### Factura tus ventas con la API de Facturación  AFIP individual asincrónica  <mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>En éste método envías un solo request para ser procesado y  obtenes la respuesta mediante un <a href="../webhooks-notificaciones.md">webhook</a> (no dependes del estado de los servicios de facturación de AFIP). Conoce más sobre la <a href="api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md">facturación electrónica individual  asincrónica</a></td><td><strong>Endpoint</strong>: </td><td>https://www.tusfacturas.app/app/api/v2/<mark style="color:purple;">facturacion/nuevo_encola</mark></td><td><a href="../.gitbook/assets/metodo-asinc-individual.webp">metodo-asinc-individual.webp</a></td><td><a href="api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md">api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md</a></td></tr><tr><td>Utilizando éste método envías un  request  y obtenes la respuesta al instante, sujeto al estado de los servicios AFIP. Conoce más sobre la <a href="api-factura-electronica-afip-facturacion-nuevo-comprobante.md">facturación electrónica individual e instantánea</a></td><td><p>Endpoint: </p><p>https://www.tusfacturas.app/app/api/v2/<mark style="color:purple;">facturacion/nuevo</mark></p></td><td></td><td><a href="../.gitbook/assets/metodo-instantaneo-individual.webp">metodo-instantaneo-individual.webp</a></td><td><a href="api-factura-electronica-afip-facturacion-nuevo-comprobante.md">api-factura-electronica-afip-facturacion-nuevo-comprobante.md</a></td></tr><tr><td>En éste método envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un <a href="../webhooks-notificaciones.md">webhook</a> . No dependes del estado de los servicios de facturación de AFIP. Conoce más sobre la <a href="facturacion-asincronica-por-lotes-encolada.md">facturación electrónica por lotes asincrónico</a></td><td><p>Endpoint: </p><p>https://www.tusfacturas.app/app/api/v2/<mark style="color:purple;">facturacion/lotes_encola</mark></p></td><td></td><td><a href="../.gitbook/assets/metodo-asinc-lote.webp">metodo-asinc-lote.webp</a></td><td><a href="facturacion-asincronica-por-lotes-encolada.md">facturacion-asincronica-por-lotes-encolada.md</a></td></tr><tr><td>Con éste método envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante . Sujeto al estado de los servicios AFIP. Conoce más sobre la <a href="api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes">facturación electrónica en lotes instantánea</a></td><td><p></p><p>Endpoint:</p></td><td>https://www.tusfacturas.app/app/api/v2/<mark style="color:purple;">facturacion/lotes</mark></td><td><a href="../.gitbook/assets/metodo-instantaneo-lote.webp">metodo-instantaneo-lote.webp</a></td><td></td></tr></tbody></table>
 
-En éste método envías un solo request para ser procesado y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md) (no dependes del estado de los servicios de facturación de AFIP). Conoce más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
-
-### Factura tus ventas con la API de Facturación  AFIP por **Lote** instantáneo
-
-Con éste método envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante  (sujeto al estado de los servicios AFIP). Conoce más sobre la [facturación electrónica en lotes instantánea, desde aquí.](api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes)
-
-### Factura tus ventas con la API de Facturación  AFIP por **Lote asincrónico **<mark style="color:purple;background-color:yellow;">**RECOMENDADO**</mark> &#x20;
-
-En éste método envías una cierta cantidad de requests para ser procesados y obtenés la respuesta mediante un [webhook](../webhooks-notificaciones.md)  (no dependes del estado de los servicios de facturación de AFIP). Conoce más sobre la [facturación electrónica por lotes asincrónico](facturacion-asincronica-por-lotes-encolada.md).
-
-### 📌 ¿Qué comprobantes puedo facturar con la API?
+### 📌 ¿Qué comprobantes podes facturar con la API para AFIP?
 
 Nuestro servicio API de [facturación electrónica AFIP ](https://www.tusfacturas.app/factura-electronica-afip.html)te permite enviar a facturar  comprobantes de tipo [A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[B](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md),[C](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md),[E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md), M y comprobantes de tipo "[Factura de crédito MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)",  ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.&#x20;
 
-&#x20;¿No sabes qué tipo de comprobante debes emitir? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
+&#x20;¿No sabes qué tipo de comprobante debes emitir? Consulta [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
 
-🧐 Tenés alguna duda del servicio? checkea las [FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los [canales de atención](https://www.tusfacturas.app/contacto.html) que tenemos disponibles.
+🧐 ¿Tenés alguna duda del servicio? checkea las [FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los [canales de atención](https://www.tusfacturas.app/contacto.html) que tenemos disponibles.
 
 
 
@@ -73,50 +61,6 @@ Llamamos "comprobante" a todo documento ya sea factura, nota de crédito, nota d
 {% hint style="info" %}
 <mark style="color:green;">`POST`</mark>` ``https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`metodo-elegido`**</mark>
 {% endhint %}
-
-
-
-### Endpoints de cada una de nuestras opciones API de facturación
-
-A continuación podrás ver un detalle de las URLs a donde debes enviar los request para cada opción de facturación:
-
-#### Modalidad Instantáneo:
-
-{% tabs %}
-{% tab title="Ventas instantáneas individuales" %}
-Utilizando éste método vos envías un solo request para ser procesado, y obtenes la respuesta al instante (sujeto al estado de los servicios AFIP. Conoce más sobre la [facturación electrónica individual e instantánea](api-factura-electronica-afip-facturacion-nuevo-comprobante.md), desde aquí
-
-Envias los request a:
-
-[https://www.tusfacturas.app/app/api/v2/facturacion/nuevo](https://www.tusfacturas.app/app/api/v2/facturacion/nuevo)
-{% endtab %}
-
-{% tab title="Ventas por lote instantáneo" %}
-Utilizando éste método vos envías un solo request para ser procesado, y obtenes la respuesta al instante (sujeto al estado de los servicios AFIP. Conoce más sobre la [facturación electrónica individual e instantánea](api-factura-electronica-afip-facturacion-nuevo-comprobante.md), desde aquí
-
-Envias los request a:
-
-`https://www.tusfacturas.app/app/api/v2/facturacion/lotes`
-{% endtab %}
-{% endtabs %}
-
-#### Modalidad asincrónica:
-
-{% tabs %}
-{% tab title="Ventas individuales asincrónicas" %}
-En éste método envías un solo request para ser procesado y  obtenes la respuesta mediante un [webhook](../webhooks-notificaciones.md) (no dependes del estado de los servicios de facturación de AFIP). Conoce más sobre la [facturación electrónica individual en cola, desde aquí ](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
-
-
-
-`https://www.tusfacturas.app/app/api/v2/facturacion/nuevo_encola`
-{% endtab %}
-
-{% tab title="Ventas por lote asincrónicas" %}
-`https://www.tusfacturas.app/app/api/v2/facturacion/lotes_encola`
-{% endtab %}
-{% endtabs %}
-
-
 
 ### Estructura del JSON  a enviar
 
@@ -134,7 +78,7 @@ Charset: UTF-8
 
 ### JSON de ejemplo
 
-A continuación te mostramos un ejemplo de JSON generico <mark style="background-color:yellow;">**completo con todas las posibles opciones**</mark>**,** para generar un comprobante.
+A continuación te mostramos un ejemplo de JSON generico <mark style="color:purple;">completo con todas las posibles opciones</mark>**,** para generar un comprobante.
 
 Recuerda que los bloques de información requeridos pueden variar según el tipo de comprobante que emitas. Consulta las páginas de ejemplos de cada tipo de comprobante para obtener información detallada.
 
@@ -310,16 +254,6 @@ _Información de ejemplo, solo para visualizar su estructura._&#x20;
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td> Ir a <a href="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md">Ejemplos factura A</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-a.webp">ejemplo-factura-a.webp</a></td><td><a href="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md">api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md</a></td></tr><tr><td>Ir a <a href="api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md">Ejemplos factura B</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-b (1).webp">ejemplo-factura-b (1).webp</a></td><td><a href="api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md">api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md</a></td></tr><tr><td>Ir a <a href="api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md">Ejemplos  factura C</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-c.webp">ejemplo-factura-c.webp</a></td><td><a href="api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md">api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md</a></td></tr><tr><td>Ir a <a href="api-factura-electronica-afip-factura-electronica-afip-exportacion.md">Ejemplos factura E</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-e.webp">ejemplo-factura-e.webp</a></td><td><a href="api-factura-electronica-afip-factura-electronica-afip-exportacion.md">api-factura-electronica-afip-factura-electronica-afip-exportacion.md</a></td></tr><tr><td>Ir a <a href="api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md">Ejemplos MiPyme</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-mipyme.webp">ejemplo-factura-mipyme.webp</a></td><td><a href="api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md">api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md</a></td></tr></tbody></table>
 
-
-
-| Tipo de comprobante                                                                                                                                   | Ejemplo                                                                                                                |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Factura A, Nota de débito A, Nota de crédito A                                                                                                        | Ver [ejemplo de comprobantes tipo "A"](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)   |
-| Factura B, Nota de débito B, Nota de crédito B                                                                                                        | Ver [ejemplo de comprobantes tipo "B"](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)    |
-| Factura C, Nota de débito C, Nota de crédito C                                                                                                        | Ver [ejemplo de comprobantes tipo "C"](api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)   |
-| Factura E, Nota de débito E, Nota de crédito E                                                                                                        | Ver [ejemplo de comprobantes tipo "E"](api-factura-electronica-afip-factura-electronica-afip-exportacion.md)           |
-| Factura de Crédito Electrónica MiPyme (FCE),  Nota de débito de Crédito Electrónica MiPyme (FCE), Nota de crédito de Crédito Electrónica MiPyme (FCE) | Ver [ejemplo de comprobantes tipo "MiPyme"](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md) |
-
 ### ¿Qué te retorna la llamada a la API?
 
 #### &#x20;:white\_check\_mark:  Cuando el request resultó exitoso:
@@ -374,7 +308,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 
 
 
-### Datos para tener en cuenta:
+#### Datos para tener en cuenta:
 
 {% hint style="info" %}
 **PDF**
