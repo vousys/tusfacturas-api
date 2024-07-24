@@ -56,7 +56,7 @@ Para emitir Comprobantes Electrónicos de Exportación ("E"), solo debes **agreg
 
 #### Ejemplo de JSON para FACTURA E
 
-```
+```json
 { 
 
   "comprobante": { 
@@ -89,6 +89,303 @@ Para emitir Comprobantes Electrónicos de Exportación ("E"), solo debes **agreg
       }
 }
 ```
+
+### ¿Cómo enviar una factura E según mi lenguaje de programación?
+
+Podes enviar las facturas E por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos.
+
+{% tabs %}
+{% tab title="CURL" %}
+```sh
+curl --request POST \
+  --url https://www.tusfacturas.app/app/api/v2/facturacion/nuevo \
+  --header 'Content-Type: application/json' \
+  --data '{
+   "usertoken":"xxxxx",
+   "apikey":"xxxx",
+   "apitoken":"xxxxx",
+   "cliente":{
+      "documento_tipo":"CUIT",
+      "documento_nro":"30712293841",
+      "razon_social":"VOUSYS TusFacturasAPP",
+      "email":"a@a.com",
+      "domicilio":"AV.LIBERTADOR 571",
+      "provincia":"2",
+      "envia_por_mail":"S",
+      "condicion_pago":"211",
+      "condicion_iva":"RI",
+      "rg5329":"N"
+   },
+   "comprobante":{
+      "fecha":"20/03/2018",
+      "vencimiento":"26/03/2023",
+      "tipo":"FACTURA E",
+      "operacion":"V",
+      "punto_venta":"0002",
+      "numero":"00000012",
+      "periodo_facturado_desde":"28/02/2018",
+      "periodo_facturado_hasta":"28/02/2018",
+      "rubro":"Alimentos",
+      "rubro_grupo_contable":"Alimentos",
+      "detalle":[
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"16098",
+               "precio_unitario_sin_iva":"100",
+               "alicuota":"-1",
+               "rg5329":"N"
+            },
+            "leyenda":""
+         },
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"p2",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"160398",
+               "precio_unitario_sin_iva":"10",
+               "alicuota":"21",
+               "rg5329":"N"
+            },
+            "leyenda":""
+         }
+      ],
+      "bonificacion":"0.00",
+      "leyenda_gral":" ",
+      "tributos":[
+         {
+            "tipo":6,
+            "regimen":2,
+            "base_imponible":100,
+            "alicuota":10,
+            "total":10
+         },
+         {
+            "tipo":7,
+            "regimen":5,
+            "base_imponible":200,
+            "alicuota":10,
+            "total":20
+         }
+      ],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":"142.1",
+		 "fex": {
+              "permisos_tiene"      : "S" ,
+              "fecha_pago"          : "12/10/2019",
+              "tipo_exportacion"    : "2",
+              "pais_comprobante_id" : "123",
+              "forma_pago_leyenda"  : "Payment via paypal 30 days ",
+              "cliente_pais_cuit"   : "50000000016",
+              "incoterms_tipo_id"   : "FOB",
+              "incoterms_nro"       : "AAAAGGGGGGGGGGGAAA ",
+              "permisos"    : [
+                                  {
+                                      "codigo_despacho"  :  "1234567890123456",
+                                       "pais_destino_id" :    "112"
+                                  },
+
+                                  {
+                                      "codigo_despacho"   :  "1234567890144456",
+                                       "pais_destino_id"  :    "123"
+                                  },
+                                   {
+                                      "codigo_despacho"   :    "4444567890123456",
+                                       "pais_destino_id"  :    "145"
+                                  }
+                              ]
+               
+      }
+		 
+   }
+}'
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://www.tusfacturas.app/app/api/v2/facturacion/nuevo",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\n   \"usertoken\":\"xxxxx\",\n   \"apikey\":\"xxxx\",\n   \"apitoken\":\"xxxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"CUIT\",\n      \"documento_nro\":\"30712293841\",\n      \"razon_social\":\"VOUSYS TusFacturasAPP\",\n      \"email\":\"a@a.com\",\n      \"domicilio\":\"AV.LIBERTADOR 571\",\n      \"provincia\":\"2\",\n      \"envia_por_mail\":\"S\",\n      \"condicion_pago\":\"211\",\n      \"condicion_iva\":\"RI\",\n      \"rg5329\":\"N\"\n   },\n   \"comprobante\":{\n      \"fecha\":\"20/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"tipo\":\"FACTURA E\",\n      \"operacion\":\"V\",\n      \"punto_venta\":\"0002\",\n      \"numero\":\"00000012\",\n      \"periodo_facturado_desde\":\"28/02/2018\",\n      \"periodo_facturado_hasta\":\"28/02/2018\",\n      \"rubro\":\"Alimentos\",\n      \"rubro_grupo_contable\":\"Alimentos\",\n      \"detalle\":[\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"EXENTO - AVENA INSTANTANEA x5 kg. al 21\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"16098\",\n               \"precio_unitario_sin_iva\":\"100\",\n               \"alicuota\":\"-1\",\n               \"rg5329\":\"N\"\n            },\n            \"leyenda\":\"\"\n         },\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"p2\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"160398\",\n               \"precio_unitario_sin_iva\":\"10\",\n               \"alicuota\":\"21\",\n               \"rg5329\":\"N\"\n            },\n            \"leyenda\":\"\"\n         }\n      ],\n      \"bonificacion\":\"0.00\",\n      \"leyenda_gral\":\" \",\n      \"tributos\":[\n         {\n            \"tipo\":6,\n            \"regimen\":2,\n            \"base_imponible\":100,\n            \"alicuota\":10,\n            \"total\":10\n         },\n         {\n            \"tipo\":7,\n            \"regimen\":5,\n            \"base_imponible\":200,\n            \"alicuota\":10,\n            \"total\":20\n         }\n      ],\n      \"impuestos_internos\":\"0\",\n      \"impuestos_internos_base\":\"0\",\n      \"impuestos_internos_alicuota\":\"0\",\n      \"total\":\"142.1\",\n\t\t \"fex\": {\n              \"permisos_tiene\"      : \"S\" ,\n              \"fecha_pago\"          : \"12/10/2019\",\n              \"tipo_exportacion\"    : \"2\",\n              \"pais_comprobante_id\" : \"123\",\n              \"forma_pago_leyenda\"  : \"Payment via paypal 30 days \",\n              \"cliente_pais_cuit\"   : \"50000000016\",\n              \"incoterms_tipo_id\"   : \"FOB\",\n              \"incoterms_nro\"       : \"AAAAGGGGGGGGGGGAAA \",\n              \"permisos\"    : [\n                                  {\n                                      \"codigo_despacho\"  :  \"1234567890123456\",\n                                       \"pais_destino_id\" :    \"112\"\n                                  },\n\n                                  {\n                                      \"codigo_despacho\"   :  \"1234567890144456\",\n                                       \"pais_destino_id\"  :    \"123\"\n                                  },\n                                   {\n                                      \"codigo_despacho\"   :    \"4444567890123456\",\n                                       \"pais_destino_id\"  :    \"145\"\n                                  }\n                              ]\n               \n      }\n\t\t \n   }\n}",
+  CURLOPT_HTTPHEADER => [
+    "Content-Type: application/json"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import http.client
+
+conn = http.client.HTTPSConnection("www.tusfacturas.app")
+
+payload = "{\n   \"usertoken\":\"xxxxx\",\n   \"apikey\":\"xxxx\",\n   \"apitoken\":\"xxxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"CUIT\",\n      \"documento_nro\":\"30712293841\",\n      \"razon_social\":\"VOUSYS TusFacturasAPP\",\n      \"email\":\"a@a.com\",\n      \"domicilio\":\"AV.LIBERTADOR 571\",\n      \"provincia\":\"2\",\n      \"envia_por_mail\":\"S\",\n      \"condicion_pago\":\"211\",\n      \"condicion_iva\":\"RI\",\n      \"rg5329\":\"N\"\n   },\n   \"comprobante\":{\n      \"fecha\":\"20/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"tipo\":\"FACTURA E\",\n      \"operacion\":\"V\",\n      \"punto_venta\":\"0002\",\n      \"numero\":\"00000012\",\n      \"periodo_facturado_desde\":\"28/02/2018\",\n      \"periodo_facturado_hasta\":\"28/02/2018\",\n      \"rubro\":\"Alimentos\",\n      \"rubro_grupo_contable\":\"Alimentos\",\n      \"detalle\":[\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"EXENTO - AVENA INSTANTANEA x5 kg. al 21\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"16098\",\n               \"precio_unitario_sin_iva\":\"100\",\n               \"alicuota\":\"-1\",\n               \"rg5329\":\"N\"\n            },\n            \"leyenda\":\"\"\n         },\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"p2\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"160398\",\n               \"precio_unitario_sin_iva\":\"10\",\n               \"alicuota\":\"21\",\n               \"rg5329\":\"N\"\n            },\n            \"leyenda\":\"\"\n         }\n      ],\n      \"bonificacion\":\"0.00\",\n      \"leyenda_gral\":\" \",\n      \"tributos\":[\n         {\n            \"tipo\":6,\n            \"regimen\":2,\n            \"base_imponible\":100,\n            \"alicuota\":10,\n            \"total\":10\n         },\n         {\n            \"tipo\":7,\n            \"regimen\":5,\n            \"base_imponible\":200,\n            \"alicuota\":10,\n            \"total\":20\n         }\n      ],\n      \"impuestos_internos\":\"0\",\n      \"impuestos_internos_base\":\"0\",\n      \"impuestos_internos_alicuota\":\"0\",\n      \"total\":\"142.1\",\n\t\t \"fex\": {\n              \"permisos_tiene\"      : \"S\" ,\n              \"fecha_pago\"          : \"12/10/2019\",\n              \"tipo_exportacion\"    : \"2\",\n              \"pais_comprobante_id\" : \"123\",\n              \"forma_pago_leyenda\"  : \"Payment via paypal 30 days \",\n              \"cliente_pais_cuit\"   : \"50000000016\",\n              \"incoterms_tipo_id\"   : \"FOB\",\n              \"incoterms_nro\"       : \"AAAAGGGGGGGGGGGAAA \",\n              \"permisos\"    : [\n                                  {\n                                      \"codigo_despacho\"  :  \"1234567890123456\",\n                                       \"pais_destino_id\" :    \"112\"\n                                  },\n\n                                  {\n                                      \"codigo_despacho\"   :  \"1234567890144456\",\n                                       \"pais_destino_id\"  :    \"123\"\n                                  },\n                                   {\n                                      \"codigo_despacho\"   :    \"4444567890123456\",\n                                       \"pais_destino_id\"  :    \"145\"\n                                  }\n                              ]\n               \n      }\n\t\t \n   }\n}"
+
+headers = {
+    'Content-Type': "application/json"
+    }
+
+conn.request("POST", "/app/api/v2/facturacion/nuevo", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+```javascript
+var axios = require("axios").default;
+
+var options = {
+  method: 'POST',
+  url: 'https://www.tusfacturas.app/app/api/v2/facturacion/nuevo',
+  headers: {'Content-Type': 'application/json',
+  data: {
+    usertoken: 'xxxxx',
+    apikey: 'xxxx',
+    apitoken: 'xxxxx',
+    cliente: {
+      documento_tipo: 'CUIT',
+      documento_nro: '30712293841',
+      razon_social: 'VOUSYS TusFacturasAPP',
+      email: 'a@a.com',
+      domicilio: 'AV.LIBERTADOR 571',
+      provincia: '2',
+      envia_por_mail: 'S',
+      condicion_pago: '211',
+      condicion_iva: 'RI',
+      rg5329: 'N'
+    },
+    comprobante: {
+      fecha: '20/03/2018',
+      vencimiento: '26/03/2023',
+      tipo: 'FACTURA E',
+      operacion: 'V',
+      punto_venta: '0002',
+      numero: '00000012',
+      periodo_facturado_desde: '28/02/2018',
+      periodo_facturado_hasta: '28/02/2018',
+      rubro: 'Alimentos',
+      rubro_grupo_contable: 'Alimentos',
+      detalle: [
+        {
+          cantidad: '1',
+          producto: {
+            descripcion: 'EXENTO - AVENA INSTANTANEA x5 kg. al 21',
+            unidad_bulto: '1',
+            lista_precios: 'Lista de precios API 3',
+            codigo: '16098',
+            precio_unitario_sin_iva: '100',
+            alicuota: '-1',
+            rg5329: 'N'
+          },
+          leyenda: ''
+        },
+        {
+          cantidad: '1',
+          producto: {
+            descripcion: 'p2',
+            unidad_bulto: '1',
+            lista_precios: 'Lista de precios API 3',
+            codigo: '160398',
+            precio_unitario_sin_iva: '10',
+            alicuota: '21',
+            rg5329: 'N'
+          },
+          leyenda: ''
+        }
+      ],
+      bonificacion: '0.00',
+      leyenda_gral: ' ',
+      tributos: [
+        {tipo: 6, regimen: 2, base_imponible: 100, alicuota: 10, total: 10},
+        {tipo: 7, regimen: 5, base_imponible: 200, alicuota: 10, total: 20}
+      ],
+      impuestos_internos: '0',
+      impuestos_internos_base: '0',
+      impuestos_internos_alicuota: '0',
+      total: '142.1',
+      fex: {
+        permisos_tiene: 'S',
+        fecha_pago: '12/10/2019',
+        tipo_exportacion: '2',
+        pais_comprobante_id: '123',
+        forma_pago_leyenda: 'Payment via paypal 30 days ',
+        cliente_pais_cuit: '50000000016',
+        incoterms_tipo_id: 'FOB',
+        incoterms_nro: 'AAAAGGGGGGGGGGGAAA ',
+        permisos: [
+          {codigo_despacho: '1234567890123456', pais_destino_id: '112'},
+          {codigo_despacho: '1234567890144456', pais_destino_id: '123'},
+          {codigo_despacho: '4444567890123456', pais_destino_id: '145'}
+        ]
+      }
+    }
+  }
+};
+
+axios.request(options).then(function (response) {
+  console.log(response.data);
+}).catch(function (error) {
+  console.error(error);
+});
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://www.tusfacturas.app/app/api/v2/facturacion/nuevo")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Post.new(url)
+request["Content-Type"] = 'application/json'
+request.body = "{\n   \"usertoken\":\"xxxxx\",\n   \"apikey\":\"xxxx\",\n   \"apitoken\":\"xxxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"CUIT\",\n      \"documento_nro\":\"30712293841\",\n      \"razon_social\":\"VOUSYS TusFacturasAPP\",\n      \"email\":\"a@a.com\",\n      \"domicilio\":\"AV.LIBERTADOR 571\",\n      \"provincia\":\"2\",\n      \"envia_por_mail\":\"S\",\n      \"condicion_pago\":\"211\",\n      \"condicion_iva\":\"RI\",\n      \"rg5329\":\"N\"\n   },\n   \"comprobante\":{\n      \"fecha\":\"20/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"tipo\":\"FACTURA E\",\n      \"operacion\":\"V\",\n      \"punto_venta\":\"0002\",\n      \"numero\":\"00000012\",\n      \"periodo_facturado_desde\":\"28/02/2018\",\n      \"periodo_facturado_hasta\":\"28/02/2018\",\n      \"rubro\":\"Alimentos\",\n      \"rubro_grupo_contable\":\"Alimentos\",\n      \"detalle\":[\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"EXENTO - AVENA INSTANTANEA x5 kg. al 21\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"16098\",\n               \"precio_unitario_sin_iva\":\"100\",\n               \"alicuota\":\"-1\",\n               \"rg5329\":\"N\"\n            },\n            \"leyenda\":\"\"\n         },\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"p2\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"160398\",\n               \"precio_unitario_sin_iva\":\"10\",\n               \"alicuota\":\"21\",\n               \"rg5329\":\"N\"\n            },\n            \"leyenda\":\"\"\n         }\n      ],\n      \"bonificacion\":\"0.00\",\n      \"leyenda_gral\":\" \",\n      \"tributos\":[\n         {\n            \"tipo\":6,\n            \"regimen\":2,\n            \"base_imponible\":100,\n            \"alicuota\":10,\n            \"total\":10\n         },\n         {\n            \"tipo\":7,\n            \"regimen\":5,\n            \"base_imponible\":200,\n            \"alicuota\":10,\n            \"total\":20\n         }\n      ],\n      \"impuestos_internos\":\"0\",\n      \"impuestos_internos_base\":\"0\",\n      \"impuestos_internos_alicuota\":\"0\",\n      \"total\":\"142.1\",\n\t\t \"fex\": {\n              \"permisos_tiene\"      : \"S\" ,\n              \"fecha_pago\"          : \"12/10/2019\",\n              \"tipo_exportacion\"    : \"2\",\n              \"pais_comprobante_id\" : \"123\",\n              \"forma_pago_leyenda\"  : \"Payment via paypal 30 days \",\n              \"cliente_pais_cuit\"   : \"50000000016\",\n              \"incoterms_tipo_id\"   : \"FOB\",\n              \"incoterms_nro\"       : \"AAAAGGGGGGGGGGGAAA \",\n              \"permisos\"    : [\n                                  {\n                                      \"codigo_despacho\"  :  \"1234567890123456\",\n                                       \"pais_destino_id\" :    \"112\"\n                                  },\n\n                                  {\n                                      \"codigo_despacho\"   :  \"1234567890144456\",\n                                       \"pais_destino_id\"  :    \"123\"\n                                  },\n                                   {\n                                      \"codigo_despacho\"   :    \"4444567890123456\",\n                                       \"pais_destino_id\"  :    \"145\"\n                                  }\n                              ]\n               \n      }\n\t\t \n   }\n}"
+
+response = http.request(request)
+puts response.read_body
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 ### Información de cada uno de los campos :
 

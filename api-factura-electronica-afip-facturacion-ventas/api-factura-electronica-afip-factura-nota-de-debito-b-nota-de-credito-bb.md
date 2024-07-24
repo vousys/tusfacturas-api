@@ -6,33 +6,18 @@ description: >-
 
 # Ejemplos de comprobantes tipo "B"
 
-Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito B / Factura de crédito MiPyme B / Notas de crédito MiPyme B / Nota de débito MiPyme B), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto" y se emitan a un consumidor final o un exento en IVA. No sabes en qué momento emitir comprobantes de tipo **B**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
+Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito B / Factura de crédito MiPyme B / Notas de crédito MiPyme B / Nota de débito MiPyme B), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto" y se emitan a un consumidor final o un exento en IVA.&#x20;
 
-### Datos a tener en cuenta:
-
-{% hint style="info" %}
-* En los comprobantes B el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
-* ¿No sabes en que momento emitir comprobantes de tipo B? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
-* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
-
-&#x20;               Nro de documento = "0"
-
-&#x20;              Tipo de documento = "OTRO"
-
-&#x20;              En nombre, lo que tu contador/a te recomiende.
-
-Tené en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos. Consulta diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
-
-
-{% endhint %}
+No sabes en qué momento emitir comprobantes de tipo **B**? Consulta [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
 
 ### Ejemplo de Factura B
 
 A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
 
-```json
-{
-   "apitoken":"xxxx",
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>   "apitoken":"xxxx",
+   "usertoken":"xxxx",
+   "apikey":"xxxx",
    "cliente":{
       "documento_tipo":"DNI",
       "condicion_iva":"CF",
@@ -45,10 +30,8 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
       "envia_por_mail":"N",
        "rg5329": "N"
    },
-   "apikey":"xxxx",
    "comprobante":{
       "rubro":"Sevicios web",
-      "percepciones_iva":0,
       "tipo":"FACTURA B",
       "numero":2134,
       "bonificacion":0,
@@ -79,16 +62,202 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
       "cotizacion":1,
       "moneda":"PES",
       "punto_venta":3,
-      "tributos":[],
-      "impuestos_internos":"0",
-      "impuestos_internos_base":"0",
-      "impuestos_internos_alicuota":"0"
-   },
-   "usertoken":"xxxx"
-}n
-```
+      "tributos":[]
+   }
+}
+</code></pre>
 
-## Ejemplo de: NOTA DE CRÉDITO B  - detallando los comprobantes que anulas.
+### ¿Cómo enviar una factura B según mi lenguaje de programación?
+
+Podes enviar las facturas B por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos.
+
+{% tabs %}
+{% tab title="CURL" %}
+```sh
+curl --request POST
+--url https://www.tusfacturas.app/app/api/v2/facturacion/nuevo
+--header 'Content-Type: application/json'
+--data '{ "apitoken":"xxxx", "cliente":{ "documento_tipo":"DNI", "condicion_iva":"CF", "domicilio":"Av Sta Fe 23132", "condicion_pago":"201", "documento_nro":"111132333", "razon_social":"Juan Pedro KJL", "provincia":"2", "email":"email@dominio.com", "envia_por_mail":"N", "rg5329": "N" }, "apikey":"xxxx", "comprobante":{ "rubro":"Sevicios web", "percepciones_iva":0, "tipo":"FACTURA B", "numero":2134, "bonificacion":0, "operacion":"V", "detalle":[ { "cantidad":1, "afecta_stock":"S", "actualiza_precio":"S", "bonificacion_porcentaje":0, "producto":{ "descripcion":"Hosting pagina web ", "codigo":37, "lista_precios":"standard", "leyenda":"", "unidad_bulto":1, "alicuota":21, "actualiza_precio":"S", "rg5329": "N", "precio_unitario_sin_iva":114.88 } } ], "fecha":"28/03/2018", "vencimiento":"26/03/2023", "rubro_grupo_contable":"Sevicios", "total":139.0, "cotizacion":1, "moneda":"PES", "punto_venta":3, "tributos":[] }, "usertoken":"xxxx" }'
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://www.tusfacturas.app/app/api/v2/facturacion/nuevo",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\n   \"apitoken\":\"xxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"DNI\",\n      \"condicion_iva\":\"CF\",\n      \"domicilio\":\"Av Sta Fe 23132\",\n      \"condicion_pago\":\"201\",\n      \"documento_nro\":\"111132333\",\n      \"razon_social\":\"Juan Pedro KJL\",\n      \"provincia\":\"2\",\n      \"email\":\"email@dominio.com\",\n      \"envia_por_mail\":\"N\",\n       \"rg5329\": \"N\"\n   },\n   \"apikey\":\"xxxx\",\n   \"comprobante\":{\n      \"rubro\":\"Sevicios web\",\n      \"percepciones_iva\":0,\n      \"tipo\":\"FACTURA B\",\n      \"numero\":2134,\n      \"bonificacion\":0,\n      \"operacion\":\"V\",\n      \"detalle\":[\n         {\n            \"cantidad\":1,\n            \"afecta_stock\":\"S\",\n            \"actualiza_precio\":\"S\",\n            \"bonificacion_porcentaje\":0,\n            \"producto\":{\n               \"descripcion\":\"Hosting pagina web \",\n               \"codigo\":37,\n               \"lista_precios\":\"standard\",\n               \"leyenda\":\"\",\n               \"unidad_bulto\":1,\n               \"alicuota\":21,\n               \"actualiza_precio\":\"S\",\n               \"rg5329\": \"N\",\n               \"precio_unitario_sin_iva\":114.88\n            }\n         }\n      ],\n      \"fecha\":\"28/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"rubro_grupo_contable\":\"Sevicios\",\n      \"total\":139.0,\n      \"cotizacion\":1,\n      \"moneda\":\"PES\",\n      \"punto_venta\":3,\n      \"tributos\":[]\n   },\n   \"usertoken\":\"xxxx\"\n}",
+  CURLOPT_HTTPHEADER => [
+    "Content-Type: application/json"
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import http.client
+
+conn = http.client.HTTPSConnection("www.tusfacturas.app")
+
+payload = "{\n   \"apitoken\":\"xxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"DNI\",\n      \"condicion_iva\":\"CF\",\n      \"domicilio\":\"Av Sta Fe 23132\",\n      \"condicion_pago\":\"201\",\n      \"documento_nro\":\"111132333\",\n      \"razon_social\":\"Juan Pedro KJL\",\n      \"provincia\":\"2\",\n      \"email\":\"email@dominio.com\",\n      \"envia_por_mail\":\"N\",\n       \"rg5329\": \"N\"\n   },\n   \"apikey\":\"xxxx\",\n   \"comprobante\":{\n      \"rubro\":\"Sevicios web\",\n      \"percepciones_iva\":0,\n      \"tipo\":\"FACTURA B\",\n      \"numero\":2134,\n      \"bonificacion\":0,\n      \"operacion\":\"V\",\n      \"detalle\":[\n         {\n            \"cantidad\":1,\n            \"afecta_stock\":\"S\",\n            \"actualiza_precio\":\"S\",\n            \"bonificacion_porcentaje\":0,\n            \"producto\":{\n               \"descripcion\":\"Hosting pagina web \",\n               \"codigo\":37,\n               \"lista_precios\":\"standard\",\n               \"leyenda\":\"\",\n               \"unidad_bulto\":1,\n               \"alicuota\":21,\n               \"actualiza_precio\":\"S\",\n               \"rg5329\": \"N\",\n               \"precio_unitario_sin_iva\":114.88\n            }\n         }\n      ],\n      \"fecha\":\"28/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"rubro_grupo_contable\":\"Sevicios\",\n      \"total\":139.0,\n      \"cotizacion\":1,\n      \"moneda\":\"PES\",\n      \"punto_venta\":3,\n      \"tributos\":[]\n   },\n   \"usertoken\":\"xxxx\"\n}"
+
+headers = {
+    'Content-Type': "application/json"
+    }
+
+conn.request("POST", "/app/api/v2/facturacion/nuevo", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+```javascript
+const http = require("https");
+
+const options = {
+  "method": "POST",
+  "hostname": "www.tusfacturas.app",
+  "port": null,
+  "path": "/app/api/v2/facturacion/nuevo",
+  "headers": {
+    "Content-Type": "application/json",
+    "Content-Length": "1337"
+  }
+};
+
+const req = http.request(options, function (res) {
+  const chunks = [];
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", function () {
+    const body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+});
+
+req.write(JSON.stringify({
+  apitoken: 'xxxx',
+  cliente: {
+    documento_tipo: 'DNI',
+    condicion_iva: 'CF',
+    domicilio: 'Av Sta Fe 23132',
+    condicion_pago: '201',
+    documento_nro: '111132333',
+    razon_social: 'Juan Pedro KJL',
+    provincia: '2',
+    email: 'email@dominio.com',
+    envia_por_mail: 'N',
+    rg5329: 'N'
+  },
+  apikey: 'xxxx',
+  comprobante: {
+    rubro: 'Sevicios web',
+    percepciones_iva: 0,
+    tipo: 'FACTURA B',
+    numero: 2134,
+    bonificacion: 0,
+    operacion: 'V',
+    detalle: [
+      {
+        cantidad: 1,
+        afecta_stock: 'S',
+        actualiza_precio: 'S',
+        bonificacion_porcentaje: 0,
+        producto: {
+          descripcion: 'Hosting pagina web ',
+          codigo: 37,
+          lista_precios: 'standard',
+          leyenda: '',
+          unidad_bulto: 1,
+          alicuota: 21,
+          actualiza_precio: 'S',
+          rg5329: 'N',
+          precio_unitario_sin_iva: 114.88
+        }
+      }
+    ],
+    fecha: '28/03/2018',
+    vencimiento: '26/03/2023',
+    rubro_grupo_contable: 'Sevicios',
+    total: 139,
+    cotizacion: 1,
+    moneda: 'PES',
+    punto_venta: 3,
+    tributos: []
+  },
+  usertoken: 'xxxx'
+}));
+req.end();
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://www.tusfacturas.app/app/api/v2/facturacion/nuevo")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Post.new(url)
+request["Content-Type"] = 'application/json'
+request.body = "{\n   \"apitoken\":\"xxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"DNI\",\n      \"condicion_iva\":\"CF\",\n      \"domicilio\":\"Av Sta Fe 23132\",\n      \"condicion_pago\":\"201\",\n      \"documento_nro\":\"111132333\",\n      \"razon_social\":\"Juan Pedro KJL\",\n      \"provincia\":\"2\",\n      \"email\":\"email@dominio.com\",\n      \"envia_por_mail\":\"N\",\n       \"rg5329\": \"N\"\n   },\n   \"apikey\":\"xxxx\",\n   \"comprobante\":{\n      \"rubro\":\"Sevicios web\",\n      \"percepciones_iva\":0,\n      \"tipo\":\"FACTURA B\",\n      \"numero\":2134,\n      \"bonificacion\":0,\n      \"operacion\":\"V\",\n      \"detalle\":[\n         {\n            \"cantidad\":1,\n            \"afecta_stock\":\"S\",\n            \"actualiza_precio\":\"S\",\n            \"bonificacion_porcentaje\":0,\n            \"producto\":{\n               \"descripcion\":\"Hosting pagina web \",\n               \"codigo\":37,\n               \"lista_precios\":\"standard\",\n               \"leyenda\":\"\",\n               \"unidad_bulto\":1,\n               \"alicuota\":21,\n               \"actualiza_precio\":\"S\",\n               \"rg5329\": \"N\",\n               \"precio_unitario_sin_iva\":114.88\n            }\n         }\n      ],\n      \"fecha\":\"28/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"rubro_grupo_contable\":\"Sevicios\",\n      \"total\":139.0,\n      \"cotizacion\":1,\n      \"moneda\":\"PES\",\n      \"punto_venta\":3,\n      \"tributos\":[]\n   },\n   \"usertoken\":\"xxxx\"\n}"
+
+response = http.request(request)
+puts response.read_body
+```
+{% endtab %}
+{% endtabs %}
+
+#### Datos a tener en cuenta:
+
+{% hint style="info" %}
+* En los comprobantes B el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
+* ¿No sabes en qué momento emitir comprobantes de tipo B? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
+* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
+
+&#x20;               Nro de documento = "0"
+
+&#x20;              Tipo de documento = "OTRO"
+
+&#x20;              En nombre, lo que tu contador/a te recomiende.
+
+Tene en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos. Consulta diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+{% endhint %}
+
+### Ejemplo de: NOTA DE CRÉDITO B  - detallando los comprobantes que anulas.
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que detalla los comprobantes asociados.
 
@@ -169,9 +338,9 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí](ap
 }
 ```
 
-## Ejemplo de: NOTA DE DÉBITO B - asociando períodos
+### Ejemplo de: NOTA DE DÉBITO B - asociando períodos
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO B, que no detalla los comprobantes asociados, sino que indíca su período.
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO B, que no detalla los comprobantes asociados, sino qué indica su período.
 
 Podés consultar la documentación con referencia a cada campo [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
 
@@ -247,29 +416,6 @@ Podés consultar la documentación con referencia a cada campo [desde aquí](api
     } 
   } 
 }
-
-```
-
-### Ejemplo de llamada en PHP
-
-```php
-// ENVIO REQUEST
-$url ="https://www.tusfacturas.app/app/api/v2/facturacion/nuevo" ;
-$ch = curl_init( $url );
-curl_setopt( $ch, CURLOPT_POSTFIELDS, json_encode ($facturacion_json) );
-curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-$json_rta_curl =  json_decode(  curl_exec($ch) ) ;  
-curl_close($ch);
-
-// MUESTRO RESPUESTA
-echo "<p>MENSAJE:". $json_rta_curl->rta."</p>"; 
-echo "<p>Vencimiento del pago:".$json_rta_curl->vencimiento_pago."</p>"; 
-echo "<p>CAE:".$json_rta_curl->cae."</p>"; 
-echo "<p>Vencimiento del cae:".$json_rta_curl->vencimiento_cae."</p>"; 
-echo "<p>Comprobante pdf url:".$json_rta_curl->comprobante_pdf_url."</p>"; 
-echo "<p>error:". $json_rta_curl->error ."</p>"; 
-echo "<p>errores:". implode("," , $json_rta_curl->errores) ."</p>"; 
 
 ```
 

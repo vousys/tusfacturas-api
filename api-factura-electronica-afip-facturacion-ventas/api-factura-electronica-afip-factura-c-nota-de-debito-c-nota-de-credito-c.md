@@ -10,24 +10,6 @@ Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C
 
 No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
 
-### Datos a tener en cuenta:
-
-{% hint style="info" %}
-* Los comprobantes C, no llevan IVA.
-* No sabes en qué momento emitir comprobantes de tipo C? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
-* Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
-
-&#x20;               Nro de documento = "0"
-
-&#x20;              Tipo de documento = "OTRO"
-
-&#x20;              En nombre, lo que tu contador/a te recomiende.
-
-Tené en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos.Consultá diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
-
-
-{% endhint %}
-
 ### Ejemplo de Factura "C"
 
 A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
@@ -91,6 +73,243 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes
    }
 }
 ```
+
+### ¿Cómo enviar una factura C según mi lenguaje de programación?
+
+Podes enviar las facturas C por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos.
+
+{% tabs %}
+{% tab title="CURL" %}
+```sh
+curl --request POST \
+  --url https://www.tusfacturas.app/app/api/v2/facturacion/nuevo \
+  --header 'Content-Type: application/json' \ 
+  --data '{
+   "usertoken":"xxxxx",
+   "apikey":"xxxx",
+   "apitoken":"xxxxx",
+   "cliente":{
+      "documento_tipo":"CUIT",
+      "documento_nro":"30712293841",
+      "razon_social":"VOUSYS TusFacturasAPP",
+      "email":"a@a.com",
+      "domicilio":"AV.LIBERTADOR 571",
+      "provincia":"2",
+      "envia_por_mail":"S",
+      "condicion_pago":"211",
+      "condicion_iva":"RI"
+   },
+   "comprobante":{
+      "fecha":"20/03/2018",
+      "vencimiento":"26/03/2023",
+      "tipo":"FACTURA C",
+      "operacion":"V",
+      "punto_venta":"0002",
+      "numero":"00000012",
+      "periodo_facturado_desde":"28/02/2018",
+      "periodo_facturado_hasta":"28/02/2018",
+      "rubro":"Alimentos",
+      "rubro_grupo_contable":"Alimentos",
+      "detalle":[
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"16098",
+               "precio_unitario_sin_iva":"100",
+               "alicuota":"0"
+            },
+            "leyenda":""
+         },
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"p2",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"160398",
+               "precio_unitario_sin_iva":"10",
+               "alicuota":"0"
+            },
+            "leyenda":""
+         }
+      ],
+      "bonificacion":"0.00",
+      "leyenda_gral":" ",
+      "total":"110" 
+   }
+}'
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+  CURLOPT_URL => "https://www.tusfacturas.app/app/api/v2/facturacion/nuevo",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "POST",
+  CURLOPT_POSTFIELDS => "{\n   \"usertoken\":\"xxxxx\",\n   \"apikey\":\"xxxx\",\n   \"apitoken\":\"xxxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"CUIT\",\n      \"documento_nro\":\"30712293841\",\n      \"razon_social\":\"VOUSYS TusFacturasAPP\",\n      \"email\":\"a@a.com\",\n      \"domicilio\":\"AV.LIBERTADOR 571\",\n      \"provincia\":\"2\",\n      \"envia_por_mail\":\"S\",\n      \"condicion_pago\":\"211\",\n      \"condicion_iva\":\"RI\"\n   },\n   \"comprobante\":{\n      \"fecha\":\"20/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"tipo\":\"FACTURA C\",\n      \"operacion\":\"V\",\n      \"punto_venta\":\"0002\",\n      \"numero\":\"00000012\",\n      \"periodo_facturado_desde\":\"28/02/2018\",\n      \"periodo_facturado_hasta\":\"28/02/2018\",\n      \"rubro\":\"Alimentos\",\n      \"rubro_grupo_contable\":\"Alimentos\",\n      \"detalle\":[\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"EXENTO - AVENA INSTANTANEA x5 kg. al 21\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"16098\",\n               \"precio_unitario_sin_iva\":\"100\",\n               \"alicuota\":\"0\"\n            },\n            \"leyenda\":\"\"\n         },\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"p2\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"160398\",\n               \"precio_unitario_sin_iva\":\"10\",\n               \"alicuota\":\"0\"\n            },\n            \"leyenda\":\"\"\n         }\n      ],\n      \"bonificacion\":\"0.00\",\n      \"leyenda_gral\":\" \",\n      \"total\":\"110\" \n   }\n}",
+  CURLOPT_HTTPHEADER => [
+    "Content-Type: application/json" 
+  ],
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo $response;
+}
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import http.client
+
+conn = http.client.HTTPSConnection("www.tusfacturas.app")
+
+payload = "{\n   \"usertoken\":\"xxxxx\",\n   \"apikey\":\"xxxx\",\n   \"apitoken\":\"xxxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"CUIT\",\n      \"documento_nro\":\"30712293841\",\n      \"razon_social\":\"VOUSYS TusFacturasAPP\",\n      \"email\":\"a@a.com\",\n      \"domicilio\":\"AV.LIBERTADOR 571\",\n      \"provincia\":\"2\",\n      \"envia_por_mail\":\"S\",\n      \"condicion_pago\":\"211\",\n      \"condicion_iva\":\"RI\"\n   },\n   \"comprobante\":{\n      \"fecha\":\"20/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"tipo\":\"FACTURA C\",\n      \"operacion\":\"V\",\n      \"punto_venta\":\"0002\",\n      \"numero\":\"00000012\",\n      \"periodo_facturado_desde\":\"28/02/2018\",\n      \"periodo_facturado_hasta\":\"28/02/2018\",\n      \"rubro\":\"Alimentos\",\n      \"rubro_grupo_contable\":\"Alimentos\",\n      \"detalle\":[\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"EXENTO - AVENA INSTANTANEA x5 kg. al 21\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"16098\",\n               \"precio_unitario_sin_iva\":\"100\",\n               \"alicuota\":\"0\"\n            },\n            \"leyenda\":\"\"\n         },\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"p2\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"160398\",\n               \"precio_unitario_sin_iva\":\"10\",\n               \"alicuota\":\"0\"\n            },\n            \"leyenda\":\"\"\n         }\n      ],\n      \"bonificacion\":\"0.00\",\n      \"leyenda_gral\":\" \",\n      \"total\":\"110\" \n   }\n}"
+
+headers = {
+    'Content-Type': "application/json" 
+    }
+
+conn.request("POST", "/app/api/v2/facturacion/nuevo", payload, headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+```
+{% endtab %}
+
+{% tab title="Node.js" %}
+```javascript
+var axios = require("axios").default;
+
+var options = {
+  method: 'POST',
+  url: 'https://www.tusfacturas.app/app/api/v2/facturacion/nuevo',
+  headers: {'Content-Type': 'application/json'},
+  data: {
+    usertoken: 'xxxxx',
+    apikey: 'xxxx',
+    apitoken: 'xxxxx',
+    cliente: {
+      documento_tipo: 'CUIT',
+      documento_nro: '30712293841',
+      razon_social: 'VOUSYS TusFacturasAPP',
+      email: 'a@a.com',
+      domicilio: 'AV.LIBERTADOR 571',
+      provincia: '2',
+      envia_por_mail: 'S',
+      condicion_pago: '211',
+      condicion_iva: 'RI'
+    },
+    comprobante: {
+      fecha: '20/03/2018',
+      vencimiento: '26/03/2023',
+      tipo: 'FACTURA C',
+      operacion: 'V',
+      punto_venta: '0002',
+      numero: '00000012',
+      periodo_facturado_desde: '28/02/2018',
+      periodo_facturado_hasta: '28/02/2018',
+      rubro: 'Alimentos',
+      rubro_grupo_contable: 'Alimentos',
+      detalle: [
+        {
+          cantidad: '1',
+          producto: {
+            descripcion: 'EXENTO - AVENA INSTANTANEA x5 kg. al 21',
+            unidad_bulto: '1',
+            lista_precios: 'Lista de precios API 3',
+            codigo: '16098',
+            precio_unitario_sin_iva: '100',
+            alicuota: '0'
+          },
+          leyenda: ''
+        },
+        {
+          cantidad: '1',
+          producto: {
+            descripcion: 'p2',
+            unidad_bulto: '1',
+            lista_precios: 'Lista de precios API 3',
+            codigo: '160398',
+            precio_unitario_sin_iva: '10',
+            alicuota: '0'
+          },
+          leyenda: ''
+        }
+      ],
+      bonificacion: '0.00',
+      leyenda_gral: ' ',
+      total: '110'
+    }
+  }
+};
+
+axios.request(options).then(function (response) {
+  console.log(response.data);
+}).catch(function (error) {
+  console.error(error);
+});
+```
+{% endtab %}
+
+{% tab title="Ruby" %}
+```ruby
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://www.tusfacturas.app/app/api/v2/facturacion/nuevo")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Post.new(url)
+request["Content-Type"] = 'application/json'
+request.body = "{\n   \"usertoken\":\"xxxxx\",\n   \"apikey\":\"xxxx\",\n   \"apitoken\":\"xxxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"CUIT\",\n      \"documento_nro\":\"30712293841\",\n      \"razon_social\":\"VOUSYS TusFacturasAPP\",\n      \"email\":\"a@a.com\",\n      \"domicilio\":\"AV.LIBERTADOR 571\",\n      \"provincia\":\"2\",\n      \"envia_por_mail\":\"S\",\n      \"condicion_pago\":\"211\",\n      \"condicion_iva\":\"RI\"\n   },\n   \"comprobante\":{\n      \"fecha\":\"20/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"tipo\":\"FACTURA C\",\n      \"operacion\":\"V\",\n      \"punto_venta\":\"0002\",\n      \"numero\":\"00000012\",\n      \"periodo_facturado_desde\":\"28/02/2018\",\n      \"periodo_facturado_hasta\":\"28/02/2018\",\n      \"rubro\":\"Alimentos\",\n      \"rubro_grupo_contable\":\"Alimentos\",\n      \"detalle\":[\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"EXENTO - AVENA INSTANTANEA x5 kg. al 21\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"16098\",\n               \"precio_unitario_sin_iva\":\"100\",\n               \"alicuota\":\"0\"\n            },\n            \"leyenda\":\"\"\n         },\n         {\n            \"cantidad\":\"1\",\n            \"producto\":{\n               \"descripcion\":\"p2\",\n               \"unidad_bulto\":\"1\",\n               \"lista_precios\":\"Lista de precios API 3\",\n               \"codigo\":\"160398\",\n               \"precio_unitario_sin_iva\":\"10\",\n               \"alicuota\":\"0\"\n            },\n            \"leyenda\":\"\"\n         }\n      ],\n      \"bonificacion\":\"0.00\",\n      \"leyenda_gral\":\" \",\n      \"total\":\"110\" \n   }\n}"
+
+response = http.request(request)
+puts response.read_body
+```
+{% endtab %}
+{% endtabs %}
+
+#### Datos a tener en cuenta:
+
+{% hint style="info" %}
+* Los comprobantes C no llevan IVA.
+* No sabes en qué momento emitir comprobantes de tipo C? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
+* Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
+
+&#x20;               Nro de documento = "0"
+
+&#x20;              Tipo de documento = "OTRO"
+
+&#x20;              En nombre, lo que tu contador/a te recomiende.
+
+Tene en cuenta que esto solo está permitido para comprobantes hasta ciertos montos. Consulta diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+{% endhint %}
 
 ### NOTA DE CRÉDITO C
 
