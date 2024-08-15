@@ -30,8 +30,8 @@ Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) para pode
 
 Características clave:
 
-* ✅ Conexión rápida y segura con AFIP para emitir comprobantes electrónicos válidos
-* ✅ Procesa facturas, notas de crédito, recibos y más desde tu sistema
+* ✅ Conexión rápida y segura para  emitir facturas electrónicos AFIP válidos. Conocé como podes[integrar la facturación electrónica en tu software con la API de TusFacturasAPP](https://www.tusfacturas.app/como-integrar-mi-software-de-facturacion-con-afip.html).
+* ✅ Procesa facturas, notas de crédito, recibos y más desde tu sistema.
 * ✅ Documentación detallada y ejemplos de código para una integración sencilla
 * ✅ Cumple con todas las regulaciones fiscales vigentes en Argentina y se mantiene actualizada con las últimas normativas, dado que estamos respaldados por un estudio contable-impositivo.
 

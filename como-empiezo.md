@@ -1,16 +1,19 @@
 ---
-description: El paso a paso para comenzar a integrar TusFacturasAPP, con tu plataforma.
+description: >-
+  Conoce la guía paso a pase para integrar tu software con la API de facturación
+  electrónica AFIP de TusFacturasAPP. Elegida por todos los desarrolladores
+  desde 2015.
 ---
 
 # ¿Cómo empiezo?
 
 ## Aprende cómo integrar tu software con la API de facturación electrónica AFIP
 
-Crea una cuenta en nuestra plataforma y activa tu plan API DEV para emitir hasta 1.500 comprobantes electrónicos no válidos legalmente durante 1 mes, completamente gratis (exclusivo para nuevas cuentas y por única vez).
+[Crea una cuenta](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) en nuestra plataforma y se activará tu plan API DEV para emitir hasta 1.500 facturas electrónicos no válidas legalmente durante 1 mes, completamente gratis (exclusivo para nuevas cuentas y por única vez).
 
 ### **Explora las funcionalidades de la API y comproba su eficacia en tu proceso de facturación.**
 
-Una vez finalizado el período de prueba, podrás seleccionar el plan API que mejor se adapte a tus necesidades.
+Una vez finalizado el período de prueba, podrás seleccionar la [suscripción API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html) que mejor se adapte a tus necesidades.
 
 **Beneficios del plan API DEV:**
 
@@ -56,7 +59,7 @@ En caso que necesites asistencia, podes [contactarnos](https://www.tusfacturas.a
 
 ### ¿Es realmente fácil crear una venta con TusFacturasAPP?
 
-Si!, crear una venta con TusFacturasAPP es tan fácil como enviar el siguiente JSON para generar una factura B, a la URL:  `https://www.tusfacturas.app/app/api/v2/facturacion/nuevo`&#x20;
+¡Si! Crear una venta con TusFacturasAPP es tan fácil como enviar el siguiente JSON para crear una factura B, a la URL:  `https://www.tusfacturas.app/app/api/v2/facturacion/nuevo`&#x20;
 
 ```json
 {
