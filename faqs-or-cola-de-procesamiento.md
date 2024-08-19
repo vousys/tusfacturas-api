@@ -1,12 +1,23 @@
 ---
 description: >-
-  Consultas frecuentes sobre el funcionamiento de la modalidad de emisión
-  asincrónica encolada
+  ¿Tenes preguntas sobre ventas programadas en TusFacturasAPP? Encontra las
+  respuestas en nuestras FAQs.
 ---
 
 # FAQs | cola de procesamiento
 
-## Preguntas frecuentes sobre el servicio API de facturación en cola de procesamiento
+**Ventas programadas:** En el contexto de una plataforma de facturación electrónica como TusFacturasAPP, las ventas programadas se refieren a facturas que se generan y envían automáticamente en una fecha y hora predeterminadas.
+
+**¿Por qué son útiles?**
+
+* **Automatización:** Elimina la necesidad de generar facturas manualmente, ahorrando tiempo y recursos.
+* **Planificación:** Permite planificar la emisión de facturas con anticipación, asegurando que se envíen a tiempo.
+* **Recurrentes:** Son ideales para facturas recurrentes, como alquileres, suscripciones o servicios periódicos.
+* **Control:** Facilita el control de los vencimientos y evita el envío de facturas fuera de plazo.
+
+**En resumen,** las ventas programadas son una herramienta muy útil para automatizar procesos de facturación y garantizar que tus clientes reciban sus facturas a tiempo.
+
+### Preguntas frecuentes sobre el servicio API de facturación en cola de procesamiento
 
 #### Cuándo y qué se emite
 

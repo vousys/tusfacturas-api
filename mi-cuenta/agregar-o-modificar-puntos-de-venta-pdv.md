@@ -1,8 +1,7 @@
 ---
 description: >-
-  Con la API de TusFacturasAPP, podrás administrar tus puntos venta, crearlos,
-  editarlos, solicitar el certificado de enlace con AFIP y hasta
-  predeterminarlos.
+  Integra la API para AFIP de TusFacturasAPP a tu sistema y accede a información
+  relacionada con tu cuenta, como agregar o  modificar un punto de venta.
 ---
 
 # Agregar o modificar puntos de venta (PDV)

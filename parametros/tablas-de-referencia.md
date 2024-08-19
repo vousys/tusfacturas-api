@@ -1,7 +1,8 @@
 ---
 description: >-
-  A continuación podrás consultar las tablas de referencia para usar con nuestra
-  API.
+  Integra tu sistema con la API Factura AFIP. Consulta las tablas de referencia
+  para una facturación electrónica precisa y eficiente. #AFIP
+  #facturaelectronica #API
 ---
 
 # Tablas de referencia

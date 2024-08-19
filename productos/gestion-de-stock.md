@@ -1,21 +1,21 @@
 ---
 description: >-
-  Gestiona el stock de tus productos con facilidad y eficiencia con nuestra API
-  de productos.
+  Simplifica la gestión de negocio y gestiona el stock con nuestra API para
+  productos.
 ---
 
 # Gestión de stock
 
 ## Administrá el stock
 
-Éste método te permite enviar un lote de hasta 50 productos para consultar.
+Nuestra API ofrece endpoints para crear, leer y eliminar movimientos de stock. Integra nuestra solución a tu aplicación y accede a funcionalidades como consulta de stock en tiempo real, generación de reportes y gestión de alertas de bajo stock desde nuestra plataforma web. Conoce más sobre cómo se realizar la [gestión de stock](https://www.tusfacturas.app/caracteristicas-de-tus-facturas-electronica-stock.html).&#x20;
 
 {% hint style="info" %}
 ### ¿Qué debes tener en cuenta?
 
 
 
-* El código de producto debe ser único dentro de la lista de precios
+* El código de producto debe ser único dentro de la lista de precios, sin embargo no realizamos ningúna válidación de nuestro lado con relación a ésto.
 * El método es el mismo tanto para el alta de unidades al stock, como para la baja de unidades. Se utliza el campo "operacion" para distinguirlo.
 * Podes enviar hasta 50 productos por request.
 

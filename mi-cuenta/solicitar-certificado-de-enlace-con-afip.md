@@ -1,12 +1,12 @@
 ---
 description: >-
-  Mediante éste método podrás obtener en la casilla de e-mail de los
-  administradores de tu cuenta, un nuevo certificado de seguridad
+  Integra la API para AFIP de TusFacturasAPP a tu sistema y solicita un nuevo
+  certificado de enlace con AFIP para tu punto de venta.
 ---
 
 # Solicitar certificado de enlace con AFIP
 
-El certificado se generará para el CUIT desde el cual estas haciendo la solicitud.
+Mediante ésta herramienta podras solicitar un certificado de enlace con AFIP y su instructivo. El certificado se generará para el CUIT desde el cual estas haciendo la solicitud y lo recibiras en la casilla de correo del usuario administrador de la cuenta.
 
 ## Solicitar certificado
 

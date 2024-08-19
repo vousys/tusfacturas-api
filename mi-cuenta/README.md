@@ -1,7 +1,8 @@
 ---
 description: >-
-  Consulta desde la API de TusFacturas.app, la información relacionada con tu
-  cuenta.
+  Integra la API para AFIP de TusFacturasAPP a tu sistema y accede a información
+  relacionada con tu cuenta, como consultar tu consumo actual y modificar un
+  punto de venta.
 ---
 
 # Mi cuenta

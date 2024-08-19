@@ -1,20 +1,20 @@
 ---
 description: >-
-  Consulta desde la API de TusFacturas.app, la información relacionada con tu
-  cuenta.
+  Integra la API para AFIP de TusFacturasAPP a tu sistema y accede a información
+  relacionada con tu cuenta, como consultar tu consumo actual.
 ---
 
 # Mi Cuenta - consumo
 
 ## Consultá el consumo de tu cuenta
 
+Éste método te brindara que cantidad de comprobantes que tenes incluidos en tu suscripción actual,  cuantos tenés programados como abono, y cuantos te quedan disponibles para consumir..
+
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`micuenta/consumo`</mark>
 
-💡 El uso de éste método  contabiliza como un request en tu suscripción
+💡 El uso de éste método  contabiliza como un request en tu suscripción para éste método.
 
 
-
-Éste método te brindara que cantidad de comprobantes podes emitir en el mes en curso, cuantos tenés programados como abono, y cuantos te quedan disponibles.
 
 #### Request Body
 

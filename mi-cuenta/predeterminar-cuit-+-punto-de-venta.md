@@ -1,7 +1,7 @@
 ---
 description: >-
-  Mediante éste método, podrás marcar como predeterminado el punto de venta,
-  desde el cual estas realizando la solicitud.
+  Integra la API para AFIP de TusFacturasAPP a tu sistema y accede a información
+  relacionada con tu cuenta, asi como predeterminar un punto de venta.
 ---
 
 # Predeterminar CUIT + Punto de venta
