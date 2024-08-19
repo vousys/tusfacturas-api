@@ -1,21 +1,29 @@
 ---
 description: >-
-  Utilizá la API de facturación electrónica de TusFacturas.app, para consultar
-  los comprobantes emitidos desde la plataforma, ya sea por una búsqueda puntual
-  o una búsqueda avanzada.
+  TusFacturasAPP: Consulta rápida y precisa de comprobantes AFIP. Integra
+  nuestra API en tu sistema y optimiza tus procesos.
 ---
 
 # Consulta simple de comprobantes
 
+### **¿Qué es la consulta de comprobantes?**
 
+La consulta de comprobantes es una funcionalidad que te permite buscar y obtener información detallada sobre las facturas electrónicas que has emitido a través de una plataforma como TusFacturasAPP. Esta función es muy útil para:
 
-Mediante éste método, podrás consultar la información asociada a un determinado comprobante.&#x20;
+* **Verificar el estado de los comprobantes:** Saber si un comprobante fue emitido correctamente, si fue rechazado por la AFIP o si ya fue presentado ante el organismo recaudador.
+* **Buscar comprobantes específicos:** Localizar una factura en particular utilizando diferentes criterios de búsqueda, como el número de comprobante, la fecha de emisión, el cliente, etc.
+* **Generar reportes:** Obtener información resumida o detallada sobre un conjunto de comprobantes, lo que puede ser útil para tareas de contabilidad o análisis.
+* **Integrar con otros sistemas:** Utilizar la información de los comprobantes para alimentar otros sistemas o aplicaciones, como un ERP o un CRM.
+
+**En resumen,** la consulta de comprobantes es una herramienta esencial para gestionar tu facturación electrónica de manera eficiente y tener un control total sobre tus operaciones.
+
+### Servicio API de consulta de comprobantes
+
+Mediante éste método, podrás consultar la información asociada de un determinado comprobante.&#x20;
 
 {% hint style="info" %}
 Es importante que descargues toda la información, junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
 {% endhint %}
-
-
 
 Tipo de datos: **JSON**\
 Charset: **UTF-8**

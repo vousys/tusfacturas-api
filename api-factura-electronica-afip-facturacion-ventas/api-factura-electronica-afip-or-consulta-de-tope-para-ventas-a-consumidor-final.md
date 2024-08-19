@@ -1,8 +1,7 @@
 ---
 description: >-
-  Mediante éste método, podrás consultar el tope especificado por AFIP, para
-  ventas a consumidor final, sin requisito de detallar tipo y número de
-  documento del comprador.
+  Consulta fácil y rápido el tope AFIP para ventas a consumidor final. ¡Sin
+  necesidad de datos del comprador!
 ---
 
 # Consultar el tope para ventas a consumidor final

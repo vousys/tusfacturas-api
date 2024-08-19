@@ -25,15 +25,15 @@ Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de f
 
 Los Comprobantes MiPyme AFIP son una modalidad de facturación electrónica simplificada, diseñada específicamente para **micro, pequeñas y medianas empresas (MiPyMEs)**.
 
-#### **¿Qué los diferencia de las facturas electrónicas comunes?**
+### **¿Qué diferencia las MiPyme de las facturas electrónicas comunes?**
 
 * **Beneficios fiscales:** Las MiPyMEs que emiten Comprobantes MiPyme pueden acceder a ciertos beneficios fiscales, como la **reducción de alícuotas de IVA** y la **exención de retenciones de Ganancias**.
 
-#### **¿Quiénes pueden emitir Comprobantes MiPyme?**
+### **¿Quiénes pueden emitir Comprobantes MiPyme?**
 
 Todas las MiPyMEs que se encuentran inscriptas en la AFIP y que cumplan con los requisitos establecidos por el organismo pueden emitir Comprobantes MiPyme.
 
-#### **¿Cómo empezar a emitir Comprobantes MiPyme?**
+### **¿Cómo empezar a emitir Comprobantes MiPyme?**
 
 Para empezar a emitir Comprobantes MiPyme, las MiPyMEs deben:
 
@@ -44,9 +44,9 @@ Ten en cuenta que éste tipo de comprobantes MiPyme,  requieren de un tratamient
 
 Para más información acerca de los comprobantes MiPyme, sugerimos leer la información provista por  AFIP, en el [micrositio de Facturas de crédito MiPyme](https://servicioscf.afip.gob.ar/facturadecreditoelectronica/)
 
-### API para Comprobantes MiPyme&#x20;
+### API AFIP para Comprobantes MiPyme&#x20;
 
-**En esta guía encontrarás:**
+**En esta página encontrarás:**
 
 * Los requerimientos específicos para cada tipo de solicitud.
 * Los datos exactos que debes enviar para generar nuevos comprobantes de venta.
@@ -54,15 +54,17 @@ Para más información acerca de los comprobantes MiPyme, sugerimos leer la info
 
 Consultá la descripción completa del servicio [API Facturación AFIP](./).
 
-#### **Información importante sobre los Comprobantes MiPyme:**
+### **Información importante sobre los Comprobantes MiPyme:**
 
 * **Información adicional obligatoria:** Estos comprobantes requieren información adicional dentro del bloque "rg\_especiales".
 * **Aplicabilidad:** Se utilizan solo para ciertos receptores a partir de un monto determinado, que varía según la operación.
 * **Determina el tipo de comprobante:** Accede a [nuestra guía](api-factura-electronica-afip-or-como-se-si-emitir-una-factura-mipyme-o-una-comun.md) para saber si debes emitir una factura MiPyme o una factura común.
 
-**Comenza a crear Comprobantes MiPyme hoy mismo y simplifica tu proceso de facturación electrónica.**
 
-### Estructura del bloque "rg\_especiales"
+
+### ¿Qué debes agregar en el request API para generar un comprobante MiPyme?&#x20;
+
+#### Estructura del bloque "rg\_especiales"
 
 El bloque de "rg\_especiales" debe especificar el [regimen al que pertenece](../parametros/tablas-de-referencia.md#regimenes-posibles-para-el-bloque-rg\_especiales) éste comprobante y enviar información asociada a éste regimen, dentro del bloque "datos".
 
@@ -109,9 +111,7 @@ Datos a tener en cuenta:
 
 {% endhint %}
 
-## Ejemplo de factura de crédito electrónica  MiPyme (FCE)
-
-
+### Ejemplo de factura de crédito electrónica  MiPyme (FCE)
 
 ```json
 JSON

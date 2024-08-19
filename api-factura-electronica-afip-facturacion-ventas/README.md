@@ -1,8 +1,8 @@
 ---
 description: >-
-  Facturación Electrónica AFIP Simplificada. Emití facturas electrónicas AFIP de
-  forma rápida, segura y sencilla con nuestra API. ¡Integrá la facturación
-  electrónica en tu sistema de gestión hoy mismo!
+  Integra la facturación electrónica AFIP fácil y rápido con nuestra API.
+  ¡Confiable desde 2015! Elegida por todos los desarrolladores. ¡Integra la API
+  para AFIP en tu sistema de gestión hoy mismo!
 layout:
   title:
     visible: true

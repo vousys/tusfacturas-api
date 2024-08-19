@@ -1,8 +1,7 @@
 ---
 description: >-
-  Mediante ésta función, podrás ingresar cobros por cada comprobante que emítas,
-  de modo que la cuenta corriente refleje no solo las ventas, sino también, los
-  cobros que capturas desde tu plataforma.
+  TusFacturasAPP: ¡Más que facturas! Gestiona tus cobros, actualiza saldos y
+  optimiza tu flujo de caja con nuestra API para generar recibos de cobro.
 ---
 
 # Ingresar pago a un comprobante emitido

@@ -1,11 +1,28 @@
 ---
 description: >-
-  Utilizá la API de facturación electrónica de TusFacturas.app, para consultar
-  si tu cliente está obligado a recibir comprobantes de tipo Factura de Crédito
-  electrónica MiPyme.
+  ¿Tu cliente debe recibir Factura de Crédito electrónica MiPyme? ¡Consulta
+  fácil y rápido con la API TusFacturas.app!
 ---
 
 # Consulta para verificar si estoy obligado a recibir o emitir Factura de Crédito electrónica MiPyme
+
+### ¿Qué son las **facturas MiPyME?**
+
+Las **facturas MiPyME** son un tipo de comprobante electrónico diseñado específicamente para las micro, pequeñas y medianas empresas (MiPyMEs) en Argentina. Estas facturas cumplen con los requisitos establecidos por la Administración Federal de Ingresos Públicos (AFIP) y facilitan la emisión y gestión de comprobantes electrónicos para este sector.
+
+### **¿Para qué sirven las** **facturas MiPyME?**
+
+El objetivo principal es el impulso al financiamiento de las micro, pequeñas y medianas empresas. Su finalidad es desarrollar un mecanismo que mejore las condiciones de financiación de dichas empresas y les permita aumentar su productividad, mediante el cobro anticipado de los créditos y de los documentos por cobrar emitidos a sus clientes y/o deudores, con los que hubieran celebrado una venta de bienes, locación de cosas muebles u obras o prestación de servicios a plazo.
+
+**Características principales:**
+
+* **Obligatoriedad:** La obligatoriedad de emitir facturas MiPyME depende del tipo de operación, el monto y otros factores establecidos por la AFIP.
+* **Formato electrónico:** Se emiten y reciben de forma electrónica, a través de plataformas habilitadas por la AFIP o por proveedores de servicios de facturación electrónica.
+* **Información detallada:** Incluyen toda la información necesaria para identificar la operación, los intervinientes y los impuestos aplicables.
+
+**En resumen,** las facturas MiPyME son una herramienta fundamental para las pequeñas y medianas empresas en Argentina, ya que les permiten cumplir con las obligaciones fiscales de manera más eficiente y sencilla.
+
+
 
 {% hint style="info" %}
 <mark style="background-color:purple;">El uso de éste método contabiliza como 1 request en tu suscripción. El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.</mark>
