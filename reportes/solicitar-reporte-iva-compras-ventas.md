@@ -1,3 +1,9 @@
+---
+description: >-
+  Solicita fácilmente reportes de IVA compras-ventas. Adaptados a tus
+  necesidades. API AFIP
+---
+
 # Solicitar reporte IVA compras-ventas
 
 Mediante éste método, solicitarás el envío del reporte IVA compras-ventas a una casilla de e-mail determinada. Se permite 1 casilla solamente por solicitud.

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Emití con la API de TusFacturas.app notas de crédito y notas de débito A, B,
-  C, M y MiPyme.
+  Emití con la API para AFIP de TusFacturas.app notas de crédito y notas de
+  débito A, B, C, M y MiPyme.
 ---
 
 # Notas de crédito / Notas de débito

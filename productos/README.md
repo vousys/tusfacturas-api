@@ -1,7 +1,7 @@
 ---
 description: >-
   Gestiona tus productos con facilidad y eficiencia con nuestra API de
-  productos.
+  productos, incluida en nuestra API para facturación AFIP.
 ---
 
 # Productos

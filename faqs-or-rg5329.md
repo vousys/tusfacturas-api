@@ -1,7 +1,7 @@
 ---
 description: >-
   Conocé cómo configurar tu cuenta aplicar las percepciones RG5329 en los
-  comprobantes que emitas.
+  comprobantes que emitas desde nuestra API para facturación AFIP.
 ---
 
 # FAQs | RG5329

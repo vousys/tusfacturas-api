@@ -1,7 +1,7 @@
 ---
 description: >-
   Simplifica la gestión de negocio y gestiona el stock con nuestra API para
-  productos.
+  productos incluida en nuestra API para facturación AFIP
 ---
 
 # Gestión de stock
