@@ -1,8 +1,7 @@
 ---
 description: >-
-  Emití facturación electrónica AFIP, fácil y rápido con nuestra API. Confiable
-  desde 2015. ¡Los desarrolladores la aman! Ejemplos de comprobantes A para
-  Responsables inscriptos.
+  API AFIP para emitir comprobantes A. Ideal para Responsables Inscriptos.
+  Ejemplos incluidos. Confiable desde 2015. ¡Los desarrolladores la aman!
 ---
 
 # Ejemplos de comprobantes tipo "A"

@@ -1,7 +1,7 @@
 ---
 description: >-
-  Ejemplos de comprobantes C: Emití facturación electrónica AFIP, fácil y rápido
-  con nuestra API. Confiable desde 2015. ¡Los desarrolladores la aman!
+  API AFIP para emitir comprobantes C. Ideal para Monotributistas. Ejemplos
+  incluidos. Confiable desde 2015. ¡Los desarrolladores la aman!
 ---
 
 # Ejemplos de comprobantes tipo "C"

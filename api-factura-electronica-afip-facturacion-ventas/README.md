@@ -1,8 +1,7 @@
 ---
 description: >-
   Integra la facturación electrónica AFIP fácil y rápido con nuestra API.
-  ¡Confiable desde 2015! Elegida por todos los desarrolladores. ¡Integra la API
-  para AFIP en tu sistema de gestión hoy mismo!
+  ¡Confiable desde 2015! Elegida por todos los desarrolladores.
 layout:
   title:
     visible: true

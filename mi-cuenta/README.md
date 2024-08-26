@@ -1,8 +1,7 @@
 ---
 description: >-
-  Integra la API para AFIP de TusFacturasAPP a tu sistema y accede a información
-  relacionada con tu cuenta, como consultar tu consumo actual y modificar un
-  punto de venta.
+  Integra la API AFIP y automatiza tus procesos de facturación. ¡Ahorra tiempo y
+  optimiza tu negocio!
 ---
 
 # Mi cuenta
