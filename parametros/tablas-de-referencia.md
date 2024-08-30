@@ -62,23 +62,23 @@ description: >-
 
 ### Condiciones de venta
 
-| Condición de Venta     | Dias para vto comprobante (fecha fc) | Valor a enviar |
-| ---------------------- | ------------------------------------ | -------------- |
-| 5 días                 | 5                                    | 213            |
-| 10 dias                | 10                                   | 206            |
-| 15 dias                | 15                                   | 207            |
-| 20 dias                | 20                                   | 209            |
-| 30 dias                | 30                                   | 202            |
-| 45 dias                | 45                                   | 208            |
-| 60 dias                | 60                                   | 203            |
-| 90 dias                | 90                                   | 204            |
-| Contado                | 0                                    | 201            |
-| Cuenta corriente       | 0                                    | 205            |
-| Transferencia Bancaria | 0                                    | 210            |
-| Tarjeta de crédito     | 0                                    | 211            |
-| Tarjeta de Débito      | 0                                    | 212            |
-| Otra                   | 0                                    | 214            |
-|                        |                                      |                |
+| Condición de Venta               | Dias para vto comprobante (fecha fc) | Valor a enviar |
+| -------------------------------- | ------------------------------------ | -------------- |
+| 5 días                           | 5                                    | 213            |
+| 10 dias                          | 10                                   | 206            |
+| 15 dias                          | 15                                   | 207            |
+| 20 dias                          | 20                                   | 209            |
+| 30 dias                          | 30                                   | 202            |
+| 45 dias                          | 45                                   | 208            |
+| 60 dias                          | 60                                   | 203            |
+| 90 dias                          | 90                                   | 204            |
+| Contado                          | 0                                    | 201            |
+| Cuenta corriente                 | 0                                    | 205            |
+| Transferencia Bancaria           | 0                                    | 210            |
+| Tarjeta de crédito               | 0                                    | 211            |
+| Tarjeta de Débito                | 0                                    | 212            |
+| Otra                             | 0                                    | 214            |
+| Otros medios de pago electronico | 0                                    | 215            |
 
 ### Condiciones frente al IVA
 
