@@ -1,10 +1,12 @@
 ---
 description: >-
-  Si el monto de la factura que vas a emitir supera el tope impuesto por AFIP,
-  es probable que debas emitir una factura de crédito electrónica MiPyme
+  Conoce como determinas si tenes que emitir una factura MiPyme o una factura A
+  común.
 ---
 
-# ¿Cómo determino si emitir una factura mipyme, o una factura común?
+# ¿Factura mipyme o Factura común?
+
+Si el monto de la factura que vas a emitir supera el tope impuesto por AFIP, es probable que debas emitir una factura de crédito electrónica MiPyme.
 
 ### Sugerencias para manejarlo desde tu plataforma:
 
