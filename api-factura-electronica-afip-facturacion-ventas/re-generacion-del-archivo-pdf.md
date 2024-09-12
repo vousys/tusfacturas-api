@@ -26,7 +26,8 @@ description: >-
 ```
 {
 "error" :  "N",
-"comprobante_pdf_url"    :  "http://www.prueba.com"
+"comprobante_pdf_url"    :  "http://www.prueba.com",
+"comprobante_ticket_url": "https://www.dominio.com/url"
 }
 ```
 {% endtab %}
@@ -56,8 +57,8 @@ description: >-
 ```
 {
         "error" :  "N",
-        "comprobante_pdf_url"    :  "http://www.prueba.com"
+        "comprobante_pdf_url"    :  "http://www.prueba.com", 
+        "comprobante_ticket_url": "https://www.dominio.com/url"
 }
 ```
 
-##

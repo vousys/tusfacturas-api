@@ -73,6 +73,7 @@ Sea cual sea la modalidad que utilices para facturar, por cada comprobante que e
      "vencimiento_cae":"07\/08\/2015",    
      "vencimiento_pago":"27\/08\/2015",    
      "comprobante_pdf_url": "https://www.dominio.com/url",
+     "comprobante_ticket_url": "https://www.dominio.com/url",
      "afip_qr" : "https://www.afip.gob.ar/fe/qr/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMC0xMS0xNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjAwMDAzIiwidGlwb0NtcCI6MTEsIm5yb0NtcCI6IjAwMDAwMjQ5IiwiaW1wb3J0ZSI6IjAwMDAwMDAwMDAwMDEwMCIsIm1vbmVkYSI6IlBFUyIsImN0eiI6IjAwMDAwMDAwMDAwMDEwMDAwMDAiLCJ0aXBvRG9jUmVjIjo5OSwibnJvRG9jUmVjIjoiMCIsInRpcG9Db2RBdXQiOiJFIiwiY29kQXV0IjoiNzA0NjY4OTk1OTcwOTEifQ== "
      "afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
      "envio_x_mail": "S",
@@ -89,6 +90,8 @@ Sea cual sea la modalidad que utilices para facturar, por cada comprobante que e
 
 {% hint style="info" %}
 Es importante  que descargues toda la información, junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
+
+El campo "comprobante\_ticket\_url" te devuelve un pdf con el comprobante para ser impreso en formato ticket para papel de 80mm, en cambio el campo: "comprobante\_pdf\_url" te devuelve el PDF acorde al estilo que definiste, para papel A4.
 {% endhint %}
 
 #### :octagonal\_sign: Response con error

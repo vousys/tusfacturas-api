@@ -116,6 +116,7 @@ Ej:
             "vencimiento_cae":"07\/08\/2015",
             "vencimiento_pago":"27\/08\/2015",
             "comprobante_pdf_url":"https://www.dominio.com/00000006.pdf",
+            "comprobante_ticket_url": "https://www.dominio.com/url",
             "external_reference":3303,
             "tags":[
                "etiqueta1",
@@ -183,6 +184,7 @@ Ej:
             "vencimiento_cae":"07\/08\/2015",
             "vencimiento_pago":"27\/08\/2015",
             "comprobante_pdf_url":"https://www.dominio.com/00000006.pdf",
+            "comprobante_ticket_url": "https://www.dominio.com/url",
             "external_reference":"",
             "tags":[
                
@@ -249,6 +251,7 @@ Ej:
             "vencimiento_cae":"07\/08\/2015",
             "vencimiento_pago":"27\/08\/2015",
             "comprobante_pdf_url":"https://www.dominio.com/00000006.pdf",
+            "comprobante_ticket_url": "https://www.dominio.com/url",
             "external_reference":"",
             "tags":[
                

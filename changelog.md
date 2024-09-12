@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 12 de septiembre de 2024
+
+Se agrega en la respuesta de la API de ventas, el campo: "comprobante\_ticket\_url", de modo que puedas descargar un pdf adaptado a papel de 80mm para impresoras térmicas.
+
 ### 10 de julio de 2024
 
 Se crea la [API de compras](api-compras/), que te permite cargar facturas de compra&#x20;
