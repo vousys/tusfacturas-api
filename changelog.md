@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 19 de septiembre de 2024
+
+Se crea la [API para tablas de referencia](parametros/tablas-de-referencia.md).
+
 ### 12 de septiembre de 2024
 
 Se agrega en la respuesta de la API de ventas, el campo: "comprobante\_ticket\_url", de modo que puedas descargar un pdf adaptado a papel de 80mm para impresoras térmicas.
