@@ -6,7 +6,37 @@ description: >-
 
 # Tablas de referencia
 
-### Tipos de documento
+Obtené todos éstos datos haciendo un request a cada método, tomando como ejemplo el siguiente request:
+
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)`METODO`
+
+| Name      | Type   | Description                |
+| --------- | ------ | -------------------------- |
+| apikey    | string | Tus credenciales de acceso |
+| apitoken  | string | Tus credenciales de acceso |
+| usertoken | string | Tus credenciales de acceso |
+
+**Response**
+
+{% tabs %}
+{% tab title="JSON" %}
+```json
+{
+    "apitoken":"TU_API_TOKEN",
+    "apikey": 0101,
+    "usertoken":"TU_USER_TOKEN"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+
+
+### Tipos de documento&#x20;
+
+&#x20;Consulta todos los tipos de documento disponibles haciendo una petición a:&#x20;
+
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)documentos\_tipos
 
 | Tipo de documento                   | Valor a enviar |
 | ----------------------------------- | -------------- |
@@ -20,6 +50,10 @@ description: >-
 
 ### Alícuotas de IVA
 
+Consulta toda la información disponible haciendo una petición a:&#x20;
+
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)alicuotas\_iva
+
 | Alicuota       | Valor a enviar |
 | -------------- | -------------- |
 | 27%            | 27             |
@@ -30,6 +64,10 @@ description: >-
 | IVA No gravado | -2             |
 
 ### Provincias
+
+Consulta toda información disponible haciendo una petición a:&#x20;
+
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)provincias
 
 | Provincia                       |   | Valor a enviar |
 | ------------------------------- | - | -------------- |
@@ -62,6 +100,10 @@ description: >-
 
 ### Condiciones de venta
 
+Consulta toda la información disponible haciendo una petición a:&#x20;
+
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)condiciones\_venta
+
 | Condición de Venta               | Dias para vto comprobante (fecha fc) | Valor a enviar |
 | -------------------------------- | ------------------------------------ | -------------- |
 | 5 días                           | 5                                    | 213            |
@@ -82,6 +124,10 @@ description: >-
 
 ### Condiciones frente al IVA
 
+Consulta toda información disponible haciendo una petición a:&#x20;
+
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)condiciones\_iva
+
 | Condición frente al IVA | Valor a enviar |
 | ----------------------- | -------------- |
 | Consumidor Final        | CF             |
@@ -92,6 +138,12 @@ description: >-
 | IVA No Alcanzado        | IVNA           |
 
 ### Tipos de comprobantes
+
+Consulta toda información disponible haciendo una petición a:&#x20;
+
+<mark style="color:green;">`POST`</mark>
+
+&#x20;[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)comprobantes\_tipos
 
 | FACTURA A                                     |
 | --------------------------------------------- |
@@ -124,6 +176,12 @@ description: >-
 
 ### Régimenes posibles para el bloque "RG\_Especiales"
 
+Consulta toda información disponible haciendo una petición a:&#x20;
+
+<mark style="color:green;">`POST`</mark>
+
+[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)rg\_especiales\_regimenes
+
 | Regimen                                                           | id   | Descripcion                                                                               |
 | ----------------------------------------------------------------- | ---- | ----------------------------------------------------------------------------------------- |
 | RG Empresas Promovidas                                            | 2    | Indentificador de proyecto vinculado a Rógimen de Promoción Industrial                    |
@@ -153,6 +211,10 @@ description: >-
 
 ### Monedas
 
+Consulta toda información disponible haciendo una petición a:&#x20;
+
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)monedas
+
 | Moneda                  |   | Valor a enviar |
 | ----------------------- | - | -------------- |
 | Pesos Argentinos        |   | PES            |
@@ -172,6 +234,10 @@ description: >-
 |                         |   |                |
 
 ### Idiomas
+
+Consulta toda información disponible haciendo una petición a:&#x20;
+
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)idiomas
 
 | Idioma  |   | Valor a enviar |
 | ------- | - | -------------- |
@@ -234,7 +300,13 @@ También puede consultar ésta información con el método [Consultar unidades d
 | uiactig               |   | 64             |
 | unidades              |   | 7              |
 
-### Bloque "tributos" > Tipos de percepción a aplicar
+### Bloque "tributos" :  Tipos de percepción a aplicar
+
+Consulta toda información disponible haciendo una petición a:&#x20;
+
+<mark style="color:green;">`POST`</mark>&#x20;
+
+[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)tributos\_percepciones\_tipos
 
 | Si queres enviar..                   | Valor a enviar |
 | ------------------------------------ | -------------- |
@@ -242,7 +314,13 @@ También puede consultar ésta información con el método [Consultar unidades d
 | Percepciones IIBB                    | 7              |
 | Percepciones de Impuestos Nacionales | 1              |
 
-### Bloque "tributos" > Régimen de percepción
+### Bloque "tributos" : Régimen de percepción
+
+Consulta toda información disponible haciendo una petición a:&#x20;
+
+<mark style="color:green;">`POST`</mark>&#x20;
+
+[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)tributos\_percepciones\_regimenes
 
 | Tipo de tributo                      | Régimen                                | Valor a enviar |
 | ------------------------------------ | -------------------------------------- | -------------- |
