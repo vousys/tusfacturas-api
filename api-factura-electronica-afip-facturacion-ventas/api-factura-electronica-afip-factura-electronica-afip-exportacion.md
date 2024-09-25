@@ -121,6 +121,8 @@ curl --request POST \
       "vencimiento":"26/03/2023",
       "tipo":"FACTURA E",
       "operacion":"V",
+      "moneda":"DOL",
+      "cotizacion": 1234.55,
       "punto_venta":"0002",
       "numero":"00000012",
       "periodo_facturado_desde":"28/02/2018",

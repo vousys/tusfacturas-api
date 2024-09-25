@@ -36,6 +36,8 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
       "numero":2134,
       "bonificacion":0,
       "operacion":"V",
+      "moneda":"PES",
+      "cotizacion": 1,
       "detalle":[
          {
             "cantidad":1,
@@ -286,6 +288,8 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí](ap
       "operacion":"V",
       "punto_venta":"0002",
       "numero":"00000012",
+      "moneda":"PES",
+      "cotizacion": 1,
       "periodo_facturado_desde":"28/02/2018",
       "periodo_facturado_hasta":"28/02/2018",
       "rubro":"Alimentos",
@@ -369,6 +373,8 @@ Podés consultar la documentación con referencia a cada campo [desde aquí](api
          "operacion":                "V", 
          "punto_venta":              "0002", 
          "numero":                   "00000012", 
+         "moneda":"PES",
+          "cotizacion": 1,
          "periodo_facturado_desde":  "28/02/2018", 
          "periodo_facturado_hasta":  "28/02/2018", 
          "rubro":                    "Alimentos", 
