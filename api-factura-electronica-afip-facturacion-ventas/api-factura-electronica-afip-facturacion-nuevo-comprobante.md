@@ -7,7 +7,7 @@ description: >-
 
 # Facturación instantánea e individual
 
-TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
+[TusFacturasAPP](https://www.tusfacturas.app) es un proveedor [SaaS](https://www.tusfacturas.app/saas-facturacion-b2b-argentina.html) líder de servicios de [facturación electrónica en Argentina](https://www.tusfacturas.app/factura-electronica-afip.html), que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
 
 ### ¿Qué podes hacer con la API para facturación AFIP?
 
@@ -57,7 +57,7 @@ Tipo de dato esperado: JSON&#x20;
 | comprobante | object | Estructura de "comprobante" según se informa en el apartado de ["API facturacion"](./) |
 | cliente     | object | Estructura de "Cliente", según se informa en el apartado de ["facturacion"](./)        |
 
-### Que te retorna la llamada a la API?
+### ¿Qué te retorna la llamada a la API?
 
 #### &#x20;:white\_check\_mark: Cuando el request resultó exitoso:
 
