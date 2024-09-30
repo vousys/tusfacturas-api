@@ -10,7 +10,7 @@ Tené en cuenta que las compras que cargas en nuestra plataforma no impactan en 
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`comprobante_eliminar`</mark>
 
-💡 El uso de éste método  contabiliza como un request en tu suscripción
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
 
 

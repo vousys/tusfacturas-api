@@ -7,8 +7,6 @@ description: >-
 # Consultar datos de un CUIT, desde la constancia de inscripción
 
 {% hint style="info" %}
-El límite de request que dispones para realizar las consultas, es el mismo limite que tenés habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en el período en curso.
-
 **IMPORTANTE**: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP, el servicio de CONSULTA DE CONSTANCIA DE INSCRIPCIÓN. Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 5](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
 {% endhint %}
 
@@ -16,7 +14,7 @@ El límite de request que dispones para realizar las consultas, es el mismo limi
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`clientes/afip-info`</mark>
 
-💡 El uso de éste método  contabiliza como un request en tu suscripción
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
 
 

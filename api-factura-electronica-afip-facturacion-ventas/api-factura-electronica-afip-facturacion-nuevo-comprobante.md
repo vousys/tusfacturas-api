@@ -40,7 +40,7 @@ Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a pr
 {% hint style="info" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`nuevo`</mark>
 
-💡 El uso de éste método contabiliza como 1 request en tu suscripción
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 {% endhint %}
 
 Charset: UTF-8

@@ -13,7 +13,7 @@ Los cobros que informes, se usan solo para la gestión interna de nuestra plataf
 ## Datos a tener en cuenta
 
 {% hint style="info" %}
-* **NO** podrás enviar los siguientes medios de pago: "cheques" y ni "retenciones"..
+* **NO** podrás enviar los siguientes medios de pago: "cheques" y ni "retenciones".
 * Se realizara una validación del total que se indique, contra la sumatoria de los medios de pago detallados
 * El total de los pagos **NO** debe superar el importe total del comprobante, pero si puede ser inferior, para indicar que el comprobante recibió un pago parcial.
 {% endhint %}
@@ -22,7 +22,7 @@ Los cobros que informes, se usan solo para la gestión interna de nuestra plataf
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`pagar`</mark>
 
-💡 El uso de éste método  contabiliza como un request en tu suscripción
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
 
 

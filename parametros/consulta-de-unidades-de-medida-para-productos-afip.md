@@ -4,13 +4,13 @@ description: >-
   unidades de medida definidas por AFIP
 ---
 
-# Parámetros: Consulta de unidades de medida AFIP, para productos
+# Consulta de unidades de medida AFIP
 
-## Consulta de Unidades de medida
+### Parámetros: Consulta de Unidades de medida
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`tablas_referencia/unidades_medida`</mark>
 
-💡 El uso de éste método  contabiliza como un request en tu suscripción
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
 #### Request Body
 

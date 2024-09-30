@@ -15,7 +15,7 @@ Los cobros que informes, se usan solo para la gestión interna de nuestra plataf
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/caja/`<mark style="color:purple;">`nuevo`</mark>
 
-💡 El uso de éste método  contabiliza como un request en tu suscripción
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
 
 

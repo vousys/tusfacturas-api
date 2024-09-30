@@ -4,13 +4,13 @@ description: >-
   de CUIT pais definidos por AFIP
 ---
 
-# Parámetros:  Consulta de los CUIT País en AFIP
+# Consulta de CUITs País en AFIP
 
-## Consulta de cuit país
+### Parámetros: Consulta de cuit país
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`tablas_referencia/cuit_pais`</mark>
 
-💡 El uso de éste método  contabiliza como un request en tu suscripción
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
 
 

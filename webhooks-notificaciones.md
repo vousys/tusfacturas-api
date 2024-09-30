@@ -115,5 +115,5 @@ Siempre vas a recibir los hooks independientes por cada comprobante.
 
 
 
-**¿Tenes más dudas?** Consultá más preguntas frecuentes sobre la cola de procesamiento, [desde aquí](faqs-or-cola-de-procesamiento.md) o contactanos por el chat de la web [www.tusfacturas.app](https://www.tusfacturas.app)
+**¿Tenes más dudas?** Consultá más preguntas frecuentes sobre la cola de procesamiento, [desde aquí](faqs-or-ventas-asincronicas.md) o contactanos por el chat de la web [www.tusfacturas.app](https://www.tusfacturas.app)
 

@@ -4,7 +4,7 @@ description: >-
   comprobantes que se encuentran en cola de procesamiento con error
 ---
 
-# Reenviar a procesar, comprobante encolado con error
+# Re-enviar a procesar ventas AFIP asincrónicas con error
 
 Mediante éste método podrás reenviar a procesar, un comprobante que se encuentra en cola de procesamiento con error.&#x20;
 
@@ -21,7 +21,7 @@ Charset: **UTF-8**
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`reenviar_encolado`</mark>&#x20;
 
-💡 El uso de éste método  contabiliza como un request en tu suscripción
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
 #### Request Body
 

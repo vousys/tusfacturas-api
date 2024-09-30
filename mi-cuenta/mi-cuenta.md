@@ -12,7 +12,7 @@ description: >-
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`micuenta/consumo`</mark>
 
-💡 El uso de éste método  contabiliza como un request en tu suscripción para éste método.
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
 
 

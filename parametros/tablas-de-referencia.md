@@ -10,6 +10,8 @@ Obtené todos éstos datos haciendo un request a cada método, tomando como ejem
 
 <mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)`METODO`
 
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+
 | Name      | Type   | Description                |
 | --------- | ------ | -------------------------- |
 | apikey    | string | Tus credenciales de acceso |

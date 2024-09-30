@@ -20,7 +20,7 @@ Te sugerimos leer primero:&#x20;
 
 1. La documentación de "[API de Facturación AFIP](./)", para conocer cómo debe componerse el request que envíes
 2. La documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
-3. [FAQs sobre la cola de procesamiento](../faqs-or-cola-de-procesamiento.md)
+3. [FAQs sobre la cola de procesamiento](../faqs-or-ventas-asincronicas.md)
 
 ### **Facturación asincrónica e individual**&#x20;
 
@@ -35,7 +35,7 @@ Al utilizar nuestro servicio API de facturación AFIP asincrónica e individual,
 {% hint style="info" %}
 ### Datos a tener en cuenta:
 
-* &#x20;**La fecha que envíes en el comprobante, determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy.  Te sugerimos leer el apartado de "[FAQs sobre la cola de procesamiento](../faqs-or-cola-de-procesamiento.md)".&#x20;
+* &#x20;**La fecha que envíes en el comprobante, determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy.  Te sugerimos leer el apartado de "[FAQs sobre la cola de procesamiento](../faqs-or-ventas-asincronicas.md)".&#x20;
 * El request, deben venir **con el campo número en cero (0)**.
 * **Debes enviar un "external\_reference" de manera obligatoria y debería ser único**. TusFacturasAPP no realiza ésta validación, por lo que si envias +1 request con el mismo external\_reference, tendrás problemas de tu lado para procesar las respuestas.
 * **Tu CUIT + PDV, debe tener una** [**dirección de webhook**](../mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md) definida, de manera obligatoria, ya que sin ella, no se podrán enviar a procesar los requests y serán rechazados de manera instantánea.
@@ -71,7 +71,7 @@ Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a pr
 
 `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`nuevo_encola`</mark>
 
-💡 El uso de éste método contabiliza como 1 request en tu suscripción
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 {% endhint %}
 
 Charset: UTF-8
@@ -263,7 +263,7 @@ El JSON que recibirás será similar al siguiente ejemplo:&#x20;
 | :---------: | :----: |
 | facturacion |  error |
 
-El hook de "error", te informa que el request ha sido procesado, pero se han detectado errores y no se podrá facturar. Si un comprobante se encuentra procesado con error dentro de la cola de procesamiento, puedes realizar las siguientes operaciones:  [Cambiar fecha del comprobante,](cambiar-fecha-a-comprobante-encolado.md) [re-enviar el comprobante a la cola de procesamiento](reenviar-a-procesar-comprobante-encolado-con-error.md) o [eliminar el comprobante de la cola de procesamiento](eliminar-comprobantes-encolados.md).
+El hook de "error", te informa que el request ha sido procesado, pero se han detectado errores y no se podrá facturar. Si un comprobante se encuentra procesado con error dentro de la cola de procesamiento, puedes realizar las siguientes operaciones:  [Cambiar fecha del comprobante,](cambiar-fecha-a-comprobante-encolado.md) [re-enviar el comprobante a la cola de procesamiento](re-enviar-a-procesar-ventas-afip-asincronicas-con-error.md) o [eliminar el comprobante de la cola de procesamiento](eliminar-comprobantes-encolados.md).
 
 El JSON que recibirás será similar al siguiente ejemplo y a diferencia de los anteriores, obtendrás la lista de errores detectados, dentro del campo "msg".
 

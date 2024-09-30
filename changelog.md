@@ -74,7 +74,7 @@ Se agrega la documentación de "[Eliminar comprobante encolado](api-factura-elec
 
 Se agrega la documentación de "[Cambiar fecha a comprobantes encolado](api-factura-electronica-afip-facturacion-ventas/cambiar-fecha-a-comprobante-encolado.md)"
 
-Se agrega la documentación de "[Reenviar a procesar, comprobante encolado con error](api-factura-electronica-afip-facturacion-ventas/reenviar-a-procesar-comprobante-encolado-con-error.md)
+Se agrega la documentación de "[Reenviar a procesar, comprobante encolado con error](api-factura-electronica-afip-facturacion-ventas/re-enviar-a-procesar-ventas-afip-asincronicas-con-error.md)
 
 ### 22 de marzo de 2022
 

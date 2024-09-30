@@ -1,6 +1,6 @@
 ---
 description: >-
-  Resuelve tus dudas sobre la API de facturación electrónica AFIP de
+  Resolve tus dudas sobre la API de facturación electrónica AFIP de
   TusFacturasAPP
 ---
 

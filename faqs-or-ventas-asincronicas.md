@@ -1,12 +1,12 @@
 ---
 description: >-
-  ¿Tenes preguntas sobre ventas programadas en TusFacturasAPP? Encontra las
-  respuestas en nuestras FAQs.
+  ¿Tenes preguntas sobre las ventas programadas? Encontra las respuestas en
+  nuestras FAQs.
 ---
 
-# FAQs | cola de procesamiento
+# FAQs | Ventas asincrónicas
 
-**Ventas programadas:** En el contexto de una plataforma de facturación electrónica como TusFacturasAPP, las ventas programadas se refieren a facturas que se generan y envían automáticamente en una fecha y hora predeterminadas.
+**Ventas programadas:** En el contexto de una plataforma de facturación electrónica como TusFacturasAPP, las ventas programadas se refieren a facturas que se generan y envían automáticamente en una fecha y hora pre-establecida.
 
 **¿Por qué son útiles?**
 
@@ -17,7 +17,7 @@ description: >-
 
 **En resumen,** las ventas programadas son una herramienta muy útil para automatizar procesos de facturación y garantizar que tus clientes reciban sus facturas a tiempo.
 
-### Preguntas frecuentes sobre el servicio API de facturación en cola de procesamiento
+### Preguntas frecuentes sobre el servicio API de facturación AFIP asincrónico
 
 #### Cuándo y qué se emite
 
@@ -36,9 +36,9 @@ Dentro de nuestra plataforma web >  menú > Facturación > Ventas en cola
 
 Podes realizar las siguientes operaciones:
 
-* [Enviarlos a reprocesar](api-factura-electronica-afip-facturacion-ventas/reenviar-a-procesar-comprobante-encolado-con-error.md). Una vez que un comprobante fue marcado con errores, no se intentará emitir nuevamente, salvo que lo envies a reprocesar.
+* [Enviarlos a reprocesar](api-factura-electronica-afip-facturacion-ventas/re-enviar-a-procesar-ventas-afip-asincronicas-con-error.md). Una vez que un comprobante fue marcado con errores, no se intentará emitir nuevamente, salvo que lo envies a reprocesar.
 * Puedes [eliminarlo](api-factura-electronica-afip-facturacion-ventas/eliminar-comprobantes-encolados.md), en caso que no se pueda procesar.
-* Modificar la [fecha del comprobante](api-factura-electronica-afip-facturacion-ventas/cambiar-fecha-a-comprobante-encolado.md) y automáticamente [enviarlos a reprocesar](api-factura-electronica-afip-facturacion-ventas/reenviar-a-procesar-comprobante-encolado-con-error.md).&#x20;
+* Modificar la [fecha del comprobante](api-factura-electronica-afip-facturacion-ventas/cambiar-fecha-a-comprobante-encolado.md) y automáticamente [enviarlos a reprocesar](api-factura-electronica-afip-facturacion-ventas/re-enviar-a-procesar-ventas-afip-asincronicas-con-error.md).&#x20;
 
 #### ¿Qué comprobantes no pueden enviarse a la cola de procesamiento?
 
@@ -115,7 +115,7 @@ Recibís un webhook de error cuando se alcance el máximo de intentos definidos.
 
 **¿Qué debo hacer si un comprobante superó el límite de reintentos?**
 
-Debes solucionar el inconveniente y probar de enviar a re-procesar ese comprobante, usando el método de ["Reenviar a procesar, comprobante encolado con error"](api-factura-electronica-afip-facturacion-ventas/reenviar-a-procesar-comprobante-encolado-con-error.md)
+Debes solucionar el inconveniente y probar de enviar a re-procesar ese comprobante, usando el método de ["Reenviar a procesar, comprobante encolado con error"](api-factura-electronica-afip-facturacion-ventas/re-enviar-a-procesar-ventas-afip-asincronicas-con-error.md)
 
 
 

@@ -6,13 +6,13 @@ description: >-
 
 # Solicitar reporte IVA compras-ventas
 
-Mediante éste método, solicitarás el envío del reporte IVA compras-ventas a una casilla de e-mail determinada. Se permite 1 casilla solamente por solicitud.
+Mediante éste método podrás solicitar el envío del reporte IVA compras-ventas a una casilla de e-mail determinada. Se permite 1 casilla de e-mail por solicitud.
 
-## Solicitá el IVA Compras - Ventas
+## Solicita el IVA Compras - Ventas
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`micuenta/iva_compras_ventas`</mark>
 
-💡 El uso de éste método  contabiliza como un request en tu suscripción
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
 #### Request Body
 

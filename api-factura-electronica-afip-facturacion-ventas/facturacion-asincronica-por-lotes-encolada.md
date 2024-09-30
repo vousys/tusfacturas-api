@@ -41,7 +41,7 @@ Al utilizar éste servicio los comprobantes que envíes quedarán en una cola de
 
 1. La documentación de "[API Facturación AFIP](./)", para conocer cómo debe componerse el request que envíes
 2. La documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
-3. [FAQs sobre la cola de procesamiento](../faqs-or-cola-de-procesamiento.md)
+3. [FAQs sobre la cola de procesamiento](../faqs-or-ventas-asincronicas.md)
 
 {% hint style="info" %}
 ### Sugerencias para grandes volúmenes de facturación
@@ -426,7 +426,7 @@ El JSON que recibirás será similar al siguiente ejemplo:&#x20;
 | :---------: | :----: |
 | facturacion |  error |
 
-El hook de "error", te informa que el request ha sido procesado, pero se han detectado errores y no se podrá facturar. Si un comprobante se encuentra procesado con error dentro de la cola de procesamiento, puedes realizar las siguientes operaciones:  [Cambiar fecha del comprobante,](cambiar-fecha-a-comprobante-encolado.md) [re-enviar el comprobante a la cola de procesamiento](reenviar-a-procesar-comprobante-encolado-con-error.md) o [eliminar el comprobante de la cola de procesamiento](eliminar-comprobantes-encolados.md).
+El hook de "error", te informa que el request ha sido procesado, pero se han detectado errores y no se podrá facturar. Si un comprobante se encuentra procesado con error dentro de la cola de procesamiento, puedes realizar las siguientes operaciones:  [Cambiar fecha del comprobante,](cambiar-fecha-a-comprobante-encolado.md) [re-enviar el comprobante a la cola de procesamiento](re-enviar-a-procesar-ventas-afip-asincronicas-con-error.md) o [eliminar el comprobante de la cola de procesamiento](eliminar-comprobantes-encolados.md).
 
 El JSON que recibirás será similar al siguiente ejemplo y a diferencia de los anteriores, obtendrás la lista de errores detectados, dentro del campo "msg".
 

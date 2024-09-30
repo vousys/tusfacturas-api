@@ -4,13 +4,13 @@ description: >-
   el archivo pdf de tu comprobante las veces que necesites.
 ---
 
-# Re-generación del archivo PDF
+# Regenerar el archivo PDF
 
 ## Regeneración de PDFs
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`regenerar_pdf`</mark>
 
-💡 El uso de éste método  contabiliza como un request en tu suscripción&#x20;
+💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.&#x20;
 
 #### Request Body
 
