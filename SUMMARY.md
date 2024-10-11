@@ -73,6 +73,6 @@
 ***
 
 * [Términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html)
-* [Creá tu cuenta ahora](https://www.tusfacturas.app/registrarme-factura-electronica.html)
+* [Creá tu cuenta ahora](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html)
 * [Planes API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
 * [Contactános](https://www.tusfacturas.app/#contact)
