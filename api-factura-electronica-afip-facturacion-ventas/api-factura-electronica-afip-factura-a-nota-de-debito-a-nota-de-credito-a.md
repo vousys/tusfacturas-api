@@ -4,7 +4,7 @@ description: >-
   Ejemplos incluidos. Confiable desde 2015. ¡Los desarrolladores la aman!
 ---
 
-# Ejemplos de comprobantes tipo "A"
+# Ejemplos de comprobantes "A"
 
 Los comprobantes de tipo "A" (Factura A / Nota de débito A / Nota de crédito A / Factura de crédito MiPyme A / Nota de crédito MiPyme A / Nota de débito MiPyme A), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto".&#x20;
 
@@ -87,7 +87,11 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA A que no
 }
 ```
 
-### ¿Cómo enviar una factura A según mi lenguaje de programación?
+#### PDF de ejemplo de una Factura A
+
+¿Necesitas una factura de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_FACTURA\_A-00010-00000122.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+
+#### ¿Cómo enviar una factura A según mi lenguaje de programación?
 
 Podes enviar las facturas A por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos.
 
@@ -326,6 +330,8 @@ A partir del 01-07-2021, todo comprobante A que se emita a un monotributista deb
 
 {% endhint %}
 
+***
+
 ### Ejemplo de Nota de Crédito A
 
 #### ¿Qué es una nota de crédito electrónica?
@@ -428,6 +434,12 @@ Podes consultar la documentación con referencia a cada campo, [desde aquí](api
    }
 }
 ```
+
+#### PDF de ejemplo de una Nota de Crédito A
+
+¿Necesitas una Nota de Crédito A de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_NOTA\_DE\_CREDITO\_A-00010-00000006.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+
+***
 
 ### NOTA DE DEBITO A
 

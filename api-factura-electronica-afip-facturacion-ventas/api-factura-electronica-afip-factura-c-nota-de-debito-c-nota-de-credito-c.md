@@ -4,7 +4,7 @@ description: >-
   incluidos. Confiable desde 2015. ¡Los desarrolladores la aman!
 ---
 
-# Ejemplos de comprobantes tipo "C"
+# Ejemplos de comprobantes "C"
 
 Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C / Nota de crédito MiPyme C / Nota de débito MiPyme C), son aquellos que solo pueden ser emitidos por un CUIT cuya [condición frente al IVA](https://www.tusfacturas.app/que-tipo-de-comprobante-debo-emitir-segun-mi-condicion-frente-al-iva.html) sea "Monotributo" o "Exento".&#x20;
 
@@ -315,6 +315,12 @@ puts response.read_body
 Tene en cuenta que esto solo está permitido para comprobantes hasta ciertos montos. Consulta diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
 {% endhint %}
 
+#### PDF de ejemplo de una Factura C
+
+¿Necesitas una Factura C de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_FACTURA\_C-00010-00000003.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+
+***
+
 ### NOTA DE CRÉDITO C
 
 #### ¿Qué es una nota de crédito electrónica?
@@ -398,7 +404,13 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí](ap
 }
 ```
 
-### &#x20;NOTA DE DÉBITO C&#x20;
+#### PDF de ejemplo de una Nota de crédito C
+
+¿Necesitas una Nota de crédito C de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_NOTA\_DE\_CREDITO\_C-00010-00000001.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.&#x20;
+
+***
+
+### NOTA DE DÉBITO C&#x20;
 
 #### ¿Qué es una nota de débito electrónica?
 

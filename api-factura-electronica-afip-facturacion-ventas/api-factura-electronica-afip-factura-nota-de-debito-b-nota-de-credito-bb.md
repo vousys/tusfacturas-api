@@ -4,7 +4,7 @@ description: >-
   Ejemplos incluidos. Confiable desde 2015. ¡Los desarrolladores la aman!
 ---
 
-# Ejemplos de comprobantes tipo "B"
+# Ejemplos de comprobantes "B"
 
 Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito B / Factura de crédito MiPyme B / Notas de crédito MiPyme B / Nota de débito MiPyme B), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto" y se emitan a un consumidor final o un exento en IVA.&#x20;
 
@@ -69,7 +69,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
 }
 </code></pre>
 
-### ¿Cómo enviar una factura B según mi lenguaje de programación?
+#### ¿Cómo enviar una factura B según mi lenguaje de programación?
 
 Podes enviar las facturas B por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos.
 
@@ -243,6 +243,10 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
+#### PDF de ejemplo de una Factura B
+
+¿Necesitas una Factura B de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_FACTURA\_B-00010-00000167.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+
 #### Datos a tener en cuenta:
 
 {% hint style="info" %}
@@ -259,11 +263,13 @@ puts response.read_body
 Tene en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos. Consulta diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
 {% endhint %}
 
-### Ejemplo de: NOTA DE CRÉDITO B  - detallando los comprobantes que anulas.
+***
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que detalla los comprobantes asociados.
+### Notas de Crédito  B  - detallando los comprobantes que anulas.
 
-Podés consultar la documentación con referencia a cada campo, [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO B, que detalla los comprobantes asociados.
+
+Podes consultar la documentación con referencia a cada campo, [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
 
 ```json
 {
@@ -342,9 +348,15 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí](ap
 }
 ```
 
-### Ejemplo de: NOTA DE DÉBITO B - asociando períodos
+#### PDF de ejemplo de una Nota de crédito B
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO B, que no detalla los comprobantes asociados, sino qué indica su período.
+¿Necesitas una Nota de crédito B de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_NOTA\_DE\_CREDITO\_B-00010-00000005.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+
+***
+
+### Nota de débito B - asociando períodos
+
+A continuación podrás ver un ejemplo del JSON para emitir una Nota de débito B, que no detalla los comprobantes asociados, sino qué indica su período.
 
 Podés consultar la documentación con referencia a cada campo [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
 

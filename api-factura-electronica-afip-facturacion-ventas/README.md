@@ -77,9 +77,9 @@ Charset: UTF-8
 
 ### JSON de ejemplo
 
-A continuación te mostramos un ejemplo de JSON generico <mark style="color:purple;">completo con todas las posibles opciones</mark>**,** para generar un comprobante.
+A continuación te mostramos un ejemplo de JSON generico <mark style="color:purple;">completo con todas las posibles opciones</mark>**,** para generar un comprobante. Los bloques de información requeridos pueden variar según el tipo de comprobante que emitas.&#x20;
 
-Recuerda que los bloques de información requeridos pueden variar según el tipo de comprobante que emitas. Consulta las páginas de ejemplos de cada tipo de comprobante para obtener información detallada.
+Consulta la [página de ejemplos](ejemplos-de-comprobantes.md) de cada tipo de comprobante para obtener más información.
 
 {% code title="JSON" fullWidth="true" %}
 ```json
@@ -313,8 +313,8 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 {% hint style="info" %}
 **PDF**
 
-* La URL del PDF que recibis es temporal, dura solo para el día que la consultas.
-* Es importante que descargues toda la información junto con el contenido del pdf y lo almacenes en tu plataforma, ya que si si tu cuenta o suscripción no se encuentran vigentes, no podrás volver a obtenerlo. &#x20;
+* La URL del PDF que recibis es temporal,  solo sirve para el día que la consultas.
+* Es importante que descargues toda la información junto con el contenido del pdf y lo almacenes en tu plataforma, ya que si si tu cuenta o suscripción no se encuentran vigentes, no podrás volver a obtenerlo.  AFIP no genera archivos en PDF, por lo que tampoco podrás obtenerlo desde ahi.
 * Tene en cuenta que a partir del 01-07-2021, todo comprobante A que se emitan a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._ **Éste valor no debe ser enviado,** ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.
 
 
@@ -323,15 +323,15 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 
 * El CAE es el Código de Autorización Electrónico que otorga AFIP, como confirmación de la creación del comprobante. Es un dato importante para almacenar como respuesta.
 * Los CAE tienen fecha de vencimiento y se devuelve en formato dd/mm/aaaa
-* Por cuestiones de seguridad, el número de CAE es un texto y se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
+* Por cuestiones de compatibilidad, el número de CAE se envia como texto con un espacio al final, el cual sugerimos eliminar de tu lado.
 
 
 
 **AFIP CÓDIGO DE BARRAS / QR**
 
-* Por cuestiones de seguridad, el texto que se retorna en el campo afip\_codigo\_barras y afip\_qr, se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
-* Atención! El campo afip\_codigo\_barras dejará de ser enviado a partir del 01/01/2024
-* La respuesta exitosa, te incluye el texto que se necesita para armar el código QR (en caso que generes el PDF desde tu lado) .
+* Por cuestiones de compatibilidad, el texto que se retorna en el campo  afip\_qr, se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
+* El campo afip\_codigo\_barras dejará de ser enviado a partir del 01/01/2024
+* Cuando la respuesta es exitosa, podes obtener el texto que se necesita para armar el código QR, en caso que generes el PDF desde tu lado .
 
 
 
@@ -343,7 +343,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 
 **REDONDEO DE NÚMEROS / SUMATORIAS / TOTALES**
 
-* Para evitar inconsistencias en la validación de las sumatorias, te sugerimos redondear a 2 decimales los valores y aplicar el redondeo con "Round half even". Te dejamos un link para que puedas probar online éste redondeo: [https://roundingcalculator.guru/rounding-half-to-even-calculator/](https://roundingcalculator.guru/rounding-half-to-even-calculator/)
+* Para evitar inconsistencias en la validación de las sumatorias,  sugerimos redondear a 2 decimales los valores y aplicar el redondeo con "Round half even". Te dejamos un link para que puedas probar online éste redondeo: [https://roundingcalculator.guru/rounding-half-to-even-calculator/](https://roundingcalculator.guru/rounding-half-to-even-calculator/)
 * **TusFacturas.app NO válida la totalidad de los datos enviados como asi tampoco las sumatorias de los ítems que estas enviando para facturar. Es tu responsabilidad corroborar y validar éstos datos antes de enviarlos.**
 * **AFIP recibe únicamente totales**, no el detalle de los items que facturas, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica, TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
 

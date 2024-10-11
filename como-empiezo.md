@@ -289,7 +289,7 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-Haz [clic aquí ](api-factura-electronica-afip-facturacion-ventas/)para conocer el detalle de cada campo.
+Conocé desde [aquí](api-factura-electronica-afip-facturacion-ventas/) el detalle de cada campo.
 
 ### Ejemplos de como facturar una venta según su tipo / letra
 
