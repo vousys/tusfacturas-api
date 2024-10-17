@@ -36,4 +36,4 @@ Charset: **UTF-8**\
 Tipo de request : **POST**\
 &#x20;
 
-Nuestra API para AFIP ya ha sido implementada en diferentes plataformas con múltiples lenguajes (PHP, Visual basic 6.0, Ruby, NodeJS), como asi tambien en entornos AMAZON WS, Google Cloud, servidores dedicados y servidores compartidos.
+Nuestra API para AFIP ya ha sido implementada en diferentes plataformas con múltiples lenguajes (PHP, Visual basic 6.0, Ruby, Python, NodeJS), como así tambien en entornos AMAZON WS, Google Cloud, servidores dedicados y servidores compartidos.

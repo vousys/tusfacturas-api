@@ -118,5 +118,11 @@ Siempre vas a recibir los hooks independientes por cada comprobante.
 
 
 
-**¿Tenes más dudas?** Consultá más preguntas frecuentes sobre la cola de procesamiento, [desde aquí](faqs-or-ventas-asincronicas.md) o contactanos por el chat de la web [www.tusfacturas.app](https://www.tusfacturas.app)
+### **Preguntas Frecuentes**
+
+Consulta las [preguntas frecuentes](faqs-or-ventas-asincronicas.md) sobre las ventas asincrónicas.
+
+### ¿Aún te quedan dudas? ¡Contactános!
+
+En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
 

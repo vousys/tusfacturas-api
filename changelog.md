@@ -244,3 +244,8 @@ Para ésto se requiere que envien dentro del bloque "comprobante", un array con 
 
 `{"tipo_comprobante" : "FACTURA A", "punto_venta" : "145","numero" : 12313,"cuit": 111111111}`\
 \`Ya se encuentra actualizada la documentación.\
+
+
+### &#x20;¿Aún te quedan dudas? ¡Contactános!
+
+En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
