@@ -1,17 +1,17 @@
 ---
 description: >-
   Mediante éste servicio podrás consultar el estado de los servicios de
-  facturación AFIP, como así también el estado del servicio API.
+  facturación AFIP/ARCA, como así también el estado del servicio API.
 ---
 
-# Estado de los servicios AFIP
+# Estado de los servicios AFIP/ARCA
 
-## Consultá el estado de los servicios de facturación de AFIP con nuestra API
+## Consultá el estado de los servicios de facturación de AFIP/ARCA con nuestra API
 
 {% hint style="danger" %}
-**Los servicios de AFIP se caen regularmente.**
+**Los servicios de AFIP/ARCA se caen regularmente.**
 
-Tene en cuenta que todos nuestros métodos controlan internamente el estado de los servicios AFIP, y si alguno no se encuentra operativo, automáticamente vas a recibir la respuesta correspondiente en cada request que envíes, junto con su mensaje de error.
+Tene en cuenta que todos nuestros métodos controlan internamente el estado de los servicios AFIP/ARCA, y si alguno no se encuentra operativo, automáticamente vas a recibir la respuesta correspondiente en cada request que envíes, junto con su mensaje de error.
 {% endhint %}
 
 ## Consulta de estados de los servicios

@@ -1,10 +1,10 @@
 ---
 description: >-
-  La API de facturación electrónica AFIP provista por TusFacturasAPP, cuenta con
-  un SDK para que descargues desde nuestro repositorio.
+  La API de facturación electrónica AFIP/ARCA provista por TusFacturasAPP,
+  cuenta con un SDK para que descargues desde nuestro repositorio.
 ---
 
-# SDK AFIP
+# SDK AFIP/ARCA
 
 ### ¿Cómo enviar los requests según mi lenguaje de programación?
 
@@ -181,9 +181,9 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-### SDK  AFIP en PHP
+### SDK  AFIP/ARCA en PHP
 
-Descargá el SDK para emitir factura electrónica AFIP para PHP  desde nuestro repositorio GIT [https://github.com/vousys/tusfacturas](https://github.com/vousys/tusfacturas)
+Descargá el SDK para emitir factura electrónica AFIP/ARCA para PHP  desde nuestro repositorio GIT [https://github.com/vousys/tusfacturas](https://github.com/vousys/tusfacturas)
 
 ![https://github.com/vousys/tusfacturas](.gitbook/assets/Github.png)
 

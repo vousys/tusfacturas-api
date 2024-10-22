@@ -4,9 +4,9 @@ description: >-
   podes obtener información de los servicios de consulta de AFIP.
 ---
 
-# Consultas varias a servicios AFIP
+# Consultas varias a servicios AFIP/ARCA
 
-## Servicios API de consulta AFIP&#x20;
+## Servicios API de consulta AFIP/ARCA&#x20;
 
 Aquí encontrarás diferentes servicios que puedes consultar, que son provistos por AFIP, como ser:
 

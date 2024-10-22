@@ -7,7 +7,7 @@ description: >-
 
 # ¿Cómo empiezo?
 
-## Aprende cómo integrar tu software con la API de facturación electrónica AFIP
+## Aprende cómo integrar tu software con la API de facturación electrónica AFIP/ARCA
 
 [Crea una cuenta](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) en nuestra plataforma y se activará tu plan API DEV para emitir hasta 1.500 facturas electrónicos no válidas legalmente durante 1 mes, completamente gratis (exclusivo para nuevas cuentas y por única vez).
 
@@ -21,7 +21,7 @@ Una vez finalizado el período de prueba, podrás seleccionar la [suscripción A
 * Ideal para probar la integración y familiarizarte con la API.
 * Sin compromisos ni cargos adicionales.
 
-**Comenza tu prueba gratuita hoy mismo y simplifica tu facturación electrónica con la API para AFIP.**
+**Comenza tu prueba gratuita hoy mismo y simplifica tu facturación electrónica con la API para AFIP/ARCA.**
 
 [<mark style="color:purple;">**Crear mi cuenta ahora**</mark>](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html)&#x20;
 
@@ -29,23 +29,23 @@ Una vez finalizado el período de prueba, podrás seleccionar la [suscripción A
 
 ### Mientras estes en desarrollo:
 
-Para garantizar el cumplimiento legal, nuestra plataforma no dispone de un entorno de pruebas convencional. Esto significa que no podrás enlazar tu CUIT real con AFIP durante las pruebas. Esto evita inconvenientes con el fisco, ya que los comprobantes emitidos en AFIP son inmodificables e irrevocables.
+Para garantizar el cumplimiento legal, nuestra plataforma no dispone de un entorno de pruebas convencional. Esto significa que no podrás enlazar tu CUIT real con AFIP/ARCA durante las pruebas. Esto evita inconvenientes con el fisco, ya que los comprobantes emitidos en AFIP/ARCA son inmodificables e irrevocables.
 
-Sin embargo, durante las pruebas, la respuesta que recibirás de nuestra API simulará el comportamiento en producción, los campos CAE y vencimiento del CAE se retornarán vacíos y no se aplicarán las validaciones adicionales de AFIP.
+Sin embargo, durante las pruebas, la respuesta que recibirás de nuestra API simulará el comportamiento en producción, los campos CAE y vencimiento del CAE se retornarán vacíos y no se aplicarán las validaciones adicionales de AFIP/ARCA.
 
 **Para realizar las pruebas, te sugerimos:**
 
 1. Configurar tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679).
 2. Una vez finalizadas las pruebas y cuando estés listo para ir a producción, elimina desde nuestra plataforma web todos los comprobantes asociados a ese CUIT/PDV.
-3. Da de baja el CUIT/PDV ficticio y crea uno nuevo para enlazarlo con AFIP en producción.
+3. Da de baja el CUIT/PDV ficticio y crea uno nuevo para enlazarlo con AFIP/ARCA en producción.
 
 **Recorda:**
 
 * Las pruebas no afectan tu información fiscal real.
-* Los comprobantes emitidos durante las pruebas son ficticios y no se registran en AFIP.
+* Los comprobantes emitidos durante las pruebas son ficticios y no se registran en AFIP/ARCA.
 * La respuesta de la API durante las pruebas simula el comportamiento en producción.
 
-**¡Comenza a probar la integración con la API para AFIP hoy mismo y prepárate para una facturación electrónica sin complicaciones!**
+**¡Comenza a probar la integración con la API para AFIP**/ARCA **hoy mismo y prepárate para una facturación electrónica sin complicaciones!**
 
 [<mark style="color:purple;">**Crear mi cuenta ahora**</mark>](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html)&#x20;
 
@@ -295,7 +295,7 @@ Conocé desde [aquí](api-factura-electronica-afip-facturacion-ventas/) el detal
 
 <table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td> Ir a <a href="api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md">Ejemplos factura A</a></td><td></td><td></td><td><a href=".gitbook/assets/ejemplo-factura-a.webp">ejemplo-factura-a.webp</a></td><td><a href="api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md">api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md</a></td></tr><tr><td>Ir a <a href="api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md">Ejemplos factura B</a></td><td></td><td></td><td><a href=".gitbook/assets/ejemplo-factura-b (1).webp">ejemplo-factura-b (1).webp</a></td><td><a href="api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md">api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md</a></td></tr><tr><td>Ir a <a href="api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md">Ejemplos  factura C</a></td><td></td><td></td><td><a href=".gitbook/assets/ejemplo-factura-c.webp">ejemplo-factura-c.webp</a></td><td><a href="api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md">api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md</a></td></tr><tr><td>Ir a <a href="api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-electronica-afip-exportacion.md">Ejemplos factura E</a></td><td></td><td></td><td><a href=".gitbook/assets/ejemplo-factura-e.webp">ejemplo-factura-e.webp</a></td><td><a href="api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-electronica-afip-exportacion.md">api-factura-electronica-afip-factura-electronica-afip-exportacion.md</a></td></tr><tr><td>Ir a <a href="api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md">Ejemplos MiPyme</a></td><td></td><td></td><td><a href=".gitbook/assets/ejemplo-factura-mipyme.webp">ejemplo-factura-mipyme.webp</a></td><td><a href="api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md">api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md</a></td></tr></tbody></table>
 
-Conoce en detalle la [API de Facturación AFIP.](api-factura-electronica-afip-facturacion-ventas/)
+Conoce en detalle la [API de Facturación AFIP/ARCA.](api-factura-electronica-afip-facturacion-ventas/)
 
 ### ¿Aún te quedan dudas? ¡Contactános!
 
