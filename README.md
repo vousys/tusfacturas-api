@@ -10,7 +10,7 @@ TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/soft
 
 ## ¿Qué es la API para Factura Electrónica ?
 
-La [API de facturación electrónica AFIP](https://www.tusfacturas.app/api-factura-electronica-afip.html)[/ARCA](https://www.tusfacturas.app/factura-electronica-arca.html) provista por TusFacturasAPP , te permite generar de manera segura y rápida, comprobantes electrónicas válidos en AFIP Argentina. Contamos con el respaldo de un estudio impositivo que nos mantiene asesorados ante las nuevas normativas que surgen día a día en nuestro país.
+La [API de facturación electrónica AFIP](https://www.tusfacturas.app/api-factura-electronica-afip.html)[/ARCA](https://www.tusfacturas.app/factura-electronica-arca.html) provista por TusFacturasAPP , te permite generar de manera segura y rápida, comprobantes electrónicas válidos en AFIP/ARCA Argentina. Contamos con el respaldo de un estudio impositivo que nos mantiene asesorados ante las nuevas normativas que surgen día a día en nuestro país.
 
 <figure><img src=".gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
 
