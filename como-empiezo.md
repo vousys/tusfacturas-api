@@ -35,14 +35,16 @@ Sin embargo, durante las pruebas, la respuesta que recibirás de nuestra API sim
 
 **Para realizar las pruebas, te sugerimos:**
 
-1. Configurar tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679).
-2. Una vez finalizadas las pruebas y cuando estés listo para ir a producción, elimina desde nuestra plataforma web todos los comprobantes asociados a ese CUIT/PDV.
-3. Da de baja el CUIT/PDV ficticio y crea uno nuevo para enlazarlo con AFIP/ARCA en producción.
+Configurar tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679) desde plataforma web, ingresando a Menú > Mi espacio de trabajo > CUITs/PDV. Una vez hecho ésto podrás obtener las keys necesarias para utilizar la API.
+
+**Para pasar a producción:**
+
+Una vez finalizadas las pruebas y cuando estés para pasar a producción, podes optar por mantener la misma cuenta de desarrollo o crear una nueva para vos o tu cliente. Si decidís reutilizar la misma cuenta, ingresa a la plataforma web y accede a **Menú > Facturación > Mis ventas** para eliminar todos los comprobantes asociados a ese CUIT/Punto de Venta (PDV). Esto garantizará que no queden registros de prueba en el entorno de producción. Una vez que hayas hecho el enlace con AFIP/ARCA, podrás recuperar la numeración oficial desde "Menú > Facturación > Recuperar numeración desde AFIP/ARCA" para actualizar nuestro numerador interno por única vez.
 
 **Recorda:**
 
-* Las pruebas no afectan tu información fiscal real.
-* Los comprobantes emitidos durante las pruebas son ficticios y no se registran en AFIP/ARCA.
+* Las pruebas no afectan tu información fiscal real ya que el plan API DEV no te permite enlazar con AFIP/ARCA.
+* Los comprobantes emitidos durante las pruebas bajo el plan API DEV son ficticios y no se registran en AFIP/ARCA.
 * La respuesta de la API durante las pruebas simula el comportamiento en producción.
 
 **¡Comenza a probar la integración con la API para AFIP**/ARCA **hoy mismo y prepárate para una facturación electrónica sin complicaciones!**
