@@ -8,6 +8,10 @@ description: >-
 
 ## Regeneración de PDFs
 
+La funcionalidad de regeneración de PDF permite recrear el comprobante con el diseño y los datos actuales que tengas configurados en la plataforma. Esto es útil si has actualizado el logo, información de cabecera u otros elementos visuales de tu documento. Puedes realizar esta operación directamente a través de este método en la API o desde la plataforma web, siguiendo la ruta: Menú > Facturación > Mis ventas. Al seleccionar el ícono correspondiente al comprobante que deseas actualizar, verás la opción de "Regenerar PDF".
+
+
+
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`regenerar_pdf`</mark>
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.&#x20;

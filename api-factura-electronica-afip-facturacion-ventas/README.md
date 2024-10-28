@@ -51,8 +51,6 @@ Nuestro servicio API de [facturación electrónica AFIP/ARCA ](https://www.tusfa
 
 🧐 ¿Tenés alguna duda del servicio? checkea las [FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los [canales de atención](https://www.tusfacturas.app/contacto.html) que tenemos disponibles.
 
-
-
 ## Comencemos con la estructura genérica de un comprobante
 
 Llamamos "comprobante" a todo documento ya sea factura, nota de crédito, nota de débito, pedido, presupuesto y remito tanto de ventas como de compras.&#x20;
@@ -361,7 +359,9 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * Ningún comprobante puede ser modificado una vez creado.
 {% endhint %}
 
+### ¿Dónde puedo ver las ventas?
 
+Para ver las ventas emitidas desde la plataforma web, ingresa a **Menú > Facturación > Mis ventas**. Desde allí, podrás visualizar y gestionar todos los comprobantes emitidos de forma rápida y sencilla.
 
 ### Detalle de los campos a enviar dentro del bloque: "Comprobante"
 
