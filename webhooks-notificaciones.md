@@ -100,6 +100,12 @@ Una vez recibido el webhook, deberás  realizar una [consulta avanzada](api-fact
 
 [Webhook.site](https://webhook.site/) o [Pipedream.com](https://pipedream.com/) son herramientas útiles para probar webhooks rápidamente, ver cómo funcionan e inspeccionar lo que se envía, sin necesidad de codificar.
 
+
+
+### Consulta los hooks desde TusFacturasAPP
+
+Ingresando a "Menú"> "API Request" > Hooks podrás consultar los hooks que te enviamos de una determinada external reference en los últimos 3 días.
+
 ### FAQs&#x20;
 
 #### ¿Dónde configuro mi webhook?
