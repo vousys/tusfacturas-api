@@ -126,3 +126,7 @@ Podes ver ejemplos de JSON completos desde aquí:
 [Ejemplo de Nota de crédito MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md#nota-de-credito-electronica-a-mipyme-fce)
 
 [Ejemplo de Nota de crédito E](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#ejemplo-de-nota-de-debito-e)
+
+### ¿Aún te quedan dudas? ¡Contactános!
+
+En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).

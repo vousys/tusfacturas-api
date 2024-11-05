@@ -4,7 +4,7 @@ description: >-
   comprobantes que se encuentran en cola de procesamiento con error
 ---
 
-# Re-enviar a procesar ventas AFIP asincrónicas con error
+# Re-enviar a procesar ventas AFIP/ARCA asincrónicas con error
 
 Mediante éste método podrás reenviar a procesar, un comprobante que se encuentra en cola de procesamiento con error.&#x20;
 
@@ -89,3 +89,9 @@ y también recibirás un webhook, para informarte que el comprobante se ha envia
 	]
 }
 ```
+
+TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y un [software de gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).
+
+### ¿Aún te quedan dudas? ¡Contactános!
+
+En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).

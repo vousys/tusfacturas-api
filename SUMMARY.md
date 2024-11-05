@@ -27,7 +27,7 @@
   * [Consultar numeración de comprobantes.](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consultar-numeracion-de-comprobantes..md)
   * [Eliminar comprobantes encolados](api-factura-electronica-afip-facturacion-ventas/eliminar-comprobantes-encolados.md)
   * [Cambiar fecha a comprobante encolado](api-factura-electronica-afip-facturacion-ventas/cambiar-fecha-a-comprobante-encolado.md)
-  * [Re-enviar a procesar ventas AFIP asincrónicas con error](api-factura-electronica-afip-facturacion-ventas/re-enviar-a-procesar-ventas-afip-asincronicas-con-error.md)
+  * [Re-enviar a procesar ventas AFIP/ARCA asincrónicas con error](api-factura-electronica-afip-facturacion-ventas/re-enviar-a-procesar-ventas-afip-arca-asincronicas-con-error.md)
   * [Regenerar el archivo PDF](api-factura-electronica-afip-facturacion-ventas/regenerar-el-archivo-pdf.md)
   * [Reenviar comprobante a un cliente](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-or-reenviar-comprobante.md)
   * [Consultar el tope para ventas a consumidor final](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)

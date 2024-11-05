@@ -37,11 +37,6 @@ Debes tener en cuenta que la función de "reenviar comprobante" solo estará hab
 }
 ```
 {% endtab %}
-
-{% tab title="Plain Text" %}
-```
-```
-{% endtab %}
 {% endtabs %}
 {% endtab %}
 {% endtabs %}
@@ -62,3 +57,8 @@ Debes tener en cuenta que la función de "reenviar comprobante" solo estará hab
 }
 ```
 
+TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y un [software de gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).
+
+### ¿Aún te quedan dudas? ¡Contactános!
+
+En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
