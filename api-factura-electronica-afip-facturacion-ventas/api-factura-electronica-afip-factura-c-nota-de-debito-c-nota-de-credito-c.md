@@ -6,13 +6,11 @@ description: >-
 
 # Ejemplos de comprobantes "C"
 
-Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C / Nota de crédito MiPyme C / Nota de débito MiPyme C), son aquellos que solo pueden ser emitidos por un CUIT cuya [condición frente al IVA](https://www.tusfacturas.app/que-tipo-de-comprobante-debo-emitir-segun-mi-condicion-frente-al-iva.html) sea "Monotributo" o "Exento".&#x20;
+Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C / Nota de crédito MiPyme C / Nota de débito MiPyme C), son aquellos que solo pueden ser emitidos por un CUIT cuya [condición frente al IVA](https://www.tusfacturas.app/que-tipo-de-comprobante-debo-emitir-segun-mi-condicion-frente-al-iva.html) sea "Monotributo" o "Exento". No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
 
-No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
+### Ejemplo de "Factura C" AFIP/ARCA
 
-### Ejemplo de Factura "C"
-
-A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
+A continuación podrás ver un ejemplo del JSON para emitir una FACTURA C. &#x20;
 
 ```json
 {
@@ -304,20 +302,16 @@ puts response.read_body
 {% hint style="info" %}
 * Los comprobantes C no llevan IVA.
 * No sabes en qué momento emitir comprobantes de tipo C? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.&#x20;
-* Si querés enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
-
-&#x20;               Nro de documento = "0"
-
-&#x20;              Tipo de documento = "OTRO"
-
-&#x20;              En nombre, lo que tu contador/a te recomiende.
-
-Tene en cuenta que esto solo está permitido para comprobantes hasta ciertos montos. Consulta diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI,  consulta la siguiente documentación de "[Facturas a Consumidor final sin especificar datos](facturas-a-consumidor-final-sin-especificar-datos.md)"
 {% endhint %}
 
 #### PDF de ejemplo de una Factura C
 
 ¿Necesitas una Factura C de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_FACTURA\_C-00010-00000003.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+
+#### Detalle de campos a enviar para una Factura C AFIP/ARCA
+
+Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
 
 ***
 
@@ -329,9 +323,7 @@ Es un comprobante dígital legalmente equivalente a la [nota de crédito](https:
 
 #### Ejemplo de: NOTA DE CRÉDITO C  - detallando los comprobantes que anulas.
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO C, que detalla los comprobantes asociados.
-
-Podés consultar la documentación con referencia a cada campo, [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO C, que detalla los comprobantes asociados.&#x20;
 
 ```json
 {
@@ -408,6 +400,10 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí](ap
 
 ¿Necesitas una Nota de crédito C de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_NOTA\_DE\_CREDITO\_C-00010-00000001.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.&#x20;
 
+#### Detalle de campos a enviar para una Factura C AFIP/ARCA
+
+Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
+
 ***
 
 ### NOTA DE DÉBITO C&#x20;
@@ -419,8 +415,6 @@ Es un comprobante dígital legalmente equivalente a la [nota de débito](https:/
 #### Ejemplo de: NOTA DE DÉBITO C - asociando períodos
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE DEBITO C, que no detalla los comprobantes asociados, sino que indíca su período, tal como se especifica aquí.
-
-Podés consultar la documentación con referencia a cada campo, [desde aquí.](api-factura-electronica-afip-notas-credito-debito.md)
 
 ```json
 {
@@ -488,7 +482,9 @@ Podés consultar la documentación con referencia a cada campo, [desde aquí.](a
 }
 ```
 
+#### Detalle de campos a enviar para una Nota de débito C AFIP/ARCA
 
+Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
 
 ### Ejemplo de llamada en PHP
 

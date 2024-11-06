@@ -6,11 +6,9 @@ description: >-
 
 # Ejemplos de comprobantes "A"
 
-Los comprobantes de tipo "A" (Factura A / Nota de débito A / Nota de crédito A / Factura de crédito MiPyme A / Nota de crédito MiPyme A / Nota de débito MiPyme A), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto".&#x20;
+Los comprobantes de tipo "A" (Factura A / Nota de débito A / Nota de crédito A / Factura de crédito MiPyme A / Nota de crédito MiPyme A / Nota de débito MiPyme A), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto".  No sabes en qué momento emitir comprobantes de tipo **A**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante A.&#x20;
 
-No sabes en qué momento emitir comprobantes de tipo **A**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante A.&#x20;
-
-### Ejemplo de FACTURA A&#x20;
+### Ejemplo de "FACTURA A" AFIP/ARCA&#x20;
 
 A continuación podrás ver un ejemplo del JSON para emitir una FACTURA A que no aplica a la RG5329. Conocé cuándo aplicar la RG5329, desde nuestras [FAQs](../faqs-or-preguntas-frecuentes.md)
 
@@ -90,6 +88,10 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA A que no
 #### PDF de ejemplo de una Factura A
 
 ¿Necesitas una factura de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_FACTURA\_A-00010-00000122.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+
+#### Detalle de campos a enviar para una Factura A AFIP/ARCA
+
+Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
 
 #### ¿Cómo enviar una factura A según mi lenguaje de programación?
 
@@ -332,7 +334,7 @@ A partir del 01-07-2021, todo comprobante A que se emita a un monotributista deb
 
 ***
 
-### Ejemplo de Nota de Crédito A
+### Ejemplo de "Nota de Crédito A" AFIP/ARCA&#x20;
 
 #### ¿Qué es una nota de crédito electrónica?
 
@@ -341,8 +343,6 @@ Es un comprobante dígital legalmente equivalente a la [nota de crédito](https:
 #### Enviá una NOTA DE CRÉDITO A  - detallando comprobantes.
 
 A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO A, que detalla los comprobantes asociados.
-
-Podes consultar la documentación con referencia a cada campo, [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
 
 ```json
 {
@@ -439,6 +439,10 @@ Podes consultar la documentación con referencia a cada campo, [desde aquí](api
 
 ¿Necesitas una Nota de Crédito A de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_NOTA\_DE\_CREDITO\_A-00010-00000006.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
+#### Detalle de campos a enviar para una Nota de crédito A AFIP/ARCA
+
+Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
+
 ***
 
 ### NOTA DE DEBITO A
@@ -449,9 +453,7 @@ Es un comprobante dígital legalmente equivalente a la [nota de débito](https:/
 
 #### Ejemplo de: NOTA DE DÉBITO A - asociando períodos
 
-A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE DÉBITO A, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)
-
-Podes consultar la documentación con referencia a cada campo, [desde aquí](api-factura-electronica-afip-notas-credito-debito.md).
+A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE DÉBITO A, que no detalla los comprobantes asociados, sino que [indíca su período, tal como se especifica aquí.](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#comprobantes-asociados-por-periodo)&#x20;
 
 ```json
 {
@@ -538,7 +540,11 @@ Podes consultar la documentación con referencia a cada campo, [desde aquí](api
 }
 ```
 
+#### Detalle de campos a enviar para una "Nota de débito A" AFIP/ARCA
 
+Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
+
+***
 
 ### Ejemplo de cómo emitir una factura A que percibe IVA por la RG5329.&#x20;
 

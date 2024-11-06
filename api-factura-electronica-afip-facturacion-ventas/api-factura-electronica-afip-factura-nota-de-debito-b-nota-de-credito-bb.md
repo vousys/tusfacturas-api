@@ -6,13 +6,11 @@ description: >-
 
 # Ejemplos de comprobantes "B"
 
-Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito B / Factura de crédito MiPyme B / Notas de crédito MiPyme B / Nota de débito MiPyme B), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto" y se emitan a un consumidor final o un exento en IVA.&#x20;
+Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito B / Factura de crédito MiPyme B / Notas de crédito MiPyme B / Nota de débito MiPyme B), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto" y se emitan a un consumidor final o un exento en IVA.  No sabes en qué momento emitir comprobantes de tipo **B**? Consulta [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
 
-No sabes en qué momento emitir comprobantes de tipo **B**? Consulta [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
+### Ejemplo de Factura B AFIP/ARCA
 
-### Ejemplo de Factura B
-
-A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
+A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B.&#x20;
 
 <pre class="language-json"><code class="lang-json"><strong>{
 </strong>   "apitoken":"xxxx",
@@ -69,7 +67,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B. Podes
 }
 </code></pre>
 
-#### ¿Cómo enviar una factura B según mi lenguaje de programación?
+#### ¿Cómo enviar una factura B AFIP/ARCA, según mi lenguaje de programación?
 
 Podes enviar las facturas B por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos.
 
@@ -243,24 +241,20 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-#### PDF de ejemplo de una Factura B
+#### PDF de ejemplo de una Factura B AFIP/ARCA
 
 ¿Necesitas una Factura B de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_FACTURA\_B-00010-00000167.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+
+#### Detalle de campos a enviar para una Factura B AFIP/ARCA
+
+Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
 
 #### Datos a tener en cuenta:
 
 {% hint style="info" %}
 * En los comprobantes B el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviarlo siempre SIN IVA el precio.
 * ¿No sabes en qué momento emitir comprobantes de tipo B? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
-* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI, podes enviar:
-
-&#x20;               Nro de documento = "0"
-
-&#x20;              Tipo de documento = "OTRO"
-
-&#x20;              En nombre, lo que tu contador/a te recomiende.
-
-Tene en cuenta que ésto solo está permitido para comprobantes hasta ciertos montos. Consulta diariamente el monto actualizado por AFIP con el método de: [Consulta de topes CF](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+* Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI,  consulta la siguiente documentación de "[Facturas a Consumidor final sin especificar datos](facturas-a-consumidor-final-sin-especificar-datos.md)"
 {% endhint %}
 
 ***
@@ -352,6 +346,10 @@ Podes consultar la documentación con referencia a cada campo, [desde aquí](api
 
 ¿Necesitas una Nota de crédito B de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_NOTA\_DE\_CREDITO\_B-00010-00000005.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
+#### Detalle de campos a enviar para una Nota de crédito B AFIP/ARCA
+
+Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
+
 ***
 
 ### Nota de débito B - asociando períodos
@@ -436,6 +434,12 @@ Podés consultar la documentación con referencia a cada campo [desde aquí](api
 }
 
 ```
+
+#### Detalle de campos a enviar para una Nota de débito B AFIP/ARCA
+
+Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
+
+
 
 
 
