@@ -1,12 +1,12 @@
 ---
 description: >-
   TusFacturasAPP: La solución SaaS líder para automatizar tu facturación
-  electrónica. Integración API AFIP asincrónica.
+  electrónica. Integración API AFIP/ARCA asincrónica.
 ---
 
 # Facturación asincrónica e  individual
 
-TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
+TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP/ARCA.
 
 <figure><img src="../.gitbook/assets/157.webp" alt="SDK AFIP. TusFacturasAPP API Factura Electronica AFIP. AFIP WS"><figcaption></figcaption></figure>
 
@@ -92,12 +92,12 @@ Tipo de dato esperado: JSON&#x20;
 
 #### :red\_circle: ERROR: Error de validación de los datos enviados :
 
-Si el request enviado, posee errores en la validación o formato de los campos enviados, pero  cumple con los siguientes requisitos básicos:
+Si el request que enviaste posee errores de formato de los campos enviados, pero  cumple con los siguientes requisitos básicos:
 
 * Tu CUIT/PDV tiene una dirección de webhook valida
 * Tu request cuenta con el campo "external\_reference"&#x20;
 
-Recibirás la respuesta al instante y también se te notificará vía webhook.&#x20;
+Ese comprobante sera rechazado y recibirás una respuesta al instante ademas de recibir un webhook con el error.&#x20;
 
 Ejemplo de un request, cuya external\_reference no es válida:
 
@@ -140,40 +140,11 @@ Ejemplo del hook que recibirás:
 }
 ```
 
-En cambio, si tu request **no cumple con los requisitos básicos** previamente mencionados, solo recibirás al instante la respuesta y no se te notificará por webhook (el comprobante no entrará en la cola de procesamiento)
-
-```json
-{
-	"error": "S",
-	"errores": [
-		"Cuando se envia un comprobante a la cola, debes enviar una referencia externa en el campo external_reference.",
-		"La external reference enviada, posee caracteres no validos.",
-		"Error al crear al cliente . No se podra generar el comprobante. Revise los datos enviados."
-	],
-	"error_cod": [],
-	"error_details": [
-		{
-			"code": "TFC-8002",
-			"text": "Cuando se envia un comprobante a la cola, debes enviar una referencia externa en el campo external_reference."
-		},
-		{
-			"code": "TFC-8002",
-			"text": "La external reference enviada, posee caracteres no validos."
-		},
-		{
-			"code": "TFC-6001",
-			"text": "Error al crear al cliente . No se podra generar el comprobante. Revise los datos enviados."
-		}
-	],
-	"external_reference": ""
-}
-```
-
 
 
 #### :green\_circle: ACEPTADO: Cuando el request se ha aceptado para su procesamiento:
 
-En caso que no se detecten errores tempranos, en la etapa de validación de los datos enviados, obtendrás la siguiente respuesta de manera instantánea y recibirás un [webhook](../webhooks-notificaciones.md)  para informarte que se ha encolado, como se explica a continuación.
+En caso que no se detecten errores de formato básico en la validación inicial, obtendrás la siguiente respuesta de manera instantánea, ademas de recibir un [webhook](../webhooks-notificaciones.md)  para informarte que se ha encolado, cómo se explica a continuación.
 
 Ejemplo :
 
