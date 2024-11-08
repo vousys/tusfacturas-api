@@ -1,22 +1,24 @@
 ---
 description: >-
   Consulta la información básica de tu cliente, desde la constancia de
-  inscripción de AFIP, y obtené los datos en formato JSON.
+  inscripción de AFIP/ARCA, y obtené los datos en formato JSON.
 ---
 
 # Consultar datos de un CUIT, desde la constancia de inscripción
 
 {% hint style="info" %}
-**IMPORTANTE**: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP, el servicio de CONSULTA DE CONSTANCIA DE INSCRIPCIÓN. Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 5](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
+**IMPORTANTE**: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP/ARCA, el servicio de CONSULTA DE CONSTANCIA DE INSCRIPCIÓN. Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 5](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
 {% endhint %}
 
-## Obtener datos de un CUIT
+## Consultar datos de un CUIT en AFIP/ARCA
+
+Mediante éste método podrás consultar la info que AFIP/ARCA tiene almacenada en su base de datos con relación a un CUIT. Ésta info es lo mismo que visualizas cuando haces una [consulta web a la constancia de inscripción](https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do).  Tene en cuenta que la información provista en éste método no tiene relación con la info de tus clientes que tengas almacenados en TusFacturasAPP.
+
+#### ¿A donde enviar el request?
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`clientes/afip-info`</mark>
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
-
-
 
 #### Request Body
 
@@ -28,7 +30,7 @@ description: >-
 | apitoken  | string | Tus credenciales de acceso. |
 
 {% tabs %}
-{% tab title="200 " %}
+{% tab title="¿Qué te retorna la llamada? " %}
 {% code title="JSON" %}
 ```
 {
@@ -62,7 +64,7 @@ description: >-
 {% endtab %}
 {% endtabs %}
 
-## Ejemplo del JSON a enviar <a href="#estructura-del-json-a-enviar" id="estructura-del-json-a-enviar"></a>
+#### Ejemplo del JSON a enviar <a href="#estructura-del-json-a-enviar" id="estructura-del-json-a-enviar"></a>
 
 {% code title="JSON" %}
 ```
@@ -78,13 +80,13 @@ description: >-
 ```
 {% endcode %}
 
-### Estructura de "Cliente" <a href="#estructura-de-cliente" id="estructura-de-cliente"></a>
+### Estructura del bloque "Cliente" <a href="#estructura-de-cliente" id="estructura-de-cliente"></a>
 
 | `documento_tipo` | Valores Permitidos: **CUIT**                                    |
 | ---------------- | --------------------------------------------------------------- |
 | `documento_nro`  | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
 
-### Ejemplo del JSON de respuesta
+#### Ejemplo del JSON de respuesta
 
 ```
 {
@@ -114,9 +116,9 @@ description: >-
 }
 ```
 
-### Posibles valores, de la respuesta obtenida.
+#### "condicion\_impositiva": Posibles valores de la respuesta obtenida desde AFIP/ARCA.
 
-condicion\_impositiva puede retornar los siguientes valores:
+condicion\_impositiva puede retornar alguno de los siguientes valores:
 
 * MONOTRIBUTO
 * EXENTO
