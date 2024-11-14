@@ -19,7 +19,7 @@
   * [Ejemplos de comprobantes "A"](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
   * [Ejemplos de comprobantes "B"](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md)
   * [Ejemplos de comprobantes "C"](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)
-  * [Ejemplos con bonificaciones](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c-1.md)
+  * [Ejemplos con bonificaciones](api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md)
   * [¿Factura MiPyme o Factura común?](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-or-como-se-si-emitir-una-factura-mipyme-o-una-comun.md)
   * [Facturas a consumidor final, sin especificar datos](api-factura-electronica-afip-facturacion-ventas/facturas-a-consumidor-final-sin-especificar-datos.md)
   * [Comprobantes MiPyme: ¿Corresponde emitirlos?](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md)
