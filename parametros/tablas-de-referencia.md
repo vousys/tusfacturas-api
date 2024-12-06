@@ -8,7 +8,7 @@ description: >-
 
 Obtené todos éstos datos haciendo un request a cada método, tomando como ejemplo el siguiente request:
 
-<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)`METODO`
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)`METODO`
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
@@ -38,7 +38,7 @@ Obtené todos éstos datos haciendo un request a cada método, tomando como ejem
 
 &#x20;Consulta todos los tipos de documento disponibles haciendo una petición a:&#x20;
 
-<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)documentos\_tipos
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)documentos\_tipos
 
 | Tipo de documento                   | Valor a enviar |
 | ----------------------------------- | -------------- |
@@ -54,7 +54,7 @@ Obtené todos éstos datos haciendo un request a cada método, tomando como ejem
 
 Consulta toda la información disponible haciendo una petición a:&#x20;
 
-<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)alicuotas\_iva
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)alicuotas\_iva
 
 | Alicuota       | Valor a enviar |
 | -------------- | -------------- |
@@ -69,7 +69,7 @@ Consulta toda la información disponible haciendo una petición a:&#x20;
 
 Consulta toda información disponible haciendo una petición a:&#x20;
 
-<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)provincias
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)provincias
 
 | Provincia                       |   | Valor a enviar |
 | ------------------------------- | - | -------------- |
@@ -100,11 +100,11 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 | TIERRA DEL FUEGO                |   | 23             |
 | TUCUMAN                         |   | 24             |
 
-### Condiciones de venta
+### Condiciones de venta / pago
 
 Consulta toda la información disponible haciendo una petición a:&#x20;
 
-<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)condiciones\_venta
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)condiciones\_venta
 
 | Condición de Venta               | Dias para vto comprobante (fecha fc) | Valor a enviar |
 | -------------------------------- | ------------------------------------ | -------------- |
@@ -128,7 +128,7 @@ Consulta toda la información disponible haciendo una petición a:&#x20;
 
 Consulta toda información disponible haciendo una petición a:&#x20;
 
-<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)condiciones\_iva
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)condiciones\_iva
 
 | Condición frente al IVA | Valor a enviar |
 | ----------------------- | -------------- |
@@ -145,7 +145,7 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 
 <mark style="color:green;">`POST`</mark>
 
-&#x20;[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)comprobantes\_tipos
+&#x20;[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)comprobantes\_tipos
 
 | FACTURA A                                     |
 | --------------------------------------------- |
@@ -182,7 +182,7 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 
 <mark style="color:green;">`POST`</mark>
 
-[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)rg\_especiales\_regimenes
+[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)rg\_especiales\_regimenes
 
 | Regimen                                                           | id   | Descripcion                                                                               |
 | ----------------------------------------------------------------- | ---- | ----------------------------------------------------------------------------------------- |
@@ -215,7 +215,7 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 
 Consulta toda información disponible haciendo una petición a:&#x20;
 
-<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)monedas
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)monedas
 
 | Moneda                  |   | Valor a enviar |
 | ----------------------- | - | -------------- |
@@ -239,7 +239,7 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 
 Consulta toda información disponible haciendo una petición a:&#x20;
 
-<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)idiomas
+<mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)idiomas
 
 | Idioma  |   | Valor a enviar |
 | ------- | - | -------------- |
@@ -308,7 +308,7 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 
 <mark style="color:green;">`POST`</mark>&#x20;
 
-[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)tributos\_percepciones\_tipos
+[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)tributos\_percepciones\_tipos
 
 | Si queres enviar..                   | Valor a enviar |
 | ------------------------------------ | -------------- |
@@ -322,7 +322,7 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 
 <mark style="color:green;">`POST`</mark>&#x20;
 
-[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas\_referencia/)tributos\_percepciones\_regimenes
+[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)tributos\_percepciones\_regimenes
 
 | Tipo de tributo                      | Régimen                                | Valor a enviar |
 | ------------------------------------ | -------------------------------------- | -------------- |
