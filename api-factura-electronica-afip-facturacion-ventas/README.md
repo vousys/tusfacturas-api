@@ -314,6 +314,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 **PDF**
 
 * La URL del PDF que recibis es temporal,  solo sirve para el día que la consultas.
+* La URL del ticket sera devuelta para todos los modelos de PDF que seleccionas desde tu punto de venta, con excepción del modelo "1.1 - Modelo Viejo".
 * Es importante que descargues toda la información junto con el contenido del pdf y lo almacenes en tu plataforma, ya que si si tu cuenta o suscripción no se encuentran vigentes, no podrás volver a obtenerlo.  AFIP no genera archivos en PDF, por lo que tampoco podrás obtenerlo desde ahi.
 * Tene en cuenta que a partir del 01-07-2021, todo comprobante A que se emitan a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._ **Éste valor no debe ser enviado,** ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.
 
