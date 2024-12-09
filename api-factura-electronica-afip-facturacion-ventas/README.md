@@ -345,6 +345,9 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 **FECHA**
 
 * Una vez emitido un comprobante (factura, nota de crédito o débito) en AFIP/ARCA con una fecha determinada, no podrás emitir otro comprobante del mismo punto de venta con una fecha anterior. Esta restricción es impuesta por AFIP/ARCA y no puede ser modificada, incluso mediante la emisión de notas de crédito o débito.
+* AFIP/ARCA ademas, tiene otra validación para la fecha del comprobante:&#x20;
+  * Para actividades vinculadas a servicios, AFIP/ARCA te permitirá facturar con una anterioridad de hasta 10 días, si no has emitido ningún comprobante con fecha posterior a esa.
+  * Para actividades relacionadas a la comercialización de bienes,  el plazo es de 5 días hacia atrás, si no has emitido ningún comprobante con fecha posterior a esa.
 
 
 
