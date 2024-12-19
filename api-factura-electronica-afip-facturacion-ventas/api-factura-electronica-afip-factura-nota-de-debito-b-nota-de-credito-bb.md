@@ -243,9 +243,15 @@ puts response.read_body
 
 #### PDF de ejemplo de una Factura B AFIP/ARCA
 
-¿Necesitas una Factura B de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_FACTURA\_B-00010-00000167.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+¿Necesitas una Factura B de ejemplo? Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
-#### Detalle de campos a enviar para una Factura B AFIP/ARCA
+Descargar el modelo de Factura "B":&#x20;
+
+[Modelo de factura B](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__FACTURA_B-00010-00000167.pdf) hasta 31/12/2024  -> [Descárga](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__FACTURA_B-00010-00000167.pdf)&#x20;
+
+Modelo de factura B vigente desde el 01/01/2025   -> En desarrollo
+
+#### Detalle de campos a enviar para una Factura B AFIP/ARCA:
 
 Podes consultar la documentación con referencia a cada campo, [desde aquí](./).
 
@@ -344,7 +350,7 @@ Podes consultar la documentación con referencia a cada campo, [desde aquí](api
 
 #### PDF de ejemplo de una Nota de crédito B
 
-¿Necesitas una Nota de crédito B de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_NOTA\_DE\_CREDITO\_B-00010-00000005.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+¿Necesitas una Nota de crédito B de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__NOTA_DE_CREDITO_B-00010-00000005.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
 #### Detalle de campos a enviar para una Nota de crédito B AFIP/ARCA
 
