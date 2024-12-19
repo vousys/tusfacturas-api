@@ -6,6 +6,31 @@ description: >-
 
 # Changelog
 
+### 19 de diciembre de 2024
+
+Se reglamentó la RG 5614/2024 AFIP/ARCA que establece un cambio en los PDF de los comprobantes de tipo "B"
+
+**¿Cuándo entra en vigencia?**
+
+a) A partir del 1° de enero de 2025: las “[empresas grandes](https://servicioscf.afip.gob.ar/facturadecreditoelectronica/Listado-RFCE-Mi-PyMe.asp)” (Art. 2 RG 4.367).
+
+b) El resto de los contribuyentes alcanzados: podrán discriminar el IVA desde el 1° de enero de 2025, siendo obligatorio su cumplimiento a partir del 1 de abril del 2025.
+
+**¿Qué cambia?**
+
+* Se agrega éste titulo: Régimen de Transparencia Fiscal al Consumidor (Ley 27.743)
+* Se agrega ésta información: "IVA Contenido" y  “Otros Impuestos Nacionales Indirectos
+
+**¿Cómo se debe implementar?**\
+La normativa indica qué **obligatoriamente** debe colocarse en forma vertical u horizontal, en el espacio inferior izquierdo el: Título: “Régimen de Transparencia Fiscal al Consumidor (Ley 27.743)”. Debajo del mismo se deberá mostrar el dato “IVA Contenido” con la sumatoria del IVA aplicado y debajo el dato “Otros Impuestos Nacionales Indirectos” (Ej: impuestos internos).\
+Algo importante que no menciona la normativa ni la [imagen de referencia publicada por AFIP/ARCA](https://servicioscf.afip.gob.ar/publico/sitio/contenido/novedad/ver.aspx?id=4448) de "modelo": El detalle de conceptos facturados (items/productos/servicios) no sufre modificaciones en relación a lo que hoy se visualiza dentro de los comprobantes tipo "B". Esto significa que deben seguir mostrandose con el precio final (sin detallar las alícuotas de IVA aplicadas, como si lo hacen los comprobantes de tipo "A")
+
+**Normativa publicada:**\
+Accede al texto completo de la normativa publicada en el Boletín Oficial, el 12 de diciembre de 2024 desde aquí:\
+[https://www.boletinoficial.gob.ar/detalleAviso/primera/318151/20241213](https://www.boletinoficial.gob.ar/detalleAviso/primera/318151/20241213)\
+Comunicación de AFIP/ARCA en su portal:\
+[https://servicioscf.afip.gob.ar/publico/sitio/contenido/novedad/ver.aspx?id=4448](https://servicioscf.afip.gob.ar/publico/sitio/contenido/novedad/ver.aspx?id=4448)
+
 ### 19 de septiembre de 2024
 
 Se crea la [API para tablas de referencia](parametros/tablas-de-referencia.md).
