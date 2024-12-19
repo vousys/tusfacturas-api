@@ -438,7 +438,7 @@ comprobante: {
 {% hint style="info" %}
 **Datos a tener en cuenta:**
 
-* Si el cliente ya existe en tu base de clientes de TusFacturasAPP, será actualizado con los nuevos datos, salvo los campos de: tipo de documento, número de documento y condición ante el IVA.
+* Si el cliente ya existe en tu base de clientes/proveedores en TusFacturasAPP por código o tipo + número de documento, la info será actualizada con los nuevos datos que envies, con excepción de los campos:  tipo de documento, número de documento y condición ante el IVA.
 * Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI,  consulta la siguiente documentación de "[Facturas a Consumidor final sin especificar datos](facturas-a-consumidor-final-sin-especificar-datos.md)"
 * Para casos de clientes del exterior, que posean **pasaporte**, tene en cuenta que AFIP/ARCA sólo permite el envío de números.&#x20;
 {% endhint %}
