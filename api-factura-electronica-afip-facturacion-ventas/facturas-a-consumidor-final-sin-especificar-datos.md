@@ -19,7 +19,6 @@ Datos a tener en cuenta:
 
 
 * En nombre y dirección, indicá lo que tu contador/a te recomiende. Según la provincia que selecciones los contadores luego tienen que hacer la declaración de Ingresos Brutos. Desde el lado técnico de la plataforma se requiere un texto.
-* En los PDF y a AFIP/ARCA el campo "número de documento" se envía con el valor "1"
 * Solo podrás facturar "sin indicar el documento del comprador" hasta ciertos montos, ya que AFIP/ARCA actualiza éste dato regularmente. TusFacturasAPP cuenta con un método que podes consultar 1 vez por día que te permite obtener el monto actualizado. [Consultá la documentación: los topes de venta a CF](https://developers.tusfacturas.app/api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final) &#x20;
 {% endhint %}
 
