@@ -16,17 +16,15 @@ description: >-
 A partir del 01/04/2022 ésta consulta te devolverá también, todos aquellos comprobantes que se encuentren en cola de procesamiento ( pendientes de procesamiento, o  procesados por error).
 {% endhint %}
 
-#### Cómo llamar a la API?
 
-## Consulta de comprobantes avanzada
+
+## Consulta avanzada
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/consulta_avanzada`
 
 💡 El uso de éste método no contabiliza como un request en tu suscripción
 
-
-
-### Estructura general para todo tipo de consulta avanzada
+#### Estructura general para todo tipo de consulta avanzada
 
 #### Request Body
 
@@ -40,18 +38,9 @@ A partir del 01/04/2022 ésta consulta te devolverá también, todos aquellos co
 | limite         | int    | Valor entero númerico.                                                                       |
 | pagina         | int    | Valor entero númerico.                                                                       |
 
-{% tabs %}
-{% tab title="200 Devuelve un array con cada " %}
-```
-```
-{% endtab %}
-{% endtabs %}
-
 #### Ejemplo del JSON de respuesta:
 
 La consulta te devolverá un array, compuesto por cada comprobante, que tendrá la misma estructura que te entrega la consulta de[ comprobante simple.](api-factura-electronica-afip-consulta-de-comprobantes.md)&#x20;
-
-Ej:
 
 ```json
 {
@@ -277,7 +266,7 @@ Ej:
 | total            | Campo numérico, que indica la cantidad de registros encontrados con los parámetros indicados, sin aplicarle la paginación ni limitación. (Dato disponible a partir del 01/04/2022) |
 | comprobantes     | Array conteniendo cada uno de los comproantes encontrados, según estructura que se detalla en la [consulta simple.](api-factura-electronica-afip-consulta-de-comprobantes.md)      |
 
-## ¿Cómo realizar una consulta avanzada por fecha?
+## Consulta avanzada por fecha
 
 La búsqueda por fecha te devuelve todos aquellos comprobantes enviados (ya sea porque se han emitido o porque se encuentren en la cola de facturación) en la fecha consultada.&#x20;
 
