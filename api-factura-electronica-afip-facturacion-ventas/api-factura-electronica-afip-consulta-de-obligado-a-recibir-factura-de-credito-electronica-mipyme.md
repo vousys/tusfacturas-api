@@ -25,10 +25,12 @@ El objetivo principal es el impulso al financiamiento de las micro, pequeñas y 
 
 
 {% hint style="info" %}
-IMPORTANTE: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP, el servicio de "**Webservice Registro de Facturas de Crédito Electrónica MiPyMEs "** . Te indicamos cómo hacerlo en el [instructivo de integración con AFIP : Paso 6](https://youtu.be/\_YSRksd0\_A0)
+IMPORTANTE: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP, el servicio de "**Webservice Registro de Facturas de Crédito Electrónica MiPyMEs "** . Te indicamos cómo hacerlo en el [instructivo de integración con AFIP : Paso 6](https://youtu.be/_YSRksd0_A0)
 {% endhint %}
 
-## Consulta de obligado a recibir MiPyme
+
+
+### Consulta de obligado a recibir MiPyme
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/requiere_fec`
 
@@ -45,39 +47,6 @@ IMPORTANTE: Para poder realizar ésta consulta, deberás tener agregado en tu cu
 | apikey    | number | Tus credenciales de acceso                                                     |
 | usertoken | string | Tus credenciales de acceso                                                     |
 | apitoken  | string | <p>Tus credenciales de acceso</p><p>\</p>                                      |
-
-{% tabs %}
-{% tab title="200 " %}
-{% code title="JSON" %}
-```
-En caso de no encontrar errores obtendrás una respuesta 
-como la siguiente:
-
-{
-	"error": "N",
-	"errores": [],
-	"rta": "",
-	"esta_obligado": "S",
-	"importe_desde": 100000
-}
-
-En caso de detectar errores, obtendrás una respuesta 
-como la siguiente:
-
-{
-	"error": "S",
-	"errores": ["El CUIT enviado INF es invalido."],
-	"rta": "", 
-}
-
-
-
-
-
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
 
 ### Ejemplo del JSON a enviar:
 

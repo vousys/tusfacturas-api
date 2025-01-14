@@ -6,7 +6,7 @@ description: >-
 
 # Webhooks (notificaciones)
 
-![](.gitbook/assets/image.png)
+<figure><img src=".gitbook/assets/69-4.png" alt=""><figcaption></figcaption></figure>
 
 ### ¿Qué es un WebHook?
 

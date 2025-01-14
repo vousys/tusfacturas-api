@@ -20,7 +20,7 @@ Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez
 
 Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
 
-### ¿Cómo crear una Nota de crédito o una Nota de débito**?**
+### ¿Cómo crear una Nota de crédito o una Nota de débit&#x6F;**?**
 
 Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
 
@@ -85,6 +85,8 @@ comprobante: {
   }
 ```
 
+
+
 Información de los campos a enviar:
 
 <table data-header-hidden><thead><tr><th></th><th width="140.66666666666669" align="center">REQUERIDO</th><th></th></tr></thead><tbody><tr><td><code>tipo_comprobante</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfabético. Valores esperados según <a href="../parametros/tablas-de-referencia.md#tipos-de-comprobantes">tabla de tipos de comprobante.</a></td></tr><tr><td><code>punto_venta</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico entero. Longitud máxima 5 digitos.<br><strong>Ejemplo: 3</strong></td></tr><tr><td><code>numero</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></td></tr><tr><td><code>cuit</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico, sin puntos ni guiones. Es el CUIT de quien emitió el comprobante asociado. Siempre debe ser el mismo de quien está facturando.<br><strong>Ejemplo: 1111111111</strong></td></tr><tr><td><code>comprobante_fecha</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>La fecha del comprobante en formato dd/mm/aaaa. El día y el mes deben tener 2 dígitos.</td></tr></tbody></table>
@@ -93,7 +95,7 @@ Información de los campos a enviar:
 
 A partir del 01/04/2021, AFIP habilitó la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados, para todo comprobante de tipo tradicional (A,B,C)
 
-Para utilizar ésta herramienta, **no se debe enviar el bloque de "**_**comprobantes asociados"**_ **y en su lugar debe enviarse un bloque llamado **_**"comprobantes\_asociados\_periodo",**_ el cual debe tener la siguiente estructura:
+Para utilizar ésta herramienta, **no se debe enviar el bloque de "**_**comprobantes asociados"**_ **y en su lugar debe enviarse un bloque llamado&#x20;**_**"comprobantes\_asociados\_periodo",**_ el cual debe tener la siguiente estructura:
 
 ```
  comprobante: {

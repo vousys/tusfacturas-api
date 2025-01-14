@@ -1,22 +1,10 @@
 ---
 description: >-
-  Mediante ésta consulta, podrás obtener todos los comprobantes enviados, según
+  Mediante ésta consulta podrás obtener todos los comprobantes enviados, según
   determinadas condiciones de búsqueda.
 ---
 
 # Consulta avanzada de comprobantes enviados
-
-### Métodos de búsqueda disponibles:
-
-1. &#x20;Todos los comprobantes de una [determinada fecha](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-fecha)[ ](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-fecha):arrow\_right:
-2. &#x20;Todos los comprobantes de un mismo tipo (Ej: FACTURA A ) entre un determinado [rango numérico](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-rango-de-numeros) (Ej: 00000010 al 00000050). [ ](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-rango-de-numeros):arrow\_right:
-3. Todos los comprobantes de una misma [external reference](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference) :arrow\_right: &#x20;
-
-{% hint style="info" %}
-A partir del 01/04/2022 ésta consulta te devolverá también, todos aquellos comprobantes que se encuentren en cola de procesamiento ( pendientes de procesamiento, o  procesados por error).
-{% endhint %}
-
-
 
 ## Consulta avanzada
 
@@ -24,9 +12,9 @@ A partir del 01/04/2022 ésta consulta te devolverá también, todos aquellos co
 
 💡 El uso de éste método no contabiliza como un request en tu suscripción
 
-#### Estructura general para todo tipo de consulta avanzada
 
-#### Request Body
+
+#### Estructura general para todo tipo de consulta avanzada
 
 | Name           | Type   | Description                                                                                  |
 | -------------- | ------ | -------------------------------------------------------------------------------------------- |
@@ -40,7 +28,7 @@ A partir del 01/04/2022 ésta consulta te devolverá también, todos aquellos co
 
 #### Ejemplo del JSON de respuesta:
 
-La consulta te devolverá un array, compuesto por cada comprobante, que tendrá la misma estructura que te entrega la consulta de[ comprobante simple.](api-factura-electronica-afip-consulta-de-comprobantes.md)&#x20;
+La consulta te devolverá un array con cada comprobante encontrado (emitido o pendiente de emisión), que tendrá la misma estructura que te entrega la consulta de[ comprobante simple.](api-factura-electronica-afip-consulta-de-comprobantes.md)&#x20;
 
 ```json
 {
@@ -268,15 +256,15 @@ La consulta te devolverá un array, compuesto por cada comprobante, que tendrá 
 
 ## Consulta avanzada por fecha
 
-La búsqueda por fecha te devuelve todos aquellos comprobantes enviados (ya sea porque se han emitido o porque se encuentren en la cola de facturación) en la fecha consultada.&#x20;
+La búsqueda por fecha te devuelve todos aquellos comprobantes enviados para la fecha consultada.&#x20;
 
-Debés tener en cuenta que  la información obtenida, será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso y  el ordenamiento de los datos que te devuelve es: del último emitido al primero.&#x20;
+Debes tener en cuenta que  la información obtenida, será la relacionada al punto de venta desde el cual estás haciendo la solicitud mediante tus credenciales de acceso y  el ordenamiento de los datos que te devuelve es: del último emitido al primero.&#x20;
 
 {% hint style="info" %}
 A partir del 01/05/2022, está consultá comenzará a ser paginada, con un límite máximo de registros por página de 1,000.&#x20;
 {% endhint %}
 
-#### Ejemplo de JSON a enviar para consultar por fecha un comprobante:
+#### :rocket: Ejemplo de JSON a enviar para consultar por fecha un comprobante:
 
 Tipo de datos: **JSON**\
 Charset: **UTF-8**
@@ -311,9 +299,7 @@ Charset: **UTF-8**
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `fecha`     | <p>Campo fecha en formato dd/mm/aaaa<br><strong>Ejemplo: 20/03/2022</strong></p>                                                                                                      |
 
-
-
-#### Que te devolverá ?
+Que te devolverá ?
 
 ```json
 {
@@ -330,7 +316,7 @@ Charset: **UTF-8**
 }
 ```
 
-## ¿Cómo realizar una consulta avanzada, por rango de números?
+## Consulta avanzada  por rango de números
 
 Ésta búsqueda te permite obtener todos los comprobantes enviados, ya sea porque se han emitido o porque se encuentren en la cola de facturación, dentro de un rango numérico.&#x20;
 
@@ -399,11 +385,7 @@ A partir del 01/05/2022, está consultá comenzará a ser paginada, con un lími
 
 
 
-## ¿Cómo realizar una consulta avanzada, por external reference?
-
-{% hint style="info" %}
-Ésta consulta estará disponible a partir del 01/04/2022&#x20;
-{% endhint %}
+## Consulta avanzada  por external reference
 
 Ésta búsqueda te permite obtener todos los comprobantes enviados, ya sea porque se han emitido o porque se encuentren en la cola de facturación, de una determinada external\_reference.&#x20;
 
@@ -424,9 +406,7 @@ Debés tener en cuenta que  la información obtenida, será la relacionada al pu
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `operacion`          | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p> |
 
-
-
-#### Ejemplo del JSON a enviar :
+#### :rocket: Ejemplo del JSON a enviar :
 
 ```json
 {

@@ -17,22 +17,38 @@ La consulta de comprobantes es una funcionalidad que te permite buscar y obtener
 
 **En resumen,** la consulta de comprobantes es una herramienta esencial para gestionar tu facturación electrónica de manera eficiente y tener un control total sobre tus operaciones.
 
-### Servicio API de consulta de comprobantes
 
-Mediante éste método, podrás consultar la información asociada de un determinado comprobante.&#x20;
 
 {% hint style="info" %}
-Es importante que descargues toda la información, junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
+Es importante que descargues toda la información junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
 {% endhint %}
 
 Tipo de datos: **JSON**\
 Charset: **UTF-8**
 
-## Consulta individual de comprobante
+## Consulta individual de comprobantes
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/consulta`&#x20;
 
 💡 El uso de éste método no contabiliza como un request en tu suscripción
+
+
+
+#### :rocket:  Ejemplo de JSON a enviar :
+
+```json
+{
+"usertoken" :  "xxxx",
+"apikey"    :  "xxxx",
+"apitoken"  :  "xxxx",
+"comprobante":  {
+                "tipo":                     "NOTA DE DEBITO B",
+                "operacion":                "V",
+                "punto_venta":              "2",
+                "numero":                   "6"
+        }
+}
+```
 
 #### Request Body
 
@@ -50,28 +66,6 @@ Charset: **UTF-8**
 | `operacion`   | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p>                                   |
 | `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
 | `numero`      | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
-
-#### Ejemplo de JSON a enviar :
-
-```json
-{
-"usertoken" :  "xxxx",
-"apikey"    :  "xxxx",
-"apitoken"  :  "xxxx",
-"comprobante":  {
-                "tipo":                     "NOTA DE DEBITO B",
-                "operacion":                "V",
-                "punto_venta":              "2",
-                "numero":                   "6"
-        }
-}
-```
-
-
-
-{% hint style="info" %}
-Los datos devueltos por éste método mantienen la misma estructura que los enviados para generar un comprobante.
-{% endhint %}
 
 #### Ejemplo del JSON de respuesta:
 

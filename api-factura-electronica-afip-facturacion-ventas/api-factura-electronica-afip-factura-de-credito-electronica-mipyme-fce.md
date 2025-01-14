@@ -27,7 +27,7 @@ Los Comprobantes MiPyme AFIP son una modalidad de facturación electrónica simp
 
 ### **¿Qué diferencia las MiPyme de las facturas electrónicas comunes?**
 
-* **Beneficios fiscales:** Las MiPyMEs que emiten Comprobantes MiPyme pueden acceder a ciertos beneficios fiscales, como la **reducción de alícuotas de IVA** y la **exención de retenciones de Ganancias**.
+**Beneficios fiscales:** Las MiPyMEs que emiten Comprobantes MiPyme pueden acceder a ciertos beneficios fiscales, como la **reducción de alícuotas de IVA** y la **exención de retenciones de Ganancias**.
 
 ### **¿Quiénes pueden emitir Comprobantes MiPyme?**
 
@@ -44,7 +44,7 @@ Ten en cuenta que éste tipo de comprobantes MiPyme,  requieren de un tratamient
 
 Para más información acerca de los comprobantes MiPyme, sugerimos leer la información provista por  AFIP, en el [micrositio de Facturas de crédito MiPyme](https://servicioscf.afip.gob.ar/facturadecreditoelectronica/)
 
-### API AFIP para Comprobantes MiPyme&#x20;
+### API AFIP/ARCA para Comprobantes MiPyme&#x20;
 
 **En esta página encontrarás:**
 
@@ -66,7 +66,7 @@ Consultá la descripción completa del servicio [API Facturación AFIP](./).
 
 #### Estructura del bloque "rg\_especiales"
 
-El bloque de "rg\_especiales" debe especificar el [regimen al que pertenece](../parametros/tablas-de-referencia.md#regimenes-posibles-para-el-bloque-rg\_especiales) éste comprobante y enviar información asociada a éste regimen, dentro del bloque "datos".
+El bloque de "rg\_especiales" debe especificar el [regimen al que pertenece](../parametros/tablas-de-referencia.md#regimenes-posibles-para-el-bloque-rg_especiales) éste comprobante y enviar información asociada a éste regimen, dentro del bloque "datos".
 
 {% code title="Ejemplo del JSON" %}
 ```

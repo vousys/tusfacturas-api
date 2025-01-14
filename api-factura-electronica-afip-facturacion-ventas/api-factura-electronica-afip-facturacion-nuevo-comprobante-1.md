@@ -24,7 +24,7 @@ Te sugerimos leer primero:&#x20;
 
 ### **Facturación asincrónica e individual**&#x20;
 
-Al utilizar nuestro servicio API de facturación AFIP asincrónica e individual,  los comprobantes que emitas quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada, de ésta manera no se traban tus procesos de facturación si los servicios de AFIP no se encuentran disponibles. &#x20;
+Al utilizar nuestro servicio API de facturación AFIP/ARCA asincrónica e individual,  los comprobantes que emitas quedarán en una cola de procesamiento de TusFacturasAPP. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada, de ésta manera no se traban tus procesos de facturación si los servicios de AFIP no se encuentran disponibles. &#x20;
 
 ### ¿Cómo funciona el modo asincrónico de facturación individual?
 
@@ -87,6 +87,8 @@ Tipo de dato esperado: JSON&#x20;
 | apikey      | string | Tus credenciales de acceso                                                         |
 | comprobante | object | Estructura de "comprobante" según se informa en el apartado de ["facturacion"](./) |
 | cliente     | object | Estructura de "Cliente", según se informa en el apartado de ["facturacion"](./)    |
+
+
 
 ### **¿Que te retornaremos ?**
 

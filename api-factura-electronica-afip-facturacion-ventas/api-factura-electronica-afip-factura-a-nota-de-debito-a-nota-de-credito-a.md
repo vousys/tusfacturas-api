@@ -6,9 +6,11 @@ description: >-
 
 # Ejemplos de comprobantes "A"
 
-Los comprobantes de tipo "A" (Factura A / Nota de débito A / Nota de crédito A / Factura de crédito MiPyme A / Nota de crédito MiPyme A / Nota de débito MiPyme A), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto".  No sabes en qué momento emitir comprobantes de tipo **A**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante A.&#x20;
+Los comprobantes de tipo "A", como son la Factura A / Nota de débito A / Nota de crédito A / Factura de crédito MiPyme A / Nota de crédito MiPyme A / Nota de débito MiPyme A, son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto".&#x20;
 
-### Ejemplo de "FACTURA A" AFIP/ARCA&#x20;
+&#x20;No sabes en qué momento emitir comprobantes de tipo **A**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante A.&#x20;
+
+### :rocket: Ejemplo de "FACTURA A" AFIP/ARCA&#x20;
 
 A continuación podrás ver un ejemplo del JSON para emitir una FACTURA A que no aplica a la RG5329. Conocé cuándo aplicar la RG5329, desde nuestras [FAQs](../faqs-or-preguntas-frecuentes.md)
 
@@ -85,9 +87,11 @@ A continuación podrás ver un ejemplo del JSON para emitir una FACTURA A que no
 }
 ```
 
+
+
 #### PDF de ejemplo de una Factura A
 
-¿Necesitas una factura de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_FACTURA\_A-00010-00000122.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+¿Necesitas una factura de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__FACTURA_A-00010-00000122.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
 #### Detalle de campos a enviar para una Factura A AFIP/ARCA
 
@@ -327,7 +331,7 @@ puts response.read_body
 #### Datos a tener en cuenta:
 
 {% hint style="info" %}
-A partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._ **Éste dato **<mark style="background-color:yellow;">**no debe ser enviado**</mark>** en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.**
+A partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._ **Éste dato&#x20;**<mark style="background-color:yellow;">**no debe ser enviado**</mark>**&#x20;en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.**
 
 
 {% endhint %}
@@ -437,7 +441,7 @@ A continuación podrás ver un ejemplo del JSON para emitir una NOTA DE CRÉDITO
 
 #### PDF de ejemplo de una Nota de Crédito A
 
-¿Necesitas una Nota de Crédito A de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466\_\_NOTA\_DE\_CREDITO\_A-00010-00000006.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+¿Necesitas una Nota de Crédito A de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__NOTA_DE_CREDITO_A-00010-00000006.pdf). Para personalizar el diseño, accede a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
 #### Detalle de campos a enviar para una Nota de crédito A AFIP/ARCA
 

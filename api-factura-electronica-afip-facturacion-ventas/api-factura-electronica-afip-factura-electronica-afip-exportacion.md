@@ -39,7 +39,9 @@ Están obligadas a emitir Facturas "E" todas las empresas argentinas que realice
 
 ### **¿Cómo emitir Facturas "E"?**
 
-La emisión de Facturas "E" se realiza de forma electrónica a través de **AFIP** o mediante **software homologado por la AFIP, como lo es**[ **TusFacturas.app**](https://www.tusfacturas.app).
+La emisión de Facturas "E" se realiza de forma electrónica a través de **AFIP** o mediante **software homologado por la AFIP, como lo es**[ **TusFacturas.app**](https://www.tusfacturas.app) **y únicamente de manera instantánea.**
+
+
 
 ### ¿Cómo crear una Comprobantes de exportacion "E"**?**
 
@@ -52,7 +54,9 @@ La emisión de Facturas "E" se realiza de forma electrónica a través de **AFIP
 
 #### **Emisión simplificada de Comprobantes "E":**
 
-Para emitir Comprobantes Electrónicos de Exportación ("E"), solo debes **agregar el bloque "fex" al request** que construyas, con la siguiente estructura :
+Para emitir Comprobantes Electrónicos de Exportación ("E"), solo debes **agregar el bloque "fex" al request** que construyas, con la siguiente estructura&#x20;
+
+
 
 #### Ejemplo de JSON para FACTURA E
 

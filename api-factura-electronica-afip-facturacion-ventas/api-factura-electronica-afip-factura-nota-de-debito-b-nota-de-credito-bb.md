@@ -8,7 +8,9 @@ description: >-
 
 Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito B / Factura de crédito MiPyme B / Notas de crédito MiPyme B / Nota de débito MiPyme B), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto" y se emitan a un consumidor final o un exento en IVA.  No sabes en qué momento emitir comprobantes de tipo **B**? Consulta [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
 
-### Ejemplo de Factura B AFIP/ARCA
+
+
+### :rocket: Ejemplo de Factura B AFIP/ARCA
 
 A continuación podrás ver un ejemplo del JSON para emitir una FACTURA B.&#x20;
 

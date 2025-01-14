@@ -118,7 +118,9 @@ En caso que necesites asistencia, podes [contactarnos](https://www.tusfacturas.a
 }
 ```
 
-Podes enviarlo por CURL, o por tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos.
+Podes enviarlo por CURL, o por tu lenguaje de programación favorito.&#x20;
+
+A continuación te mostramos algunos ejemplos. Para conocer el detalle de cada campo,  accede desde [aquí](api-factura-electronica-afip-facturacion-ventas/) a la documentación.
 
 {% tabs %}
 {% tab title="CURL" %}
@@ -290,8 +292,6 @@ puts response.read_body
 ```
 {% endtab %}
 {% endtabs %}
-
-Conocé desde [aquí](api-factura-electronica-afip-facturacion-ventas/) el detalle de cada campo.
 
 ### Ejemplos de como facturar una venta según su tipo / letra
 
