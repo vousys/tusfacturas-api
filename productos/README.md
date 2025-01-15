@@ -4,7 +4,7 @@ description: >-
   productos, incluida en nuestra API para facturación AFIP.
 ---
 
-# Productos
+# 💎 Productos
 
 ### **Nuestra API de productos le permite:**
 

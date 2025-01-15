@@ -1,20 +1,20 @@
 ---
 description: >-
-  Servicio API de TusFacturasAPP para emitir Facturas A de AFIP/ARCA. Confiable
+  Servicio API de TusFacturasAPP para emitir Facturas B de AFIP/ARCA. Confiable
   desde 2015. ¡Los desarrolladores la aman!
 ---
 
-# Factura A
+# Factura B
 
 ### Endpoints
 
-Factura A emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
+Factura B emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
 
 {% hint style="info" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo`</mark>
 {% endhint %}
 
-Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
+Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
 
 {% hint style="info" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;background-color:purple;">`nuevo_encola`</mark>
@@ -22,85 +22,67 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 
 
 
-### JSON para generar una Factura A en AFIP/ARCA
+### JSON para generar una Factura B en AFIP/ARCA
 
 ```json
 {
-   "usertoken":"xxxx",
-   "apikey":"xxx",
    "apitoken":"xxxx",
+   "usertoken":"xxxx",
+   "apikey":"xxxx",
    "cliente":{
-      "documento_tipo":"CUIT",
-      "documento_nro":"30712293841",
-      "razon_social":"VOUSYS TusFacturasAPP",
-      "email":"a@a.com",
-      "domicilio":"AV.LIBERTADOR 571",
+      "documento_tipo":"DNI",
+      "condicion_iva":"CF",
+      "domicilio":"Av Sta Fe 23132",
+      "condicion_pago":"201",
+      "documento_nro":"111132333",
+      "razon_social":"Juan Pedro KJL",
       "provincia":"2",
-      "envia_por_mail":"S",
-      "condicion_pago":"211",
-      "condicion_iva":"RI"
+      "email":"email@dominio.com",
+      "envia_por_mail":"N",
+       "rg5329": "N"
    },
    "comprobante":{
-      "fecha":"20/03/2018",
-      "tipo":"FACTURA A",
-      "vencimiento":"26/03/2023",
-      "external_reference": "ABC444",
+      "rubro":"Sevicios web",
+      "tipo":"FACTURA B",
+      "numero":2134,
+      "bonificacion":0,
       "operacion":"V",
-      "moneda":"DOL",
-      "cotizacion": 1234.55,
-      "punto_venta":"0002",
-      "numero":"00000012",
-      "periodo_facturado_desde":"28/02/2018",
-      "periodo_facturado_hasta":"28/02/2018",
-      "rubro":"Alimentos",
-      "rubro_grupo_contable":"Alimentos",
+      "moneda":"PES",
+      "cotizacion": 1,
       "detalle":[
          {
-            "cantidad":"1",
+            "cantidad":1,
+            "afecta_stock":"S",
+            "actualiza_precio":"S",
+            "bonificacion_porcentaje":0,
             "producto":{
-               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
-               "unidad_bulto":"1",
-               "lista_precios":"Lista de precios API 3",
-               "codigo":"16098",
-               "precio_unitario_sin_iva":"100",
-               "alicuota":"21",
-               "rg5329":"N"
-            },
-            "leyenda":"Enviadas en cajas separadas"
+               "descripcion":"Hosting pagina web ",
+               "codigo":37,
+               "lista_precios":"standard",
+               "leyenda":"",
+               "unidad_bulto":1,
+               "alicuota":21,
+               "actualiza_precio":"S",
+               "rg5329": "N",
+               "precio_unitario_sin_iva":114.88
+            }
          }
       ],
-      "bonificacion":"0.00",
-      "leyenda_gral":" ",
-      "tributos":[
-         {
-            "tipo":6,
-            "regimen":2,
-            "base_imponible":100,
-            "alicuota":10,
-            "total":10
-         },
-         {
-            "tipo":7,
-            "regimen":5,
-            "base_imponible":200,
-            "alicuota":10,
-            "total":20
-         }
-      ],
-      "impuestos_internos":"0",
-      "impuestos_internos_base":"0",
-      "impuestos_internos_alicuota":"0",
-      "total":"151",
-      "comprobantes_asociados":[
-         
-      ]
+      "fecha":"28/03/2018",
+      "vencimiento":"26/03/2023",
+      "rubro_grupo_contable":"Sevicios",
+      "total":139.0,
+      "cotizacion":1,
+      "moneda":"PES",
+      "punto_venta":3,
+      "tributos":[]
    }
 }
 ```
 
-### ¿Cómo enviar una factura A según mi lenguaje de programación?
+### ¿Cómo enviar una factura B según mi lenguaje de programación?
 
-Podes enviar las facturas A por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado anteriormente.
+Podes enviar las facturas B por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado anteriormente.
 
 {% tabs %}
 {% tab title="CURL" %}
@@ -210,24 +192,23 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-### Parámetros para crear una Factura A&#x20;
+### Parámetros para armar el JSON&#x20;
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro.
 
-### PDF de ejemplo de una Factura A
+### PDF de ejemplo de una Factura B
 
-¿Necesitas una factura de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__FACTURA_A-00010-00000122.pdf). Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+¿Necesitas una factura de ejemplo? [Descárgala ahora.](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__FACTURA_B-00010-00000167.pdf) Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
-### ¿Quién genera una factura A?
+### ¿Quién genera una factura B?
 
-Conocé [desde aqui](../que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una factura A.
+Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una factura B.
 
-#### Datos a tener en cuenta:
+### Datos a tener en cuenta:
 
 {% hint style="info" %}
-A partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._ **Éste dato&#x20;**<mark style="background-color:yellow;">**no debe ser enviado**</mark>**&#x20;en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.**
-
-
+* En los comprobantes B el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviar los productos con el precio SIN IVA y su respectiva alícuota de IVA.
+* Si queres enviar un comprobante a un consumidor final sin especificar su nombre y DNI,  consulta la siguiente documentación de "[Facturas a Consumidor final sin especificar datos](../api-factura-electronica-afip-facturacion-ventas/facturas-a-consumidor-final-sin-especificar-datos.md)"
 {% endhint %}
 
 ***

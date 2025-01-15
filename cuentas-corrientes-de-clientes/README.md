@@ -4,7 +4,7 @@ description: >-
   TusFacturasAPP. ¡Simplifica tu gestión!
 ---
 
-# Cuentas corrientes de clientes
+# 📓 Cuentas corrientes de clientes
 
 ### **¿Qué es una cuenta corriente de cliente?**
 

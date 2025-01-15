@@ -6,13 +6,13 @@ description: >-
 
 # Ejemplos de comprobantes "C"
 
-Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C / Nota de crédito MiPyme C / Nota de débito MiPyme C), son aquellos que solo pueden ser emitidos por un CUIT cuya [condición frente al IVA](https://www.tusfacturas.app/que-tipo-de-comprobante-debo-emitir-segun-mi-condicion-frente-al-iva.html) sea "Monotributo" o "Exento". No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.
+Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C / Nota de crédito MiPyme C / Nota de débito MiPyme C), son aquellos que solo pueden ser emitidos por un CUIT cuya [condición frente al IVA](https://www.tusfacturas.app/que-tipo-de-comprobante-debo-emitir-segun-mi-condicion-frente-al-iva.html) sea "Monotributo" o "Exento". No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.
 
 ### ¿Cómo crear comprobantes de tipo "C"?
 
-* Ejemplo de [Factura C](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-2.md)
-* Ejemplo de [Nota de crédito C](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-6.md)
-* Ejemplo de [Nota de débito C](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-10.md)
+* Ejemplo de [Factura C](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-2.md)
+* Ejemplo de [Nota de crédito C](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-6.md)
+* Ejemplo de [Nota de débito C](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-10.md)
 
 ***
 

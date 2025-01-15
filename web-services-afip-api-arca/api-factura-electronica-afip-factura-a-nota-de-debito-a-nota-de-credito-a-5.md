@@ -1,20 +1,20 @@
 ---
 description: >-
-  Servicio API de TusFacturasAPP para emitir Facturas B de AFIP/ARCA. Confiable
-  desde 2015. ¡Los desarrolladores la aman!
+  Servicio API de TusFacturasAPP para emitir notas de crédito B de AFIP/ARCA.
+  Confiable desde 2015. ¡Los desarrolladores la aman!
 ---
 
-# Factura B
+# Nota de crédito B
 
 ### Endpoints
 
-Factura B emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
+Nota de crédito B emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
 
 {% hint style="info" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo`</mark>
 {% endhint %}
 
-Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
+Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
 
 {% hint style="info" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;background-color:purple;">`nuevo_encola`</mark>
@@ -22,67 +22,88 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 
 
 
-### JSON para generar una Factura B en AFIP/ARCA
+### JSON para generar una Nota de crédito B en AFIP/ARCA con detalle de comprobantes anulados
 
 ```json
 {
-   "apitoken":"xxxx",
-   "usertoken":"xxxx",
+   "usertoken":"xxxxx",
    "apikey":"xxxx",
+   "apitoken":"xxxxx",
    "cliente":{
       "documento_tipo":"DNI",
-      "condicion_iva":"CF",
-      "domicilio":"Av Sta Fe 23132",
-      "condicion_pago":"201",
-      "documento_nro":"111132333",
-      "razon_social":"Juan Pedro KJL",
+      "documento_nro":"12345678",
+      "razon_social":"VOUSYS TusFacturasAPP",
+      "email":"a@a.com",
+      "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
-      "email":"email@dominio.com",
-      "envia_por_mail":"N",
-       "rg5329": "N"
+      "envia_por_mail":"S",
+      "condicion_pago":"211",
+      "condicion_iva":"CF"
    },
    "comprobante":{
-      "rubro":"Sevicios web",
-      "tipo":"FACTURA B",
-      "numero":2134,
-      "bonificacion":0,
+      "fecha":"20/03/2018",
+      "vencimiento":"26/03/2023",
+      "tipo":"NOTA DE CREDITO B",
       "operacion":"V",
+      "punto_venta":"0002",
+      "numero":"00000012",
       "moneda":"PES",
       "cotizacion": 1,
+      "periodo_facturado_desde":"28/02/2018",
+      "periodo_facturado_hasta":"28/02/2018",
+      "rubro":"Alimentos",
+      "rubro_grupo_contable":"Alimentos",
       "detalle":[
          {
-            "cantidad":1,
-            "afecta_stock":"S",
-            "actualiza_precio":"S",
-            "bonificacion_porcentaje":0,
+            "cantidad":"1",
             "producto":{
-               "descripcion":"Hosting pagina web ",
-               "codigo":37,
-               "lista_precios":"standard",
-               "leyenda":"",
-               "unidad_bulto":1,
-               "alicuota":21,
-               "actualiza_precio":"S",
-               "rg5329": "N",
-               "precio_unitario_sin_iva":114.88
-            }
+               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"16098",
+               "precio_unitario_sin_iva":"100",
+               "alicuota":"-1"
+            },
+            "leyenda":""
+         },
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"p2",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"160398",
+               "precio_unitario_sin_iva":"10",
+               "alicuota":"21"
+            },
+            "leyenda":""
          }
       ],
-      "fecha":"28/03/2018",
-      "vencimiento":"26/03/2023",
-      "rubro_grupo_contable":"Sevicios",
-      "total":139.0,
-      "cotizacion":1,
-      "moneda":"PES",
-      "punto_venta":3,
-      "tributos":[]
+      "bonificacion":"0.00",
+      "leyenda_gral":" ",
+      "tributos":[
+         
+      ],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":"112.1",
+      "comprobantes_asociados":[
+         {
+            "tipo_comprobante":"FACTURA B",
+            "punto_venta":"145",
+            "numero":12313,
+            "comprobante_fecha":"07/07/2018",
+            "cuit":1111111111111
+         }
+      ]
    }
 }
 ```
 
-### ¿Cómo enviar una factura B según mi lenguaje de programación?
+### ¿Cómo enviar una nota de crédito B según mi lenguaje de programación?
 
-Podes enviar las facturas B por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado anteriormente.
+Podes enviar las notas de crédito B por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado arriba.
 
 {% tabs %}
 {% tab title="CURL" %}
@@ -192,24 +213,21 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-### Parámetros para armar el JSON&#x20;
+### Parámetros para crear una Nota de crédito B&#x20;
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro.
 
-### PDF de ejemplo de una Factura B
+### PDF de ejemplo de una Nota de crédito B
 
-¿Necesitas una factura de ejemplo? [Descárgala ahora.](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__FACTURA_B-00010-00000167.pdf) Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+¿Necesitas una Nota de Crédito B de ejemplo? [Descárgala ahora.](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__NOTA_DE_CREDITO_B-00010-00000005.pdf) Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
-### ¿Quién genera una factura B?
+### ¿Qué es una nota de crédito B?
 
-Conocé [desde aqui](../que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una factura B.
+Conocé  que es una[ nota de crédito B](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md).
 
-### Datos a tener en cuenta:
+### ¿Cuándo generar una nota de crédito B?
 
-{% hint style="info" %}
-* En los comprobantes B el IVA se suma al total del producto, pero no aparecerá desglozado en la factura, ya que tu cliente no lo puede discriminar. Vos debes enviar los productos con el precio SIN IVA y su respectiva alícuota de IVA.
-* Si queres enviar un comprobante a un consumidor final sin especificar su nombre y DNI,  consulta la siguiente documentación de "[Facturas a Consumidor final sin especificar datos](../api-factura-electronica-afip-facturacion-ventas/facturas-a-consumidor-final-sin-especificar-datos.md)"
-{% endhint %}
+Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una nota de crédito B.
 
 ***
 

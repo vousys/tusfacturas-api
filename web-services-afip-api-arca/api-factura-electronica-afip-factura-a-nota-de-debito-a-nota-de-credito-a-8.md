@@ -1,20 +1,20 @@
 ---
 description: >-
-  Servicio API de TusFacturasAPP para emitir notas de crédito B de AFIP/ARCA.
+  Servicio API de TusFacturasAPP para emitir notas de débito A de AFIP/ARCA.
   Confiable desde 2015. ¡Los desarrolladores la aman!
 ---
 
-# Nota de crédito B
+# Nota de débito A
 
 ### Endpoints
 
-Nota de crédito B emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
+Nota de débito A emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
 
 {% hint style="info" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo`</mark>
 {% endhint %}
 
-Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
+Nota de débito A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
 
 {% hint style="info" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;background-color:purple;">`nuevo_encola`</mark>
@@ -22,7 +22,7 @@ Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electr
 
 
 
-### JSON para generar una Nota de crédito B en AFIP/ARCA con detalle de comprobantes anulados
+### JSON para generar una Nota de débito A en AFIP/ARCA con detalle de comprobantes cancelados
 
 ```json
 {
@@ -30,25 +30,24 @@ Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electr
    "apikey":"xxxx",
    "apitoken":"xxxxx",
    "cliente":{
-      "documento_tipo":"DNI",
-      "documento_nro":"12345678",
+      "documento_tipo":"CUIT",
+      "documento_nro":"30712293841",
       "razon_social":"VOUSYS TusFacturasAPP",
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
       "envia_por_mail":"S",
       "condicion_pago":"211",
-      "condicion_iva":"CF"
+      "condicion_iva":"RI",
+      "rg5329":"N"
    },
    "comprobante":{
       "fecha":"20/03/2018",
       "vencimiento":"26/03/2023",
-      "tipo":"NOTA DE CREDITO B",
+      "tipo":"NOTA DE DEBITO A",
       "operacion":"V",
       "punto_venta":"0002",
       "numero":"00000012",
-      "moneda":"PES",
-      "cotizacion": 1,
       "periodo_facturado_desde":"28/02/2018",
       "periodo_facturado_hasta":"28/02/2018",
       "rubro":"Alimentos",
@@ -62,7 +61,8 @@ Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electr
                "lista_precios":"Lista de precios API 3",
                "codigo":"16098",
                "precio_unitario_sin_iva":"100",
-               "alicuota":"-1"
+               "alicuota":"-1",
+               "rg5329":"N"
             },
             "leyenda":""
          },
@@ -74,7 +74,8 @@ Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electr
                "lista_precios":"Lista de precios API 3",
                "codigo":"160398",
                "precio_unitario_sin_iva":"10",
-               "alicuota":"21"
+               "alicuota":"21",
+               "rg5329":"N"
             },
             "leyenda":""
          }
@@ -82,15 +83,28 @@ Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electr
       "bonificacion":"0.00",
       "leyenda_gral":" ",
       "tributos":[
-         
+         {
+            "tipo":6,
+            "regimen":2,
+            "base_imponible":100,
+            "alicuota":10,
+            "total":10
+         },
+         {
+            "tipo":7,
+            "regimen":5,
+            "base_imponible":200,
+            "alicuota":10,
+            "total":20
+         }
       ],
       "impuestos_internos":"0",
       "impuestos_internos_base":"0",
       "impuestos_internos_alicuota":"0",
-      "total":"112.1",
+      "total":"142.1",
       "comprobantes_asociados":[
          {
-            "tipo_comprobante":"FACTURA B",
+            "tipo_comprobante":"NOTA DE CREDITO A",
             "punto_venta":"145",
             "numero":12313,
             "comprobante_fecha":"07/07/2018",
@@ -101,9 +115,96 @@ Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electr
 }
 ```
 
-### ¿Cómo enviar una nota de crédito B según mi lenguaje de programación?
+### JSON para generar una Nota de débito A en AFIP/ARCA asociando periodos
 
-Podes enviar las notas de crédito B por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado arriba.
+```json
+{
+   "usertoken":"xxxxx",
+   "apikey":"xxxx",
+   "apitoken":"xxxxx",
+   "cliente":{
+      "documento_tipo":"CUIT",
+      "documento_nro":"30712293841",
+      "razon_social":"VOUSYS",
+      "email":"a@a.com",
+      "domicilio":"AV.LIBERTADOR 571",
+      "provincia":"2",
+      "envia_por_mail":"S",
+      "condicion_pago":"211",
+      "condicion_iva":"RI",
+      "rg5329":"N"
+   },
+   "comprobante":{
+      "fecha":"20/03/2018",
+      "vencimiento":"26/03/2023",
+      "tipo":"NOTA DE DEBITO A",
+      "operacion":"V",
+      "punto_venta":"0002",
+      "numero":"00000012",
+      "periodo_facturado_desde":"28/02/2018",
+      "periodo_facturado_hasta":"28/02/2018",
+      "rubro":"Alimentos",
+      "rubro_grupo_contable":"Alimentos",
+      "detalle":[
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"16098",
+               "precio_unitario_sin_iva":"100",
+               "alicuota":"-1",
+               "rg5329":"N"
+            },
+            "leyenda":""
+         },
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"p2",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"160398",
+               "precio_unitario_sin_iva":"10",
+               "alicuota":"21",
+               "rg5329":"N"
+            },
+            "leyenda":""
+         }
+      ],
+      "bonificacion":"0.00",
+      "leyenda_gral":" ",
+      "tributos":[
+         {
+            "tipo":6,
+            "regimen":2,
+            "base_imponible":100,
+            "alicuota":10,
+            "total":10
+         },
+         {
+            "tipo":7,
+            "regimen":5,
+            "base_imponible":200,
+            "alicuota":10,
+            "total":20
+         }
+      ],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":"142.1",
+       "comprobantes_asociados_periodo": {
+        "fecha_desde"   :    "20/11/2020",
+        "fecha_hasta"  :    "25/11/2020"  
+   }
+}
+```
+
+### ¿Cómo enviar una nota de débito A según mi lenguaje de programación?
+
+Podes enviar las notas de débito A por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado arriba.
 
 {% tabs %}
 {% tab title="CURL" %}
@@ -213,21 +314,23 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-### Parámetros para crear una Nota de crédito B&#x20;
+### Parámetros para crear una Nota de débito A&#x20;
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro.
 
-### PDF de ejemplo de una Nota de crédito B
+### PDF de ejemplo de una Nota de débito A
 
-¿Necesitas una Nota de Crédito B de ejemplo? [Descárgala ahora.](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__NOTA_DE_CREDITO_B-00010-00000005.pdf) Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+¿Necesitas una Nota de débito A de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__NOTA_DE_CREDITO_A-00010-00000006.pdf). Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
-### ¿Qué es una nota de crédito B?
+### ¿Qué es una nota de débito A?
 
-Conocé  que es una[ nota de crédito B](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md).
+Conoce  que es una[ nota de débito A](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md).
 
-### ¿Cuándo generar una nota de crédito B?
+### ¿Cuándo generar una nota de débito A?
 
-Conocé [desde aqui](../que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una nota de crédito B.
+Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una nota de débito A.
+
+
 
 ***
 

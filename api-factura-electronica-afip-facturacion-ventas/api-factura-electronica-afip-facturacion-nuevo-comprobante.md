@@ -17,7 +17,7 @@ Integra fácilmente la facturación electrónica en tu software con la API de Tu
 
 ### ¿Cómo empiezo?
 
-Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT/Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo/) . Una vez configurada tu cuenta y creado tu CUIT/Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
 ### **¿Qué es la API de facturación  individual e instantánea?**
 
@@ -56,6 +56,8 @@ Tipo de dato esperado: JSON&#x20;
 | apikey      | string | Tus credenciales de acceso                                                             |
 | comprobante | object | Estructura de "comprobante" según se informa en el apartado de ["API facturacion"](./) |
 | cliente     | object | Estructura de "Cliente", según se informa en el apartado de ["facturacion"](./)        |
+
+
 
 ### ¿Qué te retorna la llamada a la API?
 

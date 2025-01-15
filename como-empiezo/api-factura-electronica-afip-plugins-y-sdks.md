@@ -185,7 +185,7 @@ puts response.read_body
 
 Descargá el SDK para emitir factura electrónica AFIP/ARCA para PHP  desde nuestro repositorio GIT [https://github.com/vousys/tusfacturas](https://github.com/vousys/tusfacturas)
 
-![https://github.com/vousys/tusfacturas](.gitbook/assets/Github.png)
+![https://github.com/vousys/tusfacturas](../.gitbook/assets/Github.png)
 
 
 

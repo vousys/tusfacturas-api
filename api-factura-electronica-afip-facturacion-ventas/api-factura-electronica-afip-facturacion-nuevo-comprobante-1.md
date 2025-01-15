@@ -14,17 +14,17 @@ Integra fácilmente la facturación electrónica en tu software con la API de Tu
 
 ### ¿Cómo empiezo?
 
-Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo/) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
 Te sugerimos leer primero:&#x20;
 
 1. La documentación de "[API de Facturación AFIP](./)", para conocer cómo debe componerse el request que envíes
-2. La documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
+2. La documentación "[Webhooks (notificaciones)](webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
 3. [FAQs sobre la cola de procesamiento](../faqs-or-ventas-asincronicas.md)
 
 ### **Facturación asincrónica e individual**&#x20;
 
-Al utilizar nuestro servicio API de facturación AFIP/ARCA asincrónica e individual,  los comprobantes que emitas quedarán en una cola de procesamiento de TusFacturasAPP. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada, de ésta manera no se traban tus procesos de facturación si los servicios de AFIP no se encuentran disponibles. &#x20;
+Al utilizar nuestro servicio API de facturación AFIP/ARCA asincrónica e individual,  los comprobantes que emitas quedarán en una cola de procesamiento de TusFacturasAPP. A medida que se van procesando, se te enviará un [webhook](webhooks-notificaciones.md) para que puedas obtener la información generada, de ésta manera no se traban tus procesos de facturación si los servicios de AFIP no se encuentran disponibles. &#x20;
 
 ### ¿Cómo funciona el modo asincrónico de facturación individual?
 
@@ -146,7 +146,7 @@ Ejemplo del hook que recibirás:
 
 #### :green\_circle: ACEPTADO: Cuando el request se ha aceptado para su procesamiento:
 
-En caso que no se detecten errores de formato básico en la validación inicial, obtendrás la siguiente respuesta de manera instantánea, ademas de recibir un [webhook](../webhooks-notificaciones.md)  para informarte que se ha encolado, cómo se explica a continuación.
+En caso que no se detecten errores de formato básico en la validación inicial, obtendrás la siguiente respuesta de manera instantánea, ademas de recibir un [webhook](webhooks-notificaciones.md)  para informarte que se ha encolado, cómo se explica a continuación.
 
 Ejemplo :
 
@@ -184,7 +184,7 @@ Ejemplo :
 
 Existen 3 tipos de eventos posibles para el recurso de facturación que podes recibir en ésta instancia:  "encolado", "emitido" y "error".&#x20;
 
-Te sugerimos conocer más sobre los webhooks, en la documentación de [Webhooks (notificaciones)](../webhooks-notificaciones.md).
+Te sugerimos conocer más sobre los webhooks, en la documentación de [Webhooks (notificaciones)](webhooks-notificaciones.md).
 
 ### :purple\_circle:  Hook de "encolado"  &#x20;
 

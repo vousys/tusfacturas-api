@@ -4,7 +4,7 @@ description: >-
   gestiona las compras y agiliza tu flujo de trabajo sin esfuerzo.
 ---
 
-# API Compras
+# 🛍️ API Compras
 
 Para crear una compra debes enviar un request como el que envías para las ventas, tal como se especifica aqui:  [api-factura-electronica-afip-facturacion-ventas](../api-factura-electronica-afip-facturacion-ventas/ "mention"), con las siguientes diferencias:&#x20;
 

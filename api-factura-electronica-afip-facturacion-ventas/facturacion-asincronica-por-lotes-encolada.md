@@ -18,7 +18,7 @@ Integra fácilmente la facturación electrónica en tu software con la API de Tu
 
 ### ¿Cómo empiezo?
 
-Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo/) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
 Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.
 
@@ -30,18 +30,18 @@ Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de f
 
 Podes enviar a facturar comprobantes de tipo A,B,C, M y comprobantes de tipo Factura de crédito electrónica MiPyme; ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos, pero **no podrás enviar comprobantes de tipo E  en ésta modalidad.**
 
-&#x20;¿No sabes qué [tipo de comprobante debes emitir](../que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md)
+&#x20;¿No sabes qué [tipo de comprobante debes emitir](que-tipos-de-comprobante-debo-puedo-emitir.md)? Consultalo [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md)
 
 Tenés alguna duda del servicio? chequea las [API FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contáctanos por los canales de atención que tenemos disponibles en la plataforma web [www.tusfacturas.app](https://www.tusfacturas.app)
 
 ### **Facturación asincrónica por Lote**
 
-Al utilizar éste servicio los comprobantes que envíes quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](../webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
+Al utilizar éste servicio los comprobantes que envíes quedarán en una cola de procesamiento. A medida que se van procesando, se te enviará un [webhook](webhooks-notificaciones.md) para que puedas obtener la información generada. &#x20;
 
 #### Antes de comenzar, te sugerimos leer :&#x20;
 
 1. La documentación de "[API Facturación AFIP](./)", para conocer cómo debe componerse el request que envíes
-2. La documentación "[Webhooks (notificaciones)](../webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
+2. La documentación "[Webhooks (notificaciones)](webhooks-notificaciones.md)" para conocer cómo funciona el servicio de notificaciones.
 3. [FAQs sobre la cola de procesamiento](../faqs-or-ventas-asincronicas.md)
 
 {% hint style="info" %}
@@ -289,7 +289,7 @@ y a su vez, enviarte los siguientes webhooks:
 
 #### :green\_circle: ACEPTADO: Cuando el lote se ha aceptado para su procesamiento:
 
-En caso que no se detecten errores tempranos en la etapa de validación de los datos enviados en el lote, obtendrás la respuesta a cada request enviado, en su mismo orden y luego de enviarte ésta información, recibirás un [webhook](../webhooks-notificaciones.md) por cada request enviado, para informarte que se ha encolado, como se explica a continuación.
+En caso que no se detecten errores tempranos en la etapa de validación de los datos enviados en el lote, obtendrás la respuesta a cada request enviado, en su mismo orden y luego de enviarte ésta información, recibirás un [webhook](webhooks-notificaciones.md) por cada request enviado, para informarte que se ha encolado, como se explica a continuación.
 
 Ejemplo de un lote enviado con 3 requests:
 
@@ -375,7 +375,7 @@ Ejemplo de un lote enviado con 3 requests:
 
 ## Webhooks de respuesta&#x20;
 
-Existen 3 tipos de evento posible, para el recurso de facturación que podes recibir en ésta instancia:  "encolado", "emitido" y "error". Te sugerimos conocer más sobre los webhooks, en la documentación de [Webhooks (notificaciones)](../webhooks-notificaciones.md).
+Existen 3 tipos de evento posible, para el recurso de facturación que podes recibir en ésta instancia:  "encolado", "emitido" y "error". Te sugerimos conocer más sobre los webhooks, en la documentación de [Webhooks (notificaciones)](webhooks-notificaciones.md).
 
 ### :purple\_circle: Hook de "encolado"  &#x20;
 

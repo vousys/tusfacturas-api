@@ -213,7 +213,7 @@ puts response.read_body
 
 ### ¿Quién genera una factura E?
 
-Conocé [desde aqui](../que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una factura E.
+Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una factura E.
 
 ### Datos a tener en cuenta:
 

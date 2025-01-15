@@ -6,7 +6,7 @@ description: >-
 
 # Webhooks (notificaciones)
 
-<figure><img src=".gitbook/assets/69-4.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/69-4.png" alt=""><figcaption></figcaption></figure>
 
 ### ¿Qué es un WebHook?
 
@@ -85,16 +85,16 @@ Hook 5 \_\_\_\_\_\_\_\_\_\_\_\_\_ será enviado el 23/03/2022 a las 07:35
 
 ### &#x20;Una vez que recibo el webhook, ¿Qué hago?
 
-Una vez recibido el webhook, deberás  realizar una [consulta avanzada](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md) a TusFacturasAPP para obtener los datos generados de ese comprobante.
+Una vez recibido el webhook, deberás  realizar una [consulta avanzada](consulta-avanzada-de-comprobantes-enviados.md) a TusFacturasAPP para obtener los datos generados de ese comprobante.
 
 &#x20;A continuación te mostramos, la documentación asociada al recurso del que recibís el webhook.
 
 
 
-|   Recurso   |                                                                                              Documentación                                                                                             |
-| :---------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| facturacion |  [consulta avanzada por external\_reference](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference) |
-|             |                                                                                                                                                                                                        |
+|   Recurso   |                                                                      Documentación                                                                     |
+| :---------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: |
+| facturacion |  [consulta avanzada por external\_reference](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference) |
+|             |                                                                                                                                                        |
 
 ### Herramientas útiles&#x20;
 
@@ -126,7 +126,7 @@ Siempre vas a recibir los hooks independientes por cada comprobante.
 
 ### **Preguntas Frecuentes**
 
-Consulta las [preguntas frecuentes](faqs-or-ventas-asincronicas.md) sobre las ventas asincrónicas.
+Consulta las [preguntas frecuentes](../faqs-or-ventas-asincronicas.md) sobre las ventas asincrónicas.
 
 ### ¿Aún te quedan dudas? ¡Contactános!
 

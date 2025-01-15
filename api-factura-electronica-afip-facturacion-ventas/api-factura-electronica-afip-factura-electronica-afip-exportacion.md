@@ -16,7 +16,7 @@ Integra fácilmente la facturación electrónica en tu software con la API de Tu
 
 ### ¿Cómo empiezo?
 
-Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo.md) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo/) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
 Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de facturación digital eficiente a tus clientes. [Solicita acceso](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) a nuestra API de facturación electrónica.A continuación te mostramos la estructura de los datos que se requieren para generar un comprobante de tipo exportación, ya sea NC, ND o FACTURA.
 
@@ -43,9 +43,9 @@ La emisión de Facturas "E" se realiza de forma electrónica a través de **AFIP
 
 ### ¿Cómo crear una Comprobantes de exportacion "E"**?**
 
-* Ejemplo de [Factura E](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-3.md)
-* Ejemplo de [Nota de crédito E](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-7.md)
-* Ejemplo de [Nota de débito E](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-11.md)
+* Ejemplo de [Factura E](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-3.md)
+* Ejemplo de [Nota de crédito E](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-7.md)
+* Ejemplo de [Nota de débito E](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-11.md)
 
 ### **Particularidades de los comprobantes "E":**
 

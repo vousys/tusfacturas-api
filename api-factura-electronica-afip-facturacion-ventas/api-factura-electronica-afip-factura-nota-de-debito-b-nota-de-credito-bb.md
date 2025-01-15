@@ -6,13 +6,13 @@ description: >-
 
 # Ejemplos de comprobantes "B"
 
-Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito B / Factura de crédito MiPyme B / Notas de crédito MiPyme B / Nota de débito MiPyme B), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto" y se emitan a un consumidor final o un exento en IVA.  No sabes en qué momento emitir comprobantes de tipo **B**? Consulta [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
+Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito B / Factura de crédito MiPyme B / Notas de crédito MiPyme B / Nota de débito MiPyme B), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto" y se emitan a un consumidor final o un exento en IVA.  No sabes en qué momento emitir comprobantes de tipo **B**? Consulta [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
 
 ### ¿Cómo crear comprobantes de tipo "B"?
 
-* Ejemplo de [Factura B](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-1.md)
-* Ejemplo de [Nota de crédito B](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-5.md)
-* Ejemplo de [Nota de débito B](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-8.md)
+* Ejemplo de [Factura B](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-1.md)
+* Ejemplo de [Nota de crédito B](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-5.md)
+* Ejemplo de [Nota de débito B](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-8.md)
 
 
 

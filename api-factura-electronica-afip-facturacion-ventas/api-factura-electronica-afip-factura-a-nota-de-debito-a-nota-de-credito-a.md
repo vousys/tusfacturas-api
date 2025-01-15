@@ -6,14 +6,14 @@ description: >-
 
 # Ejemplos de Comprobantes "A"
 
-Los comprobantes de tipo "A", como son la Factura A, Nota de débito A , Nota de crédito A,  Factura de crédito MiPyme A, Nota de crédito MiPyme A y Nota de débito MiPyme A, son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto". No sabes en qué momento emitir comprobantes de tipo **A**? Consulta [desde aquí](../que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante A.&#x20;
+Los comprobantes de tipo "A", como son la Factura A, Nota de débito A , Nota de crédito A,  Factura de crédito MiPyme A, Nota de crédito MiPyme A y Nota de débito MiPyme A, son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto". No sabes en qué momento emitir comprobantes de tipo **A**? Consulta [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante A.&#x20;
 
 ### ¿Cómo crear comprobantes de tipo "A"?
 
-* Ejemplo de [Factura A](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
+* Ejemplo de [Factura A](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
 * Ejemplo de[ Factura A con bonificaciones](ejemplo-de-factura-con-bonificaciones-descuentos.md)
-* Ejemplo de [Nota de crédito A](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-4.md)
-* Ejemplo de [Nota de débito A](../servicios-api-afip-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-8.md)
+* Ejemplo de [Nota de crédito A](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-4.md)
+* Ejemplo de [Nota de débito A](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-8.md)
 
 ***
 

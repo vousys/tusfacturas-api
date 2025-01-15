@@ -1,20 +1,20 @@
 ---
 description: >-
-  Servicio API de TusFacturasAPP para emitir notas de crédito C de AFIP/ARCA.
-  Confiable desde 2015. ¡Los desarrolladores la aman!
+  Servicio API de TusFacturasAPP para emitir Facturas A de AFIP/ARCA. Confiable
+  desde 2015. ¡Los desarrolladores la aman!
 ---
 
-# Nota de crédito C
+# Factura A
 
 ### Endpoints
 
-Nota de crédito C emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
+Factura A emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
 
 {% hint style="info" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo`</mark>
 {% endhint %}
 
-Nota de crédito C emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
+Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
 
 {% hint style="info" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;background-color:purple;">`nuevo_encola`</mark>
@@ -22,13 +22,13 @@ Nota de crédito C emitida en la modalidad "[Asincrónica](../api-factura-electr
 
 
 
-### JSON para generar una Nota de crédito C en AFIP/ARCA con detalle de comprobantes anulados
+### JSON para generar una Factura A en AFIP/ARCA
 
 ```json
 {
-   "usertoken":"xxxxx",
-   "apikey":"xxxx",
-   "apitoken":"xxxxx",
+   "usertoken":"xxxx",
+   "apikey":"xxx",
+   "apitoken":"xxxx",
    "cliente":{
       "documento_tipo":"CUIT",
       "documento_nro":"30712293841",
@@ -42,11 +42,12 @@ Nota de crédito C emitida en la modalidad "[Asincrónica](../api-factura-electr
    },
    "comprobante":{
       "fecha":"20/03/2018",
+      "tipo":"FACTURA A",
       "vencimiento":"26/03/2023",
-      "tipo":"NOTA DE CREDITO C",
-      "moneda":"PES",
-      "cotizacion": 1,
+      "external_reference": "ABC444",
       "operacion":"V",
+      "moneda":"DOL",
+      "cotizacion": 1234.55,
       "punto_venta":"0002",
       "numero":"00000012",
       "periodo_facturado_desde":"28/02/2018",
@@ -62,42 +63,44 @@ Nota de crédito C emitida en la modalidad "[Asincrónica](../api-factura-electr
                "lista_precios":"Lista de precios API 3",
                "codigo":"16098",
                "precio_unitario_sin_iva":"100",
-               "alicuota":"0"
+               "alicuota":"21",
+               "rg5329":"N"
             },
-            "leyenda":""
-         },
-         {
-            "cantidad":"1",
-            "producto":{
-               "descripcion":"p2",
-               "unidad_bulto":"1",
-               "lista_precios":"Lista de precios API 3",
-               "codigo":"160398",
-               "precio_unitario_sin_iva":"10",
-               "alicuota":"0"
-            },
-            "leyenda":""
+            "leyenda":"Enviadas en cajas separadas"
          }
       ],
       "bonificacion":"0.00",
       "leyenda_gral":" ",
-      "total":"110",
-      "comprobantes_asociados":[
+      "tributos":[
          {
-            "tipo_comprobante":"FACTURA C",
-            "punto_venta":"145",
-            "numero":12313,
-            "comprobante_fecha":"07/07/2018",
-            "cuit":1111111111111
+            "tipo":6,
+            "regimen":2,
+            "base_imponible":100,
+            "alicuota":10,
+            "total":10
+         },
+         {
+            "tipo":7,
+            "regimen":5,
+            "base_imponible":200,
+            "alicuota":10,
+            "total":20
          }
+      ],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":"151",
+      "comprobantes_asociados":[
+         
       ]
    }
 }
 ```
 
-### ¿Cómo enviar una nota de crédito C según mi lenguaje de programación?
+### ¿Cómo enviar una factura A según mi lenguaje de programación?
 
-Podes enviar las notas de crédito C por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado arriba.
+Podes enviar las facturas A por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado anteriormente.
 
 {% tabs %}
 {% tab title="CURL" %}
@@ -207,21 +210,25 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-### Parámetros para crear una Nota de crédito C&#x20;
+### Parámetros para crear una Factura A&#x20;
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro.
 
-### PDF de ejemplo de una Nota de crédito C
+### PDF de ejemplo de una Factura A
 
-¿Necesitas una Nota de Crédito C de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__NOTA_DE_CREDITO_C-00010-00000001.pdf). Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+¿Necesitas una factura de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__FACTURA_A-00010-00000122.pdf). Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
-### ¿Qué es una nota de crédito C?
+### ¿Quién genera una factura A?
 
-Conocé  que es una[ nota de crédito C](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md).
+Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una factura A.
 
-### ¿Cuándo generar una nota de crédito C?
+#### Datos a tener en cuenta:
 
-Conocé [desde aqui](../que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una nota de crédito C.
+{% hint style="info" %}
+A partir del 01-07-2021, todo comprobante A que se emita a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._ **Éste dato&#x20;**<mark style="background-color:yellow;">**no debe ser enviado**</mark>**&#x20;en el campo "leyenda\_gral", ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.**
+
+
+{% endhint %}
 
 ***
 

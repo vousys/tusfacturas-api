@@ -4,7 +4,7 @@ description: >-
   proveedores personalizados. ¡Ahorra tiempo y dinero!
 ---
 
-# Recibos de cobro y órdenes de pago
+# 💵 Recibos de cobro y órdenes de pago
 
 
 
