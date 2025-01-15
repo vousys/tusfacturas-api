@@ -1,10 +1,11 @@
 ---
 description: >-
   Facturación electrónica AFIP/ARCA fácil y segura. TusFacturasAPP, respaldado
-  por expertos contables. ¡Comenza gratis!
+  por expertos contables impositivos y actualizada con las últimas normativas.
+  ¡Comenza gratis!
 ---
 
-# ☁️ Web services AFIP API ARCA
+# ☁️ Servicios API AFIP/ARCA
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. TusFacturasAPP te permite emitir facturas electrónicas de forma rápida y segura, cumpliendo con todos los requisitos legales de AFIP. Olvídate de la burocracia y concéntrate en lo que realmente importa: hacer crecer tu negocio.
 

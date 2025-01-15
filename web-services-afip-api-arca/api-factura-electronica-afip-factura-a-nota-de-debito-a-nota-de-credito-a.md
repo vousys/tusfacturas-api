@@ -1,7 +1,7 @@
 ---
 description: >-
-  Servicio API de TusFacturasAPP para emitir Facturas A de AFIP/ARCA. Confiable
-  desde 2015. ¡Los desarrolladores la aman!
+  TusFacturasAPP: API para Facturas A de AFIP/ARCA. Confiable desde 2015. Creada
+  por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
 ---
 
 # Factura A

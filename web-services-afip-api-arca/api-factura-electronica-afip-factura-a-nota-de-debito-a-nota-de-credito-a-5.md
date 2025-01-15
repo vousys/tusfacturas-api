@@ -1,7 +1,8 @@
 ---
 description: >-
-  Servicio API de TusFacturasAPP para emitir notas de crédito B de AFIP/ARCA.
-  Confiable desde 2015. ¡Los desarrolladores la aman!
+  TusFacturasAPP: API para Notas de crédito B de AFIP/ARCA. Confiable desde
+  2015. Creada por devs y respaldada por expertos impositivos. ¡Los
+  desarrolladores la aman!
 ---
 
 # Nota de crédito B

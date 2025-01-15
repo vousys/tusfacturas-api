@@ -1,7 +1,8 @@
 ---
 description: >-
-  Servicio API de TusFacturasAPP para emitir notas de débito B de AFIP/ARCA.
-  Confiable desde 2015. ¡Los desarrolladores la aman!
+  TusFacturasAPP: API para Notas de débito B de AFIP/ARCA. Confiable desde 2015.
+  Creada por devs y respaldada por expertos impositivos. ¡Los desarrolladores la
+  aman!
 ---
 
 # Nota de débito B
