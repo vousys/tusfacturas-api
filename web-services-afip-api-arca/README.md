@@ -11,55 +11,55 @@ description: >-
 
 ### Conoce como crear rápidamente:
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
+{% content-ref url="api-factura-electronica-afip-factura-a.md" %}
+[api-factura-electronica-afip-factura-a.md](api-factura-electronica-afip-factura-a.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-1.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-1.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-1.md)
+{% content-ref url="api-factura-electronica-afip-factura-b.md" %}
+[api-factura-electronica-afip-factura-b.md](api-factura-electronica-afip-factura-b.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-2.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-2.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-2.md)
+{% content-ref url="api-factura-electronica-afip-factura-c.md" %}
+[api-factura-electronica-afip-factura-c.md](api-factura-electronica-afip-factura-c.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-3.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-3.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-3.md)
+{% content-ref url="api-factura-electronica-afip-factura-e.md" %}
+[api-factura-electronica-afip-factura-e.md](api-factura-electronica-afip-factura-e.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-4.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-4.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-4.md)
+{% content-ref url="api-factura-electronica-afip-nota-de-credito-a.md" %}
+[api-factura-electronica-afip-nota-de-credito-a.md](api-factura-electronica-afip-nota-de-credito-a.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-5.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-5.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-5.md)
+{% content-ref url="api-factura-electronica-afip-nota-de-credito-b.md" %}
+[api-factura-electronica-afip-nota-de-credito-b.md](api-factura-electronica-afip-nota-de-credito-b.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-6.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-6.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-6.md)
+{% content-ref url="api-factura-electronica-afip-nota-de-credito-c.md" %}
+[api-factura-electronica-afip-nota-de-credito-c.md](api-factura-electronica-afip-nota-de-credito-c.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-7.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-7.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-7.md)
+{% content-ref url="api-factura-electronica-afip-nota-de-credito-e.md" %}
+[api-factura-electronica-afip-nota-de-credito-e.md](api-factura-electronica-afip-nota-de-credito-e.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-8.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-8.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-8.md)
+{% content-ref url="api-factura-electronica-afip-nota-de-debito-a.md" %}
+[api-factura-electronica-afip-nota-de-debito-a.md](api-factura-electronica-afip-nota-de-debito-a.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-9.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-9.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-9.md)
+{% content-ref url="api-factura-electronica-afip-nota-de-debito-b.md" %}
+[api-factura-electronica-afip-nota-de-debito-b.md](api-factura-electronica-afip-nota-de-debito-b.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-10.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-10.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-10.md)
+{% content-ref url="api-factura-electronica-afip-nota-de-debito-c.md" %}
+[api-factura-electronica-afip-nota-de-debito-c.md](api-factura-electronica-afip-nota-de-debito-c.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-10.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-10.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-10.md)
+{% content-ref url="api-factura-electronica-afip-nota-de-debito-c.md" %}
+[api-factura-electronica-afip-nota-de-debito-c.md](api-factura-electronica-afip-nota-de-debito-c.md)
 {% endcontent-ref %}
 
-{% content-ref url="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-11.md" %}
-[api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-11.md](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-11.md)
+{% content-ref url="nota-de-debito-e.md" %}
+[nota-de-debito-e.md](nota-de-debito-e.md)
 {% endcontent-ref %}
 

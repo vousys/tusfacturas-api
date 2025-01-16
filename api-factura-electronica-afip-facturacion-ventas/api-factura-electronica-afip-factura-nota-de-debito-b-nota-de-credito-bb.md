@@ -10,9 +10,9 @@ Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito 
 
 ### ¿Cómo crear comprobantes de tipo "B"?
 
-* Ejemplo de [Factura B](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-1.md)
-* Ejemplo de [Nota de crédito B](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-5.md)
-* Ejemplo de [Nota de débito B](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-8.md)
+* Ejemplo de [Factura B](../web-services-afip-api-arca/api-factura-electronica-afip-factura-b.md)
+* Ejemplo de [Nota de crédito B](../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-b.md)
+* Ejemplo de [Nota de débito B](../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-debito-a.md)
 
 
 

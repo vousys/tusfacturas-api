@@ -43,9 +43,9 @@ La emisión de Facturas "E" se realiza de forma electrónica a través de **AFIP
 
 ### ¿Cómo crear una Comprobantes de exportacion "E"**?**
 
-* Ejemplo de [Factura E](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-3.md)
-* Ejemplo de [Nota de crédito E](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-7.md)
-* Ejemplo de [Nota de débito E](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-11.md)
+* Ejemplo de [Factura E](../web-services-afip-api-arca/api-factura-electronica-afip-factura-e.md)
+* Ejemplo de [Nota de crédito E](../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-e.md)
+* Ejemplo de [Nota de débito E](../web-services-afip-api-arca/nota-de-debito-e.md)
 
 ### **Particularidades de los comprobantes "E":**
 

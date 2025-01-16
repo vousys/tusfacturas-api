@@ -10,9 +10,9 @@ Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C
 
 ### ¿Cómo crear comprobantes de tipo "C"?
 
-* Ejemplo de [Factura C](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-2.md)
-* Ejemplo de [Nota de crédito C](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-6.md)
-* Ejemplo de [Nota de débito C](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-10.md)
+* Ejemplo de [Factura C](../web-services-afip-api-arca/api-factura-electronica-afip-factura-c.md)
+* Ejemplo de [Nota de crédito C](../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-c.md)
+* Ejemplo de [Nota de débito C](../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-debito-c.md)
 
 ***
 

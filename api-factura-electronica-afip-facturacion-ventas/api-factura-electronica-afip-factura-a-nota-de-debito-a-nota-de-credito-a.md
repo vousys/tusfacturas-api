@@ -10,10 +10,10 @@ Los comprobantes de tipo "A", como son la Factura A, Nota de débito A , Nota de
 
 ### ¿Cómo crear comprobantes de tipo "A"?
 
-* Ejemplo de [Factura A](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
+* Ejemplo de [Factura A](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md)
 * Ejemplo de[ Factura A con bonificaciones](ejemplo-de-factura-con-bonificaciones-descuentos.md)
-* Ejemplo de [Nota de crédito A](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-4.md)
-* Ejemplo de [Nota de débito A](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-8.md)
+* Ejemplo de [Nota de crédito A](../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-a.md)
+* Ejemplo de [Nota de débito A](../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-debito-a.md)
 
 ***
 
