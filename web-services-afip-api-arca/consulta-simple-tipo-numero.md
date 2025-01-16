@@ -39,7 +39,7 @@ Podes enviar un request para consultar un comprobante, por CURL o usando tu leng
 {% tab title="CURL" %}
 ```sh
 curl --request POST \
-  --url https://www.tusfacturas.app/app/api/v2/facturacion/nuevo \
+  --url https://www.tusfacturas.app/app/api/v2/facturacion/consulta \
   --header 'Content-Type: application/json' \
   --data ' 
      TUSFACTURAS_JSON_DATA
@@ -54,7 +54,7 @@ curl --request POST \
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-  CURLOPT_URL => "https://www.tusfacturas.app/app/api/v2/facturacion/nuevo",
+  CURLOPT_URL => "https://www.tusfacturas.app/app/api/v2/facturacion/consulta",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -92,7 +92,7 @@ headers = {
     'Content-Type': "application/json"
     }
 
-conn.request("POST", "/app/api/v2/facturacion/nuevo", payload, headers)
+conn.request("POST", "/app/api/v2/facturacion/consulta", payload, headers)
 
 res = conn.getresponse()
 data = res.read()
@@ -107,7 +107,7 @@ var axios = require("axios").default;
 
 var options = {
   method: 'POST',
-  url: 'https://www.tusfacturas.app/app/api/v2/facturacion/nuevo',
+  url: 'https://www.tusfacturas.app/app/api/v2/facturacion/consulta',
   headers: {'Content-Type': 'application/json'},
   data: TUSFACTURAS_JSON_DATA
    
@@ -127,7 +127,7 @@ require 'uri'
 require 'net/http'
 require 'openssl'
 
-url = URI("https://www.tusfacturas.app/app/api/v2/facturacion/nuevo")
+url = URI("https://www.tusfacturas.app/app/api/v2/facturacion/consulta")
 
 http = Net::HTTP.new(url.host, url.port)
 http.use_ssl = true

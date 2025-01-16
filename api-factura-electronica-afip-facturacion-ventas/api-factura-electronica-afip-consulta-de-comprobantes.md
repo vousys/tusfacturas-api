@@ -4,11 +4,11 @@ description: >-
   nuestra API en tu sistema y optimiza tus procesos.
 ---
 
-# Consulta por tipo y número
+# Consulta simple
 
-### **¿Qué es la consulta de comprobantes?**
+### **¿Qué es la consulta simple de comprobantes?**
 
-La consulta de comprobantes es una funcionalidad que te permite buscar y obtener información detallada sobre las facturas electrónicas que has emitido a través de una plataforma como TusFacturasAPP. Esta función es muy útil para:
+La consulta simple de comprobantes es una funcionalidad que te permite buscar y obtener información detallada sobre las facturas electrónicas que has emitido a través de una plataforma como TusFacturasAPP. Esta función es muy útil para:
 
 * **Verificar el estado de los comprobantes:** Saber si un comprobante fue emitido correctamente, si fue rechazado por la AFIP o si ya fue presentado ante el organismo recaudador.
 * **Buscar comprobantes específicos:** Localizar una factura en particular utilizando diferentes criterios de búsqueda, como el número de comprobante, la fecha de emisión, el cliente, etc.

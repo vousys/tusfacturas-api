@@ -4,11 +4,11 @@ description: >-
   fácil y rápido con la API TusFacturas.app!
 ---
 
-# Comprobantes MiPyme: ¿Corresponde emitirlos?
+# Comprobantes MiPyme: ¿Debo emitirla?
 
 ### ¿Qué son las **facturas MiPyme?**
 
-Las **facturas MiPyME** son un tipo de comprobante electrónico diseñado específicamente para las micro, pequeñas y medianas empresas (MiPyme) en Argentina. Estas facturas cumplen con los requisitos establecidos por la Administración Federal de Ingresos Públicos (AFIP) y facilitan la emisión y gestión de comprobantes electrónicos para este sector.
+Las **facturas MiPyME** son un tipo de comprobante electrónico diseñado específicamente para las micro, pequeñas y medianas empresas (MiPyme) en Argentina. Estas facturas cumplen con los requisitos establecidos por la Administración Federal de Ingresos Públicos (AFIP/ARCA) y facilitan la emisión y gestión de comprobantes electrónicos para este sector.
 
 ### **¿Para qué sirven las** **facturas MiPyme?**
 
@@ -16,8 +16,8 @@ El objetivo principal es el impulso al financiamiento de las micro, pequeñas y 
 
 **Características principales:**
 
-* **Obligatoriedad:** La obligatoriedad de emitir facturas MiPyme depende del tipo de operación, el monto y otros factores establecidos por la AFIP.
-* **Formato electrónico:** Se emiten y reciben de forma electrónica, a través de plataformas habilitadas por la AFIP o por proveedores de servicios de facturación electrónica.
+* **Obligatoriedad:** La obligatoriedad de emitir facturas MiPyme depende del tipo de operación, el monto y otros factores establecidos por  AFIP/ARCA.
+* **Formato electrónico:** Se emiten y reciben de forma electrónica, a través de plataformas habilitadas por la AFIP/ARCA o por proveedores de servicios de facturación electrónica.
 * **Información detallada:** Incluyen toda la información necesaria para identificar la operación, los intervinientes y los impuestos aplicables.
 
 **En resumen,** las facturas MiPyme son una herramienta fundamental para las pequeñas y medianas empresas en Argentina, ya que les permiten cumplir con las obligaciones fiscales de manera más eficiente y sencilla.
@@ -30,15 +30,17 @@ IMPORTANTE: Para poder realizar ésta consulta, deberás tener agregado en tu cu
 
 
 
-### Consulta de obligado a recibir MiPyme
-
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/requiere_fec`
+## :rocket: ¿Cómo consultar si debes emitir una MiPyme?
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
-Éste método te devolverá si tu cliente se encuentra obligado a recibir facturas de tipo MiPyme y a partir de que monto se encuentra obligado.
+Ejemplo:
 
-#### Request Body
+{% content-ref url="../web-services-afip-api-arca/debo-emitir-una-mipyme.md" %}
+[debo-emitir-una-mipyme.md](../web-services-afip-api-arca/debo-emitir-una-mipyme.md)
+{% endcontent-ref %}
+
+#### Parámetros
 
 | Name      | Type   | Description                                                                    |
 | --------- | ------ | ------------------------------------------------------------------------------ |
@@ -48,19 +50,7 @@ IMPORTANTE: Para poder realizar ésta consulta, deberás tener agregado en tu cu
 | usertoken | string | Tus credenciales de acceso                                                     |
 | apitoken  | string | <p>Tus credenciales de acceso</p><p>\</p>                                      |
 
-### Ejemplo del JSON a enviar:
-
-```
-{
-	"apitoken": "xxxx",
-	"apikey": xxxx,
-	"usertoken": "xxxx",
-	"cuit": 12345678901,
-	"fecha": "08/12/2019"
-}
-```
-
-### Ejemplo del JSON de respuesta:
+#### Ejemplo del JSON de respuesta:
 
 ```
 En caso de éxito:

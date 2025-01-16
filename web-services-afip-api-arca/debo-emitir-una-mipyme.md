@@ -1,16 +1,16 @@
 ---
 description: >-
-  Servicio API de TusFacturasAPP para consultar tus ventas por rango numérico.
+  Servicio API de TusFacturasAPP para consultar si debes emitir una MiPyme.
   Confiable desde 2015. Con el respaldo de un estudio impositivo. ¡Los
   desarrolladores la aman!
 ---
 
-# Consulta por rango numérico de comprobantes
+# ¿Debo emitir una MiPyme?
 
 ### Endpoint
 
 {% hint style="info" %}
-<mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`consulta_avanzada`</mark>
+<mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`requiere_fec`</mark>
 {% endhint %}
 
 
@@ -19,33 +19,23 @@ description: >-
 
 ```json
 {
-"usertoken" :  "xxxx",
-"apikey"    :  "xxxx",
-"apitoken"  :  "xxxx",
-"busqueda_tipo": "TN",
- "pagina" : 0,
- "limite": 100 ,
-"comprobante": 
-	{
-			"tipo": "FACTURA A",
-			"operacion": "V",
-			"punto_venta": "00010",
-			"numero_desde": "00000001",
-			"numero_hasta": "00000300" 
-			 
-	}
-} 
+	"apitoken": "xxxx",
+	"apikey": "xxxx",
+	"usertoken": "xxxx",
+	"cuit": 12345678901,
+	"fecha": "08/12/2019"
+}
 ```
 
 ### ¿Cómo enviar una consulta según mi lenguaje de programación?
 
-Podes enviar un request para consultar tus ventas por rango numérico, mediante CURL o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado anteriormente.
+Podes enviar un request para consultar si debes emitir una MiPyme, mediante CURL o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado anteriormente.
 
 {% tabs %}
 {% tab title="CURL" %}
 ```sh
 curl --request POST \
-  --url https://www.tusfacturas.app/app/api/v2/facturacion/consulta_avanzada \
+  --url https://www.tusfacturas.app/app/api/v2/facturacion/requiere_fec \
   --header 'Content-Type: application/json' \
   --data ' 
      TUSFACTURAS_JSON_DATA
@@ -60,7 +50,7 @@ curl --request POST \
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-  CURLOPT_URL => "https://www.tusfacturas.app/app/api/v2/facturacion/consulta_avanzada",
+  CURLOPT_URL => "https://www.tusfacturas.app/app/api/v2/facturacion/requiere_fec",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
@@ -98,7 +88,7 @@ headers = {
     'Content-Type': "application/json"
     }
 
-conn.request("POST", "/app/api/v2/facturacion/consulta_avanzada", payload, headers)
+conn.request("POST", "/app/api/v2/facturacion/requiere_fec", payload, headers)
 
 res = conn.getresponse()
 data = res.read()
@@ -113,7 +103,7 @@ var axios = require("axios").default;
 
 var options = {
   method: 'POST',
-  url: 'https://www.tusfacturas.app/app/api/v2/facturacion/consulta_avanzada',
+  url: 'https://www.tusfacturas.app/app/api/v2/facturacion/requiere_fec',
   headers: {'Content-Type': 'application/json'},
   data: TUSFACTURAS_JSON_DATA
    
@@ -133,7 +123,7 @@ require 'uri'
 require 'net/http'
 require 'openssl'
 
-url = URI("https://www.tusfacturas.app/app/api/v2/facturacion/consulta_avanzada")
+url = URI("https://www.tusfacturas.app/app/api/v2/facturacion/requiere_fec")
 
 http = Net::HTTP.new(url.host, url.port)
 http.use_ssl = true
@@ -149,9 +139,9 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-### Parámetros para enviar una consulta por rango numérico&#x20;
+### Parámetros para enviar la consulta &#x20;
 
-[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación avalado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md#consulta-avanzada-por-rango-de-numeros),  con referencia a cada parámetro.
+[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación avalado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md),  con referencia a cada parámetro.
 
 ***
 
