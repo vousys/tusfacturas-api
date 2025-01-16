@@ -71,7 +71,7 @@ No, no se puede. Recibirás un error instantáneo, informandote que existen comp
 
 No. El hook te envia el estado de ese request y el mensaje de error, en caso que no se haya podido procesar.&#x20;
 
-En caso de éxito, deberás realizar una  [consulta avanzada por external\_reference](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference),  para obtener los datos generados de éste comprobante
+En caso de éxito, deberás realizar una  [consulta avanzada por external\_reference](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md#como-realizar-una-consulta-avanzada-por-external-reference),  para obtener los datos generados de éste comprobante
 
 #### ¿Hay una reducción de tiempo considerable al emitir los comprobantes de esta forma
 

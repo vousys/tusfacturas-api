@@ -16,5 +16,5 @@ Si ya venias haciendo comprobantes instantáneos y queres migrar a la facturaci�
 
 "facturacion/nuevo" -> "facturacion/nuevo\_encola
 
-3- Crea un script del lado de tu servidor, para que reciba el JSON con los eventos que enviaremos [via webhook](webhooks-notificaciones.md) y nos devuelva la confirmación. Al recibir la información, éste script, debe [emitir una consulta avanzada de comprobantes](consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference), para obtener la info asociada al hook recibido y realizar con la respuesta, lo que antes hacías mientras esperabas la respuesta instantánea.
+3- Crea un script del lado de tu servidor, para que reciba el JSON con los eventos que enviaremos [via webhook](webhooks-notificaciones.md) y nos devuelva la confirmación. Al recibir la información, éste script, debe [emitir una consulta avanzada de comprobantes](consulta-avanzada.md#como-realizar-una-consulta-avanzada-por-external-reference), para obtener la info asociada al hook recibido y realizar con la respuesta, lo que antes hacías mientras esperabas la respuesta instantánea.
 

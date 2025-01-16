@@ -4,7 +4,7 @@ description: >-
   nuestra API en tu sistema y optimiza tus procesos.
 ---
 
-# Consulta simple de comprobantes
+# Consulta por tipo y número
 
 ### **¿Qué es la consulta de comprobantes?**
 
@@ -23,34 +23,17 @@ La consulta de comprobantes es una funcionalidad que te permite buscar y obtener
 Es importante que descargues toda la información junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
 {% endhint %}
 
-Tipo de datos: **JSON**\
-Charset: **UTF-8**
-
-## Consulta individual de comprobantes
-
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/consulta`&#x20;
+## :rocket: ¿Cómo enviar una consulta simple de comprobantes?
 
 💡 El uso de éste método no contabiliza como un request en tu suscripción
 
+Ejemplo:
 
+{% content-ref url="../web-services-afip-api-arca/consulta-simple-tipo-numero.md" %}
+[consulta-simple-tipo-numero.md](../web-services-afip-api-arca/consulta-simple-tipo-numero.md)
+{% endcontent-ref %}
 
-#### :rocket:  Ejemplo de JSON a enviar :
-
-```json
-{
-"usertoken" :  "xxxx",
-"apikey"    :  "xxxx",
-"apitoken"  :  "xxxx",
-"comprobante":  {
-                "tipo":                     "NOTA DE DEBITO B",
-                "operacion":                "V",
-                "punto_venta":              "2",
-                "numero":                   "6"
-        }
-}
-```
-
-#### Request Body
+### Parámetros
 
 | Name        | Type   | Description                                                             |
 | ----------- | ------ | ----------------------------------------------------------------------- |

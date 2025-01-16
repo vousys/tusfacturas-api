@@ -111,7 +111,7 @@ Se incluye la documentación de la ["Facturación por lotes asincrónica (encola
 
 ### 17 de marzo de 2022
 
-Se incluye en la documentación de la [consulta avanzada de comprobantes](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md), el campo de total de registros resultantes de esa búsqueda, la paginación y su límite por página.
+Se incluye en la documentación de la [consulta avanzada de comprobantes](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md), el campo de total de registros resultantes de esa búsqueda, la paginación y su límite por página.
 
 Se incluye también en la documentación de [facturación](api-factura-electronica-afip-facturacion-ventas/) > [comprobantes asociados](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas#envio-de-comprobantes-asociados-detallados), una nueva acción que se ejecutará a partir del 26/03/2022 con las notas de crédito: la auto-acreditación en caja de la NC.
 
@@ -121,7 +121,7 @@ Se modifica la documentación de [facturación](api-factura-electronica-afip-fac
 
 ### 11 de marzo de 2022
 
-Se modifica la documentación de la[ consulta de comprobantes individual](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-comprobantes.md) y [avanzada](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md). Se agrega el método de [consulta por "external\_reference"](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-de-comprobantes-enviados.md#como-realizar-una-consulta-avanzada-por-external-reference) , a partir del 01/04/2022 y se agrega la paginación a la consulta avanzada, a partir del 01/05/2022.
+Se modifica la documentación de la[ consulta de comprobantes individual](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-comprobantes.md) y [avanzada](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md). Se agrega el método de [consulta por "external\_reference"](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md#como-realizar-una-consulta-avanzada-por-external-reference) , a partir del 01/04/2022 y se agrega la paginación a la consulta avanzada, a partir del 01/05/2022.
 
 ### 07 de febrero de 2022
 

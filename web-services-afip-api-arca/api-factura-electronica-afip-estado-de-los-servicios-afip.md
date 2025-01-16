@@ -14,19 +14,11 @@ description: >-
 Tene en cuenta que todos nuestros métodos controlan internamente el estado de los servicios AFIP/ARCA, y si alguno no se encuentra operativo, automáticamente vas a recibir la respuesta correspondiente en cada request que envíes, junto con su mensaje de error.
 {% endhint %}
 
-## Consulta de estados de los servicios
+### Endpoint
 
 {% hint style="info" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`estado_servicios/alertas`</mark>
 {% endhint %}
-
-#### Request Body
-
-| Name      | Type   | Description                |
-| --------- | ------ | -------------------------- |
-| apikey    | string | Tus credenciales de acceso |
-| apitoken  | string | Tus credenciales de acceso |
-| usertoken | string | Tus credenciales de acceso |
 
 ### Ejemplo del JSON a enviar para consultar el estado de los servicios
 
