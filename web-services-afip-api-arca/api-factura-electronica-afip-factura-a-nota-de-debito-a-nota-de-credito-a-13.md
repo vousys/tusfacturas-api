@@ -1,10 +1,10 @@
 ---
 description: >-
-  TusFacturasAPP: API para Facturas A de AFIP/ARCA. Confiable desde 2015. Creada
-  por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
+  Servicio API de TusFacturasAPP para emitir Facturas A en dólares de AFIP/ARCA.
+  Confiable desde 2015. ¡Los desarrolladores la aman!
 ---
 
-# Factura A
+# Factura A en dólares
 
 ### Endpoints
 
@@ -17,12 +17,12 @@ Factura A emitida en la modalidad "[Instantánea](../api-factura-electronica-afi
 Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
 
 {% hint style="info" %}
-<mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo_encola`</mark>
+<mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;background-color:purple;">`nuevo_encola`</mark>
 {% endhint %}
 
 
 
-### JSON para generar una Factura A en AFIP/ARCA
+### JSON para generar una Factura A en dólares u otra moneda extranjera
 
 ```json
 {
@@ -46,8 +46,8 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "vencimiento":"26/03/2023",
       "external_reference": "ABC444",
       "operacion":"V",
-      "moneda":"PES",
-      "cotizacion": 1,
+      "moneda":"DOL",
+      "cotizacion": 1035,
       "punto_venta":"0002",
       "numero":"00000012",
       "periodo_facturado_desde":"28/02/2018",
@@ -72,25 +72,12 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "bonificacion":"0.00",
       "leyenda_gral":" ",
       "tributos":[
-         {
-            "tipo":6,
-            "regimen":2,
-            "base_imponible":100,
-            "alicuota":10,
-            "total":10
-         },
-         {
-            "tipo":7,
-            "regimen":5,
-            "base_imponible":200,
-            "alicuota":10,
-            "total":20
-         }
+         
       ],
       "impuestos_internos":"0",
       "impuestos_internos_base":"0",
       "impuestos_internos_alicuota":"0",
-      "total":"151",
+      "total":"121",
       "comprobantes_asociados":[
          
       ]
@@ -98,9 +85,9 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 }
 ```
 
-### ¿Cómo enviar una factura A según mi lenguaje de programación?
+### ¿Cómo enviar una factura A en dólares según mi lenguaje de programación?
 
-Podes enviar las facturas A por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado anteriormente.
+Podes enviar las notas de crédito A por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado anteriormente.
 
 {% tabs %}
 {% tab title="CURL" %}
@@ -210,17 +197,17 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-### Parámetros para crear una Factura A&#x20;
+### Parámetros para crear una Factura A en dólares&#x20;
 
-[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro.
+[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación avalado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro.
 
 ### PDF de ejemplo de una Factura A
 
 ¿Necesitas una factura de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__FACTURA_A-00010-00000122.pdf). Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
-### ¿Quién genera una factura A?
+### ¿Quién genera una factura A RG5329?
 
-Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una factura A.
+Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una factura A y cuándo aplicar la RG5329, desde nuestras [FAQs](../faqs-or-preguntas-frecuentes.md)
 
 #### Datos a tener en cuenta:
 

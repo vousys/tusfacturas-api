@@ -18,6 +18,7 @@
   * [Nota de débito C](web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-10.md)
   * [Nota de débito E](web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-11.md)
   * [Factura A - RG5329](web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-12.md)
+  * [Factura A en dólares](web-services-afip-api-arca/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a-13.md)
   * [Estado de los servicios AFIP/ARCA](web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md)
 * [📗 Documentación API Facturación AFIP/ARCA](api-factura-electronica-afip-facturacion-ventas/README.md)
   * [Facturación instantánea e individual](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
