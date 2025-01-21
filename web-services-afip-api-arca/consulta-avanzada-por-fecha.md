@@ -3,6 +3,7 @@ description: >-
   Servicio API de TusFacturasAPP para consultar tus ventas por fecha. Confiable
   desde 2015. Con el respaldo de un estudio impositivo. ¡Los desarrolladores la
   aman!
+icon: magnifying-glass
 ---
 
 # Consulta por fecha de comprobante

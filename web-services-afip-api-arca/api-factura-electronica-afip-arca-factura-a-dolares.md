@@ -2,6 +2,7 @@
 description: >-
   Servicio API de TusFacturasAPP para emitir Facturas A en dólares de AFIP/ARCA.
   Confiable desde 2015. ¡Los desarrolladores la aman!
+icon: code
 ---
 
 # Factura A en dólares
@@ -87,7 +88,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 
 ### ¿Cómo enviar una factura A en dólares según mi lenguaje de programación?
 
-Podes enviar las notas de crédito A por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado anteriormente.
+Podes enviar las facturas A por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado anteriormente.
 
 {% tabs %}
 {% tab title="CURL" %}
@@ -204,10 +205,6 @@ puts response.read_body
 ### PDF de ejemplo de una Factura A
 
 ¿Necesitas una factura de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__FACTURA_A-00010-00000122.pdf). Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
-
-### ¿Quién genera una factura A RG5329?
-
-Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una factura A y cuándo aplicar la RG5329, desde nuestras [FAQs](../faqs-or-preguntas-frecuentes.md)
 
 #### Datos a tener en cuenta:
 

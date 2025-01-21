@@ -1,7 +1,8 @@
 ---
 description: >-
-  Servicio API de TusFacturasAPP para emitir Facturas A de AFIP/ARCA. Confiable
-  desde 2015. ¡Los desarrolladores la aman!
+  Servicio API de TusFacturasAPP para emitir Facturas A bajo la RG5239 de
+  AFIP/ARCA. Confiable desde 2015. ¡Los desarrolladores la aman!
+icon: code
 ---
 
 # Factura A - RG5329

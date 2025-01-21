@@ -2,6 +2,7 @@
 description: >-
   TusFacturasAPP: API para Facturas E de AFIP/ARCA. Confiable desde 2015. Creada
   por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
+icon: code
 ---
 
 # Factura E

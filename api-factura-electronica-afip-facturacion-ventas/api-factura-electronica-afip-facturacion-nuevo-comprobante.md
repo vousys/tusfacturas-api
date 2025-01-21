@@ -3,6 +3,7 @@ description: >-
   TusFacturasAPP: Solución SaaS líder en facturación electrónica para empresas.
   Integra nuestra API de facturación AFIP y emití comprobantes desde tu
   plataforma.
+icon: i
 ---
 
 # Facturación instantánea e individual

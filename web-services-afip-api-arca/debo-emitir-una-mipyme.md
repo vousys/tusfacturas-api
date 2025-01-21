@@ -3,6 +3,7 @@ description: >-
   Servicio API de TusFacturasAPP para consultar si debes emitir una MiPyme.
   Confiable desde 2015. Con el respaldo de un estudio impositivo. ¡Los
   desarrolladores la aman!
+icon: code
 ---
 
 # ¿Debo emitir una MiPyme?

@@ -2,6 +2,7 @@
 description: >-
   Mediante éste servicio podrás consultar el estado de los servicios de
   facturación AFIP/ARCA, como así también el estado del servicio API.
+icon: code
 ---
 
 # Estado de los servicios AFIP/ARCA

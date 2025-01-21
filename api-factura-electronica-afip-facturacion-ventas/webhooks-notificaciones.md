@@ -2,6 +2,7 @@
 description: >-
   Recibi notificaciones instantáneas (hooks) sobre cada evento de facturación,
   sin retrasos.
+icon: webhook
 ---
 
 # Webhooks (notificaciones)

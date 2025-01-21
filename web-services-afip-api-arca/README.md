@@ -63,3 +63,51 @@ description: >-
 [nota-de-debito-e.md](nota-de-debito-e.md)
 {% endcontent-ref %}
 
+{% content-ref url="api-factura-electronica-afip-factura-a-rg5329.md" %}
+[api-factura-electronica-afip-factura-a-rg5329.md](api-factura-electronica-afip-factura-a-rg5329.md)
+{% endcontent-ref %}
+
+{% content-ref url="api-factura-electronica-afip-arca-factura-a-dolares.md" %}
+[api-factura-electronica-afip-arca-factura-a-dolares.md](api-factura-electronica-afip-arca-factura-a-dolares.md)
+{% endcontent-ref %}
+
+{% content-ref url="consulta-avanzada-por-external-reference.md" %}
+[consulta-avanzada-por-external-reference.md](consulta-avanzada-por-external-reference.md)
+{% endcontent-ref %}
+
+{% content-ref url="consulta-avanzada-por-fecha.md" %}
+[consulta-avanzada-por-fecha.md](consulta-avanzada-por-fecha.md)
+{% endcontent-ref %}
+
+{% content-ref url="consulta-avanzada-por-numero.md" %}
+[consulta-avanzada-por-numero.md](consulta-avanzada-por-numero.md)
+{% endcontent-ref %}
+
+{% content-ref url="consulta-simple-tipo-numero.md" %}
+[consulta-simple-tipo-numero.md](consulta-simple-tipo-numero.md)
+{% endcontent-ref %}
+
+{% content-ref url="debo-emitir-una-mipyme.md" %}
+[debo-emitir-una-mipyme.md](debo-emitir-una-mipyme.md)
+{% endcontent-ref %}
+
+{% content-ref url="api-factura-electronica-afip-estado-de-los-servicios-afip.md" %}
+[api-factura-electronica-afip-estado-de-los-servicios-afip.md](api-factura-electronica-afip-estado-de-los-servicios-afip.md)
+{% endcontent-ref %}
+
+{% content-ref url="api-factura-electronica-afip-arca-factura-a-con-bonificacion.md" %}
+[api-factura-electronica-afip-arca-factura-a-con-bonificacion.md](api-factura-electronica-afip-arca-factura-a-con-bonificacion.md)
+{% endcontent-ref %}
+
+
+
+
+
+***
+
+### ¿Aún te quedan dudas? ¡Contactános!
+
+En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
+
+
+

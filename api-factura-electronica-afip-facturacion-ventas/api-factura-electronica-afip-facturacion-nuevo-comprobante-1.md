@@ -2,6 +2,7 @@
 description: >-
   TusFacturasAPP: La solución SaaS líder para automatizar tu facturación
   electrónica. Integración API AFIP/ARCA asincrónica.
+icon: a
 ---
 
 # Facturación asincrónica e  individual

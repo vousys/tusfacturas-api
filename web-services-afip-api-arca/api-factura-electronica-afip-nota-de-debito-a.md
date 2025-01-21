@@ -3,6 +3,7 @@ description: >-
   TusFacturasAPP: API para Notas de débito A de AFIP/ARCA. Confiable desde 2015.
   Creada por devs y respaldada por expertos impositivos. ¡Los desarrolladores la
   aman!
+icon: code
 ---
 
 # Nota de débito A
