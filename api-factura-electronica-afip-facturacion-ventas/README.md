@@ -55,6 +55,12 @@ Nuestro servicio API de [facturación electrónica AFIP/ARCA ](https://www.tusfa
 
 Explora las funcionalidades de nuestra [API Rest para AFIP/ARCA](referencia-api-afip-arca.md) y descubrí cómo podes personalizarla para tus necesidades.&#x20;
 
+{% content-ref url="referencia-api-afip-arca.md" %}
+[referencia-api-afip-arca.md](referencia-api-afip-arca.md)
+{% endcontent-ref %}
+
+
+
 
 
 ***

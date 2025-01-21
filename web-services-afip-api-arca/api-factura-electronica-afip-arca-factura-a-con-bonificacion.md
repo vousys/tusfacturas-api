@@ -1,8 +1,8 @@
 ---
+icon: code
 description: >-
   Servicio API de TusFacturasAPP para emitir Facturas A con bonificaciones de
   AFIP/ARCA. Confiable desde 2015. ¡Los desarrolladores la aman!
-icon: code
 ---
 
 # Factura A con bonificaciones
@@ -307,6 +307,12 @@ puts response.read_body
 ### Parámetros para crear una Factura A con bonificaciones&#x20;
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación avalado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro y conoce otras[ alternativas de cómo enviar bonificaciones](../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md).
+
+{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md" %}
+[ejemplo-de-factura-con-bonificaciones-descuentos.md](../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md)
+{% endcontent-ref %}
+
+
 
 ### PDF de ejemplo de una Factura A
 
