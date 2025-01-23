@@ -4,7 +4,7 @@
 * [🎯 ¿Cómo empiezo?](como-empiezo/README.md)
   * [Autenticación](como-empiezo/api-factura-electronica-afip-autenticacion.md)
   * [SDK AFIP/ARCA](como-empiezo/api-factura-electronica-afip-plugins-y-sdks.md)
-* [☁️ Ejemplos API AFIP/ARCA](web-services-afip-api-arca/README.md)
+* [Ejemplos API AFIP/ARCA](web-services-afip-api-arca/README.md)
   * [Factura A](web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md)
   * [Factura B](web-services-afip-api-arca/api-factura-electronica-afip-factura-b.md)
   * [Factura C](web-services-afip-api-arca/api-factura-electronica-afip-factura-c.md)
