@@ -20,6 +20,7 @@
   * [Factura A - RG5329](web-services-afip-api-arca/api-factura-electronica-afip-factura-a-rg5329.md)
   * [Factura A en dólares](web-services-afip-api-arca/api-factura-electronica-afip-arca-factura-a-dolares.md)
   * [Factura A con bonificaciones](web-services-afip-api-arca/api-factura-electronica-afip-arca-factura-a-con-bonificacion.md)
+  * [Factura B sin especificar datos del comprador](web-services-afip-api-arca/api-factura-electronica-afip-factura-b-sin-especificar-comprador.md)
   * [Consulta por external reference](web-services-afip-api-arca/consulta-avanzada-por-external-reference.md)
   * [Consulta por tipo y número de comprobante](web-services-afip-api-arca/consulta-simple-tipo-numero.md)
   * [Consulta por fecha de comprobante](web-services-afip-api-arca/consulta-avanzada-por-fecha.md)
