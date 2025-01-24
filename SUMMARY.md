@@ -96,7 +96,8 @@
 
 ***
 
-* [Términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html)
 * [Creá tu cuenta ahora](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html)
 * [Planes API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
+* [Ayuda](https://intercom.help/tusfacturasapp/es)
 * [Contactános](https://www.tusfacturas.app/#contact)
+* [Términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html)

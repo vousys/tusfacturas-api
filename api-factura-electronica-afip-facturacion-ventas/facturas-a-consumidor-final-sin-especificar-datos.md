@@ -13,6 +13,14 @@ Nro de documento = "0"
 
 Tipo de documento = "OTRO"
 
+### Ejemplo:
+
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-b-sin-especificar-comprador.md" %}
+[api-factura-electronica-afip-factura-b-sin-especificar-comprador.md](../web-services-afip-api-arca/api-factura-electronica-afip-factura-b-sin-especificar-comprador.md)
+{% endcontent-ref %}
+
+
+
 {% hint style="info" %}
 Datos a tener en cuenta:
 
