@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 04 de febrero de 2025
+
+Webhooks: Agregamos un token en el header para que puedas corroborar que pertenece a tu espacio de trabajo.&#x20;
+
 ### 19 de diciembre de 2024
 
 Se reglamentó la RG 5614/2024 AFIP/ARCA que establece un cambio en los PDF de los comprobantes de tipo "B"

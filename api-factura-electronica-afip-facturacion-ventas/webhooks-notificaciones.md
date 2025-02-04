@@ -1,8 +1,8 @@
 ---
+icon: webhook
 description: >-
   Recibi notificaciones instantáneas (hooks) sobre cada evento de facturación,
   sin retrasos.
-icon: webhook
 ---
 
 # Webhooks (notificaciones)
@@ -41,15 +41,19 @@ Vas a recibir por **POST** un JSON, con la siguiente estructura, para que puedas
 ```
 {% endcode %}
 
-
+### Headers
 
 {% hint style="success" %}
 **Verificá el hook recibido:**
 
-En los headers del request que te enviamos, podrás observar el siguiente header:
+En los headers del request que te enviamos, podrás observar los siguientes headers:
 
 User-Agent: TusFacturasAPP-webhook/1.0
+
+TF-WebhookToken: TU\_TOKEN\_DEL\_PDV
 {% endhint %}
+
+Podrás obtener el TF-WebhookToken desde la grilla de puntos de venta, ingresando a Menú > Mi espacio de trabajo > CUITs/PDV.&#x20;
 
 ### Detalle de tipos de evento posibles por recurso
 
