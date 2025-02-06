@@ -1,8 +1,8 @@
 ---
+icon: a
 description: >-
   TusFacturasAPP: La solución SaaS líder para automatizar tu facturación
   electrónica. Integración API AFIP/ARCA asincrónica.
-icon: a
 ---
 
 # Facturación asincrónica e  individual
@@ -48,9 +48,11 @@ Al utilizar nuestro servicio API de facturación AFIP/ARCA asincrónica e indivi
 
 ### Tiempos de procesamiento
 
-Nuestros tiempos de procesamiento son aproximados y varian según el tipo de comprobante que emitas:
+Nuestros tiempos de procesamiento **son aproximados** y varian según el volumen de facturación que haya programada y por el tipo de comprobante que emitas:
 
 Las facturas B asincrónicas se procesan por punto de venta hasta 144,000 facturas por día, mientras que el resto de los tipos de comprobante se procesan un máximo de 14,000 comprobantes por día por punto de venta.
+
+Tene en cuenta que no podemos garantizarte que éste volumen se emita en un solo día, por lo que sugerimos enviar la facturación con antelación.
 
 ### ¿Qué dato adicional debe tener el request para ser procesado?
 
