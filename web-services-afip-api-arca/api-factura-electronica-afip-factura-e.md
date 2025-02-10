@@ -1,8 +1,8 @@
 ---
+icon: code
 description: >-
   TusFacturasAPP: API para Facturas E de AFIP/ARCA. Confiable desde 2015. Creada
   por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
-icon: code
 ---
 
 # Factura E
@@ -39,7 +39,9 @@ Factura E emitida en la modalidad "[Instantánea](../api-factura-electronica-afi
       "vencimiento":"26/03/2025",
       "operacion":"V",
       "punto_venta":"0010",
-      
+      "moneda":"DOL",
+      "idioma":"2",
+      "cotizacion":"1115.20",
       "periodo_facturado_desde":"01/02/2025",
       "periodo_facturado_hasta":"28/02/2025",
       "rubro":"Alimentos",
