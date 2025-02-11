@@ -54,9 +54,9 @@ Nuestros tiempos de procesamiento varían según múltiples factores:
 * El tipo de comprobante que emitas
 * El estado de los servicios de AFIP/ARCA
 
-Para las facturas B asincrónicas, procesamos hasta 144,000 facturas por día por punto de venta. Para los demás tipos de comprobantes, el límite es de 14,000 comprobantes por día por punto de venta.
+Para las facturas B asincrónicas, procesamos hasta 144.000 facturas en 24 horas por punto de venta. Para los demás tipos de comprobantes, el límite es de 14.000 comprobantes en 24 horas por punto de venta.
 
-Para acelerar la facturación podrias distribuir la carga de facturación en múltiples puntos de venta. Sin embargo, no podemos garantizar que todo el volumen se emita en un solo día, por lo que recomendamos enviar la facturación con antelación para evitar inconvenientes.
+Para acelerar la facturación podrías distribuir la carga de facturación en múltiples puntos de venta. Sin embargo, no podemos garantizar que todo el volumen se emita en un solo día, por lo que recomendamos enviar la facturación con antelación para evitar inconvenientes.
 
 ### ¿Qué dato adicional debe tener el request para ser procesado?
 
