@@ -39,7 +39,8 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "provincia":"2",
       "envia_por_mail":"S",
       "condicion_pago":"211",
-      "condicion_iva":"RI"
+      "condicion_iva":"RI",
+       "condicion_iva_operacion":"RI"
    }, 
     "comprobante": {
         "external_reference": "0306-0301",

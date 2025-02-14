@@ -1,9 +1,9 @@
 ---
+icon: code
 description: >-
   TusFacturasAPP: API para Notas de crédito E de AFIP/ARCA. Confiable desde
   2015. Creada por devs y respaldada por expertos impositivos. ¡Los
   desarrolladores la aman!
-icon: code
 ---
 
 # Nota de crédito E
@@ -18,18 +18,63 @@ Nota de crédito E emitida en la modalidad "[Instantánea](../api-factura-electr
 
 ### JSON para generar una Nota de crédito E en AFIP/ARCA con detalle de comprobantes anulados
 
-```json
-{
-"usertoken" :  "XXXX",
-"apikey"    :  "XXXX",
-"apitoken"  :  "XXXXXX",
-"cliente"   :
-                {   
-                .....
-                },
-"comprobante":  {
-                ....,
-                "fex": {
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>    "usertoken": "XXX",
+    "apikey": XXX,
+    "apitoken": "XXXX",
+   "cliente":{
+      "documento_tipo":"OTRO",
+      "documento_nro":"11124445",
+      "razon_social":"VOUSYS TusFacturasAPP",
+      "email":"a@a.com",
+      "domicilio":"AV.LIBERTADOR 571",
+      "provincia":"26",
+      "envia_por_mail":"S",
+      "condicion_pago":"211",
+      "condicion_iva":"CDEX"
+   },
+   "comprobante":{
+      "fecha":"14/01/2025",
+      "tipo":"NOTA DE CREDITO E",
+      "vencimiento":"26/03/2025",
+      "operacion":"V",
+      "punto_venta":"0010",
+      "moneda":"DOL",
+      "idioma":"2",
+      "cotizacion":"1115.20",
+      "tags": [ 
+	"etiqueta1","etiqueta2"
+       ],
+       "datos_informativos": {
+	  "paga_misma_moneda": "N"
+      },
+      "periodo_facturado_desde":"01/02/2025",
+      "periodo_facturado_hasta":"28/02/2025",
+      "rubro":"Alimentos",
+      "rubro_grupo_contable":"Alimentos",
+      "detalle":[
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"16098",
+               "precio_unitario_sin_iva":"100",
+               "alicuota":"0",
+               "rg5329":"N"
+            },
+            "leyenda":"Enviadas en cajas separadas"
+         }
+      ],
+      "bonificacion":"0.00",
+      "leyenda_gral":" ",
+      "tributos":[],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":"100",
+       "fex": {
                             "permisos_tiene"      : "S" ,
                             "tipo_exportacion"    : "1",
                             "pais_comprobante_id" : "123",
@@ -56,17 +101,15 @@ Nota de crédito E emitida en la modalidad "[Instantánea](../api-factura-electr
                            "comprobantes_asociados": [
                                                 {
                                                     "tipo_comprobante"   :    "FACTURA E",
-                                                     "punto_venta"  :    "145",
+                                                     "punto_venta"  :    "10",
                                                      "numero" : 12313,
-                                                     "cuit": 30111222334     
+                                                     "cuit": "30712293841"     
                                                 } 
                                            ]
-                    },
-                "detalle": [
-                          .... ]
+                    } 
         }
 }
-```
+</code></pre>
 
 ### ¿Cómo enviar una nota de crédito E según mi lenguaje de programación?
 

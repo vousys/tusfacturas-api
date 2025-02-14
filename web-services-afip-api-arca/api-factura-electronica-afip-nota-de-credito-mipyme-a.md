@@ -1,66 +1,56 @@
 ---
-icon: code
 description: >-
-  TusFacturasAPP: API para Notas de crédito C de AFIP/ARCA. Confiable desde
-  2015. Creada por devs y respaldada por expertos impositivos. ¡Los
+  TusFacturasAPP: API para Notas de crédito MiPyme A de AFIP/ARCA. Confiable
+  desde 2015. Creada por devs y respaldada por expertos impositivos. ¡Los
   desarrolladores la aman!
+icon: code
 ---
 
-# Nota de crédito C
+# Nota de crédito MiPyme A
 
 ### Endpoints
 
-Nota de crédito C emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
+Nota de crédito MiPyme A emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
 
 {% hint style="info" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo`</mark>
 {% endhint %}
 
-Nota de crédito C emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
+### JSON para generar una Nota de crédito MiPyme A en AFIP/ARCA con detalle de comprobantes anulados
 
-{% hint style="info" %}
-<mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo_encola`</mark>
-{% endhint %}
-
-
-
-### JSON para generar una Nota de crédito C en AFIP/ARCA con detalle de comprobantes anulados
-
-```json
-{
-   "usertoken":"xxxxx",
-   "apikey":"xxxx",
-   "apitoken":"xxxxx",
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>    "usertoken": "XXX",
+    "apikey": XXX,
+    "apitoken": "XXXX",
    "cliente":{
       "documento_tipo":"CUIT",
-      "documento_nro":"30712293841",
+      "documento_nro":"1111111111",
       "razon_social":"VOUSYS TusFacturasAPP",
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
-      "provincia":"2",
+      "provincia":"26",
       "envia_por_mail":"S",
       "condicion_pago":"211",
       "condicion_iva":"RI",
        "condicion_iva_operacion":"RI"
    },
    "comprobante":{
-      "fecha":"20/03/2018",
-      "vencimiento":"26/03/2023",
-      "tipo":"NOTA DE CREDITO C",
-      "external_reference":"0306-0301",
+      "fecha":"14/01/2025",
+      "tipo":"NOTA DE CREDITO ELECTRONICA MiPyME (FCE) A",
+      "vencimiento":"26/03/2025",
+      "operacion":"V",
+      "punto_venta":"0010",
+      "moneda":"DOL",
+      "idioma":"2",
+      "cotizacion":"1115.20",
       "tags": [ 
 	"etiqueta1","etiqueta2"
        ],
        "datos_informativos": {
 	  "paga_misma_moneda": "N"
       },
-      "moneda": "PES",
-      "cotizacion": "1",
-      "operacion":"V",
-      "punto_venta":"0002",
-      "numero":"00000012",
-      "periodo_facturado_desde":"28/02/2018",
-      "periodo_facturado_hasta":"28/02/2018",
+      "periodo_facturado_desde":"01/02/2025",
+      "periodo_facturado_hasta":"28/02/2025",
       "rubro":"Alimentos",
       "rubro_grupo_contable":"Alimentos",
       "detalle":[
@@ -72,42 +62,51 @@ Nota de crédito C emitida en la modalidad "[Asincrónica](../api-factura-electr
                "lista_precios":"Lista de precios API 3",
                "codigo":"16098",
                "precio_unitario_sin_iva":"100",
-               "alicuota":"0"
+               "alicuota":"0",
+               "rg5329":"N"
             },
-            "leyenda":""
-         },
-         {
-            "cantidad":"1",
-            "producto":{
-               "descripcion":"p2",
-               "unidad_bulto":"1",
-               "lista_precios":"Lista de precios API 3",
-               "codigo":"160398",
-               "precio_unitario_sin_iva":"10",
-               "alicuota":"0"
-            },
-            "leyenda":""
+            "leyenda":"Enviadas en cajas separadas"
          }
       ],
       "bonificacion":"0.00",
       "leyenda_gral":" ",
-      "total":"110",
-      "comprobantes_asociados":[
-         {
-            "tipo_comprobante":"FACTURA C",
-            "punto_venta":"2",
-            "numero":12313,
-            "comprobante_fecha":"07/07/2018",
-            "cuit":0712293841"
-         }
-      ]
-   }
+      "tributos":[],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":"100",
+      "rg_especiales": {
+		"regimen": "Factura de Cr\u00e9dito Electr\u00f3nica MiPyMEs (FCE)",
+		"datos": [{
+				"id": 22,
+				"valor": "N"
+			},
+			{
+				"id": 23,
+				"valor": "PIRULO S.A"
+			},
+			{
+				"id": 27,
+				"valor": "SCA"
+			}
+		]
+	},
+        "comprobantes_asociados": [
+                            {
+                               "tipo_comprobante"   :    "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
+                                "punto_venta"  :    "10",
+                                 "numero" : 12313,
+                                "cuit": 1111111111, 
+                                "comprobante_fecha":"07/07/2025"     
+                             } 
+                         ] 
+        }
 }
-```
+</code></pre>
 
-### ¿Cómo enviar una nota de crédito C según mi lenguaje de programación?
+### ¿Cómo enviar una nota de crédito MiPyme A según mi lenguaje de programación?
 
-Podes enviar las notas de crédito C por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado arriba.
+Podes enviar las notas de crédito MiPyme A por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado arriba.
 
 {% tabs %}
 {% tab title="CURL" %}
@@ -217,21 +216,19 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-### Parámetros para crear una Nota de crédito C&#x20;
+### Parámetros para crear una Nota de crédito MiPyme A&#x20;
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro.
 
-### PDF de ejemplo de una Nota de crédito C
+### ¿Qué es una nota de crédito MiPyme A?
 
-¿Necesitas una Nota de Crédito C de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__NOTA_DE_CREDITO_C-00010-00000001.pdf). Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
+Conocé  que es una [nota de crédito ](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)MiPyme A.
 
-### ¿Qué es una nota de crédito C?
+### ¿Cuándo generar una nota de crédito MiPyme A?
 
-Conocé  que es una[ nota de crédito C](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md).
+Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una nota de crédito MiPyme A.
 
-### ¿Cuándo generar una nota de crédito C?
 
-Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una nota de crédito C.
 
 ***
 

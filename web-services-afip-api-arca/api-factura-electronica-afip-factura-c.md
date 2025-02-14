@@ -1,8 +1,8 @@
 ---
+icon: code
 description: >-
   TusFacturasAPP: API para Facturas C de AFIP/ARCA. Confiable desde 2015. Creada
   por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
-icon: code
 ---
 
 # Factura C
@@ -39,12 +39,20 @@ Factura C emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "provincia":"2",
       "envia_por_mail":"S",
       "condicion_pago":"211",
-      "condicion_iva":"RI"
+      "condicion_iva":"RI",
+       "condicion_iva_operacion":"RI"
    },
    "comprobante":{
       "fecha":"20/03/2018",
       "vencimiento":"26/03/2023",
       "tipo":"FACTURA C",
+      "external_reference":"0306-0301",
+      "tags": [ 
+	"etiqueta1","etiqueta2"
+       ],
+       "datos_informativos": {
+			   "paga_misma_moneda": "N"
+			},	
       "operacion":"V",
       "punto_venta":"0002",
       "numero":"00000012",

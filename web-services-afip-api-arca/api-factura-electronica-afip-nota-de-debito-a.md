@@ -1,9 +1,9 @@
 ---
+icon: code
 description: >-
   TusFacturasAPP: API para Notas de débito A de AFIP/ARCA. Confiable desde 2015.
   Creada por devs y respaldada por expertos impositivos. ¡Los desarrolladores la
   aman!
-icon: code
 ---
 
 # Nota de débito A
@@ -41,6 +41,7 @@ Nota de débito A emitida en la modalidad "[Asincrónica](../api-factura-electro
       "envia_por_mail":"S",
       "condicion_pago":"211",
       "condicion_iva":"RI",
+       "condicion_iva_operacion":"RI",
       "rg5329":"N"
    },
    "comprobante":{
@@ -50,6 +51,16 @@ Nota de débito A emitida en la modalidad "[Asincrónica](../api-factura-electro
       "operacion":"V",
       "punto_venta":"0002",
       "numero":"00000012",
+      "external_reference":"0306-0301",
+      "tags": [ 
+	"etiqueta1","etiqueta2"
+       ],
+       "datos_informativos": {
+	  "paga_misma_moneda": "N"
+      },
+      "moneda": "PES",
+      "cotizacion": "1",
+      
       "periodo_facturado_desde":"28/02/2018",
       "periodo_facturado_hasta":"28/02/2018",
       "rubro":"Alimentos",

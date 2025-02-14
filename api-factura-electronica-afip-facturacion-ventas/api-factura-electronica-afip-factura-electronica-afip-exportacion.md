@@ -4,7 +4,7 @@ description: >-
   tipo E: FACTURA E, NOTA DE DÉBITO E, NOTA DE CRÉDITO E.
 ---
 
-# Comprobantes de exportación de tipo "E"
+# Comprobantes "E" de exportación
 
 TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
 
@@ -41,11 +41,21 @@ Están obligadas a emitir Facturas "E" todas las empresas argentinas que realice
 
 La emisión de Facturas "E" se realiza de forma electrónica a través de **AFIP** o mediante **software homologado por la AFIP, como lo es**[ **TusFacturas.app**](https://www.tusfacturas.app) **y únicamente de manera instantánea.**
 
-### ¿Cómo crear una Comprobantes de exportacion "E"**?**
+### ¿Cómo crear  Comprobantes de exportacion "E"**?**
 
-* Ejemplo de [Factura E](../web-services-afip-api-arca/api-factura-electronica-afip-factura-e.md)
-* Ejemplo de [Nota de crédito E](../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-e.md)
-* Ejemplo de [Nota de débito E](../web-services-afip-api-arca/nota-de-debito-e.md)
+Ejemplos de cómo podes crear comprobantes de exportación:
+
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-e.md" %}
+[api-factura-electronica-afip-factura-e.md](../web-services-afip-api-arca/api-factura-electronica-afip-factura-e.md)
+{% endcontent-ref %}
+
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-e.md" %}
+[api-factura-electronica-afip-nota-de-credito-e.md](../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-e.md)
+{% endcontent-ref %}
+
+{% content-ref url="../web-services-afip-api-arca/nota-de-debito-e.md" %}
+[nota-de-debito-e.md](../web-services-afip-api-arca/nota-de-debito-e.md)
+{% endcontent-ref %}
 
 ### **Particularidades de los comprobantes "E":**
 
@@ -99,7 +109,7 @@ Para emitir Comprobantes Electrónicos de Exportación ("E"), solo debes **agreg
 | `comprobantes_asociados` | OPCIONAL. Se deberá informar el/los comprobante/s asociados solamente si el comprobante que se está autorizando corresponde a una Nota de Débito o Nota de Crédito. Según estructura de "[Comprobantes asociados"](api-factura-electronica-afip-factura-electronica-afip-exportacion.md#estructura-de-comprobantes-asociados). |
 | fecha\_pago              | Campo fecha - formato esperado: dd/mm/aaaa. Éste campo es obligatorio únicamente para Facturas E, si se envia tipo\_exportacion = 2 o tipo\_exportacion=4                                                                                                                                                                          |
 
-### Estructura de "Permisos "
+#### Estructura de "Permisos "
 
 El bloque de "permisos" es un array con cada uno de los permisos de exportación que dispongas. Cada uno de éstos debe ser enviado acordes a la estructura que se detalla a continuación
 
@@ -128,6 +138,14 @@ Los siguientes campos dentro del json del comprobante deberá enviarlos en cero:
 El bloque tributos deberá ser enviado vacío.
 {% endhint %}
 
+#### Ejemplo de Factura E
+
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-e.md" %}
+[api-factura-electronica-afip-factura-e.md](../web-services-afip-api-arca/api-factura-electronica-afip-factura-e.md)
+{% endcontent-ref %}
+
+
+
 ### Notas de crédito E / Notas de débito E
 
 En caso que debas anular una factura de exportación, el comprobante que debes emitir es una Nota de crédito E, para ésto debes agregar dentro del bloque "fex" un bloque adicional según estructura de "[comprobantes\_asociados](api-factura-electronica-afip-notas-credito-debito.md#ejemplos-json-completos)", que es un array con cada uno de los comprobantes de tipo E que se quieren anular contablemente. Te sugerimos consultar la documentación de [Notas de crédito / Notas de débit](api-factura-electronica-afip-notas-credito-debito.md)o para conocer como el bloque que debes enviar.
@@ -135,6 +153,18 @@ En caso que debas anular una factura de exportación, el comprobante que debes e
 {% hint style="info" %}
 Solo deberán ser enviados los comprobantes asociados, cuando el campo exportacion\_tipo sea igual a "1" .
 {% endhint %}
+
+#### Ejemplo de Notas de crédito E
+
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-e.md" %}
+[api-factura-electronica-afip-nota-de-credito-e.md](../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-e.md)
+{% endcontent-ref %}
+
+#### Ejemplo de Notas de débito E
+
+{% content-ref url="../web-services-afip-api-arca/nota-de-debito-e.md" %}
+[nota-de-debito-e.md](../web-services-afip-api-arca/nota-de-debito-e.md)
+{% endcontent-ref %}
 
 
 

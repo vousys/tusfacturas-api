@@ -1,8 +1,8 @@
 ---
+icon: code
 description: >-
   Servicio API de TusFacturasAPP para emitir Facturas A bajo la RG5239 de
   AFIP/ARCA. Confiable desde 2015. ¡Los desarrolladores la aman!
-icon: code
 ---
 
 # Factura A - RG5329
@@ -41,6 +41,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "envia_por_mail":"S",
       "condicion_pago":"211",
       "condicion_iva":"RI",
+       "condicion_iva_operacion":"RI",
       "rg5329":"S"
    },
    "comprobante":{

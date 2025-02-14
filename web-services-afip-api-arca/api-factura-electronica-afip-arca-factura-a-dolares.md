@@ -1,8 +1,8 @@
 ---
+icon: code
 description: >-
   Servicio API de TusFacturasAPP para emitir Facturas A en dólares de AFIP/ARCA.
   Confiable desde 2015. ¡Los desarrolladores la aman!
-icon: code
 ---
 
 # Factura A en dólares
@@ -39,7 +39,8 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "provincia":"2",
       "envia_por_mail":"S",
       "condicion_pago":"211",
-      "condicion_iva":"RI"
+      "condicion_iva":"RI",
+       "condicion_iva_operacion":"RI"
    },
    "comprobante":{
       "fecha":"20/03/2018",

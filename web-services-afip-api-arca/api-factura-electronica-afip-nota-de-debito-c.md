@@ -1,9 +1,9 @@
 ---
+icon: code
 description: >-
   TusFacturasAPP: API para Notas de débito C de AFIP/ARCA. Confiable desde 2015.
   Creada por devs y respaldada por expertos impositivos. ¡Los desarrolladores la
   aman!
-icon: code
 ---
 
 # Nota de débito C
@@ -40,7 +40,8 @@ Nota de débito C emitida en la modalidad "[Asincrónica](../api-factura-electro
       "provincia":"2",
       "envia_por_mail":"S",
       "condicion_pago":"211",
-      "condicion_iva":"RI"
+      "condicion_iva":"RI",
+       "condicion_iva_operacion":"RI"
    },
    "comprobante":{
       "fecha":"20/03/2018",
@@ -49,8 +50,15 @@ Nota de débito C emitida en la modalidad "[Asincrónica](../api-factura-electro
       "operacion":"V",
       "punto_venta":"0002",
       "numero":"00000012",
-      "moneda":"PES",
-      "cotizacion": 1,
+      "external_reference":"0306-0301",
+      "tags": [ 
+	"etiqueta1","etiqueta2"
+       ],
+       "datos_informativos": {
+	  "paga_misma_moneda": "N"
+      },
+      "moneda": "PES",
+      "cotizacion": "1",
       "periodo_facturado_desde":"28/02/2018",
       "periodo_facturado_hasta":"28/02/2018",
       "rubro":"Alimentos",

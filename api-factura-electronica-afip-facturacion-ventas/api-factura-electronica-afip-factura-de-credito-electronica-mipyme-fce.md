@@ -54,13 +54,11 @@ Para más información acerca de los comprobantes MiPyme, sugerimos leer la info
 
 Consultá la descripción completa del servicio [API Facturación AFIP](./).
 
-### **Información importante sobre los Comprobantes MiPyme:**
+### **Información importante sobre los Comprobantes MiPyme ARCA:**
 
 * **Información adicional obligatoria:** Estos comprobantes requieren información adicional dentro del bloque "rg\_especiales".
 * **Aplicabilidad:** Se utilizan solo para ciertos receptores a partir de un monto determinado, que varía según la operación.
 * **Determina el tipo de comprobante:** Accede a [nuestra guía](api-factura-electronica-afip-or-como-se-si-emitir-una-factura-mipyme-o-una-comun.md) para saber si debes emitir una factura MiPyme o una factura común.
-
-
 
 ### ¿Qué debes agregar en el request API para generar un comprobante MiPyme?&#x20;
 
@@ -111,39 +109,15 @@ Datos a tener en cuenta:
 
 {% endhint %}
 
-### Ejemplo de factura de crédito electrónica  MiPyme (FCE)
+#### Ejemplo de factura de crédito electrónica  MiPyme (FCE)
 
-```json
-JSON
-{
-   "usertoken":"xxxx",
-   "apikey":"xxxx",
-   "apitoken":"xxxxx",
-   "cliente":{
-      .....
-   },
-   "comprobante":{
-      ......,
-      "rg_especiales":{
-         "regimen":"Factura de Crédito Electrónica MiPyMEs (FCE)",
-         "datos":[
-            {
-               "id":2101,
-               "valor":"1234567890123456789011"
-            },
-            {
-               "id":23,
-               "valor":"Prueba"
-            },
-            {
-               "id":27,
-               "valor":"SCA"
-            }
-         ]
-      }
-   }
-}
-```
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-mypyme-a.md" %}
+[api-factura-electronica-afip-factura-mypyme-a.md](../web-services-afip-api-arca/api-factura-electronica-afip-factura-mypyme-a.md)
+{% endcontent-ref %}
+
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-mypyme-b.md" %}
+[api-factura-electronica-afip-factura-mypyme-b.md](../web-services-afip-api-arca/api-factura-electronica-afip-factura-mypyme-b.md)
+{% endcontent-ref %}
 
 ### Nota de crédito electrónica A MiPyme (FCE)
 
@@ -156,46 +130,14 @@ En caso que debas anular un comprobante, la operación correcta es emitir una No
 * Debes enviar dentro del bloque de "[rg\_especiales](./#estructura-de-rg-especiales)", el dato id #22 con el valor S o N según corresponda. Consultá con tu estudio contable para que te asesoren al respecto.
 * Los comprobantes que se asocien deben haberse emitido en la misma moneda en que se esta emitiendo la nota de crédito/débito.
 * La fecha del comprobante que asocies debe ser menor o igual a la fecha del comprobante que estas queriendo emitir. Tené en cuenta que AFIP realiza validaciones en cuanto a la fecha de los comprobantes que asocies, ya que no se permiten notas de crédito a comprobantes con  +15 días.
+* Ten en cuenta que TusFacturas.app no realiza validaciones con respecto a los datos enviados referente a la RG MiPyme. Las validaciones se realizan exclusivamente del lado de AFIP, previa generación del comprobante.
 {% endhint %}
 
-{% code title="Ejemplo JSON de una Nota de crédito " %}
-```json
-{
-	"usertoken": "xxx",
-	"apikey": "xxxx",
-	"apitoken": "xxxx",
-	"cliente": {
-		.....
-	},
-	"comprobante": {
-		.....,
-        	"rg_especiales":   
-            		{  
-            		 "regimen" : "Factura de Crédito Electrónica MiPyMEs (FCE)",
-                 	"datos"  : 
-                           [ 
-                            	{
-                             	 "id"      :    22,
-                             	"valor"  :    "S"
-                             	} 
-                	   ]
-            		}, 
-	         "comprobantes_asociados": [{
-			"tipo_comprobante": "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
-			"punto_venta": "3",
-			"numero": 1,
-			"comprobante_fecha": "07/07/2019",
-			"cuit": 1111111111111
-		}]
-	}
-}
+#### Ejemplos de Notas de crédito MiPyme
 
-```
-{% endcode %}
-
-{% hint style="info" %}
-Ten en cuenta que TusFacturas.app no realiza validaciones con respecto a los datos enviados referente a la RG MiPyme. Las validaciones se realizan exclusivamente del lado de AFIP, previa generación del comprobante.
-{% endhint %}
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-mipyme-a.md" %}
+[api-factura-electronica-afip-nota-de-credito-mipyme-a.md](../web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-mipyme-a.md)
+{% endcontent-ref %}
 
 TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y un [software de gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).
 

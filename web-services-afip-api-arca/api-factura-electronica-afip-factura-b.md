@@ -1,8 +1,8 @@
 ---
+icon: code
 description: >-
   TusFacturasAPP: API para Facturas B de AFIP/ARCA. Confiable desde 2015. Creada
   por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
-icon: code
 ---
 
 # Factura B
@@ -33,6 +33,7 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
    "cliente":{
       "documento_tipo":"DNI",
       "condicion_iva":"CF",
+      "condicion_iva_operacion":"CF",
       "domicilio":"Av Sta Fe 23132",
       "condicion_pago":"201",
       "documento_nro":"111132333",
@@ -49,6 +50,13 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "bonificacion":0,
       "operacion":"V",
       "moneda":"PES",
+      "external_reference":"0306-0301",
+      "tags": [ 
+	"etiqueta1","etiqueta2"
+       ],
+       "datos_informativos": {
+	  "paga_misma_moneda": "N"
+      },
       "cotizacion": 1,
       "detalle":[
          {
@@ -72,9 +80,7 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "fecha":"28/03/2018",
       "vencimiento":"26/03/2023",
       "rubro_grupo_contable":"Sevicios",
-      "total":139.0,
-      "cotizacion":1,
-      "moneda":"PES",
+      "total":139.0, 
       "punto_venta":3,
       "tributos":[]
    }

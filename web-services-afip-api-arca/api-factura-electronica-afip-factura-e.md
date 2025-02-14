@@ -42,6 +42,12 @@ Factura E emitida en la modalidad "[Instantánea](../api-factura-electronica-afi
       "moneda":"DOL",
       "idioma":"2",
       "cotizacion":"1115.20",
+      "tags": [ 
+	"etiqueta1","etiqueta2"
+       ],
+       "datos_informativos": {
+	  "paga_misma_moneda": "N"
+      },
       "periodo_facturado_desde":"01/02/2025",
       "periodo_facturado_hasta":"28/02/2025",
       "rubro":"Alimentos",

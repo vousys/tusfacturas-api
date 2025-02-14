@@ -1,9 +1,9 @@
 ---
+icon: code
 description: >-
   TusFacturasAPP: API para Notas de crédito A de AFIP/ARCA. Confiable desde
   2015. Creada por devs y respaldada por expertos impositivos. ¡Los
   desarrolladores la aman!
-icon: code
 ---
 
 # Nota de crédito A
@@ -41,6 +41,7 @@ Nota de crédito A emitida en la modalidad "[Asincrónica](../api-factura-electr
       "envia_por_mail":"S",
       "condicion_pago":"211",
       "condicion_iva":"RI",
+       "condicion_iva_operacion":"RI",
       "rg5329":"N"
    },
    "comprobante":{
@@ -50,6 +51,15 @@ Nota de crédito A emitida en la modalidad "[Asincrónica](../api-factura-electr
       "operacion":"V",
       "punto_venta":"0002",
       "numero":"00000012",
+      "external_reference":"0306-0301",
+      "tags": [ 
+	"etiqueta1","etiqueta2"
+       ],
+       "datos_informativos": {
+	  "paga_misma_moneda": "N"
+      },
+      "moneda": "PES",
+      "cotizacion": "1",
       "periodo_facturado_desde":"28/02/2018",
       "periodo_facturado_hasta":"28/02/2018",
       "rubro":"Alimentos",
@@ -107,10 +117,10 @@ Nota de crédito A emitida en la modalidad "[Asincrónica](../api-factura-electr
       "comprobantes_asociados":[
          {
             "tipo_comprobante":"FACTURA A",
-            "punto_venta":"145",
+            "punto_venta":"0002",
             "numero":12313,
             "comprobante_fecha":"07/07/2018",
-            "cuit":1111111111111
+            "cuit":"30712293841"
          }
       ]
    }

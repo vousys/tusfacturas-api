@@ -1,9 +1,9 @@
 ---
+icon: code
 description: >-
   TusFacturasAPP: API para Facturas B  sin especificar datos del comprador en
   AFIP/ARCA. Confiable desde 2015. Creada por devs y respaldada por expertos
   impositivos. ¡Los desarrolladores la aman!
-icon: code
 ---
 
 # Factura B sin especificar datos del comprador
@@ -34,6 +34,7 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
    "cliente":{
       "documento_tipo":"OTRO",
       "condicion_iva":"CF",
+       "condicion_iva_operacion":"CF",
       "domicilio":"No especifica",
       "condicion_pago":"201",
       "documento_nro":"0",
