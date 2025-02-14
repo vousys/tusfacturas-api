@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 14 de febrero de 2025
+
+Se agrega el bloque "[datos\_informativos](api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-de-datos_informativos)" dentro de las ventas, por la entrada en vigencia el 15/04/2025 de la RG5616/2024 de ARCA.  Asimismo se agrega el campo "[condicion\_iva\_operacion](api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-bloque-cliente-y-proveedor)" dentro de los datos del cliente.
+
 ### 04 de febrero de 2025
 
 Webhooks: Agregamos un token en el header para que puedas corroborar que pertenece a tu espacio de trabajo.&#x20;
