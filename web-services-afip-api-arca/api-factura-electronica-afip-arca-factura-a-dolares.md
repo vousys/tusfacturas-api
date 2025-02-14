@@ -52,6 +52,9 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "cotizacion": 1035,
       "punto_venta":"0002",
       "numero":"00000012",
+      "datos_informativos": {
+	  "paga_misma_moneda": "N"
+      },
       "periodo_facturado_desde":"28/02/2018",
       "periodo_facturado_hasta":"28/02/2018",
       "rubro":"Alimentos",
