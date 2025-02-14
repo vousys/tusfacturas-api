@@ -14,11 +14,11 @@ La [API de facturación electrónica AFIP](https://www.tusfacturas.app/api-factu
 
 <figure><img src=".gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
 
-### ¿Qué es la factura electrónica AFIP/ARCA?
+### ¿Qué es la factura electrónica ARCA?
 
 La [factura electrónica AFIP/ARCA](https://www.tusfacturas.app/factura-electronica-afip.html) es un comprobante digital con el mismo valor legal que el papel, ya que AFIP por medio de la [RG (AFIP/ARCA) 4290](https://www.tusfacturas.app/normativa-afip-factura-electronica.html), ha generalizado el uso de la factura electrónica para todos los contribuyentes de Argentina.
 
-### ¿Qué servicios incluye la API?
+### ¿Qué servicios incluye la API AFIP?
 
 Además de usar la API, podrás utilizar nuestra plataforma web, con todas las funcionalidades que ésta brinda.
 

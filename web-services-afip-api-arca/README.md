@@ -1,14 +1,14 @@
 ---
+icon: code
 description: >-
   Facturación electrónica AFIP/ARCA fácil y segura. TusFacturasAPP, respaldado
   por expertos contables impositivos y actualizada con las últimas normativas.
   ¡Comenza gratis!
-icon: code
 ---
 
 # Ejemplos API AFIP/ARCA
 
-[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. TusFacturasAPP te permite emitir facturas electrónicas de forma rápida y segura, cumpliendo con todos los requisitos legales de AFIP. Olvídate de la burocracia y concéntrate en lo que realmente importa: hacer crecer tu negocio.
+[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. TusFacturasAPP te permite emitir facturas electrónicas ARCA de forma rápida y segura, cumpliendo con todos los requisitos legales de AFIP/ARCA. Olvídate de la burocracia y concéntrate en lo que realmente importa: hacer crecer tu negocio.
 
 ### Conoce como crear rápidamente:
 
@@ -98,6 +98,14 @@ icon: code
 
 {% content-ref url="api-factura-electronica-afip-arca-factura-a-con-bonificacion.md" %}
 [api-factura-electronica-afip-arca-factura-a-con-bonificacion.md](api-factura-electronica-afip-arca-factura-a-con-bonificacion.md)
+{% endcontent-ref %}
+
+{% content-ref url="api-factura-electronica-afip-factura-mypyme-a.md" %}
+[api-factura-electronica-afip-factura-mypyme-a.md](api-factura-electronica-afip-factura-mypyme-a.md)
+{% endcontent-ref %}
+
+{% content-ref url="api-factura-electronica-afip-nota-de-credito-mipyme-a.md" %}
+[api-factura-electronica-afip-nota-de-credito-mipyme-a.md](api-factura-electronica-afip-nota-de-credito-mipyme-a.md)
 {% endcontent-ref %}
 
 
