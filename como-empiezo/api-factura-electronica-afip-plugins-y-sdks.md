@@ -183,7 +183,9 @@ puts response.read_body
 
 ### SDK  AFIP/ARCA en PHP
 
-Descargá el SDK para emitir factura electrónica AFIP/ARCA para PHP  desde nuestro repositorio GIT [https://github.com/vousys/tusfacturas](https://github.com/vousys/tusfacturas)
+Optimiza la facturación electrónica en PHP con nuestro **SDK para factura electrónica AFIP/ARCA**, una solución eficiente y actualizada para la emisión de comprobantes fiscales. Descarga gratuitamente el [**SDK AFIP/ARCA en PHP**](https://github.com/vousys/tusfacturas) desde nuestro repositorio GIT y automatiza la integración con los sistemas de facturación electrónica en Argentina. Nuestra herramienta simplifica la emisión de facturas, asegurando el cumplimiento de las normativas vigentes de AFIP/ARCA. A diferencia de otras soluciones, ofrecemos un **SDK para factura electrónica** optimizado, de fácil implementación y con documentación detallada para desarrolladores. Potencia tu sistema con la mejor tecnología para facturación electrónica en PHP.
+
+[https://github.com/vousys/tusfacturas](https://github.com/vousys/tusfacturas)
 
 ![https://github.com/vousys/tusfacturas](../.gitbook/assets/Github.png)
 
