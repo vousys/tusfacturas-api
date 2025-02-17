@@ -38,6 +38,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
       "envia_por_mail":"S",
+      "reclama_deuda": "N",
       "condicion_pago":"211",
       "condicion_iva":"RI",
       "condicion_iva_operacion":"RI"
@@ -99,9 +100,12 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "impuestos_internos_base":"0",
       "impuestos_internos_alicuota":"0",
       "total":"151",
-      "comprobantes_asociados":[
-         
-      ]
+      "pagos": {
+		"formas_pago": [
+		   {"descripcion" : "MercadoPago", "importe" : 151} 			
+			   ],
+		"total": 151
+		} 
    }
 }
 ```

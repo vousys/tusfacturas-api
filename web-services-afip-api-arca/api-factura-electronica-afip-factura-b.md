@@ -40,6 +40,7 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "razon_social":"Juan Pedro KJL",
       "provincia":"2",
       "email":"email@dominio.com",
+      "reclama_deuda": "N",
       "envia_por_mail":"N",
        "rg5329": "N"
    },
@@ -81,6 +82,12 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "vencimiento":"26/03/2023",
       "rubro_grupo_contable":"Sevicios",
       "total":139.0, 
+      "pagos": {
+		"formas_pago": [
+		   {"descripcion" : "MercadoPago", "importe" : 139} 			
+			   ],
+		"total": 139
+		},
       "punto_venta":3,
       "tributos":[]
    }

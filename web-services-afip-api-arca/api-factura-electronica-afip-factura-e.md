@@ -31,6 +31,7 @@ Factura E emitida en la modalidad "[Instantánea](../api-factura-electronica-afi
       "provincia":"26",
       "envia_por_mail":"S",
       "condicion_pago":"211",
+      "reclama_deuda": "N",
       "condicion_iva":"CDEX"
    },
    "comprobante":{

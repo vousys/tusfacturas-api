@@ -38,6 +38,7 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "domicilio":"No especifica",
       "condicion_pago":"201",
       "documento_nro":"0",
+      "reclama_deuda": "N",
       "razon_social":"Consumidor final",
       "provincia":"2",
       "email":"email@dominio.com",
@@ -75,6 +76,12 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "vencimiento":"26/03/2023",
       "rubro_grupo_contable":"Sevicios",
       "total":139.0,
+      "pagos": {
+		"formas_pago": [
+		   {"descripcion" : "MercadoPago", "importe" : 139} 			
+			   ],
+		"total": 139
+		},
       "cotizacion":1,
       "moneda":"PES",
       "punto_venta":3,

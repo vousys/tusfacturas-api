@@ -40,6 +40,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "provincia":"2",
       "envia_por_mail":"S",
       "condicion_pago":"211",
+      "reclama_deuda": "N",
       "condicion_iva":"RI",
        "condicion_iva_operacion":"RI",
       "rg5329":"S"
@@ -139,6 +140,12 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "impuestos_internos_base":"0",
       "impuestos_internos_alicuota":"0",
       "total":478526,
+      "pagos": {
+		"formas_pago": [
+		   {"descripcion" : "MercadoPago", "importe" : 478526} 			
+			   ],
+		"total": 478526
+		},
       "comprobantes_asociados":[
          
       ]

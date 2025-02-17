@@ -37,6 +37,7 @@ Factura C emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
+      "reclama_deuda": "N",
       "envia_por_mail":"S",
       "condicion_pago":"211",
       "condicion_iva":"RI",
@@ -90,7 +91,13 @@ Factura C emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       ],
       "bonificacion":"0.00",
       "leyenda_gral":" ",
-      "total":"110" 
+      "total":"110",
+         "pagos": {
+		"formas_pago": [
+		   {"descripcion" : "MercadoPago", "importe" : 110} 			
+			   ],
+		"total": 110
+		}, 
    }
 }
 ```

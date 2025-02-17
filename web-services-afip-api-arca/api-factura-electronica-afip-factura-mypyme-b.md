@@ -1,9 +1,9 @@
 ---
+icon: code
 description: >-
   TusFacturasAPP: API para Facturas MiPyme B de AFIP/ARCA. Confiable desde 2015.
   Creada por devs y respaldada por expertos impositivos. ¡Los desarrolladores la
   aman!
-icon: code
 ---
 
 # Factura MiPyme B
@@ -33,6 +33,7 @@ Factura MiPyme A emitida en la modalidad "[Instantánea](../api-factura-electron
       "envia_por_mail":"S",
       "condicion_pago":"211",
       "condicion_iva":"E",
+      "reclama_deuda": "N",
        "condicion_iva_operacion":"E"
    },
    "comprobante":{
@@ -77,6 +78,12 @@ Factura MiPyme A emitida en la modalidad "[Instantánea](../api-factura-electron
       "impuestos_internos_base":"0",
       "impuestos_internos_alicuota":"0",
       "total":"100",
+         "pagos": {
+		"formas_pago": [
+		   {"descripcion" : "MercadoPago", "importe" : 100} 			
+			   ],
+		"total": 100
+		},
       "rg_especiales": {
 		"regimen": "Factura de Cr\u00e9dito Electr\u00f3nica MiPyMEs (FCE)",
 		"datos": [{
