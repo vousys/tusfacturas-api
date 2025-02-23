@@ -268,7 +268,7 @@ Ejemplo de respuesta de un comprobante enviado en la modalidad individual y asin
 	"error_details": [],
 	"external_reference": 12102022,
 	"requiere_fec": "NO",
-	"observaciones": "",
+	"observaciones": "AFIP genero el comprobante pero  lo ha marcado como observado por los siguientes motivos:   Observacion: DocTipo: 80, DocNro 111111111 - La CUIT receptora que ingresaste no existe. Tenes que emitir una Nota de Credito o anular la operacion, segun corresponda. [ codigo: 10238 ].",
 	"tfc_generacion_tipo": 6,
 	"rta": "El comprobante  se ha guardado correctamente ",
 	"cae": " ",
