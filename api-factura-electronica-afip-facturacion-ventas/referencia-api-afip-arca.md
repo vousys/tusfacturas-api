@@ -291,7 +291,7 @@ Ejemplo de respuesta de un comprobante enviado en la modalidad individual y asin
 }
 ```
 
-
+&#x20;
 
 #### :octagonal\_sign: Response con error
 
@@ -378,7 +378,15 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 
 * **Aquellos comprobantes que hayan impactado en AFIP, no podrán ser eliminados. Sólo pueden ser anulados contablemente generando una** [**nota de crédito**](api-factura-electronica-afip-notas-credito-debito.md#que-es-una-nota-de-credito-nc-electronica)**.**
 * Ningún comprobante puede ser modificado una vez creado.
+
+
+
+**OBSERVACIONES**
+
+* El campo de "observaciones" contiene las observaciones  enviadas por AFIP/ARCA sobre esa operación.
 {% endhint %}
+
+
 
 ### ¿Dónde puedo ver las ventas generadas?
 
