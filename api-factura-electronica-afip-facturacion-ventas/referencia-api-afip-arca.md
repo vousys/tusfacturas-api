@@ -383,7 +383,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 
 **OBSERVACIONES**
 
-* El campo de "observaciones" contiene las observaciones  enviadas por AFIP/ARCA sobre esa operación.
+* El campo de "observaciones" contiene las observaciones  enviadas por AFIP/ARCA sobre esa operación, dado que los comprobantes pueden ser aprobados pero aún así, observados.
 {% endhint %}
 
 
@@ -461,6 +461,7 @@ comprobante: {
 * Si el cliente ya existe en tu base de clientes/proveedores en TusFacturasAPP por código o tipo + número de documento, la info será actualizada con los nuevos datos que envies, con excepción de los campos:  tipo de documento, número de documento y condición ante el IVA.
 * Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI,  consulta la siguiente documentación de "[Facturas a Consumidor final sin especificar datos](facturas-a-consumidor-final-sin-especificar-datos.md)"
 * Para casos de clientes del exterior, que posean **pasaporte**, tene en cuenta que AFIP/ARCA sólo permite el envío de números.&#x20;
+* Te recomendamos utilizar el método de [consulta de CUITs](../consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md) antes de emitir facturas, ya que el CUIT de tu cliente podría no estar activo, lo que podría generar inconvenientes con el fisco.
 {% endhint %}
 
 ### Estructura del bloque: "Detalle de conceptos"
