@@ -240,7 +240,9 @@ Ejemplo de respuesta de un comprobante enviado en la modalidad individual e inst
      "rta":      "El comprobante NOTA DE DEBITO B 0002-00000006 (MI CUIT) se ha guardado correctamente",    
      "cae":      "65301278726386 ",
      "requiere_fec":   "NO ",    
-     "vencimiento_cae":"07\/08\/2015",    
+     "vencimiento_cae":"07\/08\/2015",   
+     "observaciones": "AFIP genero el comprobante pero  lo ha marcado como observado por los siguientes motivos:   Observacion: Observacion: El credito fiscal discriminado en el presente comprobante solo podra ser computado a efectos del Procedimiento permanente de transicion al Regimen General. [ codigo: 10217 ].",
+
      "vencimiento_pago":"27\/08\/2015",    
      "comprobante_pdf_url": "https://www.dominio.com/url",
      "comprobante_ticket_url": "https://www.dominio.com/url",
