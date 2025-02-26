@@ -7,9 +7,9 @@ description: >-
 
 # Referencia API AFIP ARCA
 
-La API de TusFacturasAPP te permite interactuar de forma directa con toda la información que necesitas para desarrollar tus integraciones contra AFIP/ARCA.&#x20;
+La API de TusFacturasAPP te permite interactuar de forma directa con los web services de ARCA de manera fácil y rápida.
 
-Llamamos "comprobante" a todo documento ya sea factura, nota de crédito, nota de débito, pedido, presupuesto y remito tanto de ventas como de compras.&#x20;
+Llamaremos "comprobante" a todo documento digital, ya sea factura, nota de crédito, nota de débito, pedido, presupuesto y remito tanto de ventas como de compras.&#x20;
 
 ### Endpoint:
 
@@ -19,7 +19,7 @@ Llamamos "comprobante" a todo documento ya sea factura, nota de crédito, nota d
 `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`metodo-elegido`**</mark>
 {% endhint %}
 
-Con la API de TusFacturasAPP podes enviar la información de maneras diferentes:
+Con la API para ARCA de TusFacturasAPP podes enviar la información de maneras diferentes:
 
 [ Instantánea](api-factura-electronica-afip-facturacion-nuevo-comprobante.md): Recibis la respuesta al instante, pero está sujeta al funcionamiento de los servicios de AFIP/ARCA. &#x20;
 
@@ -225,13 +225,13 @@ _Información de ejemplo, solo para visualizar su estructura general._&#x20;
 
 
 
-### ¿Qué te retorna la llamada a la API?
+### ¿Qué te retorna la llamada a la API para ARCA?
 
 #### &#x20;:white\_check\_mark:  Cuando el request resultó exitoso:
 
-Sea cual sea la modalidad que utilices para facturar y por cada comprobante que emitas, obtendrás la siguiente respuesta, con todos los datos que necesitas para almacenar en tu sistema. &#x20;
+Sea cual sea la modalidad que utilices para facturar y por cada comprobante que emitas, obtendrás los mismos campos, con los datos que necesitas para almacenar en tu sistema. &#x20;
 
-Ejemplo de respuesta de un comprobante enviado en la modalidad individual e instantánea:
+Ejemplo de respuesta de un comprobante enviado en la modalidad individual e instantánea, la cual te devuelve la información del comprobante emitido.
 
 ```json
 {
@@ -260,7 +260,7 @@ Ejemplo de respuesta de un comprobante enviado en la modalidad individual e inst
   }  
 ```
 
-Ejemplo de respuesta de un comprobante enviado en la modalidad individual y asincrónica:
+Ejemplo de respuesta de un comprobante enviado en la modalidad individual y asincrónica, donde no sabes a priori cuál será el número del comprobante asignado. Solo podes corroborar que se ingresó a la cola exitosamente.
 
 ```json
 {
@@ -383,14 +383,18 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 
 **OBSERVACIONES**
 
-* El campo de "observaciones" contiene las observaciones  enviadas por AFIP/ARCA sobre esa operación, dado que los comprobantes pueden ser aprobados pero aún así, observados.
+* El campo de "observaciones" contiene las observaciones  enviadas por AFIP/ARCA sobre esa operación, dado que los comprobantes pueden ser aprobados pero aún así, observados. Sugerimos almacenar ésta información y revisarla.
 {% endhint %}
 
 
 
 ### ¿Dónde puedo ver las ventas generadas?
 
-Para ver las ventas emitidas desde la plataforma web, ingresa a **Menú > Facturación > Mis ventas**. Desde allí, podrás visualizar y gestionar todos los comprobantes emitidos de forma rápida y sencilla.
+Para ver las ventas emitidas desde la plataforma web, ingresa a **Menú > Facturación > Mis ventas**. Para ver las ventas programadas pendientes de emisión desde la plataforma web, ingresa a **Menú > Facturación > Ventas programadas**.&#x20;
+
+Desde allí, podrás visualizar y gestionar todos los comprobantes emitidos de forma rápida y sencilla.
+
+**¿Cómo corroborar que un comprobante se emitió correctamente en ARCA?**
 
 En AFIP/ARCA podrás encontrar ésta información usando el servicio de consulta llamado **"Mis Comprobantes"** que encontrarás accediendo con tu CUIT y clave fiscal. Tambien podes hacer la [constatación de comprobantes](https://servicioscf.afip.gob.ar/publico/comprobantes/cae.aspx) y consultarlos manualmente.
 
