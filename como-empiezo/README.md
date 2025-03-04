@@ -37,10 +37,6 @@ Sin embargo, durante las pruebas, la respuesta que recibirás de nuestra API sim
 
 Configurar tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679) desde plataforma web, ingresando a Menú > Mi espacio de trabajo > CUITs/PDV. Una vez hecho ésto podrás obtener las keys necesarias para utilizar la API.
 
-**Para pasar a producción:**
-
-Una vez finalizadas las pruebas y cuando estés para pasar a producción, podes optar por mantener la misma cuenta de desarrollo o crear una nueva para vos o tu cliente. Si decidís reutilizar la misma cuenta, ingresa a la plataforma web y accede a **Menú > Facturación > Mis ventas** para eliminar todos los comprobantes asociados a ese CUIT/Punto de Venta (PDV). Esto garantizará que no queden registros de prueba en el entorno de producción. Una vez que hayas hecho el enlace con AFIP/ARCA, podrás recuperar la numeración oficial desde "Menú > Facturación > Recuperar numeración desde AFIP/ARCA" para actualizar nuestro numerador interno por única vez.
-
 **Recorda:**
 
 * Las pruebas no afectan tu información fiscal real ya que el plan API DEV no te permite enlazar con AFIP/ARCA.

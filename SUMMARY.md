@@ -59,6 +59,7 @@
   * [Consultar el tope para ventas a consumidor final](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
   * [Guía de migración a facturación asincrónico (encolado)](api-factura-electronica-afip-facturacion-ventas/guia-de-migracion-a-facturacion-asincronico-encolado.md)
   * [¿Qué tipos de comprobante debo/puedo emitir?](api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md)
+* [🚀 ¿Cómo paso a producción?](como-paso-a-produccion.md)
 * [🛍️ API Compras](api-compras/README.md)
   * [Compras: Eliminación de comprobantes](api-compras/api-factura-electronica-afip-eliminacion-de-comprobantes-de-compra.md)
 * [💵 Recibos de cobro y órdenes de pago](recibos-de-cobro-y-ordenes-de-pago/README.md)
