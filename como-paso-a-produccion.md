@@ -6,18 +6,19 @@ description: >-
 
 # 🚀 ¿Cómo paso a producción?
 
-Una vez finalizadas las pruebas y antes de pasar a producción, podes optar por mantener la misma cuenta de desarrollo o crear una nueva, ya sea para vos o para tu cliente. **Recomendamos conservar tu cuenta de desarrollador** para futuras pruebas y mejoras.
+Una vez finalizadas las pruebas y antes de pasar a producción, podes optar por mantener la misma cuenta de desarrollo o crear una nueva, ya sea para vos o para tu cliente. **Recomendamos conservar tu cuenta de desarrollador** para futuras pruebas y mejoras, ya que una vez enlazado el CUIT con AFIP no podremos asignarte un plan API DEV en esa cuenta.
 
 Si decidís reutilizar la misma cuenta, segui estos pasos para asegurarte de que no queden registros de prueba en el entorno de producción:
 
-1.  **Elimina los comprobantes de prueba**
+**Elimina los comprobantes de prueba**
 
-    * Accede a la plataforma web.
-    * Dirígete a **Menú > Facturación > Mis ventas**.
-    * Elimina **todos** los comprobantes asociados al **CUIT/Punto de Venta (PDV)**.
+* Accede a la plataforma web.
+* Dirígete a **Menú > Facturación > Mis ventas**.
+* Elimina **todos** los comprobantes asociados al **CUIT/Punto de Venta (PDV)**.
 
+Ya sea que decidas continuar con tu cuenta de desarrollador o crees una nueva, deberas:&#x20;
 
-2.  **Contrata una suscripción de tipo "API"**
+1.  **Contratar una suscripción de tipo "API"**
 
     1. Accede a la plataforma web.
     2. Dirígete a **Menú > Mi cuenta > Cambiar o renovar mi plan actual**.
@@ -25,7 +26,7 @@ Si decidís reutilizar la misma cuenta, segui estos pasos para asegurarte de que
     4. Tene en cuenta que si tu plan API DEV se encuentra activo y vigente por unos dias más, la suscripción que adquieras comenzará al finalizar ésta. En ese caso, podes escribirnos a api@tusfacturas.app y lo solucionamos.
 
 
-3. #### **Enlaza con AFIP/ARCA y Configura el Punto de Venta**
+2. #### **Enlazar con AFIP/ARCA y Configura el Punto de Venta**
 
 * Configura el **punto de venta** de tu cliente accediendo a:\
   **Menú > Mi espacio de trabajo > Puntos de venta (CUITs/PDV) > Crear nuevo**.
