@@ -13,6 +13,16 @@ Nro de documento = "0"
 
 Tipo de documento = "OTRO"
 
+
+
+Podes consultar diariamente el limite establecido por AFIP hasta el cual podrás emitir éste tipo de comprobantes, usando nuestro servicio API:
+
+{% content-ref url="api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md" %}
+[api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md](api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+{% endcontent-ref %}
+
+Es responsabilidad del emisor verificar la concordancia entre el medio de pago y la factura, ya que la AFIP asume que las facturas electrónicas se emiten mediante medios de pago electrónicos. La condición de venta no se transmite a través de los webservices de la AFIP.
+
 ### Ejemplo:
 
 {% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-b-sin-especificar-comprador.md" %}
