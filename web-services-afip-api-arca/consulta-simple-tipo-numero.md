@@ -148,6 +148,14 @@ puts response.read_body
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación avalado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-comprobantes.md),  con referencia a cada parámetro.
 
+### Respuesta esperada
+
+{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md" %}
+[consulta-avanzada.md](../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md)
+{% endcontent-ref %}
+
+
+
 ***
 
 TusFacturasAPP , el [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y  [gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).&#x20;

@@ -1,8 +1,8 @@
 ---
-icon: code
 description: >-
   Servicio API de TusFacturasAPP para emitir Facturas A con bonificaciones de
   AFIP/ARCA. Confiable desde 2015. ¡Los desarrolladores la aman!
+icon: code
 ---
 
 # Factura A con bonificaciones
@@ -192,8 +192,6 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
     json
 ```
 
-
-
 ### ¿Cómo enviar una factura A con descuentos según mi lenguaje de programación?
 
 Podes enviar las facturas A por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado anteriormente.
@@ -312,6 +310,22 @@ puts response.read_body
 
 {% content-ref url="../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md" %}
 [ejemplo-de-factura-con-bonificaciones-descuentos.md](../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md)
+{% endcontent-ref %}
+
+### Respuesta esperada
+
+Consulta la respuesta esperada, según el método que uses para enviarla:
+
+{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md" %}
+[api-factura-electronica-afip-facturacion-nuevo-comprobante.md](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
+{% endcontent-ref %}
+
+{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md" %}
+[api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
+{% endcontent-ref %}
+
+{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-api-facturacion-por-lotes.md" %}
+[api-factura-electronica-afip-api-facturacion-por-lotes.md](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-api-facturacion-por-lotes.md)
 {% endcontent-ref %}
 
 

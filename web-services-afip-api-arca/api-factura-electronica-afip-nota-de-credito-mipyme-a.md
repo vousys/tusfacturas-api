@@ -220,6 +220,16 @@ puts response.read_body
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro.
 
+### Respuesta esperada
+
+Consulta la respuesta esperada, según el método que uses para enviarla:
+
+{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md" %}
+[api-factura-electronica-afip-facturacion-nuevo-comprobante.md](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
+{% endcontent-ref %}
+
+
+
 ### ¿Qué es una nota de crédito MiPyme A?
 
 Conocé  que es una [nota de crédito ](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)MiPyme A.

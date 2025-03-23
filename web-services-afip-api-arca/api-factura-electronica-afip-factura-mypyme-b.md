@@ -1,9 +1,9 @@
 ---
-icon: code
 description: >-
   TusFacturasAPP: API para Facturas MiPyme B de AFIP/ARCA. Confiable desde 2015.
   Creada por devs y respaldada por expertos impositivos. ¡Los desarrolladores la
   aman!
+icon: code
 ---
 
 # Factura MiPyme B
@@ -219,6 +219,16 @@ puts response.read_body
 ### Parámetros para armar el JSON&#x20;
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md),  con referencia a cada parámetro.
+
+### Respuesta esperada
+
+Consulta la respuesta esperada, según el método que uses para enviarla:
+
+{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md" %}
+[api-factura-electronica-afip-facturacion-nuevo-comprobante.md](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
+{% endcontent-ref %}
+
+
 
 ### ¿Debo generar una factura MiPyme B?
 
