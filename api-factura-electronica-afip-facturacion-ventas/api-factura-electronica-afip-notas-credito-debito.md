@@ -26,11 +26,11 @@ Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a pr
 
 AFIP te permite emitir notas de crédito y notas de débito parciales o totales, detallando un comprobante en particular que se anula o hacerlo por períodos desde-hasta, para esto solo debes agregar los bloques: "comprobantes\_asociados" o "comprobantes\_asociados\_periodo" al JSON.
 
-### ¿Qué es una nota de crédito (NC) electrónica?
+### ¿Qué es una nota de crédito electrónica?
 
 Es un comprobante dígital legalmente equivalente a la [nota de crédito](https://www.tusfacturas.app/como-emitir-notas-de-credito-electronica-afip.html) en formato papel, que la reemplaza en la mayoría de las operaciones de quienes estén obligados u opten por su utilización.&#x20;
 
-### ¿Qué es una nota de débito (ND) electrónica?
+### ¿Qué es una nota de débito electrónica?
 
 Es un comprobante dígital legalmente equivalente a la [nota de débito](https://www.tusfacturas.app/como-emitir-notas-de-debito-electronica-afip.html) en formato papel, que la reemplaza en la mayoría de las operaciones de quienes estén obligados u opten por su utilización.
 
@@ -43,6 +43,7 @@ Para éste tipo de información, es obligatorio enviar el detalle de los comprob
 
 * Los comprobantes que se asocien deben haberse emitido en la misma moneda en que se esta emitiendo la nota de crédito/débito.
 * La fecha del comprobante que asocies debe ser menor o igual a la fecha del comprobante que estas queriendo emitir. Tené en cuenta que AFIP realiza validaciones en cuanto a la fecha de los comprobantes que asocies, ya que no se permiten notas de crédito a comprobantes con  +15 días.
+* El servicio de AFIP/ARCA no permite emitir notas de crédito E por período.
 
 
 
@@ -93,7 +94,7 @@ Información de los campos a enviar:
 
 ### ¿Cómo emitir notas de crédito/débito anulando "por período"?
 
-A partir del 01/04/2021, AFIP habilitó la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados, para todo comprobante de tipo tradicional (A,B,C)
+A partir del 01/04/2021, AFIP habilitó la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados, para todo comprobante de tipo tradicional (A,B,C). Ésta herramienta no esta disponible para emitir notas de crédito E.
 
 Para utilizar ésta herramienta, **no se debe enviar el bloque de "**_**comprobantes asociados"**_ **y en su lugar debe enviarse un bloque llamado&#x20;**_**"comprobantes\_asociados\_periodo",**_ el cual debe tener la siguiente estructura:
 

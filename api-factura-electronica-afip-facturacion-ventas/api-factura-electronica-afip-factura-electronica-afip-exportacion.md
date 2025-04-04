@@ -148,10 +148,15 @@ El bloque tributos deberá ser enviado vacío.
 
 ### Notas de crédito E / Notas de débito E
 
-En caso que debas anular una factura de exportación, el comprobante que debes emitir es una Nota de crédito E, para ésto debes agregar dentro del bloque "fex" un bloque adicional según estructura de "[comprobantes\_asociados](api-factura-electronica-afip-notas-credito-debito.md#ejemplos-json-completos)", que es un array con cada uno de los comprobantes de tipo E que se quieren anular contablemente. Te sugerimos consultar la documentación de [Notas de crédito / Notas de débit](api-factura-electronica-afip-notas-credito-debito.md)o para conocer como el bloque que debes enviar.
+En caso que debas anular una factura de exportación, el comprobante que debes emitir es una Nota de crédito E, para ésto debes agregar dentro del bloque "fex" un bloque adicional según estructura de "[comprobantes\_asociados](api-factura-electronica-afip-notas-credito-debito.md#ejemplos-json-completos)", que es un array con cada uno de los comprobantes de tipo E que se quieren anular contablemente.&#x20;
+
+Te sugerimos consultar la documentación de [Notas de crédito / Notas de débit](api-factura-electronica-afip-notas-credito-debito.md)o para conocer como el bloque que debes enviar.
 
 {% hint style="info" %}
-Solo deberán ser enviados los comprobantes asociados, cuando el campo exportacion\_tipo sea igual a "1" .
+Datos a tener en cuenta:
+
+* El servicio de AFIP/ARCA no permite emitir notas de crédito E por período.
+* Solo deberán ser enviados los comprobantes asociados, cuando el campo exportacion\_tipo sea igual a "1" .
 {% endhint %}
 
 #### Ejemplo de Notas de crédito E
