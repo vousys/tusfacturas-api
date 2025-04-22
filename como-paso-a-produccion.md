@@ -23,7 +23,7 @@ Ya sea que decidas continuar con tu cuenta de desarrollador o crees una nueva, d
     1. Accede a la plataforma web.
     2. Dirígete a **Menú > Mi cuenta > Cambiar o renovar mi plan actual**.
     3. Consulta los [planes API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html) disponibles y vigentes en nuestra web.
-    4. Tene en cuenta que si tu plan API DEV se encuentra activo y vigente por unos dias más, la suscripción que adquieras comenzará al finalizar ésta. En ese caso, podes escribirnos a api@tusfacturas.app y lo solucionamos.
+    4. Tene en cuenta que si tu plan API DEV se encuentra activo y vigente por unos dias más, la suscripción que adquieras comenzará al finalizar ésta. En ese caso, podes escribirnos a api@tusfacturas.app para que la anulemos o bien activar manualmente la nueva suscripción contratada una vez acreditado su pago desde Menú > Mi cuenta > Mis suscripciones.
 
 
 2. #### **Enlazar con AFIP/ARCA y Configura el Punto de Venta**
