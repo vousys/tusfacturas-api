@@ -466,6 +466,7 @@ comprobante: {
 * Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI,  consulta la siguiente documentación de "[Facturas a Consumidor final sin especificar datos](facturas-a-consumidor-final-sin-especificar-datos.md)"
 * Para casos de clientes del exterior, que posean **pasaporte**, tene en cuenta que AFIP/ARCA sólo permite el envío de números.&#x20;
 * Te recomendamos utilizar el método de [consulta de CUITs](../consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md) antes de emitir facturas, ya que el CUIT de tu cliente podría no estar activo, lo que podría generar inconvenientes con el fisco.
+* Si no vas a gestionar los cobros de las facturas que emitas con TusFacturasAPP, envia siempre el campo "reclama\_deuda": "N", ya que sino nuestra plataforma le enviará un email a tu cliente recordandole todas las facturas impagas.
 {% endhint %}
 
 ### Estructura del bloque: "Detalle de conceptos"
