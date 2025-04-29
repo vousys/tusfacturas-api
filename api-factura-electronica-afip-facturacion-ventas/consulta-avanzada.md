@@ -8,7 +8,7 @@ description: >-
 
 💡 El uso de éste método no contabiliza como un request en tu suscripción
 
-### Parámetros
+### Parámetros&#x20;
 
 | Name           | Type   | Description                                                                                  |
 | -------------- | ------ | -------------------------------------------------------------------------------------------- |
@@ -95,13 +95,21 @@ Ejemplo:
 		{comprobante_ver_json_respuesta_consulta_simple}
 		]
 }
+
 ```
+
+#### Campos de la respuesta
+
+| Nombre del campo | Info                                                                                                                                                                               |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| error            | Campo alfanumerico. Valores posibles "S" o "N"                                                                                                                                     |
+| errores          | Array conteniendo la lista de errores detectados                                                                                                                                   |
+| total            | Campo numérico, que indica la cantidad de registros encontrados con los parámetros indicados, sin aplicarle la paginación ni limitación. (Dato disponible a partir del 01/04/2022) |
+| comprobantes     | Array conteniendo cada uno de los comprobantes encontrados, según estructura que se detalla en la [consulta simple.](api-factura-electronica-afip-consulta-de-comprobantes.md)     |
 
 ***
 
-
-
-### :1234: Consulta avanzada  por rango de números
+### &#x20;Consulta avanzada  por rango de números
 
 Ésta búsqueda te permite obtener todos los comprobantes enviados, ya sea porque se han emitido o porque se encuentren en la cola de facturación, dentro de un rango numérico. Debés tener en cuenta que  la información obtenida, será la relacionada al punto de venta desde el cual estás haciendo la solicitud, mediante tus credenciales de acceso y  el ordenamiento de los datos que te devuelve es: del último emitido al primero.&#x20;
 
@@ -134,7 +142,7 @@ Ejemplo:
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `operacion`    | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p>                                   |
 | `punto_venta`  | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
-| `numero_desde` | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
+| `numero_desde` | <p>Campo numérico entero. Longitud máxima 8 dígitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
 | `numero_hasta` | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
 
 #### ¿Qué te devolverá ?
@@ -154,9 +162,18 @@ Ejemplo:
 }
 ```
 
+#### Campos de la respuesta
+
+| Nombre del campo | Info                                                                                                                                                                               |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| error            | Campo alfanumerico. Valores posibles "S" o "N"                                                                                                                                     |
+| errores          | Array conteniendo la lista de errores detectados                                                                                                                                   |
+| total            | Campo numérico, que indica la cantidad de registros encontrados con los parámetros indicados, sin aplicarle la paginación ni limitación. (Dato disponible a partir del 01/04/2022) |
+| comprobantes     | Array conteniendo cada uno de los comprobantes encontrados, según estructura que se detalla en la [consulta simple.](api-factura-electronica-afip-consulta-de-comprobantes.md)     |
+
+
+
 ***
-
-
 
 ### :abc:  Consulta avanzada  por external reference
 
@@ -168,8 +185,8 @@ Ejemplo:
 | :------------: | :----------------------------------------------------: |
 | busqueda\_tipo |    Campo alfanumérico, valor esperado: "**EXT\_REF**   |
 |   comprobante  |         Objeto según se detalla a continuación         |
-|     pagina     |        Valor númerico entero. Mínimo esperado: 0       |
-|     limite     | Valor númerico entero. Mínimo esperado: 0 Máximo: 1000 |
+|     pagina     |        Valor numérico entero. Mínimo esperado: 0       |
+|     limite     | Valor numérico entero. Mínimo esperado: 0 Máximo: 1000 |
 
 #### Estructura de "Comprobante":
 
@@ -203,6 +220,17 @@ Ejemplo:
 		]
 }
 ```
+
+#### Campos de la respuesta
+
+| Nombre del campo | Info                                                                                                                                                                               |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| error            | Campo alfanumerico. Valores posibles "S" o "N"                                                                                                                                     |
+| errores          | Array conteniendo la lista de errores detectados                                                                                                                                   |
+| total            | Campo numérico, que indica la cantidad de registros encontrados con los parámetros indicados, sin aplicarle la paginación ni limitación. (Dato disponible a partir del 01/04/2022) |
+| comprobantes     | Array conteniendo cada uno de los comprobantes encontrados, según estructura que se detalla en la [consulta simple.](api-factura-electronica-afip-consulta-de-comprobantes.md)     |
+
+
 
 TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y un [software de gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).
 
