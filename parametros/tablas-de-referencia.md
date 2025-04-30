@@ -123,6 +123,8 @@ Consulta toda la información disponible haciendo una petición a:&#x20;
 | Tarjeta de Débito                | 0                                    | 212            |
 | Otra                             | 0                                    | 214            |
 | Otros medios de pago electronico | 0                                    | 215            |
+| MercadoPago                      | 0                                    | 216            |
+| Payway                           | 0                                    | 217            |
 
 ### Condiciones frente al IVA
 
