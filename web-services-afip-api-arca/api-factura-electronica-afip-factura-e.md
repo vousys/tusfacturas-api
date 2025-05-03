@@ -15,7 +15,7 @@ Factura E emitida en la modalidad "[Instantánea](../api-factura-electronica-afi
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo`</mark>
 {% endhint %}
 
-### JSON para generar una Factura E en AFIP/ARCA
+### JSON para generar una Factura E en AFIP/ARCA de exportación de bienes
 
 ```json
 {
@@ -75,10 +75,10 @@ Factura E emitida en la modalidad "[Instantánea](../api-factura-electronica-afi
       "impuestos_internos_base":"0",
       "impuestos_internos_alicuota":"0",
       "total":"100",
-     "fex": {
+      "fex": {
               "permisos_tiene"      : "" ,
               "fecha_pago"          : "12/02/2025",
-              "tipo_exportacion"    : "2",
+              "tipo_exportacion"    : "1",
               "pais_comprobante_id" : "123",
               "forma_pago_leyenda"  : "Payment via paypal 30 days ",
               "cliente_pais_cuit"   : "50000000016",
@@ -99,6 +99,82 @@ Factura E emitida en la modalidad "[Instantánea](../api-factura-electronica-afi
                                        "pais_destino_id"  :    "145"
                                   }
                               ]
+               
+      }
+   }
+}
+```
+
+### JSON para generar una Factura E en AFIP/ARCA de exportación de servicios
+
+```json
+{
+    "usertoken": "XXX",
+    "apikey": XXX,
+    "apitoken": "XXXX",
+   "cliente":{
+      "documento_tipo":"OTRO",
+      "documento_nro":"11124445",
+      "razon_social":"VOUSYS TusFacturasAPP",
+      "email":"a@a.com",
+      "domicilio":"AV.LIBERTADOR 571",
+      "provincia":"26",
+      "envia_por_mail":"S",
+      "condicion_pago":"211",
+      "reclama_deuda": "N",
+      "condicion_iva":"CDEX"
+   },
+   "comprobante":{
+      "fecha":"14/01/2025",
+      "tipo":"FACTURA E",
+      "vencimiento":"26/03/2025",
+      "operacion":"V",
+      "punto_venta":"0010",
+      "moneda":"DOL",
+      "idioma":"2",
+      "cotizacion":"1115.20",
+      "tags": [ 
+	"etiqueta1","etiqueta2"
+       ],
+       "datos_informativos": {
+	  "paga_misma_moneda": "N"
+      },
+      "periodo_facturado_desde":"01/02/2025",
+      "periodo_facturado_hasta":"28/02/2025",
+      "rubro":"Alimentos",
+      "rubro_grupo_contable":"Alimentos",
+      "detalle":[
+         {
+            "cantidad":"1",
+            "producto":{
+               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
+               "unidad_bulto":"1",
+               "lista_precios":"Lista de precios API 3",
+               "codigo":"16098",
+               "precio_unitario_sin_iva":"100",
+               "alicuota":"0",
+               "rg5329":"N"
+            },
+            "leyenda":"Enviadas en cajas separadas"
+         }
+      ],
+      "bonificacion":"0.00",
+      "leyenda_gral":" ",
+      "tributos":[],
+      "impuestos_internos":"0",
+      "impuestos_internos_base":"0",
+      "impuestos_internos_alicuota":"0",
+      "total":"100",
+      "fex": {
+              "permisos_tiene"      : "" ,
+              "fecha_pago"          : "12/02/2025",
+              "tipo_exportacion"    : "2",
+              "pais_comprobante_id" : "123",
+              "forma_pago_leyenda"  : "Payment via paypal 30 days ",
+              "cliente_pais_cuit"   : "50000000016",
+              "incoterms_tipo_id"   : "",
+              "incoterms_nro"       : " ",
+              "permisos"    : []
                
       }
    }

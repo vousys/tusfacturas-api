@@ -69,7 +69,7 @@ Para emitir Comprobantes Electrónicos de Exportación ("E"), solo debes **agreg
         "fex": {
               "permisos_tiene"      : "S" ,
               "fecha_pago"          : "12/10/2019",
-              "tipo_exportacion"    : "2",
+              "tipo_exportacion"    : "1",
               "pais_comprobante_id" : "123",
               "forma_pago_leyenda"  : "Payment via paypal 30 days ",
               "cliente_pais_cuit"   : "50000000016",
@@ -136,6 +136,8 @@ Los siguientes campos dentro del json del comprobante deberá enviarlos en cero:
 * impuestos internos.
 
 El bloque tributos deberá ser enviado vacío.
+
+Consulta siempre con tu estudio contable y el despachante de aduana la informacion que debes suministrar, ya que no es lo mismo una exportación de servicios que una exportación de bienes.
 {% endhint %}
 
 #### Ejemplo de Factura E
