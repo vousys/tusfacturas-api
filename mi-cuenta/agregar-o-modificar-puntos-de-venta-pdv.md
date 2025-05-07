@@ -35,8 +35,6 @@ description: >-
 | conceptos\_tipo       | string | <p>Debe indicar el tipo de conceptos que factura, los cuales pueden ser:</p><p>P = Productos</p><p>PS = Productos y Servicios</p><p>S = Servicios</p>                                                                                                                                                                                                                                                                    |
 | es\_predeterminado    | string | Indica si el CUIT + Punto de venta es el predeterminado. Valores esperados: S o N                                                                                                                                                                                                                                                                                                                                        |
 | esta\_activo          | string | Indica si el CUIT + Punto de venta se encuentra activo y disponible para generar comprobantes. Valores esperados: S o N                                                                                                                                                                                                                                                                                                  |
-| mercadopago           | object | Según objeto "mercadopago" que se detalla abajo.                                                                                                                                                                                                                                                                                                                                                                         |
-| xero                  | object | Según objeto "xero" que se detalla abajo.                                                                                                                                                                                                                                                                                                                                                                                |
 | es\_agente\_retencion | string | Indica si el punto de venta es agente de retención. Valores esperados: S o N.                                                                                                                                                                                                                                                                                                                                            |
 | factura               | object | Un objeto del tipo "factura" según se detalla abajo.                                                                                                                                                                                                                                                                                                                                                                     |
 | punto\_venta          | number | <p>El número del punto de venta a crear.</p><p>\</p><p>Ej: 4</p>                                                                                                                                                                                                                                                                                                                                                         |
@@ -52,23 +50,6 @@ description: >-
 | apikey                | string | Tus credenciales actuales de acceso.                                                                                                                                                                                                                                                                                                                                                                                     |
 | usertoken             | string | Tus credenciales actuales de acceso.                                                                                                                                                                                                                                                                                                                                                                                     |
 | webhook               | string | <p>Campo alfanumérico de hasta 255 caracteres. Formato esperado: https://www.dominio.com/script-nombre.</p><p><a href="../api-factura-electronica-afip-facturacion-ventas/webhooks-notificaciones.md#direccion-del-webhook">Más información</a></p>                                                                                                                                                                      |
-
-#### Objeto "mercadopago"
-
-| Campo a enviar | Descripción                                |
-| -------------- | ------------------------------------------ |
-| api\_key       | La API KEY obtenida desde MercadoPago.     |
-| api\_secret    | La API SECRET obtenieda desde MercadoPago. |
-
-#### Objeto "xero"
-
-| Campo a enviar  | Descripción                                                                                                                                 |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| habilitado      | Indica si se encuentra habilitado o no. Valores esperados: S o N                                                                            |
-| consumer\_key   | La consumer KEY obtenida desde XERO                                                                                                         |
-| shared\_secret  | La shared\_secret obtenida desde XERO                                                                                                       |
-| habilitado\_web | Indica si se encuentra habilitado para sincronizar con XERO cuando se emiten comprobantes desde la plataforma web. Valores esperados: S o N |
-| habilitado\_api | Indica si se encuentra habilitado para sincronizar con XERO cuando se emiten comprobantes desde la API. Valores esperados: S o N            |
 
 #### Objeto "factura"
 
