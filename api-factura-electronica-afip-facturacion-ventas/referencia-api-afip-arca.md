@@ -379,7 +379,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * **Aquellos comprobantes que hayan impactado en AFIP, no podrán ser eliminados. Sólo pueden ser anulados contablemente generando una** [**nota de crédito**](api-factura-electronica-afip-notas-credito-debito.md#que-es-una-nota-de-credito-nc-electronica)**.**
 * Ningún comprobante puede ser modificado una vez creado.
 
-TEXTOS
+**TEXTOS**
 
 * La información debe estar encodeada con UTF-8 para evitar errores.
 
