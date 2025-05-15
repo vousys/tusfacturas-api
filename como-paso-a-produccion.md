@@ -13,7 +13,7 @@ Si decidís reutilizar la misma cuenta, segui estos pasos para asegurarte de que
 **Elimina los comprobantes de prueba**
 
 * Accede a la plataforma web.
-* Dirígete a **Menú > Facturación > Mis ventas**.
+* Luego a **Menú > Facturación > Mis ventas**.
 * Elimina **todos** los comprobantes asociados al **CUIT/Punto de Venta (PDV)**.
 
 Ya sea que decidas continuar con tu cuenta de desarrollador o crees una nueva, deberas:&#x20;

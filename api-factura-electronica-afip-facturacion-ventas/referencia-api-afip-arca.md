@@ -31,7 +31,8 @@ Con la API para ARCA de TusFacturasAPP podes enviar la información de maneras d
 
 ### Estructura del JSON  a enviar
 
-Charset: UTF-8
+Tipo de datos: **JSON**\
+Charset: **UTF-8**
 
 #### Request: Body
 
