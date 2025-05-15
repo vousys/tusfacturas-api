@@ -166,7 +166,6 @@ Ejemplo :
 	"external_reference": "ex_rf1",
 	"requiere_fec": "NO",
 	"observaciones": "",
-	"tfc_generacion_tipo": 6,
 	"rta": "El comprobante  se ha guardado correctamente ",
 	"cae": " ",
 	"vencimiento_cae": "01\/01\/2000",
