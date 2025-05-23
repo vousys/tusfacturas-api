@@ -81,7 +81,7 @@
 * [👩‍💻 Mi cuenta](mi-cuenta/README.md)
   * [Agregar o modificar puntos de venta (PDV)](mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md)
   * [Solicitar certificado de enlace con AFIP](mi-cuenta/solicitar-certificado-de-enlace-con-afip.md)
-  * [Predeterminar CUIT + Punto de venta](mi-cuenta/predeterminar-cuit-+-punto-de-venta.md)
+  * [Predeterminar punto de venta](mi-cuenta/predeterminar-punto-de-venta.md)
   * [Mi Cuenta - consumo](mi-cuenta/mi-cuenta.md)
 * [Reportes](reportes/README.md)
   * [Solicitar reporte IVA compras-ventas](reportes/solicitar-reporte-iva-compras-ventas.md)

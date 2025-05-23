@@ -35,7 +35,7 @@ Sin embargo, durante las pruebas, la respuesta que recibirás de nuestra API sim
 
 **Para realizar las pruebas, te sugerimos:**
 
-Configurar tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679) desde plataforma web, ingresando a Menú > Mi espacio de trabajo > CUITs/PDV. Una vez hecho ésto podrás obtener las keys necesarias para utilizar la API.
+Configurar tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679) desde plataforma web, ingresando a Menú > Mi espacio de trabajo > Puntos de venta . Una vez hecho ésto podrás obtener las keys necesarias para utilizar la API.
 
 **Recorda:**
 

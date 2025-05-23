@@ -4,11 +4,11 @@ description: >-
   relacionada con tu cuenta, asi como predeterminar un punto de venta.
 ---
 
-# Predeterminar CUIT + Punto de venta
+# Predeterminar punto de venta
 
 
 
-## Predeterminar CUIT + Punto de venta
+## Predeterminar Punto de venta
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`puntos_venta/predeterminar`</mark>
 
@@ -16,11 +16,11 @@ description: >-
 
 #### Request Body
 
-| Name      | Type   | Description                               |
-| --------- | ------ | ----------------------------------------- |
-| apitoken  | string | Tus credenciales de acceso                |
-| apikey    | string | Tus credenciales de acceso                |
-| usertoken | string | <p>Tus credenciales de acceso</p><p>\</p> |
+| Name      | Type   | Description                              |
+| --------- | ------ | ---------------------------------------- |
+| apitoken  | string | Tus credenciales de acceso               |
+| apikey    | string | Tus credenciales de acceso               |
+| usertoken | string | <p>Tus credenciales de acceso</p><p></p> |
 
 {% tabs %}
 {% tab title="200 " %}
@@ -45,4 +45,3 @@ description: >-
 ```
 {% endcode %}
 
-##

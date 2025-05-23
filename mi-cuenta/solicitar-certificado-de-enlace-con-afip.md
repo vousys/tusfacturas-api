@@ -22,13 +22,6 @@ Mediante ésta herramienta podras solicitar un certificado de enlace con AFIP y 
 | apitoken  | string | Tus credenciales de acceso  |
 | usertoken | string | Tus credenciales de acceso. |
 
-{% tabs %}
-{% tab title="200 " %}
-```
-```
-{% endtab %}
-{% endtabs %}
-
 ### Ejemplo del JSON a enviar:
 
 {% code title="JSON" %}

@@ -10,5 +10,5 @@ description: >-
 
 Utilizando el servicio de Mi cuenta, podrás consultar:
 
-* El consumo actual de tu CUIT+PDV, en el ciclo de suscripción actual
-* Crear o modificar tus CUITs+PDV,&#x20;
+* El consumo actual de tu Punto de venta, en el ciclo de suscripción actual
+* Crear o modificar tus Puntos de venta,&#x20;

@@ -1,8 +1,8 @@
 ---
-icon: webhook
 description: >-
   Recibi notificaciones instantáneas (hooks) sobre cada evento de facturación,
   sin retrasos.
+icon: webhook
 ---
 
 # Webhooks (notificaciones)
@@ -17,7 +17,7 @@ TusFacturasAPP te enviará un webhook, siempre que se produzca uno o más evento
 
 ### Dirección del webhook
 
-La dirección del webhook se configura dentro de la información de tu CUIT/PDV. Para eso deberás ingresar al MENÚ > Mi espacio de trabajo > Cuits / PDV.  Entra a editar tu punto de venta y al pie de la pantalla podrás indicar la dirección del webhook.
+La dirección del webhook se configura dentro de la información de tu punto de venta. Para eso deberás ingresar al MENÚ > Mi espacio de trabajo > Puntos de venta.  Entra a editar tu punto de venta y al pie de la pantalla podrás indicar la dirección del webhook.
 
 La dirección que establezcas para el webhook, no debe contener un redirect y debe encontrarse funcionando. Si la misma se encuentra fuera de servicio por más de 24hs será ignorada por completo y no se te notificará nada más, hasta que indiques una nueva URL.
 
@@ -115,7 +115,7 @@ Ingresando a "Menú"> "API Request" > Hooks podrás consultar los hooks que te e
 
 #### ¿Dónde configuro mi webhook?
 
-La dirección del webhook, se configura dentro de tu CUIT/PDV. Para eso deberás ingresar al MENÚ > Mi espacio de trabajo > Cuits + PDV y editando el registro de tu CUIT, podrás agregarlo. Tené en cuenta que la dirección del hook, debe ser válida.
+La dirección del webhook, se configura dentro de tu Punto de venta. Para eso deberás ingresar al MENÚ > Mi espacio de trabajo > Puntos de venta y editando el registro de tu punto de venta, podrás agregarlo. Tené en cuenta que la dirección del hook, debe ser válida.
 
 #### En caso de que la dirección de mi webhook, presente inconvenientes y falle el webhook, ¿se realizan reintentos hasta completar la notificación?
 

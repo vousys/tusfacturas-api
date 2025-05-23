@@ -10,9 +10,9 @@ Te sugerimos siempre consultar con tu contador o asesor impositivo antes de real
 
 ### ¿Qué debes hacer?
 
-#### 1. Configurá tu CUIT/PDV
+#### 1. Configurá tu Punto de venta
 
-Ingresá por nuestra plataforma web a menú: Mi espacio de trabajo > Mis CUITs / PDV y abrí el bloque: "4. Configurá si es agente de percepción o retención." .&#x20;
+Ingresá por nuestra plataforma web a menú: Mi espacio de trabajo > Puntos de venta y abrí el bloque: "4. Configurá si es agente de percepción o retención." .&#x20;
 
 Deberás tildar la opción : "Si, es agente percepción de IVA RG 5329" y luego presionar "Guardar".\
 Tené en cuenta podrás indicar que un CUIT/PDV aplica RG5329, solo si éste se encuentra enlazado con AFIP.
