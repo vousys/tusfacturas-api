@@ -149,34 +149,37 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 
 &#x20;[`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)comprobantes\_tipos
 
-| FACTURA A                                     |
-| --------------------------------------------- |
-| FACTURA B                                     |
-| NOTA DE DEBITO A                              |
-| NOTA DE DEBITO B                              |
-| NOTA DE CREDITO A                             |
-| NOTA DE CREDITO B                             |
-| FACTURA NO VALIDA EN AFIP                     |
-| NOTA DE CREDITO NO VALIDA EN AFIP             |
-| FACTURA C                                     |
-| NOTA DE DEBITO C                              |
-| NOTA DE CREDITO C                             |
-| FACTURA M                                     |
-| NOTA DE DEBITO M                              |
-| NOTA DE CREDITO M                             |
-| FACTURA E                                     |
-| NOTA DE DEBITO E                              |
-| NOTA DE CREDITO E                             |
-| RECIBO C                                      |
-| FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A |
-| NOTA DE DEBITO ELECTRONICA MiPyME (FCE) A     |
-| NOTA DE CREDITO ELECTRONICA MiPyME (FCE) A    |
-| FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) B |
-| NOTA DE DEBITO ELECTRONICA MiPyME (FCE) B     |
-| NOTA DE CREDITO ELECTRONICA MiPyME (FCE) B    |
-| FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) C |
-| NOTA DE DEBITO ELECTRONICA MiPyME (FCE) C     |
-| NOTA DE CREDITO ELECTRONICA MiPyME (FCE) C    |
+| TEXTO A ENVIAR                                | MODALIDADES HABILITADS:                                  |
+| --------------------------------------------- | -------------------------------------------------------- |
+| FACTURA A                                     | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| FACTURA B                                     | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| NOTA DE DEBITO A                              | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| NOTA DE DEBITO B                              | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| NOTA DE CREDITO A                             | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| NOTA DE CREDITO B                             | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| FACTURA NO VALIDA EN AFIP                     | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| NOTA DE CREDITO NO VALIDA EN AFIP             | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| FACTURA C                                     | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| NOTA DE DEBITO C                              | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| NOTA DE CREDITO C                             | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| FACTURA M                                     | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| NOTA DE DEBITO M                              | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| NOTA DE CREDITO M                             | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| FACTURA E                                     | Solo habilitado en la modalidad "instantánea"            |
+| NOTA DE DEBITO E                              | Solo habilitado en la modalidad "instantánea"            |
+| NOTA DE CREDITO E                             | Solo habilitado en la modalidad "instantánea"            |
+| RECIBO C                                      | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A | Solo habilitado en la modalidad "instantánea"            |
+| NOTA DE DEBITO ELECTRONICA MiPyME (FCE) A     | Solo habilitado en la modalidad "instantánea"            |
+| NOTA DE CREDITO ELECTRONICA MiPyME (FCE) A    | Solo habilitado en la modalidad "instantánea"            |
+| FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) B | Solo habilitado en la modalidad "instantánea"            |
+| NOTA DE DEBITO ELECTRONICA MiPyME (FCE) B     | Solo habilitado en la modalidad "instantánea"            |
+| NOTA DE CREDITO ELECTRONICA MiPyME (FCE) B    | Solo habilitado en la modalidad "instantánea"            |
+| FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) C | Solo habilitado en la modalidad "instantánea"            |
+| NOTA DE DEBITO ELECTRONICA MiPyME (FCE) C     | Solo habilitado en la modalidad "instantánea"            |
+| NOTA DE CREDITO ELECTRONICA MiPyME (FCE) C    | Solo habilitado en la modalidad "instantánea"            |
+| PRESUPUESTO                                   | Solo habilitado en la modalidad "instantánea"            |
+| REMITO                                        | Solo habilitado en la modalidad "instantánea"            |
 
 ### Régimenes posibles para el bloque "RG\_Especiales"
 
