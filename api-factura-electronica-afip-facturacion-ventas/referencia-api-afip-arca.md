@@ -1,17 +1,29 @@
 ---
 description: >-
-  Integra tu sistema con AFIP. API de factura electrónica fácil con
-  TusFacturasAPP.
+  Conecta tu plataforma y factura en ARCA/AFIP con la API de factura electrónica
+  más fácil de Argentina.
 icon: code
 ---
 
 # Referencia API AFIP ARCA
 
-La API de TusFacturasAPP te permite interactuar de forma directa con los web services de ARCA de manera fácil y rápida.
+### API ARCA – Integra tu sistema con los Web Services de ARCA fácilmente
 
-Llamaremos "comprobante" a todo documento digital, ya sea factura, nota de crédito, nota de débito, pedido, presupuesto y remito tanto de ventas como de compras.&#x20;
+La **API de facturación electrónica para ARCA de TusFacturasAPP** te permite interactuar de forma directa y eficiente con los **web services de AFIP/ARCA**, facilitando la emisión de comprobantes electrónicos desde tu software.
 
-### Endpoint:
+#### ¿Qué es un comprobante electrónico?
+
+En el contexto de nuestra API, se denomina **"comprobante"** a cualquier documento digital vinculado a operaciones comerciales, tales como:
+
+* Facturas electrónicas (de venta o compra)
+* Notas de crédito y débito
+* Pedidos
+* Presupuestos
+* Remitos&#x20;
+
+Esto permite a tu sistema manejar toda la documentación fiscal y comercial en formato electrónico, cumpliendo con las exigencias legales vigentes.
+
+### Endpoint principal de la API ARCA:
 
 {% hint style="info" %}
 <mark style="color:purple;">**POST**</mark>
@@ -19,22 +31,26 @@ Llamaremos "comprobante" a todo documento digital, ya sea factura, nota de créd
 `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`metodo-elegido`**</mark>
 {% endhint %}
 
-Con la API para ARCA de TusFacturasAPP podes enviar la información de maneras diferentes:
+Este endpoint permite el envío de comprobantes en distintos modos de operación, según las necesidades de tu sistema:
 
-[ Instantánea](api-factura-electronica-afip-facturacion-nuevo-comprobante.md): Recibis la respuesta al instante, pero está sujeta al funcionamiento de los servicios de AFIP/ARCA. &#x20;
+#### ⚙️ Modos de envío disponibles
 
-[Asincrónica](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md): Donde envias un request y éste queda en una cola de procesamiento. A medida que se factura recibis un hook de respuesta.
+* [**Envío instantáneo**](api-factura-electronica-afip-facturacion-nuevo-comprobante.md)**:**\
+  Envía un comprobante y recibe la respuesta al instante. Ideal para sistemas que requieren confirmación inmediata. Sujeto a la disponibilidad del servicio de **AFIP o ARCA**.
+* [**Envío asincrónico**](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)**:**\
+  Envía el comprobante a una cola de procesamiento. Recibirás una notificación por **webhook** una vez procesado. Recomendado para sistemas que manejan grandes volúmenes.
+* [**Lotes instantáneos**](api-factura-electronica-afip-api-facturacion-por-lotes.md)**:**\
+  Permite enviar varios comprobantes en un único lote y recibir una única respuesta inmediata. También depende de la disponibilidad del servicio de AFIP o ARCA.
 
-[Lotes instantáneos](api-factura-electronica-afip-api-facturacion-por-lotes.md): Donde envías un lote a facturar y recibis la respuesta al instante, pero está sujeta al funcionamiento de los servicios de AFIP/ARCA. &#x20;
+> 🔧 Nuestra API ARCA está diseñada para desarrolladores que buscan una integración rápida, robusta y conforme a las normativas de facturación electrónica en Argentina.
 
 
 
 ### Estructura del JSON  a enviar
 
-Tipo de datos: **JSON**\
-Charset: **UTF-8**
+Tipo de datos: **JSON ,** Charset: **UTF-8**
 
-#### Request: Body
+Request: Body
 
 | Name        | Type   | Description                                                 |
 | ----------- | ------ | ----------------------------------------------------------- |
@@ -44,9 +60,15 @@ Charset: **UTF-8**
 | comprobante | object | Estructura de "comprobante" según se informa a continuación |
 | cliente     | object | Estructura de "Cliente", según se informa a continuación    |
 
-### JSON de ejemplo
+### JSON de ejemplo para emitir comprobantes electrónicos
 
-Este ejemplo de JSON te muestra todas las opciones disponibles para personalizar tus comprobantes. Tene en cuenta que no todos los campos son obligatorios y dependerán del tipo de comprobante que quieras emitir. Consulta la [página de ejemplos](../web-services-afip-api-arca/) de cada tipo de comprobante para obtener más información.
+A continuación te mostramos un **ejemplo completo en formato JSON** que incluye todas las opciones disponibles para personalizar tus **comprobantes electrónicos** con la API de TusFacturasAPP.
+
+> ⚠️ **Importante**: No todos los campos son obligatorios. Los datos requeridos varían según el **tipo de comprobante** que desees emitir (factura, nota de crédito, remito, etc.).
+
+Para obtener una guía detallada de los campos específicos por tipo de comprobante, visitá nuestra [página de ejemplos por tipo de comprobante](../web-services-afip-api-arca/).
+
+Este ejemplo te servirá como referencia para construir tus requests correctamente y evitar errores comunes al integrarte con los **web services de AFIP/ARCA**.
 
 {% code title="JSON" fullWidth="true" %}
 ```json
@@ -218,107 +240,29 @@ Este ejemplo de JSON te muestra todas las opciones disponibles para personalizar
 ```
 {% endcode %}
 
-_Información de ejemplo, solo para visualizar su estructura general._&#x20;
+### Ejemplos de comprobantes según su tipo y letra
 
-### Ejemplos de comprobantes según su tipo / letra
+Con TusFacturasAPP podrás emitir comprobantes electrónicos ARCA, clasificados según su **tipo (Factura, Nota de Crédito, etc.)** y **letra (A, B, C, E, M)**.
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td> Ir a <a href="../web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md">Ejemplos factura A</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-a.webp">ejemplo-factura-a.webp</a></td><td><a href="api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md">api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md</a></td></tr><tr><td>Ir a <a href="../web-services-afip-api-arca/api-factura-electronica-afip-factura-b.md">Ejemplos factura B</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-b (1).webp">ejemplo-factura-b (1).webp</a></td><td><a href="api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md">api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md</a></td></tr><tr><td>Ir a <a href="../web-services-afip-api-arca/api-factura-electronica-afip-factura-c.md">Ejemplos  factura C</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-c.webp">ejemplo-factura-c.webp</a></td><td><a href="api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md">api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md</a></td></tr><tr><td>Ir a <a href="api-factura-electronica-afip-factura-electronica-afip-exportacion.md">Ejemplos factura E</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-e.webp">ejemplo-factura-e.webp</a></td><td><a href="api-factura-electronica-afip-factura-electronica-afip-exportacion.md">api-factura-electronica-afip-factura-electronica-afip-exportacion.md</a></td></tr><tr><td>Ir a <a href="api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md">Ejemplos MiPyme</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-mipyme.webp">ejemplo-factura-mipyme.webp</a></td><td><a href="api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md">api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md</a></td></tr></tbody></table>
+Explorá los distintos escenarios de facturación que podés implementar, adaptados a las normativas fiscales vigentes de AFIP:
 
+#### ✅ Tipos de comprobantes disponibles:
 
+* **Factura A / B / C / E / M**
+* **Nota de Crédito A / B / C / E**
+* **Nota de Débito A / B / C / E**
+* **Presupuestos**
+* **Pedidos**
+* **Remitos**
+* **Recibos**
 
-### ¿Qué te retorna la llamada a la API para ARCA?
+Cada ejemplo incluye los campos requeridos y opcionales, además de los valores específicos para cada categoría. Esto te permitirá implementar la facturación electrónica de forma ágil y segura desde cualquier sistema.
 
-#### &#x20;:white\_check\_mark:  Cuando el request resultó exitoso:
+{% content-ref url="../web-services-afip-api-arca/" %}
+[web-services-afip-api-arca](../web-services-afip-api-arca/)
+{% endcontent-ref %}
 
-Sea cual sea la modalidad que utilices para facturar y por cada comprobante que emitas, obtendrás los mismos campos, con los datos que necesitas para almacenar en tu sistema. &#x20;
-
-Ejemplo de respuesta de un comprobante enviado en la modalidad individual e instantánea, la cual te devuelve la información del comprobante emitido.
-
-```json
-{
-    "error":     "N",
-     "errores": [ ""],    
-     "rta":      "El comprobante NOTA DE DEBITO B 0002-00000006 (MI CUIT) se ha guardado correctamente",    
-     "cae":      "65301278726386 ",
-     "requiere_fec":   "NO ",    
-     "vencimiento_cae":"07\/08\/2015",   
-     "observaciones": "AFIP genero el comprobante pero  lo ha marcado como observado por los siguientes motivos:   Observacion: Observacion: El credito fiscal discriminado en el presente comprobante solo podra ser computado a efectos del Procedimiento permanente de transicion al Regimen General. [ codigo: 10217 ].",
-
-     "vencimiento_pago":"27\/08\/2015",    
-     "comprobante_pdf_url": "https://www.dominio.com/url",
-     "comprobante_ticket_url": "https://www.dominio.com/url",
-     "afip_qr" : "https://www.afip.gob.ar/fe/qr/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMC0xMS0xNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjAwMDAzIiwidGlwb0NtcCI6MTEsIm5yb0NtcCI6IjAwMDAwMjQ5IiwiaW1wb3J0ZSI6IjAwMDAwMDAwMDAwMDEwMCIsIm1vbmVkYSI6IlBFUyIsImN0eiI6IjAwMDAwMDAwMDAwMDEwMDAwMDAiLCJ0aXBvRG9jUmVjIjo5OSwibnJvRG9jUmVjIjoiMCIsInRpcG9Db2RBdXQiOiJFIiwiY29kQXV0IjoiNzA0NjY4OTk1OTcwOTEifQ== "
-     "afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
-     "envio_x_mail": "S",
-     "external_reference":  "ABC123",
-     "comprobante_nro": "0000123",
-     "comprobante_tipo": "NOTA DE DEBITO B",
-     "micrositios": {
-			"cliente": "url-del-micrositio",
-			"descarga":"url-del-micrositio"
-		     },
-     "envio_x_mail_direcciones":"direccion1@sudominio.com,direccion2@sudominio.com"
-  }  
-```
-
-Ejemplo de respuesta de un comprobante enviado en la modalidad individual y asincrónica, donde no sabes a priori cuál será el número del comprobante asignado. Solo podes corroborar que se ingresó a la cola exitosamente.
-
-```json
-{
-	"error": "N",
-	"errores": [],
-	"error_cod": [],
-	"error_details": [],
-	"external_reference": 12102022,
-	"requiere_fec": "NO",
-	"observaciones": "AFIP genero el comprobante pero  lo ha marcado como observado por los siguientes motivos:   Observacion: DocTipo: 80, DocNro 111111111 - La CUIT receptora que ingresaste no existe. Tenes que emitir una Nota de Credito o anular la operacion, segun corresponda. [ codigo: 10238 ].",
-	"tfc_generacion_tipo": 6,
-	"rta": "El comprobante  se ha guardado correctamente ",
-	"cae": " ",
-	"vencimiento_cae": "01\/01\/2000",
-	"vencimiento_pago": "16\/01\/2020",
-	"comprobante_nro": "00010-00000000",
-	"comprobante_tipo": "FACTURA B",
-	"afip_codigo_barras": "",
-	"afip_qr": "",
-	"micrositios": {
-		"descarga": "",
-		"cliente": ""
-	},
-	"envio_x_mail": "N",
-	"envio_x_mail_direcciones": "",
-	"comprobante_pdf_url": "",
-	"comprobante_ticket_url": ""
-}
-```
-
-&#x20;
-
-#### :octagonal\_sign: Response con error
-
-En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados
-
-```json
-{
-  "error": "S",
-  "errores": [
-   "El tipo de documento enviado no es valido",
-    "Para la condicion de IVA seleccionada no se permite realizar comprobantes de tipo B."
-  ],
-  "external_reference": "ABC123",
-  "error_cod": [],
-  "error_details": [
-    {
-      "code": "TFC-8004",
-      "text": "Para la condicion de IVA seleccionada no se permite realizar comprobantes de tipo B."
-    }
-  ]
-}
-```
-
-
-
-#### Datos para tener en cuenta:
+### Datos para tener en cuenta:
 
 {% hint style="info" %}
 **PDF**
@@ -391,17 +335,41 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 * El campo de "observaciones" contiene las observaciones  enviadas por AFIP/ARCA sobre esa operación, dado que los comprobantes pueden ser aprobados pero aún así, observados. Sugerimos almacenar ésta información y revisarla.
 {% endhint %}
 
+### 🔁 ¿Qué devuelve la API ARCA de TusFacturasAPP?
+
+La **respuesta que recibís al emitir un comprobante electrónico** depende del **método de invocación** que elijas en la integración con la API de TusFacturasAPP.
+
+#### 📌 Modalidades de invocación y sus respuestas
+
+* **🕒 Envío instantáneo**\
+  Recibís inmediatamente la respuesta con todos los datos del comprobante autorizado por AFIP o ARCA. Ideal para integraciones en tiempo real.
+* **⏳ Envío asincrónico**\
+  La respuesta inicial solo confirma que el comprobante fue recibido para su procesamiento. Más tarde, cuando se autorice, **te notificamos por webhook** con la respuesta final y los datos fiscales completos.
+* **📦 Envío por lotes**\
+  Podés enviar varios comprobantes a la vez. Recibís una respuesta agrupada que incluye el resultado individual de cada comprobante (siempre sujeta al estado del servicio de AFIP/ARCA).
+
+### 📊 ¿Dónde puedo ver las ventas generadas?
+
+Desde la plataforma web de **TusFacturasAPP**, podés consultar y administrar fácilmente los comprobantes electrónicos emitidos. Accedé desde el panel principal a:
+
+* **Menú > Facturación > Mis ventas**: para ver todas las ventas ya emitidas.
+* **Menú > Facturación > Ventas programadas**: para consultar las ventas aún pendientes de emisión automática o manual.
+
+Desde estas secciones podrás **visualizar, filtrar, descargar o anular** los comprobantes emitidos, todo desde una única interfaz centralizada.
 
 
-### ¿Dónde puedo ver las ventas generadas?
 
-Para ver las ventas emitidas desde la plataforma web, ingresa a **Menú > Facturación > Mis ventas**. Para ver las ventas programadas pendientes de emisión desde la plataforma web, ingresa a **Menú > Facturación > Ventas programadas**.&#x20;
+### ✅ ¿Cómo verificar si un comprobante fue emitido correctamente en ARCA?
 
-Desde allí, podrás visualizar y gestionar todos los comprobantes emitidos de forma rápida y sencilla.
+Además del panel de TusFacturasAPP  y cuando estes en producción, también podés corroborar que un comprobante fue autorizado por **AFIP/ARCA** de forma oficial:
 
-**¿Cómo corroborar que un comprobante se emitió correctamente en ARCA?**
+1. Ingresando a la web de AFIP con tu **CUIT y clave fiscal**.
+2. Usando el servicio “**Mis Comprobantes**” en el menú de servicios habilitados.
+3. Utilizando la herramienta oficial de [**Constatación de Comprobantes Electrónicos**](https://servicioscf.afip.gob.ar/publico/comprobantes/cae.aspx), donde podés ingresar el CUIT del emisor, tipo y número de comprobante.
 
-En AFIP/ARCA podrás encontrar ésta información usando el servicio de consulta llamado **"Mis Comprobantes"** que encontrarás accediendo con tu CUIT y clave fiscal. Tambien podes hacer la [constatación de comprobantes](https://servicioscf.afip.gob.ar/publico/comprobantes/cae.aspx) y consultarlos manualmente.
+> 🧩 Esta verificación es útil para control fiscal o para mostrarle al cliente final que su comprobante fue validado correctamente.
+>
+>
 
 ### Parámetros
 
