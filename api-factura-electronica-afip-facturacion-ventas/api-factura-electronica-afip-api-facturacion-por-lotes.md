@@ -41,7 +41,7 @@ Es necesario leer primero, la documentación de "[Facturación](./)", para conoc
 
 ### ¿Cómo generar una venta por lotes instantáneos?
 
-Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
+Consulta nuestra guía detallada "[Referencia API AFIP ARCA](referencia-api-afip-arca.md)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
 
 {% hint style="info" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`lotes`</mark>
@@ -64,7 +64,7 @@ Formato esperado: JSON
 
 #### Estructura del bloque: "requests"
 
-"requests debe ser un array, que contiene cada uno de los comprobantes a emitir, según se define en la documentación de "[Facturación](./)".
+"requests" debe ser un array que contiene cada uno de los comprobantes a emitir, según se define en la [Referencia a la API de Facturación](referencia-api-afip-arca.md).
 
 {% hint style="info" %}
 **Datos a tener en cuenta**
@@ -76,7 +76,7 @@ Formato esperado: JSON
 * Si se detecta al menos un (1) error de validación de datos de nuestro lado, el lote no se mandará a procesar.
 {% endhint %}
 
-La estructura de cada "{objeto\_comprobante}" debe ser acorde a los siguientes tipos de comprobante a generar:&#x20;
+La estructura de cada "{objeto\_comprobante}" debe ser acorde a los siguientes tipos de comprobante a generar, incluyendo todos sus campos:&#x20;
 
 [comprobantes de tipo A](api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md)
 
