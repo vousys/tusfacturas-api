@@ -378,7 +378,7 @@ Existen 3 tipos de evento posible, para el recurso de facturación que podes rec
 | :---------: | :------: |
 | facturacion | encolado |
 
-El hook de "encolado", te informa que el request ha sido aceptado para su procesamiento. Mientras un comprobante se encuentre dentro de la cola de procesamiento, puedes realizar las siguientes operaciones:  [Cambiar fecha del comprobante](cambiar-fecha-a-comprobante-encolado.md) o [eliminar el comprobante de la cola de procesamiento](eliminar-comprobantes-encolados.md).
+El hook de "encolado", te informa que el request ha sido aceptado para su procesamiento. Mientras un comprobante se encuentre dentro de la cola de procesamiento, puedes realizar las siguientes operaciones:  [Cambiar fecha del comprobante](../web-services-afip-api-arca/cambiar-fecha-a-comprobante-encolado.md) o [eliminar el comprobante de la cola de procesamiento](../web-services-afip-api-arca/eliminar-comprobantes-encolados.md).
 
 &#x20;El JSON que recibirás será similar al siguiente ejemplo:
 
@@ -422,7 +422,7 @@ El JSON que recibirás será similar al siguiente ejemplo:&#x20;
 | :---------: | :----: |
 | facturacion |  error |
 
-El hook de "error", te informa que el request ha sido procesado, pero se han detectado errores y no se podrá facturar. Si un comprobante se encuentra procesado con error dentro de la cola de procesamiento, puedes realizar las siguientes operaciones:  [Cambiar fecha del comprobante,](cambiar-fecha-a-comprobante-encolado.md) [re-enviar el comprobante a la cola de procesamiento](re-enviar-a-procesar-ventas-afip-arca-asincronicas-con-error.md) o [eliminar el comprobante de la cola de procesamiento](eliminar-comprobantes-encolados.md).
+El hook de "error", te informa que el request ha sido procesado, pero se han detectado errores y no se podrá facturar. Si un comprobante se encuentra procesado con error dentro de la cola de procesamiento, puedes realizar las siguientes operaciones:  [Cambiar fecha del comprobante,](../web-services-afip-api-arca/cambiar-fecha-a-comprobante-encolado.md) [re-enviar el comprobante a la cola de procesamiento](re-enviar-a-procesar-ventas-afip-arca-asincronicas-con-error.md) o [eliminar el comprobante de la cola de procesamiento](../web-services-afip-api-arca/eliminar-comprobantes-encolados.md).
 
 El JSON que recibirás será similar al siguiente ejemplo y a diferencia de los anteriores, obtendrás la lista de errores detectados, dentro del campo "msg".
 

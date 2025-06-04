@@ -37,8 +37,8 @@ Dentro de nuestra plataforma web >  menú > Facturación > Ventas en cola
 Podes realizar las siguientes operaciones:
 
 * [Enviarlos a reprocesar](api-factura-electronica-afip-facturacion-ventas/re-enviar-a-procesar-ventas-afip-arca-asincronicas-con-error.md). Una vez que un comprobante fue marcado con errores, no se intentará emitir nuevamente, salvo que lo envies a reprocesar.
-* Puedes [eliminarlo](api-factura-electronica-afip-facturacion-ventas/eliminar-comprobantes-encolados.md), en caso que no se pueda procesar.
-* Modificar la [fecha del comprobante](api-factura-electronica-afip-facturacion-ventas/cambiar-fecha-a-comprobante-encolado.md) y automáticamente [enviarlos a reprocesar](api-factura-electronica-afip-facturacion-ventas/re-enviar-a-procesar-ventas-afip-arca-asincronicas-con-error.md).&#x20;
+* Puedes [eliminarlo](web-services-afip-api-arca/eliminar-comprobantes-encolados.md), en caso que no se pueda procesar.
+* Modificar la [fecha del comprobante](web-services-afip-api-arca/cambiar-fecha-a-comprobante-encolado.md) y automáticamente [enviarlos a reprocesar](api-factura-electronica-afip-facturacion-ventas/re-enviar-a-procesar-ventas-afip-arca-asincronicas-con-error.md).&#x20;
 
 #### ¿Qué comprobantes no pueden enviarse a la cola de procesamiento?
 
@@ -91,13 +91,13 @@ Si, podes enviarlos y quedarán en la cola de procesamiento hasta la fecha indic
 
 #### ¿Puedo cambiar la fecha de un request que se encuentra en la cola de procesamiento
 
-Si, para eso debés utilizar el método de:  [Cambiar fecha encolado](api-factura-electronica-afip-facturacion-ventas/cambiar-fecha-a-comprobante-encolado.md)
+Si, para eso debés utilizar el método de:  [Cambiar fecha encolado](web-services-afip-api-arca/cambiar-fecha-a-comprobante-encolado.md)
 
 
 
 #### ¿Puedo eliminar requests que aún no se han procesado?
 
-Si, para eso debés utilizar el método de:  [Eliminar comprobante encolado](api-factura-electronica-afip-facturacion-ventas/eliminar-comprobantes-encolados.md)
+Si, para eso debés utilizar el método de:  [Eliminar comprobante encolado](web-services-afip-api-arca/eliminar-comprobantes-encolados.md)
 
 
 

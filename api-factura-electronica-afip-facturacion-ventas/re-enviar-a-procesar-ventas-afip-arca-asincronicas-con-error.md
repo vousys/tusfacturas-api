@@ -9,7 +9,7 @@ description: >-
 Mediante éste método podrás reenviar a procesar, un comprobante que se encuentra en cola de procesamiento con error.&#x20;
 
 {% hint style="info" %}
-Ten en cuenta que si el error que te indica es error de datos, por más que lo envies a reprocesar, no se va a emitir, ya que deberás modificarlo. En ese caso te sugerimos [eliminarlo de la cola](eliminar-comprobantes-encolados.md) y volverlo a enviar con la información correcta.
+Ten en cuenta que si el error que te indica es error de datos, por más que lo envies a reprocesar, no se va a emitir, ya que deberás modificarlo. En ese caso te sugerimos [eliminarlo de la cola](../web-services-afip-api-arca/eliminar-comprobantes-encolados.md) y volverlo a enviar con la información correcta.
 {% endhint %}
 
 

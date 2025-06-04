@@ -103,9 +103,9 @@ Se agrega la documentación de "[nuevo recibo de cobro](recibos-de-cobro-y-orden
 
 Se agrega el campo "webhook" a la documentación de "[Mi cuenta - administrar puntos de venta (PDV)](mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md)
 
-Se agrega la documentación de "[Eliminar comprobante encolado](api-factura-electronica-afip-facturacion-ventas/eliminar-comprobantes-encolados.md)".
+Se agrega la documentación de "[Eliminar comprobante encolado](web-services-afip-api-arca/eliminar-comprobantes-encolados.md)".
 
-Se agrega la documentación de "[Cambiar fecha a comprobantes encolado](api-factura-electronica-afip-facturacion-ventas/cambiar-fecha-a-comprobante-encolado.md)"
+Se agrega la documentación de "[Cambiar fecha a comprobantes encolado](web-services-afip-api-arca/cambiar-fecha-a-comprobante-encolado.md)"
 
 Se agrega la documentación de "[Reenviar a procesar, comprobante encolado con error](api-factura-electronica-afip-facturacion-ventas/re-enviar-a-procesar-ventas-afip-arca-asincronicas-con-error.md)
 
