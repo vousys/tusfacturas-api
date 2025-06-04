@@ -23,7 +23,17 @@ Podrás aplicar diferentes **filtros** para refinar tus resultados, lo cual te p
 * La consulta te devolverá los resultados paginados, con un límite máximo de ventas por página es de 1.000
 * El uso de éste método **no contabiliza como un request** en tu suscripción
 
+
+
+Modalidades de búsqueda:
+
+* Por [fecha de emisión](consulta-avanzada.md#consulta-por-fecha-de-emision)
+* Por [rango numérico](consulta-avanzada.md#consulta-avanzada-por-rango-de-numeros)
+* Por [external Reference](consulta-avanzada.md#consulta-avanzada-por-external_reference)
+
 ### 🛠️ Estructura del request a enviar:
+
+La siguiente estructura es genérica para cualquiera de los métodos de búsqueda disponibles:
 
 | Name           | Type   | Description                                                                                  |
 | -------------- | ------ | -------------------------------------------------------------------------------------------- |
@@ -57,6 +67,8 @@ La respuesta contendrá un array de comprobantes (emitidos o pendientes de emisi
 
 #### Detalle de los campos de la respuesta
 
+Los campos devueltos son genéricos para cualquiera de los métodos de búsqueda disponibles:&#x20;
+
 | Nombre del campo | Info                                                                                                                                                                               |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | error            | Campo alfanumerico. Valores posibles "S" o "N"                                                                                                                                     |
@@ -65,9 +77,11 @@ La respuesta contendrá un array de comprobantes (emitidos o pendientes de emisi
 | comprobantes     | Array conteniendo cada uno de los comprobantes encontrados, según estructura que se detalla en la [consulta simple.](api-factura-electronica-afip-consulta-de-comprobantes.md)     |
 |                  |                                                                                                                                                                                    |
 
-A continuación te mostramos las diferentes opciones de búsqueda avanzada de ventas:&#x20;
+***
 
-### 📅 Consulta por Fecha de Emisión&#x20;
+A continuación te mostramos las diferentes opciones de búsqueda avanzada de ventas:
+
+### 🔎 Consulta por Fecha de Emisión&#x20;
 
 Esta consulta retorna todos los comprobantes cuya fecha de emisión coincide exactamente con la fecha solicitada.
 
