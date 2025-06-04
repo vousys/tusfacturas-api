@@ -107,7 +107,7 @@ Se agrega la documentación de "[Eliminar comprobante encolado](web-services-afi
 
 Se agrega la documentación de "[Cambiar fecha a comprobantes encolado](web-services-afip-api-arca/cambiar-fecha-a-comprobante-encolado.md)"
 
-Se agrega la documentación de "[Reenviar a procesar, comprobante encolado con error](api-factura-electronica-afip-facturacion-ventas/re-enviar-a-procesar-ventas-afip-arca-asincronicas-con-error.md)
+Se agrega la documentación de "[Reenviar a procesar, comprobante encolado con error](web-services-afip-api-arca/reenvio-de-comprobantes-encolados-con-error.md)
 
 ### 22 de marzo de 2022
 

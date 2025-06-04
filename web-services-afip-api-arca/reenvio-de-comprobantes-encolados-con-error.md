@@ -2,41 +2,22 @@
 description: >-
   Utiliza la API de TusFacturasAPP, para re-enviar a procesar aquellos
   comprobantes que se encuentran en cola de procesamiento con error
+icon: code
 ---
 
-# Re-enviar a procesar ventas AFIP/ARCA asincrónicas con error
+# Reenvío de Comprobantes Encolados con Error
 
-Mediante éste método podrás reenviar a procesar, un comprobante que se encuentra en cola de procesamiento con error.&#x20;
+Esta funcionalidad permite reenviar un comprobante que se encuentra en la cola de procesamiento con un estado de error. Es útil para errores de tipo transitorio o de comunicación.
+
+**Consideración Crítica:** Si el error reportado es una inconsistencia o falta de datos, el reprocesamiento no tendrá efecto. En tal escenario, se recomienda **eliminar el comprobante original** y enviar una **nueva solicitud con los datos corregidos**.
+
+### Endpoint
 
 {% hint style="info" %}
-Ten en cuenta que si el error que te indica es error de datos, por más que lo envies a reprocesar, no se va a emitir, ya que deberás modificarlo. En ese caso te sugerimos [eliminarlo de la cola](../web-services-afip-api-arca/eliminar-comprobantes-encolados.md) y volverlo a enviar con la información correcta.
-{% endhint %}
-
-
-
-Tipo de datos: **JSON**\
-Charset: **UTF-8**
-
-## Envía nuevamente a procesar, un comprobante que se encuentra en cola de procesamiento con error.&#x20;
-
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`reenviar_encolado`</mark>&#x20;
+<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`reenviar_encolado`</mark>
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
-
-#### Request Body
-
-| Name                | Type   | Description                                 |
-| ------------------- | ------ | ------------------------------------------- |
-| apikey              | string | Tus credenciales de acceso.                 |
-| apitoken            | string | Tus Credenciales de acceso.                 |
-| usertoken           | string | Tus Credenciales de acceso.                 |
-| external\_reference | String | Campo alfanumérico de hasta 255 caracteres. |
-
-{% tabs %}
-{% tab title="200  " %}
-
-{% endtab %}
-{% endtabs %}
+{% endhint %}
 
 ### Ejemplo del JSON a enviar:
 
@@ -50,11 +31,11 @@ Charset: **UTF-8**
  
 ```
 
-### Ejemplo de respuestas posibles
+### 📌 Respuestas posibles
 
-En caso de existir +1 comprobante para una misma external\_reference (no debería), se tomará al primero encontrado.&#x20;
+Ante la existencia de más de un comprobante para una misma `external_reference`, se priorizará el **primer comprobante detectado** por el sistema.
 
-#### Éxito:
+#### ✅ Response exitoso
 
 Al enviar la petición, recibirás instantáneamente la siguiente respuesta:
 
@@ -79,7 +60,7 @@ y también recibirás un webhook, para informarte que el comprobante se ha envia
 }
 ```
 
-#### Error:&#x20;
+#### 🛑 Response con error
 
 ```
 {
@@ -89,6 +70,8 @@ y también recibirás un webhook, para informarte que el comprobante se ha envia
 	]
 }
 ```
+
+***
 
 TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y un [software de gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).
 
