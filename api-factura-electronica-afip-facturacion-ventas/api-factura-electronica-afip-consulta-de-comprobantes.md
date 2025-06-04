@@ -4,36 +4,32 @@ description: >-
   nuestra API en tu sistema y optimiza tus procesos.
 ---
 
-# Consulta simple
+# Consulta simple de ventas
 
-### **¿Qué es la consulta simple de comprobantes?**
+La **API ARCA/AFIP de TusFacturasAPP** ofrece dos métodos para consultar comprobantes fiscales emitidos desde tu sistema: el método de **consulta simple** y el de [**consulta avanzada**](consulta-avanzada.md). Ambos son fundamentales para verificar el estado y obtener los datos de las ventas realizadas.
 
-La consulta simple de comprobantes es una funcionalidad que te permite buscar y obtener información detallada sobre las facturas electrónicas que has emitido a través de una plataforma como TusFacturasAPP. Esta función es muy útil para:
+### 🔸 Consulta simple de ventas
+
+Este método te permite obtener una lista de comprobantes emitidos filtrando por CUIT, punto de venta, fecha, tipo de comprobante u otros parámetros básicos. Es ideal para visualizar un resumen general o hacer auditorías internas de tu facturación electrónica.
+
+Esta función es muy útil para:
 
 * **Verificar el estado de los comprobantes:** Saber si un comprobante fue emitido correctamente, si fue rechazado por la AFIP o si ya fue presentado ante el organismo recaudador.
 * **Buscar comprobantes específicos:** Localizar una factura en particular utilizando diferentes criterios de búsqueda, como el número de comprobante, la fecha de emisión, el cliente, etc.
 * **Generar reportes:** Obtener información resumida o detallada sobre un conjunto de comprobantes, lo que puede ser útil para tareas de contabilidad o análisis.
-* **Integrar con otros sistemas:** Utilizar la información de los comprobantes para alimentar otros sistemas o aplicaciones, como un ERP o un CRM.
+* **Integrar con otros sistemas:** Utilizar la información de los comprobantes para alimentar tu sistema o aplicacion, como un ERP o un CRM.
 
 **En resumen,** la consulta de comprobantes es una herramienta esencial para gestionar tu facturación electrónica de manera eficiente y tener un control total sobre tus operaciones.
 
-
-
-{% hint style="info" %}
-Es importante que descargues toda la información junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
-{% endhint %}
-
-## :rocket: ¿Cómo enviar una consulta simple de comprobantes?
+### :rocket: Ejemplo de consulta simple
 
 💡 El uso de éste método no contabiliza como un request en tu suscripción
-
-Ejemplo:
 
 {% content-ref url="../web-services-afip-api-arca/consulta-simple-tipo-numero.md" %}
 [consulta-simple-tipo-numero.md](../web-services-afip-api-arca/consulta-simple-tipo-numero.md)
 {% endcontent-ref %}
 
-### Parámetros
+### 🛠️ Estructura del request a enviar:
 
 | Name        | Type   | Description                                                             |
 | ----------- | ------ | ----------------------------------------------------------------------- |
@@ -50,7 +46,7 @@ Ejemplo:
 | `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
 | `numero`      | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
 
-#### Ejemplo del JSON de respuesta:
+### Ejemplo del JSON de respuesta:
 
 La información que obtenés se devuelve estructurada de la misma manera que la enviaste, con el agregado de ciertos campos que se detallan a continuación
 
@@ -146,6 +142,10 @@ La información que obtenés se devuelve estructurada de la misma manera que la 
    }
 }
 ```
+
+{% hint style="info" %}
+Es importante que descargues toda la información junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
+{% endhint %}
 
 #### Campos devueltos que no forman parte del JSON que vos envias:
 

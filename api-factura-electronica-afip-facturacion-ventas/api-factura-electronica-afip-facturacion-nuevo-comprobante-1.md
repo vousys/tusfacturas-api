@@ -97,7 +97,7 @@ Charset: UTF-8  Formato: JSON&#x20;
 
 
 
-### **Posibles respuestas**&#x20;
+### ✅ Respuestas posibles
 
 #### :red\_circle: ERROR  de válidación -  Respuesta: instántanea
 

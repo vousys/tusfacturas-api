@@ -48,7 +48,7 @@
   * [Facturas a consumidor final, sin especificar datos](api-factura-electronica-afip-facturacion-ventas/facturas-a-consumidor-final-sin-especificar-datos.md)
   * [¿Factura MiPyme o Factura común?](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-or-como-se-si-emitir-una-factura-mipyme-o-una-comun.md)
   * [Comprobantes MiPyme: ¿Debo emitirla?](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-obligado-a-recibir-factura-de-credito-electronica-mipyme.md)
-  * [Consulta simple](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-comprobantes.md)
+  * [Consulta simple de ventas](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-comprobantes.md)
   * [Consulta avanzada](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md)
   * [Consultar numeración de comprobantes.](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consultar-numeracion-de-comprobantes..md)
   * [Eliminar comprobantes encolados](api-factura-electronica-afip-facturacion-ventas/eliminar-comprobantes-encolados.md)
