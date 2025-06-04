@@ -8,7 +8,9 @@ icon: i
 
 # Facturación instantánea e individual
 
-[TusFacturasAPP](https://www.tusfacturas.app) es un proveedor [SaaS](https://www.tusfacturas.app/saas-facturacion-b2b-argentina.html) líder de servicios de [facturación electrónica en Argentina](https://www.tusfacturas.app/factura-electronica-afip.html), que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
+### ⚡ ¿Qué es la API de facturación individual e instantánea?
+
+La **API de facturación electrónica instantánea de TusFacturasAPP** te permite **emitir comprobantes fiscales válidos ante AFIP/ARCA en tiempo real**, de forma individual. Es ideal para integrar fácilmente la facturación electrónica a tu sistema actual, cumpliendo con las normativas fiscales vigentes en Argentina.
 
 ### ¿Qué podes hacer con la API para facturación AFIP?
 
@@ -18,25 +20,44 @@ Integra fácilmente la facturación electrónica en tu software con la API de Tu
 
 ### ¿Cómo empiezo?
 
-Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo/) . Una vez configurada tu cuenta y creado tu CUIT/Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
+Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo/) . Una vez configurada tu cuenta y creado tu CUIT/Punto de venta (PDV) en TusFacturasAPP, podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
-### **¿Qué es la API de facturación  individual e instantánea?**
+### Características de la facturación individual e instantánea
 
-Con nuestro servicio API de facturación electrónica AFIP instantánea, podrás emitir comprobantes fiscales válidos de manera individual y obtener respuestas en tiempo real desde la AFIP .  Tené en cuenta que el procesamiento del comprobante en AFIP está sujeta al estado de los servicios AFIP.
+Esta modalidad se caracteriza por brindar una **respuesta inmediata del servicio de AFIP**, permitiéndote generar facturas, notas de crédito, notas de débito y otros tipos de comprobantes sin demoras innecesarias.
 
-Esta opción de facturación electrónica individual te brinda agilidad y eficiencia, permitiéndote integrar fácilmente la emisión de facturas, notas de crédito y otros comprobantes en tu flujo de trabajo actual, cumpliendo con todas las regulaciones fiscales vigentes.
+> 📌 **Importante:** La respuesta inmediata depende directamente del estado de los servidores de AFIP/ARCA. En momentos de alta carga o interrupciones, el proceso puede tardar hasta **1 minuto y 30 segundos** o más. Nuestro sistema de facturación electrónica cuenta con mecanismos robustos de manejo de errores que te notificarán oportunamente cualquier inconveniente con los servidores de la AFIP. De esta manera, podrás tomar las medidas necesarias y evitar demoras o interrupciones en tus procesos de facturación.
+>
+> Te sugerimos utilizar siempre que puedas, el método de [facturación asincrónico](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md) para evitar éstos inconvenientes.
 
-{% hint style="danger" %}
-Es crucial monitorear y manejar adecuadamente los errores, ya que los sistemas de la AFIP suelen presentar frecuentes interrupciones o caídas de servicio. Dependiendo del estado de los servicios de la AFIP, la generación de un comprobante fiscal  puede demorar hasta 1 minuto y 30 segundos. 😰.&#x20;
+### 🔍 ¿Qué ventajas ofrece este método?
 
-Nuestro sistema de facturación electrónica cuenta con mecanismos robustos de manejo de errores que te notificarán oportunamente cualquier inconveniente con los servidores de la AFIP. De esta manera, podrás tomar las medidas necesarias y evitar demoras o interrupciones en tus procesos de facturación.
+* ✅ Emisión inmediata de comprobantes válidos ante AFIP/ARCA.
+* ✅ Integración directa con tus sistemas o plataformas.
+* ✅ Ideal para puntos de venta, ecommerce o sistemas que requieren respuesta en tiempo real.
+* ✅ Compatible con todos los tipos de comprobantes: facturas, NC, ND, remitos, presupuestos, pedidos, etc.
 
-Te sugerimos utilizar el método de [facturación asincrónico](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md) para evitar éstos inconvenientes.
-{% endhint %}
+### ⚠️ Consideraciones clave sobre errores y estabilidad
 
-### ¿Cómo crear una venta **instantánea?**
+Los servicios de AFIP pueden presentar **intermitencias frecuentes**. Por eso, **TusFacturasAPP incluye un sistema robusto de manejo de errores**, que te notifica en caso de fallas o demoras del servicio oficial.
 
-Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.&#x20;
+* 🔔 Si la respuesta contiene errores, recibirás un campo `"error": "S"` y una lista detallada en `"errores"`, para facilitar el diagnóstico.
+* 🧩 Si el comprobante se genera correctamente, recibirás toda la información fiscal junto con los enlaces al archivo PDF.
+
+> 🛑 **Recomendación:** Si tu aplicación requiere máxima estabilidad, considerá usar la modalidad **asincrónica**, que coloca los comprobantes en una cola de procesamiento automática. Esto ayuda a evitar interrupciones causadas por caídas en los servidores de AFIP.
+
+### 🚀 ¿Cómo crear una venta instantánea?
+
+Consultá nuestra [guía completa 👉 **“Referencia API AFIP ARCA”**](referencia-api-afip-arca.md), donde encontrarás:
+
+* Especificaciones técnicas
+* Campos requeridos para armar el request
+* [Ejemplos de código](../web-services-afip-api-arca/) listos para usar
+* Buenas prácticas de integración y manejo de errores
+
+> Con nuestra documentación clara y ejemplos reales, **la integración de la facturación electrónica en tu software será rápida, sencilla y confiable**.
+
+### 📌 Endpoint para ventas individuales e instantáneas:
 
 {% hint style="info" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`nuevo`</mark>
@@ -44,27 +65,25 @@ Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a pr
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 {% endhint %}
 
-Charset: UTF-8
+Charset: UTF-8 / JSON&#x20;
 
-Tipo de dato esperado: JSON&#x20;
+#### Body
 
-#### Request Body
-
-| Name        | Type   | Description                                                                            |
-| ----------- | ------ | -------------------------------------------------------------------------------------- |
-| usertoken   | string | Tus credenciales de acceso                                                             |
-| apitoken    | string | Tus credenciales de acceso                                                             |
-| apikey      | string | Tus credenciales de acceso                                                             |
-| comprobante | object | Estructura de "comprobante" según se informa en el apartado de ["API facturacion"](./) |
-| cliente     | object | Estructura de "Cliente", según se informa en el apartado de ["facturacion"](./)        |
+| Name        | Type   | Description                                                                                                                             |
+| ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
+| usertoken   | string | Tus credenciales de acceso                                                                                                              |
+| apitoken    | string | Tus credenciales de acceso                                                                                                              |
+| apikey      | string | Tus credenciales de acceso                                                                                                              |
+| comprobante | object | Estructura de "comprobante" según se informa en la [referencia API](referencia-api-afip-arca.md#estructura-del-bloque-comprobante)      |
+| cliente     | object | Estructura de "Cliente", según se informa en la [referencia API](referencia-api-afip-arca.md#estructura-del-bloque-cliente-y-proveedor) |
 
 
 
-### ¿Qué te retorna la llamada a la API?
+### ¿Qué te retorna la llamada a la API de facturación AFIP/ARCA en la modalidad individual e instantánea?
 
 #### &#x20;:white\_check\_mark: Cuando el request resultó exitoso:
 
-Sea cual sea la modalidad que utilices para facturar, por cada comprobante que emitas, obtendrás la siguiente respuesta, con todos los datos que necesitas para almacenar en tu sistema.&#x20;
+Cuando un comprobante se emite correctamente en modalidad individual e instantánea, recibirás:
 
 ```
 {
@@ -91,11 +110,9 @@ Sea cual sea la modalidad que utilices para facturar, por cada comprobante que e
   }  
 ```
 
-{% hint style="info" %}
-Es importante  que descargues toda la información, junto con el pdf y lo almacenes en tu plataforma, ya que si tu cuenta o suscripción no se encuentran vigentes, no podrás obtenerlo.
+📁 **Importante:** La URL de descarga del PDF es temporal, por lo que es esencial que descargues y guardes los archivos generados (PDF en hoja A4/ticket para papel de 80mm), ya que si tu cuenta o suscripción vence, **no podrás volver a acceder a esos documentos** desde la API.&#x20;
 
-El campo "comprobante\_ticket\_url" te devuelve un pdf con el comprobante para ser impreso en formato ticket para papel de 80mm, en cambio el campo: "comprobante\_pdf\_url" te devuelve el PDF acorde al estilo que definiste, para papel A4.
-{% endhint %}
+
 
 #### :octagonal\_sign: Response con error
 
@@ -124,3 +141,7 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 ### ¿Aún te quedan dudas? ¡Contactános!
 
 En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
+
+***
+
+[TusFacturasAPP](https://www.tusfacturas.app) es un proveedor [SaaS](https://www.tusfacturas.app/saas-facturacion-b2b-argentina.html) líder de servicios de [facturación electrónica en Argentina](https://www.tusfacturas.app/factura-electronica-afip.html), que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
