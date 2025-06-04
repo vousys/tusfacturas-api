@@ -6,7 +6,7 @@ description: >-
 
 # ¿Qué tipos de comprobante debo/puedo emitir?
 
-## Conocé qué tipos de comprobante debes/podes emitir según tu condición impositiva y la de tu cliente.
+### Conocé qué tipos de comprobante debes/podes emitir según tu condición impositiva y la de tu cliente.
 
 TusFacturasAPP te permite emitir [factura electronica AFIP](https://www.tusfacturas.app/factura-electronica-afip.html), de tipo A, B, C, E, M y MiPyme. Consultá todos los tipos de comprobante disponibles [desde aquí](../parametros/tablas-de-referencia.md).
 

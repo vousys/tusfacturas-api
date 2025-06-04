@@ -30,7 +30,7 @@ IMPORTANTE: Para poder realizar ésta consulta, deberás tener agregado en tu cu
 
 
 
-## :rocket: ¿Cómo consultar si debes emitir una MiPyme?
+### :rocket: ¿Cómo consultar si debes emitir una MiPyme?
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 

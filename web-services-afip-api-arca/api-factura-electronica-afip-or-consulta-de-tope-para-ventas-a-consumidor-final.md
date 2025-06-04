@@ -2,41 +2,20 @@
 description: >-
   Consulta fácil y rápido el tope AFIP/ARCA para ventas a consumidor final. ¡Sin
   necesidad de datos del comprador!
+icon: code
 ---
 
-# Consultar el tope para ventas a consumidor final
+# Consultar el Tope AFIP/ARCA para Ventas a Consumidor Final
 
-Conocé toda la info que debes enviar para poder generar [facturas B](api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md) o [Facturas C](api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md)  [a consumidor final sin especificar los datos del comprador](facturas-a-consumidor-final-sin-especificar-datos.md).
+Accedé de forma **rápida y sencilla** al monto límite establecido por AFIP/ARCA para tus ventas a consumidor final, ¡sin necesidad de los datos del comprador! Esta herramienta te proporciona la información necesaria para emitir Facturas B o Facturas C a consumidor final sin especificar los datos del cliente, agilizando tu proceso de facturación.
 
+### Endpoint
 
-
-### Método para consulta de tope a ventas a consumidor final provisto por AFIP/ARCA
-
+{% hint style="info" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`topecf`</mark>
+{% endhint %}
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
-
-#### Request Body
-
-| Name      | Type   | Description                |
-| --------- | ------ | -------------------------- |
-| apikey    | String | Tus credenciales de acceso |
-| apitoken  | String | Tus credenciales de acceso |
-| usertoken | String | Tus credenciales de acceso |
-
-
-
-{% tabs %}
-{% tab title="200: OK " %}
-```javascript
-{
-	"error": "N",
-	"errores": [],
-	"monto": 26228
-}
-```
-{% endtab %}
-{% endtabs %}
 
 ### Ejemplo de JSON a enviar
 
@@ -48,7 +27,17 @@ Conocé toda la info que debes enviar para poder generar [facturas B](api-factur
 }
 ```
 
+### JSON de respuesta
 
+```
+{
+	"error": "N",
+	"errores": [],
+	"monto": 26228
+}
+```
+
+***
 
 TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y un [software de gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).
 

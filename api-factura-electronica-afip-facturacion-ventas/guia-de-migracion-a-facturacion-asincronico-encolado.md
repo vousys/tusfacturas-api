@@ -6,7 +6,7 @@ description: >-
 
 # Guía de migración a facturación asincrónico (encolado)
 
-## ¿Que necesito hacer para migrar desde comprobantes instantáneos?
+### ¿Que necesito hacer para migrar desde comprobantes instantáneos?
 
 Si ya venias haciendo comprobantes instantáneos y queres migrar a la facturación asincrónica para acelerar los tiempos de procesamiento, estos son los puntos que deberías tener en cuenta:
 

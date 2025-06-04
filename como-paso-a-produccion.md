@@ -30,10 +30,8 @@ Ya sea que decidas continuar con tu cuenta de desarrollador o crees una nueva, d
 
 * Configura el **punto de venta** de tu cliente accediendo a:\
   **Menú > Mi espacio de trabajo > Puntos de venta > Crear nuevo**.
-* Si emitirás **factura electrónica con AFIP/ARCA**, sigue los pasos del instructivo de enlace que recibirás por e-mail después de dar de alta el punto de venta.
+* Si vas a emitir **factura electrónica con AFIP/ARCA**, luego de crear el punto de venta te enviamos un email con un certificado para que puedas hacer el [enlace entre TusFacturasAPP y ARCA](https://www.tusfacturas.app/enlace-arca.html) con nuestro instructivo interactivo.&#x20;
 * Una vez completada la vinculación, accede a:\
-  **Menú > Facturación > Recuperar numeración desde AFIP/ARCA**.
-
-Este proceso actualizará el numerador interno con la numeración oficial **una única vez**, asegurando que tu configuración esté lista para la emisión de comprobantes en producción.
+  **Menú > Facturación > Recuperar numeración desde AFIP/ARCA**. Este proceso actualizará el numerador interno con la numeración oficial **una única vez**, asegurando que tu configuración esté lista para la emisión de comprobantes en producción.
 
 Siguiendo estos pasos, garantizarás una transición ordenada y sin registros de prueba en el entorno de producción.
