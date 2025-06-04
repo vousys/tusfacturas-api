@@ -51,6 +51,8 @@ En los headers del request que te enviamos, podrás observar los siguientes head
 User-Agent: TusFacturasAPP-webhook/1.0
 
 TF-WebhookToken: TU\_TOKEN\_DEL\_PDV
+
+Tene en cuenta que algunos servidores pueden mostrarte el header todo en minúsculas, ej: tf-webhooktoken
 {% endhint %}
 
 Podrás obtener el TF-WebhookToken desde la grilla de puntos de venta, ingresando a Menú > Mi espacio de trabajo > CUITs/PDV.&#x20;

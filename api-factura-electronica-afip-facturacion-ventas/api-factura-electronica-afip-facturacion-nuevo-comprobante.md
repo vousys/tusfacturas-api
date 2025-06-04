@@ -14,7 +14,7 @@ La **API de facturación electrónica instantánea de TusFacturasAPP** te permit
 
 ### ¿Qué podes hacer con la API para facturación AFIP?
 
-Integra fácilmente la facturación electrónica en tu software con la API de TusFacturasAPP. Emite comprobantes fiscales válidos desde tu sistema y obtén respuestas inmediatas de la AFIP.
+Integra fácil y rápido la facturación electrónica ARCA en tu software. Emití comprobantes fiscales válidos desde tu software y obtene respuestas inmediatas desde ARCA.
 
 <figure><img src="../.gitbook/assets/157.webp" alt="SDK AFIP. TusFacturasAPP API Factura Electronica AFIP. "><figcaption></figcaption></figure>
 
