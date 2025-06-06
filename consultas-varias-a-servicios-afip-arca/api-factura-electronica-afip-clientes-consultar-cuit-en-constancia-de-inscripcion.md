@@ -7,7 +7,7 @@ description: >-
 # Consultar datos de un CUIT, desde la constancia de inscripción
 
 {% hint style="info" %}
-**IMPORTANTE**: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP/ARCA, el servicio de CONSULTA DE CONSTANCIA DE INSCRIPCIÓN. Te indicamos como hacerlo en el[ instructivo de integración con AFIP : Paso 5](https://www.tusfacturas.app/app/afip-como-enlazar-con-tusfacturas.html)
+**IMPORTANTE**: Para utilizar esta consulta, tu CUIT debe estar **enlazado con ARCA**. Por lo tanto, esta funcionalidad **no está disponible** en el plan API DEV.
 {% endhint %}
 
 ## Consultar datos de un CUIT en AFIP/ARCA
