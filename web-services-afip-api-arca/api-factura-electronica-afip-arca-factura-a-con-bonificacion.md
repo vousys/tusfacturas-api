@@ -110,6 +110,8 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 
 ### JSON para generar una Factura A con bonificaciones a nivel comprobante
 
+
+
 ```json
 {
    "usertoken":"xxxxx",
@@ -306,7 +308,9 @@ puts response.read_body
 
 ### Parámetros para crear una Factura A con bonificaciones&#x20;
 
-[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación avalado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro y conoce otras[ alternativas de cómo enviar bonificaciones](../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md).
+[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación avalado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina.&#x20;
+
+Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro y conoce otras[ alternativas de cómo enviar bonificaciones](../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md).
 
 {% content-ref url="../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md" %}
 [ejemplo-de-factura-con-bonificaciones-descuentos.md](../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md)
