@@ -33,9 +33,9 @@ Para garantizar el cumplimiento legal, nuestra plataforma no dispone de un entor
 
 Sin embargo, durante las pruebas, la respuesta que recibirás de nuestra API simulará el comportamiento en producción, los campos CAE y vencimiento del CAE se retornarán vacíos y no se aplicarán las validaciones adicionales de AFIP/ARCA.
 
-**Para realizar las pruebas, te sugerimos:**
+### **¿Cómo obtener las credenciales API?**
 
-Configurar tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679) desde plataforma web, ingresando a Menú > Mi espacio de trabajo > Puntos de venta . Una vez hecho ésto podrás obtener las keys necesarias para utilizar la API.
+ingresa a  **Menú > Mi espacio de trabajo > Puntos de venta**  y configura tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679) . Una vez hecho ésto podrás obtener las credenciales necesarias para utilizar la API.
 
 **Recorda:**
 
