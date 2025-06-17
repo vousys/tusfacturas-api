@@ -242,7 +242,9 @@ Consulta la respuesta esperada, según el método que uses para enviarla:
 [api-factura-electronica-afip-api-facturacion-por-lotes.md](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-api-facturacion-por-lotes.md)
 {% endcontent-ref %}
 
-
+{% hint style="info" %}
+Nuestra plataforma incorpora de manera automática en los PDF de tus Facturas M, la leyenda "OPERACIÓN SUJETA A RETENCIÓN".
+{% endhint %}
 
 ### ¿Quién genera una factura M?
 
