@@ -9,6 +9,7 @@
   * [Factura B](web-services-afip-api-arca/api-factura-electronica-afip-factura-b.md)
   * [Factura C](web-services-afip-api-arca/api-factura-electronica-afip-factura-c.md)
   * [Factura E](web-services-afip-api-arca/api-factura-electronica-afip-factura-e.md)
+  * [Factura M](web-services-afip-api-arca/api-factura-electronica-afip-factura-m.md)
   * [Factura MiPyme A](web-services-afip-api-arca/api-factura-electronica-afip-factura-mypyme-a.md)
   * [Factura MiPyme B](web-services-afip-api-arca/api-factura-electronica-afip-factura-mypyme-b.md)
   * [Nota de crédito A](web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-a.md)
