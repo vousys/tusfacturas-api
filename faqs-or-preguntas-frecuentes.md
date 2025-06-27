@@ -12,9 +12,16 @@ Sí, podes utilizar nuestra plataforma de facturación electrónica incluso si t
 
 ### **¿Qué contabiliza como un request?**
 
-Un request es toda petición realizada a la API en cualquiera de sus métodos, devuelva error o exito.
+Un request es cualquier petición realizada a la API, independientemente del método utilizado o si devuelve éxito o error.
 
-El límite de request que dispones para realizar las consultas, es el mismo limite que tenes habilitado en tu plan para la emisión de comprobantes . Ej: si tu plan incluye 1000 comprobantes, podrás realizar 1000 request a éste método en la suscripción en curso.
+El límite de requests disponible corresponde al límite de comprobantes incluido en tu plan y se aplica por separado a cada método de la API. Por ejemplo: si tu plan incluye 1000 comprobantes, podrás realizar 1000 requests a cada método durante la suscripción vigente. La única excepción son los métodos de consulta de comprobantes (simple y avanzada), que no tienen limite de consulta.
+
+Un ejemplo práctico para un plan con 5000 requests:
+
+* Podes realizar 5000 consultas de numeración&#x20;
+* Podes emitir 5000 comprobantes de cualquier tipo
+* Podes consultar 5000 veces la cotización del dólar&#x20;
+* Podrias realizar 20.000 consultas de comprobante por external reference
 
 ### **¿La URL de descarga de PDF cuenta como un request?**
 
