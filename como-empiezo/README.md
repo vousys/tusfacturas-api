@@ -9,7 +9,18 @@ description: >-
 
 ### ¿Qué es TusFacturasAPP?
 
-TusFacturasAPP es la API líder en Argentina para integrar facturación electrónica AFIP/ARCA en tu software. Elegida por desarrolladores desde 2015, te permite emitir facturas electrónicas de forma simple y confiable, ya que se encuentra respaldada por un estudio contable que nos mantiene actualizados con las últimas normativas y VOUSYS, una empresa de desarrollo de software, que hace que tu desarrollo sufra la menor cantidad de cambios.&#x20;
+TusFacturasAPP es la API líder en Argentina para integrar facturación electrónica AFIP/ARCA en tu software. Elegida por desarrolladores desde 2015, te permite emitir facturas electrónicas de forma simple y confiable.
+
+#### 🏆 ¿Por qué confiar en TusFacturasAPP?
+
+**Respaldo profesional dual:** Contamos con el soporte de un estudio contable especializado que nos mantiene actualizados con las últimas normativas fiscales de Argentina, y [VOUSYS](https://www.vousys.com/), una empresa de desarrollo de software con +20 años de experiencia, que garantiza que tu integración requiera la menor cantidad de cambios posibles.
+
+**Esto significa para tu desarrollo:**
+
+* ✅ **Cumplimiento normativo garantizado** - Siempre al día con AFIP/ARCA
+* ✅ **Estabilidad en la integración** - Menos cambios en tu código
+* ✅ **Soporte técnico especializado** - Respaldado por profesionales contables y de desarrollo
+* ✅ **Actualizaciones transparentes** - Te notificamos cualquier cambio con anticipación
 
 ### 🎯 Comenzá en 3 Pasos
 
