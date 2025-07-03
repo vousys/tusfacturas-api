@@ -2,59 +2,119 @@
 description: >-
   Integra la facturación electrónica AFIP fácil y rápido con nuestra API.
   ¡Confiable desde 2015! Elegida por todos los desarrolladores.
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # 📗 Documentación API Facturación AFIP/ARCA
 
 <figure><img src="../.gitbook/assets/157.webp" alt="TusFacturasAPP API Factura Electronica AFIP. SDK AFIP"><figcaption></figcaption></figure>
 
-Nuestra [API de facturación electrónica AFIP/ARCA](https://www.tusfacturas.app/api-factura-electronica-afip.html) te permite integrar la[ facturación electrónica AFIP/ARCA ](https://www.tusfacturas.app/factura-electronica-afip.html)directamente en tu plataforma, eliminando la necesidad de lidiar con los complejos webservices de AFIP/ARCA.  TusFacturasAPP es la solución SaaS ideal para tu negocio.
+### 🚀 API ARCA para Desarrolladores
 
-### ¿Cómo empezar con la API de facturación electrónica de TusFacturasAPP?
+Nuestra **API Factura electronica AFIP/ARCA** elimina la complejidad de los webservices AFIP/ARCA. Desarrollada específicamente para desarrolladores que buscan **automatización facturación** confiable y escalable.
 
-Integrar facturación electrónica en tu sistema nunca fue tan fácil.\
-Sigue nuestra [**guía paso a paso sobre cómo empezar**](../como-empiezo/) para **crear una cuenta gratuita**, generar tus credenciales y comenzar a **emitir comprobantes electrónicos válidos ante AFIP/ARCA** desde tu software.
+#### 🔧 Integración Simplificada
 
-#### 🚀 Integra rápidamente la facturación electrónica en tu software
+La **API de ARCA** más fácil de integrar. Documentación completa con ejemplos JSON para desarrolladores que necesitan emitir [factura electrónica AFIP/ARCA](https://www.tusfacturas.app/factura-electronica-afip.html) desde su [sistema de gestión](https://www.tusfacturas.app/como-integrar-mi-software-de-facturacion-con-afip.html), ERP o software.
 
-Con la **API de facturación electrónica de TusFacturasAPP**, podés conectar tu sistema a AFIP de manera ágil, segura y cumpliendo todas las normativas fiscales argentinas.
+#### ⚡ Procesamiento Rápido
 
-**✅ Características destacadas:**
+Automatización facturación instantánea o asíncrona. Elige el método que mejor se adapte a tu arquitectura.
 
-* **Conexión rápida y segura** para emitir facturas electrónicas válidas ante **AFIP/ARCA**.
-* **Automatiza la emisión de comprobantes**: facturas, notas de crédito, recibos y más, [directamente desde tu sistema de gestión](https://www.tusfacturas.app/como-integrar-mi-software-de-facturacion-con-afip.html), ERP o software a medida.
-* **Documentación técnica completa** con ejemplos en formato JSON.
-* **100% en regla con ARCA**: mantenemos la API actualizada con las últimas disposiciones fiscales, gracias al respaldo de un equipo contable-impositivo especializado.
+#### ☁️ SaaS de facturación confiable
 
-> 💡 Empezá hoy mismo con nuestra API y simplificá la emisión de comprobantes electrónicos para tus clientes o tu empresa.
-
-### Nuestras opciones de API para facturación electrónica AFIP/ARCA:&#x20;
-
-* **Emisión individual o por lotes**: Selecciona la modalidad que mejor se adapte a tu volumen de facturación.
-* **Procesamiento instantáneo o asincrónico**: Obtene respuestas inmediatas o gestiona tu flujo de trabajo con colas de procesamiento. T**e recomendamos** utilizar siempre que sea posible, los **métodos de facturación asincrónicos**, ya que los instantáneos dependen de cómo funcionen los servicios de AFIP/ARCA en el momento de la emisión.
+Nuestro **SaaS facturación AFIP** garantiza el cumplimiento normativo actualizado&#x20;
 
 
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>En éste método envías un solo request para ser procesado y  obtenes la respuesta mediante un <a href="webhooks-notificaciones.md">webhook</a> (no dependes del estado de los servicios de facturación de AFIP/ARCA). Conoce más sobre la <a href="api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md">facturación electrónica individual  asincrónica</a></td><td><strong>Endpoint</strong>: </td><td>https://www.tusfacturas.app/app/api/v2/<mark style="color:purple;">facturacion/nuevo_encola</mark></td><td><a href="../.gitbook/assets/metodo-asinc-individual.webp">metodo-asinc-individual.webp</a></td><td><a href="api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md">api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md</a></td></tr><tr><td>Utilizando éste método envías un  request  y obtenes la respuesta al instante, sujeto al estado de los servicios AFIP/ARCA. Conoce más sobre la <a href="api-factura-electronica-afip-facturacion-nuevo-comprobante.md">facturación electrónica individual e instantánea</a></td><td><p>Endpoint: </p><p>https://www.tusfacturas.app/app/api/v2/<mark style="color:purple;">facturacion/nuevo</mark></p></td><td></td><td><a href="../.gitbook/assets/metodo-instantaneo-individual.webp">metodo-instantaneo-individual.webp</a></td><td><a href="api-factura-electronica-afip-facturacion-nuevo-comprobante.md">api-factura-electronica-afip-facturacion-nuevo-comprobante.md</a></td></tr><tr><td>Con éste método envías una cierta cantidad de requests para ser procesados y obtenes la respuesta al instante . Sujeto al estado de los servicios AFIP/ARCA. Conoce más sobre la <a href="api-factura-electronica-afip-api-facturacion-por-lotes.md#facturacioninstantaneaporlotes">facturación electrónica en lotes instantánea</a></td><td><p></p><p>Endpoint:</p></td><td>https://www.tusfacturas.app/app/api/v2/<mark style="color:purple;">facturacion/lotes</mark></td><td><a href="../.gitbook/assets/metodo-instantaneo-lote.webp">metodo-instantaneo-lote.webp</a></td><td></td></tr></tbody></table>
+### **🏆 ¿Por qué confiar en TusFacturasAPP?**
 
-### 📌 ¿Qué comprobantes podes facturar con la API para AFIP/ARCA?
+**Respaldo profesional dual:** Contamos con el soporte de un estudio contable especializado que nos mantiene actualizados con las últimas normativas fiscales de Argentina, y [VOUSYS](https://www.vousys.com/), una empresa de desarrollo de software con +20 años de experiencia, que garantiza que tu integración requiera la menor cantidad de cambios posibles.
 
-Nuestro servicio API de [facturación electrónica AFIP/ARCA ](https://www.tusfacturas.app/factura-electronica-afip.html)te permite enviar a facturar  comprobantes de tipo [A](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md),[B](../web-services-afip-api-arca/api-factura-electronica-afip-factura-b.md),[C](../web-services-afip-api-arca/api-factura-electronica-afip-factura-c.md),[E](../web-services-afip-api-arca/api-factura-electronica-afip-factura-e.md), M y comprobantes de tipo "[Factura de crédito MiPyme](api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md)",  ya sean facturas, notas de crédito, notas de débito y hasta facturas-recibos.  ¿No sabes qué tipo de comprobante debes emitir? Consulta [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md)
+
+
+### 💻 Endpoints para la API ARCA
+
+Integra nuestra **API Factura electronica AFIP/ARCA** con estos endpoints optimizados para desarrolladores:
+
+#### 🔄 Facturación Asíncrona (Recomendado)
+
+{% hint style="info" %}
+<mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo_encola`</mark>
+{% endhint %}
+
+Ideal para la **automatización de tu facturación** en producción. Respuesta vía webhook. No dependes del estado de los servicios de AFIP. Conoce más de la [facturación asincrónica.](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
+
+#### ⚡ Facturación Instantánea
+
+{% hint style="info" %}
+&#x20;<mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo`</mark>
+{% endhint %}
+
+Respuesta inmediata para integraciones con la **API ARCA**. Dependes del estado de los servicios de facturación de ARCA. Conoce más de la [facturación instantánea.](api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
+
+#### 📦 Facturación por Lotes
+
+{% hint style="info" %}
+<mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`lotes`</mark>
+{% endhint %}
+
+Procesa múltiples comprobantes simultáneamente para alta performance. Conoce más de la [facturación por lotes](api-factura-electronica-afip-api-facturacion-por-lotes.md)
+
+
+
+### 📋 Tipos de Comprobantes Soportados
+
+Nuestra **API Factura electronica AFIP/ARCA** soporta todos los tipos de comprobantes:
+
+* Facturas A, B, C, E, M
+* Notas de crédito y débito
+* Facturas de crédito MiPyme (FCE)
+* Facturas-recibos
+* Remitos
+* Pedidos
+* Presupuestos\
+
+
+### 🛠️ Características Técnicas para Desarrolladores
+
+{% stepper %}
+{% step %}
+#### REST API
+
+Arquitectura REST estándar con formato JSON. Fácil integración en cualquier lenguaje.
+{% endstep %}
+
+{% step %}
+#### Webhooks
+
+Notificaciones automáticas para la **automatización de tu facturación** sin polling.
+{% endstep %}
+
+{% step %}
+#### Documentación Completa
+
+Guías paso a paso y [ejemplos de código](ejemplos-de-comprobantes.md) para desarrolladores.
+{% endstep %}
+{% endstepper %}
+
+### 📚 Empezar con la API
+
+Comienza a usar nuestra **API ARCA** en minutos:
+
+1. [Crea tu cuenta gratuita](../consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md) de desarrollador
+2. Genera tus credenciales API
+3. Integra los endpoints en tu software. Accede a la [referencia de la API](referencia-api-afip-arca.md)
+4. Emití tu primer factura electrónica
+
+### 🎯 ¿Por qué elegir nuestro SaaS Facturación AFIP?
+
+* ✅ **API ARCA** confiable desde 2015
+* ✅ Soporte técnico especializado para desarrolladores
+* ✅ Cumplimiento normativo automático
+* ✅ Escalabilidad para cualquier volumen
+* ✅ Integración en minutos, no días
 
 🧐 ¿Tenés alguna duda del servicio? checkea las [FAQs](../faqs-or-preguntas-frecuentes.md), y si no encontrás lo que buscabas, contactanos por los [canales de atención](https://www.tusfacturas.app/contacto.html) que tenemos disponibles.
-
-
 
 ### Explora la API AFIP/ARCA
 

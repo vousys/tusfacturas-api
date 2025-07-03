@@ -53,7 +53,9 @@ Antes de iniciar el proceso de migración, asegurate de haber completado:
 
 ### 🛠️ Proceso de Migración Paso a Paso
 
-#### ✅ Paso 1: Preparación de la Cuenta
+{% stepper %}
+{% step %}
+#### Paso 1: Preparación de la Cuenta
 
 **Si reutilizás tu cuenta de desarrollo:**
 
@@ -76,8 +78,10 @@ Antes de iniciar el proceso de migración, asegurate de haber completado:
    * Punto de venta oficial asignado por AFIP/ARCA
    * Razón social correcta
    * Domicilio fiscal
+{% endstep %}
 
-#### ✅ Paso 2: Contratación del Plan API de Producción
+{% step %}
+#### Paso 2: Contratación del Plan API de Producción
 
 1. **Accedé a la plataforma web**
 2. **Navegá a:** Menú > Mi cuenta > Cambiar o renovar mi plan actual
@@ -91,8 +95,10 @@ Antes de iniciar el proceso de migración, asegurate de haber completado:
 * La nueva suscripción comenzará cuando expire la actual
 * Para activar inmediatamente, contactá a [soporte@tusfacturas.app](mailto:soporte@tusfacturas.app)
 * O [activá manualmente](https://ayuda.tusfacturas.app/es/articles/10354324-me-quede-sin-cupo-como-activo-mi-nueva-suscripcion-a-partir-de-hoy) desde **Menú > Mi cuenta > Mis suscripciones**
+{% endstep %}
 
-#### ✅ Paso 4: Vinculación con AFIP/ARCA
+{% step %}
+#### Paso 3: Vincula tu cuenta de TusFacturasAPP con AFIP/ARCA
 
 **📧 Certificado Digital**
 
@@ -103,8 +109,10 @@ Después de crear el punto de venta, recibirás un **email con un certificado** 
 1. **Seguí nuestro** [**instructivo interactivo de enlace ARCA**](https://www.tusfacturas.app/enlace-arca.html)
 2. **Completá la vinculación** siguiendo cada paso cuidadosamente
 3. **Verificá que la conexión** se haya establecido correctamente
+{% endstep %}
 
-#### ✅ Paso 5: Sincronización de Numeración
+{% step %}
+#### Paso 4: Sincronización de Numeración
 
 Una vez completada la vinculación con AFIP/ARCA:
 
@@ -113,6 +121,8 @@ Una vez completada la vinculación con AFIP/ARCA:
 3. **Verificá que la numeración** coincida con la oficial de AFIP/ARCA
 
 ⚠️ **Importante:** Este proceso se ejecuta **una única vez** y asegura que tu configuración esté lista para producción.
+{% endstep %}
+{% endstepper %}
 
 ***
 
