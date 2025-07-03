@@ -7,45 +7,49 @@ description: >-
 
 # 🎯 ¿Cómo empiezo?
 
-## Aprende cómo integrar tu software con la API de facturación electrónica AFIP/ARCA
+### ¿Qué es TusFacturasAPP?
 
-[Crea una cuenta](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) en nuestra plataforma y se activará tu plan API DEV para emitir hasta 1.500 facturas electrónicos no válidas legalmente durante 1 mes, completamente gratis (exclusivo para nuevas cuentas y por única vez).
+TusFacturasAPP es la API líder en Argentina para integrar facturación electrónica AFIP/ARCA en tu software. Elegida por desarrolladores desde 2015, te permite emitir facturas electrónicas de forma simple y confiable, ya que se encuentra respaldada por un estudio contable que nos mantiene actualizados con las últimas normativas y VOUSYS, una empresa de desarrollo de software, que hace que tu desarrollo sufra la menor cantidad de cambios.&#x20;
 
-### **Explora las funcionalidades de la API y comproba su eficacia en tu proceso de facturación.**
+### 🎯 Comenzá en 3 Pasos
 
-Una vez finalizado el período de prueba, podrás seleccionar la [suscripción API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html) que mejor se adapte a tus necesidades.
+#### Paso 1: Creá tu Cuenta de Desarrollo
 
-**Beneficios del plan API DEV:**
+1. [**Registrate gratis**](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) en nuestra plataforma
+2. Se activará automáticamente tu **Plan API DEV** por 30 días
+3. Podrás emitir hasta **1.500 comprobantes de prueba** sin costo
 
-* Emisión gratuita de 1.500 comprobantes electrónicos no válidos legalmente durante 1 mes.
-* Ideal para probar la integración y familiarizarte con la API.
-* Sin compromisos ni cargos adicionales.
+#### Paso 2: Configurá tus Credenciales
 
-**Comenza tu prueba gratuita hoy mismo y simplifica tu facturación electrónica con la API para AFIP/ARCA.**
+1. Ingresá a **Menú > Mi espacio de trabajo > Puntos de venta**
+2. Configurá tu CUIT personal con un punto de venta de prueba (ej: 679)
+3. Obtendrás tus credenciales API necesarias para la integración
 
-[<mark style="color:purple;">**Crear mi cuenta ahora**</mark>](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html)&#x20;
+#### Paso 3: Realizá tu Primera Integración
+
+Enviá una petición POST a nuestra API y comenzá a facturar inmediatamente.
 
 
 
-### Mientras estes en desarrollo:
+### 🔧 Entorno de Desarrollo
 
-Para garantizar el cumplimiento legal, nuestra plataforma no dispone de un entorno de pruebas convencional. Esto significa que no podrás enlazar tu CUIT real con AFIP/ARCA durante las pruebas. Esto evita inconvenientes con el fisco, ya que los comprobantes emitidos en AFIP/ARCA son inmodificables e irrevocables.
+#### ¿Por qué no hay un entorno de pruebas tradicional?
 
-Sin embargo, durante las pruebas, la respuesta que recibirás de nuestra API simulará el comportamiento en producción, los campos CAE y vencimiento del CAE se retornarán vacíos y no se aplicarán las validaciones adicionales de AFIP/ARCA.
+Para garantizar el cumplimiento legal, no disponemos de un entorno de pruebas convencional. Esto significa que:
 
-### **¿Cómo obtener las credenciales API?**
+* ✅ **No podrás enlazar tu CUIT real** con AFIP/ARCA durante las pruebas
+* ✅ **Evitás inconvenientes fiscales** ya que los comprobantes AFIP son inmodificables
+* ✅ **La respuesta simula el comportamiento de producción** con campos CAE vacíos
+* ✅ **No se aplican validaciones adicionales** de AFIP/ARCA durante las pruebas
 
-ingresa a  **Menú > Mi espacio de trabajo > Puntos de venta**  y configura tu CUIT personal con un punto de venta (PDV) irreal (Ej: 679) . Una vez hecho ésto podrás obtener las credenciales necesarias para utilizar la API.
+### Beneficios del Plan API DEV
 
-**Recorda:**
-
-* Las pruebas no afectan tu información fiscal real ya que el plan API DEV no te permite enlazar con AFIP/ARCA.
-* Los comprobantes emitidos durante las pruebas bajo el plan API DEV son ficticios y no se registran en AFIP/ARCA.
-* La respuesta de la API durante las pruebas simula el comportamiento en producción.
-
-**¡Comenza a probar la integración con la API para AFIP**/ARCA **hoy mismo y prepárate para una facturación electrónica sin complicaciones!**
-
-[<mark style="color:purple;">**Crear mi cuenta ahora**</mark>](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html)&#x20;
+| Característica    | Detalle                                                                                                                                     |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Duración**      | 30 días completamente gratis                                                                                                                |
+| **Comprobantes**  | Hasta 1.500 facturas de prueba                                                                                                              |
+| **Validez legal** | No válidos legalmente (solo para desarrollo)                                                                                                |
+| **Soporte**       | Ilimitado desde nuestro centro de ayuda y contamos con atención personalizada por e-mail o chat, de lunes a viernes de 09 a 15:30hs (UTC-3) |
 
 {% hint style="info" %}
 Te sugerimos revisar nuestros [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html) para estar al tanto de lo que podes realizar en nuestra plataforma y leer las [FAQs](../faqs-or-preguntas-frecuentes.md) para despejar tus dudas.
@@ -53,11 +57,19 @@ Te sugerimos revisar nuestros [términos y condiciones](https://www.tusfacturas.
 En caso que necesites asistencia, podes [contactarnos](https://www.tusfacturas.app/contacto.html).
 {% endhint %}
 
+### 💻 Tu Primera Factura  en 2 Minutos
 
+#### ¿Es realmente fácil crear una venta con TusFacturasAPP?
 
-### ¿Es realmente fácil crear una venta con TusFacturasAPP?
+¡Si! Crear una venta con TusFacturasAPP es tan fácil como enviar el siguiente JSON para crear una factura B
 
-¡Si! Crear una venta con TusFacturasAPP es tan fácil como enviar el siguiente JSON para crear una factura B, a la URL:  `https://www.tusfacturas.app/app/api/v2/facturacion/nuevo`&#x20;
+#### Endpoint de Facturación
+
+```
+POST https://www.tusfacturas.app/app/api/v2/facturacion/nuevo
+```
+
+&#x20;JSON:
 
 ```json
 {
@@ -289,11 +301,83 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-### Ejemplos de como facturar una venta según su tipo / letra
+### Algunos ejemplos de como facturar una venta según su tipo / letra
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td> Ir a <a href="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md">Ejemplos factura A</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-a.webp">ejemplo-factura-a.webp</a></td><td><a href="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md">api-factura-electronica-afip-factura-a-nota-de-debito-a-nota-de-credito-a.md</a></td></tr><tr><td>Ir a <a href="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md">Ejemplos factura B</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-b (1).webp">ejemplo-factura-b (1).webp</a></td><td><a href="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md">api-factura-electronica-afip-factura-nota-de-debito-b-nota-de-credito-bb.md</a></td></tr><tr><td>Ir a <a href="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md">Ejemplos  factura C</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-c.webp">ejemplo-factura-c.webp</a></td><td><a href="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md">api-factura-electronica-afip-factura-c-nota-de-debito-c-nota-de-credito-c.md</a></td></tr><tr><td>Ir a <a href="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-electronica-afip-exportacion.md">Ejemplos factura E</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-e.webp">ejemplo-factura-e.webp</a></td><td><a href="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-electronica-afip-exportacion.md">api-factura-electronica-afip-factura-electronica-afip-exportacion.md</a></td></tr><tr><td>Ir a <a href="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md">Ejemplos MiPyme</a></td><td></td><td></td><td><a href="../.gitbook/assets/ejemplo-factura-mipyme.webp">ejemplo-factura-mipyme.webp</a></td><td><a href="../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md">api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md</a></td></tr></tbody></table>
 
-Conoce en detalle la [API de Facturación AFIP/ARCA.](../api-factura-electronica-afip-facturacion-ventas/)
+
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md" %}
+[api-factura-electronica-afip-factura-a.md](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md)
+{% endcontent-ref %}
+
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-b.md" %}
+[api-factura-electronica-afip-factura-b.md](../web-services-afip-api-arca/api-factura-electronica-afip-factura-b.md)
+{% endcontent-ref %}
+
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-c.md" %}
+[api-factura-electronica-afip-factura-c.md](../web-services-afip-api-arca/api-factura-electronica-afip-factura-c.md)
+{% endcontent-ref %}
+
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-e.md" %}
+[api-factura-electronica-afip-factura-e.md](../web-services-afip-api-arca/api-factura-electronica-afip-factura-e.md)
+{% endcontent-ref %}
+
+{% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-mypyme-a.md" %}
+[api-factura-electronica-afip-factura-mypyme-a.md](../web-services-afip-api-arca/api-factura-electronica-afip-factura-mypyme-a.md)
+{% endcontent-ref %}
+
+📋 Tipos de Comprobantes Disponibles
+
+La API soporta todos los tipos de comprobantes AFIP:
+
+* **Facturas A, B, C, M**
+* **Notas de Crédito y Débito**
+* **Recibos**
+* **Comprobantes de Exportación**
+* **Facturación Electrónica MiPyME (FCE)**
+
+[Ver documentación completa de tipos de comprobantes](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md)
+
+***
+
+### 🔄 Después del Período de Prueba
+
+Una vez finalizado tu período de prueba de 30 días, podrás:
+
+1. **Seleccionar el plan que mejor se adapte** a tu volumen de facturación
+2. **Migrar a producción** con validaciones AFIP/ARCA completas
+3. **Emitir facturas con validez legal** vinculadas a tu CUIT real
+
+[Ver planes y tarifas disponibles](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
+
+***
+
+### 🚨 Puntos Importantes a Recordar
+
+* ⚠️ **Las pruebas NO afectan tu información fiscal real** (plan API DEV no se conecta con AFIP/ARCA)
+* ⚠️ **Los comprobantes de prueba son ficticios** y no se registran en AFIP/ARCA
+* ⚠️ **La respuesta durante las pruebas simula el comportamiento de producción**
+* ⚠️ **Los campos CAE y vencimiento CAE se devuelven vacíos** en modo desarrollo
+
+***
+
+### 🆘 ¿Necesitás Ayuda?
+
+#### Soporte Técnico
+
+Si tenés dudas sobre la integración o necesitás asistencia:
+
+* **📧 Email**: api@tusfacturas.app
+* **💬 Chat en vivo**: Disponible en [www.tusfacturas.app](https://www.tusfacturas.app)&#x20;
+
+
+
+***
+
+### 🏁 ¡Comenzá Ahora!
+
+¿Qué esperás para comenzar a emitir facturas electrónicas ARCA con nuestra API?
+
+[**🚀 Crear cuenta gratuita ahora**](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html)[.](../api-factura-electronica-afip-facturacion-ventas/)
 
 ### ¿Aún te quedan dudas? ¡Contactános!
 
