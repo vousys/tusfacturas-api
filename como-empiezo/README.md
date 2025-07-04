@@ -24,23 +24,29 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 
 ### 🎯 Comenzá en 3 Pasos
 
-#### Paso 1: Creá tu Cuenta de Desarrollo
+{% stepper %}
+{% step %}
+#### Creá tu Cuenta de Desarrollo
 
-1. [**Registrate gratis**](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) en nuestra plataforma
-2. Se activará automáticamente tu **Plan API DEV** por 30 días
-3. Podrás emitir hasta **1.500 comprobantes de prueba** sin costo
+* [**Registrate gratis**](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) en nuestra plataforma
+* Se activará automáticamente tu **Plan API DEV** por 30 días
+* Podrás emitir hasta **1.500 comprobantes de prueba** sin costo
+{% endstep %}
 
-#### Paso 2: Configurá tus Credenciales
+{% step %}
+#### Configurá tus Credenciales
 
-1. Ingresá a **Menú > Mi espacio de trabajo > Puntos de venta**
-2. Configurá tu CUIT personal con un punto de venta de prueba (ej: 679)
-3. Obtendrás tus credenciales API necesarias para la integración
+* Ingresá a **Menú > Mi espacio de trabajo > Puntos de venta**
+* Configurá tu CUIT personal con un punto de venta de prueba (ej: 679)
+* Obtendrás tus credenciales API necesarias para la integración
+{% endstep %}
 
-#### Paso 3: Realizá tu Primera Integración
+{% step %}
+#### Realizá tu Primera Integración
 
 Enviá una petición POST a nuestra API y comenzá a facturar inmediatamente.
-
-
+{% endstep %}
+{% endstepper %}
 
 ### 🔧 Entorno de Desarrollo
 
