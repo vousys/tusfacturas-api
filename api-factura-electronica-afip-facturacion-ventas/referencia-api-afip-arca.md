@@ -552,7 +552,7 @@ Los comprobantes asociados son requeridos a la hora de emitir una Nota de crédi
 
 ### Estructura del bloque: "tributos"&#x20;
 
-Cuando requieras enviar percepciones de IVA o percepciones de Ingresos Brutos (IIBB) deberás enviar dentro del bloque "comprobante", un array con la siguiente estructura:&#x20;
+Cuando debas enviar percepciones de IVA o Ingresos Brutos (IIBB), incluye un array con la siguiente estructura dentro del bloque "comprobante". El límite es de 7 percepciones por comprobante.
 
 Ejemplo:&#x20;
 

@@ -28,7 +28,7 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 {% step %}
 #### Creá tu Cuenta de Desarrollo
 
-* [**Registrate gratis**](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html) en nuestra plataforma
+* [**Registrate gratis desde aquí**](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html)&#x20;
 * Se activará automáticamente tu **Plan API DEV** por 30 días
 * Podrás emitir hasta **1.500 comprobantes de prueba** sin costo
 {% endstep %}
@@ -38,13 +38,13 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 
 * Ingresá a **Menú > Mi espacio de trabajo > Puntos de venta**
 * Configurá tu CUIT personal con un punto de venta de prueba (ej: 679)
-* Obtendrás tus credenciales API necesarias para la integración
+* Una vez creado el punto de venta, tendrás disponible las credenciales API. En caso de no visualizarlas, significa que tu plan actual no corresponde a API DEV. [Contactános](https://tusfacturas.app/contacto.html) y lo resolvemos.
 {% endstep %}
 
 {% step %}
 #### Realizá tu Primera Integración
 
-Enviá una petición POST a nuestra API y comenzá a facturar inmediatamente.
+[Enviá una petición POST](../web-services-afip-api-arca/) a nuestra API y comenzá a facturar inmediatamente.
 {% endstep %}
 {% endstepper %}
 
@@ -61,12 +61,14 @@ Para garantizar el cumplimiento legal, no disponemos de un entorno de pruebas co
 
 ### Beneficios del Plan API DEV
 
-| Característica    | Detalle                                                                                                                                     |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Duración**      | 30 días completamente gratis                                                                                                                |
-| **Comprobantes**  | Hasta 1.500 facturas de prueba                                                                                                              |
-| **Validez legal** | No válidos legalmente (solo para desarrollo)                                                                                                |
-| **Soporte**       | Ilimitado desde nuestro centro de ayuda y contamos con atención personalizada por e-mail o chat, de lunes a viernes de 09 a 15:30hs (UTC-3) |
+| Característica    | Detalle                                                                                                                                        |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Duración**      | 30 días completamente gratis                                                                                                                   |
+| **Comprobantes**  | Hasta 1.500 facturas de prueba desde 2 puntos venta                                                                                            |
+| **Validez legal** | No válidos legalmente (solo para desarrollo)                                                                                                   |
+| **Soporte**       | **Ilimitado** desde nuestro centro de ayuda. Contamos con atención personalizada por e-mail o chat, de lunes a viernes de 09 a 15:30hs (GMT-3) |
+
+
 
 {% hint style="info" %}
 Te sugerimos revisar nuestros [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html) para estar al tanto de lo que podes realizar en nuestra plataforma y leer las [FAQs](../faqs-or-preguntas-frecuentes.md) para despejar tus dudas.
