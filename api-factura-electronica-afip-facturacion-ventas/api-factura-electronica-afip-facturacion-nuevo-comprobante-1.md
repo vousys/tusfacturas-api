@@ -19,12 +19,30 @@ Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo/) . Una vez c
 
 ### 🛠 ¿Cómo funciona la modalidad Asincrónica de Facturación ARCA/AFIP?
 
-Tu sistema envía el request con el comprobante a TusFacturasAPP. El comprobante se coloca en una cola de procesamiento.\
-A medida que se procesa, recibirás [webhooks](webhooks-notificaciones.md) con eventos:\
+{% stepper %}
+{% step %}
+### Envias un request a TusFacturasAPP
+
+Tu plataforma debe enviar el [`request`](referencia-api-afip-arca.md) del comprobante a TusFacturasAPP sin incluir el número de factura. Si es válido, el comprobante se añadirá a una cola de procesamiento.
+{% endstep %}
+
+{% step %}
+### Se genera la factura, nota de débito o nota de crédito
+
+Si el comprobante se pudo facturar, generamos el PDF y le enviamos a tu cliente un email para que descargue el comprobante.
+{% endstep %}
+
+{% step %}
+### TusFacturasAPP te envia un hook
+
+A medida que se procesan las ventas, TusFacturasAPP te envía [webhooks](webhooks-notificaciones.md) con diferentes eventos:\
 \- encolado\
 \- emitido\
-\- error\
+\- error
+
 Una vez recibido el hook, debes consultar la información del comprobante con una [consulta avanzada por external\_reference](../web-services-afip-api-arca/consulta-avanzada-por-external-reference.md).
+{% endstep %}
+{% endstepper %}
 
 ### ⚠️ Consideraciones clave
 
