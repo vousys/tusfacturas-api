@@ -80,7 +80,7 @@ Este ejemplo te servirá como referencia para construir tus requests correctamen
       "documento_tipo":"DNI",
       "documento_nro":"1292963535",
       "razon_social":"Pirulo",
-      "nombre_fantasia":
+      "nombre_fantasia": "",
       "email":"test@test.com",
       "domicilio":"Av Sta Fe 123",
       "provincia":"2",
