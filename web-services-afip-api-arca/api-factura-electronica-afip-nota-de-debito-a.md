@@ -38,7 +38,7 @@ Nota de débito A emitida en la modalidad "[Asincrónica](../api-factura-electro
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
-      "envia_por_mail":"S",
+      "envia_por_mail":"N",
       "condicion_pago":"211",
       "condicion_iva":"RI",
        "condicion_iva_operacion":"RI",

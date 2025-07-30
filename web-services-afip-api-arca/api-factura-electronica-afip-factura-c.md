@@ -38,7 +38,7 @@ Factura C emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
       "reclama_deuda": "N",
-      "envia_por_mail":"S",
+      "envia_por_mail":"N",
       "condicion_pago":"211",
       "condicion_iva":"RI",
        "condicion_iva_operacion":"RI"

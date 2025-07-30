@@ -29,7 +29,7 @@ Nota de crédito MiPyme A emitida en la modalidad "[Instantánea](../api-factura
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"26",
-      "envia_por_mail":"S",
+      "envia_por_mail":"N",
       "condicion_pago":"211",
       "condicion_iva":"RI",
        "condicion_iva_operacion":"RI"

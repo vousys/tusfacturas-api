@@ -30,7 +30,7 @@ Nota de débito E emitida en la modalidad "[Instantánea](../api-factura-electro
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"26",
-      "envia_por_mail":"S",
+      "envia_por_mail":"N",
       "condicion_pago":"211",
       "condicion_iva":"CDEX"
    },

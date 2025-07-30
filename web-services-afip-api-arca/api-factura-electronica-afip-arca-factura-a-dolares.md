@@ -37,7 +37,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
-      "envia_por_mail":"S",
+      "envia_por_mail":"N",
       "condicion_pago":"211",
       "reclama_deuda": "N",
       "condicion_iva":"RI",
