@@ -171,10 +171,7 @@ Factura E emitida en la modalidad "[Instantánea](../api-factura-electronica-afi
               "tipo_exportacion"    : "2",
               "pais_comprobante_id" : "123",
               "forma_pago_leyenda"  : "Payment via paypal 30 days ",
-              "cliente_pais_cuit"   : "50000000016",
-              "incoterms_tipo_id"   : "",
-              "incoterms_nro"       : " ",
-              "permisos"    : []
+              "cliente_pais_cuit"   : "50000000016"
                
       }
    }
