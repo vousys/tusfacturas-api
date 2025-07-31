@@ -316,7 +316,8 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 
 **MICROSITIOS**
 
-* Las URL de los micrositios solo te serán devueltas con datos, si los mismos se encuentran habilitados en tu cuenta. Para configurarlo, ingresá a nuestra plataforma web, menú > mi espacio de trabajo > mis micrositios. Conocé más de los micrositios [desde aquí](https://www.tusfacturas.app/).
+* Las URL de los micrositios solo te serán devueltas con datos, si los mismos se encuentran habilitados en tu cuenta.  Éstas URL no cambian y le permiten a tu cliente acceder a un portal neutro a descargar la factura y/o a consultar su historial de facturas emitidas.
+* Para configurar los micrositios, ingresa a nuestra plataforma web, menú > mi espacio de trabajo > mis micrositios. Conocé más de los micrositios [desde aquí](https://www.tusfacturas.app/).
 
 
 
