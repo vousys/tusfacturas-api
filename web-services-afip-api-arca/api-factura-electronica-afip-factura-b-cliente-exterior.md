@@ -44,7 +44,7 @@ Cuando los servicios prestados  producen efectos en Argentina,  se facturan como
       "documento_nro":"123213210",
       "reclama_deuda": "N",
       "razon_social":"Cliente del exterior",
-      "provincia":"2",
+      "provincia":"26",
       "email":"email@dominio.com",
       "envia_por_mail":"N",
        "rg5329": "N"
