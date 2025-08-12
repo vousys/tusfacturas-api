@@ -26,9 +26,75 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 
 ### ¿Cúando emitir una factura B a un cliente del exterior?
 
-Cuando los servicios prestados  producen efectos en Argentina,  se facturan como operaciones locales en Argentina, mediante la emisión de facturas tipo "A" o "B", según corresponda. **Siempre corroborá esta información con tu estudio contable previa emisión ya que puede no corresponder para tu negocio.**
+Cuando los servicios prestados  producen efectos en Argentina,  se facturan como operaciones locales en Argentina, mediante la emisión de facturas tipo "A" o "B", según corresponda.  **Siempre corroborá esta información con tu estudio contable previa emisión ya que puede no corresponder para tu negocio.**
 
-### JSON para generar una Factura B a cliente del exterior en AFIP/ARCA
+### JSON para generar una Factura B a un cliente del exterior en AFIP/ARCA con la condición frente al iva "Consumidor final"
+
+```json
+{
+   "apitoken":"xxxx",
+   "usertoken":"xxxx",
+   "apikey":"xxxx",
+   "cliente":{
+      "documento_tipo":"PASAPORTE",
+      "condicion_iva":"CF",
+       "condicion_iva_operacion":"CF",
+      "domicilio":"No especifica",
+      "condicion_pago":"201",
+      "documento_nro":"122321310",
+      "reclama_deuda": "N",
+      "razon_social":"CLaudia Hans",
+      "provincia":"26",
+      "email":"email@dominio.com",
+      "envia_por_mail":"N",
+       "rg5329": "N"
+   },
+   "comprobante":{
+      "rubro":"Sevicios web",
+      "tipo":"FACTURA B",
+      "numero":2134,
+      "bonificacion":0,
+      "operacion":"V",
+      "moneda":"PES",
+      "cotizacion": 1,
+      "detalle":[
+         {
+            "cantidad":1,
+            "afecta_stock":"S",
+            "actualiza_precio":"S",
+            "bonificacion_porcentaje":0,
+            "producto":{
+               "descripcion":"Hosting pagina web ",
+               "codigo":37,
+               "lista_precios":"standard",
+               "leyenda":"",
+               "unidad_bulto":1,
+               "alicuota":21,
+               "actualiza_precio":"S",
+               "rg5329": "N",
+               "precio_unitario_sin_iva":114.88
+            }
+         }
+      ],
+      "fecha":"28/03/2018",
+      "vencimiento":"26/03/2023",
+      "rubro_grupo_contable":"Sevicios",
+      "total":139.0,
+      "pagos": {
+		"formas_pago": [
+		   {"descripcion" : "MercadoPago", "importe" : 139} 			
+			   ],
+		"total": 139
+		},
+      "cotizacion":1,
+      "moneda":"PES",
+      "punto_venta":3,
+      "tributos":[]
+   }
+}
+```
+
+### JSON para generar una Factura B a cliente del exterior en AFIP/ARCA con la condición frente al iva "Cliente del exterior"
 
 ```json
 {
