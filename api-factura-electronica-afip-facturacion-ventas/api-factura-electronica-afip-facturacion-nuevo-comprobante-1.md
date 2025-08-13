@@ -63,7 +63,7 @@ Los tiempos varían según:\
 
 #### Capacidades máximas:
 
-* Hasta 144.000 comprobantes A por día por punto de venta.
+* Hasta 100.000 comprobantes A por día por punto de venta.
 * Hasta 144.000 comprobantes B por día por punto de venta.
 * Hasta   14.000 de otros tipos por día por punto de venta.
 
