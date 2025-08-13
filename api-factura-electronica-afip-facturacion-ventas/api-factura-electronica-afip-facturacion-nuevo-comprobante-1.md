@@ -58,14 +58,14 @@ Una vez recibido el hook, debes consultar la información del comprobante con un
 
 Los tiempos varían según:\
 \- Volumen de ventas programadas\
-\- Estado de los servicios AFIP/ARCA\
+\- Estado de los servicios de facturación de ARCA\
 \- Tipo de comprobante a emitir
 
 #### Capacidades máximas:
 
-* Hasta 100.000 comprobantes A por día por punto de venta.
-* Hasta 144.000 comprobantes B por día por punto de venta.
-* Hasta   14.000 de otros tipos por día por punto de venta.
+* Hasta 100.000 comprobantes A por día, por punto de venta.
+* Hasta 150.000 comprobantes B por día, por punto de venta.
+* Hasta   14.000 de otros tipos por día, por punto de venta.
 
 Para acelerar la facturación podrías distribuir la carga de facturación en múltiples puntos de venta. Sin embargo, no podemos garantizar que todo el volumen se emita en un solo día, por lo que recomendamos enviar la facturación con antelación para evitar inconvenientes.
 
