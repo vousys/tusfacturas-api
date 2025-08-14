@@ -7,15 +7,17 @@ icon: code
 
 # Regenerar el archivo PDF
 
+### ¿Necesitas la URL del PDF actualizado?
+
+Cuando necesites consultar la URL de una venta debes hacer una [consulta de comprobantes avanzada por external reference](consulta-avanzada-por-external-reference.md).
+
+### **¿Cuándo regenerar el PDF?**&#x20;
+
 La funcionalidad de regeneración de PDF permite **recrear un comprobante existente** utilizando el diseño y los datos actualmente configurados en tu cuenta de TusFacturasAPP. Esto es particularmente útil cuando has realizado cambios en la configuración visual de tus puntos de venta.
 
-**¿Cuándo utilizarla?** Esta operación es ideal si has actualizado:
+### **¿Cómo regenerar el PDF?**&#x20;
 
-* El logo de tu empresa.
-* La información de cabecera o pie de tus comprobantes.
-* Cualquier otro elemento visual que afecte la presentación del PDF.
-
-**¿Cómo realizar la Regeneración?** Puedes llevar a cabo esta operación de dos maneras:
+Puedes llevar a cabo esta operación de dos maneras:
 
 * **Vía API:** Utilizando el método específico de regeneración de PDF, enviando la solicitud directamente a nuestro endpoint API.
 * **Desde la Plataforma Web:**
