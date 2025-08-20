@@ -12,14 +12,16 @@ La **automatización de la facturación con herramientas no-code** permite crear
 
 > 🤝 Queremos que aproveches la posibilidad de usar Zapier, pero <mark style="color:purple;">**es importante que sepas que desde TusFacturasApp no podemos ofrecer soporte ni solucionar inconvenientes relacionados con estas plataformas externas.**</mark>
 
-### ¿Cómo automatizas tu facturación con la integración a zapier?
+### Beneficios de automatizar la facturación con la integración a Zapier
 
 * Generar facturas en AFIP/ARCA automáticamente cuando recibas pagos
 * Conectar múltiples plataformas (Stripe, QuickBooks, etc.)
 * Emitir facturas electrónicas AFIP/ARCA sin intervención manual
 * Ahorrar horas de trabajo administrativo
 
-#### Paso 1: Configurar tu Cuenta en TusFacturas.app
+### ¿Cómo integrar Zapier con TusFacturasAPP?
+
+**Configurar tu Cuenta en TusFacturas.app**
 
 Para comenzar a automatizar la **facturación electronica AFIP/ARCA con herramientas no-code**, cómo lo es zapier, primero necesitas configurar tu cuenta en TusFacturasAPP:
 
@@ -27,9 +29,7 @@ Para comenzar a automatizar la **facturación electronica AFIP/ARCA con herramie
 2. Sigue los pasos detallados en la sección **"**[**Cómo Empiezo**](../como-empiezo/)**"** de la documentación
 3. Guarda tus credenciales de acceso - las necesitarás para integrar en Zapier
 
-#### Paso 2: Crear tu Cuenta en Zapier
-
-**2.1 Registrate en Zapier**
+**Crea tu Cuenta en Zapier**
 
 1. Accede a [zapier.com](https://zapier.com/)&#x20;
 2. Hace clic en "Sign Up" y crea tu cuenta gratuita
@@ -37,7 +37,7 @@ Para comenzar a automatizar la **facturación electronica AFIP/ARCA con herramie
 
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-**2.2 Entende los Conceptos Básicos de zapier**
+**Entende los Conceptos Básicos de zapier**
 
 * **Zap**: Tu automatización completa
 * **Trigger**: Lo que inicia la automatización (ej: nuevo pago)
@@ -47,13 +47,11 @@ Para comenzar a automatizar la **facturación electronica AFIP/ARCA con herramie
 
 ### Automatizar la facturación AFIP/ARCA con un webhook desde otra plataforma externa hacia TusFacturasAPP
 
-A continuación te presentamos ejemplos de cómo automatizar tu facturación AFIP/ARCA y otra plataforma externa, usando herramientas no-code como Zapier.&#x20;
+A continuación te presentamos ejemplos de cómo automatizar tu facturación AFIP/ARCA desde una plataforma externa, usando herramientas no-code como Zapier.&#x20;
 
 > 🤝 Queremos que aproveches la posibilidad de usar Zapier, pero <mark style="color:purple;">**es importante que sepas que desde TusFacturasApp no podemos ofrecer soporte ni solucionar inconvenientes relacionados con estas plataformas externas.**</mark>
 
-**Configura el Zap**
-
-Si tu plataforma externa puede enviar webhooks:
+**Configura el Zap**:
 
 1. **App**: "Webhooks by Zapier"
 2. **Trigger**: "Catch Hook"
