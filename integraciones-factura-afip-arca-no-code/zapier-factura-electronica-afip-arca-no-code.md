@@ -29,7 +29,7 @@ Para comenzar a automatizar la **facturación electronica AFIP/ARCA con herramie
 
 #### Paso 2: Crear tu Cuenta en Zapier
 
-#### 2.1 Registrate en Zapier
+**2.1 Registrate en Zapier**
 
 1. Accede a [zapier.com](https://zapier.com/)&#x20;
 2. Hace clic en "Sign Up" y crea tu cuenta gratuita
@@ -37,7 +37,7 @@ Para comenzar a automatizar la **facturación electronica AFIP/ARCA con herramie
 
 <figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-#### 2.2 Entende los Conceptos Básicos de zapier
+**2.2 Entende los Conceptos Básicos de zapier**
 
 * **Zap**: Tu automatización completa
 * **Trigger**: Lo que inicia la automatización (ej: nuevo pago)
@@ -45,15 +45,13 @@ Para comenzar a automatizar la **facturación electronica AFIP/ARCA con herramie
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-
-
 ### Automatizar la facturación AFIP/ARCA con un webhook desde otra plataforma externa hacia TusFacturasAPP
 
 A continuación te presentamos ejemplos de cómo automatizar tu facturación AFIP/ARCA y otra plataforma externa, usando herramientas no-code como Zapier.&#x20;
 
 > 🤝 Queremos que aproveches la posibilidad de usar Zapier, pero <mark style="color:purple;">**es importante que sepas que desde TusFacturasApp no podemos ofrecer soporte ni solucionar inconvenientes relacionados con estas plataformas externas.**</mark>
 
-#### Paso 1:  Configurar Webhook como Trigger
+**Configura el Zap**
 
 Si tu plataforma externa puede enviar webhooks:
 
@@ -80,7 +78,7 @@ Si tu plataforma externa puede enviar webhooks:
 
 Mapeo de datos desde tu plataforma.
 
-&#x20;En caso que desees mapear los datos desde otra plataforma podrias enviar datos como:
+&#x20;Para enviar datos desde otra plataforma, podes usar una solicitud a nuestra API que contenga la siguiente información:
 
 ```json
 {
@@ -93,7 +91,7 @@ Mapeo de datos desde tu plataforma.
 }
 ```
 
-#### y mapearlos de acuerdo a lo requerido en TusFacturasApp
+y mapearlos de acuerdo a lo requerido en TusFacturasApp
 
 ```json
 {
@@ -124,7 +122,7 @@ Mapeo de datos desde tu plataforma.
 }
 ```
 
-### Probar y Activar tu Zap
+**Probar y Activar tu Zap**
 
 Luego de configurados los ejemplos, debes probar la Integración que realizaste:
 
@@ -133,7 +131,7 @@ Luego de configurados los ejemplos, debes probar la Integración que realizaste:
 3. Verifica que aparezca "Success" o status 200
 4. Revisa en tu panel de  TusFacturas.app (Menú > Facturación > Mis ventas) que se haya creado la factura
 
-#### Revisar Respuesta de la API
+**Revisar Respuesta de la API**
 
 Una respuesta exitosa de TusFacturasAPP se ve así:
 
@@ -164,7 +162,7 @@ Una respuesta exitosa de TusFacturasAPP se ve así:
 }
 ```
 
-#### Activa el Zap
+**Activa el Zap**
 
 1. Dale un nombre a tu Zap, como por ejemplo: "Integracion a TusFacturasAPP - Facturación Automática"
 2. Hace clic en **"Turn on Zap"**
@@ -278,13 +276,13 @@ Sugerimos revisar la documentación oficial de [QuickBooks](https://quickbooks.i
 
 > 🤝 Queremos que aproveches la posibilidad de usar Zapier, pero <mark style="color:purple;">**es importante que sepas que desde TusFacturasApp no podemos ofrecer soporte ni solucionar inconvenientes relacionados con estas plataformas externas.**</mark>
 
-#### Paso 1:  Crea un Trigger para una nueva Factura en QuickBooks
+**Crea un Trigger para una nueva Factura en QuickBooks**
 
 1. **App**: QuickBooks Online
 2. **Trigger**: "New Invoice"
 3. **Configuración**: Conecta tu cuenta de QuickBooks
 
-#### Paso 2:  Action - Crear Factura en TusFacturas.app
+**Configura el Action: Crear Factura en TusFacturas.app**
 
 Usa la misma configuración de Webhook pero con estos mapeos de acuerdo a la documentación de QuickBooks
 
@@ -339,8 +337,6 @@ Sugerimos revisar la documentación oficial de Woocomerce y [Zapier](https://zap
 
 * **Trigger**: Teachable "New Sale"
 * **Mapear**: Course price, student info, enrollment date
-
-
 
 ### Control de errores
 
