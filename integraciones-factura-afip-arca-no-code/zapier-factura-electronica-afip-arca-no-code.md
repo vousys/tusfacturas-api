@@ -6,7 +6,7 @@ description: >-
 
 # Zapier: Factura electrónica AFIP/ARCA No-Code
 
-### Cómo Generar Facturas Electrónicas AFIP/ARCA con Zapier: Guía Paso a Paso
+### Cómo Generar Facturas Electrónicas AFIP/ARCA con Zapier&#x20;
 
 La **automatización de la facturación con herramientas no-code** permite crear **factura electronica AFIP/ARCA desde zapier** sin escribir código. Aprende a integrar TusFacturas.app con Zapier para automatizar completamente tu facturación electrónica.
 
@@ -206,7 +206,7 @@ Sugerimos revisar la documentación oficial de [Stripe](https://stripe.partners/
 
 #### Paso 3: Configurar la Llamada a la API
 
-A continuación te mostramos como usar la [facturación instantánea e individual en ARCa](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md).
+A continuación te mostramos como usar la [facturación instantánea e individual en ARCA](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md).
 
 **URL**:
 
