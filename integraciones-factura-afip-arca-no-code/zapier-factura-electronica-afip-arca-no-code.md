@@ -174,6 +174,8 @@ Una respuesta exitosa de TusFacturasAPP se ve así:
 
 A continuación te presentamos ejemplos de cómo automatizar tu facturación AFIP/ARCA  dsde Stripe usando herramientas no-code como Zapier.&#x20;
 
+Sugerimos revisar la documentación oficial de [Stripe](https://stripe.partners/directory/zapier) y [Zapier](https://zapier.com/apps/stripe/integrations) antes de comenzar.
+
 > 🤝 Queremos que aproveches la posibilidad de usar Zapier, pero <mark style="color:purple;">**es importante que sepas que desde TusFacturasApp no podemos ofrecer soporte ni solucionar inconvenientes relacionados con estas plataformas externas.**</mark>
 
 #### Paso 1: Configurar el Trigger - Nuevo Pago en Stripe
@@ -272,6 +274,8 @@ Para automatizar la creación de facturas, puedes copiar un ejemplo de los model
 
 A continuación te presentamos ejemplos de cómo automatizar tu facturación AFIP/ARCA y Quickbooks, usando herramientas no-code como Zapier.&#x20;
 
+Sugerimos revisar la documentación oficial de [QuickBooks](https://quickbooks.intuit.com/app/apps/appdetails/zapier/en-us/) y [Zapier](https://zapier.com/apps/quickbooks/integrations) antes de comenzar.
+
 > 🤝 Queremos que aproveches la posibilidad de usar Zapier, pero <mark style="color:purple;">**es importante que sepas que desde TusFacturasApp no podemos ofrecer soporte ni solucionar inconvenientes relacionados con estas plataformas externas.**</mark>
 
 #### Paso 1:  Crea un Trigger para una nueva Factura en QuickBooks
@@ -320,6 +324,8 @@ Usa la misma configuración de Webhook pero con estos mapeos de acuerdo a la doc
 > 🤝 Queremos que aproveches la posibilidad de usar Zapier, pero <mark style="color:purple;">**es importante que sepas que desde TusFacturasApp no podemos ofrecer soporte ni solucionar inconvenientes relacionados con estas plataformas externas.**</mark>
 
 #### Conectá tu e-commerce con WooCommerce a Zapier y emiti factura electrónica AFIP/ARCA desde TusFacturasAPP
+
+Sugerimos revisar la documentación oficial de Woocomerce y [Zapier](https://zapier.com/apps/woocommerce/integrations) antes de comenzar.
 
 * **Trigger**: WooCommerce "New Order"
 * **Mapear**: Order total, customer data, line items
