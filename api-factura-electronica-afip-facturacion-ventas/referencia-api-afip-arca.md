@@ -249,13 +249,13 @@ Explorá los distintos escenarios de facturación que podés implementar, adapta
 
 #### ✅ Tipos de comprobantes disponibles:
 
-* **Factura A / B / C / E / M**
-* **Nota de Crédito A / B / C / E**
-* **Nota de Débito A / B / C / E**
+* **Factura A / B / C / E / M / MiPyme**
+* **Nota de Crédito A / B / C / E / MiPyme**&#x20;
+* **Nota de Débito A / B / C / E / MiPyme**
 * **Presupuestos**
 * **Pedidos**
 * **Remitos**
-* **Recibos**
+* **Recibos C**
 
 Cada ejemplo incluye los campos requeridos y opcionales, además de los valores específicos para cada categoría. Esto te permitirá implementar la facturación electrónica de forma ágil y segura desde cualquier sistema.
 
@@ -335,7 +335,15 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 **OBSERVACIONES**
 
 * El campo de "observaciones" contiene las observaciones  enviadas por AFIP/ARCA sobre esa operación, dado que los comprobantes pueden ser aprobados pero aún así, observados. Sugerimos almacenar ésta información y revisarla.
+
+
+
+**RATE LIMIT**
+
+* El error 429 indica que tu aplicación está excediendo el límite de solicitudes permitido por segundo. Esto se debe a las reglas de seguridad de nuestra plataforma, diseñadas para proteger la estabilidad del sistema.
 {% endhint %}
+
+
 
 ### 🔁 ¿Qué devuelve la API ARCA de TusFacturasAPP?
 
@@ -366,8 +374,8 @@ Desde estas secciones podrás **visualizar, filtrar, descargar o anular** los co
 Además del panel de TusFacturasAPP  y cuando estes en producción, también podés corroborar que un comprobante fue autorizado por **AFIP/ARCA** de forma oficial:
 
 1. Ingresando a la web de AFIP con tu **CUIT y clave fiscal**.
-2. Usando el servicio “**Mis Comprobantes**” en el menú de servicios habilitados.
-3. Utilizando la herramienta oficial de [**Constatación de Comprobantes Electrónicos**](https://servicioscf.afip.gob.ar/publico/comprobantes/cae.aspx), donde podés ingresar el CUIT del emisor, tipo y número de comprobante.
+2. Usando el servicio “**Mis Comprobantes**” en el menú de servicios habilitados. Contempla que ARCA pone a disposición la información al día anterior.
+3. Utilizando la herramienta oficial de [**Constatación de Comprobantes Electrónicos**](https://servicioscf.afip.gob.ar/publico/comprobantes/cae.aspx), donde podes ingresar el CUIT del emisor, tipo y número de comprobante. Conoce más desde la guía de [Constatación de comprobantes en AFIP.](https://ayuda.tusfacturas.app/es/articles/10844438-constatacion-de-comprobantes-en-afip)
 
 > 🧩 Esta verificación es útil para control fiscal o para mostrarle al cliente final que su comprobante fue validado correctamente.
 >
