@@ -86,7 +86,7 @@ Mediante éste método podrás consultar la info que AFIP/ARCA tiene almacenada 
 | ---------------- | --------------------------------------------------------------- |
 | `documento_nro`  | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
 
-#### Ejemplo del JSON de respuesta
+#### Ejemplo del JSON de respuesta exitosa
 
 ```
 {
@@ -113,6 +113,45 @@ Mediante éste método podrás consultar la info que AFIP/ARCA tiene almacenada 
          }
    ],
    "errores":  [  "" ] 
+}
+```
+
+#### Ejemplo de respuesta cuando ARCA  bloquea la constancia de inscripción:
+
+```
+{
+	"error": "S",
+	"errores": [
+		[
+			"El servicio de consulta de CUIT en AFIP retorna el siguiente error:   - La CUIT registra pendiente la constitución del domicilio fiscal electrónico de acuerdo a lo normado en la RG 4280/18 AFIP.,La CUIT registra una o más actividades económicas que no pertenecen al nomenclador de actividades vigente F. 883 RG AFIP3587/13."
+		]
+	]
+}
+```
+
+#### Ejemplo de respuesta, cuando el CUIT no tiene impuestos asociados en ARCA y no se puede determinar su condición fiscal
+
+```
+{
+	"error": "S",
+	"errores": [
+		"No se ha podido recuperar la condicion frente al IVA de este CUIT"
+	],
+	"razon_social": "CONSORCIO DE COPROPIETARIOS XXX",
+	"condicion_impositiva": "CONSUMIDOR FINAL",
+	"direccion": "XXXX 179",
+	"localidad": "LOMAS DE ZAMORA",
+	"codigopostal": "CP: 1832",
+	"provincia": "BUENOS AIRES",
+	"estado": "ACTIVO",
+	"actividad": [
+		{
+			"descripcion": "SERVICIOS DE CONSORCIOS DE EDIFICIOS",
+			"id": 949920,
+			"nomenclador": 883,
+			"periodo": 201311
+		}
+	]
 }
 ```
 
