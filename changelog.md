@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 27 de agosto de 2025
+
+Se agrega  el método para [consultar en la base APOC (facturas apócrifas) de ARCA](consultas-varias-a-servicios-afip-arca/api-factura-apocrifa-base-apoc.md).
+
 ### 14 de febrero de 2025
 
 Se agrega el bloque "[datos\_informativos](api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-de-datos_informativos)" dentro de las ventas, por la entrada en vigencia el 15/04/2025 de la RG5616/2024 de ARCA.  Asimismo se agrega el campo "[condicion\_iva\_operacion](api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-bloque-cliente-y-proveedor)" dentro de los datos del cliente.

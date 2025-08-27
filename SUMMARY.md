@@ -81,7 +81,7 @@
 * [Consultas varias a servicios AFIP/ARCA](consultas-varias-a-servicios-afip-arca/README.md)
   * [Consultar las cotizaciones AFIP](consultas-varias-a-servicios-afip-arca/cotizacion-monedas-afip.md)
   * [Consultar datos de un CUIT, desde la constancia de inscripción](consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md)
-  * [Consultar base APOC de facturas apócrifas de ARCA](consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion-1.md)
+  * [Consultar base APOC de facturas apócrifas de ARCA](consultas-varias-a-servicios-afip-arca/api-factura-apocrifa-base-apoc.md)
 * [Consultas a padrones](consultas-a-padrones/README.md)
   * [Consultar las alícuotas, en el padrón ARBA sujetos recaudación](consultas-a-padrones/api-factura-electronica-afip-consulta-de-alicuotas-en-padron-arba-sujetos-recaudacion.md)
   * [Consultar las alícuotas, en padrón AGIP](consultas-a-padrones/api-factura-electronica-afip-consulta-de-alicuotas-en-padron-agip..md)

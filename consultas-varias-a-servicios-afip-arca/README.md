@@ -12,4 +12,4 @@ Aquí encontrarás diferentes servicios que puedes consultar, que son provistos 
 
 * [Consultar las cotizaciones del dólar y otras monedas extranjeras](cotizacion-monedas-afip.md).
 * [Consultar datos de un CUIT, desde la constancia de inscripción](api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md)
-* [Consultar base APOC de facturas apócrifas de ARCA](api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion-1.md)
+* [Consultar base APOC de facturas apócrifas de ARCA](api-factura-apocrifa-base-apoc.md)
