@@ -8,7 +8,7 @@ description: >-
 
 ## Consultar datos de un CUIT en base APOC
 
-Este endpoint permite consultar la base de datos APOC de ARCA para verificar si una factura está registrada como apócrifa o fraudulenta.
+Este endpoint permite [consultar la base de datos APOC de ARCA](https://ayuda.tusfacturas.app/es/articles/12097418-que-son-las-facturas-apocrifas-y-como-verificarlas) para verificar si una factura está registrada como apócrifa o fraudulenta.
 
 **Valida la autenticidad de facturas antes de procesarlas contablemente**, cumpliendo con las regulaciones fiscales argentinas y evitando la aceptación de comprobantes falsos que podrían generar observaciones de AFIP.
 
