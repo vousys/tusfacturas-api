@@ -326,6 +326,8 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 * **Aquellos comprobantes que hayan impactado en AFIP, no podrán ser eliminados. Sólo pueden ser anulados contablemente generando una** [**nota de crédito**](api-factura-electronica-afip-notas-credito-debito.md#que-es-una-nota-de-credito-nc-electronica)**.**
 * Ningún comprobante puede ser modificado una vez creado.
 
+
+
 **TEXTOS**
 
 * La información debe estar encodeada con UTF-8 para evitar errores.
@@ -338,12 +340,17 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 
 
 
+ERRORES
+
+* Revisa el código de estado HTTP: Confirma siempre que recibas una respuesta HTTP 200. Esto garantiza que tu solicitud llegó y fue procesada correctamente.
+* Valida el campo de error: Controla el campo `"error"` en la respuesta. Su valor será `"S"` si hubo un problema o `"N"` si la operación se realizó con éxito.
+
+
+
 **RATE LIMIT**
 
-* El error 429 indica que tu aplicación está excediendo el límite de solicitudes permitido por segundo. Esto se debe a las reglas de seguridad de nuestra plataforma, diseñadas para proteger la estabilidad del sistema.
+* El código de estado HTTP: 429 indica que tu aplicación está excediendo el límite de solicitudes permitido por segundo. Esto se debe a las reglas de seguridad de nuestra plataforma, diseñadas para proteger la estabilidad del sistema.
 {% endhint %}
-
-
 
 ### 🔁 ¿Qué devuelve la API ARCA de TusFacturasAPP?
 
