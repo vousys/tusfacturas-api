@@ -70,6 +70,7 @@ Cuando los servicios prestados  producen efectos en Argentina,  se facturan como
                "leyenda":"",
                "unidad_bulto":1,
                "alicuota":21,
+                "unidad_medida": 7,
                "actualiza_precio":"S",
                "rg5329": "N",
                "precio_unitario_sin_iva":114.88

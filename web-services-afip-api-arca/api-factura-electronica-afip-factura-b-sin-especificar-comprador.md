@@ -65,6 +65,7 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
                "lista_precios":"standard",
                "leyenda":"",
                "unidad_bulto":1,
+                "unidad_medida": 7,
                "alicuota":21,
                "actualiza_precio":"S",
                "rg5329": "N",

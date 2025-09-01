@@ -71,6 +71,7 @@ Nota de débito C emitida en la modalidad "[Asincrónica](../api-factura-electro
                "unidad_bulto":"1",
                "lista_precios":"Lista de precios API 3",
                "codigo":"16098",
+                "unidad_medida": 7,
                "precio_unitario_sin_iva":"100",
                "alicuota":"0"
             },

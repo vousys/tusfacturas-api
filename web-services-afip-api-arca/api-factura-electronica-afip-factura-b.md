@@ -73,6 +73,7 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
                "unidad_bulto":1,
                "alicuota":21,
                "actualiza_precio":"S",
+                "unidad_medida": 7,
                "rg5329": "N",
                "precio_unitario_sin_iva":114.88
             }

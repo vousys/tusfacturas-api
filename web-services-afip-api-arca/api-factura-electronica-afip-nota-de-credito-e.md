@@ -62,6 +62,7 @@ Nota de crédito E emitida en la modalidad "[Instantánea](../api-factura-electr
                "codigo":"16098",
                "precio_unitario_sin_iva":"100",
                "alicuota":"0",
+                "unidad_medida": 7,
                "rg5329":"N"
             },
             "leyenda":"Enviadas en cajas separadas"

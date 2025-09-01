@@ -59,6 +59,7 @@ Nota de crédito MiPyme A emitida en la modalidad "[Instantánea](../api-factura
             "producto":{
                "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
                "unidad_bulto":"1",
+                "unidad_medida": 7,
                "lista_precios":"Lista de precios API 3",
                "codigo":"16098",
                "precio_unitario_sin_iva":"100",

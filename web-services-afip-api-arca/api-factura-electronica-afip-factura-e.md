@@ -62,6 +62,7 @@ Factura E emitida en la modalidad "[Instantánea](../api-factura-electronica-afi
                "lista_precios":"Lista de precios API 3",
                "codigo":"16098",
                "precio_unitario_sin_iva":"100",
+                "unidad_medida": 7,
                "alicuota":"0",
                "rg5329":"N"
             },

@@ -68,6 +68,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
                "unidad_bulto":"1",
                "lista_precios":"Lista de precios API 3",
                "codigo":"16098",
+                "unidad_medida": 7,
                "precio_unitario_sin_iva":"100",
                "alicuota":"21",
                "rg5329":"N"

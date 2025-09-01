@@ -75,6 +75,7 @@ Nota de débito A emitida en la modalidad "[Asincrónica](../api-factura-electro
                "codigo":"16098",
                "precio_unitario_sin_iva":"100",
                "alicuota":"-1",
+                "unidad_medida": 7,
                "rg5329":"N"
             },
             "leyenda":""
