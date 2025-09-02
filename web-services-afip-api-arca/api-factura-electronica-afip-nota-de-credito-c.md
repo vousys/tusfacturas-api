@@ -220,7 +220,7 @@ puts response.read_body
 
 ### Parámetros para crear una Nota de crédito C&#x20;
 
-[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro.
+[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro, en especial el bloque de "[Comprobantes asociados](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md#como-emitir-notas-de-debito-credito-detallando-los-comprobantes-que-se-anulan)".
 
 ### Respuesta esperada
 
