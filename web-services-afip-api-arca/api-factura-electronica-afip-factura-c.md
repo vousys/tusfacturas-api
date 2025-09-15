@@ -73,6 +73,7 @@ Factura C emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
                "codigo":"16098",
                "precio_unitario_sin_iva":"100",
                 "unidad_medida": 7,
+                "actualiza_precio":"S",
                "alicuota":"0"
             },
             "leyenda":""

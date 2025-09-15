@@ -74,6 +74,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
                "precio_unitario_sin_iva":"100",
                "alicuota":"21",
                "unidad_medida": 7,
+               "actualiza_precio":"S",
                "rg5329":"N"
             },
             "leyenda":"Enviadas en cajas separadas"

@@ -63,7 +63,6 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
          {
             "cantidad":1,
             "afecta_stock":"S",
-            "actualiza_precio":"S",
             "bonificacion_porcentaje":0,
             "producto":{
                "descripcion":"Hosting pagina web ",
