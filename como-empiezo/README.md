@@ -320,9 +320,18 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
+### Espacios de trabajo y puntos de venta en TusFacturasAPP
+
+Antes de comenzar a programar, tómate un momento para familiarizarte con los siguientes artículos de ayuda, que cubren temas esenciales como el manejo de **Puntos de Venta**, la estructura de los **Espacios de Trabajo** y las consideraciones para la **gestión de múltiples clientes**.
+
+**Artículos de referencia:**
+
+* [Qué es un punto de venta](https://ayuda.tusfacturas.app/es/articles/10421730-que-es-un-punto-de-venta)
+* [Qué es un espacio de trabajo](https://app.gitbook.com/u/moL4BIMnO2SlXqOeMjlT1FpUmH63)
+* [Manejar múltiples puntos de venta en un mismo espacio de trabajo](https://ayuda.tusfacturas.app/es/articles/10533387-es-posible-manejar-multiples-puntos-de-venta-en-un-mismo-espacio-de-trabajo)
+* [Gestión de múltiples clientes: espacios de trabajo separados vs. único](https://ayuda.tusfacturas.app/es/articles/11839614-gestion-de-multiples-clientes-conviene-espacios-de-trabajo-separados-vs-unico)
+
 ### Algunos ejemplos de como facturar una venta según su tipo / letra
-
-
 
 {% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md" %}
 [api-factura-electronica-afip-factura-a.md](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md)
