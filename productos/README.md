@@ -11,6 +11,7 @@ description: >-
 * [Crear nuevos productos](administrar-productos.md) con rapidez y sencillez.
 * [Modificar](administrar-productos.md) fácilmente la información de productos existentes.
 * [Consultar ](consultar-productos.md)y obtener información detallada sobre cada producto.
+* [Listar](listar-productos.md) todos los productos
 * [Ingresar unidades](gestion-de-stock.md) al stock
 * [Quitar unidades](gestion-de-stock.md) del stock
 

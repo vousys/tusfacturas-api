@@ -77,6 +77,7 @@
 * [💎 Productos](productos/README.md)
   * [Administrar productos](productos/administrar-productos.md)
   * [Consultar productos](productos/consultar-productos.md)
+  * [Listar productos](productos/listar-productos.md)
   * [Gestión de stock](productos/gestion-de-stock.md)
 * [Consultas varias a servicios AFIP/ARCA](consultas-varias-a-servicios-afip-arca/README.md)
   * [Consultar las cotizaciones AFIP](consultas-varias-a-servicios-afip-arca/cotizacion-monedas-afip.md)
