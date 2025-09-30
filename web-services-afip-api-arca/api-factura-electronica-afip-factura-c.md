@@ -76,6 +76,8 @@ Factura C emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
                 "actualiza_precio":"S",
                "alicuota":"0"
             },
+            "afecta_stock": "S",
+            "bonificacion_porcentaje": 0,
             "leyenda":""
          },
          {

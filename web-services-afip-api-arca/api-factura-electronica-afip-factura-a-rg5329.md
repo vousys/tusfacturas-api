@@ -73,6 +73,8 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
                "unidad_medida":"7",
                "actualiza_precio":"S"
             },
+            "afecta_stock": "S",
+            "bonificacion_porcentaje": 0,
             "leyenda":""
          },
          {

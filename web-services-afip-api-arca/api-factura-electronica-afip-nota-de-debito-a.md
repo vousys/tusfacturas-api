@@ -78,6 +78,8 @@ Nota de débito A emitida en la modalidad "[Asincrónica](../api-factura-electro
                 "unidad_medida": 7,
                "rg5329":"N"
             },
+            "afecta_stock": "S",
+            "bonificacion_porcentaje": 0,
             "leyenda":""
          },
          {
@@ -91,6 +93,8 @@ Nota de débito A emitida en la modalidad "[Asincrónica](../api-factura-electro
                "alicuota":"21",
                "rg5329":"N"
             },
+            "afecta_stock": "N",
+            "bonificacion_porcentaje": 0,
             "leyenda":""
          }
       ],

@@ -66,6 +66,8 @@ Nota de crédito MiPyme A emitida en la modalidad "[Instantánea](../api-factura
                "alicuota":"0",
                "rg5329":"N"
             },
+            "afecta_stock": "S",
+            "bonificacion_porcentaje": 0,
             "leyenda":"Enviadas en cajas separadas"
          }
       ],

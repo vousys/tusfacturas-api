@@ -65,6 +65,8 @@ Nota de crédito E emitida en la modalidad "[Instantánea](../api-factura-electr
                 "unidad_medida": 7,
                "rg5329":"N"
             },
+            "afecta_stock": "S",
+            "bonificacion_porcentaje": 0,
             "leyenda":"Enviadas en cajas separadas"
          }
       ],

@@ -77,6 +77,8 @@ Nota de débito B emitida en la modalidad "[Asincrónica](../api-factura-electro
                 "unidad_medida": 7,
                "rg5329":"N"
             },
+            "afecta_stock": "S",
+            "bonificacion_porcentaje": 0,
             "leyenda":""
          },
          {

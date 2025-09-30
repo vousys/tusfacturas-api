@@ -75,6 +75,8 @@ Nota de débito C emitida en la modalidad "[Asincrónica](../api-factura-electro
                "precio_unitario_sin_iva":"100",
                "alicuota":"0"
             },
+            "afecta_stock": "S",
+            "bonificacion_porcentaje": 0,
             "leyenda":""
          },
          {

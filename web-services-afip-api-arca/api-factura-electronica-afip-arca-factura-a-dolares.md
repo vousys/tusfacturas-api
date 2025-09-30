@@ -73,6 +73,8 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
                "alicuota":"21",
                "rg5329":"N"
             },
+            "afecta_stock": "S",
+            "bonificacion_porcentaje": 0,
             "leyenda":"Enviadas en cajas separadas"
          }
       ],

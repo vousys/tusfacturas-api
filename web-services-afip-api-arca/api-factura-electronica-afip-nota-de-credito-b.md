@@ -75,6 +75,8 @@ Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electr
                "precio_unitario_sin_iva":"100",
                "alicuota":"-1"
             },
+            "afecta_stock": "S",
+            "bonificacion_porcentaje": 0,
             "leyenda":""
          },
          {
@@ -87,6 +89,8 @@ Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electr
                "precio_unitario_sin_iva":"10",
                "alicuota":"21"
             },
+            "afecta_stock": "N",
+            "bonificacion_porcentaje": 0,
             "leyenda":""
          }
       ],
