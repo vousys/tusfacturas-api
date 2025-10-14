@@ -350,6 +350,17 @@ ERRORES
 **RATE LIMIT**
 
 * El código de estado HTTP: 429 indica que tu aplicación está excediendo el límite de solicitudes permitido por segundo. Esto se debe a las reglas de seguridad de nuestra plataforma, diseñadas para proteger la estabilidad del sistema.
+
+
+
+**⚠️ IMPORTANTE - Consideraciones Legales:**
+
+En Argentina, todas las operaciones comerciales deben estar debidamente facturadas y declaradas ante AFIP/ARCA según lo establece la normativa vigente.\
+Mantener "doble contabilidad" o facturas no declaradas:\
+\- Constituye evasión fiscal (Ley 24.769)\
+\- Puede resultar en sanciones económicas significativas\
+\- Puede derivar en acciones penales\
+\- Pone en riesgo la continuidad de tu negocio
 {% endhint %}
 
 ### 🔁 ¿Qué devuelve la API ARCA de TusFacturasAPP?

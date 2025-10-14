@@ -181,6 +181,20 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 | PRESUPUESTO                                   | Solo habilitado en la modalidad "instantánea"            |
 | REMITO                                        | Solo habilitado en la modalidad "instantánea"            |
 
+{% hint style="danger" %}
+**IMPORTANTE - Consideraciones Legales:**
+
+En Argentina, todas las operaciones comerciales deben estar debidamente facturadas y declaradas ante AFIP/ARCA según lo establece la normativa vigente.\
+Mantener "doble contabilidad" o facturas no declaradas:\
+\- Constituye evasión fiscal (Ley 24.769)\
+\- Puede resultar en sanciones económicas significativas\
+\- Puede derivar en acciones penales\
+\- Pone en riesgo la continuidad de tu negocio\
+
+{% endhint %}
+
+
+
 ### Régimenes posibles para el bloque "RG\_Especiales"
 
 Consulta toda información disponible haciendo una petición a:&#x20;
