@@ -351,7 +351,9 @@ ERRORES
 
 * El código de estado HTTP: 429 indica que tu aplicación está excediendo el límite de solicitudes permitido por segundo. Esto se debe a las reglas de seguridad de nuestra plataforma, diseñadas para proteger la estabilidad del sistema.
 
+**NUMERACIÓN**
 
+* La numeración es correlativa por punto de venta + Tipo de comprobante.
 
 **⚠️ IMPORTANTE - Consideraciones Legales:**
 
