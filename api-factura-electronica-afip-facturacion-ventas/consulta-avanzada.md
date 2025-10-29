@@ -47,10 +47,15 @@ La siguiente estructura es genérica para cualquiera de los métodos de búsqued
 
 ### Ejemplo del JSON de respuesta:
 
-La respuesta contendrá un array de comprobantes (emitidos o pendientes de emisión). **Cada comprobante en este array sigue la misma estructura que la** [**consulta simple**](api-factura-electronica-afip-consulta-de-comprobantes.md#ejemplo-del-json-de-respuesta)**.**
+La respuesta contendrá un array de comprobantes (emitidos o pendientes de emisión).&#x20;
 
-```json
-{
+Cada comprobante devuelto en ese array, sigue la misma estructura que obtenes aca:
+
+{% content-ref url="api-factura-electronica-afip-consulta-de-comprobantes.md" %}
+[api-factura-electronica-afip-consulta-de-comprobantes.md](api-factura-electronica-afip-consulta-de-comprobantes.md)
+{% endcontent-ref %}
+
+<pre class="language-json"><code class="lang-json">{
    "rta":"OK",
    "error":"N",
    "total":3,
@@ -58,12 +63,12 @@ La respuesta contendrá un array de comprobantes (emitidos o pendientes de emisi
       
    ],
    "comprobantes":[
-      {comprobante_ver_json_respuesta_consulta_simple} ,
+      {<a data-footnote-ref href="#user-content-fn-1">comprobante_ver_json_respuesta_consulta_simple</a>} ,
       {comprobante_ver_json_respuesta_consulta_simple} ,
       {comprobante_ver_json_respuesta_consulta_simple}   
       ]
 }
-```
+</code></pre>
 
 #### Detalle de los campos de la respuesta
 
@@ -203,3 +208,5 @@ TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/soft
 ### ¿Aún te quedan dudas? ¡Contactános!
 
 En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
+
+[^1]: 
