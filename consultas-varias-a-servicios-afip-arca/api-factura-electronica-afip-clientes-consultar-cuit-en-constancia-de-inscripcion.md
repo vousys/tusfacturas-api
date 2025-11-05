@@ -56,6 +56,8 @@ Mediante éste método podrás consultar la info que AFIP/ARCA tiene almacenada 
             "periodo":"201906"
          }
    ],
+   "apoc_existe": "SI",
+    "apoc_info": "CUIT en base APOC desde el 22/07/2019.  (base APOC actualizada al 26/08/2024 18:42) -  Sugerimos consultar con su estudio contable inmediatamente.",
    "errores":  [  "" ] 
 }
 ​
@@ -112,6 +114,8 @@ Mediante éste método podrás consultar la info que AFIP/ARCA tiene almacenada 
             "periodo":"201906"
          }
    ],
+   "apoc_existe": "SI",
+   "apoc_info": "CUIT en base APOC desde el 22/07/2019.  (base APOC actualizada al 26/08/2025 18:42) -  Sugerimos consultar con su estudio contable inmediatamente.",
    "errores":  [  "" ] 
 }
 ```
@@ -151,7 +155,9 @@ Mediante éste método podrás consultar la info que AFIP/ARCA tiene almacenada 
 			"nomenclador": 883,
 			"periodo": 201311
 		}
-	]
+	],
+	"apoc_existe": "NO",
+	"apoc_info": ""
 }
 ```
 

@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 05 de noviembre de 2025
+
+Se agrega en los datos de la [consulta de CUIT](consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md), si se encontro información en la base APOC al día de la consulta.&#x20;
+
 ### 27 de agosto de 2025
 
 Se agrega  el método para [consultar en la base APOC (facturas apócrifas) de ARCA](consultas-varias-a-servicios-afip-arca/api-factura-apocrifa-base-apoc.md).
