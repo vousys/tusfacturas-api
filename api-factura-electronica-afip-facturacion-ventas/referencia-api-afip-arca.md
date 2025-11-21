@@ -484,43 +484,43 @@ La estructura **de la lista de conceptos** a enviar es la siguiente:
 comprobante: {
    .... 
    detalle: [{
-	"cantidad": "1.5",
-	"afecta_stock": "N",
-	"bonificacion_porcentaje": "0",
-	"incluir_lista_precios_venta": "N",
-	"producto": {
-		"descripcion": "HUEVOS",
-		"unidad_bulto": "30",
-		"lista_precios": "MAPPLETS",
-		"codigo": "MPH",
-		"precio_unitario_sin_iva": "50",
-		"impuestos_internos_alicuota": 0,
-		"alicuota": "10.5",
-		"unidad_medida": "7",
-		"actualiza_precio":"S",
-		"rg5329": "S"
-	},
-	"leyenda": ""
-       },
-       {
-	"cantidad": "3",
-	"afecta_stock": "S",
-	"bonificacion_porcentaje": "50",
-	"incluir_lista_precios_venta": "N",
-	"producto": {
-		"descripcion": "PALITOS SALADOS",
-		"unidad_bulto": "30",
-		"lista_precios": "SNACKS",
-		"codigo": "PLi",
-		"precio_unitario_sin_iva": "50",
-		"impuestos_internos_alicuota": 0,
-		"alicuota": "10.5",
-		"unidad_medida": "7",
-		"actualiza_precio":"S",
-		"rg5329": "N"
-	},
-	"leyenda": "En paquetes de 190gr"
-       }
+									"cantidad": "1.5",
+									"afecta_stock": "N",
+									"bonificacion_porcentaje": "0",
+									"incluir_lista_precios_venta": "N",
+									"leyenda": "",
+									"producto": {
+										"descripcion": "HUEVOS",
+										"unidad_bulto": "30",
+										"lista_precios": "MAPPLETS",
+										"codigo": "MPH",
+										"precio_unitario_sin_iva": "50",
+										"impuestos_internos_alicuota": 0,
+										"alicuota": "10.5",
+										"unidad_medida": "7",
+										"actualiza_precio":"S",
+										"rg5329": "S"
+									}
+       				},
+       				{
+								"cantidad": "3",
+								"afecta_stock": "S",
+								"bonificacion_porcentaje": "50",
+								"incluir_lista_precios_venta": "N",
+								"leyenda": "En paquetes de 190gr",
+								"producto": {
+										"descripcion": "PALITOS SALADOS",
+										"unidad_bulto": "30",
+										"lista_precios": "SNACKS",
+										"codigo": "PLi",
+										"precio_unitario_sin_iva": "50",
+										"impuestos_internos_alicuota": 0,
+										"alicuota": "10.5",
+										"unidad_medida": "7",
+										"actualiza_precio":"S",
+										"rg5329": "N"
+									}
+       				}
       ]
    } 
 ```
