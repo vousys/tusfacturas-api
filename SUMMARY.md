@@ -39,6 +39,7 @@
   * [Reenvío de Comprobantes Encolados con Error](web-services-afip-api-arca/reenvio-de-comprobantes-encolados-con-error.md)
   * [Reenvío de Comprobantes por Email a Clientes](web-services-afip-api-arca/api-factura-electronica-afip-or-reenviar-comprobante.md)
   * [Consultar el Tope AFIP/ARCA para Ventas a Consumidor Final](web-services-afip-api-arca/api-factura-electronica-afip-or-consulta-de-tope-para-ventas-a-consumidor-final.md)
+  * [Consultar cotización dolar ARCA](web-services-afip-api-arca/api-consultar-cotizacion-dolar-afip-arca-bna-ejemplo.md)
   * [Webhook](web-services-afip-api-arca/webhook.md)
 * [🐞 ¿Cómo puedo debugear?](como-puedo-debugear.md)
 * [🚀 ¿Cómo paso a producción?](como-paso-a-produccion.md)
