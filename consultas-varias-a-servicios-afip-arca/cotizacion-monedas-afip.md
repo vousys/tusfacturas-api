@@ -1,23 +1,23 @@
 ---
 description: >-
   Consulta desde la API de facturación electrónica de TusFacturas.app, las
-  diferentes cotizaciones de monedas brindadas por AFIP.
+  diferentes cotizaciones de monedas brindadas por ARCA.
 ---
 
-# Consultar las cotizaciones AFIP
+# Consultar las cotizaciones AFIP/ARCA
 
-Accede a cotizaciones de monedas AFIP en tiempo real con la API de facturación electrónica de TusFacturas.app
+Accede a cotizaciones de monedas ARCA en tiempo real con la API de facturación electrónica de TusFacturas.app
 
-Obtene información precisa y actualizada sobre el tipo de cambio oficial de AFIP para sus facturas electrónicas.
+Obtene información precisa y actualizada sobre el tipo de cambio oficial de ARCA para sus facturas electrónicas.
 
-### Beneficios de utilizar la API de facturación electrónica de TusFacturas.app para consultar cotizaciones de monedas AFIP:
+### Beneficios de utilizar la API de facturación electrónica de TusFacturas.app para consultar cotizaciones de monedas ARCA:
 
-* Información en tiempo real: Accedes a las últimas cotizaciones de monedas AFIP al momento de generar sus facturas electrónicas.&#x20;
-* Precisión garantizada: Obtenes datos oficiales directamente de AFIP, eliminando la necesidad de realizar cálculos manuales o utilizar fuentes no confiables.&#x20;
-* Eficiencia optimizada: Automatizas la consulta de cotizaciones de monedas AFIP, ahorrando tiempo y esfuerzo en su proceso de facturación electrónica.&#x20;
-* Integración perfecta: Integra la consulta de cotizaciones de monedas AFIP en tu sistema de gestión existente para una experiencia fluida y automatizada.&#x20;
+* Información en tiempo real: Accedes a las últimas cotizaciones de monedas AFIP/ARCA al momento de generar sus facturas electrónicas.&#x20;
+* Precisión garantizada: Obtenes datos oficiales directamente de AFIP/ARCA, eliminando la necesidad de realizar cálculos manuales o utilizar fuentes no confiables.&#x20;
+* Eficiencia optimizada: Automatizas la consulta de cotizaciones de monedas AFIP/ARCA, ahorrando tiempo y esfuerzo en su proceso de facturación electrónica.&#x20;
+* Integración perfecta: Integra la consulta de cotizaciones de monedas AFIP/ARCA en tu sistema de gestión existente para una experiencia fluida y automatizada.&#x20;
 
-TusFacturas.app es la solución ideal para empresas que buscan simplificar y optimizar su proceso de facturación electrónica, incluyendo la consulta precisa y automatizada de cotizaciones de monedas AFIP.
+TusFacturas.app es la solución ideal para empresas que buscan simplificar y optimizar su proceso de facturación electrónica, incluyendo la consulta precisa y automatizada de cotizaciones de monedas ARCA.
 
 Comenza a utilizar la API de facturación electrónica de TusFacturas.app hoy mismo y experimenta la diferencia.
 

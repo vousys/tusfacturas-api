@@ -29,43 +29,6 @@ Mediante éste método podrás consultar la info que AFIP/ARCA tiene almacenada 
 | usertoken | string | Tus credenciales de acceso. |
 | apitoken  | string | Tus credenciales de acceso. |
 
-{% tabs %}
-{% tab title="¿Qué te retorna la llamada? " %}
-{% code title="JSON" %}
-```
-{
-   "error":             "N",
-   "razon_social":      "LA RAZON SOCIAL O NOMBRE",
-   "condicion_impositiva": "RESPONSABLE INSCRIPTO",
-   "direccion": "la calle 123",
-   "localidad": "Castelar",
-   "codigopostal": "1712",
-   "estado":"ACTIVO",
-   "provincia": "BUENOS AIRES",
-   "actividad":[
-        {
-            "descripcion":"SERVICIOS DE CONSULTORES EN INFORM\u00c3\u0081TICA Y SUMINISTROS DE PROGRAMAS DE INFORM\u00c3\u0081TICA",
-            "id":"620100",
-            "nomenclador":"883",
-            "periodo":"201311"
-         },
-         {
-            "descripcion":"SERVICIOS EMPRESARIALES N.C.P.",
-            "id":"829900",
-            "nomenclador":"883",
-            "periodo":"201906"
-         }
-   ],
-   "apoc_existe": "SI",
-    "apoc_info": "CUIT en base APOC desde el 22/07/2019.  (base APOC actualizada al 26/08/2024 18:42) -  Sugerimos consultar con su estudio contable inmediatamente.",
-   "errores":  [  "" ] 
-}
-​
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
-
 #### Ejemplo del JSON a enviar <a href="#estructura-del-json-a-enviar" id="estructura-del-json-a-enviar"></a>
 
 {% code title="JSON" %}

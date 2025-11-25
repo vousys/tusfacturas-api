@@ -5,9 +5,7 @@ icon: code
 
 # Consultar cotización dolar ARCA
 
-Obtene información en tiempo real y precisa sobre el tipo de cambio oficial de ARCA para sus facturas electrónicas.
-
-Tene en cuenta que para la moneda "dólar", ARCA trabaja con la cotización oficial del Banco de la Nación Argentina, correspondiente al DOLAR DIVISAS y la cotización es actualizada a cada hora.
+Obtene información en tiempo real y precisa sobre el tipo de cambio oficial de ARCA para sus facturas electrónicas. Tene en cuenta que para la moneda "dólar", ARCA trabaja con la cotización oficial del Banco de la Nación Argentina, correspondiente al DOLAR DIVISAS y la cotización es actualizada a cada hora.
 
 ### Endpoint
 
