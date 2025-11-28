@@ -12,8 +12,7 @@ Si el monto de la factura que vas a emitir supera el tope impuesto por AFIP, es 
 
 ### **1) Controlar el response de las facturas comúnes con error | "requiere\_fec" = "S"**
 
-Si envías una factura A, B o C común y recibis error, verás que dentro del response existe un campo llamado: <mark style="color:purple;">**requiere\_fec**</mark>, si el contenido está en "SI", significa que debes emitirle a tu cliente una fc mipyme. En ese caso,  cambias el tipo de comprobante al mipyme que corresponda según la[ tabla de referencia](../parametros/tablas-de-referencia.md#tipos-de-comprobantes), y volves a enviar el request.[ Conocé más desde aquí](./#como-determinar-si-debo-emitir-un-comprobante-de-tipo-mipyme)\
-
+Si envías una factura A, B o C común y recibis error, verás que dentro del response existe un campo llamado: <mark style="color:purple;">**requiere\_fec**</mark>, si el contenido está en "SI", significa que debes emitirle a tu cliente una fc mipyme. En ese caso,  cambias el tipo de comprobante al mipyme que corresponda según la[ tabla de referencia](../parametros/tablas-de-referencia.md#tipos-de-comprobantes), y volves a enviar el request.[ Conocé más desde aquí](./#como-determinar-si-debo-emitir-un-comprobante-de-tipo-mipyme)<br>
 
 ### **2) Usar el servicio de consulta: "Éstoy obligado a emitir una FEC", antes de enviar a facturar**
 

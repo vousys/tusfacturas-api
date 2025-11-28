@@ -44,6 +44,8 @@ Una vez recibido el hook, debes consultar la información del comprobante con un
 {% endstep %}
 {% endstepper %}
 
+<figure><img src="../.gitbook/assets/api-tusfacturasapp-como-funciona-arca-webhook.png" alt="TusFacturasAPP: API Rest facturacion ARCA Webhook"><figcaption></figcaption></figure>
+
 ### ⚠️ Consideraciones clave
 
 * **La fecha que envíes en el comprobante, determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy.  Te sugerimos leer el apartado de "[FAQs sobre la cola de procesamiento](../faqs-or-ventas-asincronicas.md)".&#x20;

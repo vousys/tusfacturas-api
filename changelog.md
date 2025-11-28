@@ -284,8 +284,7 @@ Ajustes mandatorios requeridos por AFIP para las NC / ND. Éste cambio aplicará
 Para ésto se requiere que envien dentro del bloque "comprobante", un array con los diferentes comprobantes asociados, según estructura:
 
 `{"tipo_comprobante" : "FACTURA A", "punto_venta" : "145","numero" : 12313,"cuit": 111111111}`\
-\`Ya se encuentra actualizada la documentación.\
-
+\`Ya se encuentra actualizada la documentación.<br>
 
 ### &#x20;¿Aún te quedan dudas? ¡Contactános!
 

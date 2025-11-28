@@ -189,8 +189,7 @@ Mantener "doble contabilidad" o facturas no declaradas:\
 \- Constituye evasión fiscal (Ley 24.769)\
 \- Puede resultar en sanciones económicas significativas\
 \- Puede derivar en acciones penales\
-\- Pone en riesgo la continuidad de tu negocio\
-
+\- Pone en riesgo la continuidad de tu negocio<br>
 {% endhint %}
 
 

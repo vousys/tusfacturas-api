@@ -72,8 +72,7 @@ Nuestra **API Factura electronica AFIP/ARCA** soporta todos los tipos de comprob
 * Facturas-recibos
 * Remitos
 * Pedidos
-* Presupuestos\
-
+* Presupuestos<br>
 
 ### 🛠️ Características Técnicas para Desarrolladores
 
