@@ -117,7 +117,7 @@ Consulta toda la información disponible haciendo una petición a:&#x20;
 | 60 dias                          | 60                                   | 203            |
 | 90 dias                          | 90                                   | 204            |
 | Contado                          | 0                                    | 201            |
-| Cuenta corriente                 | 0                                    | 205            |
+| Cuenta corriente                 | 999                                  | 205            |
 | Transferencia Bancaria           | 0                                    | 210            |
 | Tarjeta de crédito               | 0                                    | 211            |
 | Tarjeta de Débito                | 0                                    | 212            |
