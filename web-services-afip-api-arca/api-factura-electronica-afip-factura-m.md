@@ -7,6 +7,12 @@ icon: code
 
 # Factura M
 
+### Transición ARCA de la factura M a la factura A con leyenda (a partir del 01/12/2025)
+
+A partir del 1 de diciembre de 2025, ARCA elimina administrativamente el comprobante "Factura M", que pasa a denominarse "Factura A con leyenda". Sin embargo, el código interno sigue siendo 0051.\
+Para emitir estos comprobantes: selecciona "Factura M" en la plataforma. El PDF generado mostrará correctamente "Factura A - Cod. 0051".\
+Podes ver el instructivo acá: https://ayuda.tusfacturas.app/es/articles/11560951-factura-m-con-leyenda
+
 ### Endpoints
 
 Factura A emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
