@@ -72,6 +72,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 							"codigo": "P101474",
 							"alicuota": 21,
 							"bonificacion": 0,
+							"unidad_bulto":1,
 							"impuestos_internos_alicuota": 0,
 							"precio_total": 1000
 						},
@@ -85,6 +86,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 							"precio_unitario_sin_iva": 1000,
 							"codigo": "P101430",
 							"alicuota": -1,
+							"unidad_bulto":1,
 							"bonificacion": 0,
 							"impuestos_internos_alicuota": 0,
 							"precio_total": 1000
@@ -98,6 +100,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 							"descripcion": "ALAMOS CAB/CHARDONNAY (NOGRAVADO)",
 							"precio_unitario_sin_iva": 1000,
 							"codigo": "P101439",
+							"unidad_bulto":1,
 							"alicuota": -2,
 							"bonificacion": 0,
 							"impuestos_internos_alicuota": 0,
@@ -109,9 +112,10 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 					{
 						"cantidad": 1,
 						"producto": {
-							"descripcion": "ANIMAL CABERNET",
+							"descripcion": "ANIMAL CABERNET", 				
 							"precio_unitario_sin_iva": 1000,
 							"codigo": "P101463",
+							"unidad_bulto":1,
 							"alicuota": 10.5,
 							"bonificacion": 0,
 							"impuestos_internos_alicuota": 0,
