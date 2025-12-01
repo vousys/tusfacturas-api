@@ -64,23 +64,62 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "rubro":"Alimentos",
       "rubro_grupo_contable":"Alimentos",
       "detalle":[
-         {
-            "cantidad":"1",
-            "producto":{
-               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
-               "unidad_bulto":"1",
-               "lista_precios":"Lista de precios API 3",
-               "codigo":"16098",
-               "precio_unitario_sin_iva":"100",
-               "alicuota":"21",
-               "unidad_medida": 7,
-               "actualiza_precio":"S",
-               "rg5329":"N"
-            },
-            "afecta_stock": "S",
-            "bonificacion_porcentaje": 0,
-            "leyenda":"Enviadas en cajas separadas"
-         }
+   				{
+						"cantidad": 1,
+						"producto": {
+							"descripcion": "PIEDRA NEGRA RESERVA MALBEC/CAB/CHARD/PINOT GRIS",
+							"precio_unitario": 1000,
+							"codigo": "P101474",
+							"alicuota": 21,
+							"bonificacion": 0,
+							"impuestos_internos_alicuota": 0,
+							"precio_total": 1000
+						},
+						"bonificacion_porcentaje": 0,
+						"leyenda": ""
+					},
+					{
+						"cantidad": 1,
+						"producto": {
+							"descripcion": "GRAN ENEMIGO (EXENTO)",
+							"precio_unitario": 1000,
+							"codigo": "P101430",
+							"alicuota": -1,
+							"bonificacion": 0,
+							"impuestos_internos_alicuota": 0,
+							"precio_total": 1000
+						},
+						"bonificacion_porcentaje": 0,
+						"leyenda": ""
+					},
+					{
+						"cantidad": 1,
+						"producto": {
+							"descripcion": "ALAMOS CAB/CHARDONNAY (NOGRAVADO)",
+							"precio_unitario": 1000,
+							"codigo": "P101439",
+							"alicuota": -2,
+							"bonificacion": 0,
+							"impuestos_internos_alicuota": 0,
+							"precio_total": 1000
+						},
+						"bonificacion_porcentaje": 0,
+						"leyenda": ""
+					},
+					{
+						"cantidad": 1,
+						"producto": {
+							"descripcion": "ANIMAL CABERNET",
+							"precio_unitario": 1000,
+							"codigo": "P101463",
+							"alicuota": 10.5,
+							"bonificacion": 0,
+							"impuestos_internos_alicuota": 0,
+							"precio_total": 1000
+						},
+						"bonificacion_porcentaje": 0,
+						"leyenda": ""
+					}
       ],
       "bonificacion":"0.00",
       "leyenda_gral":" ",
@@ -103,12 +142,13 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "impuestos_internos":"0",
       "impuestos_internos_base":"0",
       "impuestos_internos_alicuota":"0",
-      "total":"151",
+      "total":"4345",
       "pagos": {
 		"formas_pago": [
-		   {"descripcion" : "MercadoPago", "importe" : 151} 			
+		   {"descripcion" : "MercadoPago", "importe" : 4000},
+		   {"descripcion" : "Efectivo", "importe" : 345} 			
 			   ],
-		"total": 151
+		"total": 4345
 		} 
    }
 }
