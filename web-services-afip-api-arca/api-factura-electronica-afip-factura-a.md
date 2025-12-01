@@ -68,7 +68,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 						"cantidad": 1,
 						"producto": {
 							"descripcion": "PIEDRA NEGRA RESERVA MALBEC/CAB/CHARD/PINOT GRIS",
-							"precio_unitario": 1000,
+							"precio_unitario_sin_iva": 1000,
 							"codigo": "P101474",
 							"alicuota": 21,
 							"bonificacion": 0,
@@ -82,7 +82,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 						"cantidad": 1,
 						"producto": {
 							"descripcion": "GRAN ENEMIGO (EXENTO)",
-							"precio_unitario": 1000,
+							"precio_unitario_sin_iva": 1000,
 							"codigo": "P101430",
 							"alicuota": -1,
 							"bonificacion": 0,
@@ -96,7 +96,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 						"cantidad": 1,
 						"producto": {
 							"descripcion": "ALAMOS CAB/CHARDONNAY (NOGRAVADO)",
-							"precio_unitario": 1000,
+							"precio_unitario_sin_iva": 1000,
 							"codigo": "P101439",
 							"alicuota": -2,
 							"bonificacion": 0,
@@ -110,7 +110,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 						"cantidad": 1,
 						"producto": {
 							"descripcion": "ANIMAL CABERNET",
-							"precio_unitario": 1000,
+							"precio_unitario_sin_iva": 1000,
 							"codigo": "P101463",
 							"alicuota": 10.5,
 							"bonificacion": 0,
