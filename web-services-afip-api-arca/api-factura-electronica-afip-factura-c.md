@@ -25,6 +25,10 @@ Factura C emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 
 ### JSON para generar una Factura C en AFIP/ARCA
 
+{% hint style="info" %}
+Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden incluir exentos, no gravados ni percepciones
+{% endhint %}
+
 ```json
 {
    "usertoken":"xxxxx",

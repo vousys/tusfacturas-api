@@ -1,22 +1,21 @@
 ---
 description: >-
-  TusFacturasAPP: API para Notas de crédito C de AFIP/ARCA. Confiable desde
-  2015. Creada por devs y respaldada por expertos impositivos. ¡Los
-  desarrolladores la aman!
+  TusFacturasAPP: API para Recibo C de AFIP/ARCA. Confiable desde 2015. Creada
+  por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
 icon: code
 ---
 
-# Nota de crédito C
+# Recibo C
 
 ### Endpoints
 
-Nota de crédito C emitida en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
+Recibo C emitido en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
 
 {% hint style="info" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo`</mark>
 {% endhint %}
 
-Nota de crédito C emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
+Recibo C emitido en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
 
 {% hint style="info" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo_encola`</mark>
@@ -24,7 +23,7 @@ Nota de crédito C emitida en la modalidad "[Asincrónica](../api-factura-electr
 
 
 
-### JSON para generar una Nota de crédito C en AFIP/ARCA con detalle de comprobantes anulados
+### JSON para generar un recibo C en AFIP/ARCA
 
 {% hint style="info" %}
 Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden incluir exentos, no gravados ni percepciones
@@ -50,7 +49,7 @@ Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden inclu
    "comprobante":{
       "fecha":"20/03/2018",
       "vencimiento":"26/03/2023",
-      "tipo":"NOTA DE CREDITO C",
+      "tipo":"RECIBO C",
       "external_reference":"0306-0301",
       "tags": [ 
 	"etiqueta1","etiqueta2"
@@ -98,21 +97,12 @@ Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden inclu
       ],
       "bonificacion":"0.00",
       "leyenda_gral":" ",
-      "total":"110",
-      "comprobantes_asociados":[
-         {
-            "tipo_comprobante":"FACTURA C",
-            "punto_venta":"2",
-            "numero":12313,
-            "comprobante_fecha":"07/07/2018",
-            "cuit":0712293841"
-         }
-      ]
+      "total":"110"
    }
 }
 ```
 
-### ¿Cómo enviar una nota de crédito C según mi lenguaje de programación?
+### ¿Cómo enviar un recibo C según mi lenguaje de programación?
 
 Podes enviar las notas de crédito C por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado arriba.
 
@@ -224,7 +214,7 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-### Parámetros para crear una Nota de crédito C&#x20;
+### Parámetros para crear un recibo C&#x20;
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro, en especial el bloque de "[Comprobantes asociados](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md#como-emitir-notas-de-debito-credito-detallando-los-comprobantes-que-se-anulan)".
 
@@ -245,18 +235,6 @@ Consulta la respuesta esperada, según el método que uses para enviarla:
 {% endcontent-ref %}
 
 
-
-### PDF de ejemplo de una Nota de crédito C
-
-¿Necesitas una Nota de Crédito C de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__NOTA_DE_CREDITO_C-00010-00000001.pdf). Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
-
-### ¿Qué es una nota de crédito C?
-
-Conocé  que es una[ nota de crédito C](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md).
-
-### ¿Cuándo generar una nota de crédito C?
-
-Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una nota de crédito C.
 
 ***
 

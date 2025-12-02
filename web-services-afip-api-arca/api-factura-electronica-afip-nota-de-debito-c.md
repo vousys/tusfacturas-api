@@ -26,6 +26,10 @@ Nota de débito C emitida en la modalidad "[Asincrónica](../api-factura-electro
 
 ### JSON para generar una Nota de débito C en AFIP/ARCA con detalle de comprobantes cancelados
 
+{% hint style="info" %}
+Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden incluir exentos, no gravados ni percepciones
+{% endhint %}
+
 ```json
 {
    "usertoken":"xxxxx",
