@@ -64,7 +64,7 @@ Request: Body
 
 A continuación te mostramos un **ejemplo completo en formato JSON** que incluye todas las opciones disponibles para personalizar tus **comprobantes electrónicos** con la API de TusFacturasAPP.
 
-> ⚠️ **Importante**: No todos los campos son obligatorios. Los datos requeridos varían según el **tipo de comprobante** que desees emitir (factura, nota de crédito, remito, etc.).
+> ⚠️ **Importante**: No todos los campos son obligatorios. Los datos requeridos varían según el [**tipo de comprobante**](../web-services-afip-api-arca/) que desees emitir (factura, nota de crédito, remito, etc.).
 
 Para obtener una guía detallada de los campos específicos por tipo de comprobante, visitá nuestra [página de ejemplos por tipo de comprobante](../web-services-afip-api-arca/).
 
@@ -343,7 +343,7 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 ERRORES
 
 * Revisa el código de estado HTTP: Confirma siempre que recibas una respuesta HTTP 200. Esto garantiza que tu solicitud llegó y fue procesada correctamente.
-* Valida el campo de error: Controla el campo `"error"` en la respuesta. Su valor será `"S"` si hubo un problema o `"N"` si la operación se realizó con éxito.
+* Valida el campo de error: Controla el campo `"error"` en la respuesta. Su valor será `"S"` si hubo un problema o `"N"` si la operación se realizó con éxito, y dentro de `"errores"` encontraras el detalle del error.
 
 
 
@@ -351,9 +351,13 @@ ERRORES
 
 * El código de estado HTTP: 429 indica que tu aplicación está excediendo el límite de solicitudes permitido por segundo. Esto se debe a las reglas de seguridad de nuestra plataforma, diseñadas para proteger la estabilidad del sistema.
 
+
+
 **NUMERACIÓN**
 
 * La numeración es correlativa por punto de venta + Tipo de comprobante.
+
+
 
 **⚠️ IMPORTANTE - Consideraciones Legales:**
 
