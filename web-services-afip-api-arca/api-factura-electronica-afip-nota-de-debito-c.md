@@ -295,6 +295,17 @@ puts response.read_body
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro, en especial el bloque de "[Comprobantes asociados](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md#como-emitir-notas-de-debito-credito-detallando-los-comprobantes-que-se-anulan)".
 
+#### 📘 Información esencial
+
+Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos recursos fundamentales (¡sí, estos!):
+
+* **Tablas de referencia:** valores, códigos y parámetros que necesitas para que la API funcione correctamente.\
+  👉 [Ver tablas de referencia](../parametros/tablas-de-referencia.md)
+* **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
+  👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-json-a-enviar)
+
+
+
 ### Respuesta esperada
 
 Consulta la respuesta esperada, según el método que uses para enviarla:

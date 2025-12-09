@@ -225,6 +225,17 @@ puts response.read_body
 
 Conocé  más de los [comprobantes MiPyme](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-factura-de-credito-electronica-mipyme-fce.md#que-son-los-comprobantes-mipyme-afip) y cómo configurar el bloque de "[Comprobantes asociados](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md#como-emitir-notas-de-debito-credito-detallando-los-comprobantes-que-se-anulan)"&#x20;
 
+#### 📘 Información esencial
+
+Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos recursos fundamentales (¡sí, estos!):
+
+* **Tablas de referencia:** valores, códigos y parámetros que necesitas para que la API funcione correctamente.\
+  👉 [Ver tablas de referencia](../parametros/tablas-de-referencia.md)
+* **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
+  👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-json-a-enviar)
+
+
+
 ### Respuesta esperada
 
 Consulta la respuesta esperada, según el método que uses para enviarla:

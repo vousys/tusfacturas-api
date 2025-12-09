@@ -317,6 +317,17 @@ Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-
 [ejemplo-de-factura-con-bonificaciones-descuentos.md](../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md)
 {% endcontent-ref %}
 
+#### 📘 Información esencial
+
+Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos recursos fundamentales (¡sí, estos!):
+
+* **Tablas de referencia:** valores, códigos y parámetros que necesitas para que la API funcione correctamente.\
+  👉 [Ver tablas de referencia](../parametros/tablas-de-referencia.md)
+* **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
+  👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-json-a-enviar)
+
+
+
 ### Respuesta esperada
 
 Consulta la respuesta esperada, según el método que uses para enviarla:
