@@ -88,7 +88,7 @@
   * [Gestión de stock](productos/gestion-de-stock.md)
 * [Consultas a padrones](consultas-a-padrones/README.md)
   * [Consultar las alícuotas, en el padrón ARBA sujetos recaudación](consultas-a-padrones/api-factura-electronica-afip-consulta-de-alicuotas-en-padron-arba-sujetos-recaudacion.md)
-  * [Consultar las alícuotas, en padrón AGIP](consultas-a-padrones/api-factura-electronica-afip-consulta-de-alicuotas-en-padron-agip..md)
+  * [Consultar las alícuotas en AGIP Padrón de Regímenes Generales](consultas-a-padrones/api-factura-electronica-afip-consulta-de-alicuotas-en-padron-agip..md)
 * [👩‍💻 Mi cuenta](mi-cuenta/README.md)
   * [Agregar o modificar puntos de venta (PDV)](mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md)
   * [Solicitar certificado de enlace con AFIP](mi-cuenta/solicitar-certificado-de-enlace-con-afip.md)
