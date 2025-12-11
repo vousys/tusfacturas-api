@@ -1,11 +1,11 @@
 ---
 description: >-
   Consulta desde la API de facturación electrónica de TusFacturas.app, las
-  alícuotas existentes en el padrón AGIP Padrón de Regímenes Generales (Código
-  de Norma 029)
+  alícuotas existentes en el padrón AGIP Padrón de Regímenes Generales (Cod. de
+  Norma 029)
 ---
 
-# Consultar las alícuotas, en padrón AGIP
+# Consultar las alícuotas en AGIP Padrón de Regímenes Generales
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`clientes/agip-padron`</mark>
 
