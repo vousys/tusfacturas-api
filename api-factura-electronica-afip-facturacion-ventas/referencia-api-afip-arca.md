@@ -350,7 +350,13 @@ ERRORES
 **RATE LIMIT**
 
 * El código de estado HTTP: 429 indica que tu aplicación está excediendo el límite de solicitudes permitido por segundo. Esto se debe a las reglas de seguridad de nuestra plataforma, diseñadas para proteger la estabilidad del sistema.
-* No envies +1 request para crear comprobantes en el mismo segundo ya que pueden ocurrir problemas de concurrencia con la numeración.
+
+
+
+**CONCURRENCIA**
+
+* Espera la respuesta de la API antes de enviar la siguiente solicitud.
+* Si el proceso es paralelo, incorporar un delay mínimo (por ejemplo, 100ms) entre las peticiones para evitar que ingresen en el mismo segundo.
 
 
 
