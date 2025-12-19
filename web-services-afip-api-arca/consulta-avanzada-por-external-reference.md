@@ -28,12 +28,8 @@ icon: magnifying-glass
  "limite": 100 ,
 "comprobante": 
 	{
-			"tipo": "FACTURA A",
-			"operacion": "V",
-			"punto_venta": "00010",
-			"numero_desde": "00000001",
-			"numero_hasta": "00000300" 
-			 
+			"external_reference": "ABC1234",
+			"operacion": "V"  
 	}
 } 
 ```
