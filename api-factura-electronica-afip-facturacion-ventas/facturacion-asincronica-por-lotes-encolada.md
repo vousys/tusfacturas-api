@@ -3,7 +3,7 @@ description: >-
   TusFacturasAPP: Solución SaaS líder en facturación electrónica para empresas.
   Integra nuestra API y emití comprobantes por lote asincrónicos desde tu
   plataforma.
-hidden: true
+icon: l
 ---
 
 # Facturación asincrónica por Lotes (encolada)
@@ -70,7 +70,7 @@ Charset: UTF-8
 Formato esperado: JSON
 
 {% hint style="warning" %}
-Máximo: 100 comprobantes por lote.
+Máximo: 20 comprobantes por lote.
 {% endhint %}
 
 #### Request Body
@@ -89,7 +89,7 @@ Máximo: 100 comprobantes por lote.
 {% hint style="info" %}
 ### Datos a tener en cuenta:
 
-* **La cantidad máxima de requests por lote es de 100 comprobantes**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y  podes llegar a obtener una respuesta de timeout (524). En caso de recibir un 524, los requests que enviaste, seguirán siendo procesados en background, y recibirás un hook con la respuesta de éxito o error de su encolamiento. &#x20;
+* **La cantidad máxima de requests por lote es de 20 comprobantes**, pero debes tener en cuenta que por cuestiones de seguridad, nuestra plataforma funciona limitando su tiempo de procesamiento y  podes llegar a obtener una respuesta de timeout (524). En caso de recibir un 524, los requests que enviaste, seguirán siendo procesados en background, y recibirás un hook con la respuesta de éxito o error de su encolamiento. &#x20;
 * Podes enviar en un mismo lote comprobantes de **diferente tipo de comprobante**.   Ej: Podes enviar en el mismo lote Facturas A Y FACTURAS  B.
 * **La fecha que envíes en cada comprobante determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy. &#x20;
 * Los request deben venir **con el campo número en cero (0)**.
@@ -135,7 +135,7 @@ Revisa nuestra guía  "[API Facturación AFIP](./)" para conocer a fondo el serv
 
 #### :red\_circle: ERROR: Error de validación de los datos enviados en el lote:
 
-Si enviasjsonsons un lote que no cumple con los requisitos básicos, detallados a continuación:&#x20;
+Si envias un lote que no cumple con los requisitos básicos, detallados a continuación:&#x20;
 
 * La cantidad de requests supera el máximo permitido.
 * No has enviado ningún request a procesar en el bloque de "requests"
@@ -150,7 +150,7 @@ Ejemplo de una llamada con 300 requests, que superan el máximo establecido:
 {
 	"error": "S",
 	"errores": [
-		"Esta enviando 300 requests, cuando el limite permitido es 100. El lote no se procesara.",
+		"Esta enviando 300 requests, cuando el limite permitido. El lote no se procesara.",
 		"El lote no se procesara ya que contiene errores en todos sus requests. Se enviaron a procesar: 3 requests y se aceptaron procesar: 0. "
 	],
 	"error_cod": [],
