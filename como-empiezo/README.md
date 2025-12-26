@@ -31,6 +31,7 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 * [**Registrate gratis desde aquí**](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html)&#x20;
 * Se activará automáticamente tu **Plan API DEV** por 30 días
 * Podrás emitir hasta **1.500 comprobantes de prueba** sin costo
+* No podes enlazar tu CUIT con ARCA para realizar las pruebas.
 {% endstep %}
 
 {% step %}
