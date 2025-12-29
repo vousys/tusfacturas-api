@@ -62,7 +62,7 @@ Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a pr
 {% hint style="info" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`lotes_encola`</mark>
 
-💡 El uso de éste método contabiliza como "n" request en tu suscripción, dependiendo de la cantidad de comprobantes que se facturen
+💡 El uso de éste método contabiliza como "n" request en tu suscripción, dependiendo de la cantidad de comprobantes que envies en cada lote. Ejemplo: Si envias un lote con 5 comprobantes, descontará 5.
 {% endhint %}
 
 Charset: UTF-8
