@@ -16,7 +16,12 @@ icon: magnifying-glass
 
 
 
-### JSON para consultar ventas por external reference
+Ésta consulta tiene 2 herramientas útiles:
+
+* Consulta BULK por external reference
+* Consulta individual por external reference
+
+### JSON para consultar ventas individuales por external reference
 
 ```json
 {
@@ -29,6 +34,26 @@ icon: magnifying-glass
 "comprobante": 
 	{
 			"external_reference": "ABC1234",
+			"operacion": "V"  
+	}
+} 
+```
+
+### JSON para consultar ventas BULK por external reference
+
+Podes enviar hasta 100 external reference para consultar, sin embargo puede suceder que jsons muy extensos sean bloqueados a nivel firewall. En ese caso te sugerimos reducir la cantidad de ext. reference a consultar.
+
+```json
+{
+"usertoken" :  "xxxx",
+"apikey"    :  "xxxx",
+"apitoken"  :  "xxxx",
+"busqueda_tipo": "EXT_REF_LIST",
+ "pagina" : 0,
+ "limite": 100 ,
+"comprobante": 
+	{
+			"external_reference": ["ABC1234", "ABC1235", "ABC188" ],
 			"operacion": "V"  
 	}
 } 

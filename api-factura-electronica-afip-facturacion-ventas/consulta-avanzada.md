@@ -20,7 +20,7 @@ Podrás aplicar diferentes **filtros** para refinar tus resultados, lo cual te p
 
 * La información obtenida se limita a los comprobantes del punto de venta desde el cual se realiza la solicitud.
 * Los resultados se ordenan de forma descendente por fecha de emisión y orden de llegada (del más reciente al más antiguo).
-* La consulta te devolverá los resultados paginados, con un límite máximo de ventas por página es de 1.000
+* La consulta te devolverá los resultados paginados, con un límite máximo de ventas por página es de 1.000, dependiendo el método de consulta que utilices
 * El uso de éste método **no contabiliza como un request** en tu suscripción
 
 
@@ -176,13 +176,26 @@ Esta consulta permite obtener todos los comprobantes relacionados a un valor esp
 [consulta-avanzada-por-external-reference.md](../web-services-afip-api-arca/consulta-avanzada-por-external-reference.md)
 {% endcontent-ref %}
 
-#### ¿Cómo armar el bloque "comprobante" para usar ésta búsqueda?
+La consulta por external refernce cuenta con 2 herramientas:
+
+* Consulta individual de external reference
+* Consulta BULK de external reference.
+
+#### ¿Cómo armar el bloque "comprobante" para una búsqueda individual?
 
 | `external_reference` | Campo alfanumérico. Longitud mínima: 1 carácter                                                                                                                                       |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `operacion`          | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p> |
 
-#### Ejemplo del JSON de respuesta:
+#### ¿Cómo armar el bloque "comprobante" para una búsqueda BULK?
+
+Podes enviar hasta 100 external reference para consultar, sin embargo puede suceder que jsons muy extensos sean bloqueados a nivel firewall. En ese caso te sugerimos reducir la cantidad de ext. reference a consultar.
+
+| `external_reference` | Array de datos alfanumérico. Ej: \["abc123", "hh33ss", "ssss333kk"]                                                                                                                   |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `operacion`          | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p> |
+
+#### Ejemplo del JSON de respuesta (ambas herramientas):
 
 La respuesta contendrá un array de comprobantes (emitidos o pendientes de emisión). **Cada comprobante en este array sigue la misma estructura que la** [**consulta simple**](api-factura-electronica-afip-consulta-de-comprobantes.md#ejemplo-del-json-de-respuesta)
 

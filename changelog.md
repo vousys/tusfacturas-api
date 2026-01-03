@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 02 de enero de 2026
+
+Se agrega el método de consulta por [external reference "bulk"](web-services-afip-api-arca/consulta-avanzada-por-external-reference.md#json-para-consultar-ventas-bulk-por-external-reference).
+
 ### 05 de noviembre de 2025
 
 Se agrega en los datos de la [consulta de CUIT](consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md), si se encontro información en la base APOC al día de la consulta.&#x20;
