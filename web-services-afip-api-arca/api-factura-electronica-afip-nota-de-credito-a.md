@@ -254,6 +254,11 @@ Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos 
   👉 [Ver tablas de referencia](../parametros/tablas-de-referencia.md)
 * **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
   👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-json-a-enviar)
+* Tene en cuenta que la información que debes ingresar es referente a quien emitio esa NC
+  * La fecha que tenia el comprobante que estas anulando
+  * Que tipo de comprobante es
+  * El CUIT emisor de ese comprobante que estas anulando (debe coincidir con el CUIT desde donde estas emitiendo la NC)
+  * El punto de venta emisor de ese comprobante que estas anulando (debe coincidir con el CUIT desde donde estas emitiendo la NC)
 
 
 
