@@ -12,7 +12,7 @@ description: >-
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
-El método te devolverá las alícuotas (en porcentajes) que le corresponden según ARBA.
+El método te devolverá las alícuotas (en porcentajes) que le corresponden según ARBA **para el mes en curso.**
 
 #### Request Body
 
