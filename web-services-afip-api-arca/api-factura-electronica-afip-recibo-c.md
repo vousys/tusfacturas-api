@@ -104,7 +104,7 @@ Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden inclu
 
 ### ¿Cómo enviar un recibo C según mi lenguaje de programación?
 
-Podes enviar las notas de crédito C por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado arriba.
+Podes enviar recibos C por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos. Reemplaza "TUSFACTURAS\_JSON\_DATA" por el JSON especificado arriba.
 
 {% tabs %}
 {% tab title="CURL" %}

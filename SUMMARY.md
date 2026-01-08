@@ -16,6 +16,7 @@
   * [Nota de crédito B](web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-b.md)
   * [Nota de crédito C](web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-c.md)
   * [Recibo C](web-services-afip-api-arca/api-factura-electronica-afip-recibo-c.md)
+  * [Remito para papel pre-impreso con CAI](web-services-afip-api-arca/remitos-cai-noelectronicos.md)
   * [Nota de crédito E](web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-e.md)
   * [Nota de crédito MiPyme A](web-services-afip-api-arca/api-factura-electronica-afip-nota-de-credito-mipyme-a.md)
   * [Nota de débito A](web-services-afip-api-arca/api-factura-electronica-afip-nota-de-debito-a.md)
