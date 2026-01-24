@@ -90,6 +90,10 @@ Para ayudarte a gestionar y monitorear tu capacidad de facturación, TusFacturas
 
 De esta manera, podrás anticiparte y tomar las medidas necesarias para evitar interrupciones en tus operaciones de facturación electrónica, garantizando el cumplimiento de tus obligaciones fiscales y brindando un servicio continuo a tus clientes. En TusFacturasAPP, nos enfocamos en ofrecerte herramientas y funcionalidades que faciliten la gestión y el control de tus procesos de facturación digital.
 
+### ¿Puedo contratar la suscripción desde el exterior para mi cliente en Argentina?
+
+Si. Consulta éste artículo de ayuda:  [Soy una Empresa del Exterior: Cómo Adquirir una Suscripción para mi Cliente en Argentina](https://ayuda.tusfacturas.app/es/articles/13504270-soy-una-empresa-del-exterior-como-adquirir-una-suscripcion-para-mi-cliente-en-argentina)
+
 
 
 ### &#x20;¿Aún te quedan dudas? ¡Contactános!
