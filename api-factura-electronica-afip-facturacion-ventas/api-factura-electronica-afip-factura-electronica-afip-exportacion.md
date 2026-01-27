@@ -134,10 +134,9 @@ Los siguientes campos dentro del json del comprobante deberá enviarlos en cero:
 * bonificación,&#x20;
 * no gravados&#x20;
 * impuestos internos.
-
-El bloque tributos deberá ser enviado vacío.
-
-Consulta siempre con tu estudio contable y el despachante de aduana la informacion que debes suministrar, ya que no es lo mismo una exportación de servicios que una exportación de bienes.
+* El bloque tributos deberá ser enviado vacío.
+* Consulta siempre con tu estudio contable y el despachante de aduana la informacion que debes suministrar, ya que no es lo mismo una exportación de servicios que una exportación de bienes.
+* Si tenes que facturar a un cliente de Tierra del Fuego, debes indicar  el campo pais\_comprobante\_id = 250   (Tierra del Fuego) y enviar en cliente\_pais\_cuit  el CUIT de tu cliente.
 {% endhint %}
 
 #### Ejemplo de Factura E
