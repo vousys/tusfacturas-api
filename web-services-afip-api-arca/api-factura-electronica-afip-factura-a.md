@@ -73,7 +73,6 @@ En éste ejemplo podes ver conceptos con alícuota de IVA 21%, 10%, exentos y no
 							"precio_unitario_sin_iva": 1000,
 							"codigo": "P101474",
 							"alicuota": 21,
-							"bonificacion": 0,
 							"unidad_bulto":1,
 							"impuestos_internos_alicuota": 0,
 							"precio_total": 1000
@@ -89,7 +88,6 @@ En éste ejemplo podes ver conceptos con alícuota de IVA 21%, 10%, exentos y no
 							"codigo": "P101430",
 							"alicuota": -1,
 							"unidad_bulto":1,
-							"bonificacion": 0,
 							"impuestos_internos_alicuota": 0,
 							"precio_total": 1000
 						},
@@ -104,7 +102,6 @@ En éste ejemplo podes ver conceptos con alícuota de IVA 21%, 10%, exentos y no
 							"codigo": "P101439",
 							"unidad_bulto":1,
 							"alicuota": -2,
-							"bonificacion": 0,
 							"impuestos_internos_alicuota": 0,
 							"precio_total": 1000
 						},
@@ -119,7 +116,6 @@ En éste ejemplo podes ver conceptos con alícuota de IVA 21%, 10%, exentos y no
 							"codigo": "P101463",
 							"unidad_bulto":1,
 							"alicuota": 10.5,
-							"bonificacion": 0,
 							"impuestos_internos_alicuota": 0,
 							"precio_total": 1000
 						},

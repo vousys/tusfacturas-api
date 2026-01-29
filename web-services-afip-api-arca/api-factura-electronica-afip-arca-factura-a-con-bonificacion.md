@@ -23,7 +23,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 
 
 
-### JSON para generar una Factura A con bonificaciones a nivel producto
+### JSON para generar una Factura A con bonificaciones porcentuales a nivel producto
 
 ```json
 {
@@ -108,7 +108,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
     
 ```
 
-### JSON para generar una Factura A con bonificaciones a nivel comprobante
+### JSON para generar una Factura A con bonificaciones monetarias a nivel comprobante
 
 
 
