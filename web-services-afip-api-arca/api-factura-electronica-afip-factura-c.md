@@ -101,11 +101,11 @@ Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden inclu
       "leyenda_gral":" ",
       "total":"110",
          "pagos": {
-		"formas_pago": [
-		   {"descripcion" : "MercadoPago", "importe" : 110} 			
-			   ],
-		"total": 110
-		}, 
+		         "formas_pago": [
+		               {"descripcion" : "MercadoPago", "importe" : 110} 			
+			            ],
+		            "total": 110
+		}
    }
 }
 ```
