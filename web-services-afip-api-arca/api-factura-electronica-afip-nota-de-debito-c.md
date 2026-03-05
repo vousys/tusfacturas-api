@@ -105,7 +105,7 @@ Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden inclu
             "punto_venta":"145",
             "numero":12313,
             "comprobante_fecha":"07/07/2018",
-            "cuit":1111111111111
+            "cuit":"30716000001"
          }
       ]
    }

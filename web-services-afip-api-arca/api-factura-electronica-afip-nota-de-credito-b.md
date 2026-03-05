@@ -109,7 +109,7 @@ Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electr
             "punto_venta":"2",
             "numero": "12313",
             "comprobante_fecha":"07/07/2018",
-            "cuit": "12345678"
+            "cuit":"30716000001"
          }
       ]
    }

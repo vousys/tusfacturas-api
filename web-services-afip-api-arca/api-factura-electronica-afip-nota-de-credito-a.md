@@ -123,7 +123,7 @@ Nota de crédito A emitida en la modalidad "[Asincrónica](../api-factura-electr
             "punto_venta":"0002",
             "numero":12313,
             "comprobante_fecha":"07/07/2018",
-            "cuit":"30712293841"
+            "cuit":"30716000001"
          }
       ]
    }

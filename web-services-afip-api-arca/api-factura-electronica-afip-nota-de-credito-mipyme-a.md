@@ -99,8 +99,8 @@ Nota de crédito MiPyme A emitida en la modalidad "[Instantánea](../api-factura
                                "tipo_comprobante"   :    "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
                                 "punto_venta"  :    "10",
                                  "numero" : 12313,
-                                "cuit": 1111111111, 
-                                "comprobante_fecha":"07/07/2025"     
+                                 "cuit":"30716000001",
+                                 "comprobante_fecha":"07/07/2025"     
                              } 
                          ] 
         }

@@ -107,7 +107,7 @@ Nota de débito E emitida en la modalidad "[Instantánea](../api-factura-electro
                                                     "tipo_comprobante"   :    "NOTA DE CREDITO E",
                                                      "punto_venta"  :    "145",
                                                      "numero" : 12313,
-                                                     "cuit": 30111222334     
+                                                     "cuit":"30716000001"    
                                                 } 
                                            ]
                     } 
