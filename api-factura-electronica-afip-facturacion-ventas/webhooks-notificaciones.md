@@ -23,6 +23,12 @@ La dirección que establezcas para el webhook, no debe contener un redirect y de
 
 El formato esperado es: _https://www.dominio.com/script-nombre_
 
+
+
+{% hint style="info" %}
+Para que se envíe un **webhook**, es requisito haber incluido el campo **`external_reference`** en el request. Si éste dato no está presente en la solicitud, **no se enviará ningún webhook**.
+{% endhint %}
+
 ### **¿Qué te notificaremos vía  webhook?**
 
 Vas a recibir por **POST** un JSON, con la siguiente estructura, para que puedas relacionar mediante el _**external\_reference**_ que nos enviaste, al comprobante en cuestión, por tal motivo el _external\_reference_ que envíes, debe ser único.
