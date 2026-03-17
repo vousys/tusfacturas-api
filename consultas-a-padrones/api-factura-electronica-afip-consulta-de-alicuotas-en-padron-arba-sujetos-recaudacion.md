@@ -6,7 +6,7 @@ description: >-
 
 # Consultar las alícuotas, en el padrón ARBA sujetos recaudación
 
-## Consulta en padrón ARBA
+### Consulta en padrón ARBA
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`clientes/arba-padron`</mark>
 

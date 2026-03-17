@@ -6,7 +6,7 @@ description: >-
 
 # Consultar base APOC de facturas apócrifas de ARCA
 
-## Consultar datos de un CUIT en base APOC
+### Consultar datos de un CUIT en base APOC
 
 Este endpoint permite [consultar la base de datos APOC de ARCA](https://ayuda.tusfacturas.app/es/articles/12097418-que-son-las-facturas-apocrifas-y-como-verificarlas) para verificar si una factura está registrada como apócrifa o fraudulenta.
 
@@ -28,7 +28,7 @@ Este endpoint permite [consultar la base de datos APOC de ARCA](https://ayuda.tu
 | apitoken  | string   | Tus credenciales de acceso.                 |
 |           |          |                                             |
 
-### Ejemplo del JSON a enviar <a href="#estructura-del-json-a-enviar" id="estructura-del-json-a-enviar"></a>
+#### Ejemplo del JSON a enviar <a href="#estructura-del-json-a-enviar" id="estructura-del-json-a-enviar"></a>
 
 {% code title="JSON" %}
 ```
@@ -41,7 +41,7 @@ Este endpoint permite [consultar la base de datos APOC de ARCA](https://ayuda.tu
 ```
 {% endcode %}
 
-### Respuesta exitosa (200) con CUIT existente en base APOC
+#### Respuesta exitosa (200) con CUIT existente en base APOC
 
 ```
 {
@@ -55,7 +55,7 @@ Este endpoint permite [consultar la base de datos APOC de ARCA](https://ayuda.tu
 }
 ```
 
-### Respuesta exitosa (200) con CUIT inexistente en base APOC
+#### Respuesta exitosa (200) con CUIT inexistente en base APOC
 
 ```
 {
@@ -67,7 +67,7 @@ Este endpoint permite [consultar la base de datos APOC de ARCA](https://ayuda.tu
 }
 ```
 
-### Respuesta con error (200) &#x20;
+#### Respuesta con error (200) &#x20;
 
 ```
 {

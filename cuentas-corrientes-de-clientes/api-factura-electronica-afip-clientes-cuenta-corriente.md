@@ -6,7 +6,7 @@ description: >-
 
 # Consulta de Cuentas Corrientes
 
-## Consulta de cuenta corriente
+### Consulta de cuenta corriente
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`clientes/cuenta-corriente`</mark>
 

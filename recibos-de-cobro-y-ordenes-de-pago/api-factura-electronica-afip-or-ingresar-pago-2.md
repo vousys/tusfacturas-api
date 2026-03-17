@@ -11,13 +11,11 @@ description: >-
 Las órdenes de pago que informes, se usan solo para la gestión interna de nuestra plataforma y no podrás generar dentro de éste método, órdenes de pago por comprobantes que tus proveedores te emitieron.
 {% endhint %}
 
-## Generar órdenes de pago&#x20;
+### Generar órdenes de pago&#x20;
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/caja/`<mark style="color:purple;">`nuevo`</mark>
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
-
-
 
 #### Request Body
 
@@ -34,40 +32,16 @@ Las órdenes de pago que informes, se usan solo para la gestión interna de nues
 | leyenda            | string | OPCIONAL. Campo alfanumérico de hasta 255 caracteres, que quedará registrado como leyenda y saldrá impreso en el PDF del recibo, en caso que desees generarlo.                                                            |
 | pagos              | string | Según estructura que se detalla a continuación                                                                                                                                                                            |
 
-{% tabs %}
-{% tab title="200: OK " %}
-Ejemplos de las respuestas JSON en caso de éxito o error
 
-{% tabs %}
-{% tab title="Exito" %}
-```
-{
-	"error": "N",
-	"errores": [""],
-}
-```
-{% endtab %}
-
-{% tab title="Con errores" %}
-```
-{
-	"error": "S",
-	"errores": 
-			"Error 2"],
-}
-```
-{% endtab %}
-{% endtabs %}
-{% endtab %}
-{% endtabs %}
 
 {% hint style="info" %}
-* ## Datos a tener en cuenta
+## Datos a tener en cuenta
+
 * **NO** podrás enviar los siguientes medios de pago: "cheques" y ni "retenciones".
 * Se realizara una validación del total que se indique, contra la sumatoria de los medios de pago detallados
 {% endhint %}
 
-## Ejemplo del JSON completo a enviar
+### Ejemplo del JSON completo a enviar
 
 ```
 {
@@ -109,7 +83,7 @@ Información de los campos que componen el **array de pagos > formas\_pago**
 | descripcion      | SI        | <p>El nombre del medio de pago elegido. 255 caracteres max.</p><p>En caso que el medio de pago, no exista en nuestra plataforma, será dado de alta automáticamente.</p> |
 | importe          | SI        | <p>Campo numérico con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></p>                                                                |
 
-Ejemplo del JSON a enviar.
+### Ejemplo del JSON a enviar.
 
 {% code title="JSON" %}
 ```
@@ -126,3 +100,21 @@ Ejemplo del JSON a enviar.
  }
 ```
 {% endcode %}
+
+### Respuesta JSON
+
+```
+{
+	"error": "S",
+	"errores":  ["Error 2"],
+}
+```
+
+En caso de éxito:
+
+```
+{
+	"error": "N",
+	"errores": [],
+}
+```

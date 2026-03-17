@@ -25,16 +25,6 @@ Ten en cuenta que solo podrás eliminar comprobantes de compra si no tienen pago
 | apitoken    | string | Tus Credenciales de acceso            |
 | usertoken   | string | Tus Credenciales de acceso            |
 
-{% tabs %}
-{% tab title="200 " %}
-```
-{"error":"N",
-"errores":[],
-"rta":"El comprobante se ha eliminado."}
-```
-{% endtab %}
-{% endtabs %}
-
 ### Ejemplo de JSON a enviar para eliminar un comprobante:
 
 ```
@@ -66,3 +56,4 @@ Ten en cuenta que solo podrás eliminar comprobantes de compra si no tienen pago
 "errores":[],
 "rta":"El comprobante se ha eliminado."}
 ```
+

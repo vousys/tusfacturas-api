@@ -10,7 +10,7 @@ description: >-
 **IMPORTANTE**: Para utilizar esta consulta, tu CUIT debe estar **enlazado con ARCA**. Por lo tanto, esta funcionalidad **no está disponible** en el plan API DEV.
 {% endhint %}
 
-## Consultar datos de un CUIT en AFIP/ARCA
+### Consultar datos de un CUIT en AFIP/ARCA
 
 Mediante éste método podrás consultar la info que AFIP/ARCA tiene almacenada en su base de datos con relación a un CUIT. Ésta info es lo mismo que visualizas cuando haces una [consulta web a la constancia de inscripción](https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do).  Tene en cuenta que la información provista en éste método no tiene relación con la info de tus clientes que tengas almacenados en TusFacturasAPP.
 

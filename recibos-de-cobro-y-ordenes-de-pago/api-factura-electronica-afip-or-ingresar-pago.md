@@ -7,24 +7,19 @@ description: >-
 # Ingresar pago a un comprobante emitido
 
 {% hint style="info" %}
-Los cobros que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
-{% endhint %}
+Datos a tener en cuenta
 
-## Datos a tener en cuenta
-
-{% hint style="info" %}
+* Los cobros que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
 * **NO** podrás enviar los siguientes medios de pago: "cheques" y ni "retenciones".
 * Se realizara una validación del total que se indique, contra la sumatoria de los medios de pago detallados
 * El total de los pagos **NO** debe superar el importe total del comprobante, pero si puede ser inferior, para indicar que el comprobante recibió un pago parcial.
 {% endhint %}
 
-## Ingresar pagos a un comprobante emitido
+### Ingresar pagos a un comprobante emitido
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`pagar`</mark>
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
-
-
 
 #### Request Body
 
@@ -35,34 +30,7 @@ Los cobros que informes, se usan solo para la gestión interna de nuestra plataf
 | usertoken   | String | Tus credenciales de acceso                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | comprobante | object | <p>Un objeto compuesto de los siguientes atributos: </p><p><strong>tipo:</strong> Campo alfanumérico. Longitud máx: 50 caracteres, conteniendo el tipo de comprobante a consultar. Ej: FACTURA A </p><p><strong>operacion :</strong> Campo alfanumérico. Longitud máx: 1 carácter. Valores permitidos (V o C) ya sea para ventas o compras.</p><p><strong>punto_venta</strong> Campo númerico para indicar el número del punto de venta.</p><p><strong>numero :</strong> Campo numérico. Longitud máx: 8. Indica el número del comprobante a consultar.</p><p><strong>pagos</strong>: Bloque según estructura que se detalla a continuación</p><p></p> |
 
-{% tabs %}
-{% tab title="200: OK " %}
-Ejemplos de las respuestas JSON en caso de éxito o error
-
-{% tabs %}
-{% tab title="Exito" %}
-```
-{
-	"error": "N",
-	"errores": [""],
-}
-```
-{% endtab %}
-
-{% tab title="Con errores" %}
-```
-{
-	"error": "S",
-	"errores": 
-			"Error 2"],
-}
-```
-{% endtab %}
-{% endtabs %}
-{% endtab %}
-{% endtabs %}
-
-## Ejemplo del JSON completo a enviar
+### Ejemplo del JSON completo a enviar
 
 ```
 {
@@ -145,7 +113,7 @@ comprobante: {
 ```
 {% endcode %}
 
-## Ejemplo del JSON completo a enviar
+### Ejemplo del JSON completo a enviar
 
 ```
 {
@@ -171,3 +139,22 @@ comprobante: {
 }
  
 ```
+
+### Respuesta JSON
+
+```
+{
+	"error": "S",
+	"errores":  ["Error 2"],
+}
+```
+
+En caso de éxito:
+
+```
+{
+	"error": "N",
+	"errores": [],
+}
+```
+

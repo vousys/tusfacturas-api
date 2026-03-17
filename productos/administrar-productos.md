@@ -6,7 +6,7 @@ description: >-
 
 # Administrar productos
 
-## Agregá o modificá productos
+### Agregá o modificá productos
 
 Éste método te permite enviar un lote de hasta 50 productos ya sea para darlos de alta o para modificarlos.&#x20;
 
@@ -22,7 +22,7 @@ description: >-
 * stock\_actual: Éste campo solo será utilizado en el alta del producto, cuando el campo  "afecta\_stock" = "S".  Luego de crear el producto se incorporarán al stock las unidades indicadas.
 {% endhint %}
 
-### Request
+### Endpoint
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`productos/administrar`</mark>
 

@@ -25,7 +25,7 @@ Comenza a utilizar la API de facturación electrónica de TusFacturas.app hoy mi
 Ten en cuenta que para la moneda "dólar": AFIP trabaja con la cotización oficial del Banco de la Nación Argentina, correspondiente al DOLAR DIVISAS y la cotización es actualizada a cada hora.
 {% endhint %}
 
-## Request
+#### Request
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`tablas_referencia/cotizacion`</mark>
 

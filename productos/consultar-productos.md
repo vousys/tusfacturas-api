@@ -6,7 +6,7 @@ description: >-
 
 # Consultar productos
 
-## Consultá productos
+### Consultá productos
 
 Éste método te permite enviar un lote de hasta 50 productos para consultar.
 
@@ -21,7 +21,7 @@ description: >-
 
 {% endhint %}
 
-### Request
+### Endpoint
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`productos/consultar`</mark>
 

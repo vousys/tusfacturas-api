@@ -6,11 +6,11 @@ description: >-
 
 # Listar productos
 
-## Lista tus productos
+### Lista tus productos
 
 Éste método te permite consultar todos los productos/servicios registrados y mantener un sincronismo entre tu plataforma y TusFacturasAPP.
 
-### Request
+### Endpoint
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`productos/listar`</mark>
 

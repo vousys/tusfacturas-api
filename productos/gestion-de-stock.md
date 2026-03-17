@@ -6,7 +6,7 @@ description: >-
 
 # Gestión de stock
 
-## Administrá el stock
+### Administra el stock
 
 Nuestra API ofrece endpoints para crear, leer y eliminar movimientos de stock. Integra nuestra solución a tu aplicación y accede a funcionalidades como consulta de stock en tiempo real, generación de reportes y gestión de alertas de bajo stock desde nuestra plataforma web. Conoce más sobre cómo se realizar la [gestión de stock](https://www.tusfacturas.app/caracteristicas-de-tus-facturas-electronica-stock.html).&#x20;
 
@@ -22,13 +22,11 @@ Nuestra API ofrece endpoints para crear, leer y eliminar movimientos de stock. I
 
 {% endhint %}
 
-### Request
+### Endpoint
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`productos/stock`</mark>
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
-
-
 
 #### Request Body
 
