@@ -6,9 +6,7 @@ description: >-
 
 # Predeterminar punto de venta
 
-
-
-## Predeterminar Punto de venta
+### ¿Cómo predeterminar un punto de venta para usarlo desde la plataforma web?
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`puntos_venta/predeterminar`</mark>
 

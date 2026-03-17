@@ -6,22 +6,30 @@ description: >-
 
 # Agregar o modificar puntos de venta (PDV)
 
-### &#x20;Datos a tener en cuenta:
+### Administrar CUIT + Punto de venta
+
+Desde éste método podras dar de alta nuevos puntos de venta dentro de tu espacio de trabajo o modificar ciertos datos de tu punto de venta actual.
+
+
+
+Datos a tener en cuenta:
 
 {% hint style="info" %}
 **Si estás modificando puntos de venta (PDV)**
 
 * En el caso de la modificación del punto de venta, deberás realizar la solicitud con las keys del punto de venta que querés modificar.
-* Ten en cuenta que aquellos puntos de venta que ya posean comprobantes, no podrán modificar su número de CUIT, condición impositiva ni de punto de venta.
+* Una vez que un punto de venta tiene comprobantes creados, la plataforma bloquea automáticamente la edición del CUIT, la condición ante el IVA y el número de punto de venta.\
+  Para modificar los datos bloqueados, primero debes eliminar todos los comprobantes asociados al punto de venta.
 
 **Si estás dando de alta puntos de venta (PDV)**
 
-* Si das de alta un punto de venta de un CUIT que ya existía en TusfacturasAPP y emitía factura electrónica, automáticamente, éste quedará habilitado para emitir factura electrónica AFIP, sin requerir cargar en AFIP un nuevo certificado de seguridad. Lo único que deberás hacer en AFIP, es dar de alta el nuevo punto de venta de tipo "webservices".
+* El CUIT que configures solo puede existir en un espacio de trabajo en toda la plataforma.&#x20;
+* Si das de alta un punto de venta para un CUIT que ya operaba en TusfacturasAPP con factura electrónica ARCA, éste quedará habilitado automáticamente. No necesitaras cargar un nuevo certificado de seguridad en ARCA; el único paso requerido es dar de alta el nuevo punto de venta  desde el portal de ARCA, como se indica en [éste instructivo de ayuda](https://ayuda.tusfacturas.app/es/articles/10374245-afip-instructivo-paso-4)&#x20;
 
 
 {% endhint %}
 
-## Administrar CUIT + Punto de venta
+### Endpoint
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`puntos_venta/administrar`</mark>
 

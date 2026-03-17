@@ -6,9 +6,13 @@ description: >-
 
 # Solicitar certificado de enlace con AFIP
 
-Mediante ésta herramienta podras solicitar un certificado de enlace con AFIP y su instructivo. El certificado se generará para el CUIT desde el cual estas haciendo la solicitud y lo recibiras en la casilla de correo del usuario administrador de la cuenta.
+{% hint style="info" %}
+A través de esta herramienta, podrás solicitar tu certificado de enlace con ARCA y acceder al instructivo paso a paso. El sistema generará el certificado para el CUIT de la sesión activa y lo enviará al correo del usuario administrador.
 
-## Solicitar certificado
+Importante: Esta función solo está disponible para cuentas en producción (no aplica para el plan API DEV).
+{% endhint %}
+
+### ¿Cómo solicitar certificado de enlace?
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`puntos_venta/certificado`</mark>
 
