@@ -60,12 +60,16 @@ Para garantizar el cumplimiento legal, no disponemos de un entorno de pruebas co
 * ✅ **La respuesta simula el comportamiento de producción** con campos CAE vacíos
 * ✅ **No se aplican validaciones adicionales** de AFIP/ARCA durante las pruebas
 
-### Canales de atención al cliente:
+### 🆘 ¿Necesitás Ayuda?
 
-* [Bot de soporte 24/7](https://www.tusfacturas.app/contacto.html)
-* [Centro de Ayuda](https://ayuda.tusfacturas.app/)
-* E-mail: api@tusfacturas.app
-* Si necesitas la asistencia de nuestro equipo, brindamos soporte humano por e-mail o chat, en el siguiente horario: lunes a viernes, de 8 a 16 hs (hora de Argentina), exceptuando feriados y días no laborables. Durante este tiempo respondemos de acuerdo a la demanda.
+#### Soporte Técnico
+
+Si tenes dudas sobre la integración o necesitas asistencia:
+
+* **📧 Email**: api@tusfacturas.app
+* **💬**  [Bot de soporte 24/7](https://www.tusfacturas.app/contacto.html)
+* 📖 [Centro de Ayuda](https://ayuda.tusfacturas.app/)
+* 🫂 Equipo humano: brindamos soporte exclusivamente por e-mail o chat, en el siguiente horario: lunes a viernes, de 8 a 16 hs (hora de Argentina), exceptuando feriados y días no laborables. Durante este tiempo respondemos de acuerdo a la demanda
 
 
 
@@ -395,17 +399,6 @@ Una vez finalizado tu período de prueba de 30 días, podrás:
 * ⚠️ **Los comprobantes de prueba son ficticios** y no se registran en AFIP/ARCA
 * ⚠️ **La respuesta durante las pruebas simula el comportamiento de producción**
 * ⚠️ **Los campos CAE y vencimiento CAE se devuelven vacíos** en modo desarrollo
-
-***
-
-### 🆘 ¿Necesitás Ayuda?
-
-#### Soporte Técnico
-
-Si tenés dudas sobre la integración o necesitás asistencia:
-
-* **📧 Email**: api@tusfacturas.app
-* **💬 Chat en vivo**: Disponible en [www.tusfacturas.app](https://www.tusfacturas.app)&#x20;
 
 
 
