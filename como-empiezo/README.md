@@ -60,6 +60,15 @@ Para garantizar el cumplimiento legal, no disponemos de un entorno de pruebas co
 * ✅ **La respuesta simula el comportamiento de producción** con campos CAE vacíos
 * ✅ **No se aplican validaciones adicionales** de AFIP/ARCA durante las pruebas
 
+### Canales de atención al cliente:
+
+* [Bot de soporte 24/7](https://www.tusfacturas.app/contacto.html)
+* [Centro de Ayuda](https://ayuda.tusfacturas.app/)
+* E-mail: api@tusfacturas.app
+* Si necesitas la asistencia de nuestro equipo, brindamos soporte humano por e-mail o chat, en el siguiente horario: lunes a viernes, de 8 a 16 hs (hora de Argentina), exceptuando feriados y días no laborables. Durante este tiempo respondemos de acuerdo a la demanda.
+
+
+
 ### Beneficios del Plan API DEV
 
 | Característica    | Detalle                                                                                                                                        |
