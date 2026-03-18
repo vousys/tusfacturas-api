@@ -69,7 +69,7 @@ Si tenes dudas sobre la integración o necesitas asistencia:
 * **📧 Email**: api@tusfacturas.app
 * **💬**  [Bot de soporte 24/7](https://www.tusfacturas.app/contacto.html)
 * 📖 [Centro de Ayuda](https://ayuda.tusfacturas.app/)
-* 🫂 Equipo humano: brindamos soporte exclusivamente por e-mail o chat, en el siguiente horario: lunes a viernes, de 8 a 16 hs (hora de Argentina), exceptuando feriados y días no laborables. Durante este tiempo respondemos de acuerdo a la demanda
+* 🫂 Brindamos soporte humano por e-mail o chat en el siguiente horario: lunes a viernes, de 8 a 16 hs (hora de Argentina), exceptuando feriados y días no laborables. Durante este tiempo respondemos de acuerdo a la demanda
 
 
 
