@@ -8,7 +8,7 @@ description: >-
 
 Mediante éste método podrás solicitar el envío del reporte IVA compras-ventas a una casilla de e-mail determinada. Se permite 1 casilla de e-mail por solicitud.
 
-## Solicita el IVA Compras - Ventas
+### Endpoint
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`micuenta/iva_compras_ventas`</mark>
 
@@ -24,19 +24,6 @@ Mediante éste método podrás solicitar el envío del reporte IVA compras-venta
 | apikey    | string | Tus credenciales de acceso                           |
 | apitoken  | string | Tus credenciales de acceso                           |
 | usertoken | string | Tus credenciales de acceso                           |
-
-{% tabs %}
-{% tab title="200 La respuesta es error = S o error = N" %}
-{% code title="JSON" %}
-```
-{
-"error":"N",
-"errores":[]
-}
-```
-{% endcode %}
-{% endtab %}
-{% endtabs %}
 
 #### Ejemplo del JSON a enviar:
 
@@ -54,7 +41,7 @@ Mediante éste método podrás solicitar el envío del reporte IVA compras-venta
 ```
 {% endcode %}
 
-### Ejemplo del JSON de respuesta
+#### Ejemplo del JSON de respuesta
 
 ```
 {

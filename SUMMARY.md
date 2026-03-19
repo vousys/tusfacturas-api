@@ -97,6 +97,7 @@
   * [Mi Cuenta - consumo](mi-cuenta/mi-cuenta.md)
 * [Reportes](reportes/README.md)
   * [Solicitar reporte IVA compras-ventas](reportes/solicitar-reporte-iva-compras-ventas.md)
+  * [Reporte: ¿Quién me debe? - Saldos](reportes/reporte-quien-me-debe-saldos.md)
 * [Parámetros](parametros/README.md)
   * [Consulta de Países en AFIP](parametros/consulta-de-paises-afip.md)
   * [Consulta de unidades de medida AFIP](parametros/consulta-de-unidades-de-medida-para-productos-afip.md)
