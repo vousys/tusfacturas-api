@@ -4,7 +4,7 @@ description: >-
   podes obtener información de los servicios de consulta de AFIP.
 ---
 
-# Consultas varias a servicios AFIP/ARCA
+# 🗳️ Consultas varias a servicios AFIP/ARCA
 
 ## Servicios API de consulta AFIP/ARCA&#x20;
 
