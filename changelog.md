@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 19 de marzo de 2026
+
+Se agregan 2 métodos para consultar el reporte de "Quién me debe" (solo [saldos](reportes/reporte-quien-me-debe-saldos.md) o [detallado](reportes/reporte-quien-me-debe-detalle.md))
+
 ### 02 de enero de 2026
 
 Se agrega el método de consulta por [external reference "bulk"](web-services-afip-api-arca/consulta-avanzada-por-external-reference.md#json-para-consultar-ventas-bulk-por-external-reference).
