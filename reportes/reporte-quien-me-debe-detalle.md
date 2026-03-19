@@ -8,6 +8,8 @@ description: >-
 
 Mediante este método podrás obtener un listado detallado de las deudas de tus clientes. La información se encuentra paginada en bloques de 100 clientes y contempla hasta 500 conceptos adeudados por cliente, al día de la fecha.
 
+Debido a que la gestión de cuentas corrientes es por cliente y centraliza la recepción de comprobantes de todos los puntos de venta, el reporte consolidará la información total, independientemente de las credenciales utilizadas para su solicitud.
+
 ### Endpoint
 
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`reportes/quienmedebe-detalle`</mark>

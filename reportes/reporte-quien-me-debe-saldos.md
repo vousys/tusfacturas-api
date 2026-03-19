@@ -4,7 +4,9 @@ description: Mediante éste reporte obtendrás un listado con los saldos de tus 
 
 # Reporte: ¿Quién me debe? - Saldos
 
-Mediante éste método podrás obtener un listado con los saldos de tus clientes.
+Mediante éste método podrás obtener un listado con los saldos de tus clientes. El listado estará paginado de a 1000 registros.&#x20;
+
+Debido a que la gestión de cuentas corrientes es por cliente y centraliza la recepción de comprobantes de todos los puntos de venta, el reporte consolidará la información total, independientemente de las credenciales utilizadas para su solicitud.
 
 ### Endpoint
 
