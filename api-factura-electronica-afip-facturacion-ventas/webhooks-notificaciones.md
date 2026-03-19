@@ -26,7 +26,9 @@ El formato esperado es: _https://www.dominio.com/script-nombre_
 
 
 {% hint style="info" %}
-Para que se envíe un **webhook**, es requisito haber incluido el campo **`external_reference`** en el request. Si éste dato no está presente en la solicitud, **no se enviará ningún webhook**.
+Los webhooks se aplican tanto a ventas asincrónicas como a ventas instantáneas individuales, siempre que se haya informado el **external\_reference**.
+
+En el caso de las ventas instantáneas, el webhook se enviará únicamente una vez que el comprobante haya sido emitido.
 {% endhint %}
 
 ### **¿Qué te notificaremos vía  webhook?**
