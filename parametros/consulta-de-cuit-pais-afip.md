@@ -46,3 +46,7 @@ description: >-
 "apitoken"  :  "xxxxx" 
 }
 ```
+
+Podes encontrar la lista completa en éste documento, desde la web de ARCA:
+
+[https://www.afip.gob.ar/inversiones-bienes-uso/documentos/CUIT-pais.pdf](https://www.afip.gob.ar/inversiones-bienes-uso/documentos/CUIT-pais.pdf)
