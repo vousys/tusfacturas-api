@@ -43,9 +43,7 @@ Nota de débito E emitida en la modalidad "[Instantánea](../api-factura-electro
       "moneda":"DOL",
       "idioma":"2",
       "cotizacion":"1115.20",
-      "tags": [ 
-	"etiqueta1","etiqueta2"
-       ],
+      "tags": [ ],
        "datos_informativos": {
 	  "paga_misma_moneda": "N"
       },

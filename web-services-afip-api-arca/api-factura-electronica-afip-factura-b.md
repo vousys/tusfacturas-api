@@ -52,9 +52,7 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "operacion":"V",
       "moneda":"PES",
       "external_reference":"0306-0301",
-      "tags": [ 
-	"etiqueta1","etiqueta2"
-       ],
+      "tags": [],
        "datos_informativos": {
 	  "paga_misma_moneda": "N"
       },

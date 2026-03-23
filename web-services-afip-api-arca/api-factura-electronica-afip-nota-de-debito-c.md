@@ -55,9 +55,7 @@ Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden inclu
       "punto_venta":"0002",
       "numero":"00000012",
       "external_reference":"0306-0301",
-      "tags": [ 
-	"etiqueta1","etiqueta2"
-       ],
+      "tags": [],
        "datos_informativos": {
 	  "paga_misma_moneda": "N"
       },

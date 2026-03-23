@@ -44,9 +44,7 @@ Factura MiPyme A emitida en la modalidad "[Instantánea](../api-factura-electron
       "punto_venta":"0010",
       "moneda":"DOL",
       "external_reference":"0306-0301",
-      "tags": [ 
-	"etiqueta1","etiqueta2"
-       ],
+      "tags": [],
        "datos_informativos": {
 	  "paga_misma_moneda": "N"
       },

@@ -50,9 +50,7 @@ En éste ejemplo podes ver conceptos con alícuota de IVA 21%, 10%, exentos y no
       "tipo":"FACTURA A",
       "vencimiento":"26/03/2023",
       "external_reference":"0306-0301",
-      "tags": [ 
-	"etiqueta1","etiqueta2"
-       ],
+      "tags": [],
        "datos_informativos": {
 	  "paga_misma_moneda": "N"
       },

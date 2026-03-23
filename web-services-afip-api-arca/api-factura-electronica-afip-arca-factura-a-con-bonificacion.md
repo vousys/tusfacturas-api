@@ -45,10 +45,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
    }, 
     "comprobante": {
         "external_reference": "0306-0301",
-        "tags": [
-            "etiqueta1",
-            "etiqueta2"
-        ],
+        "tags": [],
         "tipo": "FACTURA A",
         "operacion": "V",
         "punto_venta": "10",

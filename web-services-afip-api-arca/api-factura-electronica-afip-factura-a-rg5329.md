@@ -143,14 +143,12 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "impuestos_internos_alicuota":"0",
       "total":478526,
       "pagos": {
-		"formas_pago": [
-		   {"descripcion" : "MercadoPago", "importe" : 478526} 			
-			   ],
-		"total": 478526
+		      "formas_pago": [
+		         {"descripcion" : "MercadoPago", "importe" : 478526} 			
+	         ],
+		      "total": 478526
 		},
-      "comprobantes_asociados":[
-         
-      ]
+      "comprobantes_asociados":[]
    }
 }
 

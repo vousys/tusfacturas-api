@@ -52,9 +52,7 @@ Nota de crédito A emitida en la modalidad "[Asincrónica](../api-factura-electr
       "punto_venta":"0002",
       "numero":"00000012",
       "external_reference":"0306-0301",
-      "tags": [ 
-	"etiqueta1","etiqueta2"
-       ],
+      "tags": [],
        "datos_informativos": {
 	  "paga_misma_moneda": "N"
       },

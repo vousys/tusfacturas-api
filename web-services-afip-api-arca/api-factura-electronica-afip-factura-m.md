@@ -56,9 +56,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "tipo":"FACTURA M",
       "vencimiento":"26/03/2023",
       "external_reference":"0306-0301",
-      "tags": [ 
-	"etiqueta1","etiqueta2"
-       ],
+      "tags": [],
        "datos_informativos": {
 	  "paga_misma_moneda": "N"
       },

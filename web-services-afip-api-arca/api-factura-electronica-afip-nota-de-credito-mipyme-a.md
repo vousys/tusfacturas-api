@@ -43,9 +43,7 @@ Nota de crédito MiPyme A emitida en la modalidad "[Instantánea](../api-factura
       "moneda":"DOL",
       "idioma":"2",
       "cotizacion":"1115.20",
-      "tags": [ 
-	"etiqueta1","etiqueta2"
-       ],
+      "tags": [],
        "datos_informativos": {
 	  "paga_misma_moneda": "N"
       },

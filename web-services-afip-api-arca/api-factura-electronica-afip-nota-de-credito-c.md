@@ -52,9 +52,7 @@ Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden inclu
       "vencimiento":"26/03/2023",
       "tipo":"NOTA DE CREDITO C",
       "external_reference":"0306-0301",
-      "tags": [ 
-	"etiqueta1","etiqueta2"
-       ],
+      "tags": [],
        "datos_informativos": {
 	  "paga_misma_moneda": "N"
       },
