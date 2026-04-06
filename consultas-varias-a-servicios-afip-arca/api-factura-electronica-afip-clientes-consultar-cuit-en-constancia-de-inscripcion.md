@@ -137,4 +137,5 @@ Ten en cuenta que:
 
 1. &#x20;Si el CUIT no se encuentra inscripto en ningún impuesto, nuestra plataforma te devolverá los datos que ésta encuentra en AFIP,  pero el campo "error"  en "S", ya que no podemos determinar que la condición frente al IVA.
 2. Si el CUIT que estas consultando tiene requerimientos pendientes por responder o alguna otra inconsistencia en AFIP, el propio organismo bloquea el acceso a la información de su constancia y recibirás un error.
+3. Generalmente para los responsables inscriptos ARCA no informa todos los datos catastrales. Podes corroborar la info que te devolvemos accediendo a la [consulta de inscripción de ARCA](https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do)
 {% endhint %}
