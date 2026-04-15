@@ -6,7 +6,7 @@ description: >-
 
 # Tablas de referencia
 
-Obtené todos éstos datos haciendo un request a cada método, tomando como ejemplo el siguiente request:
+Obtene todos éstos datos haciendo un request a cada método, tomando como ejemplo el siguiente request:
 
 <mark style="color:green;">`POST`</mark> [`https://www.tusfacturas.app/app/api/v2/tablas_referencia/`](https://www.tusfacturas.app/app/api/v2/tablas_referencia/)`METODO`
 
@@ -31,8 +31,6 @@ Obtené todos éstos datos haciendo un request a cada método, tomando como ejem
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 ### Tipos de documento&#x20;
 
@@ -140,6 +138,7 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 | Exento                  | E              |
 | Cliente del exterior    | CDEX           |
 | IVA No Alcanzado        | IVNA           |
+| Proveedor del exterior  | PDEX           |
 
 ### Tipos de comprobantes
 
@@ -180,6 +179,7 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 | NOTA DE CREDITO ELECTRONICA MiPyME (FCE) C    | Solo habilitado en la modalidad "instantánea"            |
 | PRESUPUESTO                                   | Solo habilitado en la modalidad "instantánea"            |
 | REMITO                                        | Solo habilitado en la modalidad "instantánea"            |
+| COMPROBANTE EMITIDO EN EL EXTERIOR            | Solo disponible para compras.                            |
 
 {% hint style="danger" %}
 **IMPORTANTE - Consideraciones Legales:**
