@@ -13,7 +13,7 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 
 #### 🏆 ¿Por qué confiar en TusFacturasAPP?
 
-**Respaldo profesional dual:** Contamos con el soporte de un estudio contable especializado que nos mantiene actualizados con las últimas normativas fiscales de Argentina, y [VOUSYS](https://www.vousys.com/), una empresa de desarrollo de software con +20 años de experiencia, que garantiza que tu integración requiera la menor cantidad de cambios posibles.
+**Respaldo profesional dual:** Estamos desde 2015 ayudando a crecer a miles de negocios, con el respaldo constante de un estudio contable impositivo que entiende tu realidad y nos asegura que siempre estén actualizados con las últimas normativas fiscales de Argentina, y [VOUSYS](https://www.vousys.com/), una empresa de desarrollo de software con +20 años de experiencia, que garantiza que tu integración requiera la menor cantidad de cambios posibles.
 
 **Esto significa para tu desarrollo:**
 
@@ -22,7 +22,7 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 * ✅ **Soporte técnico especializado** - Respaldado por profesionales contables y de desarrollo
 * ✅ **Actualizaciones transparentes** - Te notificamos cualquier cambio con anticipación
 
-### 🎯 Comenzá en 3 Pasos
+### 🎯 Comenza en 3 Pasos
 
 {% stepper %}
 {% step %}
@@ -35,10 +35,10 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 {% endstep %}
 
 {% step %}
-#### Configurá tus Credenciales
+#### Configura tus Credenciales
 
-* Ingresá a **Menú > Mi espacio de trabajo > Puntos de venta**
-* Configurá tu CUIT personal con un punto de venta de prueba (ej: 679)
+* Ingresa a **Menú > Mi espacio de trabajo > Puntos de venta**
+* Configura tu CUIT personal con un punto de venta de prueba (ej: 679)
 * Una vez creado el punto de venta, tendrás disponible las credenciales API. En caso de no visualizarlas, significa que tu plan actual no corresponde a API DEV. [Contactános](https://tusfacturas.app/contacto.html) y lo resolvemos.
 {% endstep %}
 
@@ -60,7 +60,11 @@ Para garantizar el cumplimiento legal, no disponemos de un entorno de pruebas co
 * ✅ **La respuesta simula el comportamiento de producción** con campos CAE vacíos
 * ✅ **No se aplican validaciones adicionales** de AFIP/ARCA durante las pruebas
 
-### 🆘 ¿Necesitás Ayuda?
+#### 💡 ¿Cómo funciona el consumo de cupos en la API?
+
+Es fundamental entender que los límites de tu plan no funcionan como un pozo único, sino que se distribuyen de forma independiente según el tipo de operación.  Consulta nuestro centro de ayuda para más detalles sobre [qué contabiliza como un request](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp).
+
+### 🆘 ¿Necesitas Ayuda?
 
 #### Soporte Técnico
 
