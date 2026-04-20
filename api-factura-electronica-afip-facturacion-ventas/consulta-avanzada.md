@@ -16,16 +16,18 @@ Podrás aplicar diferentes **filtros** para refinar tus resultados, lo cual te p
 
 
 
+{% hint style="info" %}
 ⚠️ **Consideraciones importantes:**
+
+
 
 * La información obtenida se limita a los comprobantes del punto de venta desde el cual se realiza la solicitud.
 * Los resultados se ordenan de forma descendente por fecha de emisión y orden de llegada (del más reciente al más antiguo).
 * La consulta te devolverá los resultados paginados, con un límite máximo de ventas por página es de 1.000, dependiendo el método de consulta que utilices
 * El uso de éste método **no contabiliza como un request** en tu suscripción
+{% endhint %}
 
-
-
-Modalidades de búsqueda:
+#### Modalidades de búsqueda:
 
 * Por [fecha de emisión](consulta-avanzada.md#consulta-por-fecha-de-emision)
 * Por [rango numérico](consulta-avanzada.md#consulta-avanzada-por-rango-de-numeros)
@@ -80,7 +82,6 @@ Los campos devueltos son genéricos para cualquiera de los métodos de búsqueda
 | errores          | Array conteniendo la lista de errores detectados                                                                                                                                   |
 | total            | Campo numérico, que indica la cantidad de registros encontrados con los parámetros indicados, sin aplicarle la paginación ni limitación. (Dato disponible a partir del 01/04/2022) |
 | comprobantes     | Array conteniendo cada uno de los comprobantes encontrados, según estructura que se detalla en la [consulta simple.](api-factura-electronica-afip-consulta-de-comprobantes.md)     |
-|                  |                                                                                                                                                                                    |
 
 ***
 
@@ -122,6 +123,12 @@ La respuesta contendrá un array de comprobantes (emitidos o pendientes de emisi
 
 ```
 
+#### :arrows\_clockwise: Ver JSON de "Consulta simple"
+
+{% content-ref url="api-factura-electronica-afip-consulta-de-comprobantes.md" %}
+[api-factura-electronica-afip-consulta-de-comprobantes.md](api-factura-electronica-afip-consulta-de-comprobantes.md)
+{% endcontent-ref %}
+
 ***
 
 ### 🔍 Consulta avanzada por rango de números
@@ -162,7 +169,11 @@ La respuesta contendrá un array de comprobantes (emitidos o pendientes de emisi
 }
 ```
 
+#### :arrows\_clockwise: Ver JSON de "Consulta simple"
 
+{% content-ref url="api-factura-electronica-afip-consulta-de-comprobantes.md" %}
+[api-factura-electronica-afip-consulta-de-comprobantes.md](api-factura-electronica-afip-consulta-de-comprobantes.md)
+{% endcontent-ref %}
 
 ***
 
@@ -212,7 +223,14 @@ La respuesta contendrá un array de comprobantes (emitidos o pendientes de emisi
 		{comprobante_ver_consulta_simple}
 		]
 }
+
 ```
+
+#### :arrows\_clockwise: Ver JSON de "Consulta simple"
+
+{% content-ref url="api-factura-electronica-afip-consulta-de-comprobantes.md" %}
+[api-factura-electronica-afip-consulta-de-comprobantes.md](api-factura-electronica-afip-consulta-de-comprobantes.md)
+{% endcontent-ref %}
 
 ***
 
