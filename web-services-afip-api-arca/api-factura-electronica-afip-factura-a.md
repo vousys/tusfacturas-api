@@ -279,7 +279,9 @@ Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos 
 * **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
   👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-json-a-enviar)
 
+### :hand\_splayed: ¿Quién genera una factura A?
 
+Los responsables inscriptos solo pueden emitir comprobantes tipo "A",  cuando le facturan a otro responsable inscripto o a un monotributista. En ese caso el tipo de documento de tu cliente debe ser obligatoriamente CUIT.  Conoce mas detalles [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md)
 
 ### Respuesta esperada
 
@@ -302,10 +304,6 @@ Consulta la respuesta esperada, según el método que uses para enviarla:
 ### PDF de ejemplo de una Factura A
 
 ¿Necesitas una factura de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__FACTURA_A-00010-00000122.pdf). Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
-
-### ¿Quién genera una factura A?
-
-Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una factura A.
 
 #### Datos a tener en cuenta:
 

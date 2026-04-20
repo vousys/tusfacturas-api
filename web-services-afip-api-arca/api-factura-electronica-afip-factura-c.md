@@ -233,7 +233,9 @@ Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos 
 * **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
   👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-json-a-enviar)
 
+### :hand\_splayed: ¿Quién genera una factura C?
 
+Los monotributistas y exentos en IVA son los únicos que pueden emitir comprobantes tipo "C", sin importar a quien esten destinadas. Si le facturas a otro monotributista, a un exento en IVA o a un responsable inscripto, el tipo de documento de tu cliente debe ser obligatoriamente CUIT, en cualquier otro caso podes enviar DNI, OTRO, LE, Pasaporte, etc. Conoce mas detalles [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md)
 
 ### Respuesta esperada
 
@@ -251,15 +253,11 @@ Consulta la respuesta esperada, según el método que uses para enviarla:
 [api-factura-electronica-afip-api-facturacion-por-lotes.md](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-api-facturacion-por-lotes.md)
 {% endcontent-ref %}
 
-
-
 ### PDF de ejemplo de una Factura C
 
 ¿Necesitas una factura de ejemplo? [Descárgala ahora](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__FACTURA_C-00010-00000003.pdf). Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
-### ¿Quién genera una factura C?
 
-Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una factura C.
 
 ### Datos a tener en cuenta:
 

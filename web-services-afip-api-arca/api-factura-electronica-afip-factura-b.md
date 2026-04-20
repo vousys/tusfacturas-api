@@ -217,7 +217,11 @@ Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos 
 * **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
   👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-json-a-enviar)
 
+### :hand\_splayed: ¿Quién genera una factura B?
 
+Los responsables inscriptos solo pueden emitir comprobantes tipo "B",  cuando le facturan a un exento en IVA o a un consumidor final.&#x20;
+
+Cuando le facturan a un exento,  el tipo de documento de tu cliente debe ser obligatoriamente CUIT.  Cuando le facturan a un consumidor final,  el tipo de documento de tu cliente puede ser DNI, Pasaporte, OTRO, LE, LC.  Conoce mas detalles [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md)
 
 ### Respuesta esperada
 
