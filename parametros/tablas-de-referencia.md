@@ -345,7 +345,7 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 | Tipo de tributo                      | Régimen                                | Valor a enviar |
 | ------------------------------------ | -------------------------------------- | -------------- |
 | Percepciones IVA                     | No especificado                        | 1              |
-| Percepciones IVA                     | Reg. General (RG 2408)                 | 2              |
+| Percepciones IVA                     | Reg. General (RG 2408/3337)            | 2              |
 | Percepciones IVA                     | RG 5329                                | 3              |
 | Percepciones IIBB                    | CIUDAD AUTONOMA DE BUENOS AIRES (CABA) | 4              |
 | Percepciones IIBB                    | BUENOS AIRES                           | 5              |
