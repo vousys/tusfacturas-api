@@ -6,6 +6,13 @@ description: >-
 
 # Changelog
 
+### 18 de mayo
+
+Incorporamos tres mejoras para que tu facturación cumpla con la normativa Argentina:\
+\- **Defensa al consumidor por provincia:** Personaliza desde tu punto de venta los datos que aparecen al pie de tus PDFs según tu provincia.\
+\- **Actividad del punto de venta a ARCA:** Elegí si queres informar a ARCA automáticamente en cada venta, la actividad que factura tu punto de venta. \
+\- **Régimen de transparencia fiscal provincial (Ingresos Brutos):** Configura desde tu punto de venta la leyenda para facturas B a consumidor final correspondiente a la adecuación provincial, siguiendo las indicaciones de tu estudio contable.&#x20;
+
 ### 19 de marzo de 2026
 
 Se agregan 2 métodos para consultar el reporte de "Quién me debe" (solo [saldos](reportes/reporte-quien-me-debe-saldos.md) o [detallado](reportes/reporte-quien-me-debe-detalle.md))
@@ -117,7 +124,7 @@ Se agrega la documentación de "[nuevo recibo de cobro](recibos-de-cobro-y-orden
 
 ### 23 de marzo de 2022
 
-Se agrega el campo "webhook" a la documentación de "[Mi cuenta - administrar puntos de venta (PDV)](mi-cuenta/agregar-o-modificar-puntos-de-venta-pdv.md)
+Se agrega el campo "webhook" a la documentación de "[Mi cuenta - administrar puntos de venta (PDV)](mi-cuenta/agregar-o-modificar-puntos-de-venta.md)
 
 Se agrega la documentación de "[Eliminar comprobante encolado](web-services-afip-api-arca/eliminar-comprobantes-encolados.md)".
 

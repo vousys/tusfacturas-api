@@ -1,7 +1,8 @@
 ---
 description: >-
-  Integra la facturación electrónica AFIP/ARCA fácil y rápido con nuestra API.
-  ¡Confiable desde 2015! Elegida por todos los desarrolladores.
+  Integra la facturación electrónica ARCA fácil y rápido con nuestra API.
+  ¡Confiable desde 2015! Elegida por todos los desarrolladores y con el respaldo
+  de un estudio contable.
 ---
 
 # API Factura electrónica AFIP/ARCA Argentina fácil.

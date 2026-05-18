@@ -1,11 +1,11 @@
 ---
 description: >-
-  API AFIP/ARCA para emitir comprobantes con bonificacione. Ideal para pymes que
+  API ARCA para emitir comprobantes con bonificaciones. Ideal para pymes que
   necesitan aplicar descuentos. Ejemplos incluidos. Confiable desde 2015. ¡Los
   desarrolladores la aman!
 ---
 
-# Ejemplos con bonificaciones
+# Bonificaciones
 
 ### ¿Cómo aplicar bonificaciones a nivel producto?
 
