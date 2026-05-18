@@ -42,6 +42,14 @@ Si existe alguna alerta activada porque los servicios de AFIP no se encuentren f
 	"errores": [],
 	"facturacion": "03\/08\/2021 14:55 hs.  Los servicios de facturacion de AFIP estan presentando errores. Entendemos tu malestar y lo hemos reportado a la mesa de ayuda de AFIP con alta prioridad, pero no tenemos confirmacion de cuanto va a demorar. Para evitar inconsistencias, impediremos que factures por un lapso de 12 minutos. Si el problema continua, este lapso sera renovado de manera automatica. Para no demorar tu trabajo, te sugerimos facturar usando la herramienta: ventas en cola de procesamiento, desde plataforma web. Te pedimos disculpas de antemano, por este problema ajeno a nuestra plataforma. | ",
 	"novedades": "",
+	"prox_mantenimientos_programados": [
+		{
+			"desde": "30/05/2026 08:29",
+			"hasta": "30/05/2026 11:29",
+			"titulo": "Mantenimiento programado",
+			"texto": "Te informamos que realizaremos tareas de mantenimiento en nuestra plataforma entre las XX y las XX. Durante este tiempo, no podras acceder a la plataforma hasta que finalicen las mejoras implementadas."
+		}
+	],
 	"rta": "ERROR"
 }
 ```
