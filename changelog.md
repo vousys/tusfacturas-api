@@ -8,10 +8,12 @@ description: >-
 
 ### 18 de mayo de 2026
 
-Incorporamos tres mejoras para que tu facturación cumpla con la normativa Argentina. Éstos se configuran desde tu punto de venta, ya sea por la plataforma web o usando el método para modificar tu punto de venta.\
+Incorporamos tres mejoras para que tu facturación cumpla con la normativa Argentina. Éstos se configuran [desde tu punto de venta](mi-cuenta/agregar-o-modificar-puntos-de-venta.md), ya sea por la plataforma web o usando el método para modificar tu punto de venta.\
 \- **Defensa al consumidor por provincia:** Personaliza desde tu punto de venta el campo "factura->defensa\_consumidor" los datos que aparecen al pie de tus PDFs según tu provincia.\
 \- **Actividad del punto de venta a ARCA:** Elegí si queres informar a ARCA automáticamente en cada venta, la actividad que factura tu punto de venta. Ésto se configura en el campo: "actividad\_enviar\_arca"\
 \- **Régimen de transparencia fiscal provincial (Ingresos Brutos):** Configura desde tu punto de venta la leyenda para facturas B a consumidor final correspondiente a la adecuación provincial, siguiendo las indicaciones de tu estudio contable. Luego, configuralo en el bloque "reg\_transparencia\_provincial" de tu punto de venta.&#x20;
+
+[Estado de los servicios](web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md): se agrega un bloque con información sobre los próximos mantenimientos programados.
 
 ### 19 de marzo de 2026
 
