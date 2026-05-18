@@ -13,6 +13,8 @@ Incorporamos tres mejoras para que tu facturación cumpla con la normativa Argen
 \- **Actividad del punto de venta a ARCA:** Elegí si queres informar a ARCA automáticamente en cada venta, la actividad que factura tu punto de venta. \
 \- **Régimen de transparencia fiscal provincial (Ingresos Brutos):** Configura desde tu punto de venta la leyenda para facturas B a consumidor final correspondiente a la adecuación provincial, siguiendo las indicaciones de tu estudio contable.&#x20;
 
+Configurá estos campos desde tus [puntos de venta via API](mi-cuenta/agregar-o-modificar-puntos-de-venta.md) o web.
+
 ### 19 de marzo de 2026
 
 Se agregan 2 métodos para consultar el reporte de "Quién me debe" (solo [saldos](reportes/reporte-quien-me-debe-saldos.md) o [detallado](reportes/reporte-quien-me-debe-detalle.md))
