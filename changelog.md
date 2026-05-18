@@ -6,7 +6,7 @@ description: >-
 
 # Changelog
 
-### 18 de mayo
+### 18 de mayo de 2026
 
 Incorporamos tres mejoras para que tu facturación cumpla con la normativa Argentina:\
 \- **Defensa al consumidor por provincia:** Personaliza desde tu punto de venta los datos que aparecen al pie de tus PDFs según tu provincia.\
