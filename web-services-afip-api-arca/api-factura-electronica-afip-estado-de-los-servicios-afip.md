@@ -48,9 +48,11 @@ Si existe alguna alerta activada porque los servicios de AFIP no se encuentren f
 
 ### Respuesta del servicio
 
-En caso de no existir errores, se devolverá la variable error con un valor "N", además de las variables que enunciamos a continuación.
+En caso de no detectarse errores, la variable `error` será devuelta con el valor `"N"`, junto con las variables detalladas a continuación.
 
-Facturación devolverá "OK" si los servicios de la AFIP funcionan sin inconvenientes o devolverá un mensaje de alerta con el detalle de la incidencia.
+La variable `facturacion` devolverá `"OK"` cuando los servicios de ARCA funcionen correctamente. En caso contrario, se informará un mensaje de alerta con el detalle de la incidencia detectada.
+
+Dentro del bloque `prox_mantenimientos_programados` te informaremos las próximas tareas de mantenimiento programadas. Durante ese período no podrás acceder a la plataforma y todas las solicitudes enviadas vía API serán rechazadas hasta la finalización de las mejoras implementadas. Tene en cuenta que también podrán realizarse tareas de mantenimiento de urgencia que, debido a la inmediatez con la que deban aplicarse, podrían no encontrarse listadas previamente dentro de este bloque.
 
 ```json
 {
