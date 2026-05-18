@@ -58,6 +58,14 @@ Facturación devolverá "OK" si los servicios de la AFIP funcionan sin inconveni
 	"errores": [""],
 	"rta": "OK",
 	"facturacion": "OK",
+	"prox_mantenimientos_programados": [
+		{
+			"desde": "30/05/2026 08:29",
+			"hasta": "30/05/2026 11:29",
+			"titulo": "Mantenimiento programado",
+			"texto": "Te informamos que realizaremos tareas de mantenimiento en nuestra plataforma entre las XX y las XX. Durante este tiempo, no podras acceder a la plataforma hasta que finalicen las mejoras implementadas."
+		}
+	],
 	"novedades": "24\/03\/2016 | App M\u00f3vil - Actualizaci\u00f3nYa se encuentra disponible para Iphone\/Ipad , la version 2.1 de nuestra app m\u00f3vil.  Descargala! 17\/03\/2016 | Reclamo de deudas autom\u00e1tico: Ahora podes indicar la cantidad de dias desde cuando el sistema empieza a reclamarle a tu cliente la deuda. Ingres\u00e1 a cliente y configuralo ",
 }
 ```
