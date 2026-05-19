@@ -104,7 +104,7 @@ Más info:  [Adecuación al Régimen de Transparencia Fiscal Provincial: configu
         "mensaje": "Le enviamos la factura que se encuentra adjunta",
         "copias": "2",
         "imprimir_sku": "N",
-         "defensa_consumidor": "Defensa al consumidor WhatsApp 2617542335",
+         "defensa_consumidor": "",
     },
     "reg_transparencia_provincial": {
 			"fecha_inicio": "01/09/2026",
