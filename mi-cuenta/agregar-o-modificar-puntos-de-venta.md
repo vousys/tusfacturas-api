@@ -62,7 +62,7 @@ Datos a tener en cuenta:
 
 En el marco de la Ley N° 27.743 de Medidas Fiscales Paliativas y Relevantes, reglamentada por la Resolución General ARCA N° 5614/2024 (B.O. 13/12/2024), se estableció el Régimen de Transparencia Fiscal al Consumidor. Esta norma obliga a discriminar en las facturas el IVA y demás impuestos nacionales indirectos en operaciones con consumidores finales.
 
-La misma ley invita a las provincias y a CABA a adherirse para que también se detallen en los comprobantes el Impuesto sobre los Ingresos Brutos (IIBB) y las tasas municipales. A medida que cada jurisdicción se adhiere y reglamenta, los contribuyentes inscriptos en IIBB quedan obligados a incluir una leyenda con la alícuota aplicable en las facturas B emitidas a consumidor final.
+La misma ley invita a las provincias y a CABA a adherirse para que también se detallen en los comprobantes el Impuesto sobre los Ingresos Brutos (IIBB) y las tasas municipales. A medida que cada jurisdicción se adhiere y reglamenta, los contribuyentes inscriptos en IIBB quedan obligados a incluir una leyenda con la alícuota aplicable en las facturas emitidas a consumidor final.
 
 Más info:  [Adecuación al Régimen de Transparencia Fiscal Provincial: configuración en TusFacturasAPP ](https://ayuda.tusfacturas.app/es/articles/15137188-adecuacion-al-regimen-de-transparencia-fiscal-provincial-configuracion-en-tusfacturasapp)
 
