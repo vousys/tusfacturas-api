@@ -103,6 +103,7 @@ Más info:  [Adecuación al Régimen de Transparencia Fiscal Provincial: configu
         "reply_to": "PIRULO",
         "mensaje": "Le enviamos la factura que se encuentra adjunta",
         "copias": "2",
+        "imprimir_sku": "N",
          "defensa_consumidor": "Defensa al consumidor WhatsApp 2617542335",
     },
     "reg_transparencia_provincial": {
