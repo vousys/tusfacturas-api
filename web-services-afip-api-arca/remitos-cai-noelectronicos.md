@@ -18,7 +18,9 @@ Remito - solo en la modalidad "[Instantánea](../api-factura-electronica-afip-fa
 ### JSON para generar un remito en AFIP/ARCA
 
 {% hint style="info" %}
-Para que tu remito tenga validez legal, debes imprimirlo en papel pre-impreso con CAI. Para eso contamos con varios modelos de diseño especiales para ésta función. Conoce mas sobre como configurar el diseño que mejor se adapte a tu papel pre-impreso,[ desde aqui.](https://ayuda.tusfacturas.app/es/articles/10354317-como-cambio-el-estilo-de-las-facturas-en-pdf-que-emito)
+Para que tu remito tenga validez legal, debes imprimirlo en papel pre-impreso con CAI. Para eso contamos con varios modelos de diseño especiales para ésta función.&#x20;
+
+Conoce mas sobre como configurar el diseño que mejor se adapte a tu papel pre-impreso,[ desde aqui.](https://ayuda.tusfacturas.app/es/articles/10354317-como-cambio-el-estilo-de-las-facturas-en-pdf-que-emito)
 {% endhint %}
 
 ```json
@@ -203,7 +205,7 @@ puts response.read_body
 {% endtab %}
 {% endtabs %}
 
-### Parámetros para crear un recibo C&#x20;
+### Parámetros para crear un remito
 
 [TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/),  con referencia a cada parámetro.
 
