@@ -13,7 +13,7 @@ Incorporamos tres mejoras para que tu facturación cumpla con la normativa Argen
 \- **Actividad del punto de venta a ARCA:** Elegí si queres informar a ARCA automáticamente en cada venta, la actividad que factura tu punto de venta. Ésto se configura en el campo: "actividad\_enviar\_arca"\
 \- **Régimen de transparencia fiscal provincial (Ingresos Brutos):** Configura desde tu punto de venta la leyenda para facturas B a consumidor final correspondiente a la adecuación provincial, siguiendo las indicaciones de tu estudio contable. Luego, configuralo en el bloque "reg\_transparencia\_provincial" de tu punto de venta.&#x20;
 
-[Estado de los servicios](web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md): se agrega un bloque con información sobre los próximos mantenimientos programados.
+[Estado de los servicios](web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md): se agrega un bloque con información sobre los próximos mantenimientos programados cuya duración sea mayor a 15 minutos y por cuestiones de fuerza mayor debamos rechazar todos los requests.
 
 ### 19 de marzo de 2026
 

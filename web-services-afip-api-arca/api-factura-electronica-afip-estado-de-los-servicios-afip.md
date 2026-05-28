@@ -34,7 +34,7 @@ Tene en cuenta que todos nuestros métodos controlan internamente el estado de l
 ```
 {% endcode %}
 
-Si existe alguna alerta activada porque los servicios de AFIP no se encuentren funcionando, obtendrás la información en el bloque "facturacion", como se visualiza en el siguiente ejemplo:
+Si existe alguna alerta activada porque los servicios de ARCA no se encuentren funcionando, obtendrás la información en el bloque "facturacion" y los requests que envies para facturar en la modalidad "instantánea" como se visualiza en el siguiente ejemplo:
 
 ```
 {
@@ -58,9 +58,15 @@ Si existe alguna alerta activada porque los servicios de AFIP no se encuentren f
 
 En caso de no detectarse errores, la variable `error` será devuelta con el valor `"N"`, junto con las variables detalladas a continuación.
 
-La variable `facturacion` devolverá `"OK"` cuando los servicios de ARCA funcionen correctamente. En caso contrario, se informará un mensaje de alerta con el detalle de la incidencia detectada.
+La variable `facturacion` devolverá `"OK"` cuando los servicios de ARCA funcionen correctamente. En caso contrario, se informará un mensaje de alerta con el detalle de la incidencia detectada y si estas facturando en la modalidad instantánea, tus requests serán rechazados.
 
-Dentro del bloque `prox_mantenimientos_programados` te informaremos las próximas tareas de mantenimiento programadas. Durante ese período no podrás acceder a la plataforma y todas las solicitudes enviadas vía API serán rechazadas hasta la finalización de las mejoras implementadas. Tene en cuenta que también podrán realizarse tareas de mantenimiento de urgencia que, debido a la inmediatez con la que deban aplicarse, podrían no encontrarse listadas previamente dentro de este bloque.
+Dentro del bloque `prox_mantenimientos_programados` te informaremos las próximas tareas de mantenimiento programadas, ya sea por nuestro equipo o por ARCA.
+
+Cuando las tareas sean realizadas por nuestro equipo, durante ese período no podrás acceder a la plataforma y todas las solicitudes enviadas vía API serán rechazadas hasta la finalización de las mejoras implementadas.
+
+En el caso de mantenimientos programados por ARCA, únicamente serán rechazados los requests que impacten en la facturación instantánea.
+
+Ten en cuenta que también podrán realizarse tareas de mantenimiento de urgencia que, debido a la inmediatez con la que deban aplicarse, podrían no encontrarse previamente listadas dentro de este bloque.
 
 ```json
 {
