@@ -9,7 +9,7 @@ icon: code
 
 ### ¿Qué son los Recibos C de ARCA? <a href="#h_078bc3c5c9" id="h_078bc3c5c9"></a>
 
-Los Recibos C de ARCA son comprobantes fiscales que **funcionan de manera similar a las facturas "C" tradicionales**. Se utilizan para documentar operaciones comerciales, suman en la cuenta corriente de tu cliente y tienen validez ante ARCA. No son recibos de cobro.
+Los Recibos C de ARCA (  Código ARCA: 0015  ) son comprobantes fiscales que **funcionan de manera similar a las facturas "C" tradicionales**. Se utilizan para documentar operaciones comerciales, suman en la cuenta corriente de tu cliente y tienen validez ante ARCA. No son recibos de cobro.
 
 #### :warning:  Importante: Los recibos "C", no son recibos de cobro <a href="#h_5705328de9" id="h_5705328de9"></a>
 
