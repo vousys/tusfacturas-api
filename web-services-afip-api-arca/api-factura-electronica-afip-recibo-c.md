@@ -7,6 +7,14 @@ icon: code
 
 # Recibo C
 
+### ¿Qué son los Recibos C de ARCA? <a href="#h_078bc3c5c9" id="h_078bc3c5c9"></a>
+
+Los Recibos C de ARCA son comprobantes fiscales que **funcionan de manera similar a las facturas "C" tradicionales**. Se utilizan para documentar operaciones comerciales, suman en la cuenta corriente de tu cliente y tienen validez ante ARCA. No son recibos de cobro.
+
+### Importante: No son recibos de cobro <a href="#h_5705328de9" id="h_5705328de9"></a>
+
+Aunque ARCA los haya nomenclado como "recibos", estos documentos son equivalentes a facturas C comunes en cuanto a su tratamiento contable.
+
 ### Endpoints
 
 Recibo C emitido en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
