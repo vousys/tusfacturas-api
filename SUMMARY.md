@@ -33,7 +33,7 @@
   * [Consulta por fecha de comprobante](web-services-afip-api-arca/consulta-avanzada-por-fecha.md)
   * [Consulta por rango numérico de comprobantes](web-services-afip-api-arca/consulta-avanzada-por-numero.md)
   * [¿Debo emitir una MiPyme?](web-services-afip-api-arca/debo-emitir-una-mipyme.md)
-  * [Estado de los servicios AFIP/ARCA](web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md)
+  * [Estado de los servicios](web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md)
   * [Consultar numeración de comprobantes.](web-services-afip-api-arca/api-factura-electronica-afip-consultar-numeracion-de-comprobantes..md)
   * [Eliminar comprobantes encolados](web-services-afip-api-arca/eliminar-comprobantes-encolados.md)
   * [Cambiar fecha a comprobante encolado](web-services-afip-api-arca/cambiar-fecha-a-comprobante-encolado.md)
