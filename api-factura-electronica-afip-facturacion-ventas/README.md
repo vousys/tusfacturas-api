@@ -2,6 +2,24 @@
 description: >-
   Integra la facturación electrónica AFIP fácil y rápido con nuestra API.
   ¡Confiable desde 2015! Elegida por todos los desarrolladores.
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # 📗 Documentación API Facturación AFIP/ARCA
