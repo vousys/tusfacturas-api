@@ -49,6 +49,12 @@ Antes de iniciar el proceso de migración, asegurate de haber completado:
 * Debés limpiar los datos de prueba antes de la migración
 * Una vez vinculado con AFIP/ARCA, no podrás usar planes API DEV en esta cuenta
 
+{% hint style="info" %}
+Conoce la guía que datos necesitas pedirle a tus clientes para hacer el onboarding en TusFacturasAPP
+
+<a href="https://ayuda.tusfacturas.app/es/articles/15706757-que-informacion-necesito-pedirle-a-mis-usuarios-para-integrarlos-con-la-api-de-tusfacturasapp" class="button primary" data-icon="rocket-launch">Requisitos de Onboarding para clientes</a>
+{% endhint %}
+
 ***
 
 ### 🛠️ Proceso de Migración Paso a Paso
