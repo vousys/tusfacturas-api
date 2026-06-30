@@ -3,6 +3,7 @@ description: >-
   TusFacturasAPP: Solución SaaS líder en facturación electrónica para empresas.
   Integra nuestra API y emití comprobantes por lote asincrónicos desde tu
   plataforma.
+hidden: true
 icon: l
 ---
 

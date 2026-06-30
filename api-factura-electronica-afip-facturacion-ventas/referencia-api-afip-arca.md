@@ -70,7 +70,7 @@ Para obtener una guía detallada de los campos específicos por tipo de comproba
 
 Este ejemplo te servirá como referencia para construir tus requests correctamente y evitar errores comunes al integrarte con los **web services de AFIP/ARCA**.
 
-{% code title="JSON" fullWidth="true" %}
+{% code title="JSON" %}
 ```json
 {
    "usertoken":"xxxxxx",
