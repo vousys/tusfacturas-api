@@ -10,7 +10,7 @@ icon: l
 # Facturación asincrónica por Lotes (encolada)
 
 {% hint style="warning" %}
-Éste método dejará de estar disponible a partir del 01/03/2026
+Éste método dejó de estar disponible desde el 01/03/2026
 {% endhint %}
 
 TusFacturasAPP es un proveedor SaaS líder de servicios de facturación electrónica en Argentina, que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
