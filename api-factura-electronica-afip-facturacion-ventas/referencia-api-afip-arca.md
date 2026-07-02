@@ -308,7 +308,7 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 
 **REDONDEO DE NÚMEROS / SUMATORIAS / TOTALES**
 
-* Para evitar inconsistencias en la validación de las sumatorias,  sugerimos redondear a 2 decimales los valores y aplicar el redondeo con "Round half even". Te dejamos un link para que puedas probar online éste redondeo: [https://roundingcalculator.guru/rounding-half-to-even-calculator/](https://roundingcalculator.guru/rounding-half-to-even-calculator/)
+* Dado que la plataforma trabaja con precios unitarios de productos/servicios en 3 decimales y los totales con 2, pueden surgir diferencias para aquellas empreas que trabajen con precios finales. El redondeo que se utiliza de acuerdo a los lineamientos de ARCA es "Round half even". En el siguiente articulo de [ajustes, redondeos y precios sin IVA](https://ayuda.tusfacturas.app/es/articles/12548047-redondeos-ajustes-y-precios-sin-iva) te explicamos con un ejemplo práctico.&#x20;
 * **TusFacturas.app NO válida la totalidad de los datos enviados como asi tampoco las sumatorias de los ítems que estas enviando para facturar. Es tu responsabilidad corroborar y validar éstos datos antes de enviarlos.**
 * **AFIP recibe únicamente totales**, no el detalle de los items que facturas, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica, TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
 
