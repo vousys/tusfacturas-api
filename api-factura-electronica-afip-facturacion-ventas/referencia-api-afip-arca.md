@@ -308,7 +308,11 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 
 **REDONDEO DE NÚMEROS / SUMATORIAS / TOTALES**
 
-* Dado que la plataforma trabaja con precios unitarios de productos/servicios en 3 decimales y los totales con 2, pueden surgir diferencias para aquellas empreas que trabajen con precios finales. El redondeo que se utiliza de acuerdo a los lineamientos de ARCA es "Round half even". En el siguiente articulo de [ajustes, redondeos y precios sin IVA](https://ayuda.tusfacturas.app/es/articles/12548047-redondeos-ajustes-y-precios-sin-iva) te explicamos con un ejemplo práctico.&#x20;
+*   Nuestra plataforma gestiona los precios unitarios de productos y servicios con 3 decimales, mientras que los totales se calculan con 2 decimales. Debido a esto, pueden surgir pequeñas diferencias de facturación en aquellas empresas que trabajan con precios finales (IVA incluido).
+
+    Para garantizar la precisión fiscal, aplicamos el método de redondeo "Round half even" (redondeo bancario), siguiendo estrictamente los lineamientos de ARCA.
+
+    En el siguiente artículo sobre [ajustes, redondeos y precios sin IVA](https://ayuda.tusfacturas.app/es/articles/12548047-redondeos-ajustes-y-precios-sin-iva) te explicamos cómo funciona mediante un ejemplo práctico.
 * **TusFacturas.app NO válida la totalidad de los datos enviados como asi tampoco las sumatorias de los ítems que estas enviando para facturar. Es tu responsabilidad corroborar y validar éstos datos antes de enviarlos.**
 * **AFIP recibe únicamente totales**, no el detalle de los items que facturas, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica, TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
 
@@ -492,6 +496,14 @@ comprobante: {
 
 El detalle de conceptos se compone de una lista de cada uno de los productos o servicios que vas a facturar. Cada producto o servicio único que incluyas en tu cmoprobante se considera un concepto diferente. Por ejemplo, si vendes 10 unidades de un producto, solo contarían como un concepto. **El límite máximo de conceptos por comprobante es de 130**.
 
+{% hint style="info" %}
+Nuestra plataforma gestiona los precios unitarios de productos y servicios con 3 decimales, mientras que los totales se calculan con 2 decimales. Debido a esto, pueden surgir pequeñas diferencias de facturación en aquellas empresas que trabajan con precios finales (IVA incluido).
+
+Para garantizar la precisión fiscal, aplicamos el método de redondeo "Round half even" (redondeo bancario), siguiendo estrictamente los lineamientos de ARCA.
+
+En el siguiente artículo sobre [ajustes, redondeos y precios sin IVA](https://ayuda.tusfacturas.app/es/articles/12548047-redondeos-ajustes-y-precios-sin-iva) te explicamos cómo funciona mediante un ejemplo práctico.
+{% endhint %}
+
 La estructura **de la lista de conceptos** a enviar es la siguiente:
 
 {% code title="JSON" %}
@@ -569,6 +581,11 @@ Cada producto o servicio que envies sera almacenado en la lista de precios que s
 **Datos a tener en cuenta:**
 
 * Si el producto ya existía en tu base de productos de nuestra plataforma ( se valida que sea la misma lista de precios, código de producto y/o descripción del mismo), el mismo será actualizado por completo, con los nuevos datos que envíes, solo  si indicas que deseas actualizar el precio con el campo "actualiza\_precio":"S".  En caso de no querer actualizar el producto, si el mismo ya existía, se facturará con el nuevo precio y descripción que envíes, pero mantendrá sus datos anteriores.
+*   Nuestra plataforma gestiona los precios unitarios de productos y servicios con 3 decimales, mientras que los totales se calculan con 2 decimales. Debido a esto, pueden surgir pequeñas diferencias de facturación en aquellas empresas que trabajan con precios finales (IVA incluido).
+
+    Para garantizar la precisión fiscal, aplicamos el método de redondeo "Round half even" (redondeo bancario), siguiendo estrictamente los lineamientos de ARCA.
+
+    En el siguiente artículo sobre [ajustes, redondeos y precios sin IVA](https://ayuda.tusfacturas.app/es/articles/12548047-redondeos-ajustes-y-precios-sin-iva) te explicamos cómo funciona mediante un ejemplo práctico.
 * Si el comprobante que envías a facturar es de tipo C, todos los productos/conceptos que factures no deben llevar IVA y deberás enviar cada concepto con su precio final
 * Si el comprobante que envías, es de tipo A o B, los productos o servicios que envíes a facturar, deben ser enviados siempre SIN IVA, porque el IVA se calcula del lado de nuestra plataforma en base al campo "alicuota" que envías. Conocé más de los tipos de comprobantes, [desde aquí ](que-tipos-de-comprobante-debo-puedo-emitir.md)
 * En caso que alguno de tus conceptos cuente con un signo porcentual (%) en el nombre (ej:  Promo 20% OFF)  deberás reemplazarlo por los siguientes caracteres: **#\&#**&#x20;
