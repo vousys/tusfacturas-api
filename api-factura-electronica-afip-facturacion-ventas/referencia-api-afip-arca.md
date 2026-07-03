@@ -313,6 +313,7 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
     Para garantizar la precisión fiscal, aplicamos el método de redondeo "Round half even" (redondeo bancario), siguiendo estrictamente los lineamientos de ARCA.
 
     En el siguiente artículo sobre [ajustes, redondeos y precios sin IVA](https://ayuda.tusfacturas.app/es/articles/12548047-redondeos-ajustes-y-precios-sin-iva) te explicamos cómo funciona mediante un ejemplo práctico.
+* Siempre debes enviar los valores en positivo (mayor o igual a cero), nunca con valores negativos.
 * **TusFacturas.app NO válida la totalidad de los datos enviados como asi tampoco las sumatorias de los ítems que estas enviando para facturar. Es tu responsabilidad corroborar y validar éstos datos antes de enviarlos.**
 * **AFIP recibe únicamente totales**, no el detalle de los items que facturas, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica, TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
 
