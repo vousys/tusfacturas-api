@@ -46,7 +46,8 @@ Obtene todos éstos datos haciendo un request a cada método, tomando como ejemp
 | OTRO (no requiere enviar el numero) | OTRO           |
 | CDI                                 | CDI            |
 | CUIL                                | CUIL           |
-|                                     |                |
+| Libreta de enrolamiento             | LE             |
+| Fondo común de inversión CNV        | FCICNV         |
 
 ### Alícuotas de IVA
 

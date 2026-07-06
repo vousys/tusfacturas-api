@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 06 de julio de 2026
+
+Se agregan los tipos de documento: LE (Libreta de enrolamiento) y FCICNV (Fondo común de Inversión CNV)
+
 ### 18 de mayo de 2026
 
 Incorporamos tres mejoras para que tu facturación cumpla con la normativa Argentina. Éstos se configuran [desde tu punto de venta](mi-cuenta/agregar-o-modificar-puntos-de-venta.md), ya sea por la plataforma web o usando el método para modificar tu punto de venta.\
