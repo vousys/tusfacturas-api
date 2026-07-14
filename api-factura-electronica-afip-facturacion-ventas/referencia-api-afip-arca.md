@@ -308,6 +308,7 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 
 **REDONDEO DE NÚMEROS / SUMATORIAS / TOTALES**
 
+* Usamos punto (.) como separador decimal y no utilizamos separador de miles.
 *   Nuestra plataforma gestiona los precios unitarios de productos y servicios con 3 decimales, mientras que los totales se calculan con 2 decimales. Debido a esto, pueden surgir pequeñas diferencias de facturación en aquellas empresas que trabajan con precios finales (IVA incluido).
 
     Para garantizar la precisión fiscal, aplicamos el método de redondeo "Round half even" (redondeo bancario), siguiendo estrictamente los lineamientos de ARCA.
