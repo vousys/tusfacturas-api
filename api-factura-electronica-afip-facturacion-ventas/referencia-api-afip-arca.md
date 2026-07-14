@@ -696,7 +696,9 @@ comprobante: {
 
 ### Estructura de "pagos"    <a href="#estructuradepagos" id="estructuradepagos"></a>
 
-Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "**pagos**" con la estructura como se detalla a continuación. **Éste bloque es opcional.**
+Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "**pagos**" con la estructura como se detalla a continuación. Dado que la plataforma gestiona la contabilidad en las cuentas corrientes en pesos, el importe que envies debe corresponder al total de tu comprobante en pesos argentinos.
+
+**Éste bloque es opcional.**
 
 Los pagos que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
 
