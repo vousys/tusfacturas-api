@@ -6,7 +6,7 @@ description: >-
 
 # Changelog
 
-### 15 de julio
+### 15 de julio de 2026
 
 Se incorporaron nuevas validaciones que pueden rechazar automáticamente tus comprobantes en los siguientes casos:
 
