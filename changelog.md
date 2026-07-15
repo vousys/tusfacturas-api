@@ -10,18 +10,26 @@ description: >-
 
 Se incorporaron nuevas validaciones que pueden rechazar automáticamente tus comprobantes en los siguientes casos:
 
-* Si tu factura se emite en pesos argentinos (Moneda = PES), la cotización que envies debe ser "1". Cualquier otro valor que envies será rechazado automáticamente.
+* Si tu factura se emite en pesos argentinos (Moneda = PES), la cotización que envies debe ser "1", de acuerdo a nuestra documentación. Cualquier otro valor que envies será rechazado automáticamente.
 
 ### 06 de julio de 2026
 
 Se agregan los tipos de documento: LE (Libreta de enrolamiento) y FCICNV (Fondo común de Inversión CNV)
+
+### 03 de julio de 2026
+
+Se incorporaron nuevas validaciones que pueden rechazar automáticamente tus comprobantes en los siguientes casos:
+
+* **Fecha de emisión**: si el comprobante impacta en ARCA y la fecha de emisión es anterior a los últimos 10 días, será rechazado automáticamente. Conoce [hasta cuántos días hacia atras, te permite ARCA facturar](https://ayuda.tusfacturas.app/es/articles/10355161-hasta-cuantos-dias-puedo-facturar-para-atras).&#x20;
+* **Código de producto:** Si el código de tu producto excede el máximo permitido de 20 caracteres.
 
 ### 30 de junio 2026
 
 Se incorporaron nuevas validaciones que pueden rechazar automáticamente tus ventas en los siguientes casos:
 
 * Importes negativos: todos los importes enviados deben ser positivos. Las ventas con valores negativos serán rechazados.
-* Fecha de emisión: si el comprobante impacta en ARCA y la fecha de emisión es anterior a los últimos 10 días, será rechazado automáticamente. Conoce [hasta cuántos días hacia atras, te permite ARCA facturar](https://ayuda.tusfacturas.app/es/articles/10355161-hasta-cuantos-dias-puedo-facturar-para-atras).
+
+
 
 
 
