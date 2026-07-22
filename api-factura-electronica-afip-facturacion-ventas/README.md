@@ -147,7 +147,7 @@ Explora las funcionalidades de nuestra [API Rest para AFIP/ARCA](referencia-api-
 
 ***
 
-### ¿Aún te quedan dudas? ¡Contactános!
+### 💡 Soporte y Recursos
 
-En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
+¿Tenes preguntas sobre la API? Visita nuestro Centro de Ayuda en [ayuda.tusfacturas.app](https://ayuda.tusfacturas.app) para acceder a guías paso a paso y solución de problemas o escribnos a api@tusfacturas.app
 

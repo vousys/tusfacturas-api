@@ -29,3 +29,7 @@ Para obtener un detalle completo de tus ventas, incluyendo la referencia externa
 {% endstepper %}
 
 Estas herramientas te permitirán revisar la información enviada y recibida, identificando rápidamente cualquier posible inconveniente.
+
+### 💡 Soporte y Recursos
+
+¿Tenes preguntas sobre la API? Visita nuestro Centro de Ayuda en [ayuda.tusfacturas.app](https://ayuda.tusfacturas.app) para acceder a guías paso a paso y solución de problemas o escribnos a api@tusfacturas.app

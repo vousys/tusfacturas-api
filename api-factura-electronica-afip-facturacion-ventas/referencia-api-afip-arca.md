@@ -781,7 +781,7 @@ comprobante: {
 <table><thead><tr><th>Nombre del campo</th><th align="center">Requerido</th><th>Detalle</th></tr></thead><tbody><tr><td><pre><code>paga_misma_moneda
 </code></pre></td><td align="center">OPCIONAL</td><td><p>Éste dato entra en vigencia el 15/04/2025 según la RG5616/2024 y deberá enviarse "N" para indicar "No informa" o "S" para indicar "Si". </p><p>En caso de enviarse con el valor "S", la moneda enviada debe ser diferente al Peso Argentino y la cotización debe ser la oficial provista por AFIP/ARCA desde <a href="../consultas-varias-a-servicios-afip-arca/cotizacion-monedas-afip.md">éste método</a></p></td></tr></tbody></table>
 
-### ¿Aún te quedan dudas? ¡Contactános!
+### 💡 Soporte y Recursos
 
-En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
+¿Tenes preguntas sobre la API? Visita nuestro Centro de Ayuda en [ayuda.tusfacturas.app](https://ayuda.tusfacturas.app) para acceder a guías paso a paso y solución de problemas o escribnos a api@tusfacturas.app
 
