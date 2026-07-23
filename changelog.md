@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 23 de julio de 2026
+
+El método de consulta de constancia de inscripción ahora incluye el campo `constancia_full_datos`. Este contiene la respuesta completa entregada por ARCA, facilitando el acceso a datos adicionales que puedan ser requeridos por otros servicios.
+
 ### 15 de julio de 2026
 
 Se incorporaron nuevas validaciones que pueden rechazar automáticamente tus comprobantes en los siguientes casos:
