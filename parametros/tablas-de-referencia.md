@@ -181,6 +181,8 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 | PRESUPUESTO                                   | Solo habilitado en la modalidad "instantánea"            |
 | REMITO                                        | Solo habilitado en la modalidad "instantánea"            |
 | COMPROBANTE EMITIDO EN EL EXTERIOR            | Solo disponible para compras.                            |
+| LIQUIDACIONES A                               | Habilitado en la modalidad "instantánea" y "asincrónica" |
+| LIQUIDACIONES B                               | Habilitado en la modalidad "instantánea" y "asincrónica" |
 
 {% hint style="danger" %}
 **IMPORTANTE - Consideraciones Legales:**

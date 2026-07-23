@@ -23,6 +23,8 @@
   * [Nota de débito B](web-services-afip-api-arca/api-factura-electronica-afip-nota-de-debito-b.md)
   * [Nota de débito C](web-services-afip-api-arca/api-factura-electronica-afip-nota-de-debito-c.md)
   * [Nota de débito E](web-services-afip-api-arca/nota-de-debito-e.md)
+  * [Liquidaciones A](web-services-afip-api-arca/api-factura-electronica-arca-liquidaciones-a-63.md)
+  * [Liquidaciones B](web-services-afip-api-arca/api-factura-electronica-arca-liquidaciones-b-64.md)
   * [Factura A - RG5329](web-services-afip-api-arca/api-factura-electronica-afip-factura-a-rg5329.md)
   * [Factura A en dólares](web-services-afip-api-arca/api-factura-electronica-afip-arca-factura-a-dolares.md)
   * [Factura A con bonificaciones](web-services-afip-api-arca/api-factura-electronica-afip-arca-factura-a-con-bonificacion.md)

@@ -8,7 +8,8 @@ description: >-
 
 ### 23 de julio de 2026
 
-El método de consulta de constancia de inscripción ahora incluye el campo `constancia_full_datos`. Este contiene la respuesta completa entregada por ARCA, facilitando el acceso a datos adicionales que puedan ser requeridos por otros servicios.
+* El método de consulta de constancia de inscripción ahora incluye el campo `constancia_full_datos`. Este contiene la respuesta completa entregada por ARCA, facilitando el acceso a datos adicionales que puedan ser requeridos por otros servicios.
+* Nuevo soporte para Liquidaciones A y B (RG ARCA 5866/2026): Se incorporaron los nuevos tipos de comprobantes de venta [Liquidación A (Código ARCA 63)](web-services-afip-api-arca/api-factura-electronica-arca-liquidaciones-a-63.md) y [Liquidación B (Código ARCA 64)](web-services-afip-api-arca/api-factura-electronica-arca-liquidaciones-b-64.md). Con esta actualización, el sistema permite la emisión, autorización electrónica y registro de estas operaciones en pleno cumplimiento con la normativa vigente dictada por ARCA.
 
 ### 15 de julio de 2026
 
