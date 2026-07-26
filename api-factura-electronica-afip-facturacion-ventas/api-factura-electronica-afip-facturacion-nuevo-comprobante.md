@@ -39,7 +39,7 @@ Esta modalidad se caracteriza por brindar una **respuesta inmediata del servicio
 
 ### ⚠️ Consideraciones clave sobre errores y estabilidad
 
-Los servicios de AFIP pueden presentar **intermitencias frecuentes**. Por eso, **TusFacturasAPP incluye un sistema robusto de manejo de errores**, que te notifica en caso de fallas o demoras del servicio oficial.
+Los servicios de AFIP/ARCA pueden presentar **intermitencias frecuentes**. Por eso, **TusFacturasAPP incluye un sistema robusto de manejo de errores**, que te notifica en caso de fallas o demoras del servicio oficial.
 
 * 🔔 Si la respuesta contiene errores, recibirás un campo `"error": "S"` y una lista detallada en `"errores"`, para facilitar el diagnóstico.
 * 🧩 Si el comprobante se genera correctamente, recibirás toda la información fiscal junto con los enlaces al archivo PDF.
@@ -77,15 +77,13 @@ Charset: UTF-8 / JSON&#x20;
 | comprobante | object | Estructura de "comprobante" según se informa en la [referencia API](referencia-api-afip-arca.md#estructura-del-bloque-comprobante)      |
 | cliente     | object | Estructura de "Cliente", según se informa en la [referencia API](referencia-api-afip-arca.md#estructura-del-bloque-cliente-y-proveedor) |
 
-
-
 ### ¿Qué te retorna la llamada a la API de facturación AFIP/ARCA en la modalidad individual e instantánea?
 
 #### &#x20;:white\_check\_mark: Cuando el request resultó exitoso:
 
 Cuando un comprobante se emite correctamente en modalidad individual e instantánea, recibirás:
 
-```
+```json
 {
     "error":     "N",
      "errores": [ ""],    
@@ -118,7 +116,7 @@ Cuando un comprobante se emite correctamente en modalidad individual e instantá
 
 En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados
 
-```
+```json
 {
   "error": "S",
   "errores": [
@@ -136,7 +134,20 @@ En caso de detectar error, la variable "error" contendrá una "S" y "errores" un
 }
 ```
 
+### :red\_circle: Mantenimientos programados
 
+En ocasiones, nuestro equipo técnico realiza tareas de mantenimiento programado que requieren suspender temporalmente la operatoria de la API. Durante ese período, las solicitudes devolverán una respuesta JSON como la siguiente:
+
+```json
+{
+	"error": "S",
+	"mantenimiento": 1,
+	"mantenimiento_hasta": "26/07/2026 05:25",
+	"errores": [
+		"Estaremos realizando tareas de mantenimiento hasta las 05:25"
+	]
+}
+```
 
 ### ¿Aún te quedan dudas? ¡Contactános!
 

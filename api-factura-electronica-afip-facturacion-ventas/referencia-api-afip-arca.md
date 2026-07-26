@@ -15,7 +15,7 @@ La **API de facturación electrónica para ARCA de TusFacturasAPP** te permite i
 
 En el contexto de nuestra API, se denomina **"comprobante"** a cualquier documento digital vinculado a operaciones comerciales, tales como:
 
-* Facturas electrónicas (de venta o compra)
+* Facturas electrónicas (de venta o compra), recibos C y liquidaciones.
 * Notas de crédito y débito
 * Pedidos
 * Presupuestos
@@ -256,6 +256,7 @@ Explorá los distintos escenarios de facturación que podés implementar, adapta
 * **Pedidos**
 * **Remitos**
 * **Recibos C**
+* **Liquidaciones A y B**
 
 Cada ejemplo incluye los campos requeridos y opcionales, además de los valores específicos para cada categoría. Esto te permitirá implementar la facturación electrónica de forma ágil y segura desde cualquier sistema.
 

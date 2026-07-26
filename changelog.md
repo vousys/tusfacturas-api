@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 26 de julio de 2026
+
+En todas las respuestas de la API se incorporan los campos `mantenimiento` y `mantenimiento_hasta` para informar cuando la plataforma se encuentra en mantenimiento programado y la fecha/hora estimada de finalización (formato `dd/mm/aaaa HH:MM`). [Más info](web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md#mantenimientos-programados).&#x20;
+
 ### 23 de julio de 2026
 
 * El método de consulta de constancia de inscripción ahora incluye el campo `constancia_full_datos`. Este contiene la respuesta completa entregada por ARCA, facilitando el acceso a datos adicionales que puedan ser requeridos por otros servicios.

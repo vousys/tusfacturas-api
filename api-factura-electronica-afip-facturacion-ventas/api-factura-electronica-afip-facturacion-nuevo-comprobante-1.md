@@ -169,7 +169,20 @@ Ejemplo del hook que recibirás:
 }
 ```
 
+### :red\_circle: Mantenimientos programados
 
+En ocasiones, nuestro equipo técnico realiza tareas de mantenimiento programado que requieren suspender temporalmente la operatoria de la API. Durante ese período, las solicitudes devolverán una respuesta JSON como la siguiente:
+
+```json
+{
+	"error": "S",
+	"mantenimiento": 1,
+	"mantenimiento_hasta": "26/07/2026 05:25",
+	"errores": [
+		"Estaremos realizando tareas de mantenimiento hasta las 05:25"
+	]
+}
+```
 
 #### :green\_circle: ACEPTADO: Cuando el request se ha aceptado para su procesamiento
 
