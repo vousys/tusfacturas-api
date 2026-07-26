@@ -119,6 +119,6 @@
 
 * [🚀 Creá tu cuenta ahora](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html)
 * [💰 Planes API](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
-* [🛟 Centro de Ayuda](https://intercom.help/tusfacturasapp/es)
-* [📩 Contactános](https://www.tusfacturas.app/#contact)
+* [🛟 Centro de Ayuda](https://ayuda.tusfacturas.app/es/)
+* [📩 Contactános](https://www.tusfacturas.app/contacto.html)
 * [📓 Términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html)
