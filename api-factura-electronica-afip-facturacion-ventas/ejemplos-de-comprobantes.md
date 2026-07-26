@@ -6,18 +6,30 @@ description: >-
 
 # Como confeccionar una venta
 
-### **Ejemplos de comprobantes por tipo**
+TusFacturasAPP ofrece tres modalidades para emitir comprobantes a través de la API REST ARCA. Elegí la que mejor se adapte a tu arquitectura e integrala en minutos.
 
-En esta sección encontras ejemplos completos de requests y responses para cada tipo de comprobante soportado por la API de TusFacturasAPP. Cada ejemplo incluye el JSON a enviar con todos los campos requeridos y opcionales, para que puedas implementar tu integración de forma rápida y sin errores.
+**Facturación asincrónica (recomendada)**
 
-Todos los ejemplos utilizan el endpoint de facturación estándar. Si todavía no sabes cómo autenticarte o estructurar un request, revisa primero la [documentación de la API de facturación](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas) antes de comenzar.
+El comprobante se encola y se emite en segundo plano. Recibís la confirmación vía webhook una vez procesado. No depende del estado de los servicios de ARCA en el momento del request, por lo que es la opción más robusta para entornos de producción.
 
-💡 **Tip:** si no sabes si debes emitir una factura A o una MiPyme A, podes consultar el endpoint [¿Debo emitir una MiPyME?](https://developers.tusfacturas.app/web-services-afip-api-arca/debo-emitir-una-mipyme) para que el sistema lo determine automáticamente según el CUIT del receptor.
+👉 [Ver documentación: facturación asincrónica](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1)
 
+**Facturación instantánea**
 
+El comprobante se emite en el momento y recibís la respuesta de forma inmediata. Depende del estado de los servicios de ARCA: si ARCA no responde, el request será rechazado.
 
-### ¿Buscas ejemplos más específicos?
+👉 [Ver documentación: facturación instantánea](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante)
 
-Si necesitas ejemplos para casos particulares como notas de crédito, notas de débito, facturas en dólares, facturas con bonificaciones, facturas MiPyME o consultas avanzadas, encontrás la colección completa acá:
+**Facturación por lotes**
 
-👉 [Ver todos los ejemplos disponibles](https://developers.tusfacturas.app/web-services-afip-api-arca)
+Permite enviar múltiples comprobantes en un solo request para procesarlos simultáneamente. Ideal para alto volumen.
+
+👉 [Ver documentación: facturación por lotes](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-api-facturacion-por-lotes)
+
+***
+
+**¿Buscas ejemplos de JSON listos para usar?**
+
+Accede a la colección de ejemplos por tipo de comprobante: Facturas A, B, C, E, MiPyME, notas de crédito, notas de débito, facturas en dólares, con bonificaciones y más.
+
+👉 [Ver ejemplos por tipo de comprobante](https://developers.tusfacturas.app/web-services-afip-api-arca)
