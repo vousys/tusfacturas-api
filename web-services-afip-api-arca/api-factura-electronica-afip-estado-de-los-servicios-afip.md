@@ -12,7 +12,7 @@ icon: code
 {% hint style="danger" %}
 **Los servicios de AFIP/ARCA se caen regularmente.**
 
-Tene en cuenta que todos nuestros métodos controlan internamente el estado de los servicios AFIP/ARCA, y si alguno no se encuentra operativo, automáticamente vas a recibir la respuesta correspondiente en cada request que envíes, junto con su mensaje de error.
+Ante una caída, la **facturación instantánea (sincrónica) se ve afectada de inmediato**: recibirás un error en cada request que intente impactar en ARCA. La **facturación asincrónica puede seguir funcionando**, ya que los comprobantes se encolan y se procesan cuando el servicio se restablece. Todos nuestros métodos controlan internamente el estado de los servicios de ARCA y te devuelven la respuesta correspondiente con su mensaje de error.
 {% endhint %}
 
 ### Endpoint
@@ -24,7 +24,7 @@ Tene en cuenta que todos nuestros métodos controlan internamente el estado de l
 ### Ejemplo del JSON a enviar para consultar el estado de los servicios
 
 {% code title="JSON" %}
-```
+```json
 {
 	"usertoken": "xxxxx",
 	"apikey": "xxx",
@@ -38,7 +38,7 @@ Tene en cuenta que todos nuestros métodos controlan internamente el estado de l
 
 En caso de no detectarse errores, la variable `error` será devuelta con el valor `"N"`, junto con las variables detalladas a continuación.
 
-La variable `facturacion` devolverá `"OK"` cuando los servicios de ARCA funcionen correctamente. En caso contrario, se informará un mensaje de alerta con el detalle de la incidencia detectada y si estas facturando en la modalidad instantánea, tus requests serán rechazados.
+La variable `facturacion` devolverá `"OK"` cuando los servicios de ARCA funcionen correctamente. En caso contrario, se informará un mensaje de alerta con el detalle de la incidencia detectada. Si facturas en **modalidad instantánea (sincrónica)**, tus requests serán rechazados de inmediato. Si usas **facturación asincrónica**, los comprobantes podrán seguir encolándose y procesarse una vez que ARCA restablezca el servicio.
 
 Dentro del bloque `prox_mantenimientos_programados` te informaremos las próximas tareas de mantenimiento programadas, ya sea por nuestro equipo o por ARCA.
 
