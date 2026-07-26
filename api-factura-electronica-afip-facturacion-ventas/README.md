@@ -110,7 +110,7 @@ Notificaciones automáticas para la **automatización de tu facturación** sin p
 {% step %}
 #### Documentación Completa
 
-Guías paso a paso y [ejemplos de código](ejemplos-de-comprobantes.md) para desarrolladores.
+Guías paso a paso y [ejemplos de código](/broken/pages/SOqWX4022D2OKZCHrSAH) para desarrolladores.
 {% endstep %}
 {% endstepper %}
 

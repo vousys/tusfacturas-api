@@ -108,9 +108,13 @@ icon: code
 [api-factura-electronica-afip-nota-de-credito-mipyme-a.md](api-factura-electronica-afip-nota-de-credito-mipyme-a.md)
 {% endcontent-ref %}
 
+{% content-ref url="api-factura-electronica-arca-liquidaciones-a-63.md" %}
+[api-factura-electronica-arca-liquidaciones-a-63.md](api-factura-electronica-arca-liquidaciones-a-63.md)
+{% endcontent-ref %}
 
-
-
+{% content-ref url="api-factura-electronica-arca-liquidaciones-b-64.md" %}
+[api-factura-electronica-arca-liquidaciones-b-64.md](api-factura-electronica-arca-liquidaciones-b-64.md)
+{% endcontent-ref %}
 
 ***
 
@@ -118,5 +122,5 @@ icon: code
 
 ¿Tenes preguntas sobre la API? Visita nuestro Centro de Ayuda en [ayuda.tusfacturas.app](https://ayuda.tusfacturas.app) para acceder a guías paso a paso y solución de problemas o escribnos a api@tusfacturas.app
 
-
+&#x20;
 
