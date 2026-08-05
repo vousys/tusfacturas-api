@@ -20,6 +20,16 @@ Mediante éste método podrás consultar la info que AFIP/ARCA tiene almacenada 
 
 💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
 
+{% hint style="info" %}
+**¿Necesitas consultar muchos CUITs a la vez?**
+
+Si en lugar de integrar este método por API preferís hacer consultas masivas sin programar, podes usar la herramienta **"Consulta masiva desde Excel de datos ARCA, ARBA, AGIP y APOC"** disponible en la plataforma web (menú > ARCA y padrones). Con ella podes cargar un archivo CSV con varios CUITs y obtener un reporte consolidado, sin necesidad de consultarlos uno por uno.
+
+👉 [Ver cómo usar la consulta masiva desde Excel](https://ayuda.tusfacturas.app/es/articles/16221224-consulta-masiva-desde-excel-de-datos-arca-arba-agip-y-apoc)
+
+⚠️ Los créditos disponibles para este método de API (`clientes/afip-info`) son **compartidos** con los que se consumen en la herramienta de consulta masiva. No existen saldos independientes: cada consulta, ya sea por API o desde el Excel masivo, descuenta del mismo saldo de créditos de tu plan.
+{% endhint %}
+
 #### Request Body
 
 | Name      | Type   | Description                 |
