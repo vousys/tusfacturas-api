@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 11 de agosto de 2026
+
+Se agregó a la [guía de bonificaciones y descuentos](api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md) un tercer método para aplicar descuentos: el envío de un concepto adicional con importe unitario negativo (`precio_unitario_sin_iva`) en el bloque `detalle`. Esta opción permite aplicar ajustes o descuentos no atados a un producto puntual, para los casos en que los campos `bonificacion` y `bonificacion_porcentaje` (limitados a valores positivos) no son suficientes.
+
 ### 26 de julio de 2026
 
 En todas las respuestas de la API se incorporan los campos `mantenimiento` y `mantenimiento_hasta` para informar cuando la plataforma se encuentra en mantenimiento programado y la fecha/hora estimada de finalización (formato `dd/mm/aaaa HH:MM`). [Más info](web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md#mantenimientos-programados).&#x20;
