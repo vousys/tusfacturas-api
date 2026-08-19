@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 19 de agosto de 2026
+
+Se amplia a 26 las percepciones que se pueden enviar dentro del bloque tributos. Más info en la [Referencia API](api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-bloque-tributos)
+
 ### 11 de agosto de 2026
 
 Se agregó a la [guía de bonificaciones y descuentos](api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md) un tercer método para aplicar descuentos: el envío de un concepto adicional con importe unitario negativo (`precio_unitario_sin_iva`) en el bloque `detalle`. Esta opción permite aplicar ajustes o descuentos no atados a un producto puntual, para los casos en que los campos `bonificacion` y `bonificacion_porcentaje` (limitados a valores positivos) no son suficientes.
