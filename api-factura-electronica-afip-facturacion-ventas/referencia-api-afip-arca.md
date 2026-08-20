@@ -354,9 +354,10 @@ ERRORES
 
 
 
-**RATE LIMIT**
+**RATE LIMIT y ABUSO DE RECURSOS**
 
-* El código de estado HTTP: 429 indica que tu aplicación está excediendo el límite de solicitudes permitido por segundo. Esto se debe a las reglas de seguridad de nuestra plataforma, diseñadas para proteger la estabilidad del sistema.
+* RATE LIMIT: El código de estado HTTP: 429 indica que tu aplicación está excediendo el límite de solicitudes permitido por segundo. Esto se debe a las reglas de seguridad de nuestra plataforma, diseñadas para proteger la estabilidad del sistema.
+* ABUSO DE RECURSOS: Te recomendamos leer las "Facultades sancionatorias de la plataforma" desde los [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html)
 
 
 
