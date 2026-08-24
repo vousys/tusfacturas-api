@@ -18,9 +18,11 @@ Remito - solo en la modalidad "[Instantánea](../api-factura-electronica-afip-fa
 ### JSON para generar un remito en AFIP/ARCA
 
 {% hint style="info" %}
-Los remitos generados en TusFacturasAPP no conectan con ARCA, ARBA ni ningún otro organismo provincial o nacional. Para que tengan validez legal deben imprimirse sobre papel preimpreso con CAI. El remito electrónico provisto por ARCA solo está disponible para ciertos rubros específicos y es un trámite completamente independiente. Para que tu remito tenga validez legal, debes imprimirlo en papel pre-impreso con CAI. Para eso contamos con varios modelos de diseño especiales para ésta función.&#x20;
+Los remitos generados en TusFacturasAPP no conectan con ARCA, ARBA ni ningún otro organismo provincial o nacional. Para que tengan validez legal deben imprimirse sobre papel pre-impreso con CAI desde un punto de venta que configures para los remitos.&#x20;
 
-Conoce mas sobre como configurar el diseño que mejor se adapte a tu papel pre-impreso,[ desde aqui.](https://ayuda.tusfacturas.app/es/articles/10354317-como-cambio-el-estilo-de-las-facturas-en-pdf-que-emito)
+El remito por webservice provisto por ARCA solo está disponible para empresas de ciertos rubros específicos (carnico, lácteo, etc).
+
+Conoce [cómo configurar el diseño del PDF de tus remitos](https://ayuda.tusfacturas.app/es/articles/12044811-como-configurar-el-estilo-de-un-remito-preimpreso-en-imprenta)&#x20;
 {% endhint %}
 
 ```json
