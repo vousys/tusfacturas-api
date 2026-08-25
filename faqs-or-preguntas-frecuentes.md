@@ -52,23 +52,17 @@ En ese caso, te sugerimos que tu frontend se comunique con tu backend y desde el
 
 ### **¿AFIP me permite facturar con cualquier fecha?**
 
-No, la AFIP no permite facturar con cualquier fecha. La normativa vigente establece restricciones específicas para la emisión de comprobantes con fechas anteriores. En el caso de contribuyentes cuyas actividades están categorizadas como servicios, la AFIP permite facturar con una anterioridad máxima de 10 días. Por otro lado, para aquellos contribuyentes dedicados a la comercialización de bienes, el plazo máximo de anterioridad es de 5 días. Estas limitaciones también aplican siempre y cuando no se hayan emitido previamente otros comprobantes con fechas posteriores a la que se desea facturar. Nuestro sistema de facturación electrónica cumple estrictamente con estos requisitos de la AFIP para garantizar la validez legal de tus facturas y evitar posibles sanciones o inconvenientes fiscales.
+No, ARCA no permite facturar con cualquier fecha. La normativa vigente establece restricciones específicas para la emisión de comprobantes con fechas anteriores. Conoce  [hasta cuántos días podes facturar para atrás](https://ayuda.tusfacturas.app/es/articles/10355161-hasta-cuantos-dias-puedo-facturar-para-atras). Nuestro sistema de facturación electrónica cumple estrictamente con estos requisitos de la AFIP para garantizar la validez legal de tus facturas y evitar posibles sanciones o inconvenientes fiscales.&#x20;
 
-Ej:&#x20;
+### **¿Puedo eliminar o modificar un comprobante que impactó en ARCA (ex AFIP)?**
 
-Si  hoy es 20/10/2022 y queres emitir una factura con fecha 01/10/2022 AFIP te lo va a rechazar.
-
-Si  hoy es 20/10/2022 y queres emitir una factura con fecha 18/10/2022, pero ya emitiste una con fecha 10/10/2022, AFIP te lo va a rechazar.
-
-### **¿Puedo eliminar o modificar un comprobante que impactó en AFIP?**
-
-No, los comprobantes que han sido registrados y aceptados por la AFIP no pueden ser anulados directamente en nuestro sistema de facturación electrónica. De acuerdo con las regulaciones fiscales vigentes, aquellos comprobantes que ya han impactado y quedado registrados en los sistemas de la AFIP, sólo pueden ser revertidos o anulados contablemente mediante la emisión de una nota de crédito. Esta nota de crédito debe ser generada a través de nuestra plataforma de facturación electrónica, cumpliendo con todos los requisitos legales y formales exigidos por la AFIP. De esta manera, se mantiene la trazabilidad e integridad de tus registros contables y fiscales, evitando posibles inconsistencias o sanciones por parte del ente regulador.
+No. Los comprobantes que han sido registrados y aceptados por ARCA no pueden ser anulados directamente en nuestro sistema de facturación electrónica. De acuerdo con las regulaciones fiscales vigentes, aquellos comprobantes que ya han impactado y quedado registrados en los sistemas de ARCA, sólo pueden ser revertidos o anulados contablemente mediante la emisión de una nota de crédito. Esta nota de crédito debe ser generada a través de nuestra plataforma de facturación electrónica, cumpliendo con todos los requisitos legales y formales exigidos por ARCA. De esta manera, se mantiene la trazabilidad e integridad de tus registros contables y fiscales, evitando posibles inconsistencias o sanciones por parte del ente regulador.
 
 ### **¿Como es la numeración de los comprobantes?**
 
 La numeración de los comprobantes en nuestro sistema de facturación electrónica sigue una secuencia lógica y organizada basada en dos factores clave: el tipo de comprobante y el punto de venta. Cada combinación de tipo de comprobante (Factura A, Factura B, Nota de Crédito, etc.) y punto de venta tiene su propia secuencia numérica independiente. Por ejemplo, si emitiste la Factura A del punto de venta 00001 con el número 0000123, la siguiente Factura A del mismo punto de venta será la 0000124. No obstante, puedes tener múltiples puntos de venta configurados, lo que te permite emitir comprobantes con numeraciones diferentes de manera simultánea. Así, podrías tener la Factura A 00002-0000123 del punto de venta 00002 y, al mismo tiempo, la Factura B 00001-0000123 del punto de venta 00001. Esta estructura de numeración secuencial y organizada por tipo de comprobante y punto de venta facilita la gestión y el control de tus operaciones de facturación electrónica, cumpliendo con los requisitos legales y formales exigidos por la AFIP.
 
-### **¿Los PDFs que se generan de la factura, quedan disponibles para mas adelante en algun CDN o los tengo que descargar y guardar yo?**
+### **¿Los PDFs que se generan de la factura, quedan disponibles para mas adelante en algún CDN o los tengo que descargar y guardar yo?**
 
 Nuestro sistema de facturación electrónica está diseñado para brindar un flujo de trabajo eficiente y seguro. Cada vez que se emite un comprobante a través de nuestra API, se genera una URL temporal que te permite descargar el archivo PDF correspondiente en ese preciso momento. Es fundamental que aproveches esta oportunidad para descargar y resguardar localmente los PDF de tus facturas, ya que si tu suscripción a nuestro servicio no se encuentra activa y vigente, no podrás acceder ni descargar estos comprobantes nuevamente desde nuestra plataforma. Por esta razón, recomendamos enfáticamente descargar y almacenar los PDF de forma inmediata, asegurándote de tener un respaldo local y permanente de tus facturas electrónicas. De esta manera, podrás cumplir con tus obligaciones fiscales, mantener un registro confiable y evitar posibles contratiempos o sanciones por falta de respaldo documental.
 
@@ -80,7 +74,13 @@ Como alternativa, estas empresas han optado por un modelo en el que cada cliente
 
 Es importante que analices detenidamente las ventajas y desafíos de cada modelo de suscripción, considerando el tamaño y proyección de crecimiento de tus clientes, para elegir la opción más conveniente y rentable para tu empresa. En TusFacturasAPP, estamos comprometidos en brindarte todas las herramientas y flexibilidad necesarias para que puedas implementar la estrategia que mejor se ajuste a tus requerimientos comerciales y operativos
 
+**¿Dudas sobre la estructura de tu cuenta?**
 
+Si necesitas evaluar si te conviene utilizar uno o varios espacios de trabajo, te recomendamos consultar los siguientes artículos de ayuda:
+
+* [¿Qué es un espacio de trabajo?](https://ayuda.tusfacturas.app/es/articles/11832654-que-es-un-espacio-de-trabajo)
+* [Gestión de múltiples clientes: ¿Espacios de trabajo separados o uno único?](https://ayuda.tusfacturas.app/es/articles/11839614-gestion-de-multiples-clientes-conviene-espacios-de-trabajo-separados-vs-unico)
+* [¿Qué es un punto de venta?](https://ayuda.tusfacturas.app/es/articles/10421730-que-es-un-punto-de-venta)
 
 ### **¿Qué sucede si me quedo sin cupo de facturación?**
 
@@ -88,7 +88,7 @@ Nuestro sistema de facturación electrónica cuenta con límites de capacidad ba
 
 Para ayudarte a gestionar y monitorear tu capacidad de facturación, TusFacturasAPP implementa un sistema de notificaciones por correo electrónico. Cuando tu cupo disponible se encuentre por debajo del 20%, todos los usuarios administradores de tu espacio de trabajo recibirán un aviso por email alertando sobre esta situación. Esta notificación se repetirá cada 3 días hasta que renueves tu suscripción o amplíes tu capacidad de facturación.
 
-De esta manera, podrás anticiparte y tomar las medidas necesarias para evitar interrupciones en tus operaciones de facturación electrónica, garantizando el cumplimiento de tus obligaciones fiscales y brindando un servicio continuo a tus clientes. En TusFacturasAPP, nos enfocamos en ofrecerte herramientas y funcionalidades que faciliten la gestión y el control de tus procesos de facturación digital.
+De esta manera, podras anticiparte y tomar las medidas necesarias para evitar interrupciones en tus operaciones de facturación electrónica, garantizando el cumplimiento de tus obligaciones fiscales y brindando un servicio continuo a tus clientes. En TusFacturasAPP, nos enfocamos en ofrecerte herramientas y funcionalidades que faciliten la gestión y el control de tus procesos de facturación digital.
 
 ### ¿Puedo contratar la suscripción desde el exterior para mi cliente en Argentina?
 
