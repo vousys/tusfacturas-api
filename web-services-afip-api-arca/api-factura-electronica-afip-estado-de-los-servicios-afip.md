@@ -2,15 +2,15 @@
 description: >-
   Mediante éste servicio podrás consultar el estado de los servicios de
   facturación AFIP/ARCA, como así también el estado del servicio API.
-icon: code
+icon: person-digging
 ---
 
-# Estado de los servicios
+# Estado de los servicios y Tareas de mantenimientos programados
 
-## Consultá el estado de los servicios de TusFacturasAPP y el estado de los servicios de facturación de ARCA
+## Consulta el estado de los servicios en TusFacturasAPP y el estado de los servicios de ARCA
 
 {% hint style="danger" %}
-**Los servicios de AFIP/ARCA se caen regularmente.**
+**Los servicios de ARCA (ex AFIP) se caen regularmente.**
 
 Ante una caída, la **facturación instantánea (sincrónica) se ve afectada de inmediato**: recibirás un error en cada request que intente impactar en ARCA. La **facturación asincrónica puede seguir funcionando**, ya que los comprobantes se encolan y se procesan cuando el servicio se restablece. Todos nuestros métodos controlan internamente el estado de los servicios de ARCA y te devuelven la respuesta correspondiente con su mensaje de error.
 {% endhint %}
@@ -68,7 +68,7 @@ Ten en cuenta que también podrán realizarse tareas de mantenimiento de urgenci
 
 ### Mantenimientos programados
 
-En ocasiones, nuestro equipo técnico realiza tareas de mantenimiento programado que requieren suspender temporalmente la operatoria de la API. Durante ese período, las solicitudes devolverán una respuesta JSON como la siguiente:
+En ocasiones, nuestro equipo técnico realiza tareas de mantenimiento programado que requieren suspender temporalmente la operatoria de la API o bien ARCA programa tareas de mantenimiento sobre sus servicios de facturación. Durante ese período, las solicitudes devolverán una respuesta JSON como la siguiente:
 
 ```json
 {
