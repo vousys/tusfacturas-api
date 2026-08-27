@@ -350,7 +350,7 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 ERRORES
 
 * Revisa el código de estado HTTP: Confirma siempre que recibas una respuesta HTTP 200. Esto garantiza que tu solicitud llegó y fue procesada correctamente.
-* Valida el campo de error: Controla el campo `"error"` en la respuesta. Su valor será `"S"` si hubo un problema o `"N"` si la operación se realizó con éxito, y dentro de `"errores"` encontraras el detalle del error.
+* Valida el campo de error: Controla el campo `"error"` en la respuesta. Su valor será `"S"` si hubo un problema o `"N"` si la operación se realizó con éxito, y dentro de `"errores"` encontraras el detalle del error. En caso de error te recomendamos tener un campo de texto en amplio en tu base de datos, ya que los mismos pueden tener +255 caracteres cada uno.
 
 
 
