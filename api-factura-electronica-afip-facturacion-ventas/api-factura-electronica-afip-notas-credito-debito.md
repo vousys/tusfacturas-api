@@ -41,6 +41,7 @@ Para éste tipo de información, es obligatorio enviar el detalle de los comprob
 {% hint style="info" %}
 **Datos a tener en cuenta:**&#x20;
 
+* Solo podras enviar hasta 10 comprobantes asociados por NC/ND
 * Los comprobantes que se asocien deben haberse emitido en la misma moneda en que se esta emitiendo la nota de crédito/débito.
 * La fecha del comprobante que asocies debe ser menor o igual a la fecha del comprobante que estas queriendo emitir. Tené en cuenta que AFIP realiza validaciones en cuanto a la fecha de los comprobantes que asocies, ya que no se permiten notas de crédito a comprobantes con  +15 días.
 * El servicio de AFIP/ARCA no permite emitir notas de crédito E por período.
@@ -88,10 +89,10 @@ comprobante: {
 
 
 
-Tene en cuenta que la información que debes ingresar es referente a quien emitio esa NC/ND
+Tene en cuenta que la información que debes ingresar es referente al comprobante que estas anulando
 
 * La fecha que tenia el comprobante que estas anulando
-* Que tipo de comprobante estas anulando
+* Que tipo de comprobante estas anulando&#x20;
 * El CUIT emisor de ese comprobante que estas anulando (debe coincidir con el CUIT desde donde estas emitiendo la NC/ND)
 * El punto de venta emisor de ese comprobante que estas anulando (debe coincidir con el CUIT desde donde estas emitiendo la NC/ND)
 
