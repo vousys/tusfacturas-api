@@ -231,6 +231,8 @@ Consulta toda información disponible haciendo una petición a:&#x20;
 | Factura de Crédito Electrónica MiPyMEs (FCE)                      | 22   | <p>Anulación. </p><p>Solo para NOTAS DE CRÉDITO/DEBITO: debes indicar si es anulacion, con una letra "S" (si) o "N" (no) según corresponda a que el comprador haya anulado el comprobante o no.</p>                                     |
 | Factura de Crédito Electrónica MiPyMEs (FCE)                      | 23   | Referencia Comercial                                                                                                                                                                                                                    |
 | Factura de Crédito Electrónica MiPyMEs (FCE)                      | 27   | <p>Referencia de transferencia.  </p><p>Valores posibles: </p><p><strong>SCA</strong> = Sistema de circulación abierta o al agente de depósito colectivo o </p><p><strong>ADC</strong> = Sistema de circulacion abierta o indicando</p> |
+| RG 4291 Factura Electrónica                                       | 2901 | Seguros de Caución — Póliza                                                                                                                                                                                                             |
+| RG 4291 Factura Electrónica                                       | 2902 | Seguros de Caución — Endoso                                                                                                                                                                                                             |
 
 ### Monedas
 
