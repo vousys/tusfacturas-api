@@ -184,9 +184,12 @@ Factura E (  Código ARCA: 019  ) emitida en la modalidad "[Instantánea](../api
 {% hint style="info" %}
 Para facturar a Tierra del Fuego (TDE) una exportación debes enviar la info de la siguiente manera:
 
-* Indica el CUIT de tu cliente en el campo "cliente\_pais\_cuit"
-* Indica en "pais\_comprobante\_id" = "250"
 * Indica el CUIT de tu cliente en el campo "documento\_nro" y en "documento\_tipo" = "CUIT"
+* Indica la alícuota de IVA real de tu cliente
+* Agrega en el bloque fex el CUIT de tu cliente en el campo "cliente\_pais\_cuit"
+* Agrega en el bloque fex  en "pais\_comprobante\_id" = "250"
+
+
 {% endhint %}
 
 Ejemplo:
