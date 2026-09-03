@@ -185,9 +185,17 @@ Ej: una llamada con 3 requests, donde segundo el comprobante enviado tiene un ti
 ```
 {% endcode %}
 
+{% hint style="warning" %}
+Cuando un comprobante devuelve error (debido a microcortes o latencia en los servicios de ARCA/AFIP), es posible de que el comprobante se haya procesado correctamente en el organismo fiscal a pesar de la falla reportada hacia TusFacturasAPP.
+
+Para evitar bloqueos en la facturación y garantizar la recuperación del CAE, el flujo de reintento debe cumplir con la siguiente regla estricta:
+
+> Regla de reintento secuencial: Todo comprobante rechazado o con error debe enviarse a reprocesar exactamente en el mismo orden cronológico/secuencial en el que fue emitido originalmente.
+{% endhint %}
+
 ### :red\_circle: Mantenimientos programados
 
-En ocasiones, nuestro equipo técnico realiza tareas de mantenimiento programado que requieren suspender temporalmente la operatoria de la API. Durante ese período, las solicitudes devolverán una respuesta JSON como la siguiente:
+En ocasiones, nuestro equipo técnico realiza [tareas de mantenimiento programado](../web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md#consulta-el-estado-de-los-servicios-en-tusfacturasapp-y-el-estado-de-los-servicios-de-arca) que requieren suspender temporalmente la operatoria de la API. Durante ese período, las solicitudes devolverán una respuesta JSON como la siguiente:
 
 ```json
 {
@@ -203,7 +211,7 @@ En ocasiones, nuestro equipo técnico realiza tareas de mantenimiento programado
 #### :red\_circle: Error de Procesamiento parcial:
 
 {% hint style="warning" %}
-En el caso que se envíe a AFIP el lote a procesar y un comprobante venga rechazado, todos los comprobantes subsiguientes del lote, vendrán rechazados. Ésta funcionalidad está determinada por AFIP.
+En el caso que se envíe a ARCA el lote a procesar y un comprobante venga rechazado, todos los comprobantes subsiguientes del lote, vendrán rechazados. Ésta funcionalidad está determinada por ARCA.
 {% endhint %}
 
 {% code title="JSON" %}

@@ -108,13 +108,23 @@ Cuando un comprobante se emite correctamente en modalidad individual e instantá
   }  
 ```
 
-📁 **Importante:** La URL de descarga del PDF es temporal, por lo que es esencial que descargues y guardes los archivos generados (PDF en hoja A4/ticket para papel de 80mm), ya que si tu cuenta o suscripción vence, **no podrás volver a acceder a esos documentos** desde la API.&#x20;
+{% hint style="info" %}
+**Importante:** La URL de descarga del PDF es temporal, por lo que es esencial que descargues y guardes los archivos generados (PDF en hoja A4/ticket para papel de 80mm), ya que si tu cuenta o suscripción vence, **no podrás volver a acceder a esos documentos** desde la API.&#x20;
+{% endhint %}
 
 
 
 #### :octagonal\_sign: Response con error
 
-En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados
+En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados.
+
+{% hint style="warning" %}
+Cuando un comprobante devuelve error (debido a microcortes o latencia en los servicios de ARCA/AFIP), es posible de que el comprobante se haya procesado correctamente en el organismo fiscal a pesar de la falla reportada hacia TusFacturasAPP.
+
+Para evitar bloqueos en la facturación y garantizar la recuperación del CAE, el flujo de reintento debe cumplir con la siguiente regla estricta:
+
+> Regla de reintento secuencial: Todo comprobante rechazado o con error debe enviarse a reprocesar exactamente en el mismo orden cronológico/secuencial en el que fue emitido originalmente.
+{% endhint %}
 
 ```json
 {
