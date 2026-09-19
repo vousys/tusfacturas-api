@@ -24,7 +24,7 @@ Comenza ya a cumplir con las regulaciones fiscales y brinda una experiencia de f
 
 Consulta nuestra guía detallada "[API Facturación AFIP](./)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
 
-AFIP te permite emitir notas de crédito y notas de débito parciales o totales, detallando un comprobante en particular que se anula o hacerlo por períodos desde-hasta, para esto solo debes agregar los bloques: "comprobantes\_asociados" o "comprobantes\_asociados\_periodo" al JSON.
+ARCA (ex AFIP) te permite emitir notas de crédito y notas de débito parciales o totales, detallando un comprobante en particular que se anula o hacerlo por períodos desde-hasta, para esto solo debes agregar los bloques: "comprobantes\_asociados" o "comprobantes\_asociados\_periodo" al JSON.
 
 ### ¿Qué es una nota de crédito electrónica?
 
@@ -43,7 +43,7 @@ Para éste tipo de información, es obligatorio enviar el detalle de los comprob
 
 * Solo podras enviar hasta 10 comprobantes asociados por NC/ND
 * Los comprobantes que se asocien deben haberse emitido en la misma moneda en que se esta emitiendo la nota de crédito/débito.
-* La fecha del comprobante que asocies debe ser menor o igual a la fecha del comprobante que estas queriendo emitir. Tené en cuenta que AFIP realiza validaciones en cuanto a la fecha de los comprobantes que asocies, ya que no se permiten notas de crédito a comprobantes con  +15 días. Mas info: [Hasta cuántos días atras puedo facturar](https://ayuda.tusfacturas.app/es/articles/10355161-hasta-cuantos-dias-puedo-facturar-para-atras)
+* La fecha del comprobante que asocies debe ser menor o igual a la fecha del comprobante que estas queriendo emitir. Tené en cuenta que ARCA realiza validaciones en cuanto a la fecha de los comprobantes que asocies, ya que no se permiten notas de crédito hacia comprobantes con  +15 días. Mas info: [Hasta cuántos días atras puedo facturar](https://ayuda.tusfacturas.app/es/articles/10355161-hasta-cuantos-dias-puedo-facturar-para-atras)
 * El servicio de AFIP/ARCA no permite emitir notas de crédito E por período.
 
 
@@ -89,7 +89,7 @@ comprobante: {
 
 
 
-Tene en cuenta que la información que debes ingresar es referente al comprobante que estas anulando
+:warning: **Importante**: La información que debes detallar es referente al comprobante que estas anulando &#x20;
 
 * La fecha que tenia el comprobante que estas anulando
 * Que tipo de comprobante estas anulando&#x20;
@@ -100,7 +100,11 @@ Tene en cuenta que la información que debes ingresar es referente al comprobant
 
 ### ¿Cómo emitir notas de crédito/débito anulando "por período"?
 
-A partir del 01/04/2021, AFIP habilitó la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados, para todo comprobante de tipo tradicional (A,B,C). Ésta herramienta no esta disponible para emitir notas de crédito E.
+{% hint style="info" %}
+:rotating\_light: _Te sugerimos siempre consultar con el estudio contable que asesore a tu cliente antes de utilizar éste método para que ellos te asesoren de las posibles implicancias impositivas que puede llevar el uso de ésta herramienta._
+{% endhint %}
+
+A partir del 01/04/2021, ARCA (ex AFIP) habilitó la posibilidad de emitir notas de débito y/o crédito indicando un período desde/hasta en lugar del detalle de comprobantes asociados, para todo comprobante de tipo tradicional (A,B,C). Ésta herramienta no esta disponible para emitir notas de crédito E.
 
 Para utilizar ésta herramienta, **no se debe enviar el bloque de "**_**comprobantes asociados"**_ **y en su lugar debe enviarse un bloque llamado&#x20;**_**"comprobantes\_asociados\_periodo",**_ el cual debe tener la siguiente estructura:
 

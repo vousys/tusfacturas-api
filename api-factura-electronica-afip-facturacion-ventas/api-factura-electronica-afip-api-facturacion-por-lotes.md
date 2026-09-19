@@ -46,7 +46,7 @@ Consulta nuestra guía detallada "[Referencia API AFIP ARCA](referencia-api-afip
 {% hint style="info" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`lotes`</mark>
 
-💡 El uso de éste método contabiliza como "n" request en tu suscripción, dependiendo de la cantidad de comprobantes que se facturen.
+💡 El uso de éste método contabiliza como "n" request en tu suscripción, siendo "n" la cantidad de comprobantes que envíes.
 {% endhint %}
 
 Charset: UTF-8

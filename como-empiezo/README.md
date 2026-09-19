@@ -13,7 +13,7 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 
 #### 🏆 ¿Por qué confiar en TusFacturasAPP?
 
-**Respaldo profesional dual:** Estamos desde 2015 ayudando a crecer a miles de negocios, con el respaldo constante de un estudio contable impositivo que entiende tu realidad y nos asegura que siempre estén actualizados con las últimas normativas fiscales de Argentina, y [VOUSYS](https://www.vousys.com/), una empresa de desarrollo de software con +20 años de experiencia, que garantiza que tu integración requiera la menor cantidad de cambios posibles.
+**Respaldo profesional dual:** **Estamos desde 2015** ayudando a crecer a miles de negocios, con el respaldo constante de un estudio contable impositivo que entiende tu realidad y nos asegura que siempre estén actualizados con las últimas normativas fiscales de Argentina, y [VOUSYS](https://www.vousys.com/), una empresa de desarrollo de software con +20 años de experiencia, que garantiza que tu integración requiera la menor cantidad de cambios posibles.
 
 **Esto significa para tu desarrollo:**
 
@@ -31,7 +31,7 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 #### Crea tu Cuenta de Desarrollo
 
 * Registrate gratis desde aquí:  <a href="https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html" class="button primary">Crear cuenta API DEV gratis</a>
-* Se activará automáticamente tu **Plan API DEV** por 30 días gratis
+* Se activará automáticamente tu **Plan API DEV** por 30 días gratis ( _podes renovarlo las veces que necesites contactando a nuestro equipo de soporte por email_ ).
 * Podrás emitir hasta **1.500 comprobantes de prueba** sin costo desde hasta 2 puntos de venta.
 * No podes enlazar tu CUIT con ARCA para realizar las pruebas.
 {% endstep %}
@@ -45,9 +45,9 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 {% endstep %}
 
 {% step %}
-#### Realizá tu Primera Integración
+#### Realiza tu Primera Integración
 
-[Envia una petición POST](../web-services-afip-api-arca/) a nuestra API y comenza a facturar inmediatamente.
+[Envia una petición POST](../web-services-afip-api-arca/) a nuestra API y comenzá a facturar inmediatamente.
 {% endstep %}
 {% endstepper %}
 
@@ -58,13 +58,13 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 Para garantizar el cumplimiento legal, no disponemos de un entorno de pruebas convencional. Esto significa que:
 
 * ✅ **No podrás enlazar tu CUIT real** con AFIP/ARCA durante las pruebas
-* ✅ **Evitás inconvenientes fiscales** ya que los comprobantes AFIP son inmodificables
+* ✅ **Evitas inconvenientes fiscales** ya que los comprobantes AFIP son inmodificables
 * ✅ **La respuesta simula el comportamiento de producción** con campos CAE vacíos
 * ✅ **No se aplican validaciones adicionales** de AFIP/ARCA durante las pruebas
 
 #### 💡 ¿Cómo funciona el consumo de cupos en la API?
 
-Es fundamental entender que los límites de tu plan no funcionan como un pozo único, sino que se distribuyen de forma independiente según el tipo de operación.  Consulta nuestro centro de ayuda para más detalles sobre [qué contabiliza como un request](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp).
+Es fundamental entender que los límites de tu plan no funcionan como un pozo único, sino que se distribuyen de forma independiente según el método que consumas. En la documentación de cada método podras ver si consume créditos de tu cupo.  Para más info, consulta nuestro centro de ayuda sobre [qué contabiliza como un request](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp).
 
 ### 🆘 ¿Necesitas Ayuda?
 
