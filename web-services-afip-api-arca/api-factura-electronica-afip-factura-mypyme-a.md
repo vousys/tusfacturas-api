@@ -20,88 +20,92 @@ Factura MiPyme A (  Código ARCA: 201  ) emitida en la modalidad "[Instantánea]
 
 ```json
 {
-    "usertoken": "XXX",
-    "apikey": XXX,
-    "apitoken": "XXXX",
-   "cliente":{
-      "documento_tipo":"CUIT",
-      "documento_nro":"11124445",
-      "razon_social":"VOUSYS TusFacturasAPP",
-      "email":"a@a.com",
-      "domicilio":"AV.LIBERTADOR 571",
-      "provincia":"26",
-      "envia_por_mail":"N",
-      "condicion_pago":"211",
-      "condicion_iva":"RI",
-      "reclama_deuda": "N",
-       "condicion_iva_operacion":"RI"
-   },
-   "comprobante":{
-      "fecha":"14/01/2025",
-      "tipo": "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
-      "vencimiento":"26/03/2025",
-      "operacion":"V",
-      "punto_venta":"0010",
-      "moneda":"DOL",
-      "external_reference":"0306-0301",
-      "tags": [],
-       "datos_informativos": {
-	  "paga_misma_moneda": "N"
-      },
-      "idioma":"1",
-      "cotizacion":"1115.20",
-      "periodo_facturado_desde":"01/02/2025",
-      "periodo_facturado_hasta":"28/02/2025",
-      "rubro":"Alimentos",
-      "rubro_grupo_contable":"Alimentos",
-      "detalle":[
-         {
-            "cantidad":"1",
-            "producto":{
-               "descripcion":"EXENTO - AVENA INSTANTANEA x5 kg. al 21",
-               "unidad_bulto":"1",
-               "lista_precios":"Lista de precios API 3",
-               "codigo":"16098",
-               "precio_unitario_sin_iva":"100",
-               "alicuota":"0",
-                "unidad_medida": 7,
-               "rg5329":"N"
-            },
-            "afecta_stock": "S",
-            "bonificacion_porcentaje": 0,
-            "leyenda":"Enviadas en cajas separadas"
-         }
-      ],
-      "bonificacion":"0.00",
-      "leyenda_gral":" ",
-      "tributos":[],
-      "impuestos_internos":"0",
-      "impuestos_internos_base":"0",
-      "impuestos_internos_alicuota":"0",
-      "total":"100",
-      "pagos": {
-		"formas_pago": [
-		   {"descripcion" : "MercadoPago", "importe" : 100} 			
-			   ],
-		"total": 100
-		},
-      "rg_especiales": {
-		"regimen": "Factura de Cr\u00e9dito Electr\u00f3nica MiPyMEs (FCE)",
-		"datos": [{
-				"id": 2101,
-				"valor": "0111344440001111150"
-			},
-			{
-				"id": 23,
-				"valor": "PIRULO S.A"
-			},
-			{
-				"id": 27,
-				"valor": "ADC"
-			}
-		]
-	 }
+  "usertoken": "XXX",
+  "apikey": "XXX",
+  "apitoken": "XXXX",
+  "cliente": {
+    "documento_tipo": "CUIT",
+    "documento_nro": "11124445",
+    "razon_social": "VOUSYS TusFacturasAPP",
+    "email": "a@a.com",
+    "domicilio": "AV.LIBERTADOR 571",
+    "provincia": "26",
+    "envia_por_mail": "N",
+    "condicion_pago": "211",
+    "condicion_iva": "RI",
+    "reclama_deuda": "N",
+    "condicion_iva_operacion": "RI"
+  },
+  "comprobante": {
+    "fecha": "14/01/2025",
+    "tipo": "FACTURA DE CREDITO ELECTRONICA MiPyME (FCE) A",
+    "vencimiento": "26/03/2025",
+    "operacion": "V",
+    "punto_venta": "0010",
+    "moneda": "DOL",
+    "external_reference": "0306-0301",
+    "tags": [],
+    "datos_informativos": {
+      "paga_misma_moneda": "N"
+    },
+    "idioma": "1",
+    "cotizacion": "1115.20",
+    "periodo_facturado_desde": "01/02/2025",
+    "periodo_facturado_hasta": "28/02/2025",
+    "rubro": "Alimentos",
+    "rubro_grupo_contable": "Alimentos",
+    "detalle": [
+      {
+        "cantidad": "1",
+        "producto": {
+          "descripcion": "EXENTO - AVENA INSTANTANEA x5 kg. al 21",
+          "unidad_bulto": "1",
+          "lista_precios": "Lista de precios API 3",
+          "codigo": "16098",
+          "precio_unitario_sin_iva": "100",
+          "alicuota": "0",
+          "unidad_medida": 7,
+          "rg5329": "N"
+        },
+        "afecta_stock": "S",
+        "bonificacion_porcentaje": 0,
+        "leyenda": "Enviadas en cajas separadas"
       }
+    ],
+    "bonificacion": "0.00",
+    "leyenda_gral": " ",
+    "tributos": [],
+    "impuestos_internos": "0",
+    "impuestos_internos_base": "0",
+    "impuestos_internos_alicuota": "0",
+    "total": "100",
+    "pagos": {
+      "formas_pago": [
+        {
+          "descripcion": "MercadoPago",
+          "importe": 100
+        }
+      ],
+      "total": 100
+    },
+    "rg_especiales": {
+      "regimen": "Factura de Crédito Electrónica MiPyMEs (FCE)",
+      "datos": [
+        {
+          "id": 2101,
+          "valor": "0111344440001111150"
+        },
+        {
+          "id": 23,
+          "valor": "PIRULO S.A"
+        },
+        {
+          "id": 27,
+          "valor": "ADC"
+        }
+      ]
+    }
+  }
 }
 ```
 

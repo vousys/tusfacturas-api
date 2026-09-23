@@ -29,129 +29,144 @@ En éste ejemplo podes ver conceptos con alícuota de IVA 21%, 10%, exentos y no
 
 ```json
 {
-   "usertoken":"xxxx",
-   "apikey":"xxx",
-   "apitoken":"xxxx",
-   "cliente":{
-      "documento_tipo":"CUIT",
-      "documento_nro":"30712293841",
-      "razon_social":"VOUSYS TusFacturasAPP",
-      "email":"a@a.com",
-      "domicilio":"AV.LIBERTADOR 571",
-      "provincia":"2",
-      "envia_por_mail":"N",
-      "reclama_deuda": "N",
-      "condicion_pago":"211",
-      "condicion_iva":"RI",
-      "condicion_iva_operacion":"RI"
-   },
-   "comprobante":{
-      "fecha":"20/03/2018",
-      "tipo":"LIQUIDACIONES A",
-      "idioma":"1",
-      "vencimiento":"26/03/2023",
-      "external_reference":"0306-0301",
-      "tags": [],
-       "datos_informativos": {
-	  "paga_misma_moneda": "N"
+  "usertoken": "xxxx",
+  "apikey": "xxx",
+  "apitoken": "xxxx",
+  "cliente": {
+    "documento_tipo": "CUIT",
+    "documento_nro": "30712293841",
+    "razon_social": "VOUSYS TusFacturasAPP",
+    "email": "a@a.com",
+    "domicilio": "AV.LIBERTADOR 571",
+    "provincia": "2",
+    "envia_por_mail": "N",
+    "reclama_deuda": "N",
+    "condicion_pago": "211",
+    "condicion_iva": "RI",
+    "condicion_iva_operacion": "RI"
+  },
+  "comprobante": {
+    "fecha": "20/03/2018",
+    "tipo": "LIQUIDACIONES A",
+    "idioma": "1",
+    "vencimiento": "26/03/2023",
+    "external_reference": "0306-0301",
+    "tags": [],
+    "datos_informativos": {
+      "paga_misma_moneda": "N"
+    },
+    "operacion": "V",
+    "moneda": "DOL",
+    "cotizacion": "1045.5",
+    "punto_venta": "0002",
+    "numero": "00000012",
+    "periodo_facturado_desde": "28/02/2018",
+    "periodo_facturado_hasta": "28/02/2018",
+    "rubro": "Alimentos",
+    "rubro_grupo_contable": "Alimentos",
+    "detalle": [
+      {
+        "cantidad": 1,
+        "producto": {
+          "descripcion": "PIEDRA NEGRA RESERVA MALBEC/CAB/CHARD/PINOT GRIS",
+          "precio_unitario_sin_iva": 1000,
+          "codigo": "P101474",
+          "alicuota": 21,
+          "unidad_bulto": 1,
+          "impuestos_internos_alicuota": 0,
+          "precio_total": 1000
+        },
+        "bonificacion_porcentaje": 0,
+        "leyenda": ""
       },
-      "operacion":"V",
-      "moneda":"DOL",
-      "cotizacion": "1045.5",
-      "punto_venta":"0002",
-      "numero":"00000012",
-      "periodo_facturado_desde":"28/02/2018",
-      "periodo_facturado_hasta":"28/02/2018",
-      "rubro":"Alimentos",
-      "rubro_grupo_contable":"Alimentos",
-      "detalle":[
-   				{
-						"cantidad": 1,
-						"producto": {
-							"descripcion": "PIEDRA NEGRA RESERVA MALBEC/CAB/CHARD/PINOT GRIS",
-							"precio_unitario_sin_iva": 1000,
-							"codigo": "P101474",
-							"alicuota": 21,
-							"unidad_bulto":1,
-							"impuestos_internos_alicuota": 0,
-							"precio_total": 1000
-						},
-						"bonificacion_porcentaje": 0,
-						"leyenda": ""
-					},
-					{
-						"cantidad": 1,
-						"producto": {
-							"descripcion": "GRAN ENEMIGO (EXENTO)",
-							"precio_unitario_sin_iva": 1000,
-							"codigo": "P101430",
-							"alicuota": -1,
-							"unidad_bulto":1,
-							"impuestos_internos_alicuota": 0,
-							"precio_total": 1000
-						},
-						"bonificacion_porcentaje": 0,
-						"leyenda": ""
-					},
-					{
-						"cantidad": 1,
-						"producto": {
-							"descripcion": "ALAMOS CAB/CHARDONNAY (NOGRAVADO)",
-							"precio_unitario_sin_iva": 1000,
-							"codigo": "P101439",
-							"unidad_bulto":1,
-							"alicuota": -2,
-							"impuestos_internos_alicuota": 0,
-							"precio_total": 1000
-						},
-						"bonificacion_porcentaje": 0,
-						"leyenda": ""
-					},
-					{
-						"cantidad": 1,
-						"producto": {
-							"descripcion": "ANIMAL CABERNET", 				
-							"precio_unitario_sin_iva": 1000,
-							"codigo": "P101463",
-							"unidad_bulto":1,
-							"alicuota": 10.5,
-							"impuestos_internos_alicuota": 0,
-							"precio_total": 1000
-						},
-						"bonificacion_porcentaje": 0,
-						"leyenda": ""
-					}
+      {
+        "cantidad": 1,
+        "producto": {
+          "descripcion": "GRAN ENEMIGO (EXENTO)",
+          "precio_unitario_sin_iva": 1000,
+          "codigo": "P101430",
+          "alicuota": -1,
+          "unidad_bulto": 1,
+          "impuestos_internos_alicuota": 0,
+          "precio_total": 1000
+        },
+        "bonificacion_porcentaje": 0,
+        "leyenda": ""
+      },
+      {
+        "cantidad": 1,
+        "producto": {
+          "descripcion": "ALAMOS CAB/CHARDONNAY (NOGRAVADO)",
+          "precio_unitario_sin_iva": 1000,
+          "codigo": "P101439",
+          "unidad_bulto": 1,
+          "alicuota": -2,
+          "impuestos_internos_alicuota": 0,
+          "precio_total": 1000
+        },
+        "bonificacion_porcentaje": 0,
+        "leyenda": ""
+      },
+      {
+        "cantidad": 1,
+        "producto": {
+          "descripcion": "ANIMAL CABERNET",
+          "precio_unitario_sin_iva": 1000,
+          "codigo": "P101463",
+          "unidad_bulto": 1,
+          "alicuota": 10.5,
+          "impuestos_internos_alicuota": 0,
+          "precio_total": 1000
+        },
+        "bonificacion_porcentaje": 0,
+        "leyenda": ""
+      }
+    ],
+    "bonificacion": "0.00",
+    "leyenda_gral": " ",
+    "tributos": [
+      {
+        "tipo": 6,
+        "regimen": 2,
+        "base_imponible": 100,
+        "alicuota": 10,
+        "total": 10
+      },
+      {
+        "tipo": 7,
+        "regimen": 5,
+        "base_imponible": 200,
+        "alicuota": 10,
+        "total": 20
+      }
+    ],
+    "impuestos_internos": "0",
+    "impuestos_internos_base": "0",
+    "impuestos_internos_alicuota": "0",
+    "total": "4345",
+    "rg_especiales": {
+      "regimen": "LO QUE CORRESPONDA",
+      "datos": [
+        {
+          "id": 1,
+          "valor": "xxxxx"
+        }
+      ]
+    },
+    "pagos": {
+      "formas_pago": [
+        {
+          "descripcion": "MercadoPago",
+          "importe": 4000
+        },
+        {
+          "descripcion": "Efectivo",
+          "importe": 345
+        }
       ],
-      "bonificacion":"0.00",
-      "leyenda_gral":" ",
-      "tributos":[
-         {
-            "tipo":6,
-            "regimen":2,
-            "base_imponible":100,
-            "alicuota":10,
-            "total":10
-         },
-         {
-            "tipo":7,
-            "regimen":5,
-            "base_imponible":200,
-            "alicuota":10,
-            "total":20
-         }
-      ],
-      "impuestos_internos":"0",
-      "impuestos_internos_base":"0",
-      "impuestos_internos_alicuota":"0",
-      "total":"4345",
-      "pagos": {
-		"formas_pago": [
-		   {"descripcion" : "MercadoPago", "importe" : 4000},
-		   {"descripcion" : "Efectivo", "importe" : 345} 			
-			   ],
-		"total": 4345
-		} 
-   }
+      "total": 4345
+    }
+  }
 }
 ```
 
@@ -287,6 +302,10 @@ Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos 
 * **Administradoras de tarjetas de crédito y prepagas**, y sistemas de pago por transferencia
 * **Instituciones educativas privadas** y entidades de medicina prepaga constituidas como asociaciones o fundaciones
 * **Proveedores de Servicios de Activos Virtuales (PSAV)** inscriptos ante la Comisión Nacional de Valores
+
+{% hint style="warning" %}
+Consulta siempre con tu estudio contable para que ellos te asesoren que datos adicionales debes enviar dentro del bloque rg\_especiales, de acuerdo a tu negocio
+{% endhint %}
 
 ### Respuesta esperada
 

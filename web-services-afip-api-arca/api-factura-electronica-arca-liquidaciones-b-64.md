@@ -26,69 +26,81 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 ### JSON para generar una Liquidaciones B en AFIP/ARCA
 
 ```json
- {
-   "apitoken":"xxxx",
-   "usertoken":"xxxx",
-   "apikey":"xxxx",
-   "cliente":{
-      "documento_tipo":"DNI",
-      "condicion_iva":"CF",
-      "condicion_iva_operacion":"CF",
-      "domicilio":"Av Sta Fe 23132",
-      "condicion_pago":"201",
-      "documento_nro":"111132333",
-      "razon_social":"Juan Pedro KJL",
-      "provincia":"2",
-      "email":"email@dominio.com",
-      "reclama_deuda": "N",
-      "envia_por_mail":"N",
-       "rg5329": "N"
-   },
-   "comprobante":{
-      "rubro":"Sevicios web",
-      "tipo":"LIQUIDACIONES B",
-      "numero":2134,
-      "bonificacion":0,
-      "operacion":"V",
-      "moneda":"PES",
-      "external_reference":"0306-0301",
-      "tags": [],
-       "datos_informativos": {
-	  "paga_misma_moneda": "N"
-      },
-      "cotizacion": 1,
-      "detalle":[
-         {
-            "cantidad":1,
-            "afecta_stock":"S",
-            "bonificacion_porcentaje":0,
-            "producto":{
-               "descripcion":"Hosting pagina web ",
-               "codigo":37,
-               "lista_precios":"standard",
-               "leyenda":"",
-               "unidad_bulto":1,
-               "alicuota":21,
-               "actualiza_precio":"S",
-                "unidad_medida": 7,
-               "rg5329": "N",
-               "precio_unitario_sin_iva":114.88
-            }
-         }
+{
+  "apitoken": "xxxx",
+  "usertoken": "xxxx",
+  "apikey": "xxxx",
+  "cliente": {
+    "documento_tipo": "DNI",
+    "condicion_iva": "CF",
+    "condicion_iva_operacion": "CF",
+    "domicilio": "Av Sta Fe 23132",
+    "condicion_pago": "201",
+    "documento_nro": "111132333",
+    "razon_social": "Juan Pedro KJL",
+    "provincia": "2",
+    "email": "email@dominio.com",
+    "reclama_deuda": "N",
+    "envia_por_mail": "N",
+    "rg5329": "N"
+  },
+  "comprobante": {
+    "rubro": "Sevicios web",
+    "tipo": "LIQUIDACIONES B",
+    "numero": 2134,
+    "bonificacion": 0,
+    "operacion": "V",
+    "moneda": "PES",
+    "external_reference": "0306-0301",
+    "tags": [],
+    "datos_informativos": {
+      "paga_misma_moneda": "N"
+    },
+    "cotizacion": 1,
+    "detalle": [
+      {
+        "cantidad": 1,
+        "afecta_stock": "S",
+        "bonificacion_porcentaje": 0,
+        "producto": {
+          "descripcion": "Hosting pagina web ",
+          "codigo": 37,
+          "lista_precios": "standard",
+          "leyenda": "",
+          "unidad_bulto": 1,
+          "alicuota": 21,
+          "actualiza_precio": "S",
+          "unidad_medida": 7,
+          "rg5329": "N",
+          "precio_unitario_sin_iva": 114.88
+        }
+      }
+    ],
+    "fecha": "28/03/2018",
+    "vencimiento": "26/03/2023",
+    "rubro_grupo_contable": "Sevicios",
+    "total": 139,
+    "rg_especiales": {
+      "regimen": "LO QUE CORRESPONDA",
+      "datos": [
+        {
+          "id": 1,
+          "valor": "xxxxx"
+        }
+      ]
+    },
+    "pagos": {
+      "formas_pago": [
+        {
+          "descripcion": "MercadoPago",
+          "importe": 139
+        }
       ],
-      "fecha":"28/03/2018",
-      "vencimiento":"26/03/2023",
-      "rubro_grupo_contable":"Sevicios",
-      "total":139.0, 
-      "pagos": {
-		"formas_pago": [
-		   {"descripcion" : "MercadoPago", "importe" : 139} 			
-			   ],
-		"total": 139
-		},
-      "punto_venta":3,
-      "tributos":[]
-   }
+      "total": 139
+    },
+    "punto_venta": 3,
+    "tributos": []
+  }
 }
 ```
 
@@ -224,6 +236,10 @@ Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos 
 * **Administradoras de tarjetas de crédito y prepagas**, y sistemas de pago por transferencia
 * **Instituciones educativas privadas** y entidades de medicina prepaga constituidas como asociaciones o fundaciones
 * **Proveedores de Servicios de Activos Virtuales (PSAV)** inscriptos ante la Comisión Nacional de Valores
+
+{% hint style="warning" %}
+Consulta siempre con tu estudio contable para que ellos te asesoren que datos adicionales debes enviar dentro del bloque rg\_especiales, de acuerdo a tu negocio
+{% endhint %}
 
 ### Respuesta esperada
 
