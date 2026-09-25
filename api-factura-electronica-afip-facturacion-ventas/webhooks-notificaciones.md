@@ -13,7 +13,7 @@ Un `webhook` es una notificación que se envía de un servidor a otro, mediante 
 
 TusFacturasAPP te enviará un webhook, siempre que se produzca uno o más eventos registrados en la modalidad de facturación asincrónica encolada,  evitando pérdida de datos siempre que se presente alguna situación.
 
-<figure><img src="../.gitbook/assets/tusfacturasapp-api-arca-webhooks.png" alt="TusFacturasAPP: Webhooks API Rest ARCA/AFIP Factura electrónica"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/tusfacturasapp-api-arca-webhooks.webp" alt="TusFacturasAPP: Webhooks API Rest ARCA/AFIP Factura electrónica"><figcaption></figcaption></figure>
 
 ### Dirección del webhook
 

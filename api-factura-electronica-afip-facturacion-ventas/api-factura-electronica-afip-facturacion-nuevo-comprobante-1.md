@@ -11,11 +11,9 @@ icon: a
 
 La **API de ARCA para facturación electrónica individual y asincrónica de TusFacturasAPP** te permite **emitir comprobantes fiscales válidos ante ARCA**. Es ideal para grandes volúmenes de facturación o cuándo el funcionamiento de tu plataforma no dependa del estado en tiempo real  de los servicios de ARCA. Integra fácil la facturación electrónica de AFIP/ARCA a tu sistema, cumpliendo con las normativas fiscales vigentes en Argentina.
 
-<figure><img src="../.gitbook/assets/157.webp" alt="SDK AFIP. TusFacturasAPP API Factura Electronica AFIP. AFIP WS"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/tusfacturasapp-api-arca-facturacion-asincronica.webp" alt="TusFacturasAPP: API ARCA de facturación individual y asincrónica"><figcaption></figcaption></figure>
 
-### ¿Cómo empiezo?
 
-Te sugerimos revisar la guia de [¿Cómo empiezo?](../como-empiezo/) . Una vez configurada tu cuenta y creado tu CUIT+Punto de venta (PDV) en [TusFacturasAPP](https://www.tusfacturas.app), podrás comenzar a emitir facturas electrónicas AFIP Argentina válidas.&#x20;
 
 ### 🛠 ¿Cómo funciona la modalidad Asincrónica de Facturación ARCA/AFIP?
 
@@ -44,18 +42,6 @@ Una vez recibido el hook, debes consultar la información del comprobante con un
 {% endstep %}
 {% endstepper %}
 
-<figure><img src="../.gitbook/assets/api-tusfacturasapp-como-funciona-arca-webhook.png" alt="TusFacturasAPP: API Rest facturacion ARCA Webhook"><figcaption></figcaption></figure>
-
-### ⚠️ Consideraciones clave
-
-* **La fecha que envíes en el comprobante, determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy.  Te sugerimos leer el apartado de "[FAQs sobre la cola de procesamiento](../faqs-or-ventas-asincronicas.md)".&#x20;
-* El **campo external\_reference es obligatorio** y debe ser único, sin embargo TusFacturasAPP no realiza ese control.
-* **El número del comprobante debe enviarse en 0**, ya que será determinado al momento de emitirse.
-* **Tu punto de venta debe tener una URL de webhook configurada**. Ésto se realiza desde nuestra plataforma web, accediendo a Menú > Mi espacio de trabajo > Puntos de venta.
-* En la modalidad asincrónica no se permiten comprobantes tipo E.
-* Para que tus comprobantes se emitan, **la suscripción de tu espacio de trabajo debe encontrarse vigente, activa y con cupo de facturación disponible** para emitir el comprobante (aunque no se emita hoy).
-* Los errores de validación de datos bloquean el envío a la cola y generan una respuesta inmediata (no por webhook).
-
 ### ⏱ Tiempos de procesamiento
 
 Los tiempos varían según:\
@@ -63,7 +49,7 @@ Los tiempos varían según:\
 \- Estado de los servicios de facturación de ARCA\
 \- Tipo de comprobante a emitir
 
-#### Capacidades máximas:
+#### Capacidades de procesamiento diarias:
 
 * Hasta 100.000 comprobantes A por día, por punto de venta.
 * Hasta 150.000 comprobantes B por día, por punto de venta.
@@ -84,7 +70,7 @@ El bloque "comprobante" debe incluir el campo "external\_reference". Ejemplo:
 
 ### 🚀 ¿Cómo crear una venta asincrónica? <a href="#como-crear-una-venta-instantanea" id="como-crear-una-venta-instantanea"></a>
 
-Consultá nuestra [guía completa 👉 **“Referencia API AFIP ARCA”**](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca), donde encontrarás:
+Consulta nuestra [guía completa 👉 **“Referencia API AFIP ARCA”**](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca), donde encontrarás:
 
 * Especificaciones técnicas
 * Campos requeridos para armar el request
@@ -92,6 +78,8 @@ Consultá nuestra [guía completa 👉 **“Referencia API AFIP ARCA”**](https
 * Buenas prácticas de integración y manejo de errores
 
 > Con nuestra documentación clara y ejemplos reales, **la integración de la facturación electrónica en tu software será rápida, sencilla y confiable**.
+
+<figure><img src="../.gitbook/assets/157 (1).webp" alt=""><figcaption></figcaption></figure>
 
 ### 📌 Endpoint para ventas individuales y asincrónicas
 
@@ -115,7 +103,17 @@ Charset: UTF-8  Formato: JSON&#x20;
 | comprobante | object | Estructura de "comprobante" según se informa en el apartado de ["facturacion"](./) |
 | cliente     | object | Estructura de "Cliente", según se informa en el apartado de ["facturacion"](./)    |
 
+{% hint style="info" %}
+#### ⚠️ Consideraciones clave para emisión asincrónica
 
+* **La fecha que envíes en el comprobante, determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy.  Te sugerimos leer el apartado de "[FAQs sobre la cola de procesamiento](../faqs-or-ventas-asincronicas.md)".&#x20;
+* El **campo external\_reference es obligatorio** y debe ser único, sin embargo TusFacturasAPP no realiza ese control.
+* **El número del comprobante debe enviarse en 0**, ya que será determinado al momento de emitirse.
+* **Tu punto de venta debe tener una URL de webhook configurada**. Ésto se realiza desde nuestra plataforma web, accediendo a Menú > Mi espacio de trabajo > Puntos de venta.
+* En la modalidad asincrónica no se permiten comprobantes tipo E.
+* Para que tus comprobantes se emitan, **la suscripción de tu espacio de trabajo debe encontrarse vigente, activa y con cupo de facturación disponible** para emitir el comprobante (aunque no se emita hoy).
+* Los errores de validación de datos bloquean el envío a la cola y generan una respuesta inmediata (no por webhook).
+{% endhint %}
 
 ### ✅ Respuestas posibles
 
@@ -220,6 +218,8 @@ Ejemplo de la respuesta instantánea :
 
 
 ### 📬 Webhooks de respuesta de la API ARCA/AFIP
+
+<figure><img src="../.gitbook/assets/tusfacturasapp-api-arca-webhooks.webp" alt="TusFacturasAPP: Webhooks API Rest ARCA/AFIP Factura electrónica"><figcaption></figcaption></figure>
 
 Existen 3 tipos de eventos posibles para el recurso de facturación que podes recibir en ésta instancia:  "encolado", "emitido" y "error".&#x20;
 
