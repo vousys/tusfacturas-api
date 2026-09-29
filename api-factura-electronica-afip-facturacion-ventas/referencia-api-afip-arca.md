@@ -11,6 +11,8 @@ icon: code
 
 La **API de facturación electrónica para ARCA de TusFacturasAPP** te permite interactuar de forma directa y eficiente con los **web services de AFIP/ARCA**, facilitando la emisión de comprobantes electrónicos desde tu software.
 
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+
 #### ¿Qué es un comprobante electrónico?
 
 En el contexto de nuestra API, se denomina **"comprobante"** a cualquier documento digital vinculado a operaciones comerciales, tales como:
