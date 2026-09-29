@@ -1,6 +1,6 @@
 ---
 description: >-
-  Integra la facturación electrónica AFIP fácil y rápido con nuestra API.
+  Integra la facturación electrónica ARCA/AFIP fácil y rápido con nuestra API.
   ¡Confiable desde 2015! Elegida por todos los desarrolladores.
 layout:
   width: default
@@ -20,11 +20,13 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # 📗 Documentación API Facturación AFIP/ARCA
 
-<figure><img src="../.gitbook/assets/157.webp" alt="TusFacturasAPP API Factura Electronica AFIP. SDK AFIP"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/queteresuelvelaapiarcaafip-tusfacturasapp.webp" alt="TusFacturasAPP API Factura Electronica ARCA/AFIP. SDK AFIP/ARCA"><figcaption></figcaption></figure>
 
 ### 🚀 API ARCA para Desarrolladores
 
@@ -40,7 +42,7 @@ Automatización facturación instantánea o asíncrona. Elige el método que mej
 
 #### ☁️ SaaS de facturación confiable
 
-Nuestro **SaaS facturación AFIP** garantiza el cumplimiento normativo actualizado&#x20;
+Nuestro **SaaS facturación ARCA (ex AFIP)** garantiza el cumplimiento normativo actualizado.&#x20;
 
 
 
