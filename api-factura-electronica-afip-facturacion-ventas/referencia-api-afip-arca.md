@@ -11,7 +11,7 @@ icon: code
 
 La **API de facturación electrónica para ARCA de TusFacturasAPP** te permite interactuar de forma directa y eficiente con los **web services de AFIP/ARCA**, facilitando la emisión de comprobantes electrónicos desde tu software.
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15).png" alt="TusFacturasAPP: API ARCA – Integra tu sistema con los Web Services de ARCA fácilmente para facturar tus ventas."><figcaption></figcaption></figure>
 
 #### ¿Qué es un comprobante electrónico?
 
@@ -25,28 +25,26 @@ En el contexto de nuestra API, se denomina **"comprobante"** a cualquier documen
 
 Esto permite a tu sistema manejar toda la documentación fiscal y comercial en formato electrónico, cumpliendo con las exigencias legales vigentes.
 
-### Endpoint principal de la API ARCA:
+### Endpoint principal de facturación la API:
 
 {% hint style="info" %}
 <mark style="color:purple;">**POST**</mark>
 
-`https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`metodo-elegido`**</mark>
+`https://www.tusfacturas.app/app/api/v2/`**`facturacion`**`/`<mark style="color:purple;">**`metodo-elegido`**</mark>
 {% endhint %}
 
 Este endpoint permite el envío de comprobantes en distintos modos de operación, según las necesidades de tu sistema:
 
 #### ⚙️ Modos de envío disponibles
 
-* [**Envío instantáneo**](api-factura-electronica-afip-facturacion-nuevo-comprobante.md)**:**\
+* [**Facturación instantánea e individual**](api-factura-electronica-afip-facturacion-nuevo-comprobante.md)**:**\
   Envía un comprobante y recibe la respuesta al instante. Ideal para sistemas que requieren confirmación inmediata. Sujeto a la disponibilidad del servicio de **AFIP o ARCA**.
-* [**Envío asincrónico**](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)**:**\
+* [**Facturación asincrónica individual**](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)**:**\
   Envía el comprobante a una cola de procesamiento. Recibirás una notificación por **webhook** una vez procesado. Recomendado para sistemas que manejan grandes volúmenes.
-* [**Lotes instantáneos**](api-factura-electronica-afip-api-facturacion-por-lotes.md)**:**\
+* [**Facturación en lote instantánea**](api-factura-electronica-afip-api-facturacion-por-lotes.md)**:**\
   Permite enviar varios comprobantes en un único lote y recibir una única respuesta inmediata. También depende de la disponibilidad del servicio de AFIP o ARCA.
 
-> 🔧 Nuestra API ARCA está diseñada para desarrolladores que buscan una integración rápida, robusta y conforme a las normativas de facturación electrónica en Argentina.
-
-
+> 🔧 La API para ARCA de TusFacturasAPP está diseñada para desarrolladores que buscan una integración rápida, robusta y conforme a las normativas de facturación electrónica en Argentina. Desde 2015 es la API más elegida por los desarrolladores.
 
 ### Estructura del JSON  a enviar
 

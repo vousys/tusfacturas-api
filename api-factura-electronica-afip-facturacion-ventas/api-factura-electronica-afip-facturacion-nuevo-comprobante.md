@@ -16,7 +16,7 @@ La **API de facturación electrónica instantánea de TusFacturasAPP** te permit
 
 Integra fácil y rápido la facturación electrónica ARCA en tu software. Emití comprobantes fiscales válidos desde tu software y obtene respuestas inmediatas desde ARCA.
 
-<figure><img src="../.gitbook/assets/157.webp" alt="SDK AFIP. TusFacturasAPP API Factura Electronica AFIP. "><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/queteresuelvelaapiarcaafip-tusfacturasapp.webp" alt="SDK AFIP. TusFacturasAPP API Factura Electronica AFIP. "><figcaption></figcaption></figure>
 
 ### ¿Cómo empiezo?
 

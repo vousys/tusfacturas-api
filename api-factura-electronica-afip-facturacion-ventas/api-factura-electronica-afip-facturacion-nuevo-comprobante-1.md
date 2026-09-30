@@ -79,9 +79,9 @@ Consulta nuestra [guía completa 👉 **“Referencia API AFIP ARCA”**](https:
 
 > Con nuestra documentación clara y ejemplos reales, **la integración de la facturación electrónica en tu software será rápida, sencilla y confiable**.
 
-<figure><img src="../.gitbook/assets/157 (1).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/queteresuelvelaapiarcaafip-tusfacturasapp.webp" alt=""><figcaption></figcaption></figure>
 
-### 📌 Endpoint para ventas individuales y asincrónicas
+### 📌 Endpoint para ventas asincrónicas e individuales
 
 {% hint style="info" %}
 <mark style="color:green;">`POST`</mark>&#x20;
@@ -114,6 +114,18 @@ Charset: UTF-8  Formato: JSON&#x20;
 * Para que tus comprobantes se emitan, **la suscripción de tu espacio de trabajo debe encontrarse vigente, activa y con cupo de facturación disponible** para emitir el comprobante (aunque no se emita hoy).
 * Los errores de validación de datos bloquean el envío a la cola y generan una respuesta inmediata (no por webhook).
 {% endhint %}
+
+### Ejemplos de cómo facturar según el tipo de comprobante y letra
+
+Cada ejemplo incluye los campos requeridos y opcionales, además de los valores específicos para cada categoría. Esto te permitirá implementar la facturación electrónica de forma ágil y segura desde cualquier sistema.&#x20;
+
+:hand\_splayed: En la modalidad asincrónica no se permiten comprobantes tipo E.
+
+{% content-ref url="../web-services-afip-api-arca/" %}
+[web-services-afip-api-arca](../web-services-afip-api-arca/)
+{% endcontent-ref %}
+
+
 
 ### ✅ Respuestas posibles
 
