@@ -59,7 +59,13 @@ Para acelerar la facturación podrías distribuir la carga de facturación en m�
 
 ### 📄 ¿Qué dato no debe faltar  en un request asincrónico?
 
-El bloque "comprobante" debe incluir el campo "external\_reference". Ejemplo:
+El bloque "comprobante" debe incluir el campo "external\_reference".&#x20;
+
+{% hint style="info" %}
+**El `external_reference` debe ser único en tu sistema.** TusFacturasAPP no valida su unicidad y, dado que existen distintos flujos de trabajo según cada empresa, si envias el mismo `external_reference` más de una vez, la plataforma procesará cada solicitud sin realizar esta validación.
+{% endhint %}
+
+Ejemplo:
 
 ```
  "comprobante":{
