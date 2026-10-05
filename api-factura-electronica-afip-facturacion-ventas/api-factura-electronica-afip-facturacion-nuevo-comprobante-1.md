@@ -11,8 +11,6 @@ icon: a
 
 La **API de ARCA para facturación electrónica individual y asincrónica de TusFacturasAPP** te permite **emitir comprobantes fiscales válidos ante ARCA**. Es ideal para grandes volúmenes de facturación o cuándo el funcionamiento de tu plataforma no dependa del estado en tiempo real  de los servicios de ARCA. Integra fácil la facturación electrónica de AFIP/ARCA a tu sistema, cumpliendo con las normativas fiscales vigentes en Argentina.
 
-<figure><img src="../.gitbook/assets/tusfacturasapp-api-arca-facturacion-asincronica.webp" alt="TusFacturasAPP: API ARCA de facturación individual y asincrónica" width="563"><figcaption></figcaption></figure>
-
 
 
 ### 🛠 ¿Cómo funciona la modalidad Asincrónica de Facturación ARCA/AFIP?
@@ -42,17 +40,20 @@ Una vez recibido el hook, debes consultar la información del comprobante con un
 {% endstep %}
 {% endstepper %}
 
+<figure><img src="../.gitbook/assets/tusfacturasapp-api-arca-facturacion-asincronica.webp" alt="TusFacturasAPP: API ARCA de facturación individual y asincrónica" width="563"><figcaption></figcaption></figure>
+
 {% hint style="info" icon="timer" %}
-#### &#x20;Tiempos de procesamiento y Capacidades de procesamiento diarias
+### &#x20;Tiempos de procesamiento y Capacidades de procesamiento diarias apróximadas
 
-No existe un tiempo determinado, ya que los tiempos varían según:\
-\- Volumen de ventas programadas\
-\- Estado de los servicios de facturación de ARCA\
-\- Tipo de comprobante a emitir
+No existe un tiempo determinado, ya que los tiempos varían según:
+
+* Volumen de ventas programadas
+* Estado de los servicios de facturación de ARCA
+* Tipo de comprobante a emitir
 
 
 
-#### Capacidades de procesamiento diarias:
+**Capacidades de procesamiento diarias aproximadas:**
 
 |             Comprobantes de tipo A             |               Comprobantes tipo B              |                   Otros                   |
 | :--------------------------------------------: | :--------------------------------------------: | :---------------------------------------: |
@@ -73,7 +74,7 @@ Dentro del bloque "comprobante" debe existir el campo "external\_reference".&#x2
 
 Ejemplo:
 
-```
+```json
  "comprobante":{
       "external_reference":"ABC123",
       ...
