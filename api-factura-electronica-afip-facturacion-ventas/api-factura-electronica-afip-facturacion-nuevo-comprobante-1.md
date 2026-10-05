@@ -11,7 +11,7 @@ icon: a
 
 La **API de ARCA para facturación electrónica individual y asincrónica de TusFacturasAPP** te permite **emitir comprobantes fiscales válidos ante ARCA**. Es ideal para grandes volúmenes de facturación o cuándo el funcionamiento de tu plataforma no dependa del estado en tiempo real  de los servicios de ARCA. Integra fácil la facturación electrónica de AFIP/ARCA a tu sistema, cumpliendo con las normativas fiscales vigentes en Argentina.
 
-<figure><img src="../.gitbook/assets/tusfacturasapp-api-arca-facturacion-asincronica.webp" alt="TusFacturasAPP: API ARCA de facturación individual y asincrónica"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/tusfacturasapp-api-arca-facturacion-asincronica.webp" alt="TusFacturasAPP: API ARCA de facturación individual y asincrónica" width="563"><figcaption></figcaption></figure>
 
 
 
@@ -42,27 +42,33 @@ Una vez recibido el hook, debes consultar la información del comprobante con un
 {% endstep %}
 {% endstepper %}
 
-### ⏱ Tiempos de procesamiento
+{% hint style="info" icon="timer" %}
+#### &#x20;Tiempos de procesamiento y Capacidades de procesamiento diarias
 
-Los tiempos varían según:\
+No existe un tiempo determinado, ya que los tiempos varían según:\
 \- Volumen de ventas programadas\
 \- Estado de los servicios de facturación de ARCA\
 \- Tipo de comprobante a emitir
 
+
+
 #### Capacidades de procesamiento diarias:
 
-* Hasta 100.000 comprobantes A por día, por punto de venta.
-* Hasta 150.000 comprobantes B por día, por punto de venta.
-* Hasta   14.000 de otros tipos por día, por punto de venta.
+|             Comprobantes de tipo A             |               Comprobantes tipo B              |                   Otros                   |
+| :--------------------------------------------: | :--------------------------------------------: | :---------------------------------------: |
+| Hasta **100.000** por día, por punto de venta. | Hasta **150.000** por día, por punto de venta. | Hasta 14.000 por día, por punto de venta. |
 
-Para acelerar la facturación podrías distribuir la carga de facturación en múltiples puntos de venta. Sin embargo, no podemos garantizar que todo el volumen se emita en un solo día, por lo que recomendamos enviar la facturación con antelación para evitar inconvenientes.
+_Para acelerar la facturación podrías distribuir la carga de facturación en múltiples puntos de venta. Sin embargo, no podemos garantizar que todo el volumen se emita en un solo día, por lo que recomendamos enviar la facturación con antelación para evitar inconvenientes._
+{% endhint %}
+
+
 
 ### 📄 ¿Qué dato no debe faltar  en un request asincrónico?
 
-El bloque "comprobante" debe incluir el campo "external\_reference".&#x20;
+Dentro del bloque "comprobante" debe existir el campo "external\_reference".&#x20;
 
-{% hint style="info" %}
-**El `external_reference` debe ser único en tu sistema.** TusFacturasAPP no valida su unicidad y, dado que existen distintos flujos de trabajo según cada empresa, si envias el mismo `external_reference` más de una vez, la plataforma procesará cada solicitud sin realizar esta validación.
+{% hint style="warning" %}
+**El `external_reference` debe ser único en tu sistema.** TusFacturasAPP no valida su unicidad y, dado que existen distintos flujos de trabajo según cada empresa, si envías el mismo `external_reference` más de una vez, la plataforma procesará cada solicitud sin realizar esta validación.
 {% endhint %}
 
 Ejemplo:
@@ -76,6 +82,8 @@ Ejemplo:
 
 ### 🚀 ¿Cómo crear una venta asincrónica? <a href="#como-crear-una-venta-instantanea" id="como-crear-una-venta-instantanea"></a>
 
+> Con nuestra documentación clara y ejemplos reales, **la integración de la facturación electrónica en tu software será rápida, sencilla y confiable**.
+
 Consulta nuestra [guía completa 👉 **“Referencia API AFIP ARCA”**](https://developers.tusfacturas.app/api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca), donde encontrarás:
 
 * Especificaciones técnicas
@@ -83,11 +91,7 @@ Consulta nuestra [guía completa 👉 **“Referencia API AFIP ARCA”**](https:
 * [Ejemplos de código](https://developers.tusfacturas.app/web-services-afip-api-arca) listos para usar
 * Buenas prácticas de integración y manejo de errores
 
-> Con nuestra documentación clara y ejemplos reales, **la integración de la facturación electrónica en tu software será rápida, sencilla y confiable**.
-
-<figure><img src="../.gitbook/assets/queteresuelvelaapiarcaafip-tusfacturasapp.webp" alt=""><figcaption></figcaption></figure>
-
-### 📌 Endpoint para ventas asincrónicas e individuales
+📌 Endpoint para ventas asincrónicas e individuales
 
 {% hint style="info" %}
 <mark style="color:green;">`POST`</mark>&#x20;
@@ -109,8 +113,8 @@ Charset: UTF-8  Formato: JSON&#x20;
 | comprobante | object | Estructura de "comprobante" según se informa en el apartado de ["facturacion"](./) |
 | cliente     | object | Estructura de "Cliente", según se informa en el apartado de ["facturacion"](./)    |
 
-{% hint style="info" %}
-#### ⚠️ Consideraciones clave para emisión asincrónica
+{% hint style="warning" %}
+#### &#x20;Consideraciones clave para emisión asincrónica
 
 * **La fecha que envíes en el comprobante, determina cuándo será enviado a procesar**, por lo que puedes enviar comprobantes a la cola de procesamiento con fecha posterior a hoy.  Te sugerimos leer el apartado de "[FAQs sobre la cola de procesamiento](../faqs-or-ventas-asincronicas.md)".&#x20;
 * El **campo external\_reference es obligatorio** y debe ser único, sin embargo TusFacturasAPP no realiza ese control.
@@ -135,7 +139,7 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 
 ### ✅ Respuestas posibles
 
-#### :red\_circle: ERROR  de válidación -  Respuesta: instántanea
+:red\_circle: **ERROR  de válidación -  Respuesta: instántanea**
 
 Si el request que enviaste posee errores de formato de los campos enviados, pero  cumple con los siguientes requisitos básicos:
 
@@ -185,7 +189,7 @@ Ejemplo del hook que recibirás:
 }
 ```
 
-### :red\_circle: Mantenimientos programados
+:red\_circle: **Mantenimientos programados**
 
 En ocasiones, nuestro equipo técnico realiza [tareas de mantenimiento programado](../web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md#consulta-el-estado-de-los-servicios-en-tusfacturasapp-y-el-estado-de-los-servicios-de-arca) que requieren suspender temporalmente la operatoria de la API. Durante ese período, las solicitudes devolverán una respuesta JSON como la siguiente:
 
@@ -200,7 +204,9 @@ En ocasiones, nuestro equipo técnico realiza [tareas de mantenimiento programad
 }
 ```
 
-#### :green\_circle: ACEPTADO: Cuando el request se ha aceptado para su procesamiento
+***
+
+:green\_circle: **ACEPTADO: Cuando el request se ha aceptado para su procesamiento**
 
 Una vez que tu solicitud pase la validación inicial, obtendrás una respuesta instantánea del sistema. Adicionalmente, para informarte que la operación ha sido encolada, se enviará un [**webhook**](webhooks-notificaciones.md), cuyo funcionamiento se explica a continuación.
 
@@ -237,13 +243,13 @@ Ejemplo de la respuesta instantánea :
 
 ### 📬 Webhooks de respuesta de la API ARCA/AFIP
 
-<figure><img src="../.gitbook/assets/tusfacturasapp-api-arca-webhooks.webp" alt="TusFacturasAPP: Webhooks API Rest ARCA/AFIP Factura electrónica"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/tusfacturasapp-api-arca-webhooks.webp" alt="TusFacturasAPP: Webhooks API Rest ARCA/AFIP Factura electrónica" width="563"><figcaption></figcaption></figure>
 
 Existen 3 tipos de eventos posibles para el recurso de facturación que podes recibir en ésta instancia:  "encolado", "emitido" y "error".&#x20;
 
 Conoce más sobre los [webhooks](webhooks-notificaciones.md).
 
-### :purple\_circle:  Hook: "encolado"  &#x20;
+:purple\_circle:  **Hook: "encolado"**&#x20;
 
 |   recurso   |  evento  |
 | :---------: | :------: |
@@ -262,10 +268,12 @@ El hook de "encolado", te informa que el request ha sido aceptado para su proces
 	"intento": 1,
 	"msg": [],
 	"hook_id": "xxxxx"
-}
+} 
 ```
 
-### &#x20;:green\_circle: Hook: "emitido"&#x20;
+***
+
+:green\_circle: **Hook: "emitido"**&#x20;
 
 |   recurso   |  evento |
 | :---------: | :-----: |
@@ -287,7 +295,9 @@ El JSON que recibirás será similar al siguiente ejemplo:&#x20;
 } 
 ```
 
-### 🔴 Hook: "error"
+***
+
+🔴 **Hook: "error"**
 
 |   recurso   | evento |
 | :---------: | :----: |

@@ -137,13 +137,17 @@ No. La plataforma en ese caso no te notifica por webhook. Si llegas a necesitar 
 
 #### **Si se intentó emitir 100 veces un comprobante en cola, ¿En qué momento recibo un webhook con el error?**
 
-Recibís un webhook de error cuando se alcance el máximo de intentos definidos.&#x20;
+Recibís un webhook de error cuando se alcance el máximo de intentos definidos o cuando el error sea irrecuperable. &#x20;
+
+Regla de reintento secuencial: Todo comprobante rechazado o con error debe enviarse a reprocesar exactamente en el mismo orden cronológico/secuencial en el que fue emitido originalmente.
 
 ***
 
 #### **¿Qué debo hacer si un comprobante superó el límite de reintentos?**
 
 Debes solucionar el inconveniente, si es un error de datos vas a tener que eliminarlo y volverlo a crear. Si es un tema con tu enlace con ARCA o tu suscripción, podes probar de enviar a re-procesar ese comprobante, usando el método de ["Reenviar a procesar, comprobante encolado con error"](web-services-afip-api-arca/reenvio-de-comprobantes-encolados-con-error.md)
+
+
 
 ***
 
