@@ -2,9 +2,10 @@
 description: >-
   API AFIP para emitir comprobantes B. Ideal para Responsables Inscriptos.
   Ejemplos incluidos. Confiable desde 2015. ¡Los desarrolladores la aman!
+icon: receipt
 ---
 
-# Ejemplos de comprobantes "B"
+# Comprobantes "B"
 
 Los comprobantes de tipo "B" (Factura B / Notas de débito B / Nota de crédito B / Factura de crédito MiPyme B / Notas de crédito MiPyme B / Nota de débito MiPyme B), son aquellos que solo pueden ser emitidos por un CUIT cuya condición frente al IVA sea "Responsable inscripto" y se emitan a un consumidor final o un exento en IVA.  No sabes en qué momento emitir comprobantes de tipo **B**? Consulta [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante B.&#x20;
 

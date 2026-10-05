@@ -3,6 +3,7 @@ description: >-
   API ARCA para emitir comprobantes con bonificaciones. Ideal para pymes que
   necesitan aplicar descuentos. Ejemplos incluidos. Confiable desde 2015. ¡Los
   desarrolladores la aman!
+icon: percent
 ---
 
 # Bonificaciones

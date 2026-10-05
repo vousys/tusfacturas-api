@@ -2,9 +2,10 @@
 description: >-
   API AFIP para emitir comprobantes C. Ideal para Monotributistas. Ejemplos
   incluidos. Confiable desde 2015. ¡Los desarrolladores la aman!
+icon: receipt
 ---
 
-# Ejemplos de comprobantes "C"
+# Comprobantes "C"
 
 Los comprobantes de tipo "C" (Factura C / Nota de débito C / Nota de crédito C / Factura de crédito MiPyme C / Nota de crédito MiPyme C / Nota de débito MiPyme C), son aquellos que solo pueden ser emitidos por un CUIT cuya [condición frente al IVA](https://www.tusfacturas.app/que-tipo-de-comprobante-debo-emitir-segun-mi-condicion-frente-al-iva.html) sea "Monotributo" o "Exento". No sabes en qué momento emitir comprobantes de tipo **C**? Consultá [desde aquí](que-tipos-de-comprobante-debo-puedo-emitir.md) quienes deben emitir un comprobante C.
 

@@ -2,9 +2,10 @@
 description: >-
   API AFIP para emitir facturas electrónicas AFIP. Ejemplos de facturas A, B, C,
   notas de crédito y débito. Confiable desde 2015. ¡Los desarrolladores la aman!
+icon: comments-question
 ---
 
-# Como confeccionar una venta
+# ¿Como confeccionar una venta?
 
 TusFacturasAPP ofrece tres modalidades para emitir comprobantes a través de la API REST ARCA. Elegí la que mejor se adapte a tu arquitectura e integrala en minutos.
 

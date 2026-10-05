@@ -3,6 +3,7 @@ description: >-
   TusFacturasAPP es un software de facturación y un software de gestión 
   diseñado para empresas que facturen en Argentina. Conoce más de
   TusFacturasAPP.
+icon: memo-circle-info
 ---
 
 # Facturas a consumidor final, sin especificar datos

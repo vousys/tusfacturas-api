@@ -2,6 +2,7 @@
 description: >-
   Emití con la API para AFIP de TusFacturas.app notas de crédito y notas de
   débito A, B, C, M y MiPyme.
+icon: receipt
 ---
 
 # Notas de crédito / Notas de débito
@@ -43,7 +44,7 @@ Para éste tipo de información, es obligatorio enviar el detalle de los comprob
 
 * Solo podras enviar hasta 10 comprobantes asociados por NC/ND
 * Los comprobantes que se asocien deben haberse emitido en la misma moneda en que se esta emitiendo la nota de crédito/débito.
-* La fecha del comprobante que asocies debe ser menor o igual a la fecha del comprobante que estas queriendo emitir. Tené en cuenta que ARCA realiza validaciones en cuanto a la fecha de los comprobantes que asocies, ya que no se permiten notas de crédito hacia comprobantes con  +15 días. Mas info: [Hasta cuántos días atras puedo facturar](https://ayuda.tusfacturas.app/es/articles/10355161-hasta-cuantos-dias-puedo-facturar-para-atras)
+* La fecha del comprobante que asocies para anular dentro del bloque "comprobantes\_asociados" debe ser menor o igual a la fecha del comprobante que estas queriendo emitir y con un máximo de hasta 15 días atras. Esta es una validación que realiza ARCA de su lado.  Mas info: [Hasta cuántos días atras puedo facturar](https://ayuda.tusfacturas.app/es/articles/10355161-hasta-cuantos-dias-puedo-facturar-para-atras)
 * El servicio de AFIP/ARCA no permite emitir notas de crédito E por período.
 
 

@@ -2,6 +2,7 @@
 description: >-
   Guía práctica para migrar a la API AFIP de facturación asincrónica . Acelera
   tus emisiones y optimiza tus procesos.
+icon: repeat
 ---
 
 # Guía de migración a facturación asincrónico (encolado)

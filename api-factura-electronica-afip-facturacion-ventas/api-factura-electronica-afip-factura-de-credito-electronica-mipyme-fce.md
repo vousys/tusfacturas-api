@@ -3,6 +3,7 @@ description: >-
   Emití con la API de TusFacturas.app, facturas, notas de débito y notas de
   crédito A,B y C de los comprobantes tipo Factura de crédito electrónica Mi
   Pyme.
+icon: receipt
 ---
 
 # Comprobantes MiPyme: Factura de Crédito Electrónica FCE

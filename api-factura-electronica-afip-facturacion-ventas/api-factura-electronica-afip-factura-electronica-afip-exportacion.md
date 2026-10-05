@@ -2,6 +2,7 @@
 description: >-
   API de facturación electrónica AFIP para emitir comprobantes de exportación de
   tipo E: FACTURA E, NOTA DE DÉBITO E, NOTA DE CRÉDITO E.
+icon: receipt
 ---
 
 # Comprobantes "E" de exportación

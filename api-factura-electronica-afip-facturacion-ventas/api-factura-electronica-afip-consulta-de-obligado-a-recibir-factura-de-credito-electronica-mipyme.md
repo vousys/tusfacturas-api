@@ -2,6 +2,7 @@
 description: >-
   ¿Tu cliente debe recibir Factura de Crédito electrónica MiPyme? ¡Consulta
   fácil y rápido con la API TusFacturas.app!
+icon: comments-question
 ---
 
 # Comprobantes MiPyme: ¿Debo emitirla?

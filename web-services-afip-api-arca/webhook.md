@@ -347,7 +347,13 @@ end
 
 ### **Información sobre Webhooks:**&#x20;
 
-Para una comprensión completa de cómo integrar y utilizar el webhook, [**consultá la documentación detallada desde aquí.**](../api-factura-electronica-afip-facturacion-ventas/webhooks-notificaciones.md)
+Para una comprensión completa de cómo integrar y utilizar el webhook
+
+{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/webhooks-notificaciones.md" %}
+[webhooks-notificaciones.md](../api-factura-electronica-afip-facturacion-ventas/webhooks-notificaciones.md)
+{% endcontent-ref %}
+
+
 
 ***
 

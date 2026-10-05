@@ -2,6 +2,7 @@
 description: >-
   Mediante ésta consulta podrás obtener todos los comprobantes enviados, según
   determinadas condiciones de búsqueda.
+icon: magnifying-glass
 ---
 
 # Consulta avanzada

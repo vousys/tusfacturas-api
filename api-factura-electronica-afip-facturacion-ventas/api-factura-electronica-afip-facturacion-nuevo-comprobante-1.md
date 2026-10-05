@@ -322,6 +322,14 @@ El JSON que recibirás será similar al siguiente ejemplo y a diferencia de los 
 }  
 ```
 
+***
+
+### Preguntas frecuentes
+
+{% content-ref url="../faqs-or-ventas-asincronicas.md" %}
+[faqs-or-ventas-asincronicas.md](../faqs-or-ventas-asincronicas.md)
+{% endcontent-ref %}
+
 
 
 ### ¿Aún te quedan dudas? ¡Contactános!

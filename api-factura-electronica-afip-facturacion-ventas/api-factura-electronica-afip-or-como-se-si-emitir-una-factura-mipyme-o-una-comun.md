@@ -2,6 +2,7 @@
 description: >-
   Conoce como determinas si tenes que emitir una factura MiPyme o una factura A
   común.
+icon: comments-question
 ---
 
 # ¿Factura MiPyme o Factura común?

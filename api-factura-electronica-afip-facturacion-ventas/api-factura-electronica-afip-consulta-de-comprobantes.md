@@ -2,6 +2,7 @@
 description: >-
   TusFacturasAPP: Consulta rápida y precisa de comprobantes AFIP. Integra
   nuestra API en tu sistema y optimiza tus procesos.
+icon: magnifying-glass
 ---
 
 # Consulta simple de ventas
