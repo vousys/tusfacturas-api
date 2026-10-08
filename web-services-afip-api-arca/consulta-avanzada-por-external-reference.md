@@ -53,7 +53,7 @@ Podes enviar hasta 100 external reference para consultar, sin embargo puede suce
  "limite": 100 ,
 "comprobante": 
 	{
-			"external_reference": ["ABC1234", "ABC1235", "ABC188" ],
+			"external_reference_list": ["ABC1234", "ABC1235", "ABC188" ],
 			"operacion": "V"  
 	}
 } 
