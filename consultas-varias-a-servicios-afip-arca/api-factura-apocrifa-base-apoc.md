@@ -20,7 +20,7 @@ Este endpoint permite [consultar la base de datos APOC de ARCA](https://ayuda.tu
 
 {% hint style="info" %}
 🪙 **Consumo de créditos:** `1 request = 1 llamada`\
-Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+Los requests se cuentan individualmente por cada método que consumas [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
 #### Request Body

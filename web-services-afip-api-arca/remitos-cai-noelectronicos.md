@@ -16,19 +16,14 @@ Remito - solo en la modalidad "[Instantánea](../api-factura-electronica-afip-fa
 {% endhint %}
 
 {% hint style="info" %}
-🪙 **Consumo de créditos:** `1 request = 1 comprobante`\
-Los requests se cuentan individualmente por cada comprobante. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+**Consumo de créditos:** cada llamada descuenta **1 comprobante** de tu cupo de facturación. [¿Cómo funcionan los cupos? →](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
 ### JSON para generar un remito en AFIP/ARCA
 
-{% hint style="info" %}
 Los remitos generados en TusFacturasAPP no conectan con ARCA, ARBA ni ningún otro organismo provincial o nacional. Para que tengan validez legal deben imprimirse sobre papel pre-impreso con CAI desde un punto de venta que configures para los remitos.&#x20;
 
-El remito por webservice provisto por ARCA solo está disponible para empresas de ciertos rubros específicos (carnico, lácteo, etc).
-
-Conoce [cómo configurar el diseño del PDF de tus remitos](https://ayuda.tusfacturas.app/es/articles/12044811-como-configurar-el-estilo-de-un-remito-preimpreso-en-imprenta)&#x20;
-{% endhint %}
+El remito por webservice provisto por ARCA solo está disponible para empresas de ciertos rubros específicos (carnico, lácteo, etc). Conoce [cómo configurar el diseño del PDF de tus remitos](https://ayuda.tusfacturas.app/es/articles/12044811-como-configurar-el-estilo-de-un-remito-preimpreso-en-imprenta)&#x20;
 
 ```json
 {

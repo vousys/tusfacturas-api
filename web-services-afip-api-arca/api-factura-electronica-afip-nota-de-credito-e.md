@@ -17,8 +17,7 @@ Nota de crédito E (  Código ARCA: 021  ) emitida en la modalidad "[Instantáne
 {% endhint %}
 
 {% hint style="info" %}
-🪙 **Consumo de créditos:** `1 request = 1 comprobante`\
-Los requests se cuentan individualmente por cada comprobante. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+**Consumo de créditos:** cada llamada descuenta **1 comprobante** de tu cupo de facturación. [¿Cómo funcionan los cupos? →](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
 ### JSON para generar una Nota de crédito E en AFIP/ARCA con detalle de comprobantes anulados

@@ -31,7 +31,7 @@ Ten en cuenta que para la moneda "dólar": ARCA trabaja con la cotización ofici
 
 {% hint style="info" %}
 🪙 **Consumo de créditos:** `1 request = 1 llamada`\
-Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+Los requests se cuentan individualmente por  cada método que consumas. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
 
