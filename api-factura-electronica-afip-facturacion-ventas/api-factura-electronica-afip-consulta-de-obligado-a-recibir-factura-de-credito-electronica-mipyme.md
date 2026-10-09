@@ -34,8 +34,8 @@ IMPORTANTE: Para poder realizar ésta consulta, deberás tener agregado en tu cu
 ### :rocket: ¿Cómo consultar si debes emitir una MiPyme?
 
 {% hint style="info" %}
-🪙 **Consumo de créditos:** `1 request =  1 llamada`\
-Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+🪙 **Consumo de créditos:** `1 request = 1 llamada`\
+Los requests se cuentan independientes por cada método que consumas. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
 

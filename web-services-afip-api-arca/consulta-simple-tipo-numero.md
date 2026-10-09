@@ -15,8 +15,7 @@ icon: magnifying-glass
 {% endhint %}
 
 {% hint style="info" %}
-🪙 **Consumo de créditos:** `1 request = 1 consulta`\
-Los requests se cuentan individualmente por cada comprobante. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+🪙 **Consumo de créditos:** Éste método no consume créditos. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
 ### JSON para consultar un comprobante por tipo y número

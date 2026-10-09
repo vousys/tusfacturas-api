@@ -18,8 +18,8 @@ Esta funcionalidad permite reenviar un comprobante que se encuentra en la cola d
 {% endhint %}
 
 {% hint style="info" %}
-🪙 **Consumo de créditos:** `1 request` \
-Los requests se cuentan individualmente por cada comprobante.&#x20;
+🪙 **Consumo de créditos:** `1 request = 1 llamada`\
+Los requests se cuentan independientes por cada método que consumas. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
 ### Ejemplo del JSON a enviar:
