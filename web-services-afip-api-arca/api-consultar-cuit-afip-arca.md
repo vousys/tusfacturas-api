@@ -7,17 +7,20 @@ icon: code
 
 # Consultar CUIT en ARCA
 
-{% hint style="info" %}
+{% hint style="warning" %}
 **IMPORTANTE**: Para utilizar esta consulta, tu CUIT debe estar **enlazado con ARCA**. Por lo tanto, esta funcionalidad **no está disponible** en el plan API DEV.
 {% endhint %}
 
 ### Endpoint
 
-{% hint style="info" %}
+{% hint style="success" icon="rectangle-api" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">clientes/afip-info</mark>
 {% endhint %}
 
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 consulta`\
+Los requests se cuentan individualmente por cada comprobante.&#x20;
+{% endhint %}
 
 ### Ejemplo de JSON para consultar un CUIT en ARCA
 

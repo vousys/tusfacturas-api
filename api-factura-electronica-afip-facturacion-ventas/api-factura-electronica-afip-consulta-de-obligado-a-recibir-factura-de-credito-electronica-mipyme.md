@@ -29,11 +29,16 @@ El objetivo principal es el impulso al financiamiento de las micro, pequeñas y 
 IMPORTANTE: Para poder realizar ésta consulta, deberás tener agregado en tu cuenta AFIP, el servicio de "**Webservice Registro de Facturas de Crédito Electrónica MiPyMEs "** . Te indicamos cómo hacerlo en el [instructivo de integración con AFIP : Paso 6](https://youtu.be/_YSRksd0_A0)
 {% endhint %}
 
-
+***
 
 ### :rocket: ¿Cómo consultar si debes emitir una MiPyme?
 
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request =  1 llamada`\
+Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
+
+
 
 Ejemplo:
 

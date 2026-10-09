@@ -6,9 +6,7 @@ description: >-
 
 # Consultar las cotizaciones AFIP/ARCA
 
-Accede a cotizaciones de monedas ARCA en tiempo real con la API de facturación electrónica de TusFacturas.app
-
-Obtene información precisa y actualizada sobre el tipo de cambio oficial de ARCA para sus facturas electrónicas.
+Accede a cotizaciones de monedas ARCA en tiempo real con la API de facturación electrónica de TusFacturas.app. Obtené información precisa y actualizada sobre el tipo de cambio oficial de ARCA para sus facturas electrónicas.
 
 ### Beneficios de utilizar la API de facturación electrónica de TusFacturas.app para consultar cotizaciones de monedas ARCA:
 
@@ -21,21 +19,22 @@ TusFacturas.app es la solución ideal para empresas que buscan simplificar y opt
 
 Comenza a utilizar la API de facturación electrónica de TusFacturas.app hoy mismo y experimenta la diferencia.
 
-{% hint style="info" %}
-Ten en cuenta que para la moneda "dólar": AFIP trabaja con la cotización oficial del Banco de la Nación Argentina, correspondiente al DOLAR DIVISAS y la cotización es actualizada a cada hora.
+{% hint style="warning" %}
+Ten en cuenta que para la moneda "dólar": ARCA trabaja con la cotización oficial del Banco de la Nación Argentina, correspondiente al DOLAR DIVISAS y la cotización es actualizada a cada hora.
 {% endhint %}
 
 #### Request
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`tablas_referencia/cotizacion`</mark>
+{% hint style="success" %}
+<mark style="color:green;">`POST`</mark>    `https://www.tusfacturas.app/app/api/v2/tablas_referencia/`<mark style="color:purple;">**`cotizacion`**</mark>
+{% endhint %}
 
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 llamada`\
+Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
 
 
-
-Puedes obtener la cotización de las diferentes monedas que tenemos publicadas en nuestra
-
-[**tabla de referencia de monedas**](../parametros/tablas-de-referencia.md#monedas)
 
 #### Request Body
 

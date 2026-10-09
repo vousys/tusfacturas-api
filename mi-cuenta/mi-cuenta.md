@@ -14,9 +14,14 @@ Es fundamental entender que los límites de tu plan no funcionan como un pozo ú
 
 Éste método te brindara que cantidad de comprobantes que tenes incluidos en tu suscripción actual,  cuantos tenes programados como abono, y cuantos te quedan disponibles para consumir..
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`micuenta/consumo`</mark>
+{% hint style="success" %}
+<mark style="color:green;">`POST`</mark>    `https://www.tusfacturas.app/app/api/v2/micuenta/`<mark style="color:purple;">**`consumo`**</mark>
+{% endhint %}
 
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request =  1 llamada`\
+Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
 
 #### Request Body
 

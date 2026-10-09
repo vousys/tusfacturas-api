@@ -9,6 +9,12 @@ icon: magnifying-glass
 
 La **API ARCA/AFIP de TusFacturasAPP** ofrece dos métodos para consultar comprobantes fiscales emitidos desde tu sistema: el método de [**consulta simple**](api-factura-electronica-afip-consulta-de-comprobantes.md) y el de **consulta avanzada**. Ambos son fundamentales para verificar el estado y obtener los datos de las ventas realizadas.
 
+{% hint style="info" %}
+🪙 **Consumo de créditos:** Éste método no consume créditos de tu cupo.
+{% endhint %}
+
+***
+
 ### 🔹 Consulta avanzada de ventas
 
 Nuestra herramienta de Consulta Avanzada de Ventas está diseñada para ir más allá de una búsqueda simple, permitiéndote **explorar y recuperar información específica** de tus operaciones  de manera profunda.

@@ -17,11 +17,14 @@ Utiliza este endpoint para obtener el **último número de comprobante emitido**
 
 ### Endpoint
 
-{% hint style="info" %}
+{% hint style="success" icon="rectangle-api" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/numeracion`
 {% endhint %}
 
-💡 El uso de éste método no contabiliza como un request en tu suscripción
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 consulta`\
+Los requests se cuentan individualmente por cada comprobante. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
 
 ### Ejemplo del JSON a enviar
 

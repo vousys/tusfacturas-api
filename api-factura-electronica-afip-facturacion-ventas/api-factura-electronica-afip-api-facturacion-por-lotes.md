@@ -43,11 +43,16 @@ Es necesario leer primero, la documentación de "[Facturación](./)", para conoc
 
 Consulta nuestra guía detallada "[Referencia API AFIP ARCA](referencia-api-afip-arca.md)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
 
-{% hint style="info" %}
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`lotes`</mark>
-
-💡 El uso de éste método contabiliza como "n" request en tu suscripción, siendo "n" la cantidad de comprobantes que envíes.
+{% hint style="success" %}
+<mark style="color:green;">`POST`</mark>    `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`lotes`**</mark>
 {% endhint %}
+
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 comprobante`\
+Los requests se cuentan individualmente por cada comprobante que envías a facturar dentro del lote. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
+
+
 
 Charset: UTF-8
 

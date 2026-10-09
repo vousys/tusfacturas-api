@@ -66,13 +66,16 @@ Consultá nuestra [guía completa **“Referencia API AFIP ARCA”**](https://de
 
 **Endpoint:**
 
-{% hint style="info" %}
-<mark style="color:green;">`POST`</mark>&#x20;
-
-`https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`nuevo_encola`**</mark>
-
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+{% hint style="success" %}
+<mark style="color:green;">`POST`</mark>    `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`nuevo_encola`**</mark>
 {% endhint %}
+
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 comprobante` \
+Los requests se cuentan individualmente por cada comprobante. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
+
+
 
 **Body:**
 

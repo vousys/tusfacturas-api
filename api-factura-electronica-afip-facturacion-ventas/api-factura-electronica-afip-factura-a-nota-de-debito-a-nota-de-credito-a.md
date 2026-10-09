@@ -1,6 +1,6 @@
 ---
 description: >-
-  API AFIP para emitir comprobantes A. Ideal para Responsables Inscriptos.
+  API ARCA para emitir comprobantes A. Ideal para Responsables Inscriptos.
   Ejemplos incluidos. Confiable desde 2015. ¡Los desarrolladores la aman!
 icon: receipt
 ---

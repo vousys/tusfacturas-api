@@ -7,15 +7,18 @@ description: >-
 
 # Generar un recibo de cobro
 
-{% hint style="info" %}
 Los cobros que informes, se usan solo para la gestión interna de nuestra plataforma y no podrás generar dentro de éste método, cobros por comprobantes que emitiste a tus clientes, para eso debes usar el método de "[Ingresar pago a un comprobante emitido](api-factura-electronica-afip-or-ingresar-pago-1.md#ingresar-pagos-a-un-comprobante-emitido)"
-{% endhint %}
 
 ### Generar recibos de cobro
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/caja/`<mark style="color:purple;">`nuevo`</mark>
+{% hint style="success" %}
+<mark style="color:green;">`POST`</mark>    `https://www.tusfacturas.app/app/api/v2/caja/`<mark style="color:purple;">**`nuevo`**</mark>
+{% endhint %}
 
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request =  1 llamada`\
+Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
 
 
 

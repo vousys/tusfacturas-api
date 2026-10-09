@@ -19,23 +19,24 @@ Aunque ARCA los haya nomenclado como "recibos", estos documentos son equivalente
 
 Recibo C emitido en la modalidad "[Instantánea](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)"
 
-{% hint style="info" %}
+{% hint style="success" icon="rectangle-api" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo`</mark>
 {% endhint %}
 
 Recibo C emitido en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
 
-{% hint style="info" %}
+{% hint style="success" icon="rectangle-api" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo_encola`</mark>
 {% endhint %}
 
-
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 comprobante`\
+Los requests se cuentan individualmente por cada comprobante. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
 
 ### JSON para generar un recibo C en AFIP/ARCA
 
-{% hint style="info" %}
 Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden incluir exentos, no gravados ni percepciones
-{% endhint %}
 
 ```json
 {

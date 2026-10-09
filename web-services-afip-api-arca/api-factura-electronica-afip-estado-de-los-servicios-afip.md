@@ -17,8 +17,13 @@ Ante una caída, la **facturación instantánea (sincrónica) se ve afectada de 
 
 ### Endpoint
 
-{% hint style="info" %}
+{% hint style="success" icon="rectangle-api" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`estado_servicios/alertas`</mark>
+{% endhint %}
+
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 consulta`\
+Los requests se cuentan individualmente por cada comprobante. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
 ### Ejemplo del JSON a enviar para consultar el estado de los servicios

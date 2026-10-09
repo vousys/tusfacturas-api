@@ -59,10 +59,13 @@ Consultá nuestra [guía completa 👉 **“Referencia API AFIP ARCA”**](refer
 
 ### 📌 Endpoint para ventas individuales e instantáneas:
 
-{% hint style="info" %}
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`nuevo`</mark>
+{% hint style="success" %}
+<mark style="color:green;">`POST`</mark>    `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`nuevo`**</mark>
+{% endhint %}
 
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 comprobante` \
+Los requests se cuentan individualmente por cada comprobante. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
 Charset: UTF-8 / JSON&#x20;

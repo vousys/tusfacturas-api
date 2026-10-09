@@ -27,11 +27,14 @@ Puedes llevar a cabo esta operación de dos maneras:
 
 ### Endpoint
 
-{% hint style="info" %}
+{% hint style="success" icon="rectangle-api" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`regenerar_pdf`</mark>
 {% endhint %}
 
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request` \
+Los requests se cuentan individualmente por cada comprobante.&#x20;
+{% endhint %}
 
 ### Ejemplo del JSON&#x20;
 

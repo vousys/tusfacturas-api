@@ -9,11 +9,14 @@ Obtene información en tiempo real y precisa sobre el tipo de cambio oficial de 
 
 ### Endpoint
 
-{% hint style="info" %}
+{% hint style="success" icon="rectangle-api" %}
 <mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">tablas\_referencia/cotizacion</mark>
 {% endhint %}
 
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 consulta` \
+Los requests se cuentan individualmente por cada comprobante.&#x20;
+{% endhint %}
 
 ### Ejemplo de JSON a enviar
 

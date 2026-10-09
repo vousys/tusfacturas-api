@@ -6,15 +6,16 @@ description: >-
 
 # Compras: Eliminación de comprobantes
 
-Tené en cuenta que las compras que cargas en nuestra plataforma no impactan en AFIP y son sólo para tu gestión interna.
+{% hint style="success" %}
+<mark style="color:green;">`POST`</mark>    `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`comprobante_eliminar`**</mark>
+{% endhint %}
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">`comprobante_eliminar`</mark>
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 llamada`\
+Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
 
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
-
-
-
-Ten en cuenta que solo podrás eliminar comprobantes de compra si no tienen pagos relacionados.&#x20;
+IMPORTANTE: Solo podrás eliminar comprobantes de compra si éstos no tienen pagos relacionados. Las compras son comprobantes solo para tu gestión interna y no impactan en ARCA.&#x20;
 
 #### Request Body
 

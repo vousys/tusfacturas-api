@@ -10,11 +10,14 @@ icon: magnifying-glass
 
 ### Endpoint
 
-{% hint style="info" %}
+{% hint style="success" icon="rectangle-api" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`consulta_avanzada`</mark>
 {% endhint %}
 
-
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 consulta`\
+Los requests se cuentan individualmente por cada comprobante. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
 
 Ésta consulta tiene 2 herramientas útiles:
 

@@ -7,16 +7,21 @@ description: >-
 # Solicitar certificado de enlace con AFIP
 
 {% hint style="info" %}
-A través de esta herramienta, podrás solicitar tu certificado de enlace con ARCA y acceder al instructivo paso a paso. El sistema generará el certificado para el CUIT de la sesión activa y lo enviará al correo del usuario administrador.
+A través de esta herramienta, podrás solicitar tu certificado de enlace con ARCA y acceder al instructivo  paso a paso. El sistema generará el certificado para el CUIT de la sesión activa y lo enviará al correo del usuario administrador.
 
 Importante: Esta función solo está disponible para cuentas en producción (no aplica para el plan API DEV).
 {% endhint %}
 
-### ¿Cómo solicitar certificado de enlace?
+### ¿Cómo solicitar el certificado de enlace con ARCA?
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`puntos_venta/certificado`</mark>
+{% hint style="success" %}
+<mark style="color:green;">`POST`</mark>    `https://www.tusfacturas.app/app/api/v2/puntos_venta/`<mark style="color:purple;">**`certificado`**</mark>
+{% endhint %}
 
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+{% hint style="info" %}
+🪙 **Consumo de créditos:** `1 request = 1 llamada`\
+Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
 
 #### Request Body
 

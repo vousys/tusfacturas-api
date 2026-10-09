@@ -6,9 +6,7 @@ description: >-
 
 # Consultar datos de un CUIT, desde la constancia de inscripción
 
-{% hint style="info" %}
-**IMPORTANTE**: Para utilizar esta consulta, tu CUIT debe estar **enlazado con ARCA**. Por lo tanto, esta funcionalidad **no está disponible** en el plan API DEV.
-{% endhint %}
+<mark style="color:$primary;">**IMPORTANTE**</mark><mark style="color:$primary;">: Para utilizar esta consulta, tu CUIT debe estar</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">**enlazado con ARCA**</mark><mark style="color:$primary;">. Por lo tanto, esta funcionalidad</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">**no está disponible**</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">en el plan API DEV.</mark>
 
 ### Consultar datos de un CUIT en AFIP/ARCA
 
@@ -16,19 +14,22 @@ Mediante éste método podrás consultar la info que AFIP/ARCA tiene almacenada 
 
 #### ¿A donde enviar el request?
 
-<mark style="color:green;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/`<mark style="color:purple;">`clientes/afip-info`</mark>
-
-💡 Cada vez que utilices este método, se contará como un request en tu suscripción. Los requests se cuentan por cada método que uses.
+{% hint style="success" %}
+<mark style="color:green;">`POST`</mark>    `https://www.tusfacturas.app/app/api/v2/clientes/`<mark style="color:purple;">**`afip-info`**</mark>
+{% endhint %}
 
 {% hint style="info" %}
-**¿Necesitas consultar muchos CUITs a la vez?**
+🪙 **Consumo de créditos:** `1 request =  1 llamada`\
+Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
+
+#### **¿Necesitas consultar muchos CUITs a la vez?**
 
 Si en lugar de integrar este método por API preferís hacer consultas masivas sin programar, podes usar la herramienta **"**[**Consulta masiva desde Excel de datos ARCA, ARBA, AGIP y APOC**](https://www.tusfacturas.app/consultar-cuits-en-arca-arba-agip-apoc-masivamente.html)**"** disponible en la plataforma web (menú > ARCA y padrones). Con ella podes cargar un archivo CSV con varios CUITs y obtener un reporte consolidado, sin necesidad de consultarlos uno por uno.
 
 👉 [Ver cómo usar la consulta masiva desde Excel](https://ayuda.tusfacturas.app/es/articles/16221224-consulta-masiva-desde-excel-de-datos-arca-arba-agip-y-apoc)
 
 ⚠️ Los créditos disponibles para este método de API (`clientes/afip-info`) son **compartidos** con los que se consumen en la herramienta de consulta masiva. No existen saldos independientes: cada consulta, ya sea por API o desde el Excel masivo, descuenta del mismo saldo de créditos de tu plan.
-{% endhint %}
 
 #### Request Body
 

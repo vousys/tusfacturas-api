@@ -24,7 +24,11 @@ Esta función es muy útil para:
 
 #### :rocket: Ejemplo de consulta simple
 
-💡 El uso de éste método no contabiliza como un request en tu suscripción
+{% hint style="info" %}
+🪙 **Consumo de créditos:** Éste método no consume créditos. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% endhint %}
+
+
 
 {% content-ref url="../web-services-afip-api-arca/consulta-simple-tipo-numero.md" %}
 [consulta-simple-tipo-numero.md](../web-services-afip-api-arca/consulta-simple-tipo-numero.md)
