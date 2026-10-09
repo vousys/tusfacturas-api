@@ -125,8 +125,8 @@ Cuando se alcanza el máximo de intentos, o en el momento en que se detecta que 
 **¿Qué hacer si un comprobante superó el límite de reintentos?**\
 Depende del tipo de error:
 
-* **Error de datos** (campos inválidos, rechazos de ARCA por información incorrecta): debes eliminar el comprobante de la cola y volver a crearlo con los datos corregidos.
-* **Error de enlace con ARCA o de suscripción** (problemas de conectividad, cupo, credenciales): Algunos de los errores mantienen a tu comprobante aun en cola mientras resolves el problema (enlace con ARCA, crear punto de venta, etc). Si tu suscripcion no tiene cupo o no se encuentra vigente, el comprobante no se acepta directamente. &#x20;
+* **Error de datos** (campos inválidos, rechazos de ARCA por información incorrecta): debés eliminar el comprobante de la cola y volver a crearlo con los datos corregidos.
+* **Error de enlace con ARCA o de suscripción** (problemas de conectividad, cupo, credenciales): Luego de resolver el problema que te impedia facturar, podes intentar reenviarlo a procesar usando el método [Reenviar a procesar comprobante encolado con error](https://developers.tusfacturas.app/web-services-afip-api-arca/reenvio-de-comprobantes-encolados-con-error).
 
 > ⚠️ **Regla de reintento secuencial:** todo comprobante rechazado o con error debe reenviarse a reprocesar exactamente en el mismo orden cronológico/secuencial en el que fue emitido originalmente. No respetar este orden puede generar inconsistencias en la numeración de comprobantes ante ARCA.
 
