@@ -8,20 +8,17 @@ description: >-
 
 ### **Si no quiero que mis clientes ingresen a TusFacturasAPP, ¿Se puede utilizar igual?**
 
-Sí, podes utilizar nuestra plataforma de facturación electrónica incluso si tus clientes no son usuarios. Vos tendrías acceso como usuario principal y recibirías un instructivo de enlace con AFIP para enviar manualmente a cada cliente. De esta forma, todas las facturas que emitan tus clientes a través del sistema tendrán curso legal y estarán validadas por la AFIP. Nuestro sistema de facturación electrónica cumple con todos los requisitos fiscales y brinda una solución completa para gestionar las facturas de manera digital, segura y con respaldo legal.
+Sí, podes utilizar nuestra plataforma de facturación electrónica incluso si tus clientes no son usuarios de TusFacturasAPP. Vos tendrías acceso como usuario principal y recibirías un instructivo de enlace con ARCA/AFIP para enviar manualmente a cada cliente. De esta forma, todas las facturas que emitan tus clientes a través del sistema tendrán curso legal y estarán validadas por ARCA.
+
+**¿Tengo que mencionar a TusFacturasAPP en mi plataforma?**
+
+Sí. Si utilizás nuestra API como motor de facturación dentro de tu propia plataforma o sistema, debés informarlo de forma visible en tu sitio web, incluyendo un enlace a [www.tusfacturas.app](https://www.tusfacturas.app), identificando a TusFacturasAPP® como proveedor del servicio de facturación electrónica. Podes usar una mención del estilo: _“Facturación electrónica provista por_ [_TusFacturasAPP®_](https://www.tusfacturas.app)_”_.
+
+Lo que **no** está permitido es revender o presentar el servicio como propio, bajo tu marca o cualquier otra denominación, sin identificar a TusFacturasAPP® como proveedor tecnológico. Para más detalles, consultá nuestros [Términos y Condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html), puntos 9 y 17.
 
 ### **¿Qué contabiliza como un request?**
 
-Un request es cualquier petición realizada a la API, independientemente del método utilizado o si devuelve éxito o error.
-
-El límite de requests disponible corresponde al límite de comprobantes incluido en tu plan y se aplica por separado a cada método de la API. Por ejemplo: si tu plan incluye 1000 comprobantes, podrás realizar 1000 requests a cada método durante la suscripción vigente. La única excepción son los métodos de consulta de comprobantes (simple y avanzada), que no tienen limite de consulta.
-
-Un ejemplo práctico para un plan con 5000 requests:
-
-* Podes realizar 5000 consultas de numeración&#x20;
-* Podes emitir 5000 comprobantes de cualquier tipo
-* Podes consultar 5000 veces la cotización del dólar&#x20;
-* Podrias realizar 20.000 consultas de comprobante por external reference
+Un request es cualquier petición realizada a la API, independientemente del método utilizado o si devuelve éxito o error.  Conoce más sobre [cómo se contabiliza el cupo API](https://ayuda.tusfacturas.app/es/articles/14657130-como-se-consume-el-cupo-de-la-api)&#x20;
 
 ### **¿La URL de descarga de PDF cuenta como un request?**
 
@@ -40,9 +37,27 @@ No. TusFacturasAPP se caracteriza por ser muy simple de usar y de configurar. Pa
 
 ### **¿Es un servicio de marca blanca?**
 
-No, nuestro sistema de facturación electrónica no es un servicio de marca blanca. Por cuestiones legales y de transparencia, nuestra plataforma agrega un pie de página en los archivos PDF de las facturas, indicando que el comprobante fue emitido a través de nuestro sistema TusFacturasAPP. Además, en los correos electrónicos que se envían con los comprobantes de venta emitidos, se menciona a TusFacturasAPP como el proveedor del servicio de facturación, aunque tú puedes configurar el nombre de remitente (from name) y la dirección de respuesta (reply to) según tus preferencias. De esta manera, garantizamos el cumplimiento de las regulaciones fiscales vigentes y brindamos un servicio de facturación electrónica transparente y confiable para ti y tus clientes.
+No. TusFacturasAPP® no es un servicio de marca blanca, y es importante entender qué implica eso en la práctica antes de integrarte.
 
-### **¿Qué sucede si se cae AFIP, como se manejan los errores?**
+**¿Dónde aparece la marca TusFacturasAPP®?**
+
+* **PDF de la factura:** nuestro sistema agrega automáticamente un pie de página en todos los archivos PDF indicando que el comprobante fue emitido a través de TusFacturasAPP®. Esto no puede ser removido ni personalizado.
+* **Correos electrónicos de envío de comprobantes:** los emails que se envían a los destinatarios de las facturas mencionan a TusFacturasAPP® como proveedor del servicio. Sin embargo, podes configurar el nombre del remitente (_from name_) y la dirección de respuesta (_reply to_) con los datos de tu empresa o los de tu cliente.
+* **Mensajes de error:** las respuestas de error de la API pueden incluir referencias a TusFacturasAPP® como parte de la descripción del problema.
+* **Instructivo de enlace con ARCA:** el documento que se envía automáticamente para configurar el enlace con ARCA menciona a TusFacturasAPP® como la plataforma desde la cual se realiza el proceso.
+* **Otros puntos de contacto:** la marca puede aparecer en otras comunicaciones automáticas, notificaciones del sistema y documentación generada por la plataforma.
+
+**¿Puedo integrar la API en mi plataforma y ofrecerla a mis clientes?**
+
+Sí, podes usar nuestra API como motor de facturación electrónica dentro de tu propia plataforma o sistema. En ese caso aplican las siguientes condiciones:
+
+* **Lo que está permitido:** ofrecer el servicio de facturación a tus clientes a través de tu plataforma, cobrando un fee por la gestión si así lo deseas.
+* **Lo que está prohibido:** revender el servicio bajo la marca TusFacturasAPP® o presentarlo como un desarrollo propio, omitiendo nuestra identidad como proveedor tecnológico.
+* **Lo que es obligatorio:** informar de forma visible en tu sitio web que la facturación electrónica es provista por TusFacturasAPP®, incluyendo un enlace a [www.tusfacturas.app](https://www.tusfacturas.app). Podes usar una mención del estilo: _“Facturación electrónica provista por_ [_TusFacturasAPP®_](https://www.tusfacturas.app)_”_. El uso del logotipo o elementos gráficos de nuestra marca requiere autorización previa por escrito.
+
+Para más detalles sobre estas condiciones, consulta nuestros [Términos y Condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html), puntos 9 y 17.
+
+### **¿Qué sucede si se cae ARCA, como se manejan los errores?**
 
 En caso de que se produzcan caídas o interrupciones en los servicios de la AFIP, nuestro sistema de facturación electrónica activa automáticamente alertas y notificaciones de error para evitar inconsistencias en los comprobantes emitidos. En ocasiones, puede suceder que un comprobante quede pendiente de procesamiento en los servidores de la AFIP, pero nuestra plataforma no reciba la respuesta correspondiente. En estos casos excepcionales, nuestro servicio te indicará que debes reenviar ese comprobante en particular, proporcionándote los datos clave como el número de comprobante, fechas y montos, que ya fueron registrados en la AFIP. De esta manera, garantizamos la integridad y trazabilidad de tus facturas electrónicas, cumpliendo con los estándares de facturación digital y minimizando los riesgos de inconsistencias o errores en tu operatoria fiscal.
 
