@@ -8,13 +8,15 @@ icon: percent
 
 # Bonificaciones
 
-En TusFacturasAPP existen **tres formas** de aplicar un descuento o bonificación a un comprobante:&#x20;
+En TusFacturasAPP existen **tres formas** de aplicar un descuento o bonificación a un comprobante:
 
-1\) A nivel producto, ingresando un porcentaje en el campo "bonificacion\_porcentaje" de cada concepto;&#x20;
+**1) A nivel producto:** ingresando un porcentaje en el campo `bonificacion_porcentaje` de cada concepto del bloque `detalle`. El descuento se aplica sobre el precio unitario de ese producto y el IVA se calcula sobre el precio ya descontado.
 
-2\) A nivel comprobante, ingresando un monto fijo en el campo "bonificacion" del bloque "comprobante";&#x20;
+**2) A nivel comprobante:** ingresando un monto fijo en el campo `bonificacion` del bloque `comprobante`. El monto ingresado se descuenta del **primer subtotal sin IVA**, que corresponde a la alícuota del **21%**. Si tu comprobante tiene ítems con distintas alícuotas, tené en cuenta que la bonificación se aplica únicamente sobre ese subtotal. El IVA se calcula sobre el subtotal resultante luego de aplicar el descuento.
 
-3\) O para casos que requieren mayor flexibilidad (como descuentos no atados a un producto puntual o valores que los campos de bonificación no permiten, por ejemplo importes negativos), enviando un concepto adicional en el bloque "detalle" con el campo "precio\_unitario\_sin\_iva" en negativo. A continuación se detalla cada una de estas opciones con ejemplos prácticos.
+**3) Mediante un concepto con importe negativo:** para casos que requieren mayor flexibilidad, como descuentos no atados a un producto puntual o ajustes que los campos anteriores no permiten (por ejemplo, importes que no corresponden a un porcentaje exacto), podés enviar un concepto adicional en el bloque `detalle` con el campo `precio_unitario_sin_iva` en negativo. Esta es la opción más flexible ya que no tiene las restricciones de los campos `bonificacion` y `bonificacion_porcentaje`, que **no aceptan valores negativos**.
+
+A continuación se detalla cada una de estas opciones con ejemplos prácticos.
 
 ### ¿Cómo aplicar bonificaciones a nivel producto?
 
@@ -36,16 +38,19 @@ Si un producto tiene un precio base de $100 y se aplica una bonificación del 20
 
 ### 2. Ejemplo de "Factura A" AFIP/ARCA con bonificación monetaria a nivel comprobante
 
-Para aplicar un descuento a un comprobante, simplemente ingresa el monto exacto que deseas descontar en el campo "bonificacion" del bloque "comprobante".&#x20;
+Para aplicar un descuento a un comprobante, ingresá el monto exacto que querés descontar en el campo `bonificacion` del bloque `comprobante`.
 
-Es importante tener en cuenta que el Impuesto al Valor Agregado (IVA) se calcula sobre el subtotal luego de aplicar el descuento.
+⚠️ **Importante:** la bonificación general monetaria se aplica al **primer subtotal sin IVA**, que corresponde a la alícuota del **21%**. Si tu comprobante tiene ítems con distintas alícuotas de IVA (por ejemplo, algunos al 21% y otros exentos o al 10.5%), la bonificación se descontará únicamente del subtotal correspondiente al 21%. Tené esto en cuenta al calcular el descuento que necesitás aplicar.
+
+El IVA se calcula sobre el subtotal **luego de aplicar el descuento**.
 
 **Ejemplo:**
 
 Si un producto tiene un precio base de $100 y se aplica una bonificación de $20 con una alícuota de IVA del 21%, el cálculo sería el siguiente:
 
 * Precio con descuento (sin IVA): $100 - $20 = $80
-* Precio con descuento (con IVA): $100 - $20 = $80 \* 21%  = $96.80
+* IVA 21% sobre $80: $16.80
+* **Precio final con IVA: $96.80**
 
 {% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-arca-factura-a-con-bonificacion.md" %}
 [api-factura-electronica-afip-arca-factura-a-con-bonificacion.md](../web-services-afip-api-arca/api-factura-electronica-afip-arca-factura-a-con-bonificacion.md)
