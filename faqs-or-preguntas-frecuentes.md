@@ -6,6 +6,10 @@ description: >-
 
 # FAQs | Preguntas generales
 
+### **¿La API de TusFacturasAPP tiene rate limit?**
+
+Sí. La API cuenta con un límite de requests en un período de tiempo para proteger la estabilidad del servicio y garantizar un uso equitativo entre todos los usuarios. Por cuestiones de seguridad, no divulgamos el valor del límite. Si tu integración supera el límite, vas a recibir un error de bloqueo temporal en lugar de la respuesta habitual de la API. Ese error no proviene del procesamiento de tu comprobante, sino del control de tráfico, y se resuelve solo una vez que baja el volumen de requests.
+
 ### **Si no quiero que mis clientes ingresen a TusFacturasAPP, ¿Se puede utilizar igual?**
 
 Sí, podes utilizar nuestra plataforma de facturación electrónica incluso si tus clientes no son usuarios de TusFacturasAPP. Vos tendrías acceso como usuario principal y recibirías un instructivo de enlace con ARCA/AFIP para enviar manualmente a cada cliente. De esta forma, todas las facturas que emitan tus clientes a través del sistema tendrán curso legal y estarán validadas por ARCA.
