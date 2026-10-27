@@ -21,7 +21,7 @@ El cálculo de validación previa para garantizar que el total que vos envias co
 
 Tolerancia por redondeo ($0,01):
 
-Admitimos una discrepancia de hasta $0,01 entre el total enviado en el payload y el cálculo interno de la plataforma. En estos casos, el comprobante PDF conservará el total enviado por tu sistema, mientras que ante ARCA se declarará el importe recalculado por nuestra plataforma para asegurar la validación fiscal del comprobante.
+Admitimos una discrepancia de hasta $0,01 entre el total enviado en el payload y el cálculo interno de la plataforma. En estos casos, el comprobante PDF conservará el total enviado por tu sistema, mientras que ante ARCA se declarará el importe recalculado por nuestra plataforma.
 
 ***
 
