@@ -17,7 +17,7 @@ El cálculo de validación previa para garantizar que el total que vos envias co
 2. **Calculamos el subtotal sin IVA** de esa sumatoria
 3. **Aplicamos el IVA** sobre ese subtotal
 
-⚠️ **El IVA no se calcula línea por línea.** No se suma el IVA de cada ítem individualmente para determinar el total: se calcula sobre el subtotal acumulado. Esto es importante tenerlo en cuenta al verificar si el total del comprobante coincide con tus propios cálculos.
+⚠️ **El IVA no se calcula línea por línea.** No se suma el IVA de cada ítem individualmente para determinar el total: se calcula sobre el subtotal acumulado. Esto es importante tenerlo en cuenta al verificar si el total del comprobante coincide con tus propios cálculos. Margen de tolerancia de diferencia entre el total informado por tu plataforma y nuestro cálculo interno = 1 centavo.
 
 ***
 
