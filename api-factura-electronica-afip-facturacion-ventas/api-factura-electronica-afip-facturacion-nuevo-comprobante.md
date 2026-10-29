@@ -114,8 +114,6 @@ Cuando un comprobante se emite correctamente en modalidad individual e instantá
 **Importante:** La URL de descarga del PDF es temporal, por lo que es esencial que descargues y guardes los archivos generados (PDF en hoja A4/ticket para papel de 80mm), ya que si tu cuenta o suscripción vence, **no podrás volver a acceder a esos documentos** desde la API.&#x20;
 {% endhint %}
 
-
-
 #### :octagonal\_sign: Response con error
 
 En caso de detectar error, la variable "error" contendrá una "S" y "errores" una lista con todos los errores encontrados.
@@ -160,6 +158,14 @@ En ocasiones, nuestro equipo técnico realiza tareas de mantenimiento programado
 	]
 }
 ```
+
+### Preguntas frecuentes
+
+**¿Puedo enviar la external reference? ¿Queda guardada?**
+
+Si, podes enviarla y queda guardada. Tambien vas a recibir un hook cuando se emita o se detecte error.
+
+
 
 ### ¿Aún te quedan dudas? ¡Contactános!
 
