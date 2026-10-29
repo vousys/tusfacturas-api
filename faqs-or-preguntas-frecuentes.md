@@ -10,9 +10,9 @@ description: >-
 
 Sí. La API cuenta con un rate limit  de <mark style="color:purple;">**25 requests en 10 segundos**</mark>  para proteger la estabilidad del servicio y garantizar un uso equitativo entre todos los usuarios.  Si tu integración supera el límite, vas a recibir un error de bloqueo temporal en lugar de la respuesta habitual de la API. Ese error no proviene del procesamiento de tu comprobante, sino del control de tráfico, y se resuelve solo una vez que baja el volumen de requests.
 
-### En la modalidad instantánea ¿Puedo enviar la external reference? ¿Queda guardada?
+### En la modalidad instantánea: ¿Puedo enviar la external reference? ¿Queda guardada?
 
-Si, podes enviarla y queda guardada pero no te enviaremos un hook.
+Si, podes enviarla y queda guardada. Tambien vas a recibir un hook cuando se emita o se detecte error.
 
 ### **Si no quiero que mis clientes ingresen a TusFacturasAPP, ¿Se puede utilizar igual?**
 
