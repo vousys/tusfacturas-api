@@ -8,7 +8,7 @@ description: >-
 
 ### **¿La API de TusFacturasAPP tiene rate limit?**
 
-Sí. La API cuenta con un límite de requests en un período de tiempo para proteger la estabilidad del servicio y garantizar un uso equitativo entre todos los usuarios. Por cuestiones de seguridad, no divulgamos el valor del límite. Si tu integración supera el límite, vas a recibir un error de bloqueo temporal en lugar de la respuesta habitual de la API. Ese error no proviene del procesamiento de tu comprobante, sino del control de tráfico, y se resuelve solo una vez que baja el volumen de requests.
+Sí. La API cuenta con un rate limit  de <mark style="color:purple;">**25 requests en 10 segundos**</mark>  para proteger la estabilidad del servicio y garantizar un uso equitativo entre todos los usuarios.  Si tu integración supera el límite, vas a recibir un error de bloqueo temporal en lugar de la respuesta habitual de la API. Ese error no proviene del procesamiento de tu comprobante, sino del control de tráfico, y se resuelve solo una vez que baja el volumen de requests.
 
 ### **Si no quiero que mis clientes ingresen a TusFacturasAPP, ¿Se puede utilizar igual?**
 
@@ -16,9 +16,9 @@ Sí, podes utilizar nuestra plataforma de facturación electrónica incluso si t
 
 **¿Tengo que mencionar a TusFacturasAPP en mi plataforma?**
 
-Sí. Si utilizás nuestra API como motor de facturación dentro de tu propia plataforma o sistema, debés informarlo de forma visible en tu sitio web, incluyendo un enlace a [www.tusfacturas.app](https://www.tusfacturas.app), identificando a TusFacturasAPP® como proveedor del servicio de facturación electrónica. Podes usar una mención del estilo: _“Facturación electrónica provista por_ [_TusFacturasAPP®_](https://www.tusfacturas.app)_”_.
+Sí. Si utilizas nuestra API como motor de facturación dentro de tu propia plataforma o sistema, debes informarlo de forma visible en tu sitio web, incluyendo un enlace a [www.tusfacturas.app](https://www.tusfacturas.app), identificando a TusFacturasAPP® como proveedor del servicio de facturación electrónica. Podes usar una mención del estilo: _“Facturación electrónica provista por_ [_TusFacturasAPP®_](https://www.tusfacturas.app)_”_.
 
-Lo que **no** está permitido es revender o presentar el servicio como propio, bajo tu marca o cualquier otra denominación, sin identificar a TusFacturasAPP® como proveedor tecnológico. Para más detalles, consultá nuestros [Términos y Condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html), puntos 9 y 17.
+Lo que **no** está permitido es revender o presentar el servicio como propio, bajo tu marca o cualquier otra denominación, sin identificar a TusFacturasAPP® como proveedor tecnológico. Para más detalles, consulta nuestros [Términos y Condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html), puntos 9 y 17.
 
 ### **¿Qué contabiliza como un request?**
 
