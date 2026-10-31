@@ -18,9 +18,9 @@ Si, podes enviarla y queda guardada. Tambien vas a recibir un hook cuando se emi
 
 Sí, podes utilizar nuestra plataforma de facturación electrónica incluso si tus clientes no son usuarios de TusFacturasAPP. Vos tendrías acceso como usuario principal y recibirías un instructivo de enlace con ARCA/AFIP para enviar manualmente a cada cliente. De esta forma, todas las facturas que emitan tus clientes a través del sistema tendrán curso legal y estarán validadas por ARCA.
 
-**¿Tengo que mencionar a TusFacturasAPP en mi plataforma?**
+### **¿Tengo que mencionar a TusFacturasAPP en mi plataforma?**
 
-Sí. Si utilizas nuestra API como motor de facturación dentro de tu propia plataforma o sistema, debes informarlo de forma visible en tu sitio web, incluyendo un enlace a [www.tusfacturas.app](https://www.tusfacturas.app), identificando a TusFacturasAPP® como proveedor del servicio de facturación electrónica. Podes usar una mención del estilo: _“Facturación electrónica provista por_ [_TusFacturasAPP®_](https://www.tusfacturas.app)_”_.
+Sí. Si utilizas nuestra API como motor de facturación dentro de tu propia plataforma o sistema, debes informarlo de forma visible en tu sitio web, incluyendo un enlace a [www.tusfacturas.app](https://www.tusfacturas.app), identificando a TusFacturasAPP® como proveedor del Servicio API para facturación electrónica Argentina. Podes usar una mención del estilo: _“Servicio API para facturación electrónica Argentina_ _provisto por_ [_TusFacturasAPP®_](https://www.tusfacturas.app)_”_.
 
 Lo que **no** está permitido es revender o presentar el servicio como propio, bajo tu marca o cualquier otra denominación, sin identificar a TusFacturasAPP® como proveedor tecnológico. Para más detalles, consulta nuestros [Términos y Condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html), puntos 9 y 17.
 
