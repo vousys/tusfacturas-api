@@ -9,21 +9,51 @@ TusFacturasAPP gestiona los precios unitarios de los productos/items con **3 dec
 
 ***
 
-### **¿Cómo se calcula el total?**
+**¿Cómo se calcula el total?**
 
-El cálculo de validación previa para garantizar que el total que vos envias coincida con el total que la plataforma recalcula, se realiza en tres pasos:
+El cálculo de validación previa, que garantiza que el total que vos envias coincida con el que la plataforma recalcula, se realiza en cuatro pasos:
 
-1. **Sumarizamos** todos los ítems con los decimales tal como los envias en el JSON (en el PDF se verán redondeados a 3 decimales)
-2. **Calculamos el subtotal sin IVA** de esa sumatoria
-3. **Aplicamos el IVA** sobre ese subtotal
+1. **Sumarizamos** todos los ítems (cantidad × precio unitario sin IVA) con los decimales tal como resultan del cálculo. Recorda que debes enviarlos con 3 decimales maximo, sin embargo no rechazamos aquellas ventas que ingresen con mas decimales.
+2. **Redondeamos el subtotal sin IVA a 2 decimales** usando Round Half Even.
+3. **Aplicamos el IVA** sobre esos subtotales ya redondeados y redondeamos el importe resultante a 2 decimales usando Round Half Even.
+4. **Sumamos** subtotales e IVA para obtener el total del comprobante.
 
-⚠️ **El IVA no se calcula línea por línea.** No se suma el IVA de cada ítem individualmente para determinar el total: se calcula sobre el subtotal acumulado. Esto es importante tenerlo en cuenta al verificar si el total del comprobante coincide con tus propios cálculos.&#x20;
+⚠️ **El IVA no se calcula línea por línea.** No se suma el IVA de cada ítem individualmente: se calcula sobre el subtotal acumulado. Tenelo en cuenta al verificar si el total coincide con tus propios cálculos, ya que calcular por ítem puede generar diferencias de centavos.
+
+⚠️ **Tolerancia por redondeo ($0,03):**
+
+Admitimos una discrepancia de hasta $0,03 entre el total enviado en el payload y el cálculo interno de la plataforma. En estos casos, el comprobante PDF conservará el total enviado por tu sistema, mientras que ante ARCA se declarará el importe recalculado por nuestra plataforma, por lo que recomendamos enviar la informacion de acuerdo a lo informado.
 
 
 
 ***
 
-#### **Ejemplo práctico**
+#### **Ejemplos prácticos:**
+
+**Ejemplo práctico**
+
+El siguiente ejemplo muestra una factura de 3 ítems con alícuota de IVA 21%. Los precios unitarios tienen un máximo de 3 decimales.
+
+| Descripción | Cantidad | Precio unitario s/IVA | Cant × Precio s/IVA |
+| ----------- | -------- | --------------------- | ------------------- |
+| Producto A  | 3,00     | 150,250               | 450,750             |
+| Producto B  | 2,50     | 120,050               | 300,125             |
+| Producto C  | 2,00     | 124,875               | 249,750             |
+
+**Resultado del cálculo:**
+
+| Paso                                                 | Importe                 |
+| ---------------------------------------------------- | ----------------------- |
+| **1. Suma de los ítems** (Cant × Precio s/IVA)       | $1.000,625              |
+| **2. Subtotal sin IVA redondeado** (Round Half Even) | $1.000,62               |
+| **3. IVA 21%** sobre $1.000,62                       | $210,1302 → **$210,13** |
+| **4. Total del comprobante**                         | **$1.210,75**           |
+
+El valor `1.000,625` queda exactamente en el punto medio entre `1.000,62` y `1.000,63`. Round Half Even redondea hacia el número par más cercano: como el dígito anterior es `2` (par), el subtotal queda en `1.000,62`. Con un redondeo tradicional hacia arriba el subtotal sería `1.000,63` y el total `1.210,76`, un centavo más.
+
+
+
+**Ejemplo con múltiples conceptos**
 
 El siguiente ejemplo muestra una factura con múltiples ítems, cantidades con decimales y alícuota de IVA 21%. Todos los productos tienen nombres genéricos para simplificar la lectura.
 
@@ -68,4 +98,3 @@ El redondeo de `$6.235.621,158` a 2 decimales da `$6.235.621,16` porque el dígi
 
 ***
 
-Para más detalle sobre cómo funcionan los redondeos y los precios sin IVA, consulta el artículo de ayuda: [Ajustes, redondeos y precios sin IVA](https://ayuda.tusfacturas.app/es/articles/12548047-redondeos-ajustes-y-precios-sin-iva).

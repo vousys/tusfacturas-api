@@ -8,7 +8,7 @@ description: >-
 
 ### 01 de noviembre de 2026
 
-Se elimina el margen de tolerancia contra la diferencia de los totales (redondeo).
+Se modifica el margen de tolerancia contra la diferencia de los totales (redondeo) a 0.03
 
 ### 01 de septiembre de 2026
 
