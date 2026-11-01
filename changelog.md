@@ -6,6 +6,10 @@ description: >-
 
 # Changelog
 
+### 01 de noviembre de 2026
+
+Se elimina el margen de tolerancia contra la diferencia de los totales (redondeo).
+
 ### 01 de septiembre de 2026
 
 Se agrega el régimen especial RG 4291 Factura Electrónica, el cual permite a las compañía de seguros facturar las pólizas. Más info: [Parámetros - RG Especiales](parametros/tablas-de-referencia.md#regimenes-posibles-para-el-bloque-rg_especiales) y   [Software de facturación para compañía de seguros](https://www.tusfacturas.app/software-de-facturacion-para-companias-de-seguros.html)

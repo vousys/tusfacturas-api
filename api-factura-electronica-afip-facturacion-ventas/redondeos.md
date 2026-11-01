@@ -19,9 +19,7 @@ El cálculo de validación previa para garantizar que el total que vos envias co
 
 ⚠️ **El IVA no se calcula línea por línea.** No se suma el IVA de cada ítem individualmente para determinar el total: se calcula sobre el subtotal acumulado. Esto es importante tenerlo en cuenta al verificar si el total del comprobante coincide con tus propios cálculos.&#x20;
 
-Tolerancia por redondeo ($0,01):
 
-Admitimos una discrepancia de hasta $0,01 entre el total enviado en el payload y el cálculo interno de la plataforma. En estos casos, el comprobante PDF conservará el total enviado por tu sistema, mientras que ante ARCA se declarará el importe recalculado por nuestra plataforma.
 
 ***
 
