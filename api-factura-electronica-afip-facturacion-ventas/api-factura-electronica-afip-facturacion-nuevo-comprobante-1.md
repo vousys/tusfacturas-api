@@ -105,9 +105,9 @@ No existe un tiempo determinado, ya que los tiempos varían según el volumen de
 
 **Capacidades de procesamiento diarias aproximadas:**
 
-| Comprobantes tipo A                           | Comprobantes tipo B                           | Otros                                        |
-| --------------------------------------------- | --------------------------------------------- | -------------------------------------------- |
-| Hasta **100.000** por día, por punto de venta | Hasta **150.000** por día, por punto de venta | Hasta **14.000** por día, por punto de venta |
+| Comprobantes tipo A                          | Comprobantes tipo B                           | Otros tipos de comprobante                   |
+| -------------------------------------------- | --------------------------------------------- | -------------------------------------------- |
+| Hasta **70.000** por día, por punto de venta | Hasta **120.000** por día, por punto de venta | Hasta **10.000** por día, por punto de venta |
 
 > Para acelerar la facturación podes distribuir la carga en múltiples puntos de venta. Sin embargo, no podemos garantizar que todo el volumen se emita en un solo día, por lo que recomendamos enviar la facturación con antelación para evitar inconvenientes.
 
