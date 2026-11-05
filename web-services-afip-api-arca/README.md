@@ -122,5 +122,6 @@ icon: code
 
 ¿Tenes preguntas sobre la API? Visita nuestro Centro de Ayuda en [ayuda.tusfacturas.app](https://ayuda.tusfacturas.app) para acceder a guías paso a paso y solución de problemas o escribnos a api@tusfacturas.app
 
-&#x20;
+***
 
+_TusFacturasAPP es una plataforma privada e independiente de facturación y gestión, que no pertenece ni está vinculada a ARCA (ex AFIP) ni a ningún organismo público. La emisión de comprobantes se realiza mediante los servicios web oficiales de ARCA, utilizando el CUIT que cada usuario configura y habilita._

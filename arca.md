@@ -10,6 +10,8 @@ tagTitle: 'Web services de ARCA: WSAA y WSFEv1 | TusFacturasAPP'
 
 Para emitir comprobantes electrónicos con validez fiscal en Argentina, todo sistema tiene que comunicarse con los web services de ARCA (ex AFIP). Esa integración se puede hacer directamente o a través de una API intermediaria como la de TusFacturasAPP. En esta página te explicamos cómo funciona la conexión con ARCA por dentro y qué partes del proceso maneja la API para que tu sistema solo tenga que enviar un JSON.
 
+TusFacturasAPP es una plataforma privada e independiente de facturación y gestión, que no pertenece ni está vinculada a ARCA (ex AFIP) ni a ningún organismo público. La emisión de comprobantes se realiza mediante los servicios web oficiales de ARCA, utilizando el CUIT que cada usuario configura y habilita.
+
 ### Cómo funciona la integración directa con ARCA
 
 Una integración directa con ARCA tiene dos etapas.

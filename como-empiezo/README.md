@@ -420,8 +420,8 @@ Una vez finalizado tu período de prueba de 30 días, podrás:
 
 En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
 
-[ ](../api-factura-electronica-afip-facturacion-ventas/)
-
-
-
 ¿Qué esperas para comenzar a [emitir factura electrónica AFIP](https://www.tusfacturas.app/como-empezamos-a-hacer-facturas-electronicas.html) con nuestra API?
+
+***
+
+_TusFacturasAPP es una plataforma privada e independiente de facturación y gestión, que no pertenece ni está vinculada a ARCA (ex AFIP) ni a ningún organismo público. La emisión de comprobantes se realiza mediante los servicios web oficiales de ARCA, utilizando el CUIT que cada usuario configura y habilita._

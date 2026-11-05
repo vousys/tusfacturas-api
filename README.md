@@ -9,6 +9,8 @@ description: >-
 
 TusFacturasAPP es el [software de facturación](https://www.tusfacturas.app/caracteristicas-de-tus-facturas-electronica-facturacion.html) líder para empresas que operan en Argentina. Desde 2015, facilitamos la integración de sistemas de facturación con ARCA a través de nuestra API REST. Contamos con el respaldo de un estudio contable que nos mantiene al día con las últimas normativas impositivas y de una empresa de desarrollo de software que habla el mismo idioma que tus _devs_.
 
+
+
 <figure><img src=".gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 ## ¿Qué es la API REST ARCA para Factura Electrónica ?
@@ -44,3 +46,7 @@ Nuestra API para AFIP/ARCA ya ha sido implementada en diferentes plataformas con
 ### 💡 Soporte y Recursos
 
 ¿Tenes preguntas sobre la API? Visita nuestro Centro de Ayuda en [ayuda.tusfacturas.app](https://ayuda.tusfacturas.app) para acceder a guías paso a paso y solución de problemas o escribnos a api@tusfacturas.app
+
+***
+
+_TusFacturasAPP es una plataforma privada e independiente de facturación y gestión, que no pertenece ni está vinculada a ARCA (ex AFIP) ni a ningún organismo público. La emisión de comprobantes se realiza mediante los servicios web oficiales de ARCA, utilizando el CUIT que cada usuario configura y habilita._
