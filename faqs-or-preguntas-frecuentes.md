@@ -6,6 +6,10 @@ description: >-
 
 # FAQs | Preguntas generales
 
+### **¿Puedo renovar mi plan API DEV?**
+
+Si. Podes renovar le plan API DEV las veces que necesites desde la plataforma web. Mas info: [cómo renovar mi plan API DEV](https://ayuda.tusfacturas.app/es/articles/16627537-como-renuevo-mi-plan-api-dev)
+
 ### **¿La API de TusFacturasAPP tiene rate limit?**
 
 Sí. La API cuenta con un rate limit  de <mark style="color:purple;">**25 requests en 10 segundos**</mark>  para proteger la estabilidad del servicio y garantizar un uso equitativo entre todos los usuarios.  Si tu integración supera el límite, vas a recibir un error de bloqueo temporal en lugar de la respuesta habitual de la API. Ese error no proviene del procesamiento de tu comprobante, sino del control de tráfico, y se resuelve solo una vez que baja el volumen de requests.
