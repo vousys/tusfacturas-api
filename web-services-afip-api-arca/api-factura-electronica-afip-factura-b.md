@@ -26,7 +26,7 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 **Consumo de créditos:** cada llamada descuenta **1 comprobante** de tu cupo de facturación. [¿Cómo funcionan los cupos? →](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
-La Factura B la emite un Responsable Inscripto a otro un exento o consumidor final. Si los productos/servicios que vendes estan gravados con IVA, el mismo se incluye IVA pero no se discrimina en el PDF, ya que no le permite al comprador computarlo como crédito fiscal. Las facturas B incluyen automáticamente en el PDF, el bloque de "Regimen de Transparencia Fiscal al Consumidor (Ley 27.743)"&#x20;
+La Factura B la emite un Responsable Inscripto a un exento o consumidor final. Si los productos/servicios que vende estan gravados con IVA, se debe incluir el IVA pero no se discrimina en el PDF, ya que no le permite al comprador computarlo como crédito fiscal. Las facturas B también incluyen automáticamente en el PDF, el bloque: "[Regimen de Transparencia Fiscal al Consumidor (Ley 27.743)](https://ayuda.tusfacturas.app/es/articles/11047961-regimen-de-transparencia-fiscal-al-consumidor-ley-27-743)"  de acuerdo a la normativa fiscal vigente.
 
 ### Cuándo usarla
 
