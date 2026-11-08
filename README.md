@@ -1,52 +1,59 @@
 ---
 description: >-
-  Integra la facturación electrónica ARCA fácil y rápido con nuestra API.
-  ¡Confiable desde 2015! Elegida por todos los desarrolladores y con el respaldo
-  de un estudio contable.
+  Emití facturas A, B, C, E, M y MiPyME con CAE de ARCA enviando un JSON, sin
+  SOAP, certificados ni tokens. Desde 2015 en producción, con monitoreo continuo
+  y respaldo impositivo.
 ---
 
-# API Factura electrónica AFIP/ARCA Argentina fácil.
+# API REST de factura electrónica ARCA (ex AFIP) fácil – TusFacturasAPP
 
-TusFacturasAPP es el [software de facturación](https://www.tusfacturas.app/caracteristicas-de-tus-facturas-electronica-facturacion.html) líder para empresas que operan en Argentina. Desde 2015, facilitamos la integración de sistemas de facturación con ARCA a través de nuestra API REST. Contamos con el respaldo de un estudio contable que nos mantiene al día con las últimas normativas impositivas y de una empresa de desarrollo de software que habla el mismo idioma que tus _devs_.
+TusFacturasAPP® es una API REST para emitir comprobantes electrónicos con CAE de ARCA (ex AFIP) desde cualquier sistema. TusFacturasAPP® es una marca registrada de VYAR S.R.L. y está en producción desde 2015, con monitoreo continuo de VOUSYS® y el respaldo de un estudio impositivo que nos mantiene actualizados con las últimas normativas de facturación Argentina.
 
+TusFacturasAPP es una plataforma privada e independiente de facturación y gestión, que no pertenece ni está vinculada a ARCA (ex AFIP) ni a ningún organismo público. Los comprobantes se emiten a través de los web services oficiales de ARCA, con el CUIT que cada usuario configura y habilita.
 
+Tu sistema envía un JSON con los datos del comprobante y recibe el CAE, el número asignado y el PDF con QR. La autenticación WSAA, los certificados, la numeración y los cambios en los web services de ARCA quedan del lado de TusFacturasAPP® siempre que sea posible.&#x20;
 
-<figure><img src=".gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+### Ficha técnica
 
-## ¿Qué es la API REST ARCA para Factura Electrónica ?
+|                     |                                                                                                                                              |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tipo de API         | REST, versión 2                                                                                                                              |
+| URL base            | `https://www.tusfacturas.app/app/api/v2/`                                                                                                    |
+| Formato             | JSON, UTF-8                                                                                                                                  |
+| Método              | POST                                                                                                                                         |
+| Seguridad           | HTTPS con TLS 1.2 o superior                                                                                                                 |
+| Autenticación       | `apikey`, `apitoken` y `usertoken` en el cuerpo del pedido (ver [Autenticación](como-empiezo/api-factura-electronica-afip-autenticacion.md)) |
+| Modos de emisión    | Sincrónico (individual o por lotes) y asincrónico (individual)                                                                               |
+| Notificaciones      | Webhooks                                                                                                                                     |
+| SDK                 | PHP ([GitHub](https://github.com/vousys/tusfacturas))                                                                                        |
+| Prueba              | Cuenta gratuita, renovable las veces que necesites.                                                                                          |
+| Estado del servicio | Endpoint de [estado de servicios ARCA y API](web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md)        |
 
-La [API REST de facturación electrónica AFIP](https://www.tusfacturas.app/api-factura-electronica-afip.html)[/ARCA](https://www.tusfacturas.app/factura-electronica-arca.html) provista por TusFacturasAPP , te permite generar de manera segura y rápida, comprobantes electrónicas válidos en AFIP/ARCA Argentina. Contamos con el respaldo de un estudio impositivo que nos mantiene asesorados ante las nuevas normativas que surgen día a día en nuestro país.
+### Qué podes hacer con la API
 
-<figure><img src=".gitbook/assets/157.webp" alt=""><figcaption></figcaption></figure>
+* **Emitir comprobantes:** facturas, notas de crédito y notas de débito A, B, C, E (exportación), M, Factura de Crédito Electrónica MiPyME, recibos C y liquidaciones. [Ver ejemplos ](web-services-afip-api-arca/)
+* **Consultar ARCA:** datos de un [CUIT desde la constancia de inscripción](consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md), [base APOC de facturas apócrifas](consultas-varias-a-servicios-afip-arca/api-factura-apocrifa-base-apoc.md), [cotizaciones oficiales](consultas-varias-a-servicios-afip-arca/cotizacion-monedas-afip.md), [obligados a recibir FCE MiPyME](web-services-afip-api-arca/debo-emitir-una-mipyme.md).
+* **Consultar padrones provinciales:** alícuotas de ARBA y AGIP.
+* **Gestionar el negocio:** recibos de cobro, órdenes de pago, cuentas corrientes, productos y stock, reportes de IVA compras y ventas.
+* **Integrar sin código:** Zapier.
 
-### ¿Qué es la factura electrónica ARCA?
+### Quién está detrás de TusFacturasAPP®
 
-La [factura electrónica AFIP/ARCA](https://www.tusfacturas.app/factura-electronica-afip.html) es un comprobante digital con el mismo valor legal que el papel, ya que AFIP por medio de la [RG (AFIP/ARCA) 4290](https://www.tusfacturas.app/normativa-afip-factura-electronica.html), ha generalizado el uso de la factura electrónica para todos los contribuyentes de Argentina.
+* Empresa: VYAR S.R.L., CUIT 30-71625243-0, Buenos Aires, Argentina.
+* Marca registrada en INPI: registro N° 3.480.509.
+* Desarrollada por: [VOUSYS®](https://www.vousys.com/)
+* Respaldo impositivo continuo.
+* En producción desde 2015.
 
-### ¿Qué otros servicios incluye la API REST?
+Más información en sobre [TusFacturasAPP®](https://www.tusfacturas.app/).
 
-Además de usar el servicio API, podrás utilizar nuestra plataforma web y bot de WhatsApp, con todas las funcionalidades que ésta brinda.
+### Lenguajes
 
-### Integrá nuestra API REST para factura electrónica AFIP/ARCA con cualquier lenguaje
+La API acepta cualquier lenguaje que pueda hacer un pedido HTTPS con JSON. Hay integraciones en producción en PHP, Python, Node.js, Ruby y Visual Basic 6.0, sobre AWS, Google Cloud y servidores propios. Tenes [ejemplos en cURL, PHP, Python, Node.js y Ruby ](como-empiezo/api-factura-electronica-afip-plugins-y-sdks.md)
 
-En ésta documentación encontrarás  ejemplos en formato JSON, para que los adaptes al lenguaje de programación de tu software Si bien no te podemos brindar soporte para los diferentes lenguajes de programación que existen en el mercado, al ser los input y los output en formato JSON, podes conectarlo el lenguaje que mas te guste, teniendo a mano stackoverflow, por si tenes dudas ;)
+### Soporte
 
-\
-Versión actual: **API v2**\
-Tipo de API: **API Rest**
+* Email técnico con humanos: api@tusfacturas.app
+* Chat en [tusfacturas.app](https://www.tusfacturas.app/) &#x20;
+* Centro de ayuda: [ayuda.tusfacturas.app](https://ayuda.tusfacturas.app/)
 
-SSL: **requiere TLS 1.2+**\
-Tipo de datos entrada y respuesta: **JSON**\
-Charset: **UTF-8**\
-Tipo de request : **POST**\
-&#x20;
-
-Nuestra API para AFIP/ARCA ya ha sido implementada en diferentes plataformas con múltiples lenguajes (PHP, Visual basic 6.0, Ruby, Python, NodeJS), como así tambien en entornos AMAZON WS, Google Cloud, servidores dedicados y servidores compartidos.
-
-### 💡 Soporte y Recursos
-
-¿Tenes preguntas sobre la API? Visita nuestro Centro de Ayuda en [ayuda.tusfacturas.app](https://ayuda.tusfacturas.app) para acceder a guías paso a paso y solución de problemas o escribnos a api@tusfacturas.app
-
-***
-
-_TusFacturasAPP es una plataforma privada e independiente de facturación y gestión, que no pertenece ni está vinculada a ARCA (ex AFIP) ni a ningún organismo público. La emisión de comprobantes se realiza mediante los servicios web oficiales de ARCA, utilizando el CUIT que cada usuario configura y habilita._

@@ -1,13 +1,14 @@
 # Table of contents
 
-* [API Factura electrónica AFIP/ARCA Argentina fácil.](README.md)
+* [API REST de factura electrónica ARCA (ex AFIP) fácil – TusFacturasAPP](README.md)
+* [Integrar ARCA: directo o con una API](arca.md)
 * [🎯 ¿Cómo empiezo?](como-empiezo/README.md)
   * [Autenticación](como-empiezo/api-factura-electronica-afip-autenticacion.md)
-  * [SDK AFIP/ARCA](como-empiezo/api-factura-electronica-afip-plugins-y-sdks.md)
+  * [Ejemplos de código y SDK para facturar en ARCA: cURL, PHP, Python, Node.js y Ruby](como-empiezo/api-factura-electronica-afip-plugins-y-sdks.md)
 * [Ejemplos API AFIP/ARCA](web-services-afip-api-arca/README.md)
-  * [Factura A](web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md)
-  * [Factura B](web-services-afip-api-arca/api-factura-electronica-afip-factura-b.md)
-  * [Factura C](web-services-afip-api-arca/api-factura-electronica-afip-factura-c.md)
+  * [Factura A por API: ejemplo JSON para emitir en ARCA](web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md "Factura A")
+  * [Factura B por API: ejemplo JSON para emitir en ARCA](web-services-afip-api-arca/api-factura-electronica-afip-factura-b.md "Factura B")
+  * [Factura C por API: ejemplo JSON para emitir en ARCA](web-services-afip-api-arca/api-factura-electronica-afip-factura-c.md "Factura C")
   * [Factura E](web-services-afip-api-arca/api-factura-electronica-afip-factura-e.md)
   * [Factura M](web-services-afip-api-arca/api-factura-electronica-afip-factura-m.md)
   * [Factura MiPyme A](web-services-afip-api-arca/api-factura-electronica-afip-factura-mypyme-a.md)
@@ -112,7 +113,6 @@
 * [FAQs | Preguntas generales](faqs-or-preguntas-frecuentes.md)
 * [FAQs | Ventas asincrónicas](faqs-or-ventas-asincronicas.md)
 * [FAQs | RG5329](faqs-or-rg5329.md)
-* [FAQs | Web services ARCA](arca.md)
 * [Changelog](changelog.md)
 
 ## TusFacturasAPP

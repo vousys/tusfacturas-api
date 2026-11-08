@@ -2,10 +2,11 @@
 description: >-
   TusFacturasAPP: API para Facturas C de AFIP/ARCA. Confiable desde 2015. Creada
   por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
+tagTitle: 'Factura C por API: ejemplo JSON para emitir en ARCA'
 icon: code
 ---
 
-# Factura C
+# Factura C por API: ejemplo JSON para emitir en ARCA
 
 ### Endpoints
 
@@ -24,6 +25,22 @@ Factura C emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 {% hint style="info" %}
 **Consumo de créditos:** cada llamada descuenta **1 comprobante** de tu cupo de facturación. [¿Cómo funcionan los cupos? →](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
+
+La Factura C la emite un Monotributista o Exento sin importar la condición frente al IVA del receptor. No incluyen IVA.
+
+### Cuándo usarla
+
+| Emisor                  | Receptor              | Comprobante |
+| ----------------------- | --------------------- | ----------- |
+| Monotributista o Exento | Consumidor final      | Factura C   |
+| Monotributista o Exento | Responsable Inscripto | Factura C   |
+| Monotributista o Exento | Monotributista        | Factura C   |
+
+### Campos que cambian respecto de otros comprobantes
+
+* `comprobante.tipo`: `"FACTURA C"`
+* `cliente.condicion_iva`: `"M", "RI", "CF" o "E"`
+* `cliente.documento_tipo`: `"DNI", "CUIT" u "OTRO"`
 
 ### JSON para generar una Factura C en AFIP/ARCA
 

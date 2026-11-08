@@ -2,10 +2,11 @@
 description: >-
   TusFacturasAPP: API para Facturas B de AFIP/ARCA. Confiable desde 2015. Creada
   por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
+tagTitle: 'Factura B por API: ejemplo JSON para emitir en ARCA'
 icon: code
 ---
 
-# Factura B
+# Factura B por API: ejemplo JSON para emitir en ARCA
 
 ### Endpoints
 
@@ -24,6 +25,21 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 {% hint style="info" %}
 **Consumo de créditos:** cada llamada descuenta **1 comprobante** de tu cupo de facturación. [¿Cómo funcionan los cupos? →](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
+
+La Factura B la emite un Responsable Inscripto a otro un exento o consumidor final. Si los productos/servicios que vendes estan gravados con IVA, el mismo se incluye IVA pero no se discrimina en el PDF, ya que no le permite al comprador computarlo como crédito fiscal. Las facturas B incluyen automáticamente en el PDF, el bloque de "Regimen de Transparencia Fiscal al Consumidor (Ley 27.743)"&#x20;
+
+### Cuándo usarla
+
+| Emisor                | Receptor         | Comprobante |
+| --------------------- | ---------------- | ----------- |
+| Responsable Inscripto | Consumidor final | Factura B   |
+| Responsable Inscripto | Exento           | Factura B   |
+
+### Campos que cambian respecto de otros comprobantes
+
+* `comprobante.tipo`: `"FACTURA B"`
+* `cliente.condicion_iva`: `"CF" o "E"`
+* `cliente.documento_tipo`: `"DNI", "CUIT" u "OTRO"`
 
 ### JSON para generar una Factura B en AFIP/ARCA
 

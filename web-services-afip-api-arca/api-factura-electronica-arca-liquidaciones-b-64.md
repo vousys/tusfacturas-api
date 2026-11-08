@@ -1,7 +1,7 @@
 ---
 description: >-
-  TusFacturasAPP: API para Facturas A de AFIP/ARCA. Confiable desde 2015. Creada
-  por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
+  Ejemplo de JSON para emitir una Liquidación B CAE de ARCA desde la API REST de
+  TusFacturasAPP.
 icon: code
 ---
 
@@ -15,7 +15,7 @@ Liquidaciones B ( Código ARCA: 0064 )  - emitida en la modalidad "[Instantánea
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo`</mark>
 {% endhint %}
 
-Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
+Liquidación B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)"
 
 {% hint style="success" icon="rectangle-api" %}
 <mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`nuevo_encola`</mark>

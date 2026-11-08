@@ -1,194 +1,118 @@
 ---
 description: >-
-  La API de facturación electrónica AFIP/ARCA provista por TusFacturasAPP,
-  cuenta con un SDK para que descargues desde nuestro repositorio.
+  La API de TusFacturasAPP recibe un JSON por POST y devuelve el resultado de
+  ARCA. Cualquier lenguaje que haga pedidos HTTPS sirve.
 ---
 
-# SDK AFIP/ARCA
+# Ejemplos de código y SDK para facturar en ARCA: cURL, PHP, Python, Node.js y Ruby
 
-### ¿Cómo enviar los requests según mi lenguaje de programación?
+### 1. Prepara el JSON del comprobante
 
-Podes enviar tus request por CURL, o usando tu lenguaje de programación favorito. A continuación te mostramos algunos ejemplos.
+Copiá el ejemplo del comprobante que necesitas y guardalo como `factura.json`:
+
+* [Factura A](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md)
+* [Factura B](../web-services-afip-api-arca/api-factura-electronica-afip-factura-b.md)
+* [Factura C](../web-services-afip-api-arca/api-factura-electronica-afip-factura-c.md)
+* [Todos los comprobantes](../web-services-afip-api-arca/)
+
+Completa tus credenciales (`apikey`, `apitoken`, `usertoken`; cómo obtenerlas) y usa la fecha del día en formato `dd/mm/aaaa`.
+
+### 2. Envialo desde tu lenguaje
+
+Endpoint: `POST https://www.tusfacturas.app/app/api/v2/facturacion/nuevo`
 
 {% tabs %}
-{% tab title="CURL" %}
-```
-curl --request POST
---url https://www.tusfacturas.app/app/api/v2/facturacion/nuevo
---header 'Content-Type: application/json'
---data '{ "apitoken":"xxxx", "cliente":{ "documento_tipo":"DNI", "condicion_iva":"CF", "domicilio":"Av Sta Fe 23132", "condicion_pago":"201", "documento_nro":"111132333", "razon_social":"Juan Pedro KJL", "provincia":"2", "email":"email@dominio.com", "envia_por_mail":"N", "rg5329": "N" }, "apikey":"xxxx", "comprobante":{ "rubro":"Sevicios web", "percepciones_iva":0, "tipo":"FACTURA B", "numero":2134, "bonificacion":0, "operacion":"V", "detalle":[ { "cantidad":1, "afecta_stock":"S", "actualiza_precio":"S", "bonificacion_porcentaje":0, "producto":{ "descripcion":"Hosting pagina web ", "codigo":37, "lista_precios":"standard", "leyenda":"", "unidad_bulto":1, "alicuota":21, "actualiza_precio":"S", "rg5329": "N", "precio_unitario_sin_iva":114.88 } } ], "fecha":"28/03/2018", "vencimiento":"26/03/2023", "rubro_grupo_contable":"Sevicios", "total":139.0, "cotizacion":1, "moneda":"PES", "punto_venta":3, "tributos":[] }, "usertoken":"xxxx" }'
+{% tab title="cURL" %}
+```bash
+curl -X POST https://www.tusfacturas.app/app/api/v2/facturacion/nuevo \
+  -H "Content-Type: application/json" \
+  --data @factura.json
 ```
 {% endtab %}
 
 {% tab title="PHP" %}
 ```php
 <?php
-
-$curl = curl_init();
-
-curl_setopt_array($curl, [
-  CURLOPT_URL => "https://www.tusfacturas.app/app/api/v2/facturacion/nuevo",
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => "",
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 30,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "{\n   \"apitoken\":\"xxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"DNI\",\n      \"condicion_iva\":\"CF\",\n      \"domicilio\":\"Av Sta Fe 23132\",\n      \"condicion_pago\":\"201\",\n      \"documento_nro\":\"111132333\",\n      \"razon_social\":\"Juan Pedro KJL\",\n      \"provincia\":\"2\",\n      \"email\":\"email@dominio.com\",\n      \"envia_por_mail\":\"N\",\n       \"rg5329\": \"N\"\n   },\n   \"apikey\":\"xxxx\",\n   \"comprobante\":{\n      \"rubro\":\"Sevicios web\",\n      \"percepciones_iva\":0,\n      \"tipo\":\"FACTURA B\",\n      \"numero\":2134,\n      \"bonificacion\":0,\n      \"operacion\":\"V\",\n      \"detalle\":[\n         {\n            \"cantidad\":1,\n            \"afecta_stock\":\"S\",\n            \"actualiza_precio\":\"S\",\n            \"bonificacion_porcentaje\":0,\n            \"producto\":{\n               \"descripcion\":\"Hosting pagina web \",\n               \"codigo\":37,\n               \"lista_precios\":\"standard\",\n               \"leyenda\":\"\",\n               \"unidad_bulto\":1,\n               \"alicuota\":21,\n               \"actualiza_precio\":\"S\",\n               \"rg5329\": \"N\",\n               \"precio_unitario_sin_iva\":114.88\n            }\n         }\n      ],\n      \"fecha\":\"28/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"rubro_grupo_contable\":\"Sevicios\",\n      \"total\":139.0,\n      \"cotizacion\":1,\n      \"moneda\":\"PES\",\n      \"punto_venta\":3,\n      \"tributos\":[]\n   },\n   \"usertoken\":\"xxxx\"\n}",
-  CURLOPT_HTTPHEADER => [
-    "Content-Type: application/json"
-  ],
+$ch = curl_init('https://www.tusfacturas.app/app/api/v2/facturacion/nuevo');
+curl_setopt_array($ch, [
+    CURLOPT_POST           => true,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPHEADER     => ['Content-Type: application/json'],
+    CURLOPT_POSTFIELDS     => file_get_contents('factura.json'),
+    CURLOPT_TIMEOUT        => 60,
 ]);
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-  echo "cURL Error #:" . $err;
-} else {
-  echo $response;
+$respuesta = curl_exec($ch);
+if ($respuesta === false) {
+    die('Error de conexión: ' . curl_error($ch));
 }
+curl_close($ch);
+print_r(json_decode($respuesta, true));
 ```
 {% endtab %}
 
 {% tab title="Python" %}
 ```python
-import http.client
+import json
+import requests
 
-conn = http.client.HTTPSConnection("www.tusfacturas.app")
+with open("factura.json", encoding="utf-8") as f:
+    comprobante = json.load(f)
 
-payload = "{\n   \"apitoken\":\"xxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"DNI\",\n      \"condicion_iva\":\"CF\",\n      \"domicilio\":\"Av Sta Fe 23132\",\n      \"condicion_pago\":\"201\",\n      \"documento_nro\":\"111132333\",\n      \"razon_social\":\"Juan Pedro KJL\",\n      \"provincia\":\"2\",\n      \"email\":\"email@dominio.com\",\n      \"envia_por_mail\":\"N\",\n       \"rg5329\": \"N\"\n   },\n   \"apikey\":\"xxxx\",\n   \"comprobante\":{\n      \"rubro\":\"Sevicios web\",\n      \"percepciones_iva\":0,\n      \"tipo\":\"FACTURA B\",\n      \"numero\":2134,\n      \"bonificacion\":0,\n      \"operacion\":\"V\",\n      \"detalle\":[\n         {\n            \"cantidad\":1,\n            \"afecta_stock\":\"S\",\n            \"actualiza_precio\":\"S\",\n            \"bonificacion_porcentaje\":0,\n            \"producto\":{\n               \"descripcion\":\"Hosting pagina web \",\n               \"codigo\":37,\n               \"lista_precios\":\"standard\",\n               \"leyenda\":\"\",\n               \"unidad_bulto\":1,\n               \"alicuota\":21,\n               \"actualiza_precio\":\"S\",\n               \"rg5329\": \"N\",\n               \"precio_unitario_sin_iva\":114.88\n            }\n         }\n      ],\n      \"fecha\":\"28/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"rubro_grupo_contable\":\"Sevicios\",\n      \"total\":139.0,\n      \"cotizacion\":1,\n      \"moneda\":\"PES\",\n      \"punto_venta\":3,\n      \"tributos\":[]\n   },\n   \"usertoken\":\"xxxx\"\n}"
-
-headers = {
-    'Content-Type': "application/json"
-    }
-
-conn.request("POST", "/app/api/v2/facturacion/nuevo", payload, headers)
-
-res = conn.getresponse()
-data = res.read()
-
-print(data.decode("utf-8"))
+r = requests.post(
+    "https://www.tusfacturas.app/app/api/v2/facturacion/nuevo",
+    json=comprobante,
+    timeout=60,
+)
+r.raise_for_status()
+print(r.json())
 ```
 {% endtab %}
 
 {% tab title="Node.js" %}
 ```javascript
-const http = require("https");
+// Node.js 18 o superior (fetch nativo)
+import { readFile } from "node:fs/promises";
 
-const options = {
-  "method": "POST",
-  "hostname": "www.tusfacturas.app",
-  "port": null,
-  "path": "/app/api/v2/facturacion/nuevo",
-  "headers": {
-    "Content-Type": "application/json",
-    "Content-Length": "1337"
-  }
-};
+const body = await readFile("factura.json", "utf8");
 
-const req = http.request(options, function (res) {
-  const chunks = [];
-
-  res.on("data", function (chunk) {
-    chunks.push(chunk);
-  });
-
-  res.on("end", function () {
-    const body = Buffer.concat(chunks);
-    console.log(body.toString());
-  });
+const res = await fetch("https://www.tusfacturas.app/app/api/v2/facturacion/nuevo", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body,
 });
 
-req.write(JSON.stringify({
-  apitoken: 'xxxx',
-  cliente: {
-    documento_tipo: 'DNI',
-    condicion_iva: 'CF',
-    domicilio: 'Av Sta Fe 23132',
-    condicion_pago: '201',
-    documento_nro: '111132333',
-    razon_social: 'Juan Pedro KJL',
-    provincia: '2',
-    email: 'email@dominio.com',
-    envia_por_mail: 'N',
-    rg5329: 'N'
-  },
-  apikey: 'xxxx',
-  comprobante: {
-    rubro: 'Sevicios web',
-    percepciones_iva: 0,
-    tipo: 'FACTURA B',
-    numero: 2134,
-    bonificacion: 0,
-    operacion: 'V',
-    detalle: [
-      {
-        cantidad: 1,
-        afecta_stock: 'S',
-        actualiza_precio: 'S',
-        bonificacion_porcentaje: 0,
-        producto: {
-          descripcion: 'Hosting pagina web ',
-          codigo: 37,
-          lista_precios: 'standard',
-          leyenda: '',
-          unidad_bulto: 1,
-          alicuota: 21,
-          actualiza_precio: 'S',
-          rg5329: 'N',
-          precio_unitario_sin_iva: 114.88
-        }
-      }
-    ],
-    fecha: '28/03/2018',
-    vencimiento: '26/03/2023',
-    rubro_grupo_contable: 'Sevicios',
-    total: 139,
-    cotizacion: 1,
-    moneda: 'PES',
-    punto_venta: 3,
-    tributos: []
-  },
-  usertoken: 'xxxx'
-}));
-req.end();
+console.log(await res.json());
 ```
 {% endtab %}
 
 {% tab title="Ruby" %}
 ```ruby
-require 'uri'
-require 'net/http'
-require 'openssl'
+require "net/http"
+require "json"
 
-url = URI("https://www.tusfacturas.app/app/api/v2/facturacion/nuevo")
-
-http = Net::HTTP.new(url.host, url.port)
-http.use_ssl = true
-http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-
-request = Net::HTTP::Post.new(url)
-request["Content-Type"] = 'application/json'
-request["User-Agent"] = 'insomnia/9.3.2'
-request.body = "{\n   \"apitoken\":\"xxxx\",\n   \"cliente\":{\n      \"documento_tipo\":\"DNI\",\n      \"condicion_iva\":\"CF\",\n      \"domicilio\":\"Av Sta Fe 23132\",\n      \"condicion_pago\":\"201\",\n      \"documento_nro\":\"111132333\",\n      \"razon_social\":\"Juan Pedro KJL\",\n      \"provincia\":\"2\",\n      \"email\":\"email@dominio.com\",\n      \"envia_por_mail\":\"N\",\n       \"rg5329\": \"N\"\n   },\n   \"apikey\":\"xxxx\",\n   \"comprobante\":{\n      \"rubro\":\"Sevicios web\",\n      \"percepciones_iva\":0,\n      \"tipo\":\"FACTURA B\",\n      \"numero\":2134,\n      \"bonificacion\":0,\n      \"operacion\":\"V\",\n      \"detalle\":[\n         {\n            \"cantidad\":1,\n            \"afecta_stock\":\"S\",\n            \"actualiza_precio\":\"S\",\n            \"bonificacion_porcentaje\":0,\n            \"producto\":{\n               \"descripcion\":\"Hosting pagina web \",\n               \"codigo\":37,\n               \"lista_precios\":\"standard\",\n               \"leyenda\":\"\",\n               \"unidad_bulto\":1,\n               \"alicuota\":21,\n               \"actualiza_precio\":\"S\",\n               \"rg5329\": \"N\",\n               \"precio_unitario_sin_iva\":114.88\n            }\n         }\n      ],\n      \"fecha\":\"28/03/2018\",\n      \"vencimiento\":\"26/03/2023\",\n      \"rubro_grupo_contable\":\"Sevicios\",\n      \"total\":139.0,\n      \"cotizacion\":1,\n      \"moneda\":\"PES\",\n      \"punto_venta\":3,\n      \"tributos\":[]\n   },\n   \"usertoken\":\"xxxx\"\n}"
-
-response = http.request(request)
-puts response.read_body
+uri = URI("https://www.tusfacturas.app/app/api/v2/facturacion/nuevo")
+res = Net::HTTP.post(uri, File.read("factura.json"), "Content-Type" => "application/json")
+puts JSON.parse(res.body)
 ```
 {% endtab %}
 {% endtabs %}
 
-### SDK  AFIP/ARCA en PHP
+El mismo código sirve para cualquier otro endpoint de la API: cambia la URL y el contenido de `factura.json`.
 
-Optimiza la facturación electrónica en PHP con nuestro **SDK para factura electrónica AFIP/ARCA**, una solución eficiente y actualizada para la emisión de comprobantes fiscales. Descarga gratuitamente el [**SDK AFIP/ARCA en PHP**](https://github.com/vousys/tusfacturas) desde nuestro repositorio GIT y automatiza la integración con los sistemas de facturación electrónica en Argentina. Nuestra herramienta simplifica la emisión de facturas, asegurando el cumplimiento de las normativas vigentes de AFIP/ARCA. A diferencia de otras soluciones, ofrecemos un **SDK para factura electrónica** optimizado, de fácil implementación y con documentación detallada para desarrolladores. Potencia tu sistema con la mejor tecnología para facturación electrónica en PHP.
+### 3. Revisá la respuesta
+
+La respuesta indica si ARCA aprobó el comprobante y, en ese caso, trae el CAE, su vencimiento, el número asignado y el link al PDF. Los campos están en la Referencia API y los rechazos más frecuentes en Errores comunes de ARCA.
+
+Si emitís muchos comprobantes, usá el modo asincrónico: ARCA bloquea temporalmente a quien envía pedidos sincrónicos muy seguidos.
+
+### SDK para PHP
+
+El SDK para PHP está en GitHub y se usa desde 2015 en integraciones homologadas por AFIP/ARCA.
 
 {% embed url="https://github.com/vousys/tusfacturas" %}
 
 {% embed url="https://github.com/vousys/tusfacturas.app" %}
 
-### ¿Aún te quedan dudas? ¡Contactános!
+### Soporte
 
-En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
+Dudas sobre la integración directo con humanos en: api@tusfacturas.app o en [tusfacturas.app](https://www.tusfacturas.app).

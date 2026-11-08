@@ -1,11 +1,13 @@
 ---
 description: >-
-  TusFacturasAPP: API para Facturas A de AFIP/ARCA. Confiable desde 2015. Creada
-  por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
+  Ejemplo de JSON para emitir una Factura A de Responsable Inscripto a
+  Responsable Inscripto con CAE de ARCA, con IVA discriminado, desde la API REST
+  de TusFacturasAPP.
+tagTitle: 'Factura A por API: ejemplo JSON para emitir en ARCA'
 icon: code
 ---
 
-# Factura A
+# Factura A por API: ejemplo JSON para emitir en ARCA
 
 ### Endpoints
 
@@ -24,6 +26,23 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
 {% hint style="info" %}
 **Consumo de créditos:** cada llamada descuenta **1 comprobante** de tu cupo de facturación. [¿Cómo funcionan los cupos? →](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
+
+La Factura A la emite un Responsable Inscripto a otro Responsable Inscripto o a un monotributista. Discrimina el IVA y le permite al comprador computarlo como crédito fiscal.
+
+### Cuándo usarla
+
+| Emisor                | Receptor              | Comprobante |
+| --------------------- | --------------------- | ----------- |
+| Responsable Inscripto | Responsable Inscripto | Factura A   |
+| Responsable Inscripto | Monotributista        | Factura A   |
+
+Si el receptor está obligado a recibir Factura de Crédito Electrónica, usa [Factura MiPyME A](api-factura-electronica-afip-factura-mypyme-a.md). Para saberlo, consultá [¿Debo emitir una MiPyME? ](debo-emitir-una-mipyme.md).
+
+### Campos que cambian respecto de otros comprobantes
+
+* `comprobante.tipo`: `"FACTURA A"`
+* `cliente.condicion_iva`: `"RI" o "M"`
+* `cliente.documento_tipo`: `"CUIT"`
 
 ### JSON para generar una Factura A en AFIP/ARCA
 
@@ -256,8 +275,7 @@ require 'openssl'
 url = URI("https://www.tusfacturas.app/app/api/v2/facturacion/nuevo")
 
 http = Net::HTTP.new(url.host, url.port)
-http.use_ssl = true
-http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+http.use_ssl = true 
 
 request = Net::HTTP::Post.new(url)
 request["Content-Type"] = 'application/json'
@@ -282,9 +300,7 @@ Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos 
 * **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
   👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-json-a-enviar)
 
-### :hand\_splayed: ¿Quién genera una factura A?
 
-Los responsables inscriptos solo pueden emitir comprobantes tipo "A",  cuando le facturan a otro responsable inscripto o a un monotributista. En ese caso el tipo de documento de tu cliente debe ser obligatoriamente CUIT.  Conoce mas detalles [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md)
 
 ### Respuesta esperada
 
