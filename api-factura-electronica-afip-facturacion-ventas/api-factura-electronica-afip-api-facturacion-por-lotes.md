@@ -48,7 +48,7 @@ Consulta nuestra guía detallada "[Referencia API AFIP ARCA](referencia-api-afip
 {% endhint %}
 
 {% hint style="info" %}
-**Consumo de créditos:** cada llamada descuenta **1 comprobante** de tu cupo de facturación. [¿Cómo funcionan los cupos? →](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+**Consumo de créditos:** El uso de éste método contabiliza como "n" request en tu suscripción, dependiendo de la cantidad de comprobantes que envies en cada lote. Ejemplo: Si envias un lote con 5 comprobantes, descontará 5. [¿Cómo funcionan los cupos? →](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
 
