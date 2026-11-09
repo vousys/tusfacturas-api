@@ -7,60 +7,73 @@ icon: magnifying-glass
 
 # Consulta simple de ventas
 
-La **API ARCA/AFIP de TusFacturasAPP** ofrece dos métodos para consultar comprobantes fiscales emitidos desde tu sistema: el método de **consulta simple** y el de [**consulta avanzada**](consulta-avanzada.md). Ambos son fundamentales para verificar el estado y obtener los datos de las ventas realizadas.
+Devuelve un comprobante ya enviado, emitido o en cola, con todos sus datos: estado, CAE, vencimiento del CAE, PDF, QR y observaciones de ARCA. Se busca por tipo de comprobante, punto de venta y número.
 
-### 🔸 Consulta simple de ventas
+#### Endpoint
 
-Este método te permite obtener una lista de comprobantes emitidos filtrando por CUIT, punto de venta, fecha, tipo de comprobante u otros parámetros básicos. Es ideal para visualizar un resumen general o hacer auditorías internas de tu facturación electrónica.
-
-Esta función es muy útil para:
-
-* **Verificar el estado de los comprobantes:** Saber si un comprobante fue emitido correctamente, si fue rechazado por la AFIP o si ya fue presentado ante el organismo recaudador.
-* **Buscar comprobantes específicos:** Localizar una factura en particular utilizando diferentes criterios de búsqueda, como el número de comprobante, la fecha de emisión, el cliente, etc.
-* **Generar reportes:** Obtener información resumida o detallada sobre un conjunto de comprobantes, lo que puede ser útil para tareas de contabilidad o análisis.
-* **Integrar con otros sistemas:** Utilizar la información de los comprobantes para alimentar tu sistema o aplicacion, como un ERP o un CRM.
-
-**En resumen,** la consulta de comprobantes es una herramienta esencial para gestionar tu facturación electrónica de manera eficiente y tener un control total sobre tus operaciones.
-
-#### :rocket: Ejemplo de consulta simple
-
-{% hint style="info" %}
-🪙 **Consumo de créditos:** Éste método no consume créditos. [¿Cómo se calculan?](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+{% hint style="success" icon="rectangle-api" %}
+<mark style="color:purple;">`POST`</mark> `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:blue;">`consulta`</mark>
 {% endhint %}
 
+{% hint style="info" %}
+&#x20;🪙 **Consumo de créditos:** este método no consume créditos.&#x20;
+{% endhint %}
 
+#### ¿Consulta simple o avanzada?
 
-{% content-ref url="../web-services-afip-api-arca/consulta-simple-tipo-numero.md" %}
-[consulta-simple-tipo-numero.md](../web-services-afip-api-arca/consulta-simple-tipo-numero.md)
-{% endcontent-ref %}
+| Necesitás                                                          | Usá                                                                                                                   |
+| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| Un comprobante puntual del que sabes tipo, punto de venta y número | Consulta simple (esta página)                                                                                         |
+| Todos los comprobantes de una fecha                                | [Consulta avanzada por fecha](../web-services-afip-api-arca/consulta-avanzada-por-fecha.md)                           |
+| Los comprobantes de un rango de números                            | [Consulta avanzada por rango](../web-services-afip-api-arca/consulta-avanzada-por-numero.md)                          |
+| Buscar por tu propio identificador (`external_reference`)          | [Consulta avanzada por external reference](../web-services-afip-api-arca/consulta-avanzada-por-external-reference.md) |
 
-#### 🛠️ Estructura del request a enviar:
+Usos típicos: confirmar si un comprobante enviado en modo asincrónico ya tiene CAE, recuperar el PDF o el QR, o revisar las observaciones de ARCA.
 
-| Name        | Type   | Description                                                             |
-| ----------- | ------ | ----------------------------------------------------------------------- |
-| comprobante | object | <p>Un objeto según estructura que se detalla a continuación.</p><p></p> |
-| apikey      | string | Tus credenciales de acceso.                                             |
-| apitoken    | string | Tus Credenciales de acceso.                                             |
-| usertoken   | string | Tus Credenciales de acceso.                                             |
+#### Estructura del request
 
-#### Estructura a enviar dentro del bloque: "Comprobante"
+| Campo         | Tipo   | Requerido | Descripción                                              |
+| ------------- | ------ | --------- | -------------------------------------------------------- |
+| `apikey`      | string | Sí        | Credencial de acceso. [Cómo obtenerla](../como-empiezo/) |
+| `apitoken`    | string | Sí        | Credencial de acceso                                     |
+| `usertoken`   | string | Sí        | Credencial de acceso                                     |
+| `comprobante` | objeto | Sí        | Datos del comprobante a buscar. Ver tabla siguiente      |
 
-| `tipo`        | <p>Campo numérico según tabla de referencia de <a href="https://www.tusfacturas.com.ar/api-factura-electronica-afip.html#tabla-comprobantes">Tipos de comprobantes(***)</a>.<br><strong>Ejemplo: FACTURA B</strong></p> |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `operacion`   | <p>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C).<br>Valores Permitidos: <strong>V, C</strong><br><strong>Ejemplo: V</strong></p>                                   |
-| `punto_venta` | <p>Campo numérico entero. Longitud máxima 4 digitos.<br><strong>Ejemplo: 3</strong></p>                                                                                                                                 |
-| `numero`      | <p>Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante.<br><strong>Ejemplo: 4567</strong></p>                                                  |
+**Bloque "comprobante"**
 
-### Ejemplo del JSON de respuesta:
+| Campo         | Tipo     | Requerido | Descripción                                                                                                      |
+| ------------- | -------- | --------- | ---------------------------------------------------------------------------------------------------------------- |
+| `tipo`        | string   | Sí        | Tipo de comprobante, según la [tabla de referencia](../parametros/tablas-de-referencia.md). Ejemplo: `FACTURA B` |
+| `operacion`   | string   | Sí        | `V` para ventas, `C` para compras                                                                                |
+| `punto_venta` | numérico | Sí        | Hasta 4 dígitos. Ejemplo: `2`                                                                                    |
+| `numero`      | numérico | Sí        | Número del comprobante, hasta 8 dígitos. Ejemplo: `6`                                                            |
 
-La información que obtenés se devuelve estructurada de la misma manera que la enviaste, con el agregado de ciertos campos que se detallan a continuación
+#### Ejemplo del request
+
+```json
+{
+  "usertoken": "xxxx",
+  "apikey": "xxxx",
+  "apitoken": "xxxx",
+  "comprobante": {
+    "tipo": "NOTA DE DEBITO B",
+    "operacion": "V",
+    "punto_venta": "2",
+    "numero": "6"
+  }
+}
+```
+
+Ejemplos de código en cURL, PHP, Python, Node.js y Ruby: [Consulta por tipo y número de comprobante](../web-services-afip-api-arca/consulta-simple-tipo-numero.md).
+
+#### Respuesta
+
+Devuelve el comprobante con la misma estructura con que se envió, más los campos que agregan ARCA y TusFacturasAPP.
 
 ```json
 {
   "error": "N",
-  "errores": [
-    ""
-  ],
+  "errores": [],
   "rta": "OK",
   "cliente": {
     "documento_tipo": "DNI",
@@ -156,22 +169,28 @@ La información que obtenés se devuelve estructurada de la misma manera que la 
 ```
 
 {% hint style="info" %}
-Asegúrate de descargar y almacenar toda la información y el PDF en tu plataforma. Los enlaces expiran y solo podrás acceder a ellos mientras tu suscripción esté activa.
+Los links a los PDF (`comprobante_pdf_url` y `comprobante_ticket_url`) son temporales. Descargá el PDF y guardá toda la información en tu plataforma apenas la obtengas: solo vas a poder acceder a ella mientras tu suscripción esté activa y la normativa de facturación de Argentina indica que debes almacenar las facturas por hasta 10 años.
 {% endhint %}
 
-#### Campos devueltos que no forman parte del JSON que vos envias:
+**Campos que agrega la respuesta**
 
-<table><thead><tr><th width="198">Nombre del campo</th><th>Info</th></tr></thead><tbody><tr><td>cae</td><td>Campo alfanumérico, con un espacio adicional, devuelto por AFIP, a modo e código de autorización electrónica de la transacción realizada. <mark style="color:$primary;">Solo disponible si tu CUIT se encuentra enlazado con ARCA</mark></td></tr><tr><td>afip_qr</td><td>Campo alfanumérico, conteniendo el texto necesario para formar el QR. <mark style="color:$primary;">Solo disponible si tu CUIT se encuentra enlazado con ARCA</mark></td></tr><tr><td>ctacte_status</td><td>Campo alfanumérico, conteniendo el estado del pago de ese comprobante dentro de la cuenta corriente. Los valores posibles son: PAGADA, IMPAGA , PAGO PARCIAL</td></tr><tr><td>status</td><td><p>Campo alfanumérico, conteniendo el estado de emisión de ese comprobante . </p><p>Lo valores que podes obtener son : </p><p>"EMITIDO", </p><p>"APROBADO Y EN COLA. SE EMITE EL dd/mm/aaaa", </p><p>"EN COLA, ESPERANDO APROBACION", "ENVIADO A PROCESAR - CON ERROR", "PROGRAMADO - PROCESADO CON ERRORES"</p></td></tr><tr><td>afip_codigo_barras</td><td>Campo alfanumérico, conteniendo el texto necesario para formar el código de barras de AFIP (legacy)</td></tr><tr><td>vencimiento_cae</td><td>Fecha enviada por AFIP al momento de autorizar el comprobante. Formato: dd/mm/aaaa. <mark style="color:$primary;">Solo disponible si tu CUIT se encuentra enlazado con ARCA</mark></td></tr><tr><td>vencimiento_pago</td><td>Fecha que indica la fecha de vencimiento del pago. Éste dato enviado por el cliente, o auto-calculado en base a la condición de pago estipulada en el perfil del cliente. Formato: dd/mm/aaaa</td></tr><tr><td>comprobante_<em>pdf</em>_url</td><td>Campo alfanumérico  al pdf en hoja A4 del comprobante. <mark style="color:$primary;">Éste link es temporal y caduca, por lo que debes descargar el PDF a tu servidor una vez obtenido el archivo.</mark></td></tr><tr><td>micrositios</td><td><p>En este campo se te devolverá la URL del micrositio del cliente y la de url del micrositio de descarga, solo si tu cuenta tiene los micrositios habilitados. Para configurarlo, ingresá a nuestra plataforma web, menú > mi espacio de trabajo > mis micrositios. </p><p><mark style="color:$primary;">La URL del micrositio del cliente es temporal pero no expira.</mark> </p><p><mark style="color:$primary;">La URL del micrositio del cliente no cambia nunca para ese cliente.</mark>  </p></td></tr><tr><td>comprobante_ticket_url</td><td>La url al PDF con el comprobante en formato ticket para papel de 80mm. <mark style="color:$primary;">Éste link es temporal y caduca, por lo que debes descargar el PDF a tu servidor una vez obtenido el archivo.</mark></td></tr><tr><td>afip_observaciones</td><td>Campo alfanumerico con las observaciones que aplico AFIP/ARCA sobre ese comprobante. Es importente que las controles ya que muchas veces aprueban el comprobante pero te informan de ciertos errores en este campo para luego enviarte una comunicación.</td></tr></tbody></table>
+| Campo                    | Descripción                                                                                                                                                                                                                                |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `error`                  | `N` si la consulta funcionó, `S` si hubo errores                                                                                                                                                                                           |
+| `errores`                | Lista de errores. Vacía si `error` es `N`                                                                                                                                                                                                  |
+| `status`                 | Estado de emisión. Valores posibles: `EMITIDO`, `APROBADO Y EN COLA. SE EMITE EL dd/mm/aaaa`, `EN COLA, ESPERANDO APROBACION`, `ENVIADO A PROCESAR - CON ERROR`, `PROGRAMADO - PROCESADO CON ERRORES`                                      |
+| `cae`                    | Código de autorización electrónico otorgado por ARCA. Puede venir con un espacio al final: aplicá trim antes de guardarlo. Solo disponible si tu CUIT está enlazado con ARCA                                                               |
+| `vencimiento_cae`        | Vencimiento del CAE informado por ARCA. Formato dd/mm/aaaa. Solo disponible si tu CUIT está enlazado con ARCA                                                                                                                              |
+| `afip_qr`                | Texto para generar el QR del comprobante. Solo disponible si tu CUIT está enlazado con ARCA                                                                                                                                                |
+| `afip_observaciones`     | Observaciones de ARCA sobre el comprobante. Revisalas siempre: ARCA puede aprobar el comprobante e informar acá un problema que después te notifica                                                                                        |
+| `afip_codigo_barras`     | Texto para generar el código de barras (formato anterior al QR)                                                                                                                                                                            |
+| `ctacte_status`          | Estado del pago en la cuenta corriente: `PAGADA`, `IMPAGA` o `PAGO PARCIAL`                                                                                                                                                                |
+| `vencimiento_pago`       | Vencimiento del pago. Lo enviás vos o se calcula según la condición de pago del cliente. Formato dd/mm/aaaa                                                                                                                                |
+| `comprobante_pdf_url`    | Link al PDF en hoja A4. Es temporal: descargalo a tu servidor                                                                                                                                                                              |
+| `comprobante_ticket_url` | Link al PDF en formato ticket para papel de 80 mm. Es temporal: descargalo a tu servidor                                                                                                                                                   |
+| `micrositios`            | URL del micrositio del cliente y del micrositio de descarga, si tu cuenta los tiene habilitados (plataforma web > Menú > Mi espacio de trabajo > Mis micrositios). La URL del micrositio del cliente no vence y no cambia para ese cliente |
 
-TusFacturasAPP es un [software de facturación](https://www.tusfacturas.app/software-de-facturacion-argentina.html) y un [software de gestión](https://www.tusfacturas.app/software-de-gestion-para-pymes.html)  diseñado para empresas que facturen en Argentina. Conoce más de [TusFacturasAPP](https://www.tusfacturas.app).
+#### ¿Aún te quedan dudas? ¡Contactanos!
 
-### ¿Aún te quedan dudas? ¡Contactános!
-
-En caso que requieras asistencia o tengas alguna duda relacionada con tu plan API DEV,  envíanos un mensaje a api@tusfacturas.app o [contactanos](https://www.tusfacturas.app/contacto.html) por el chat que tenemos disponible en la web [www.tusfacturas.app](https://www.tusfacturas.app/quiero-probar-api-factura-electronica.html).
-
-
-
-
-
-
+Si necesitás asistencia con tu plan API DEV, escribinos a [api@tusfacturas.app](mailto:api@tusfacturas.app) o por el [chat de nuestra web](https://www.tusfacturas.app/contacto.html).
 

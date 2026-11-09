@@ -66,7 +66,7 @@
   * [Notas de crédito / Notas de débito](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md)
   * [Facturas a consumidor final, sin especificar datos](api-factura-electronica-afip-facturacion-ventas/facturas-a-consumidor-final-sin-especificar-datos.md)
   * [Consulta simple de ventas](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-comprobantes.md)
-  * [Consulta avanzada](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md)
+  * [Consulta avanzada: listar comprobantes por fecha, rango o external reference](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md "Consulta avanzada")
   * [¿Qué tipos de comprobante debo/puedo emitir?](api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md)
   * [¿Como confeccionar una venta?](api-factura-electronica-afip-facturacion-ventas/ejemplos-de-comprobantes.md)
   * [¿Factura MiPyme o Factura común?](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-or-como-se-si-emitir-una-factura-mipyme-o-una-comun.md)

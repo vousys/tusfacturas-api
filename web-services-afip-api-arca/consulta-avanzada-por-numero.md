@@ -154,12 +154,12 @@ puts response.read_body
 
 ### Parámetros para enviar una consulta por rango numérico&#x20;
 
-[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación avalado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md#consulta-avanzada-por-rango-de-numeros),  con referencia a cada parámetro.
+[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación avalado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md#consulta-avanzada-por-rango-de-numeros),  con referencia a cada parámetro.
 
 ### Respuesta esperada
 
-{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md" %}
-[consulta-avanzada.md](../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md)
+{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md" %}
+[consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md](../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md)
 {% endcontent-ref %}
 
 

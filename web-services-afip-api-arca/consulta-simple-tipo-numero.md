@@ -152,8 +152,8 @@ puts response.read_body
 
 ### Respuesta esperada
 
-{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md" %}
-[consulta-avanzada.md](../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada.md)
+{% content-ref url="../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md" %}
+[consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md](../api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md)
 {% endcontent-ref %}
 
 

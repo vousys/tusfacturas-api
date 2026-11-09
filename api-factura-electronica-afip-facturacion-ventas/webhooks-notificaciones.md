@@ -100,16 +100,16 @@ Hook 5 \_\_\_\_\_\_\_\_\_\_\_\_\_ será enviado el 23/03/2022 a las 07:35
 
 ### &#x20;Una vez que recibo el webhook, ¿Qué hago?
 
-Una vez recibido el webhook, deberás  realizar una [consulta avanzada](consulta-avanzada.md) a TusFacturasAPP para obtener los datos generados de ese comprobante.
+Una vez recibido el webhook, deberás  realizar una [consulta avanzada](consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md) a TusFacturasAPP para obtener los datos generados de ese comprobante.
 
 &#x20;A continuación te mostramos, la documentación asociada al recurso del que recibís el webhook.
 
 
 
-|   Recurso   |                                                         Documentación                                                         |
-| :---------: | :---------------------------------------------------------------------------------------------------------------------------: |
-| facturacion |  [consulta avanzada por external\_reference](consulta-avanzada.md#como-realizar-una-consulta-avanzada-por-external-reference) |
-|             |                                                                                                                               |
+|   Recurso   |                                                                                      Documentación                                                                                     |
+| :---------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| facturacion |  [consulta avanzada por external\_reference](consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md#como-realizar-una-consulta-avanzada-por-external-reference) |
+|             |                                                                                                                                                                                        |
 
 ### Herramientas útiles&#x20;
 
