@@ -33,8 +33,8 @@ Tenés alguna duda del servicio? checkea las [API FAQs](../faqs-or-preguntas-fre
 
 Al utilizar éste servicio, los comprobantes que emitas impactarán de inmediato en nuestra plataforma y obtendrás la respuesta al instante, ya que utiliza el servicio de facturación por lotes de AFIP (siempre y cuando los servicios de dicho organismo se encuentren funcionando).
 
-{% hint style="danger" %}
-Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios, la generación de un comprobante puede llegar a demorar hasta 1,30 minutos 😰. Para evitar éste tipo de problemas, te sugerimos utilizar la [facturación por lotes asincrónica (encolada)](facturacion-asincronica-por-lotes-encolada.md)
+{% hint style="warning" %}
+Es importante que controles los errores, dado que los servicios de AFIP se caen muy seguido y según funcionen sus servicios. Para evitar éste tipo de problemas, te sugerimos utilizar la [facturación por lotes asincrónica (encolada)](facturacion-asincronica-por-lotes-encolada.md)
 {% endhint %}
 
 Es necesario leer primero, la documentación de "[Facturación](./)", para conocer cómo debe componerse cada request que envíes.
@@ -48,7 +48,7 @@ Consulta nuestra guía detallada "[Referencia API AFIP ARCA](referencia-api-afip
 {% endhint %}
 
 {% hint style="info" %}
-**Consumo de créditos:** El uso de éste método contabiliza como "n" request en tu suscripción, dependiendo de la cantidad de comprobantes que envies en cada lote. Ejemplo: Si envias un lote con 5 comprobantes, descontará 5. [¿Cómo funcionan los cupos? →](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
+**Consumo de créditos:**  Si bien éste método permite enviar múltiples comprobantes en un único request HTTP, el cupo de tu plan se calcula por la **cantidad total de comprobantes a emitir**. Ejemplo: si envias 20 requests con 10 comprobantes cada uno, tu consumo real será de **200 comprobantes** descontados del cupo. [¿Cómo funcionan los cupos? →](https://ayuda.tusfacturas.app/es/articles/11679150-api-que-contabiliza-como-un-request-en-tusfacturasapp)
 {% endhint %}
 
 
