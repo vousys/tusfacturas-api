@@ -16,7 +16,7 @@ Se agrega el régimen especial RG 4291 Factura Electrónica, el cual permite a l
 
 ### 19 de agosto de 2026
 
-Se amplia a 26 las percepciones que se pueden enviar dentro del bloque tributos. Más info en la [Referencia API](api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-bloque-tributos)
+Se amplia a 26 las percepciones que se pueden enviar dentro del bloque tributos. Más info en la [Referencia API](api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-del-bloque-tributos)
 
 ### 11 de agosto de 2026
 
@@ -85,7 +85,7 @@ Se agrega  el método para [consultar en la base APOC (facturas apócrifas) de A
 
 ### 14 de febrero de 2025
 
-Se agrega el bloque "[datos\_informativos](api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-de-datos_informativos)" dentro de las ventas, por la entrada en vigencia el 15/04/2025 de la RG5616/2024 de ARCA.  Asimismo se agrega el campo "[condicion\_iva\_operacion](api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-bloque-cliente-y-proveedor)" dentro de los datos del cliente.
+Se agrega el bloque "[datos\_informativos](api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-de-datos_informativos)" dentro de las ventas, por la entrada en vigencia el 15/04/2025 de la RG5616/2024 de ARCA.  Asimismo se agrega el campo "[condicion\_iva\_operacion](api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-del-bloque-cliente-y-proveedor)" dentro de los datos del cliente.
 
 ### 04 de febrero de 2025
 

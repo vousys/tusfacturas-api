@@ -48,7 +48,7 @@ Los servicios de AFIP/ARCA pueden presentar **intermitencias frecuentes**. Por e
 
 ### 🚀 ¿Cómo crear una venta instantánea?
 
-Consultá nuestra [guía completa 👉 **“Referencia API AFIP ARCA”**](referencia-api-afip-arca.md), donde encontrarás:
+Consultá nuestra [guía completa 👉 **“Referencia API AFIP ARCA”**](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md), donde encontrarás:
 
 * Especificaciones técnicas
 * Campos requeridos para armar el request
@@ -71,13 +71,13 @@ Charset: UTF-8 / JSON&#x20;
 
 #### Body
 
-| Name        | Type   | Description                                                                                                                             |
-| ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| usertoken   | string | Tus credenciales de acceso                                                                                                              |
-| apitoken    | string | Tus credenciales de acceso                                                                                                              |
-| apikey      | string | Tus credenciales de acceso                                                                                                              |
-| comprobante | object | Estructura de "comprobante" según se informa en la [referencia API](referencia-api-afip-arca.md#estructura-del-bloque-comprobante)      |
-| cliente     | object | Estructura de "Cliente", según se informa en la [referencia API](referencia-api-afip-arca.md#estructura-del-bloque-cliente-y-proveedor) |
+| Name        | Type   | Description                                                                                                                                                                |
+| ----------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| usertoken   | string | Tus credenciales de acceso                                                                                                                                                 |
+| apitoken    | string | Tus credenciales de acceso                                                                                                                                                 |
+| apikey      | string | Tus credenciales de acceso                                                                                                                                                 |
+| comprobante | object | Estructura de "comprobante" según se informa en la [referencia API](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-del-bloque-comprobante)      |
+| cliente     | object | Estructura de "Cliente", según se informa en la [referencia API](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-del-bloque-cliente-y-proveedor) |
 
 ### ¿Qué te retorna la llamada a la API de facturación AFIP/ARCA en la modalidad individual e instantánea?
 

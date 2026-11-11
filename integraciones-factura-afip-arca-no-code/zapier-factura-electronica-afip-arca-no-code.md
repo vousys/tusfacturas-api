@@ -222,7 +222,7 @@ Content-Type: application/json
 
 #### Paso 4: Mapear los Datos del Body&#x20;
 
-En el campo **"Data"**, configura estos campos según la [API de TusFacturas.app](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#json-de-ejemplo-para-emitir-comprobantes-electronicos). &#x20;
+En el campo **"Data"**, configura estos campos según la [API de TusFacturas.app](../api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#json-de-ejemplo-para-emitir-comprobantes-electronicos). &#x20;
 
 Para automatizar la creación de facturas, puedes copiar un ejemplo de los modelos de  [factura B](../web-services-afip-api-arca/api-factura-electronica-afip-factura-b.md), [factura A](../web-services-afip-api-arca/api-factura-electronica-afip-factura-a.md) , [Factura C](../web-services-afip-api-arca/api-factura-electronica-afip-factura-c.md), y sustituir los siguientes campos con la información que obtengas de la API de Stripe. Para una lista completa de los datos disponibles, consulta la [documentación de Stripe](https://stripe.com/docs)
 
@@ -351,6 +351,6 @@ Tu integración de **factura electronica AFIP/ARCA no-code** ya está listo para
 
 ### Recursos Adicionales
 
-* [Documentación completa de la API](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md)
+* [Documentación completa de la API](../api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md)
 * [Ejemplos de códigos AFIP](../web-services-afip-api-arca/)&#x20;
 

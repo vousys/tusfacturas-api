@@ -231,7 +231,7 @@ Si necesitás cambiar tu plan:
 #### 📚 Recursos Adicionales
 
 * [**Centro de Ayuda**](https://ayuda.tusfacturas.app/es/)
-* [**Documentación API completa**](api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md)
+* [**Documentación API completa**](api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md)
 * [**Ejemplos de código**](web-services-afip-api-arca/)
 * [**Status de servicios**](https://www.tusfacturas.app/app/estado-servicios.html)
 

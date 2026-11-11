@@ -286,7 +286,7 @@ puts response.read_body
 
 ### Parámetros para crear una Liquidación A&#x20;
 
-[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md),  con referencia a cada parámetro y las[ tablas de referencia ](../parametros/tablas-de-referencia.md)necesarias para completar los campos.
+[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md),  con referencia a cada parámetro y las[ tablas de referencia ](../parametros/tablas-de-referencia.md)necesarias para completar los campos.
 
 #### 📘 Información esencial
 
@@ -295,7 +295,7 @@ Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos 
 * **Tablas de referencia:** valores, códigos y parámetros que necesitas para que la API funcione correctamente.\
   👉 [Ver tablas de referencia](../parametros/tablas-de-referencia.md)
 * **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
-  👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md#estructura-del-json-a-enviar)
+  👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-del-json-a-enviar)
 
 ### :hand\_splayed: ¿Quién genera una liquidación A?
 

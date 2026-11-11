@@ -26,6 +26,8 @@ layout:
 
 # 📗 Documentación API Facturación AFIP/ARCA
 
+
+
 <figure><img src="../.gitbook/assets/queteresuelvelaapiarcaafip-tusfacturasapp.webp" alt="TusFacturasAPP API Factura Electronica ARCA/AFIP. SDK AFIP/ARCA"><figcaption></figcaption></figure>
 
 ### 🚀 API ARCA para Desarrolladores
@@ -122,7 +124,7 @@ Comienza a usar nuestra **API ARCA** en minutos:
 
 1. [Crea tu cuenta gratuita](../consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md) de desarrollador
 2. Genera tus credenciales API
-3. Integra los endpoints en tu software. Accede a la [referencia de la API](referencia-api-afip-arca.md)
+3. Integra los endpoints en tu software. Accede a la [referencia de la API](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md)
 4. Emití tu primer factura electrónica
 
 ### 🎯 ¿Por qué elegir nuestro SaaS Facturación AFIP?
@@ -137,10 +139,10 @@ Comienza a usar nuestra **API ARCA** en minutos:
 
 ### Explora la API AFIP/ARCA
 
-Explora las funcionalidades de nuestra [API Rest para AFIP/ARCA](referencia-api-afip-arca.md) y descubrí cómo podes personalizarla para tus necesidades.&#x20;
+Explora las funcionalidades de nuestra [API Rest para AFIP/ARCA](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md) y descubrí cómo podes personalizarla para tus necesidades.&#x20;
 
-{% content-ref url="referencia-api-afip-arca.md" %}
-[referencia-api-afip-arca.md](referencia-api-afip-arca.md)
+{% content-ref url="referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md" %}
+[referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md)
 {% endcontent-ref %}
 
 

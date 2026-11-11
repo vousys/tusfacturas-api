@@ -1,31 +1,36 @@
 ---
 description: >-
-  Conecta tu plataforma y factura en ARCA/AFIP con la API de factura electrónica
-  más fácil de Argentina.
+  Referencia API: Estructura completa del JSON para registrar ventas y compras
+  con la API de TusFacturasAPP.
 icon: code
 ---
 
-# Referencia API AFIP ARCA
+# Referencia de la API: campos para crear comprobantes en ARCA
 
-### API ARCA – Integra tu sistema con los Web Services de ARCA fácilmente para facturar tus ventas.
+Todos los campos que acepta la API para crear una venta o registrar una compra, bloque por bloque: dónde va cada uno, si es obligatorio y qué formato espera. Para un JSON listo para cada tipo de comprobante, anda a [Ejemplos por tipo de comprobante](../web-services-afip-api-arca/).
 
-La **API de facturación electrónica para ARCA de TusFacturasAPP** te permite interactuar de forma directa y eficiente con los **web services de AFIP/ARCA**, facilitando la emisión de comprobantes electrónicos desde tu software.
+#### ¿Qué es un "comprobante" en esta API?
 
-<figure><img src="../.gitbook/assets/image (15).png" alt="TusFacturasAPP: API ARCA – Integra tu sistema con los Web Services de ARCA fácilmente para facturar tus ventas."><figcaption></figcaption></figure>
+En esta API, "comprobante" es cualquier documento que se envía con la estructura de JSON que se describe en esta página.
 
-#### ¿Qué es un comprobante electrónico?
+**Se autorizan en ARCA y reciben CAE:**
 
-En el contexto de nuestra API, se denomina **"comprobante"** a cualquier documento digital vinculado a operaciones comerciales, tales como:
-
-* Facturas electrónicas (de venta o compra), recibos C y liquidaciones.
+* Facturas electrónicas (de venta o compra), recibos C y liquidaciones
 * Notas de crédito y débito
+
+**Documentos comerciales internos, no pasan por ARCA:**
+
 * Pedidos
 * Presupuestos
-* Remitos&#x20;
+* Remitos
 
-Esto permite a tu sistema manejar toda la documentación fiscal y comercial en formato electrónico, cumpliendo con las exigencias legales vigentes.
+{% hint style="info" %}
+Ventas y compras usan la misma estructura. Cambian dos cosas: el campo `operacion` (`V` para ventas, `C` para compras) y el bloque de la contraparte (`cliente` en ventas, `proveedor` en compras).&#x20;
+{% endhint %}
 
-### Endpoint principal de facturación la API:
+### Endpoints y modos de envío
+
+Todos los modos de facturación usan la misma estructura de JSON. Cambia el endpoint y la forma de la respuesta.
 
 {% hint style="info" %}
 <mark style="color:purple;">**POST**</mark>
@@ -33,42 +38,54 @@ Esto permite a tu sistema manejar toda la documentación fiscal y comercial en f
 `https://www.tusfacturas.app/app/api/v2/`**`facturacion`**`/`<mark style="color:purple;">**`metodo-elegido`**</mark>
 {% endhint %}
 
-Este endpoint permite el envío de comprobantes en distintos modos de operación, según las necesidades de tu sistema:
+| Modo                     | Cuándo usarlo                                                                                                                                  | Endpoint                                                                                       |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Instantánea e individual | Enviás un comprobante y recibís la respuesta al instante. Sujeto a la disponibilidad del servicio de ARCA                                      | `POST https://www.tusfacturas.app/app/api/v2/facturacion/nuevo`                                |
+| Asincrónica e individual | Envias el comprobante a una cola de procesamiento y recibís una notificación por webhook una vez procesado. Recomendado para grandes volúmenes | `POST https://www.tusfacturas.app/app/api/v2/facturacion/nuevo_encola`                         |
+| Instantánea por lotes    | Envias varios comprobantes en un único lote y recibís una única respuesta inmediata. Sujeto a la disponibilidad del servicio de ARCA           | Ver la página de [ventas por lote ](api-factura-electronica-afip-api-facturacion-por-lotes.md) |
 
-#### ⚙️ Modos de envío disponibles
 
-* [**Facturación instantánea e individual**](api-factura-electronica-afip-facturacion-nuevo-comprobante.md)**:**\
-  Envía un comprobante y recibe la respuesta al instante. Ideal para sistemas que requieren confirmación inmediata. Sujeto a la disponibilidad del servicio de **AFIP o ARCA**.
-* [**Facturación asincrónica individual**](api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)**:**\
-  Envía el comprobante a una cola de procesamiento. Recibirás una notificación por **webhook** una vez procesado. Recomendado para sistemas que manejan grandes volúmenes.
-* [**Facturación en lote instantánea**](api-factura-electronica-afip-api-facturacion-por-lotes.md)**:**\
-  Permite enviar varios comprobantes en un único lote y recibir una única respuesta inmediata. También depende de la disponibilidad del servicio de AFIP o ARCA.
 
 > 🔧 La API para ARCA de TusFacturasAPP está diseñada para desarrolladores que buscan una integración rápida, robusta y conforme a las normativas de facturación electrónica en Argentina. Desde 2015 es la API más elegida por los desarrolladores.
 
-### Estructura del JSON  a enviar
 
-Tipo de datos: **JSON ,** Charset: **UTF-8**
 
-Request: Body
+### Estructura del JSON a enviar
 
-| Name        | Type   | Description                                                 |
-| ----------- | ------ | ----------------------------------------------------------- |
-| usertoken   | string | Tus credenciales de acceso                                  |
-| apitoken    | string | Tus credenciales de acceso                                  |
-| apikey      | string | Tus credenciales de acceso                                  |
-| comprobante | object | Estructura de "comprobante" según se informa a continuación |
-| cliente     | object | Estructura de "Cliente", según se informa a continuación    |
+Tipo de datos: **JSON**. Charset: **UTF-8**. Los datos van en el body del request.
 
-### JSON de ejemplo para emitir comprobantes electrónicos
+| Campo         | Tipo   | Descripción                                                                                            |
+| ------------- | ------ | ------------------------------------------------------------------------------------------------------ |
+| `usertoken`   | string | Tus credenciales de acceso                                                                             |
+| `apitoken`    | string | Tus credenciales de acceso                                                                             |
+| `apikey`      | string | Tus credenciales de acceso                                                                             |
+| `cliente`     | object | Datos del cliente. Solo para ventas. Ver bloque Cliente y Proveedor                                    |
+| `proveedor`   | object | Datos del proveedor. Solo para compras. Misma estructura que `cliente`. Ver bloque Cliente y Proveedor |
+| `comprobante` | object | Datos del comprobante. Ver bloque Comprobante                                                          |
 
-A continuación te mostramos un **ejemplo completo en formato JSON** que incluye todas las opciones disponibles para personalizar tus **comprobantes electrónicos** con la API de TusFacturasAPP.
+#### **Mapa de bloques**
 
-> ⚠️ **Importante**: No todos los campos son obligatorios. Los datos requeridos varían según el [**tipo de comprobante**](../web-services-afip-api-arca/) que desees emitir (factura, nota de crédito, remito, etc.).
+Así se anidan los bloques dentro del JSON. Cada nombre lleva a su tabla de campos.
 
-Para obtener una guía detallada de los campos específicos por tipo de comprobante, visitá nuestra [página de ejemplos por tipo de comprobante](../web-services-afip-api-arca/).
+* `usertoken`, `apikey`, `apitoken`
+* `cliente` (ventas) o `proveedor` (compras)
+* `comprobante`
+  * `detalle` (lista de conceptos)
+    * `producto` (uno por concepto)
+  * `tributos` (solo si aplica)
+  * `comprobantes_asociados` (solo notas de crédito y débito)
+  * `rg_especiales` (solo si aplica alguna RG)
+  * `pagos` (opcional)
+  * `tags` (opcional)
+  * `datos_informativos` (opcional)
 
-Este ejemplo te servirá como referencia para construir tus requests correctamente y evitar errores comunes al integrarte con los **web services de AFIP/ARCA**.
+### JSON de ejemplo completo
+
+{% hint style="warning" %}
+Este JSON muestra todos los bloques juntos para que veas dónde va cada uno. **No es un comprobante para enviar tal cual**: combina bloques que en la práctica no van juntos. Los datos requeridos varían según el tipo de comprobante; para un JSON listo para enviar, usá los [ejemplos por tipo de comprobante](../web-services-afip-api-arca/).&#x20;
+{% endhint %}
+
+
 
 {% code title="JSON" %}
 ```json
@@ -241,16 +258,12 @@ Este ejemplo te servirá como referencia para construir tus requests correctamen
 ```
 {% endcode %}
 
-### Ejemplos de comprobantes según su tipo y letra
+#### **Comprobantes disponibles**
 
-Con TusFacturasAPP podrás emitir comprobantes electrónicos ARCA, clasificados según su **tipo (Factura, Nota de Crédito, etc.)** y **letra (A, B, C, E, M)**.
-
-Explorá los distintos escenarios de facturación que podés implementar, adaptados a las normativas fiscales vigentes de AFIP:
-
-#### ✅ Tipos de comprobantes disponibles:
+Con la API podés emitir, entre otros:
 
 * **Factura A / B / C / E / M / MiPyme**
-* **Nota de Crédito A / B / C / E / MiPyme**&#x20;
+* **Nota de Crédito A / B / C / E / MiPyme**
 * **Nota de Débito A / B / C / E / MiPyme**
 * **Presupuestos**
 * **Pedidos**
@@ -269,22 +282,27 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 {% hint style="info" %}
 **PDF**
 
-* La URL del PDF que recibis es temporal,  solo sirve para el día que la consultas.
+*   La URL del PDF que recibís es temporal y tiene validez únicamente durante el día de su consulta.
+
+    La normativa de facturación argentina establece la obligación de conservar los comprobantes durante un plazo de 10 años. Por eso, es importante que descargues y almacenes en tu propia plataforma tanto el archivo PDF como toda la información asociada al comprobante.
+
+    Tené en cuenta que, si tu cuenta o suscripción de TusFacturasAPP dejan de estar vigentes, no podrás volver a obtener estos archivos. Además, ARCA (ex AFIP) no genera comprobantes en formato PDF, por lo que tampoco podrás recuperarlos desde sus servicios.
+
+    **Te recomendamos implementar la descarga y el almacenamiento automático de cada comprobante emitido**, para garantizar que siempre tengas acceso a ellos y puedas cumplir con tus obligaciones de conservación.
 * La URL del ticket sera devuelta para todos los modelos de PDF que seleccionas desde tu punto de venta, con excepción del modelo "1.1 - Modelo Viejo".
-* Es importante que descargues toda la información junto con el contenido del pdf y lo almacenes en tu plataforma, ya que si si tu cuenta o suscripción no se encuentran vigentes, no podrás volver a obtenerlo.  AFIP no genera archivos en PDF, por lo que tampoco podrás obtenerlo desde ahi.
 * Tene en cuenta que a partir del 01-07-2021, todo comprobante A que se emitan a un monotributista deberá llevar la siguiente leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618"._ **Éste valor no debe ser enviado,** ya que saldrá automáticamente impreso en los PDF que se generen desde nuestra plataforma.
 
 
 
-**CAE (Código de Autorización electrónica de AFIP)**
+**CAE (Código de Autorización electrónica de ARCA)**
 
-* El CAE es el Código de Autorización Electrónico que otorga AFIP, como confirmación de la creación del comprobante. Es un dato importante para almacenar como respuesta.
+* El CAE es el Código de Autorización Electrónico que otorga ARCA, como confirmación de la creación del comprobante. Es un dato importante para almacenar como respuesta.
 * Los CAE tienen fecha de vencimiento y se devuelve en formato dd/mm/aaaa
 * Por cuestiones de compatibilidad, el número de CAE se envia como texto con un espacio al final, el cual sugerimos eliminar de tu lado.
 
 
 
-**AFIP CÓDIGO DE BARRAS / QR**
+**ARCA CÓDIGO DE BARRAS / QR**
 
 * Por cuestiones de compatibilidad, el texto que se retorna en el campo  afip\_qr, se envía con un espacio al final, el cual sugerimos eliminar de tu lado.
 * El campo afip\_codigo\_barras dejará de ser enviado a partir del 01/01/2024
@@ -300,9 +318,9 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 
 **FECHA**
 
-* Una vez emitido un comprobante (factura, nota de crédito o débito) en AFIP/ARCA con una fecha determinada, no podrás emitir otro comprobante del mismo punto de venta con una fecha anterior. Esta restricción es impuesta por AFIP/ARCA y no puede ser modificada, incluso mediante la emisión de notas de crédito o débito.
-* AFIP/ARCA ademas, tiene otra validación para la fecha del comprobante:&#x20;
-  * Para actividades vinculadas a servicios, AFIP/ARCA te permitirá facturar con una anterioridad de hasta 10 días, si no has emitido ningún comprobante con fecha posterior a esa.
+* Una vez emitido un comprobante (factura, nota de crédito o débito) en ARCA con una fecha determinada, no podrás emitir otro comprobante del mismo punto de venta con una fecha anterior. Esta restricción es impuesta por ARCA y no puede ser modificada, incluso mediante la emisión de notas de crédito o débito.
+* ARCA ademas, tiene otra validación para la fecha del comprobante:&#x20;
+  * Para actividades vinculadas a servicios, ARCA te permitirá facturar con una anterioridad de hasta 10 días, si no has emitido ningún comprobante con fecha posterior a esa.
   * Para actividades relacionadas a la comercialización de bienes,  el plazo es de 5 días hacia atrás, si no has emitido ningún comprobante con fecha posterior a esa.
 
 
@@ -314,7 +332,7 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 
     Para garantizar la precisión fiscal, aplicamos el método de redondeo "Round half even" (redondeo bancario), siguiendo estrictamente los lineamientos de ARCA.
 
-    En el siguiente artículo sobre [ajustes, redondeos y precios sin IVA](https://ayuda.tusfacturas.app/es/articles/12548047-redondeos-ajustes-y-precios-sin-iva) te explicamos cómo funciona mediante un ejemplo práctico.
+    En el siguiente artículo sobre [ajustes, redondeos y precios sin IVA](redondeos.md) te explicamos cómo funciona mediante un ejemplo práctico.
 * Siempre debes enviar los valores en positivo (mayor o igual a cero), nunca con valores negativos.
 * **TusFacturas.app NO válida la totalidad de los datos enviados como asi tampoco las sumatorias de los ítems que estas enviando para facturar. Es tu responsabilidad corroborar y validar éstos datos antes de enviarlos.**
 * **AFIP recibe únicamente totales**, no el detalle de los items que facturas, ya que para los comprobantes de tipo "A" , "B" , "C" y "M" , Factura de crédito electrónica, TusFacturas.app utiliza el método de facturación mediante webservice AFIP "WSFEv1" ( Factura electrónica sin detalle de productos ).
@@ -347,20 +365,6 @@ Cada ejemplo incluye los campos requeridos y opcionales, además de los valores 
 
 
 
-ERRORES
-
-* Revisa el código de estado HTTP: Confirma siempre que recibas una respuesta HTTP 200. Esto garantiza que tu solicitud llegó y fue procesada correctamente.
-* Valida el campo de error: Controla el campo `"error"` en la respuesta. Su valor será `"S"` si hubo un problema o `"N"` si la operación se realizó con éxito, y dentro de `"errores"` encontraras el detalle del error. En caso de error te recomendamos tener un campo de texto en amplio en tu base de datos, ya que los mismos pueden tener +255 caracteres cada uno.
-
-
-
-**RATE LIMIT y ABUSO DE RECURSOS**
-
-* RATE LIMIT: El código de estado HTTP: 429 indica que tu aplicación está excediendo el límite de solicitudes permitido por segundo. Esto se debe a las reglas de seguridad de nuestra plataforma, diseñadas para proteger la estabilidad del sistema.
-* ABUSO DE RECURSOS: Te recomendamos leer las "Facultades sancionatorias de la plataforma" desde los [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html)
-
-
-
 **CONCURRENCIA**
 
 * Espera la respuesta de la API antes de enviar la siguiente solicitud.
@@ -370,7 +374,7 @@ ERRORES
 
 **NUMERACIÓN**
 
-* La numeración es correlativa por punto de venta + Tipo de comprobante.
+* La numeración es correlativa por CUIT + punto de venta + Tipo de comprobante.
 
 
 
@@ -386,51 +390,21 @@ Mantener "doble contabilidad" o facturas no declaradas:\
 \- Pone en riesgo la continuidad de tu negocio
 {% endhint %}
 
-### 🔁 ¿Qué devuelve la API ARCA de TusFacturasAPP?
+***
 
-La **respuesta que recibís al emitir un comprobante electrónico** depende del **método de invocación** que elijas en la integración con la API de TusFacturasAPP.
-
-#### 📌 Modalidades de invocación y sus respuestas
-
-* **🕒 Envío instantáneo**\
-  Recibís inmediatamente la respuesta con todos los datos del comprobante autorizado por AFIP o ARCA. Ideal para integraciones en tiempo real.
-* **⏳ Envío asincrónico**\
-  La respuesta inicial solo confirma que el comprobante fue recibido para su procesamiento. Más tarde, cuando se autorice, **te notificamos por webhook** con la respuesta final y los datos fiscales completos.
-* **📦 Envío por lotes**\
-  Podés enviar varios comprobantes a la vez. Recibís una respuesta agrupada que incluye el resultado individual de cada comprobante (siempre sujeta al estado del servicio de AFIP/ARCA).
-
-### 📊 ¿Dónde puedo ver las ventas generadas?
-
-Desde la plataforma web de **TusFacturasAPP**, podés consultar y administrar fácilmente los comprobantes electrónicos emitidos. Accedé desde el panel principal a:
-
-* **Menú > Facturación > Mis ventas**: para ver todas las ventas ya emitidas.
-* **Menú > Facturación > Ventas programadas**: para consultar las ventas aún pendientes de emisión automática o manual.
-
-Desde estas secciones podrás **visualizar, filtrar, descargar o anular** los comprobantes emitidos, todo desde una única interfaz centralizada.
-
-
-
-### ✅ ¿Cómo verificar si un comprobante fue emitido correctamente en ARCA?
-
-Además del panel de TusFacturasAPP  y cuando estes en producción, también podés corroborar que un comprobante fue autorizado por **AFIP/ARCA** de forma oficial:
-
-1. Ingresando a la web de AFIP con tu **CUIT y clave fiscal**.
-2. Usando el servicio “**Mis Comprobantes**” en el menú de servicios habilitados. Contempla que ARCA pone a disposición la información al día anterior.
-3. Utilizando la herramienta oficial de [**Constatación de Comprobantes Electrónicos**](https://servicioscf.afip.gob.ar/publico/comprobantes/cae.aspx), donde podes ingresar el CUIT del emisor, tipo y número de comprobante. Conoce más desde la guía de [Constatación de comprobantes en AFIP.](https://ayuda.tusfacturas.app/es/articles/10844438-constatacion-de-comprobantes-en-afip)
-
-> 🧩 Esta verificación es útil para control fiscal o para mostrarle al cliente final que su comprobante fue validado correctamente.
->
->
-
-### Definición de datos a enviar para generar ventas:
+Definición de datos:
 
 ### Estructura del bloque: "Comprobante"
 
-<table><thead><tr><th width="237.1885936052475">Nombre del campo</th><th width="150.8396361895644" align="center">Es requerido?</th><th>Comentarios</th></tr></thead><tbody><tr><td>fecha</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo fecha. Formato esperado: dd/mm/aaaa. Ejemplo: 13/05/2018.  Si usas el metodo asincrónico, la fecha será el día que queres que se emita. Una vez emitido un comprobante (factura, nota de crédito o débito) en AFIP/ARCA con una fecha determinada, no podrás emitir otro comprobante del mismo punto de venta con una fecha anterior. Esta restricción es impuesta por AFIP/ARCA y no puede ser modificada, incluso mediante la emisión de notas de crédito o débito.</td></tr><tr><td>tipo</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfabético según <a href="../parametros/tablas-de-referencia.md#tipos-de-comprobantes">tabla de referencia de Tipos de comprobantes</a></td></tr><tr><td>operacion</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V</td></tr><tr><td>idioma</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico. Longitud 1 caracter. Indica el idioma en que se imprimira el PDF del comprobante. Valores Permitidos: 1 = Español, 2= Ingles</td></tr><tr><td>punto_venta</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico entero. Longitud máxima 5 digitos.</td></tr><tr><td>moneda</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico de 3 Digitos según <a href="../parametros/tablas-de-referencia.md#monedas">tabla de referencia de Monedas</a> .</td></tr><tr><td>cotizacion</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td><p>Número decimal con 3 lugares decimales. Representa el valor en pesos argentinos de una moneda extranjera. Se obtiene en tiempo real a través de nuestra API de cotización ARCA. </p><p>Si moneda = PES, la cotizacion debe ser siempre 1.</p><p>Si facturas en otra moneda, debes indicar un dato valido, ya que ARCA lo validara.</p><p>Ejemplo: 15.20. Solo aplicable a monedas distintas al peso argentino.</p></td></tr><tr><td>numero</td><td align="center">OPCIONAL</td><td>El numero del comprobante a generar. Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante contra AFIP. Si el nro de comprobante NO es enviado, traeremos la próxima numeración . Ejemplo: 4567</td></tr><tr><td>vencimiento</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo fecha, formato esperado: dd/mm/aaaa. </td></tr><tr><td>periodo_facturado_desde</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen productos y asi lo indiquen en la configuración de su CUIT+punto de venta. Obligatorio para quienes facturen Servicios o Productos y Servicios.</td></tr><tr><td>periodo_facturado_hasta</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen productos y así lo indiquen en la configuración de su CUIT+punto de venta.Obligatorio para quienes facturen Servicios o Productos y Servicios.</td></tr><tr><td>rubro</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico que no sale impreso en el pdf. Se utiliza para los reportes que brinda nuestra plataforma web y no es requerido por AFIP. Longitud máxima 255 caracteres. Indica el rubro al cual pertenecerá el comprobante. </td></tr><tr><td>rubro_grupo_contable</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico que no sale impreso en el pdf. Se utiliza para los reportes que brinda nuestra plataforma web y no es requerido por AFIP/ARCA. Longitud máxima 255 caracteres. Indica el grupo contable al que pertenece el rubro.  </td></tr><tr><td>abono</td><td align="center">OPCIONAL (Solo disponible para ventas)</td><td>Campo alfabético, longitud máxima 1 caracter. Valores permitidos S (si) o N (no). Indica si el comprobante a generar es un abono recurrente.</td></tr><tr><td>abono_frecuencia</td><td align="center"><mark style="color:purple;">REQUERIDO SOLO SI ENVIA ABONO</mark></td><td>Campo numerico sin decimales. Indica la frecuencia en meses con la que debe generarse la recurrencia del abono.</td></tr><tr><td>abono_hasta</td><td align="center"><mark style="color:purple;">REQUERIDO SOLO SI ENVIA ABONO</mark></td><td>Campo fecha (mm/yyyy). Longitud maxima 7. Indica el mes y año hasta el cual debe generarse el abono recurrente.</td></tr><tr><td>abono_actualiza_precios</td><td align="center"><mark style="color:purple;">REQUERIDO SOLO SI ENVIA ABONO</mark></td><td>Campo alfabético, longitud máxima 1 caracter. Valores permitidos S (si) o N (no). Indica si cada vez que se genera el abono, se actualiza los precios de los productos contra el precio actual de la lista de precios.</td></tr><tr><td><mark style="color:blue;">detalle</mark></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Lista de conceptos a facturar. <a href="referencia-api-afip-arca.md#estructura-de-detalle-de-conceptos">Objeto JSON</a>, según estructura que se detalla a continuación</td></tr><tr><td><mark style="color:blue;">fex</mark></td><td align="center"><mark style="color:purple;">REQUERIDO PARA COMPROBANTES E</mark></td><td>Solo para comprobantes de tipo E. Objeto JSON, según estructura detallada en: <a href="api-factura-electronica-afip-factura-electronica-afip-exportacion.md">Factura electronica de exportacion".</a></td></tr><tr><td>bonificacion</td><td align="center">OPCIONAL</td><td><p>Campo numérico positivo con 2 decimales. separador de decimales: punto. Indica el valor aplicado en concepto de bonificación sin IVA Ejemplo: 12.67. </p><p>Tener en cuenta para el cálculo que la bonificación se aplica sobre el primer subtotal SIN IVA (generalmente el del 21%) y se lo gravará con el importe de IVA que le corresponda.</p></td></tr><tr><td>leyenda_gral</td><td align="center">OPCIONAL</td><td><p>Campo alfanumérico. Longitud máxima 500 caracteres. Contenido opcional. Es una leyenda general / observación comercial, que saldrá impresa en el bloque central del PDF, al final del último producto. </p><p>Si queres que parte del texto salga en una linea nueva, agrega: #@# , si queres enviar el "%", en su lugar envía: #&#x26;#.</p><p>Ejemplo: Aplica plan 12 cuotas, con un 10#&#x26;# de interes.</p></td></tr><tr><td>comentario</td><td align="center">OPCIONAL</td><td>Campo alfanumerico, opcional. Longitud máxima: 255 caracteres. Éste campo no saldrá impreso en la factura.</td></tr><tr><td><mark style="color:blue;">tributos</mark></td><td align="center"><mark style="color:purple;">SOLO SI APLICA</mark></td><td>Objeto JSON, con la lista de percepciones y otros impuestos, según se detalla su estructura a continuación.</td></tr><tr><td>impuestos_internos</td><td align="center">OPCIONAL</td><td>Si envias impuestos internos en cada uno de los items, debes Indicar el valor monetario correspondiente a la sumatoria los impuestos internos detallados en cada uno de los items que incluis. Campo numérico positivo con 2 decimales. separador de decimales: punto. Ejemplo: 42.67</td></tr><tr><td>impuestos_internos_base</td><td align="center">OPCIONAL</td><td>Si envías impuestos internos en cada uno de los items, debes indicar la sumatoria de la base imponible sobre la cual se calcularon los impuestos internos. Campo numérico positivo con 2 decimales. separador de decimales: punto. Ejemplo: 42.67</td></tr><tr><td>impuestos_internos_alicuota</td><td align="center">OPCIONAL</td><td>La alícuota sobre la cual se calcularon los impuestos internos de cada uno de los items que incluiste. Por cada comprobante se permite una única alícuota de impuestos internos. Campo numérico positivo con 2 decimales. separador de decimales: punto. Ejemplo: 42.67</td></tr><tr><td>total</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico positivo con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos incluyendo IVA e impuestos. Ejemplo: 12452.67</td></tr><tr><td><mark style="color:blue;">comprobantes_asociados</mark></td><td align="center"><mark style="color:orange;">SOLO PARA NC O ND</mark></td><td>Lista de comprobantes asociados. Requerido únicamente para NC o ND de tipo A,B,C,M. <a href="referencia-api-afip-arca.md#estructura-de-comprobantes-asociados">Objeto JSON</a> Según estructura que se detalla a continuación</td></tr><tr><td><mark style="color:blue;">rg_especiales</mark></td><td align="center"><mark style="color:orange;">SOLO SI APLICA ALGUNA RG</mark></td><td>Lista de datos adicionales requeridos por AFIP, según la RG a la que aplique el comprobante. <a href="referencia-api-afip-arca.md#estructura-de-rg-especiales">Objeto JSON</a> Según estructura que se detalla a continuación</td></tr><tr><td>external_reference</td><td align="center"><mark style="color:purple;">SOLO PARA VENTAS ASINCRÓNICAS</mark></td><td><p>Dato alfanumérico de hasta 255 caracteres (solo se permiten letras, números, guión bajo y guión medio), que se utiliza para referenciar a éste comprobante, dentro de tu sistema. Es opcional, salvo que utilices el método de facturación asincrónico. </p><p><strong>El <code>external_reference</code> debe ser único en tu sistema.</strong> TusFacturasAPP no valida su unicidad y, dado que existen distintos flujos de trabajo según cada empresa, si envias el mismo <code>external_reference</code> más de una vez, la plataforma procesará cada solicitud sin realizar esta validación.</p></td></tr><tr><td><mark style="color:blue;">tags</mark></td><td align="center">OPCIONAL</td><td>Dato que no sale impreso en el PDF, solo para gestion interna ya que se visualiza en la consulta del comprobante desde la plataforma web. Objeto JSON, según estructura que se detalla a continuación.</td></tr><tr><td>datos_informativos</td><td align="center">OPCIONAL</td><td>Objeto JSON, según estructura que se detalla a continuación.</td></tr></tbody></table>
+Sirve para ventas y compras. En la columna "Requerido", **CONDICIONAL** significa que es obligatorio solo en el caso que indica el comentario.
+
+<table><thead><tr><th width="237.1885936052475">Nombre del campo</th><th width="150.8396361895644" align="center">Es requerido?</th><th>Comentarios</th></tr></thead><tbody><tr><td>fecha</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo fecha. Formato esperado: dd/mm/aaaa. Ejemplo: 13/05/2018.  Si usas el metodo asincrónico, la fecha será el día que queres que se emita. Una vez emitido un comprobante (factura, nota de crédito o débito) en AFIP/ARCA con una fecha determinada, no podrás emitir otro comprobante del mismo punto de venta con una fecha anterior. Esta restricción es impuesta por AFIP/ARCA y no puede ser modificada, incluso mediante la emisión de notas de crédito o débito.</td></tr><tr><td>tipo</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfabético según <a href="../parametros/tablas-de-referencia.md#tipos-de-comprobantes">tabla de referencia de Tipos de comprobantes</a></td></tr><tr><td>operacion</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico. Longitud 1 caracter. Indica si envia una factura de venta (V) o de compra (C). Valores Permitidos: V, C Ejemplo: V</td></tr><tr><td>idioma</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico. Longitud 1 caracter. Indica el idioma en que se imprimira el PDF del comprobante. Valores Permitidos: 1 = Español, 2= Ingles</td></tr><tr><td>punto_venta</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico entero. Longitud máxima 5 digitos.</td></tr><tr><td>moneda</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico de 3 Digitos según <a href="../parametros/tablas-de-referencia.md#monedas">tabla de referencia de Monedas</a> .</td></tr><tr><td>cotizacion</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td><p>Número decimal con 3 lugares decimales. Representa el valor en pesos argentinos de una moneda extranjera. Se obtiene en tiempo real a través de nuestra API de cotización ARCA. </p><p>Si moneda = PES, la cotizacion debe ser siempre 1.</p><p>Si facturas en otra moneda, debes indicar un dato valido, ya que ARCA lo validara.</p><p>Ejemplo: 15.20. Solo aplicable a monedas distintas al peso argentino.</p></td></tr><tr><td>numero</td><td align="center">OPCIONAL</td><td>El numero del comprobante a generar. Campo numérico entero. Longitud máxima 8 digitos. La numeración será validada internamente previa generación del comprobante contra AFIP. Si el nro de comprobante NO es enviado, traeremos la próxima numeración . Ejemplo: 4567</td></tr><tr><td>vencimiento</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo fecha, formato esperado: dd/mm/aaaa. </td></tr><tr><td>periodo_facturado_desde</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen productos y asi lo indiquen en la configuración de su CUIT+punto de venta. Obligatorio para quienes facturen Servicios o Productos y Servicios.</td></tr><tr><td>periodo_facturado_hasta</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo fecha. Formato esperado: dd/mm/aaaa. Opcional solo para quienes facturen productos y así lo indiquen en la configuración de su CUIT+punto de venta.Obligatorio para quienes facturen Servicios o Productos y Servicios.</td></tr><tr><td>rubro</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico que no sale impreso en el pdf. Se utiliza para los reportes que brinda nuestra plataforma web y no es requerido por AFIP. Longitud máxima 255 caracteres. Indica el rubro al cual pertenecerá el comprobante. </td></tr><tr><td>rubro_grupo_contable</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico que no sale impreso en el pdf. Se utiliza para los reportes que brinda nuestra plataforma web y no es requerido por AFIP/ARCA. Longitud máxima 255 caracteres. Indica el grupo contable al que pertenece el rubro.  </td></tr><tr><td>abono</td><td align="center">OPCIONAL (Solo disponible para ventas)</td><td>Campo alfabético, longitud máxima 1 caracter. Valores permitidos S (si) o N (no). Indica si el comprobante a generar es un abono recurrente.</td></tr><tr><td>abono_frecuencia</td><td align="center"><mark style="color:purple;">REQUERIDO SOLO SI ENVIA ABONO</mark></td><td>Campo numerico sin decimales. Indica la frecuencia en meses con la que debe generarse la recurrencia del abono.</td></tr><tr><td>abono_hasta</td><td align="center"><mark style="color:purple;">REQUERIDO SOLO SI ENVIA ABONO</mark></td><td>Campo fecha (mm/yyyy). Longitud maxima 7. Indica el mes y año hasta el cual debe generarse el abono recurrente.</td></tr><tr><td>abono_actualiza_precios</td><td align="center"><mark style="color:purple;">REQUERIDO SOLO SI ENVIA ABONO</mark></td><td>Campo alfabético, longitud máxima 1 caracter. Valores permitidos S (si) o N (no). Indica si cada vez que se genera el abono, se actualiza los precios de los productos contra el precio actual de la lista de precios.</td></tr><tr><td><mark style="color:blue;">detalle</mark></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Lista de conceptos a facturar. <a href="referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-de-detalle-de-conceptos">Objeto JSON</a>, según estructura que se detalla a continuación</td></tr><tr><td><mark style="color:blue;">fex</mark></td><td align="center"><mark style="color:purple;">REQUERIDO PARA COMPROBANTES E</mark></td><td>Solo para comprobantes de tipo E. Objeto JSON, según estructura detallada en: <a href="api-factura-electronica-afip-factura-electronica-afip-exportacion.md">Factura electronica de exportacion".</a></td></tr><tr><td>bonificacion</td><td align="center">OPCIONAL</td><td><p>Campo numérico positivo con 2 decimales. separador de decimales: punto. Indica el valor aplicado en concepto de bonificación sin IVA Ejemplo: 12.67. </p><p>Tener en cuenta para el cálculo que la bonificación se aplica sobre el primer subtotal SIN IVA (generalmente el del 21%) y se lo gravará con el importe de IVA que le corresponda.</p></td></tr><tr><td>leyenda_gral</td><td align="center">OPCIONAL</td><td><p>Campo alfanumérico. Longitud máxima 500 caracteres. Contenido opcional. Es una leyenda general / observación comercial, que saldrá impresa en el bloque central del PDF, al final del último producto. </p><p>Si queres que parte del texto salga en una linea nueva, agrega: #@# , si queres enviar el "%", en su lugar envía: #&#x26;#.</p><p>Ejemplo: Aplica plan 12 cuotas, con un 10#&#x26;# de interes.</p></td></tr><tr><td>comentario</td><td align="center">OPCIONAL</td><td>Campo alfanumerico, opcional. Longitud máxima: 255 caracteres. Éste campo no saldrá impreso en la factura.</td></tr><tr><td><mark style="color:blue;">tributos</mark></td><td align="center"><mark style="color:purple;">SOLO SI APLICA</mark></td><td>Objeto JSON, con la lista de percepciones y otros impuestos, según se detalla su estructura a continuación.</td></tr><tr><td>impuestos_internos</td><td align="center">OPCIONAL</td><td>Si envias impuestos internos en cada uno de los items, debes Indicar el valor monetario correspondiente a la sumatoria los impuestos internos detallados en cada uno de los items que incluis. Campo numérico positivo con 2 decimales. separador de decimales: punto. Ejemplo: 42.67</td></tr><tr><td>impuestos_internos_base</td><td align="center">OPCIONAL</td><td>Si envías impuestos internos en cada uno de los items, debes indicar la sumatoria de la base imponible sobre la cual se calcularon los impuestos internos. Campo numérico positivo con 2 decimales. separador de decimales: punto. Ejemplo: 42.67</td></tr><tr><td>impuestos_internos_alicuota</td><td align="center">OPCIONAL</td><td>La alícuota sobre la cual se calcularon los impuestos internos de cada uno de los items que incluiste. Por cada comprobante se permite una única alícuota de impuestos internos. Campo numérico positivo con 2 decimales. separador de decimales: punto. Ejemplo: 42.67</td></tr><tr><td>total</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico positivo con 2 decimales. separador de decimales: punto. Indica el valor monetario de la sumatoria de conceptos incluyendo IVA e impuestos. Ejemplo: 12452.67</td></tr><tr><td><mark style="color:blue;">comprobantes_asociados</mark></td><td align="center"><mark style="color:orange;">SOLO PARA NC O ND</mark></td><td>Lista de comprobantes asociados. Requerido únicamente para NC o ND de tipo A,B,C,M. <a href="referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-de-comprobantes-asociados">Objeto JSON</a> Según estructura que se detalla a continuación</td></tr><tr><td><mark style="color:blue;">rg_especiales</mark></td><td align="center"><mark style="color:orange;">SOLO SI APLICA ALGUNA RG</mark></td><td>Lista de datos adicionales requeridos por AFIP, según la RG a la que aplique el comprobante. <a href="referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-de-rg-especiales">Objeto JSON</a> Según estructura que se detalla a continuación</td></tr><tr><td>external_reference</td><td align="center"><mark style="color:purple;">SOLO PARA VENTAS ASINCRÓNICAS</mark></td><td><p>Dato alfanumérico de hasta 255 caracteres (solo se permiten letras, números, guión bajo y guión medio), que se utiliza para referenciar a éste comprobante, dentro de tu sistema. Es opcional, salvo que utilices el método de facturación asincrónico. </p><p><strong>El <code>external_reference</code> debe ser único en tu sistema.</strong> TusFacturasAPP no valida su unicidad y, dado que existen distintos flujos de trabajo según cada empresa, si envias el mismo <code>external_reference</code> más de una vez, la plataforma procesará cada solicitud sin realizar esta validación.</p></td></tr><tr><td><mark style="color:blue;">tags</mark></td><td align="center">OPCIONAL</td><td>Dato que no sale impreso en el PDF, solo para gestion interna ya que se visualiza en la consulta del comprobante desde la plataforma web. Objeto JSON, según estructura que se detalla a continuación.</td></tr><tr><td>datos_informativos</td><td align="center">OPCIONAL</td><td>Objeto JSON, según estructura que se detalla a continuación.</td></tr></tbody></table>
 
 ### Estructura del bloque: "Cliente" y "Proveedor"
 
-Para poder generar el comprobante debes enviar un detalle de todos los datos  según se informa a continuación. Si vas  a enviar una venta, debes enviar el bloque "cliente", en cambio si vas a enviar una compra para almacenar en nuestra plataforma, debes enviar el bloque "proveedor".
+El bloque va en la raíz del JSON, al mismo nivel que `comprobante`. Si enviás una venta, se llama `cliente`; si enviás una compra para registrarla en nuestra plataforma, se llama `proveedor`. Los campos son los mismos.
+
+Venta:
 
 ```json
 comprobante: {
@@ -478,8 +452,6 @@ comprobante: {
 }
 ```
 
-
-
 #### Información de los campos a enviar:
 
 <table data-header-hidden><thead><tr><th align="center">NOMBRE DEL CAMPO</th><th width="144.66666666666669" align="center">REQUERIDO?</th><th>INFO</th></tr></thead><tbody><tr><td align="center"><strong><code>documento_tipo</code></strong></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Valores Permitidos: <strong>CUIT , DNI, PASAPORTE, OTRO</strong><br><strong>Ejemplo: DNI</strong></td></tr><tr><td align="center"><code>documento_nro</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico, sin puntos ni guiones. Max 11 dígitos.<br><strong>Ejemplo: 30111222334</strong></td></tr><tr><td align="center"><code>razon_social</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Pirulo S.A</strong></td></tr><tr><td align="center"><code>email</code></td><td align="center">OPCIONAL</td><td>Campo alfanumérico. Longitud máxima 255 caracteres. Máximo 15 direcciones separadas por coma.<br><strong>Ejemplo: tusfacturas@vousys.com</strong></td></tr><tr><td align="center"><code>domicilio</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanumérico. Longitud máxima 255 caracteres. <br><strong>Ejemplo: Av. Santa Fe 123</strong></td></tr><tr><td align="center"><code>provincia</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico según <a href="../parametros/tablas-de-referencia.md#provincias">tabla de referencia(*)</a>.<br><strong>Ejemplo: 2</strong></td></tr><tr><td align="center"><code>envia_por_mail</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Indica Si/No para el envio del comprobante por e-mail. Valores Permitidos: <strong>S , N</strong><br><strong>Ejemplo: S</strong></td></tr><tr><td align="center"><code>condicion_pago</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td><p>Campo numérico según <a href="../parametros/tablas-de-referencia.md#condiciones-de-venta">tabla de referencia</a>. Si envias la condición de pago "Otra" (214) se debe enviar obligatoriamente el campo <strong>condicion_pago_otra</strong> " con la descripción de dicha condición.</p><ul><li><strong>Ejemplo: "211"</strong></li></ul><p><strong>Éste dato  informativo sale impreso en el PDF</strong>  </p></td></tr><tr><td align="center">condicion_pago_otra</td><td align="center">OPCIONAL</td><td>Campo alfanumérico. Longitud máxima 100 caracteres. <strong>Ejemplo: Cobrado en ventanilla.</strong></td></tr><tr><td align="center"><code>condicion_iva</code></td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td><p>Campo numérico que indica la condición de IVA, según <a href="../parametros/tablas-de-referencia.md#condiciones-frente-al-iva">tabla de referencia Condiciones ante el IVA</a></p><p><span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span> Si envias una condición que no es válida se asignará automáticamente "CF" (Consumidor final).</p></td></tr><tr><td align="center">condicion_iva_operacion</td><td align="center">OPCIONAL</td><td>Éste campo entra en vigencia a partir del 15/04/2025 mediante la RG 5616/2024 de AFIP/ARCA. Deberá consignarse la condición frente al IVA en que se realiza la operación. <span data-gb-custom-inline data-tag="emoji" data-code="26a0">⚠️</span> De no enviarse éste campo se enviará lo que se especifique en el campo "condicion_iva". De enviarse un valor inexistente se asignará  automáticamente "CF" (Consumidor final) </td></tr><tr><td align="center">codigo</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo alfanúmerico de hasta 20 caracteres para referenciar a ese cliente. Éste dato debería ser único dentro de tu plataforma pero TusFacturasAPP  no realiza dicha verificación. Si existiera +1 con el mismo código podrías sufrir problemas al actualizar los datos. <strong>Ejemplo: "CLI2394"</strong></td></tr><tr><td align="center">rg5329</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td><p>Este campo te permite indicar si tu cliente es pasible de <a href="../faqs-or-rg5329.md">percepción IVA RG5329</a>.</p><p>Valores posibles: "S" o "N".</p></td></tr><tr><td align="center">reclama_deuda</td><td align="center">OPCIONAL</td><td>Indica SI/No para el envio del <a href="https://www.tusfacturas.app/caracteristicas-de-tus-facturas-electronica-clientes.html">recordatorio de pago</a> al cliente. Opciones validas: "S" o "N"</td></tr><tr><td align="center">reclama_deuda_dias</td><td align="center">OPCIONAL</td><td>En caso de haber habilitado el recordatorio de pago atrasado, se debe indicar cuantos dias pasados la fecha de vencimiento del comprobante se desea comenzar a recordar el pago adeudado. Se espera recibir un valor numerico indicando el número de días)</td></tr><tr><td align="center">reclama_deuda_repite_dias</td><td align="center">OPCIONAL</td><td>En caso de haber habilitado del recordatorio de pago atrasado, se debe indicar la frecuencia de cada cuantos dias se desea volver a recordar. Se espera recibir un valor numérico, indicando el número de días.</td></tr><tr><td align="center">nombre_fantasia</td><td align="center">OPCIONAL</td><td>Campo alfanumérico. Longitud máxima 255 caracteres.<br><strong>Ejemplo: Pirulo y Amigos</strong></td></tr></tbody></table>
@@ -498,14 +470,14 @@ comprobante: {
 
 ### Estructura del bloque: "Detalle de conceptos"
 
-El detalle de conceptos se compone de una lista de cada uno de los productos o servicios que vas a facturar. Cada producto o servicio único que incluyas en tu cmoprobante se considera un concepto diferente. Por ejemplo, si vendes 10 unidades de un producto, solo contarían como un concepto. **El límite máximo de conceptos por comprobante es de 130**.
+El detalle es la lista de productos o servicios que vas a facturar. Va dentro de `comprobante`. Cada producto o servicio único que incluyas en tu comprobante se considera un concepto diferente: por ejemplo, si vendés 10 unidades de un producto, cuenta como un solo concepto. **El límite máximo de conceptos por comprobante es de 130.**
 
 {% hint style="info" %}
 Nuestra plataforma gestiona los precios unitarios de productos y servicios con 3 decimales, mientras que los totales se calculan con 2 decimales. Debido a esto, pueden surgir pequeñas diferencias de facturación en aquellas empresas que trabajan con precios finales (IVA incluido).
 
 Para garantizar la precisión fiscal, aplicamos el método de redondeo "Round half even" (redondeo bancario), siguiendo estrictamente los lineamientos de ARCA.
 
-En el siguiente artículo sobre [ajustes, redondeos y precios sin IVA](https://ayuda.tusfacturas.app/es/articles/12548047-redondeos-ajustes-y-precios-sin-iva) te explicamos cómo funciona mediante un ejemplo práctico.
+En el siguiente artículo sobre [ajustes, redondeos y precios sin IVA](redondeos.md) te explicamos cómo funciona mediante un ejemplo práctico.
 {% endhint %}
 
 La estructura **de la lista de conceptos** a enviar es la siguiente:
@@ -563,21 +535,22 @@ Los campos que debes enviar en cada concepto de la lista del bloque "detalle" so
 
 ### Estructura de "producto"
 
-Cada producto o servicio que envies sera almacenado en la lista de precios que se mantiene en nuestra plataforma, ademas de generar el comprobante requerido. A continuación podrás conocer que datos debes enviar:
+Va dentro de cada ítem de `detalle` (ver el ejemplo anterior). Cada producto o servicio que envíes se almacena en la lista de precios de nuestra plataforma, además de generar el comprobante.
 
-<pre class="language-json"><code class="lang-json">{
-    "descripcion":     "HUEVOS",
-<strong>    "unidad_bulto":    "30",
-</strong>    "lista_precios":   "MAPPLETS",
-    "codigo":          "MPH",
-    "precio_unitario_sin_iva":"50",
-    "alicuota":      "10.5",
-    "unidad_medida": "7",
-    "impuestos_internos_alicuota": 0,
-    "actualiza_precio": "N",
-    "rg5329": "N"
+```json
+"producto": {
+  "descripcion": "HUEVOS",
+  "unidad_bulto": "30",
+  "lista_precios": "MAPPLETS",
+  "codigo": "MPH",
+  "precio_unitario_sin_iva": "50",
+  "alicuota": "10.5",
+  "unidad_medida": "7",
+  "impuestos_internos_alicuota": 0,
+  "actualiza_precio": "N",
+  "rg5329": "N"
 }
-</code></pre>
+```
 
 
 
@@ -619,7 +592,7 @@ Los comprobantes asociados son requeridos a la hora de emitir una Nota de crédi
 
 ### Estructura del bloque: "tributos"&#x20;
 
-Cuando debas enviar percepciones de IVA o Ingresos Brutos (IIBB), incluye un array con la siguiente estructura dentro del bloque "comprobante". El límite es de 26 percepciones por comprobante.
+Cuando debas enviar percepciones de IVA o Ingresos Brutos (IIBB), incluí una lista con la siguiente estructura dentro del bloque `comprobante`. El límite es de 26 percepciones por comprobante
 
 Ejemplo:&#x20;
 
@@ -662,9 +635,7 @@ Ejemplo:&#x20;
 
 ### Estructura de "RG Especiales"&#x20;
 
-Si la empresa, opera bajo alguna RG particular, se deberá enviar un array con los datos adicionales, según se especifican en la [tabla de Datos adicionales para RG Especiales](../parametros/tablas-de-referencia.md#datos-opcionales-para-rg-especiales).
-
-Ten en cuenta que solo podrás aplicar a un solo [regimen](../parametros/tablas-de-referencia.md#datos-opcionales-para-rg-especiales) , por cada comprobante que emitas.
+Si la empresa opera bajo alguna RG particular, se debe enviar dentro de `comprobante` un bloque con los datos adicionales, según se especifican en la [tabla de Datos adicionales para RG Especiales](../parametros/tablas-de-referencia.md#datos-opcionales-para-rg-especiales). Solo podés aplicar un [regimen](../parametros/tablas-de-referencia.md#datos-opcionales-para-rg-especiales)  por comprobante.
 
 {% code title="JSON" %}
 ```
@@ -686,7 +657,7 @@ comprobante: {
 ```
 {% endcode %}
 
-#### Datos a tener en cuenta:
+Datos a tener en cuenta:
 
 {% hint style="info" %}
 * TusFacturasAPP no realiza validaciones sobre éstos campos. Todas las validaciones son realizadas por la propia AFIP en caso que corresponda.
@@ -699,11 +670,7 @@ comprobante: {
 
 ### Estructura de "pagos"    <a href="#estructuradepagos" id="estructuradepagos"></a>
 
-Si quisieras reflejar junto al envío del comprobante, el pago parcial o total del mismo, debes enviar un bloque, dentro del comprobante, llamado "**pagos**" con la estructura como se detalla a continuación. Dado que la plataforma gestiona la contabilidad en las cuentas corrientes en pesos, el importe que envies debe corresponder al total de tu comprobante en pesos argentinos.
-
-**Éste bloque es opcional.**
-
-Los pagos que informes, se usan solo para la gestión interna de nuestra plataforma y tu cliente no lo verá reflejado en el PDF del comprobante que emitiste, ya que el único objetivo que tiene éste bloque es nutrir la cuenta corriente de tu cliente, con el pago realizado.
+**Este bloque es opcional.** Va dentro de `comprobante` y sirve para registrar el pago parcial o total del comprobante en la cuenta corriente de tu cliente. No sale en el PDF. Como la plataforma lleva las cuentas corrientes en pesos, el importe que envíes debe corresponder al total del comprobante en pesos argentinos.
 
 #### Datos a tener en cuenta:
 
@@ -713,11 +680,11 @@ Los pagos que informes, se usan solo para la gestión interna de nuestra platafo
 * El total de los pagos **NO** debe superar el importe total del comprobante, pero si puede ser inferior, para indicar que el comprobante recibió un pago parcial.
 {% endhint %}
 
-#### Información de los campos que componen el **bloque "pagos"**
+Información de los campos que componen el **bloque "pagos"**
 
 <table><thead><tr><th>Nombre del campo</th><th width="141.66666666666669" align="center">REQUERIDO</th><th>Detalle</th></tr></thead><tbody><tr><td>formas_pago</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>array con multiples items, según estructura que se detalla a continuación</td></tr><tr><td>total</td><td align="center"><mark style="color:purple;">REQUERIDO</mark></td><td>Campo numérico positivo con 2 decimales. separador de decimales: punto<br><strong>Ejemplo: 645.67</strong></td></tr></tbody></table>
 
-#### Información de los campos que componen el **array de  "formas\_pago"**
+Información de los campos que componen el **array de  "formas\_pago"**
 
 | Nombre del campo |                   Requerido                  | Detalle                                                                                                                                                                                 |
 | ---------------- | :------------------------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -732,23 +699,19 @@ comprobante: {
    .... 
    "pagos" : 
    {
-	"formas_pago" : [ 
-			{"descripcion" : "VISA DB", "importe" : 0.6},
-			{"descripcion" : "MercadoPago", "importe" : 50}
-			], 
-	"total": 50.6
+   	"total": 50.6,
+	   "formas_pago" : [ 
+			            {"descripcion" : "VISA DB", "importe" : 0.6},
+			            {"descripcion" : "MercadoPago", "importe" : 50}
+			      ]
    }, 
  }
 ```
 {% endcode %}
 
-
-
 ### Estructura de "tags"
 
-Si quisieras enviar tags para agregar a tus comprobantes, a modo de etiqueta informativa, debes enviar un array con el nombre de cada una de éstas.
-
-Cada tag, debe ser un campo alfanumérico de hasta 255 caracteres y puedes enviar hasta 50 tags por comprobante.
+Etiquetas informativas para tus comprobantes. Van dentro de `comprobante`, como una lista de textos. Cada tag es un campo alfanumérico de hasta 255 caracteres, y podés enviar hasta 50 tags por comprobante.
 
 #### Ejemplo del JSON a enviar.
 
@@ -763,7 +726,7 @@ comprobante: {
 
 ### Estructura de "datos\_informativos"
 
-Dentro de este bloque deberá enviarse según corresponda, la información requerida por AFIP/ARCA en carácter informativo. Éstos datos no tienen ninguna relevancia dentro de la gestión de TusFacturasAPP.
+Va dentro de `comprobante`. Contiene, según corresponda, información que ARCA requiere con carácter informativo. Estos datos no tienen relevancia dentro de la gestión de TusFacturasAPP.
 
 #### Ejemplo del JSON a enviar.
 
@@ -778,10 +741,104 @@ comprobante: {
 ```
 {% endcode %}
 
-#### Información de los campos que componen el **bloque "datos\_informativos"**
+Información de los campos que componen el **bloque "datos\_informativos"**
 
 <table><thead><tr><th>Nombre del campo</th><th align="center">Requerido</th><th>Detalle</th></tr></thead><tbody><tr><td><pre><code>paga_misma_moneda
 </code></pre></td><td align="center">OPCIONAL</td><td><p>Éste dato entra en vigencia el 15/04/2025 según la RG5616/2024 y deberá enviarse "N" para indicar "No informa" o "S" para indicar "Si". </p><p>En caso de enviarse con el valor "S", la moneda enviada debe ser diferente al Peso Argentino y la cotización debe ser la oficial provista por AFIP/ARCA desde <a href="../consultas-varias-a-servicios-afip-arca/cotizacion-monedas-afip.md">éste método</a></p></td></tr></tbody></table>
+
+***
+
+### Qué devuelve la API
+
+La forma de la respuesta depende del modo de envío:
+
+* **Instantáneo:** recibís inmediatamente la respuesta con todos los datos del comprobante autorizado por ARCA.
+* **Asincrónico:** la respuesta inicial solo confirma que el comprobante fue recibido para su procesamiento. Cuando se autoriza, te notificamos por webhook con la respuesta final y los datos fiscales completos.
+* **Por lotes:** recibís una respuesta agrupada con el resultado de cada comprobante (siempre sujeta al estado del servicio de ARCA).
+
+Cada página de modo de envío muestra su JSON de respuesta. La descripción de cada campo está en la consulta simple.
+
+**Errores**
+
+* Revisá el código de estado HTTP: confirmá siempre que recibas una respuesta HTTP 200. Esto garantiza que tu solicitud llegó y fue procesada.
+* Validá el campo `error`: su valor es `"S"` si hubo un problema o `"N"` si la operación se realizó con éxito. Dentro de `errores` encontrás el detalle. Te recomendamos guardar los errores en un campo de texto amplio en tu base de datos, ya que pueden tener más de 255 caracteres cada uno.
+
+**CAE (Código de Autorización Electrónico)**
+
+* El CAE es el código que otorga ARCA como confirmación de la creación del comprobante. Es un dato importante para almacenar.
+* El CAE tiene fecha de vencimiento, que se devuelve en formato dd/mm/aaaa.
+* Por cuestiones de compatibilidad, el número de CAE se envía como texto con un espacio al final, que te sugerimos eliminar de tu lado.
+
+**Código QR y código de barras**
+
+* Cuando la respuesta es exitosa, obtenés en `afip_qr` el texto necesario para armar el código QR, por si generás el PDF de tu lado.
+* Por cuestiones de compatibilidad, el texto de `afip_qr` se envía con un espacio al final, que te sugerimos eliminar de tu lado.
+* El campo `afip_codigo_barras` dejó de enviarse a partir del 01/01/2024.
+
+**PDF**
+
+* La URL del PDF que recibís es temporal: solo sirve para el día en que la consultás.
+* La URL del ticket se devuelve para todos los modelos de PDF que selecciones desde tu punto de venta, con excepción del modelo "1.1 - Modelo Viejo".
+* Descargá toda la información junto con el PDF y almacenala en tu plataforma: si tu cuenta o suscripción no están vigentes, no vas a poder volver a obtenerlo. ARCA no genera archivos PDF, así que tampoco vas a poder obtenerlo desde ahí.
+* A partir del 01/07/2021, todo comprobante A que se emita a un monotributista debe llevar la leyenda: "_El crédito fiscal discriminado en el presente comprobante, sólo podrá ser computado a efectos del Régimen de Sostenimiento e Inclusión Fiscal para Pequeños Contribuyentes de la Ley Nº 27.618_". **Este texto no debe enviarse**: sale impreso automáticamente en los PDF que genera nuestra plataforma.
+
+**Observaciones de ARCA**
+
+* El campo `afip_observaciones` contiene las observaciones que ARCA envía sobre esa operación, ya que un comprobante puede ser aprobado y aun así observado. Te sugerimos almacenar esta información y revisarla.
+
+**Micrositios**
+
+* Las URL de los micrositios solo se devuelven con datos si están habilitados en tu cuenta. Estas URL no cambian y le permiten a tu cliente acceder a un portal neutro para descargar la factura y/o consultar su historial de facturas emitidas.
+* Para configurar los micrositios, ingresá a la plataforma web: Menú > Mi espacio de trabajo > Mis micrositios.
+
+***
+
+### Límites de uso
+
+**Rate limit y abuso de recursos**
+
+*   **Rate limit:** El código de estado HTTP **429 (Too Many Requests)** indica que tu aplicación está superando el límite de solicitudes permitido por nuestra API.
+
+    Para proteger la estabilidad del servicio y garantizar un uso equitativo de los recursos entre todos los usuarios, la API cuenta con un límite de **25 solicitudes cada 10 segundos**.
+
+    Si tu integración supera este límite, recibirás un bloqueo temporal en lugar de la respuesta habitual de la API.
+
+    Tené en cuenta que este error no está relacionado con el procesamiento del comprobante ni con su contenido, sino con el control del volumen de solicitudes. El bloqueo se levanta automáticamente una vez que el tráfico vuelve a estar dentro de los límites permitidos.
+
+    **Te recomendamos revisar tu integración y regular la frecuencia de los envíos**, evitando realizar solicitudes simultáneas o reintentos consecutivos.
+* **Abuso de recursos:** te recomendamos leer las "Facultades sancionatorias de la plataforma" en los [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html).
+
+**Concurrencia**
+
+* Esperá la respuesta de la API antes de enviar la siguiente solicitud.
+* Si el proceso es paralelo, incorporá un delay mínimo (por ejemplo, 100 ms) entre las peticiones para evitar que ingresen en el mismo segundo.
+
+***
+
+### Ver y verificar los comprobantes emitidos
+
+**¿Dónde puedo ver las ventas generadas?**
+
+Desde la plataforma web de TusFacturasAPP:
+
+* **Menú > Facturación > Mis ventas**: todas las ventas ya emitidas.
+* **Menú > Facturación > Ventas programadas**: las ventas pendientes de emisión automática o manual.
+
+Desde estas secciones podés visualizar, filtrar, descargar o anular los comprobantes emitidos.
+
+
+
+**¿Cómo verificar en ARCA si un comprobante fue emitido?**
+
+Cuando estés en producción, también podés corroborar que un comprobante fue autorizado por ARCA de forma oficial:
+
+1. Ingresando a la web de ARCA con tu **CUIT y clave fiscal**.
+2. Usando el servicio "**Mis Comprobantes**" en el menú de servicios habilitados. Tené en cuenta que ARCA pone a disposición la información al día anterior.
+3. Usando la herramienta oficial de [**Constatación de Comprobantes Electrónicos**](https://servicioscf.afip.gob.ar/publico/comprobantes/cae.aspx), donde ingresás el CUIT del emisor, tipo y número de comprobante. Conocé más en la guía de [Constatación de comprobantes en AFIP](https://ayuda.tusfacturas.app/es/articles/10844438-constatacion-de-comprobantes-en-afip).
+
+Esta verificación es útil para control fiscal o para mostrarle al cliente final que su comprobante fue validado.
+
+***
 
 ### 💡 Soporte y Recursos
 

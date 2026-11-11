@@ -383,7 +383,7 @@ La API soporta todos los tipos de comprobantes AFIP:
 * **Comprobantes de Exportación**
 * **Facturación Electrónica MiPyME (FCE)**
 
-[Ver documentación completa de tipos de comprobantes](../api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md)
+[Ver documentación completa de tipos de comprobantes](../api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md)
 
 ***
 

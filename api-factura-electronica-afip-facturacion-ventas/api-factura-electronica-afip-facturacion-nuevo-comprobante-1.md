@@ -21,7 +21,7 @@ La **API de ARCA para facturación electrónica individual y asincrónica de Tus
 {% step %}
 ### Envias un request a TusFacturasAPP
 
-Tu plataforma debe enviar el [`request`](referencia-api-afip-arca.md) del comprobante a TusFacturasAPP sin incluir el número de factura. Si es válido, el comprobante se añadirá a una cola de procesamiento.
+Tu plataforma debe enviar el [`request`](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md) del comprobante a TusFacturasAPP sin incluir el número de factura. Si es válido, el comprobante se añadirá a una cola de procesamiento.
 {% endstep %}
 
 {% step %}
@@ -78,13 +78,13 @@ Consultá nuestra [guía completa **“Referencia API AFIP ARCA”**](https://de
 
 **Body:**
 
-| Campo       | Tipo   | Descripción                                                                                                                                     |
-| ----------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| usertoken   | string | Tus credenciales de acceso                                                                                                                      |
-| apitoken    | string | Tus credenciales de acceso                                                                                                                      |
-| apikey      | string | Tus credenciales de acceso                                                                                                                      |
-| comprobante | object | Estructura de “[comprobante](referencia-api-afip-arca.md#estructura-del-bloque-comprobante)” según se informa en el apartado de facturación     |
-| cliente     | object | Estructura de “[cliente](referencia-api-afip-arca.md#estructura-del-bloque-cliente-y-proveedor)” según se informa en el apartado de facturación |
+| Campo       | Tipo   | Descripción                                                                                                                                                                        |
+| ----------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| usertoken   | string | Tus credenciales de acceso                                                                                                                                                         |
+| apitoken    | string | Tus credenciales de acceso                                                                                                                                                         |
+| apikey      | string | Tus credenciales de acceso                                                                                                                                                         |
+| comprobante | object | Estructura de “[comprobante](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-del-bloque-comprobante)” según se informa en el apartado de facturación     |
+| cliente     | object | Estructura de “[cliente](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-del-bloque-cliente-y-proveedor)” según se informa en el apartado de facturación |
 
 El bloque `comprobante` debe incluir el campo `external_reference`:
 

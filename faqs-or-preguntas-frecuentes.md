@@ -12,7 +12,7 @@ Si. Podes renovar le plan API DEV las veces que necesites desde la plataforma we
 
 ### **¿La API de TusFacturasAPP tiene rate limit?**
 
-Sí. La API cuenta con un rate limit  de <mark style="color:purple;">**25 requests en 10 segundos**</mark>  para proteger la estabilidad del servicio y garantizar un uso equitativo entre todos los usuarios.  Si tu integración supera el límite, vas a recibir un error de bloqueo temporal en lugar de la respuesta habitual de la API. Ese error no proviene del procesamiento de tu comprobante, sino del control de tráfico, y se resuelve solo una vez que baja el volumen de requests.
+Sí. Conocé más sobre los [Límites de uso](api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#limites-de-uso).
 
 ### En la modalidad instantánea: ¿Puedo enviar la external reference? ¿Queda guardada?
 

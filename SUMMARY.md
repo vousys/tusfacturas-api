@@ -50,7 +50,7 @@
 * [🐞 ¿Cómo puedo debugear?](como-puedo-debugear.md)
 * [🚀 ¿Cómo paso a producción?](como-paso-a-produccion.md)
 * [📗 Documentación API Facturación AFIP/ARCA](api-factura-electronica-afip-facturacion-ventas/README.md)
-  * [Referencia API AFIP ARCA](api-factura-electronica-afip-facturacion-ventas/referencia-api-afip-arca.md)
+  * [Referencia de la API: campos para crear comprobantes en ARCA](api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md)
   * [Facturación instantánea e individual](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante.md)
   * [Facturación asincrónica e  individual](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md)
   * [Facturación instantánea por Lotes](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-api-facturacion-por-lotes.md)

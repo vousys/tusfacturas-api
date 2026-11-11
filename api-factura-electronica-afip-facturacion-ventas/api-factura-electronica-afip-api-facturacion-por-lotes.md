@@ -41,7 +41,7 @@ Es necesario leer primero, la documentación de "[Facturación](./)", para conoc
 
 ### ¿Cómo generar una venta por lotes instantáneos?
 
-Consulta nuestra guía detallada "[Referencia API AFIP ARCA](referencia-api-afip-arca.md)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
+Consulta nuestra guía detallada "[Referencia API AFIP ARCA](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md)" para conocer a profundidad el servicio, los requerimientos de cada solicitud y los datos específicos que debes enviar para generar nuevos comprobantes de venta. Nuestra documentación completa y ejemplos de código te facilitarán una integración rápida y eficiente de la facturación electrónica en tu sistema actual.
 
 {% hint style="success" %}
 <mark style="color:green;">`POST`</mark>    `https://www.tusfacturas.app/app/api/v2/facturacion/`<mark style="color:purple;">**`lotes`**</mark>
@@ -68,7 +68,7 @@ Formato esperado: JSON
 
 #### Estructura del bloque: "requests"
 
-"requests" debe ser un array que contiene cada uno de los comprobantes a emitir, según se define en la [Referencia a la API de Facturación](referencia-api-afip-arca.md).
+"requests" debe ser un array que contiene cada uno de los comprobantes a emitir, según se define en la [Referencia a la API de Facturación](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md).
 
 {% hint style="info" %}
 **Datos a tener en cuenta**
