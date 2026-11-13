@@ -7,7 +7,11 @@ icon: magnifying-glass
 
 # Consulta avanzada: listar comprobantes por fecha, rango o external reference
 
-Devuelve una lista paginada de comprobantes, emitidos o en cola, que cumplen un criterio de búsqueda. Para un comprobante puntual del que sabés tipo, punto de venta y número, usá la [consulta simple](api-factura-electronica-afip-consulta-de-comprobantes.md).
+Devuelve una lista paginada de comprobantes, emitidos o en cola, que cumplen un criterio de búsqueda. Para un comprobante puntual del que sabes tipo, punto de venta y número, usá la [consulta simple](api-factura-electronica-afip-consulta-de-comprobantes.md).
+
+Podes consultar tus comprobantes todas las veces que necesites mientras tu suscripción se encuentre vigente. Esto aplica a todos los comprobantes, independientemente de su estado: programados, emitidos o rechazados.
+
+**La consulta de comprobantes no consume créditos adicionales.**
 
 #### Endpoint
 

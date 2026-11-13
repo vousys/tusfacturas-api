@@ -94,12 +94,12 @@ Cuando un comprobante se emite correctamente en modalidad individual e instantá
      "requiere_fec":   "NO ",    
      "vencimiento_cae":"07\/08\/2015",    
      "vencimiento_pago":"27\/08\/2015",    
+     "external_reference": "local-4861be",
      "comprobante_pdf_url": "https://www.dominio.com/url",
      "comprobante_ticket_url": "https://www.dominio.com/url",
      "afip_qr" : "https://www.afip.gob.ar/fe/qr/?p=eyJ2ZXIiOjEsImZlY2hhIjoiMjAyMC0xMS0xNSIsImN1aXQiOiIyNzI4NTA1MTQ2NiIsInB0b1Z0YSI6IjAwMDAzIiwidGlwb0NtcCI6MTEsIm5yb0NtcCI6IjAwMDAwMjQ5IiwiaW1wb3J0ZSI6IjAwMDAwMDAwMDAwMDEwMCIsIm1vbmVkYSI6IlBFUyIsImN0eiI6IjAwMDAwMDAwMDAwMDEwMDAwMDAiLCJ0aXBvRG9jUmVjIjo5OSwibnJvRG9jUmVjIjoiMCIsInRpcG9Db2RBdXQiOiJFIiwiY29kQXV0IjoiNzA0NjY4OTk1OTcwOTEifQ== "
      "afip_codigo_barras" : "12121212121006000300000000000000201811052 ",
-     "envio_x_mail": "S",
-     "external_reference":  "ABC123",
+     "envio_x_mail": "S", 
      "comprobante_nro": "0000123",
      "comprobante_tipo": "NOTA DE DEBITO B",
         "micrositios": {
@@ -163,7 +163,21 @@ En ocasiones, nuestro equipo técnico realiza tareas de mantenimiento programado
 
 **¿Puedo enviar la external reference? ¿Queda guardada?**
 
-Si, podes enviarla y queda guardada. Tambien vas a recibir un hook cuando se emita o se detecte error.
+Si, podes enviarla y queda guardada para que puedas realizar consultas por ésta external reference. Tambien vas a recibir un hook cuando se emita o se detecte error.
+
+#### ¿Qué sucede si ARCA autorizó el comprobante, pero la respuesta no llegó a TusFacturasAPP?
+
+En estos casos, primero verificá si el comprobante se creó correctamente en TusFacturasAPP. Si no figura en la plataforma, deberás reenviar la solicitud respetando **el mismo orden de procesamiento y exactamente los mismos datos que utilizaste en el envío original**.
+
+Esto es importante porque ARCA puede haber autorizado el comprobante, aunque la respuesta con el CAE no haya llegado a nuestra plataforma.
+
+Al reenviar la solicitud, TusFacturasAPP consulta la información registrada en ARCA y, si detecta diferencias entre los datos originales y los que estás enviando, te informará mediante un mensaje de error cuáles son los valores que no coinciden.
+
+Si reenviás la solicitud con los mismos datos originales, la plataforma podrá recuperar el CAE directamente desde ARCA y completar la creación del comprobante en TusFacturasAPP, siempre que este todavía no exista en tu cuenta.
+
+**Importante:** no modifiques los datos ni alteres el orden de envío al realizar el reintento. Esto permite recuperar la autorización existente sin generar inconsistencias ni intentar emitir nuevamente el comprobante.
+
+
 
 
 
