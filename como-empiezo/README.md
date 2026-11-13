@@ -51,16 +51,14 @@ TusFacturasAPP es la API líder en Argentina para integrar facturación electró
 {% endstep %}
 {% endstepper %}
 
-### 🔧 Entorno de Desarrollo
+### 🔧 Entorno de Desarrollo - Sandbox gratis
 
-#### ¿Por qué no hay un entorno de pruebas tradicional?
-
-Para garantizar el cumplimiento legal, no disponemos de un entorno de pruebas convencional. Esto significa que:
+Te ofrecemos una suscripción gratuita **API DEV**, que podes renovar todas las veces que necesites. Disponés de un entorno de pruebas que replica el funcionamiento de la API de producción, para que puedas desarrollar, integrar y validar tu aplicación antes de comenzar a operar con comprobantes reales. Con el plan API DEV:&#x20;
 
 * ✅ **No podrás enlazar tu CUIT real** con AFIP/ARCA durante las pruebas
 * ✅ **Evitas inconvenientes fiscales** ya que los comprobantes AFIP son inmodificables
 * ✅ **La respuesta simula el comportamiento de producción** con campos CAE vacíos
-* ✅ **No se aplican validaciones adicionales** de AFIP/ARCA durante las pruebas
+* ✅ **No se aplican validaciones adicionales** de ARCA durante las pruebas
 
 #### 💡 ¿Cómo funciona el consumo de cupos en la API?
 
@@ -81,19 +79,21 @@ Si tenes dudas sobre la integración o necesitas asistencia:
 
 ### Beneficios del Plan API DEV
 
-| Característica    | Detalle                                                                                                                                        |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Duración**      | 30 días completamente gratis                                                                                                                   |
-| **Comprobantes**  | Hasta 1.500 facturas de prueba desde 2 puntos venta                                                                                            |
-| **Validez legal** | No válidos legalmente (solo para desarrollo)                                                                                                   |
-| **Soporte**       | **Ilimitado** desde nuestro centro de ayuda. Contamos con atención personalizada por e-mail o chat, de lunes a viernes de 09 a 15:30hs (GMT-3) |
+| Característica              | Detalle                                                                                                                                        |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Costo**                   | Gratis                                                                                                                                         |
+| **Comprobantes / requests** | Hasta 1.500 desde 2 puntos venta                                                                                                               |
+| **Validez legal**           | No válidos legalmente (solo para desarrollo)                                                                                                   |
+| **Soporte**                 | **Ilimitado** desde nuestro centro de ayuda. Contamos con atención personalizada por e-mail o chat, de lunes a viernes de 09 a 15:30hs (GMT-3) |
 
 
 
 {% hint style="info" %}
-Te sugerimos revisar nuestros [términos y condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html) para estar al tanto de lo que podes realizar en nuestra plataforma y leer las [FAQs](../faqs-or-preguntas-frecuentes.md) para despejar tus dudas.
+Te sugerimos revisar nuestros [Términos y Condiciones](https://www.tusfacturas.app/terminos-y-condiciones.html) para conocer todo lo que podes hacer en la plataforma, y visitar nuestras [Preguntas Frecuentes (FAQs)](../faqs-or-preguntas-frecuentes.md) para despejar cualquier duda.
 
-En caso que necesites asistencia, podes [contactarnos](https://www.tusfacturas.app/contacto.html).
+Si necesitás asistencia personalizada, [escribinos](https://www.tusfacturas.app/contacto.html) cuando quieras.
+
+¿Tenés una plataforma SaaS? Conocé [cómo podemos ayudarte a potenciarla](https://www.tusfacturas.app/saas-facturacion-b2b-argentina).
 {% endhint %}
 
 ### 💻 Tu Primera Factura  en 2 Minutos
@@ -387,15 +387,15 @@ La API soporta todos los tipos de comprobantes AFIP:
 
 ***
 
-### 🔄 Después del Período de Prueba
+### 🔄 Cuando estés para pasar a producción:
 
-Una vez finalizado tu período de prueba de 30 días, podrás:
+Una vez finalizado tu desarrollo, deberas:
 
 1. **Seleccionar el plan que mejor se adapte** a tu volumen de facturación
 2. **Migrar a producción** con validaciones AFIP/ARCA completas
 3. **Emitir facturas con validez legal** vinculadas a tu CUIT real
 
-[Ver planes y tarifas disponibles](https://www.tusfacturas.app/tarifas-tusfacturas-planes-api-factura-electronica.html)
+[Ver planes y tarifas disponibles](https://www.tusfacturas.app/tarifas-api)
 
 ***
 
