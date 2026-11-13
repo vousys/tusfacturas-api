@@ -1,8 +1,8 @@
 ---
 description: >-
-  Emití facturas A, B, C, E, M y MiPyME con CAE de ARCA enviando un JSON, sin
-  SOAP, certificados ni tokens. Desde 2015 en producción, con monitoreo continuo
-  y respaldo impositivo.
+  API REST para emitir facturas y notas de crédito con CAE de ARCA, enviando un
+  JSON, sin SOAP, certificados ni tokens. Desde 2015 en producción, con
+  monitoreo continuo y respaldo impositivo.
 ---
 
 # API REST de factura electrónica ARCA (ex AFIP) fácil – TusFacturasAPP
@@ -31,8 +31,16 @@ Tu sistema envía un JSON con los datos del comprobante y recibe el CAE, el núm
 
 ### Qué podes hacer con la API
 
-* **Emitir comprobantes:** facturas, notas de crédito y notas de débito A, B, C, E (exportación), M, Factura de Crédito Electrónica MiPyME, recibos C y liquidaciones. [Ver ejemplos ](web-services-afip-api-arca/)
-* **Consultar ARCA:** datos de un [CUIT desde la constancia de inscripción](consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md), [base APOC de facturas apócrifas](consultas-varias-a-servicios-afip-arca/api-factura-apocrifa-base-apoc.md), [cotizaciones oficiales](consultas-varias-a-servicios-afip-arca/cotizacion-monedas-afip.md), [obligados a recibir FCE MiPyME](web-services-afip-api-arca/debo-emitir-una-mipyme.md).
+* **Emisión de facturas electrónicas con CAE.** Facturas A, B, C, E (exportación), M y Factura de Crédito Electrónica MiPyME, autorizadas por ARCA. Ver la [referencia de campos](api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md).
+* **Facturas y notas de crédito.** Las notas de crédito y débito se emiten con el mismo endpoint que las facturas, asociadas al comprobante original o a un período. Ver [notas de crédito y débito](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md).
+* **Consulta de comprobantes.** Obtené un comprobante por tipo y número, o listá los de una fecha, un rango o tu propio identificador. Ver [consulta simple](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-comprobantes.md) y [consulta avanzada](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md).
+* **Descarga de PDF.** Cada comprobante emitido trae el link al PDF en A4 y en ticket de 80 mm, con el código QR de ARCA.
+* **Webhooks para notificaciones.** En modo asincrónico te avisamos cuando el comprobante queda autorizado o si tuvo errores. Ver [facturación asincrónica](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-facturacion-nuevo-comprobante-1.md).
+* **Entorno de pruebas gratuito.** Integrá y probá sin costo antes de pasar a producción. [Crear cuenta de prueba](https://www.tusfacturas.app/probar-gratis-api-factura-electronica-tusfacturasapp).
+
+Además:
+
+* **Consultar ARCA:** datos de un CUIT desde la constancia de inscripción, base APOC de facturas apócrifas, cotizaciones oficiales y obligados a recibir FCE MiPyME.
 * **Consultar padrones provinciales:** alícuotas de ARBA y AGIP.
 * **Gestionar el negocio:** recibos de cobro, órdenes de pago, cuentas corrientes, productos y stock, reportes de IVA compras y ventas.
 * **Integrar sin código:** Zapier.
