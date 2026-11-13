@@ -46,6 +46,7 @@ Los comprobantes de tipo "C" deben llevar alícuota de IVA = 0 y no pueden inclu
       "documento_tipo":"CUIT",
       "documento_nro":"30712293841",
       "razon_social":"VOUSYS TusFacturasAPP",
+      "codigo": "30712293841",
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",

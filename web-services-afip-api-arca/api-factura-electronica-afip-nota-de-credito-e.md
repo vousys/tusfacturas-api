@@ -29,6 +29,7 @@ Nota de crédito E (  Código ARCA: 021  ) emitida en la modalidad "[Instantáne
    "cliente":{
       "documento_tipo":"OTRO",
       "documento_nro":"11124445",
+      "codigo": "30712293841",
       "razon_social":"VOUSYS TusFacturasAPP",
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",

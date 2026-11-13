@@ -44,6 +44,7 @@ Cuando los servicios prestados  producen efectos en Argentina,  se facturan como
       "domicilio":"No especifica",
       "condicion_pago":"201",
       "documento_nro":"122321310",
+      "codigo": "cli293841",
       "reclama_deuda": "N",
       "razon_social":"CLaudia Hans",
       "provincia":"26",

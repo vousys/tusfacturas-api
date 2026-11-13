@@ -75,15 +75,15 @@ Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se 
 | pagos            | Según estructura que se detalla a continuación                                                                                                    |
 
 ```
-{
-	  
+{ 
 	"comprobante": 
 	{
 		"tipo": "FACTURA A",
 		"operacion": "V",
 		"punto_venta": "00010",
 		"numero": "00000109", 
-		"pagos" : { .... }
+		"pagos" : { /* .... */  },
+		...
 	}
 }
 ```
@@ -110,12 +110,12 @@ comprobante: {
    .... 
    "pagos" : 
    {
-	"formas_pago" : [ 
-			{"descripcion" : "VISA DB", "importe" : 0.6},
-			{"descripcion" : "MercadoPago", "importe" : 50}
+	   "formas_pago" : [ 
+			   {"descripcion" : "VISA DB", "importe" : 0.6},
+			   {"descripcion" : "MercadoPago", "importe" : 50}
 			], 
 	"total": 50.6
-   }, 
+   },
  }
 ```
 {% endcode %}
@@ -149,16 +149,16 @@ comprobante: {
 
 ### Respuesta JSON
 
-```
+```json
 {
 	"error": "S",
-	"errores":  ["Error 2"],
+	"errores": ["Error 1", "Error 2"],
 }
 ```
 
 En caso de éxito:
 
-```
+```json
 {
 	"error": "N",
 	"errores": [],

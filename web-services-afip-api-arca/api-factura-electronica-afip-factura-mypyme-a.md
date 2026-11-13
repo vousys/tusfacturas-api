@@ -32,6 +32,7 @@ Factura MiPyme A (  Código ARCA: 201  ) emitida en la modalidad "[Instantánea]
     "documento_nro": "11124445",
     "razon_social": "VOUSYS TusFacturasAPP",
     "email": "a@a.com",
+    "codigo": "30712293841",
     "domicilio": "AV.LIBERTADOR 571",
     "provincia": "26",
     "envia_por_mail": "N",

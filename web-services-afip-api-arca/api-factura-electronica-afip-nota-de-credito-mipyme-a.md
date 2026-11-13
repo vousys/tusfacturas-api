@@ -29,6 +29,7 @@ Nota de crédito MiPyme A (  Código ARCA: 203  ) emitida en la modalidad "[Inst
    "cliente":{
       "documento_tipo":"CUIT",
       "documento_nro":"1111111111",
+      "codigo": "30712293841",
       "razon_social":"VOUSYS TusFacturasAPP",
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",

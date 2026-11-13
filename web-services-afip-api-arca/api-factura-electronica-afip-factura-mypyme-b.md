@@ -31,6 +31,7 @@ Factura MiPyme B (  Código ARCA: 206  ) emitida en la modalidad "[Instantánea]
       "documento_tipo":"CUIT",
       "documento_nro":"11124445",
       "razon_social":"VOUSYS TusFacturasAPP",
+      "codigo": "30712293841",
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"26",

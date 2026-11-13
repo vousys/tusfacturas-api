@@ -101,9 +101,9 @@ Revisa nuestra guía  "[API Facturación AFIP](./)" para conocer a fondo el serv
 	"apikey": "xxxx",
 	"usertoken": "xxxxx",
 	"requests": [
-			{objeto_comprobante}, 
-			{objeto_comprobante}, 
-			{objeto_comprobante}
+			/* {objeto_comprobante} */, 
+			/* {objeto_comprobante}  */, 
+			/* {objeto_comprobante} */
 		    ]
 }
 ```
@@ -171,7 +171,7 @@ Ej: una llamada con 2 requests.
         "afip_codigo_barras": "111111111110010000368466696512866201811266 ",
         "comprobante_pdf_url": "https:\/\/www.dominio.com\/00000075.pdf"
     }]
-}
+}]}
 ```
 
 ### :red\_circle: **¿Que te retornaremos en caso de error ?**

@@ -60,49 +60,43 @@ Ten en cuenta que solo almacenamos la información descargada desde AGIP para el
 | `documento_nro`  | Campo numérico, sin puntos ni guiones. **Ejemplo: 30111222334** |
 |                  |                                                                 |
 
-{% tabs %}
-{% tab title="Respuesta" %}
-```
+
+
 Ejemplo de cuando existe en padron AGIP
 
+```
 {
-   "error":     "N",
-   "existe_padron":     "S",
-   "errores":  [  "" ],
-   "rta":      "OK",
-   "alicuota_percepcion": 3,
-   "alicuota_retencion":  5,
+"error": "N",
+"existe_padron": "S",
+"errores": [ "" ],
+"rta": "OK",
+"alicuota_percepcion": 3,
+"alicuota_retencion": 5
 }
-
-
+```
 
 Ejemplo de cuando NO existe en padron AGIP
 
+```
 {
-   "error":     "N",
-   "existe_padron":     "N",
-   "errores":  [  "" ],
-   "rta":      "OK",
-   "alicuota_percepcion": 0,
-   "alicuota_retencion":  0,
+"error": "N",
+"existe_padron": "N",
+"errores": [ "" ],
+"rta": "OK",
+"alicuota_percepcion": 0,
+"alicuota_retencion": 0
 }
-
-
+```
 
 Ejemplo de cuando NO existe en tu base de clientes
 
-{
-   "error":     "S",
-   "existe_padron":     "-",
-   "errores":  [  "El cliente no existe en tu cartera" ],
-   "rta":      "OK",
-   "alicuota_percepcion": 0,
-   "alicuota_retencion":  0,
-}
-
-
-
-
 ```
-{% endtab %}
-{% endtabs %}
+{
+"error": "S",
+"existe_padron": "-",
+"errores": [ "El cliente no existe en tu cartera" ],
+"rta": "OK",
+"alicuota_percepcion": 0,
+"alicuota_retencion": 0
+}
+```

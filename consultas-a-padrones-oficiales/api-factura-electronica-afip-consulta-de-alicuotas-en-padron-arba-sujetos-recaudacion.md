@@ -65,7 +65,7 @@ En el supuesto caso que la consulta te retorne alícuota cero, deberás evaluar 
    "errores":  [  "" ],
    "rta":      "OK",
    "alicuota_percepcion": 3,
-   "alicuota_retencion":  5,
+   "alicuota_retencion":  5
 }
 ```
 
@@ -78,7 +78,7 @@ En el supuesto caso que la consulta te retorne alícuota cero, deberás evaluar 
    "errores":  [  "" ],
    "rta":      "OK",
    "alicuota_percepcion": 0,
-   "alicuota_retencion":  0,
+   "alicuota_retencion":  0
 }
 ```
 
@@ -91,6 +91,6 @@ En el supuesto caso que la consulta te retorne alícuota cero, deberás evaluar 
    "errores":  [  "El cliente no existe en tu cartera" ],
    "rta":      "OK",
    "alicuota_percepcion": 0,
-   "alicuota_retencion":  0,
+   "alicuota_retencion":  0
 }
 ```

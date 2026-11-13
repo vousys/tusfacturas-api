@@ -37,6 +37,7 @@ En éste ejemplo podes ver conceptos con alícuota de IVA 21%, 10%, exentos y no
   "cliente": {
     "documento_tipo": "CUIT",
     "documento_nro": "30712293841",
+    "codigo": "30712293841",
     "razon_social": "VOUSYS TusFacturasAPP",
     "email": "a@a.com",
     "domicilio": "AV.LIBERTADOR 571",
@@ -72,6 +73,7 @@ En éste ejemplo podes ver conceptos con alícuota de IVA 21%, 10%, exentos y no
         "producto": {
           "descripcion": "PIEDRA NEGRA RESERVA MALBEC/CAB/CHARD/PINOT GRIS",
           "precio_unitario_sin_iva": 1000,
+          "lista_precios": "LISTA 1",
           "codigo": "P101474",
           "alicuota": 21,
           "unidad_bulto": 1,
@@ -86,6 +88,7 @@ En éste ejemplo podes ver conceptos con alícuota de IVA 21%, 10%, exentos y no
         "producto": {
           "descripcion": "GRAN ENEMIGO (EXENTO)",
           "precio_unitario_sin_iva": 1000,
+          "lista_precios": "LISTA 1",
           "codigo": "P101430",
           "alicuota": -1,
           "unidad_bulto": 1,
@@ -102,6 +105,7 @@ En éste ejemplo podes ver conceptos con alícuota de IVA 21%, 10%, exentos y no
           "precio_unitario_sin_iva": 1000,
           "codigo": "P101439",
           "unidad_bulto": 1,
+          "lista_precios": "LISTA 1",
           "alicuota": -2,
           "impuestos_internos_alicuota": 0,
           "precio_total": 1000
@@ -115,6 +119,7 @@ En éste ejemplo podes ver conceptos con alícuota de IVA 21%, 10%, exentos y no
           "descripcion": "ANIMAL CABERNET",
           "precio_unitario_sin_iva": 1000,
           "codigo": "P101463",
+          "lista_precios": "LISTA 1",
           "unidad_bulto": 1,
           "alicuota": 10.5,
           "impuestos_internos_alicuota": 0,

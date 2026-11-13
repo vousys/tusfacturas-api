@@ -17,7 +17,7 @@ En lugar de enviar el bloque "cliente" debes enviar el bloque "proveedor" con la
 "proveedor": {
         "documento_tipo": "CUIT",
         "razon_social": "Pepsico",
-        "email": "vosorio@vousys.com",
+        "email": "hola@google.com",
         "domicilio": "CONSTITUCION 178",
         "documento_nro": "30537647716",
         "provincia": 2, 

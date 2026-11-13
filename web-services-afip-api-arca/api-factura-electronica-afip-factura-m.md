@@ -45,6 +45,7 @@ Factura A emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "documento_nro":"30712293841",
       "razon_social":"VOUSYS TusFacturasAPP",
       "email":"a@a.com",
+      "codigo": "30712293841",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
       "envia_por_mail":"N",

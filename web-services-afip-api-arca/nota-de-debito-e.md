@@ -29,7 +29,8 @@ Nota de débito E (  Código ARCA: 020 ) emitida en la modalidad "[Instantánea]
     "apitoken": "XXXX",
    "cliente":{
       "documento_tipo":"OTRO",
-      "documento_nro":"11124445",
+      "documento_nro":"11124445", 
+      "codigo": "30712293841",
       "razon_social":"VOUSYS TusFacturasAPP",
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",

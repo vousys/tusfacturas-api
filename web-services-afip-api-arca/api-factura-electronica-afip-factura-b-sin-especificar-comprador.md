@@ -40,6 +40,7 @@ Factura B emitida en la modalidad "[Asincrónica](../api-factura-electronica-afi
       "domicilio":"No especifica",
       "condicion_pago":"201",
       "documento_nro":"0",
+      "codigo": "cli1234",
       "reclama_deuda": "N",
       "razon_social":"Consumidor final",
       "provincia":"2",

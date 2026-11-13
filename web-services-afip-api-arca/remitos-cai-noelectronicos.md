@@ -33,6 +33,7 @@ El remito por webservice provisto por ARCA solo está disponible para empresas d
    "cliente":{
       "documento_tipo":"CUIT",
       "documento_nro":"30712293841",
+      "codigo": "30712293841",
       "razon_social":"VOUSYS TusFacturasAPP",
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",

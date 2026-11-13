@@ -37,6 +37,7 @@ Nota de crédito B emitida en la modalidad "[Asincrónica](../api-factura-electr
       "documento_tipo":"DNI",
       "documento_nro":"12345678",
       "razon_social":"VOUSYS TusFacturasAPP",
+      "codigo": "30712293841",
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",

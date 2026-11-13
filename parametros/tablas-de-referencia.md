@@ -32,7 +32,7 @@ Los requests se cuentan individualmente por cada método utilizado. [¿Cómo se 
 ```json
 {
     "apitoken":"TU_API_TOKEN",
-    "apikey": 0101,
+    "apikey": "xxx",
     "usertoken":"TU_USER_TOKEN"
 }
 ```

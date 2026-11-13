@@ -55,6 +55,7 @@ La Factura B la emite un Responsable Inscripto a un exento o consumidor final. S
       "domicilio":"Av Sta Fe 23132",
       "condicion_pago":"201",
       "documento_nro":"111132333",
+       "codigo": "30712293841",
       "razon_social":"Juan Pedro KJL",
       "provincia":"2",
       "email":"email@dominio.com",

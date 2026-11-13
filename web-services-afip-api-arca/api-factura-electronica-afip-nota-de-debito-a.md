@@ -37,6 +37,7 @@ Nota de débito A emitida en la modalidad "[Asincrónica](../api-factura-electro
       "documento_tipo":"CUIT",
       "documento_nro":"30712293841",
       "razon_social":"VOUSYS TusFacturasAPP",
+      "codigo": "30712293841",
       "email":"a@a.com",
       "domicilio":"AV.LIBERTADOR 571",
       "provincia":"2",
