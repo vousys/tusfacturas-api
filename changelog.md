@@ -6,6 +6,12 @@ description: >-
 
 # Changelog
 
+### 13 de noviembre de 2026
+
+Actualización del criterio de tolerancia:&#x20;
+
+A partir del **01/02/2027**, la plataforma dejará de admitir diferencias de centavos en los importes de los comprobantes. Los valores enviados deberán coincidir exactamente con los resultados del recálculo realizado por TusFacturasAPP. Por este motivo, y para que puedas adaptar y validar tus integraciones con anticipación, desde el **14/11/2026** todas las cuentas del servicio **API DEV** comenzarán a trabajar con tolerancia cero. De esta manera, podras realizar los ajustes necesarios y comprobar que tu integración cumple con las nuevas validaciones antes de que entren en vigencia en el entorno productivo.
+
 ### 01 de noviembre de 2026
 
 Se modifica el margen de tolerancia contra la diferencia de los totales (redondeo) a 0.03
