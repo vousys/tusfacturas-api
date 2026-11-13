@@ -11,7 +11,7 @@ TusFacturasAPP® es una API REST para emitir comprobantes electrónicos con CAE 
 
 TusFacturasAPP es una plataforma privada e independiente de facturación y gestión, que no pertenece ni está vinculada a ARCA (ex AFIP) ni a ningún organismo público. Los comprobantes se emiten a través de los web services oficiales de ARCA, con el CUIT que cada usuario configura y habilita.
 
-Tu sistema envía un JSON con los datos del comprobante y recibe el CAE, el número asignado y el PDF con QR. La autenticación WSAA, los certificados, la numeración y los cambios en los web services de ARCA quedan del lado de TusFacturasAPP® siempre que sea posible.&#x20;
+Tu sistema envía un JSON con los datos del comprobante y recibe el CAE, el número asignado y el PDF con QR. La API te permite facturar +100 productos/servicios en cada venta. La autenticación WSAA, los certificados, la numeración y los cambios en los web services de ARCA quedan del lado de TusFacturasAPP® siempre que sea posible.&#x20;
 
 ### Ficha técnica
 
@@ -27,6 +27,7 @@ Tu sistema envía un JSON con los datos del comprobante y recibe el CAE, el núm
 | Notificaciones      | Webhooks                                                                                                                                     |
 | SDK                 | PHP ([GitHub](https://github.com/vousys/tusfacturas))                                                                                        |
 | Prueba              | Cuenta gratuita, renovable las veces que necesites.                                                                                          |
+| Sandbox             | Gratis                                                                                                                                       |
 | Estado del servicio | Endpoint de [estado de servicios ARCA y API](web-services-afip-api-arca/api-factura-electronica-afip-estado-de-los-servicios-afip.md)        |
 
 ### Qué podes hacer con la API
