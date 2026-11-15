@@ -47,7 +47,7 @@ Los requests se cuentan independientes por cada método que consumas. [¿Cómo s
 
 ### Parámetros para consultar la cotización del dolar en ARCA&#x20;
 
-[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../consultas-varias-a-servicios-afip-arca/cotizacion-monedas-afip.md).
+[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la [documentación de la API de facturación AFIP/ARCA](../otros-servicios-api-de-afip-arca/cotizacion-monedas-afip.md).
 
 ### ¿Aún te quedan dudas? ¡Contactános!
 

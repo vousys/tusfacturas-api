@@ -74,7 +74,7 @@ Los requests se cuentan independientes por cada método que consumas. [¿Cómo s
 
 ### Parámetros para consultar un CUIT en ARCA&#x20;
 
-[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la documentación de la API del método de [consulta de CUIT en ARCA](../consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md), para obtener información detallada de los posibles errores, datos devueltos y comentarios adicionales
+[TusFacturasAPP](https://www.tusfacturas.app) es un robusto software de facturación respaldado por un estudio contable impositivo que lo mantiene actualizado día a día con los constantes cambios en materia impositivas de Argentina. Consulta la documentación de la API del método de [consulta de CUIT en ARCA](../otros-servicios-api-de-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md), para obtener información detallada de los posibles errores, datos devueltos y comentarios adicionales
 
 ### ¿Aún te quedan dudas? ¡Contactános!
 

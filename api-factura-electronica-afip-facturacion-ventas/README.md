@@ -36,7 +36,7 @@ Nuestra **API Factura electronica AFIP/ARCA** elimina la complejidad de los webs
 
 #### 🔧 Integración Simplificada
 
-La **API de ARCA** más fácil de integrar. Documentación completa con ejemplos JSON para desarrolladores que necesitan emitir [factura electrónica AFIP/ARCA](https://www.tusfacturas.app/factura-electronica-afip.html) desde su [sistema de gestión](https://www.tusfacturas.app/como-integrar-mi-software-de-facturacion-con-afip.html), ERP o software.
+La **API de ARCA** más fácil de integrar. Documentación completa con [ejemplos JSON](../web-services-afip-api-arca/) para desarrolladores que necesitan emitir [factura electrónica AFIP/ARCA](https://www.tusfacturas.app/factura-electronica-afip.html) desde su [sistema de gestión](https://www.tusfacturas.app/como-integrar-mi-software-de-facturacion-con-afip.html), ERP o software.
 
 #### ⚡ Procesamiento Rápido
 
@@ -114,7 +114,7 @@ Notificaciones automáticas para la **automatización de tu facturación** sin p
 {% step %}
 #### Documentación Completa
 
-Guías paso a paso y [ejemplos de código](/broken/pages/SOqWX4022D2OKZCHrSAH) para desarrolladores.
+Guías paso a paso y [ejemplos de código](../web-services-afip-api-arca/) para desarrolladores.
 {% endstep %}
 {% endstepper %}
 
@@ -122,7 +122,7 @@ Guías paso a paso y [ejemplos de código](/broken/pages/SOqWX4022D2OKZCHrSAH) p
 
 Comienza a usar nuestra **API ARCA** en minutos:
 
-1. [Crea tu cuenta gratuita](../consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md) de desarrollador
+1. [Crea tu cuenta gratuita](../otros-servicios-api-de-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md) de desarrollador
 2. Genera tus credenciales API
 3. Integra los endpoints en tu software. Accede a la [referencia de la API](referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md)
 4. Emití tu primer factura electrónica

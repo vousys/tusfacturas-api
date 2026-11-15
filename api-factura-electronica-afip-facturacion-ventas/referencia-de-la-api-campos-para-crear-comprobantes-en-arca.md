@@ -462,7 +462,7 @@ comprobante: {
 * Si el cliente ya existe en tu base de clientes/proveedores en TusFacturasAPP por código o tipo + número de documento, la info será actualizada con los nuevos datos que envies, con excepción de los campos:  tipo de documento, número de documento y condición ante el IVA.
 * Si queres enviar un comprobante a un consumidor final, sin especificar su nombre y DNI,  consulta la siguiente documentación de "[Facturas a Consumidor final sin especificar datos](facturas-a-consumidor-final-sin-especificar-datos.md)"
 * Para casos de clientes del exterior, que posean **pasaporte**, tene en cuenta que AFIP/ARCA sólo permite el envío de números.&#x20;
-* Te recomendamos utilizar el método de [consulta de CUITs](../consultas-varias-a-servicios-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md) antes de emitir facturas, ya que el CUIT de tu cliente podría no estar activo, lo que podría generar inconvenientes con el fisco.
+* Te recomendamos utilizar el método de [consulta de CUITs](../otros-servicios-api-de-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md) antes de emitir facturas, ya que el CUIT de tu cliente podría no estar activo, lo que podría generar inconvenientes con el fisco.
 * Si no vas a gestionar los cobros de las facturas que emitas con TusFacturasAPP, env'a siempre el campo "reclama\_deuda": "N", ya que sino nuestra plataforma le enviará un email a tu cliente recordandole todas las facturas impagas.
 * Si queres indicar en TusFacturasAPP que este comprobante ademas fue abonado, debes enviar el bloque de "pagos" con la información requerida, ya que el campo "condicion\_pago" es solo informativo. &#x20;
 * En caso que no desees llevar el estado de pagado/impago en la plataforma, debes enviar el campo "reclama\_deuda" en "N", ya que sino la plataforma le recordará por e-mail a tu cliente de todos los comprobantes que adeuda.
@@ -744,7 +744,7 @@ comprobante: {
 Información de los campos que componen el **bloque "datos\_informativos"**
 
 <table><thead><tr><th>Nombre del campo</th><th align="center">Requerido</th><th>Detalle</th></tr></thead><tbody><tr><td><pre><code>paga_misma_moneda
-</code></pre></td><td align="center">OPCIONAL</td><td><p>Éste dato entra en vigencia el 15/04/2025 según la RG5616/2024 y deberá enviarse "N" para indicar "No informa" o "S" para indicar "Si". </p><p>En caso de enviarse con el valor "S", la moneda enviada debe ser diferente al Peso Argentino y la cotización debe ser la oficial provista por AFIP/ARCA desde <a href="../consultas-varias-a-servicios-afip-arca/cotizacion-monedas-afip.md">éste método</a></p></td></tr></tbody></table>
+</code></pre></td><td align="center">OPCIONAL</td><td><p>Éste dato entra en vigencia el 15/04/2025 según la RG5616/2024 y deberá enviarse "N" para indicar "No informa" o "S" para indicar "Si". </p><p>En caso de enviarse con el valor "S", la moneda enviada debe ser diferente al Peso Argentino y la cotización debe ser la oficial provista por AFIP/ARCA desde <a href="../otros-servicios-api-de-afip-arca/cotizacion-monedas-afip.md">éste método</a></p></td></tr></tbody></table>
 
 ***
 
