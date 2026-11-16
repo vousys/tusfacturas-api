@@ -4,13 +4,15 @@ description: >-
   inscripción de AFIP/ARCA, y obtené los datos en formato JSON.
 ---
 
-# Consultar datos de un CUIT, desde la constancia de inscripción
+# Consultar datos de un CUIT, desde la constancia de inscripción AFIP/ARCA
 
 <mark style="color:$primary;">**IMPORTANTE**</mark><mark style="color:$primary;">: Para utilizar esta consulta, tu CUIT debe estar</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">**enlazado con ARCA**</mark><mark style="color:$primary;">. Por lo tanto, esta funcionalidad</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">**no está disponible**</mark> <mark style="color:$primary;"></mark><mark style="color:$primary;">en el plan API DEV.</mark>
 
-### Consultar datos de un CUIT en AFIP/ARCA
+### Obtener condición frente al IVA y démas datos de un CUIT desde los webservices de ARCA
 
-Mediante éste método podrás consultar la info que AFIP/ARCA tiene almacenada en su base de datos con relación a un CUIT. Ésta info es lo mismo que visualizas cuando haces una [consulta web a la constancia de inscripción](https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do).  Tene en cuenta que la información provista en éste método no tiene relación con la info de tus clientes que tengas almacenados en TusFacturasAPP.
+Mediante este método podrás consultar la información que AFIP/ARCA tiene registrada en su base de datos para un CUIT determinado. Los datos obtenidos son los mismos que se muestran al consultar la [**Constancia de Inscripción**](https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do) a través del sitio web oficial de ARCA.
+
+Ten en cuenta que la información devuelta por este método es independiente de los datos de tus clientes almacenados en TusFacturasAPP y no modifica ni consulta sus registros dentro de la plataforma.
 
 #### ¿A donde enviar el request?
 

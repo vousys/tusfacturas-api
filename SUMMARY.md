@@ -77,7 +77,7 @@
   * [Zapier: Factura electrónica AFIP/ARCA No-Code](integraciones-factura-afip-arca-no-code/zapier-factura-electronica-afip-arca-no-code.md)
 * [🗳️ Otros servicios API de AFIP/ARCA](otros-servicios-api-de-afip-arca/README.md)
   * [Consultar las cotizaciones AFIP/ARCA](otros-servicios-api-de-afip-arca/cotizacion-monedas-afip.md)
-  * [Consultar datos de un CUIT, desde la constancia de inscripción](otros-servicios-api-de-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md)
+  * [Consultar datos de un CUIT, desde la constancia de inscripción AFIP/ARCA](otros-servicios-api-de-afip-arca/api-factura-electronica-afip-clientes-consultar-cuit-en-constancia-de-inscripcion.md "API Constancia inscripción AFIP/ARCA")
   * [Consultar base APOC de facturas apócrifas de ARCA](otros-servicios-api-de-afip-arca/api-factura-apocrifa-base-apoc.md)
 * [📑 API alícuotas percepciones y retenciones](api-alicuotas-percepciones-y-retenciones/README.md)
   * [ARBA -  Alícuotas percepciones y retenciones, sujetos recaudación](api-alicuotas-percepciones-y-retenciones/padron-arba-sujetos-recaudacion.md "ARBA -  Alícuotas percepciones y retenciones")
