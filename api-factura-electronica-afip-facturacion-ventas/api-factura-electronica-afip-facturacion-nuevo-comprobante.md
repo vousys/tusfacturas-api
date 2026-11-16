@@ -187,4 +187,4 @@ En caso que requieras asistencia o tengas alguna duda relacionada con tu plan AP
 
 ***
 
-[TusFacturasAPP](https://www.tusfacturas.app) es un proveedor [SaaS](https://www.tusfacturas.app/saas-facturacion-b2b-argentina.html) líder de servicios de [facturación electrónica en Argentina](https://www.tusfacturas.app/factura-electronica-afip.html), que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.
+[TusFacturasAPP](https://www.tusfacturas.app) es un proveedor [SaaS](https://www.tusfacturas.app/saas-facturacion-b2b-argentina) líder de servicios de [facturación electrónica en Argentina](https://www.tusfacturas.app/factura-electronica-afip.html), que permite a empresas de todos los tamaños emitir comprobantes fiscales válidos de manera rápida, segura y cumpliendo con todas las regulaciones de la AFIP.

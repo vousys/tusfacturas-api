@@ -13,7 +13,7 @@ A partir del 1 de diciembre de 2025, ARCA elimina administrativamente el comprob
 **IMPORTANTE:** <mark style="color:$primary;">Para emitir estos comprobantes debes enviar  "Factura M".</mark>&#x20;
 
 El PDF generado mostrará correctamente "Factura A - Cod. 0051". Lo mismo sucede con las Notas de crédito y débito M.\
-Podes ver el [instructivo de ayuda sobre la factura M acá](https://ayuda.tusfacturas.app/es/articles/11560951-factura-m-con-leyenda).
+Podes ver el [instructivo de ayuda sobre la factura M acá](https://ayuda.tusfacturas.app/es/articles/11560951-factura-a-cod-51-con-leyenda-operacion-sujeta-a-retencion).
 
 ### Endpoints
 

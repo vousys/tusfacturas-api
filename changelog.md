@@ -6,6 +6,11 @@ description: >-
 
 # Changelog
 
+### 16 de noviembre de 2026
+
+Nuevas consultas al Banco Central (BCRA)\
+Incorporamos dos nuevos métodos para validar el historial financiero de clientes y emisores por CUIT/CUIL: [consulta de deudas y situación crediticia en la Central de Deudores BCRA](api-bcra/api-bcra-deudores.md), y verificación de [cheques rechazados en BCRA](api-bcra/consulta-cheques-rechazados-cuit-bcra.md) con detalle de cantidades, importes y causales.
+
 ### 13 de noviembre de 2026
 
 Actualización del criterio de tolerancia:&#x20;
