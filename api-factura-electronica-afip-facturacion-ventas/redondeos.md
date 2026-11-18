@@ -71,7 +71,7 @@ Una factura cuyo precio final es $80 y el precio sin IVA del producto/servicio e
 
 ***
 
-**Ejemplo con 2 alícuotas de IVA diferentes en los conceptos y un ajuste sobre el concepto de alícuota al 21%:**
+**Ejemplo con 2 alícuotas de IVA diferentes en los conceptos**
 
 | Concepto                 | Sin redondear | Redondeado (half-even) |
 | ------------------------ | ------------- | ---------------------- |
@@ -94,7 +94,7 @@ Cada IVA se calcula sobre la suma de los sub-totales de su propia alícuota, sin
 
 #### **Otros ejemplos prácticos :**
 
-El siguiente ejemplo muestra una factura de 3 ítems con alícuota de IVA 21%. Los precios unitarios tienen un máximo de 3 decimales.
+El siguiente ejemplo muestra una factura de 3 ítems con alícuota de IVA 21%. Los precios unitarios se trabajan con un máximo de 3 decimales.
 
 | Descripción | Cantidad | Precio unitario s/IVA | Cant × Precio s/IVA |
 | ----------- | -------- | --------------------- | ------------------- |
