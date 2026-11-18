@@ -5,13 +5,31 @@ icon: input-numeric
 
 # Redondeos
 
-TusFacturasAPP gestiona los precios unitarios de los productos/items con **3 decimales** y los totales finales con **2 decimales**, aplicando el método de redondeo **"Round Half Even"** (redondeo bancario), siguiendo estrictamente los lineamientos de ARCA.
+TusFacturasAPP recalcula los totales de cada comprobante a partir de los ítems que envías, y esos totales son los que se informan a ARCA. Si tu sistema calcula los totales con otro criterio de redondeo, pueden aparecer diferencias de centavos entre tu comprobante y lo informado.
+
+Recalculamos porque el servicio de facturación de ARCA (WSFEv1) no recibe el detalle de los ítems, sino solo los subtotales por alícuota y los impuestos.
+
+Para evitar diferencias, calculá los totales con estas reglas:
+
+| Concepto                 | Decimales | Cómo se calcula                                                                                                  |
+| ------------------------ | --------- | ---------------------------------------------------------------------------------------------------------------- |
+| Precio unitario del ítem | hasta 3   | Lo envías vos.                                                                                                   |
+| Subtotal por alícuota    | 2         | Suma de cantidad × precio unitario - bonificacion, de los ítems de esa alícuota, redondeada con Round Half Even. |
+| IVA por alícuota         | 2         | Subtotal **sin redondear** × alícuota, redondeado con Round Half Even.                                           |
+| Total del comprobante    | 2         | Suma de los subtotales y los impuestos ya redondeados.                                                           |
+
+**Round Half Even** (redondeo bancario) es el método que exige ARCA. Cuando el valor termina exactamente en 5, se redondea al dígito par más cercano:
+
+| Valor  | Redondeado |
+| ------ | ---------- |
+| 66,165 | 66,16      |
+| 66,115 | 66,12      |
 
 ***
 
 #### **¿Cómo se calcula el total?**
 
-El cálculo de validación previa, que garantiza que el total que vos envias coincida con el que la plataforma recalcula, se realiza en cuatro pasos:
+El cálculo de validación previa, que garantiza que el total que vos envias coincida con el que la plataforma recalcula, se realiza de la siguiente manera:
 
 1. **Determinamos los sub-totales por alícuota**: Se suman todos los ítems (cantidad × precio unitario sin IVA - bonificación), sin redondear.  _La plataforma muestra en el PDF los conceptos/items redondeados a 3 decimales._&#x20;
 2. **Calculamos el IVA** de cada sub-total y lo redondeamos a 2 decimales usando Round Half Even.
