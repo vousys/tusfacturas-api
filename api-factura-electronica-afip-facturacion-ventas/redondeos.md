@@ -15,7 +15,7 @@ El cálculo de validación previa, que garantiza que el total que vos envias coi
 
 1. **Sumarizamos** todos los ítems (cantidad × precio unitario sin IVA) con los decimales tal como resultan del cálculo y lo redondeamos a 2 decimales usando Round Half Even. Vos podes cada concepto/item con 3 decimales máximo, sin embargo no rechazamos aquellas ventas que ingresen con mas decimales.
 2. **Redondeamos el subtotal sin IVA a 2 decimales** usando Round Half Even.
-3. **Aplicamos el IVA** sobre esos subtotales ya redondeados a 2 decimales y redondeamos el importe resultante a 2 decimales usando Round Half Even.
+3. **Aplicamos el IVA** sobre esos subtotales y redondeamos el importe resultante a 2 decimales usando Round Half Even.
 4. **Sumamos** subtotales e IVA para obtener el total del comprobante y lo redondeamos a **2 decimales** usando Round Half Even.
 
 ⚠️ **El IVA no se calcula línea por línea.** No se suma el IVA de cada ítem individualmente: se calcula sobre el subtotal acumulado redondeado a 2 decimales. Tenelo en cuenta al verificar si el total coincide con tus propios cálculos, ya que calcular por ítem puede generar diferencias de centavos.
