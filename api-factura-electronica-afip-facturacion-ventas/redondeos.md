@@ -13,16 +13,20 @@ TusFacturasAPP gestiona los precios unitarios de los productos/items con **3 dec
 
 El cálculo de validación previa, que garantiza que el total que vos envias coincida con el que la plataforma recalcula, se realiza en cuatro pasos:
 
-1. **Sumarizamos** todos los ítems (cantidad × precio unitario sin IVA) con los decimales tal como resultan del cálculo y lo redondeamos a 2 decimales usando Round Half Even. Vos podes cada concepto/item con 3 decimales máximo, sin embargo no rechazamos aquellas ventas que ingresen con mas decimales.
-2. **Redondeamos el subtotal sin IVA a 2 decimales** usando Round Half Even.
-3. **Aplicamos el IVA** sobre esos subtotales y redondeamos el importe resultante a 2 decimales usando Round Half Even.
+1. Determinamos los subtotales por alícuota: Se suman todos los ítems (cantidad × precio unitario sin IVA - bonificacion), sin redondear.  _Recorda que la plataforma redondea y muestra los conceptos/items a 3 decimales máximo aunque vos envies mas._&#x20;
+2. **Redondeamos los subtotales  2 decimales** usando Round Half Even.
+3. **Calculamos el IVA** sobre cada subtotal y lo redondeamos a 2 decimales usando Round Half Even.
 4. **Sumamos** subtotales e IVA para obtener el total del comprobante y lo redondeamos a **2 decimales** usando Round Half Even.
 
-⚠️ **El IVA no se calcula línea por línea.** No se suma el IVA de cada ítem individualmente: se calcula sobre el subtotal acumulado redondeado a 2 decimales. Tenelo en cuenta al verificar si el total coincide con tus propios cálculos, ya que calcular por ítem puede generar diferencias de centavos.
+**El IVA no se calcula concepto por concepto.** No se suma el IVA de cada ítem individualmente: se calcula sobre el subtotal acumulado. Tenelo en cuenta al verificar si el total coincide con tus propios cálculos, ya que calcular por ítem puede generar diferencias de centavos.
 
-⚠️ **Tolerancia por redondeo ($0,03):**
+⚠️ **Tolerancia por redondeo ($0,03) hasta 31/01/2027:**
 
-Admitimos una discrepancia de hasta $0,03 entre el total enviado en el payload y el cálculo interno de la plataforma. En estos casos, el comprobante PDF conservará el total enviado por tu sistema, mientras que ante ARCA se declarará el importe recalculado por nuestra plataforma, por lo que recomendamos enviar la información de acuerdo a lo informado.
+* **Hoy:** se acepta una diferencia de hasta $0,03.
+* **Desde el 14/11/2026:** las cuentas API DEV funcionan sin tolerancia, para que puedas probar tu integración.
+* **Desde el 01/02/2027:** no se aceptan diferencias de centavos. Lo que envíes tiene que coincidir exactamente con el recálculo de la plataforma.
+
+⚠️ **Importante:** el PDF muestra el total que envió tu sistema, pero a ARCA se informa el total recalculado por la plataforma. Si no coinciden, el comprobante que ve tu cliente puede ser distinto del informado a ARCA.
 
 {% hint style="warning" %}
 A partir del **01/02/2027**, no se admitirán diferencias de centavos. Los valores que envíes deberán coincidir exactamente con los resultados del recálculo realizado por la plataforma. Por tal motivo, desde el **14/11/2026** todas las cuentas del servicio **API DEV** comenzarán a trabajar con tolerancia cero. De esta manera, podras realizar los ajustes necesarios y comprobar que tu integración cumple con las nuevas validaciones antes de que entren en vigencia en el entorno productivo.
