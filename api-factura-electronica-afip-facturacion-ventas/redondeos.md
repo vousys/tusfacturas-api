@@ -13,12 +13,12 @@ TusFacturasAPP gestiona los precios unitarios de los productos/items con **3 dec
 
 El cálculo de validación previa, que garantiza que el total que vos envias coincida con el que la plataforma recalcula, se realiza en cuatro pasos:
 
-1. **Sumarizamos** todos los ítems (cantidad × precio unitario sin IVA) con los decimales tal como resultan del cálculo. Recorda que debes enviarlos con 3 decimales maximo, sin embargo no rechazamos aquellas ventas que ingresen con mas decimales.
+1. **Sumarizamos** todos los ítems (cantidad × precio unitario sin IVA) con los decimales tal como resultan del cálculo y lo redondeamos a 2 decimales usando Round Half Even. Vos podes cada concepto/item con 3 decimales máximo, sin embargo no rechazamos aquellas ventas que ingresen con mas decimales.
 2. **Redondeamos el subtotal sin IVA a 2 decimales** usando Round Half Even.
-3. **Aplicamos el IVA** sobre esos subtotales ya redondeados y redondeamos el importe resultante a 2 decimales usando Round Half Even.
-4. **Sumamos** subtotales e IVA para obtener el total del comprobante.
+3. **Aplicamos el IVA** sobre esos subtotales ya redondeados a 2 decimales y redondeamos el importe resultante a 2 decimales usando Round Half Even.
+4. **Sumamos** subtotales e IVA para obtener el total del comprobante y lo redondeamos a **2 decimales** usando Round Half Even.
 
-⚠️ **El IVA no se calcula línea por línea.** No se suma el IVA de cada ítem individualmente: se calcula sobre el subtotal acumulado. Tenelo en cuenta al verificar si el total coincide con tus propios cálculos, ya que calcular por ítem puede generar diferencias de centavos.
+⚠️ **El IVA no se calcula línea por línea.** No se suma el IVA de cada ítem individualmente: se calcula sobre el subtotal acumulado redondeado a 2 decimales. Tenelo en cuenta al verificar si el total coincide con tus propios cálculos, ya que calcular por ítem puede generar diferencias de centavos.
 
 ⚠️ **Tolerancia por redondeo ($0,03):**
 
@@ -28,13 +28,48 @@ Admitimos una discrepancia de hasta $0,03 entre el total enviado en el payload y
 A partir del **01/02/2027**, no se admitirán diferencias de centavos. Los valores que envíes deberán coincidir exactamente con los resultados del recálculo realizado por la plataforma. Por tal motivo, desde el **14/11/2026** todas las cuentas del servicio **API DEV** comenzarán a trabajar con tolerancia cero. De esta manera, podras realizar los ajustes necesarios y comprobar que tu integración cumple con las nuevas validaciones antes de que entren en vigencia en el entorno productivo.
 {% endhint %}
 
+#### ¿Qué hacer si tengo diferencias con el precio final?
+
+Podes agregar un concepto o ítem denominado **«Ajuste por redondeo»**, con un importe positivo o negativo, según corresponda, y aplicar la **alícuota de IVA que te recomiende tu estudio contable**.
+
+**Importante:** ARCA no permite emitir comprobantes con subtotales negativos cuando se utilizan las alícuotas «IVA No Gravado» o «Exento» con importes inferiores a cero. Por este motivo, no podrás informar un ajuste negativo aislado (por ejemplo, -$0,05) en alguno de estos conceptos si no existe otro ítem de la misma alícuota que permita compensar ese importe y mantener el subtotal en cero o positivo.
+
+**Ejemplo práctico:** &#x20;
+
+Una factura cuyo precio final es $80 y el precio sin IVA del producto/servicio es de 66,165
+
+| Concepto               | Sin redondear | Redondeado (half-even) |
+| ---------------------- | ------------- | ---------------------- |
+| Producto A (+ IVA 21%) | 66,165        |                        |
+| Redondeo (+ IVA 21%)   | −0,050        |                        |
+| **Subtotal sin IVA**   | **66,115**    | **66,12**              |
+| IVA 21%                | 13,88415      | 13,88                  |
+| **Total**              | **79,99915**  | **80,00** ✅            |
+
+El IVA se calcula sobre el subtotal sin redondear (66,115 × 21%). Recién después se redondea cada valor con half-even.
+
+**Ejemplo con 2 alícuotas de IVA diferentes en los conceptos y un ajuste sobre el concepto de alícuota al 21%:**
+
+| Concepto                 | Sin redondear | Redondeado (half-even) |
+| ------------------------ | ------------- | ---------------------- |
+| Producto A (+ IVA 21%)   | 66,165        |                        |
+| Producto B (+ IVA 10,5%) | 18,100        |                        |
+| Redondeo (+ IVA 21%)     | −0,050        |                        |
+| **Subtotal**             | **84,215**    | **84,22**              |
+| IVA 21%                  | 13,88415      | 13,88                  |
+| IVA 10,5%                | 1,9005        | 1,90                   |
+| **Total**                | **99,99965**  | **100,00**             |
+
+Cada IVA se calcula sobre la suma de los netos de su propia alícuota, sin redondear:
+
+* **IVA 21%:** (66,165 − 0,050) × 21% = 66,115 × 21% = 13,88415
+* **IVA 10,5%:** 18,100 × 10,5% = 1,9005
+
 
 
 ***
 
-#### **Ejemplos prácticos:**
-
-**Ejemplo práctico**
+#### **Otros ejemplos prácticos :**
 
 El siguiente ejemplo muestra una factura de 3 ítems con alícuota de IVA 21%. Los precios unitarios tienen un máximo de 3 decimales.
 
