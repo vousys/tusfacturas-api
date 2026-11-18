@@ -11,12 +11,12 @@ Recalculamos porque el servicio de facturación de ARCA (WSFEv1) no recibe el de
 
 Para evitar diferencias, calculá los totales con estas reglas:
 
-| Concepto                 | Decimales | Cómo se calcula                                                                                                  |
-| ------------------------ | --------- | ---------------------------------------------------------------------------------------------------------------- |
-| Precio unitario del ítem | hasta 3   | Lo envías vos.                                                                                                   |
-| Subtotal por alícuota    | 2         | Suma de cantidad × precio unitario - bonificacion, de los ítems de esa alícuota, redondeada con Round Half Even. |
-| IVA por alícuota         | 2         | Subtotal **sin redondear** × alícuota, redondeado con Round Half Even.                                           |
-| Total del comprobante    | 2         | Suma de los subtotales y los impuestos ya redondeados.                                                           |
+| Concepto                 | Decimales   | Cómo se calcula                                                                                                                                                                                                                                                      |
+| ------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Precio unitario del ítem | 3 en el PDF | Lo envías vos. Si mandás más de 3 decimales, el cálculo los usa todos pero el PDF muestra el precio redondeado a 3. Entonces quien revise el PDF puede ver que cantidad × precio no da exactamente el importe del ítem. **Recomendamos enviar siempre 3 decimales.** |
+| Subtotal por alícuota    | 2           | Suma de precio final de cada item sin IVA ni impuestos, esa alícuota, redondeada con Round Half Even.                                                                                                                                                                |
+| IVA por alícuota         | 2           | Subtotal **sin redondear** × alícuota, redondeado con Round Half Even.                                                                                                                                                                                               |
+| Total del comprobante    | 2           | Suma de los subtotales y los impuestos ya redondeados.                                                                                                                                                                                                               |
 
 **Round Half Even** (redondeo bancario) es el método que exige ARCA. Cuando el valor termina exactamente en 5, se redondea al dígito par más cercano:
 
@@ -33,14 +33,14 @@ Antes de tomar cualquier decisión, consultá siempre con tu estudio contable pa
 
 ### **Cálculos básicos:**
 
-| Cálculo                   | Fórmula                                                             | Ejemplo                      |
-| ------------------------- | ------------------------------------------------------------------- | ---------------------------- |
-| **Subtotal del ítem**     | Cantidad × Precio unitario                                          | 2 × $50 = $100               |
-| **Bonificación**          | Subtotal del ítem × % de bonificación                               | $100 × 10% = $10             |
-| **Precio total del ítem** | Subtotal del ítem − Bonificación                                    | $100 − $10 = $90             |
-| **Impuestos internos**    | Precio total del ítem sin IVA × % de impuestos internos             | $90 × 20% = $18              |
-| **IVA**                   | Precio total del ítem × % de IVA _(sin incluir impuestos internos)_ | $90 × 21% = $18,90           |
-| **Total del ítem**        | Precio total + Impuestos internos + IVA                             | $90 + $18 + $18,90 = $126,90 |
+| Cálculo                           | Fórmula                                                                     | Ejemplo                      |
+| --------------------------------- | --------------------------------------------------------------------------- | ---------------------------- |
+| **Importe del item**              | Cantidad × Precio unitario                                                  | 2 × $50 = $100               |
+| **Bonificación**                  | Importe ítem × % de bonificación                                            | $100 × 10% = $10             |
+| **Precio final del ítem sin IVA** | Importe ítem − Bonificación                                                 | $100 − $10 = $90             |
+| **Impuestos internos**            | Precio final del ítem sin IVA × % de impuestos internos                     | $90 × 20% = $18              |
+| **IVA**                           | Precio final del ítem sin IVA × % de IVA _(sin incluir impuestos internos)_ | $90 × 21% = $18,90           |
+| **Total del ítem**                | Precio final sin IVA + Impuestos internos + IVA                             | $90 + $18 + $18,90 = $126,90 |
 
 ### **¿Cómo se calcula el total de un comprobante?**
 
