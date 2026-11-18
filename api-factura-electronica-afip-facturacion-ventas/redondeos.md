@@ -9,14 +9,13 @@ TusFacturasAPP gestiona los precios unitarios de los productos/items con **3 dec
 
 ***
 
-**¿Cómo se calcula el total?**
+#### **¿Cómo se calcula el total?**
 
 El cálculo de validación previa, que garantiza que el total que vos envias coincida con el que la plataforma recalcula, se realiza en cuatro pasos:
 
-1. Determinamos los subtotales por alícuota: Se suman todos los ítems (cantidad × precio unitario sin IVA - bonificacion), sin redondear.  _Recorda que la plataforma redondea y muestra los conceptos/items a 3 decimales máximo aunque vos envies mas._&#x20;
-2. **Redondeamos los subtotales  2 decimales** usando Round Half Even.
-3. **Calculamos el IVA** sobre cada subtotal y lo redondeamos a 2 decimales usando Round Half Even.
-4. **Sumamos** subtotales e IVA para obtener el total del comprobante y lo redondeamos a **2 decimales** usando Round Half Even.
+1. **Determinamos los subtotales por alícuota**: Se suman todos los ítems (cantidad × precio unitario sin IVA - bonificación), sin redondear.  _Recorda que la plataforma redondea y muestra los conceptos/items a 3 decimales máximo aunque vos envies mas._&#x20;
+2. **Calculamos el IVA** sobre cada subtotal y lo redondeamos a 2 decimales usando Round Half Even.
+3. **Sumamos** subtotales e IVA para obtener el total del comprobante y lo redondeamos a **2 decimales** usando Round Half Even.
 
 **El IVA no se calcula concepto por concepto.** No se suma el IVA de cada ítem individualmente: se calcula sobre el subtotal acumulado. Tenelo en cuenta al verificar si el total coincide con tus propios cálculos, ya que calcular por ítem puede generar diferencias de centavos.
 
