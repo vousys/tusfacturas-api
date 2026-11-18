@@ -112,7 +112,18 @@ Cada IVA se calcula sobre la suma de los sub-totales de su propia alícuota, sin
 * **IVA 21%:** (66,165 − 0,050) × 21% = 66,115 × 21% = 13,88415
 * **IVA 10,5%:** 18,100 × 10,5% = 1,9005
 
-
-
 ***
+
+Ejemplo donde vos envías 4 decimales para obtener el precio total esperado:
+
+| Concepto               | Sin redondear   | Redondeado (half-even) | En el PDF  |
+| ---------------------- | --------------- | ---------------------- | ---------- |
+| Producto A (+ IVA 21%) | 96.694,2149     |                        | 96.694,215 |
+| **Subtotal sin IVA**   | **96.694,2149** | **96.694,21**          | 96.694,21  |
+| IVA 21%                | 20.305,785129   | 20.305,79              | 20.305,79  |
+| **Total**              |                 | **117.000,00** ✅       | 117.000,00 |
+
+El IVA se calcula sobre el subtotal sin redondear (96.694,2149 × 21%). El total es la suma del subtotal y el IVA ya redondeados: 96.694,21 + 20.305,79.
+
+> **En el PDF, el precio del producto se ve con 3 decimales (96.694,215)**, pero el cálculo usa los 4 decimales enviados. Por eso, si alguien recalcula a mano con lo que ve en el PDF, puede obtener una diferencia de centavos: con 96.694,215 el total daría 117.000,01.
 
