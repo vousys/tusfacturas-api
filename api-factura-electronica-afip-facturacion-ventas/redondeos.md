@@ -35,7 +35,9 @@ A partir del **01/02/2027**, no se admitirán diferencias de centavos. Los valor
 
 Podes agregar un concepto o ítem denominado **«Ajuste por redondeo»**, con un importe positivo o negativo, según corresponda, y aplicar la **alícuota de IVA que te recomiende tu estudio contable**.
 
-**Importante:** ARCA no permite emitir comprobantes con subtotales negativos cuando se utilizan las alícuotas «IVA No Gravado» o «Exento» con importes inferiores a cero. Por este motivo, no podrás informar un ajuste negativo aislado (por ejemplo, -$0,05) en alguno de estos conceptos si no existe otro ítem de la misma alícuota que permita compensar ese importe y mantener el subtotal en cero o positivo.
+**Importante:** ARCA no permite emitir comprobantes con sub-totales negativos para las alícuotas «IVA No Gravado» o «Exento».
+
+Por este motivo, no podrás informar un ajuste negativo (por ejemplo, -$0,05) utilizando alguna de estas alícuotas, si no existe otro ítem de la misma alícuota que permita compensar ese importe y mantener el subtotal en cero o positivo.
 
 **Ejemplo práctico:** &#x20;
 
@@ -49,7 +51,7 @@ Una factura cuyo precio final es $80 y el precio sin IVA del producto/servicio e
 | IVA 21%                | 13,88415      | 13,88                  |
 | **Total**              | **79,99915**  | **80,00** ✅            |
 
-El IVA se calcula sobre el subtotal sin redondear (66,115 × 21%). Recién después se redondea cada valor con half-even.
+***
 
 **Ejemplo con 2 alícuotas de IVA diferentes en los conceptos y un ajuste sobre el concepto de alícuota al 21%:**
 
@@ -63,7 +65,7 @@ El IVA se calcula sobre el subtotal sin redondear (66,115 × 21%). Recién despu
 | IVA 10,5%                | 1,9005        | 1,90                   |
 | **Total**                | **99,99965**  | **100,00**             |
 
-Cada IVA se calcula sobre la suma de los netos de su propia alícuota, sin redondear:
+Cada IVA se calcula sobre la suma de los sub-totales de su propia alícuota, sin redondear:
 
 * **IVA 21%:** (66,165 − 0,050) × 21% = 66,115 × 21% = 13,88415
 * **IVA 10,5%:** 18,100 × 10,5% = 1,9005
