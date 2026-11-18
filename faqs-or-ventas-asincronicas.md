@@ -195,7 +195,7 @@ Nuestra plataforma gestiona los precios unitarios de productos y servicios con 3
 
 Para garantizar la precisión fiscal, aplicamos el método de redondeo "Round half even" (redondeo bancario), siguiendo estrictamente los lineamientos de ARCA.
 
-En el siguiente artículo sobre [ajustes, redondeos y precios sin IVA](https://ayuda.tusfacturas.app/es/articles/12548047-redondeos-ajustes-y-precios-sin-iva) te explicamos cómo funciona mediante un ejemplo práctico.
+En el siguiente artículo sobre [ajustes, redondeos y precios sin IVA](api-factura-electronica-afip-facturacion-ventas/redondeos.md) te explicamos cómo funciona mediante un ejemplo práctico.
 
 ***
 

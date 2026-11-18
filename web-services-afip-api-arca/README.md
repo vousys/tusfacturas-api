@@ -118,6 +118,22 @@ icon: code
 
 ***
 
+### Información esencial:
+
+* **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
+  👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-del-json-a-enviar)
+* **Tablas de referencia:** valores, códigos y parámetros que necesitas para que la API funcione correctamente.\
+  👉 [Ver tablas de referencia](../parametros/tablas-de-referencia.md)
+* **Redondeos y cálculos básicos:** Conoce como se calculan los datos.\
+  👉 [Ver redondeos](../api-factura-electronica-afip-facturacion-ventas/redondeos.md)
+* **Bonificaciones:** Conoce que tipo de bonificaciones podes aplicar.\
+  👉 [Ver bonificaciones](../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md)
+* Notas de crédito: Conoce como completar los datos adicionales
+
+&#x20;     👉 Ver [notas de crédito](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md)
+
+***
+
 ### 💡 Soporte y Recursos
 
 ¿Tenes preguntas sobre la API? Visita nuestro Centro de Ayuda en [ayuda.tusfacturas.app](https://ayuda.tusfacturas.app) para acceder a guías paso a paso y solución de problemas o escribnos a api@tusfacturas.app

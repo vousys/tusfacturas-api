@@ -237,15 +237,17 @@ puts response.read_body
 
 Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos recursos fundamentales (¡sí, estos!):
 
-* **Tablas de referencia:** valores, códigos y parámetros que necesitas para que la API funcione correctamente.\
-  👉 [Ver tablas de referencia](../parametros/tablas-de-referencia.md)
 * **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
   👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-del-json-a-enviar)
-* Tene en cuenta que la información que debes ingresar es referente a quien emitio esa NC
-  * La fecha que tenia el comprobante que estas anulando
-  * Que tipo de comprobante es
-  * El CUIT emisor de ese comprobante que estas anulando (debe coincidir con el CUIT desde donde estas emitiendo la NC)
-  * El punto de venta emisor de ese comprobante que estas anulando (debe coincidir con el CUIT desde donde estas emitiendo la NC)
+* **Tablas de referencia:** valores, códigos y parámetros que necesitas para que la API funcione correctamente.\
+  👉 [Ver tablas de referencia](../parametros/tablas-de-referencia.md)
+* **Redondeos y cálculos básicos:** Conocé como se calculan los datos.\
+  👉 [Ver redondeos](../api-factura-electronica-afip-facturacion-ventas/redondeos.md)
+* **Bonificaciones:** Conocé que tipo de bonificaciones podes aplicar.\
+  👉 [Ver bonificaciones](../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md)
+* Notas de crédito: Conocé como completar los datos adicionales
+
+&#x20;     👉 Ver [notas de crédito](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md)
 
 
 
@@ -271,11 +273,13 @@ Consulta la respuesta esperada, según el método que uses para enviarla:
 
 ¿Necesitas una Nota de Crédito B de ejemplo? [Descárgala ahora.](https://www.tusfacturas.app/app/archivos-modelo/tipos-comprobante/27285051466__NOTA_DE_CREDITO_B-00010-00000005.pdf) Podes personalizar el diseño accediendo a nuestra [plataforma web](https://www.tusfacturas.app/app/login.html) >  Menú > Mi espacio de trabajo > CUITs/pDV > Editar.
 
-### ¿Qué es una nota de crédito B?
+***
+
+#### ¿Qué es una nota de crédito B?
 
 Conocé  que es una[ nota de crédito B](../api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md).
 
-### ¿Cuándo generar una nota de crédito B?
+#### ¿Cuándo generar una nota de crédito B?
 
 Conocé [desde aqui](../api-factura-electronica-afip-facturacion-ventas/que-tipos-de-comprobante-debo-puedo-emitir.md), quien está obligado a emitir una nota de crédito B.
 

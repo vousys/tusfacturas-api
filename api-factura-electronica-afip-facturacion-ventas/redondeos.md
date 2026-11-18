@@ -9,7 +9,7 @@ TusFacturasAPP recalcula los totales de cada comprobante a partir de los ítems 
 
 Recalculamos porque el servicio de facturación de ARCA (WSFEv1) no recibe el detalle de los ítems, sino solo los subtotales por alícuota y los impuestos.
 
-Para evitar diferencias, calculá los totales con estas reglas:
+Para evitar diferencias, calcula los totales con estas reglas:
 
 | Concepto                 | Decimales   | Cómo se calcula                                                                                                                                                                                                                                                      |
 | ------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -28,7 +28,7 @@ Para evitar diferencias, calculá los totales con estas reglas:
 ***
 
 {% hint style="info" %}
-Antes de tomar cualquier decisión, consultá siempre con tu estudio contable para evitar posibles errores y asegurarte de actuar conforme a la normativa vigente.
+Antes de tomar cualquier decisión, consulta siempre con tu estudio contable para evitar posibles errores y asegurarte de actuar conforme a la normativa vigente.
 {% endhint %}
 
 ### **Cálculos básicos:**

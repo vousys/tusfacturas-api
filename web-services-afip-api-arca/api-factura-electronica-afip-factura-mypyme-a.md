@@ -234,10 +234,14 @@ puts response.read_body
 
 Antes de implementar o integrar con nuestra API, asegurate de revisar estos dos recursos fundamentales (¡sí, estos!):
 
-* **Tablas de referencia:** valores, códigos y parámetros que necesitas para que la API funcione correctamente.\
-  👉 [Ver tablas de referencia](../parametros/tablas-de-referencia.md)
 * **Referencia completa de cada campo de la API:** descripción exacta, tipo de dato y uso correcto de cada parámetro.\
   👉 [Ver referencia de campos](../api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md#estructura-del-json-a-enviar)
+* **Tablas de referencia:** valores, códigos y parámetros que necesitas para que la API funcione correctamente.\
+  👉 [Ver tablas de referencia](../parametros/tablas-de-referencia.md)
+* **Redondeos y cálculos básicos:** Conocé como se calculan los datos.\
+  👉 [Ver redondeos](../api-factura-electronica-afip-facturacion-ventas/redondeos.md)
+* **Bonificaciones:** Conocé que tipo de bonificaciones podes aplicar.\
+  👉 [Ver bonificaciones](../api-factura-electronica-afip-facturacion-ventas/ejemplo-de-factura-con-bonificaciones-descuentos.md)
 
 
 
