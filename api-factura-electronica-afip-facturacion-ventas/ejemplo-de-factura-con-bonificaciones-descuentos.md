@@ -20,7 +20,7 @@ En TusFacturasAPP existen **tres formas** de aplicar un descuento o bonificació
 
 &#x20;ingresando un porcentaje en el campo `bonificacion_porcentaje` de cada concepto del bloque `detalle`. El descuento se aplica sobre el precio unitario de ese producto sin IVA y el IVA se calcula sobre el precio con la bonificación ya descontada.
 
-Ejemplo:
+**Ejemplo**:
 
 | Concepto                         | Cálculo      | Importe    |
 | -------------------------------- | ------------ | ---------- |
@@ -40,7 +40,7 @@ Ejemplo:
 
 Ingresando un monto fijo en el campo `bonificacion` del bloque `comprobante`. El monto ingresado se descuenta del **primer subtotal sin IVA**, que corresponde a la alícuota del **21%**. Si tu comprobante tiene ítems con distintas alícuotas, tené en cuenta que la bonificación se aplica únicamente sobre ese subtotal. El IVA se calcula sobre el subtotal resultante luego de aplicar el descuento.
 
-Ejemplo:
+**Ejemplo:**
 
 Este ejemplo tiene un ítem al 21% y otro al 10,5%. La bonificación a nivel comprobante se descuenta solo del subtotal al 21%:
 
@@ -56,7 +56,7 @@ Este ejemplo tiene un ítem al 21% y otro al 10,5%. La bonificación a nivel com
 
 **Total del comprobante: $96,80 + $55,25 = $152,05**
 
-> Los $20 de bonificación se descuentan solo del subtotal al 21%. El subtotal al 10,5% no cambia. Si necesitás aplicar un descuento sobre otra alícuota, usa un concepto con importe negativo.
+> Los $20 de bonificación se descuentan solo del subtotal al 21%. El subtotal al 10,5% no cambia. Si necesitas aplicar un descuento sobre otra alícuota, usa un concepto con importe negativo.
 
 {% content-ref url="../web-services-afip-api-arca/api-factura-electronica-afip-arca-factura-a-con-bonificacion.md" %}
 [api-factura-electronica-afip-arca-factura-a-con-bonificacion.md](../web-services-afip-api-arca/api-factura-electronica-afip-arca-factura-a-con-bonificacion.md)
@@ -70,11 +70,7 @@ para casos que requieren mayor flexibilidad, como descuentos no atados a un prod
 
 **Importante:** ARCA no permite emitir comprobantes con sub-totales negativos para las alícuotas «IVA No Gravado» o «Exento». Por este motivo, no podrás informar un ajuste negativo (por ejemplo, -$0,05) utilizando alguna de estas alícuotas, si no existe otro ítem de la misma alícuota que permita compensar ese importe y mantener el subtotal en cero o positivo.
 
-### 3. Ejemplo de concepto con importe unitario negativo
-
-Además de las bonificaciones por producto o por comprobante, podés incluir un concepto adicional dentro del bloque `detalle` con el campo `precio_unitario_sin_iva` en negativo. Esto es útil cuando necesitás restar un importe puntual del total (por ejemplo, un ajuste, una devolución parcial o un descuento que no está asociado a ningún producto específico), ya que los campos `bonificacion` y `bonificacion_porcentaje` **no aceptan valores negativos**.
-
-Ejemplo:
+**Ejemplo**:
 
 En este ejemplo se aplica un descuento de $10 solo sobre la alícuota del 10,5%. Con el campo `bonificacion` no se podría, porque descuenta del 21%.
 
