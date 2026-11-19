@@ -50,7 +50,7 @@ El cálculo de validación previa, que garantiza que el total que vos envias coi
 {% step %}
 #### **Paso 1: Subtotal por alícuota**
 
-Sumamos los ítems de cada alícuota de IVA: _cantidad × precio unitario sin IVA − bonificación_. Esta suma **no se redondea**.\
+Sumamos los ítems de cada alícuota de IVA: _cantidad × precio unitario sin IVA − bonificación_. Esta suma **no se redondea para el cálculo del IVA**.\
 _&#x45;n el PDF, cada ítem se muestra redondeado a 3 decimales._
 {% endstep %}
 
@@ -77,7 +77,9 @@ Sumamos los subtotales, los otros impuestos y el IVA, y redondeamos el resultado
 
 ### ¿Qué hacer si tengo diferencias con el precio final?
 
-Podes agregar un concepto o ítem denominado **«Ajuste por redondeo»**, con un importe positivo o negativo, según corresponda, y aplicar la **alícuota de IVA que te recomiende tu estudio contable**.
+Como alternativas prácticas, podes consulta con tu estudio contable si te recomiendan enviar más decimales en los conceptos/items que facturas o agregar un concepto de **“Ajuste por redondeo”**, con un importe positivo o negativo, según corresponda.
+
+Tené en cuenta que estas son posibles alternativas que no necesariamente se adaptan a todos los negocios. **Desde TusFacturasAPP no brindamos asesoramiento contable ni impositivo**, por lo que te recomendamos consultar previamente con tu estudio contable cuál es la opción más adecuada para tu operatoria y qué alícuota de IVA corresponde aplicar al ajuste.
 
 **Importante:** ARCA no permite emitir comprobantes con sub-totales negativos para las alícuotas «IVA No Gravado» o «Exento». Por este motivo, no podrás informar un ajuste negativo (por ejemplo, -$0,05) utilizando alguna de estas alícuotas, si no existe otro ítem de la misma alícuota que permita compensar ese importe y mantener el subtotal en cero o positivo.
 
