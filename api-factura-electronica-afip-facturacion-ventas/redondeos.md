@@ -68,15 +68,17 @@ Sumamos los subtotales, otros impuestos y el IVA todos redondeados con 2 decimal
 {% endstep %}
 {% endstepper %}
 
-### ⚠️ **Tolerancia por redondeo ($0,03) hasta 31/01/2027:**
+### ⚠️ **Tolerancia por redondeo:**
 
 * **Hoy:** se acepta una diferencia de hasta $0,03.
-* **Desde el 14/11/2026:** las cuentas API DEV funcionan sin tolerancia, para que puedas probar tu integración.
-* **Desde el 01/02/2027:** no se aceptan diferencias de centavos. Lo que envíes tiene que coincidir exactamente con el recálculo de la plataforma.
+* **Desde el 14/11/2026:** las cuentas API DEV funcionan con tolerancia **0,01 (1 centavo)**, para que puedas probar tu integración.
+* **Desde el 01/02/2027:** se aceptan diferencias de hasta **0,01 (1 centavo)**. Lo que envíes tiene que coincidir exactamente con el recalculo de la plataforma.
 
-### ¿Qué hacer si tengo diferencias con el precio final?
+### ¿Qué hacer si facturas con precios finales  y encontras diferencias?
 
-Como alternativas prácticas, podes consulta con tu estudio contable si te recomiendan enviar más decimales en los conceptos/items que facturas o agregar un concepto de **“Ajuste por redondeo”**, con un importe positivo o negativo, según corresponda. Tené en cuenta que estas son posibles alternativas que no necesariamente se adaptan a todos los negocios. **Desde TusFacturasAPP no brindamos asesoramiento contable ni impositivo**, por lo que te recomendamos consultar previamente con tu estudio contable cuál es la opción más adecuada para tu operatoria y qué alícuota de IVA corresponde aplicar al ajuste.
+Consulta con tu estudio contable. Ellos te van a recomendar la mejor estrategia para tu negocio.  **Desde TusFacturasAPP no brindamos asesoramiento contable ni impositivo.**
+
+Como alternativas prácticas, podes evaluar junto con tu estudio contable si resulta conveniente trabajar con más decimales en los importes de los conceptos/items que facturás o, alternativamente, incorporar un concepto de **“Ajuste por redondeo”**, con un importe positivo o negativo, según corresponda. Tené en cuenta que son alternativas posibles que no necesariamente se adaptan a todas las actividades u operatorias. Por eso, te recomendamos consultar con tu estudio contable cuál es la opción más adecuada para tu negocio y qué alícuota de IVA corresponde aplicar al ajuste.
 
 **Importante:** ARCA no permite emitir comprobantes con sub-totales negativos para las alícuotas «IVA No Gravado» o «Exento». Por este motivo, no podrás informar un ajuste negativo (por ejemplo, -$0,05) utilizando alguna de estas alícuotas, si no existe otro ítem de la misma alícuota que permita compensar ese importe y mantener el subtotal en cero o positivo.
 
