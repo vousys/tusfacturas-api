@@ -11,12 +11,12 @@ Recalculamos porque el servicio de facturación de ARCA (WSFEv1) no recibe el de
 
 Para evitar diferencias, calcula los totales con estas reglas:
 
-| Concepto                 | Decimales   | Cómo se calcula                                                                                                                                                                                                                                                      |
-| ------------------------ | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Precio unitario del ítem | 3 en el PDF | Lo envías vos. Si mandás más de 3 decimales, el cálculo los usa todos pero el PDF muestra el precio redondeado a 3. Entonces quien revise el PDF puede ver que cantidad × precio no da exactamente el importe del ítem. **Recomendamos enviar siempre 3 decimales.** |
-| Subtotal por alícuota    | 2           | Suma de precio final de cada item sin IVA ni impuestos, esa alícuota, redondeada con Round Half Even.                                                                                                                                                                |
-| IVA por alícuota         | 2           | Subtotal **sin redondear** × alícuota, redondeado con Round Half Even.                                                                                                                                                                                               |
-| Total del comprobante    | 2           | Suma de los subtotales y los impuestos ya redondeados.                                                                                                                                                                                                               |
+| Concepto                 | Decimales | Cómo se calcula                                                                                                                                                                                                                                                      |
+| ------------------------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Precio unitario del ítem | 3 máximo  | Lo envías vos. Si mandas más de 3 decimales, el cálculo los usa todos pero el PDF muestra el precio redondeado a 3. Entonces quien revise el PDF puede ver que cantidad × precio no da exactamente el importe del ítem. **Recomendamos enviar siempre 3 decimales.** |
+| Subtotal por alícuota    | 2         | Suma de precio final de cada item sin IVA ni impuestos de esa alícuota, redondeado a 2 decimales con Round Half Even.                                                                                                                                                |
+| IVA por alícuota         | 2         | Subtotal de cada importe de IVA redondeado a 2 decimales con Round Half Even.                                                                                                                                                                                        |
+| Total del comprobante    | 2         | Suma de los subtotales y los impuestos, redondeado a 2 decimales con Round Half Even.                                                                                                                                                                                |
 
 **Round Half Even** (redondeo bancario) es el método que exige ARCA. Cuando el valor termina exactamente en 5, se redondea al dígito par más cercano:
 
@@ -31,7 +31,7 @@ Para evitar diferencias, calcula los totales con estas reglas:
 Antes de tomar cualquier decisión, consulta siempre con tu estudio contable para evitar posibles errores y asegurarte de actuar conforme a la normativa vigente.
 {% endhint %}
 
-### **Cálculos básicos:**
+### **Cálculos sobre cada concepto/item:**
 
 | Cálculo                           | Fórmula                                                                     | Ejemplo                      |
 | --------------------------------- | --------------------------------------------------------------------------- | ---------------------------- |
@@ -50,22 +50,21 @@ El cálculo de validación previa, que garantiza que el total que vos envias coi
 {% step %}
 #### **Paso 1: Subtotal por alícuota**
 
-Sumamos los ítems de cada alícuota de IVA: _cantidad × precio unitario sin IVA − bonificación_. Esta suma **no se redondea para el cálculo del IVA**.\
-_&#x45;n el PDF, cada ítem se muestra redondeado a 3 decimales._
+Sumarizamos los ítems de cada alícuota de IVA: _cantidad × precio unitario sin IVA − bonificación, con los decimales que envies._  Usamos éste subtotal sin redondear para el cálculo de IVA.
 {% endstep %}
 
 {% step %}
 #### **Paso 2: IVA por alícuota**
 
-Calculamos el IVA sobre cada subtotal del paso 1 y lo redondeamos a **2 decimales** (Round Half Even).
+Calculamos el importe de cada alícuota de IVA sobre los subtotales obtenidos en el paso 1 y redondeamos cada resultado a **2 decimales**, aplicando el método **Round Half Even**
 
-> ⚠️ **El IVA no se calcula ítem por ítem.** Se calcula sobre el subtotal de cada alícuota. Si en tu sistema sumás el IVA de cada ítem, pueden aparecer diferencias de centavos.
+> ⚠️ **El IVA no se calcula ítem por ítem.** Se calcula sobre el subtotal de cada alícuota. Si en tu sistema sumas el IVA de cada ítem, pueden aparecer diferencias de centavos.
 {% endstep %}
 
 {% step %}
 #### **Paso 3: Total del comprobante**
 
-Sumamos los subtotales, los otros impuestos y el IVA, y redondeamos el resultado a **2 decimales** (Round Half Even).
+Sumamos los subtotales, otros impuestos y el IVA todos redondeados con 2 decimales Round Half Even y obtenemos el total.
 {% endstep %}
 {% endstepper %}
 
@@ -77,9 +76,7 @@ Sumamos los subtotales, los otros impuestos y el IVA, y redondeamos el resultado
 
 ### ¿Qué hacer si tengo diferencias con el precio final?
 
-Como alternativas prácticas, podes consulta con tu estudio contable si te recomiendan enviar más decimales en los conceptos/items que facturas o agregar un concepto de **“Ajuste por redondeo”**, con un importe positivo o negativo, según corresponda.
-
-Tené en cuenta que estas son posibles alternativas que no necesariamente se adaptan a todos los negocios. **Desde TusFacturasAPP no brindamos asesoramiento contable ni impositivo**, por lo que te recomendamos consultar previamente con tu estudio contable cuál es la opción más adecuada para tu operatoria y qué alícuota de IVA corresponde aplicar al ajuste.
+Como alternativas prácticas, podes consulta con tu estudio contable si te recomiendan enviar más decimales en los conceptos/items que facturas o agregar un concepto de **“Ajuste por redondeo”**, con un importe positivo o negativo, según corresponda. Tené en cuenta que estas son posibles alternativas que no necesariamente se adaptan a todos los negocios. **Desde TusFacturasAPP no brindamos asesoramiento contable ni impositivo**, por lo que te recomendamos consultar previamente con tu estudio contable cuál es la opción más adecuada para tu operatoria y qué alícuota de IVA corresponde aplicar al ajuste.
 
 **Importante:** ARCA no permite emitir comprobantes con sub-totales negativos para las alícuotas «IVA No Gravado» o «Exento». Por este motivo, no podrás informar un ajuste negativo (por ejemplo, -$0,05) utilizando alguna de estas alícuotas, si no existe otro ítem de la misma alícuota que permita compensar ese importe y mantener el subtotal en cero o positivo.
 
