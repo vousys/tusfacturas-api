@@ -1,11 +1,12 @@
 ---
 description: >-
-  TusFacturasAPP: API para Facturas M de AFIP/ARCA. Confiable desde 2015. Creada
-  por devs y respaldada por expertos impositivos. ¡Los desarrolladores la aman!
+  TusFacturasAPP: API para las ex-facturas M de AFIP/ARCA. Confiable desde 2015.
+  Creada por devs y respaldada por expertos impositivos. ¡Los desarrolladores la
+  aman!
 icon: code
 ---
 
-# Factura M
+# Ex Factura M ( Factura A -  Código ARCA: 0051 )
 
 ### Transición ARCA de la factura M a la factura A con leyenda (a partir del 01/12/2025)
 

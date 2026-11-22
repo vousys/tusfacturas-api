@@ -36,7 +36,7 @@ Tu sistema envía un JSON con los datos del comprobante y recibe el CAE, el núm
 
 ### Qué podes hacer con la API
 
-* **Emisión de facturas electrónicas con CAE.** Facturas A, B, C, E (exportación), M y Factura de Crédito Electrónica MiPyME, autorizadas por ARCA. Ver la [referencia de campos](api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md).
+* **Emisión de facturas electrónicas con CAE.** Facturas A, B, C, E (exportación) y Factura de Crédito Electrónica MiPyME, autorizadas por ARCA. Ver la [referencia de campos](api-factura-electronica-afip-facturacion-ventas/referencia-de-la-api-campos-para-crear-comprobantes-en-arca.md).
 * **Facturas y notas de crédito.** Las notas de crédito y débito se emiten con el mismo endpoint que las facturas, asociadas al comprobante original o a un período. Ver [notas de crédito y débito](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-notas-credito-debito.md).
 * **Consulta de comprobantes.** Obtené un comprobante por tipo y número, o listá los de una fecha, un rango o tu propio identificador. Ver [consulta simple](api-factura-electronica-afip-facturacion-ventas/api-factura-electronica-afip-consulta-de-comprobantes.md) y [consulta avanzada](api-factura-electronica-afip-facturacion-ventas/consulta-avanzada-listar-comprobantes-por-fecha-rango-o-external-reference.md).
 * **Descarga de PDF.** Cada comprobante emitido trae el link al PDF en A4 y en ticket de 80 mm, con el código QR de ARCA.

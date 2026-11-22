@@ -101,7 +101,7 @@ Una librería te ahorra escribir el cliente SOAP, pero el certificado, el ticket
 Sí. La API es REST con JSON y un solo endpoint por operación, así que cualquier agente que pueda hacer pedidos HTTP la puede usar con la documentación de [llms.txt](https://developers.tusfacturas.app/llms.txt).
 
 **¿Qué es el WSFEv1 de ARCA?**\
-Es el web service de factura electrónica que ARCA pone a disposición de los sistemas para autorizar comprobantes A, B, C y M. Recibe los totales del comprobante y devuelve el CAE.
+Es el web service de factura electrónica que ARCA pone a disposición de los sistemas para autorizar comprobantes A, B y C . Recibe los totales del comprobante y devuelve el CAE.
 
 **¿Necesito un certificado digital para usar la API?**\
 El certificado es obligatorio para operar con los web services de ARCA, pero no tenes que integrarlo en tu código: se genera y se carga una sola vez desde TusFacturasAPP durante el enlace con ARCA.

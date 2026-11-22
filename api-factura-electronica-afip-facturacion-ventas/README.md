@@ -88,7 +88,7 @@ Procesa múltiples comprobantes simultáneamente para alta performance. Conoce m
 
 Nuestra **API Factura electronica AFIP/ARCA** soporta todos los tipos de comprobantes:
 
-* Facturas A, B, C, E, M
+* Facturas A, B, C, E y Ex factura M
 * Notas de crédito y débito
 * Facturas de crédito MiPyme (FCE)
 * Facturas-recibos
